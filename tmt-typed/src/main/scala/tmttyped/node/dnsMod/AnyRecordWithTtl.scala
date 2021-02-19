@@ -1,0 +1,31 @@
+package tmttyped.node.dnsMod
+
+import tmttyped.node.nodeStrings.A
+import tmttyped.node.nodeStrings.AAAA
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+/** @deprecated Use `AnyARecord` or `AnyAaaaRecord` instead. */
+/* Rewritten from type alias, can be one of: 
+  - tmttyped.node.dnsMod.AnyARecord
+  - tmttyped.node.dnsMod.AnyAaaaRecord
+*/
+trait AnyRecordWithTtl extends StObject
+object AnyRecordWithTtl {
+  
+  @scala.inline
+  def AnyARecord(address: String, ttl: Double, `type`: A): tmttyped.node.dnsMod.AnyARecord = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[tmttyped.node.dnsMod.AnyARecord]
+  }
+  
+  @scala.inline
+  def AnyAaaaRecord(address: String, ttl: Double, `type`: AAAA): tmttyped.node.dnsMod.AnyAaaaRecord = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[tmttyped.node.dnsMod.AnyAaaaRecord]
+  }
+}

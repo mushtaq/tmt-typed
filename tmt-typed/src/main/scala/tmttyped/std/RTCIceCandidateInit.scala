@@ -1,0 +1,62 @@
+package tmttyped.std
+
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+trait RTCIceCandidateInit extends StObject {
+  
+  var candidate: js.UndefOr[java.lang.String] = js.undefined
+  
+  var sdpMLineIndex: js.UndefOr[Double | Null] = js.undefined
+  
+  var sdpMid: js.UndefOr[java.lang.String | Null] = js.undefined
+  
+  var usernameFragment: js.UndefOr[java.lang.String | Null] = js.undefined
+}
+object RTCIceCandidateInit {
+  
+  @scala.inline
+  def apply(): org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit]
+  }
+  
+  @scala.inline
+  implicit class RTCIceCandidateInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setCandidate(value: java.lang.String): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCandidateUndefined: Self = StObject.set(x, "candidate", js.undefined)
+    
+    @scala.inline
+    def setSdpMLineIndex(value: Double): Self = StObject.set(x, "sdpMLineIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSdpMLineIndexNull: Self = StObject.set(x, "sdpMLineIndex", null)
+    
+    @scala.inline
+    def setSdpMLineIndexUndefined: Self = StObject.set(x, "sdpMLineIndex", js.undefined)
+    
+    @scala.inline
+    def setSdpMid(value: java.lang.String): Self = StObject.set(x, "sdpMid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSdpMidNull: Self = StObject.set(x, "sdpMid", null)
+    
+    @scala.inline
+    def setSdpMidUndefined: Self = StObject.set(x, "sdpMid", js.undefined)
+    
+    @scala.inline
+    def setUsernameFragment(value: java.lang.String): Self = StObject.set(x, "usernameFragment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUsernameFragmentNull: Self = StObject.set(x, "usernameFragment", null)
+    
+    @scala.inline
+    def setUsernameFragmentUndefined: Self = StObject.set(x, "usernameFragment", js.undefined)
+  }
+}

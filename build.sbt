@@ -35,5 +35,6 @@ lazy val `tmt-typed` = project
     ),
     stEnableScalaJsDefined := Selection.All,
     stStdlib := List("ESNext", "DOM", "DOM.Iterable", "ScriptHost"),
-    stOutputPackage := "tmttypes"
+    stOutputPackage := "tmttyped",
+    stSourceGenMode := SourceGenMode.Manual((Compile / scalaSource).value)
   )
