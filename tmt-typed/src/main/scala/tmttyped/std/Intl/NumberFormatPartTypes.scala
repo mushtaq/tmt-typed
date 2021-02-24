@@ -6,8 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
+  - tmttyped.std.stdStrings.compact
   - tmttyped.std.stdStrings.currency
   - tmttyped.std.stdStrings.decimal
+  - tmttyped.std.stdStrings.exponentInteger
+  - tmttyped.std.stdStrings.exponentMinusSign
+  - tmttyped.std.stdStrings.exponentSeparator
   - tmttyped.std.stdStrings.fraction
   - tmttyped.std.stdStrings.group
   - tmttyped.std.stdStrings.infinity
@@ -17,15 +21,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - tmttyped.std.stdStrings.nan
   - tmttyped.std.stdStrings.plusSign
   - tmttyped.std.stdStrings.percentSign
+  - tmttyped.std.stdStrings.unit
+  - tmttyped.std.stdStrings.unknown
 */
 trait NumberFormatPartTypes extends StObject
 object NumberFormatPartTypes {
+  
+  @scala.inline
+  def compact: tmttyped.std.stdStrings.compact = "compact".asInstanceOf[tmttyped.std.stdStrings.compact]
   
   @scala.inline
   def currency: tmttyped.std.stdStrings.currency = "currency".asInstanceOf[tmttyped.std.stdStrings.currency]
   
   @scala.inline
   def decimal: tmttyped.std.stdStrings.decimal = "decimal".asInstanceOf[tmttyped.std.stdStrings.decimal]
+  
+  @scala.inline
+  def exponentInteger: tmttyped.std.stdStrings.exponentInteger = "exponentInteger".asInstanceOf[tmttyped.std.stdStrings.exponentInteger]
+  
+  @scala.inline
+  def exponentMinusSign: tmttyped.std.stdStrings.exponentMinusSign = "exponentMinusSign".asInstanceOf[tmttyped.std.stdStrings.exponentMinusSign]
+  
+  @scala.inline
+  def exponentSeparator: tmttyped.std.stdStrings.exponentSeparator = "exponentSeparator".asInstanceOf[tmttyped.std.stdStrings.exponentSeparator]
   
   @scala.inline
   def fraction: tmttyped.std.stdStrings.fraction = "fraction".asInstanceOf[tmttyped.std.stdStrings.fraction]
@@ -53,4 +71,10 @@ object NumberFormatPartTypes {
   
   @scala.inline
   def plusSign: tmttyped.std.stdStrings.plusSign = "plusSign".asInstanceOf[tmttyped.std.stdStrings.plusSign]
+  
+  @scala.inline
+  def unit: tmttyped.std.stdStrings.unit = "unit".asInstanceOf[tmttyped.std.stdStrings.unit]
+  
+  @scala.inline
+  def unknown: tmttyped.std.stdStrings.unknown = "unknown".asInstanceOf[tmttyped.std.stdStrings.unknown]
 }

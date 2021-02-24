@@ -10,7 +10,7 @@ trait ByteLengthQueuingStrategy
   extends QueuingStrategy[js.typedarray.ArrayBufferView] {
   
   @JSName("highWaterMark")
-  var highWaterMark_ByteLengthQueuingStrategy: Double
+  val highWaterMark_ByteLengthQueuingStrategy: Double
   
   @JSName("size")
   def size_MByteLengthQueuingStrategy(chunk: js.typedarray.ArrayBufferView): Double

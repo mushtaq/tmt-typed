@@ -13,7 +13,7 @@ trait SpeechRecognitionEventMap extends StObject {
   
   var end: org.scalajs.dom.raw.Event
   
-  var error: org.scalajs.dom.raw.ErrorEvent
+  var error: SpeechRecognitionErrorEvent
   
   var nomatch: SpeechRecognitionEvent
   
@@ -36,7 +36,7 @@ object SpeechRecognitionEventMap {
     audioend: org.scalajs.dom.raw.Event,
     audiostart: org.scalajs.dom.raw.Event,
     end: org.scalajs.dom.raw.Event,
-    error: org.scalajs.dom.raw.ErrorEvent,
+    error: SpeechRecognitionErrorEvent,
     nomatch: SpeechRecognitionEvent,
     result: SpeechRecognitionEvent,
     soundend: org.scalajs.dom.raw.Event,
@@ -62,7 +62,7 @@ object SpeechRecognitionEventMap {
     def setEnd(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setError(value: org.scalajs.dom.raw.ErrorEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    def setError(value: SpeechRecognitionErrorEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNomatch(value: SpeechRecognitionEvent): Self = StObject.set(x, "nomatch", value.asInstanceOf[js.Any])

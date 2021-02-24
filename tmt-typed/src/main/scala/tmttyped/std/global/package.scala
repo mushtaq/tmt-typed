@@ -725,6 +725,24 @@ package object global {
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
+  def addEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
   def addEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
@@ -913,6 +931,96 @@ package object global {
   def addEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def addEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def addEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def addEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -1345,6 +1453,66 @@ package object global {
   def addEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def addEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: tmttyped.std.AddEventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def addEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def addEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -3094,9 +3262,9 @@ package object global {
   def focus(): scala.Unit = js.Dynamic.global.applyDynamic("focus")().asInstanceOf[scala.Unit]
   
   @scala.inline
-  def frameElement: org.scalajs.dom.raw.Element = js.Dynamic.global.selectDynamic("frameElement").asInstanceOf[org.scalajs.dom.raw.Element]
+  def frameElement: org.scalajs.dom.raw.Element | scala.Null = js.Dynamic.global.selectDynamic("frameElement").asInstanceOf[org.scalajs.dom.raw.Element | scala.Null]
   @scala.inline
-  def frameElement_=(x: org.scalajs.dom.raw.Element): scala.Unit = js.Dynamic.global.updateDynamic("frameElement")(x.asInstanceOf[js.Any])
+  def frameElement_=(x: org.scalajs.dom.raw.Element | scala.Null): scala.Unit = js.Dynamic.global.updateDynamic("frameElement")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def frames: org.scalajs.dom.raw.Window = js.Dynamic.global.selectDynamic("frames").asInstanceOf[org.scalajs.dom.raw.Window]
@@ -3803,6 +3971,44 @@ package object global {
       js.Any
     ]) | scala.Null
   ): scala.Unit = js.Dynamic.global.updateDynamic("onfocus")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def ongamepadconnected: (js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.Window, 
+    /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+    js.Any
+  ]) | scala.Null = js.Dynamic.global.selectDynamic("ongamepadconnected").asInstanceOf[(js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.Window, 
+    /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+    js.Any
+  ]) | scala.Null]
+  @scala.inline
+  def ongamepadconnected_=(
+    x: (js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      js.Any
+    ]) | scala.Null
+  ): scala.Unit = js.Dynamic.global.updateDynamic("ongamepadconnected")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def ongamepaddisconnected: (js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.Window, 
+    /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+    js.Any
+  ]) | scala.Null = js.Dynamic.global.selectDynamic("ongamepaddisconnected").asInstanceOf[(js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.Window, 
+    /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+    js.Any
+  ]) | scala.Null]
+  @scala.inline
+  def ongamepaddisconnected_=(
+    x: (js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      js.Any
+    ]) | scala.Null
+  ): scala.Unit = js.Dynamic.global.updateDynamic("ongamepaddisconnected")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def ongotpointercapture: (js.ThisFunction1[
@@ -5728,6 +5934,24 @@ package object global {
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
+  def removeEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_beforeinput(
+    `type`: tmttyped.std.stdStrings.beforeinput,
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
   def removeEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
@@ -5916,6 +6140,96 @@ package object global {
   def removeEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def removeEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionend(
+    `type`: tmttyped.std.stdStrings.compositionend,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def removeEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionstart(
+    `type`: tmttyped.std.stdStrings.compositionstart,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def removeEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_compositionupdate(
+    `type`: tmttyped.std.stdStrings.compositionupdate,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.CompositionEvent, 
+      _
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -6348,6 +6662,66 @@ package object global {
   def removeEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def removeEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_gamepadconnected(
+    `type`: tmttyped.std.stdStrings.gamepadconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: scala.Boolean
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def removeEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ]
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def removeEventListener_gamepaddisconnected(
+    `type`: tmttyped.std.stdStrings.gamepaddisconnected,
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
+      _
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   

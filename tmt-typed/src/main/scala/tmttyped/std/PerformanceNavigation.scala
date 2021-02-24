@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done. */
+/** The legacy PerformanceNavigation interface represents information about how the navigation to the current document was done.
+  * @deprecated This interface is deprecated in the Navigation Timing Level 2 specification. Please use the PerformanceNavigationTiming interface instead.
+  */
 trait PerformanceNavigation extends StObject {
   
   val TYPE_BACK_FORWARD: Double

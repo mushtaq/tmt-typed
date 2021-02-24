@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PointerEventInit extends MouseEventInit {
   
+  var coalescedEvents: js.UndefOr[js.Array[org.scalajs.dom.raw.PointerEvent]] = js.undefined
+  
   var height: js.UndefOr[Double] = js.undefined
   
   var isPrimary: js.UndefOr[scala.Boolean] = js.undefined
@@ -14,6 +16,8 @@ trait PointerEventInit extends MouseEventInit {
   var pointerId: js.UndefOr[Double] = js.undefined
   
   var pointerType: js.UndefOr[java.lang.String] = js.undefined
+  
+  var predictedEvents: js.UndefOr[js.Array[org.scalajs.dom.raw.PointerEvent]] = js.undefined
   
   var pressure: js.UndefOr[Double] = js.undefined
   
@@ -39,6 +43,15 @@ object PointerEventInit {
   implicit class PointerEventInitMutableBuilder[Self <: org.scalajs.dom.raw.PointerEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
+    def setCoalescedEvents(value: js.Array[org.scalajs.dom.raw.PointerEvent]): Self = StObject.set(x, "coalescedEvents", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCoalescedEventsUndefined: Self = StObject.set(x, "coalescedEvents", js.undefined)
+    
+    @scala.inline
+    def setCoalescedEventsVarargs(value: org.scalajs.dom.raw.PointerEvent*): Self = StObject.set(x, "coalescedEvents", js.Array(value :_*))
+    
+    @scala.inline
     def setHeight(value: Double): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -61,6 +74,15 @@ object PointerEventInit {
     
     @scala.inline
     def setPointerTypeUndefined: Self = StObject.set(x, "pointerType", js.undefined)
+    
+    @scala.inline
+    def setPredictedEvents(value: js.Array[org.scalajs.dom.raw.PointerEvent]): Self = StObject.set(x, "predictedEvents", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPredictedEventsUndefined: Self = StObject.set(x, "predictedEvents", js.undefined)
+    
+    @scala.inline
+    def setPredictedEventsVarargs(value: org.scalajs.dom.raw.PointerEvent*): Self = StObject.set(x, "predictedEvents", js.Array(value :_*))
     
     @scala.inline
     def setPressure(value: Double): Self = StObject.set(x, "pressure", value.asInstanceOf[js.Any])

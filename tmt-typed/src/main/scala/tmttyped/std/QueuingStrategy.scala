@@ -9,7 +9,7 @@ trait QueuingStrategy[T] extends StObject {
   
   var highWaterMark: js.UndefOr[Double] = js.undefined
   
-  var size: js.UndefOr[QueuingStrategySizeCallback[T]] = js.undefined
+  var size: js.UndefOr[QueuingStrategySize[T]] = js.undefined
 }
 object QueuingStrategy {
   

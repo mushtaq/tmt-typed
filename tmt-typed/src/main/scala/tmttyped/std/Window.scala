@@ -21,6 +21,8 @@ import tmttyped.std.stdStrings.devicelight
 import tmttyped.std.stdStrings.devicemotion
 import tmttyped.std.stdStrings.deviceorientation
 import tmttyped.std.stdStrings.deviceorientationabsolute
+import tmttyped.std.stdStrings.gamepadconnected
+import tmttyped.std.stdStrings.gamepaddisconnected
 import tmttyped.std.stdStrings.mousewheel
 import tmttyped.std.stdStrings.orientationchange
 import tmttyped.std.stdStrings.readystatechange
@@ -437,6 +439,40 @@ trait Window
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
+  def addEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: AddEventListenerOptions
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: AddEventListenerOptions
+  ): Unit = js.native
+  @JSName("addEventListener")
   def addEventListener_mousewheel(
     `type`: mousewheel,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
@@ -680,7 +716,7 @@ trait Window
   
   def focus(): Unit = js.native
   
-  val frameElement: org.scalajs.dom.raw.Element = js.native
+  val frameElement: org.scalajs.dom.raw.Element | Null = js.native
   
   val frames: org.scalajs.dom.raw.Window = js.native
   
@@ -743,6 +779,10 @@ trait Window
     /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
     _
   ]) | Null = js.native
+  
+  var ongamepadconnected: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]) | Null = js.native
+  
+  var ongamepaddisconnected: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]) | Null = js.native
   
   var onmousewheel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   
@@ -1270,6 +1310,40 @@ trait Window
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
       _
     ],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepadconnected(
+    `type`: gamepadconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_gamepaddisconnected(
+    `type`: gamepaddisconnected,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")

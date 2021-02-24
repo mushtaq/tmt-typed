@@ -85,6 +85,8 @@ trait ServiceWorkerContainer extends EventTarget {
   
   def register(scriptURL: java.lang.String): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
   def register(scriptURL: java.lang.String, options: RegistrationOptions): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
+  def register(scriptURL: org.scalajs.dom.experimental.URL): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
+  def register(scriptURL: org.scalajs.dom.experimental.URL, options: RegistrationOptions): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
   
   @JSName("removeEventListener")
   def removeEventListener_controllerchange(

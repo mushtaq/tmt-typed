@@ -16,7 +16,7 @@ trait TextEncoder extends TextEncoderCommon {
   def encode(input: java.lang.String): js.typedarray.Uint8Array = js.native
   
   /**
-    * Runs the UTF-8 encoder on source, stores the result of that operation into destination, and returns the progress made as a dictionary whereby read is the number of converted code units of source and written is the number of bytes modified in destination.
+    * Runs the UTF-8 encoder on source, stores the result of that operation into destination, and returns the progress made as an object wherein read is the number of converted code units of source and written is the number of bytes modified in destination.
     */
   def encodeInto(source: java.lang.String, destination: js.typedarray.Uint8Array): TextEncoderEncodeIntoResult = js.native
 }

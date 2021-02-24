@@ -1019,8 +1019,14 @@ object global {
   
   @JSGlobal("setInterval")
   @js.native
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
+  @JSGlobal("setInterval")
+  @js.native
   def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
   
+  @JSGlobal("setTimeout")
+  @js.native
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
   @JSGlobal("setTimeout")
   @js.native
   def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native

@@ -1,6 +1,5 @@
 package tmttyped.std
 
-import tmttyped.std.stdStrings.byob
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -102,26 +101,6 @@ object anon {
     }
   }
   
-  trait HighWaterMark extends StObject {
-    
-    var highWaterMark: Double
-  }
-  object HighWaterMark {
-    
-    @scala.inline
-    def apply(highWaterMark: Double): HighWaterMark = {
-      val __obj = js.Dynamic.literal(highWaterMark = highWaterMark.asInstanceOf[js.Any])
-      __obj.asInstanceOf[HighWaterMark]
-    }
-    
-    @scala.inline
-    implicit class HighWaterMarkMutableBuilder[Self <: HighWaterMark] (val x: Self) extends AnyVal {
-      
-      @scala.inline
-      def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
-    }
-  }
-  
   trait Item[T] extends StObject {
     
     def Item(index: js.Any): T
@@ -181,26 +160,6 @@ object anon {
     var `match`: js.Function1[/* string */ java.lang.String, RegExpMatchArray | Null] = js.native
   }
   
-  trait Mode extends StObject {
-    
-    var mode: byob
-  }
-  object Mode {
-    
-    @scala.inline
-    def apply(mode: byob): Mode = {
-      val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
-      __obj.asInstanceOf[Mode]
-    }
-    
-    @scala.inline
-    implicit class ModeMutableBuilder[Self <: Mode] (val x: Self) extends AnyVal {
-      
-      @scala.inline
-      def setMode(value: byob): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
-    }
-  }
-  
   trait Proxy[T /* <: js.Object */] extends StObject {
     
     var proxy: T
@@ -226,31 +185,6 @@ object anon {
     }
   }
   
-  trait Readable[R, T] extends StObject {
-    
-    var readable: org.scalajs.dom.experimental.ReadableStream[T]
-    
-    var writable: WritableStream[R]
-  }
-  object Readable {
-    
-    @scala.inline
-    def apply[R, T](readable: org.scalajs.dom.experimental.ReadableStream[T], writable: WritableStream[R]): Readable[R, T] = {
-      val __obj = js.Dynamic.literal(readable = readable.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
-      __obj.asInstanceOf[Readable[R, T]]
-    }
-    
-    @scala.inline
-    implicit class ReadableMutableBuilder[Self <: Readable[_, _], R, T] (val x: Self with (Readable[R, T])) extends AnyVal {
-      
-      @scala.inline
-      def setReadable(value: org.scalajs.dom.experimental.ReadableStream[T]): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setWritable(value: WritableStream[R]): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])
-    }
-  }
-  
   @js.native
   trait Replace extends StObject {
     
@@ -263,31 +197,6 @@ object anon {
     
     @JSName(js.Symbol.search)
     var search: js.Function1[/* string */ java.lang.String, Double] = js.native
-  }
-  
-  trait Size extends StObject {
-    
-    var highWaterMark: js.UndefOr[Double] = js.undefined
-    
-    var size: js.UndefOr[scala.Nothing] = js.undefined
-  }
-  object Size {
-    
-    @scala.inline
-    def apply(): Size = {
-      val __obj = js.Dynamic.literal()
-      __obj.asInstanceOf[Size]
-    }
-    
-    @scala.inline
-    implicit class SizeMutableBuilder[Self <: Size] (val x: Self) extends AnyVal {
-      
-      @scala.inline
-      def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setHighWaterMarkUndefined: Self = StObject.set(x, "highWaterMark", js.undefined)
-    }
   }
   
   @js.native

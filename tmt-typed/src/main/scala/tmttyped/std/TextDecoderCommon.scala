@@ -13,12 +13,12 @@ trait TextDecoderCommon extends StObject {
   val encoding: java.lang.String
   
   /**
-    * Returns true if error mode is "fatal", and false otherwise.
+    * Returns true if error mode is "fatal", otherwise false.
     */
   val fatal: scala.Boolean
   
   /**
-    * Returns true if ignore BOM flag is set, and false otherwise.
+    * Returns the value of ignore BOM.
     */
   val ignoreBOM: scala.Boolean
 }

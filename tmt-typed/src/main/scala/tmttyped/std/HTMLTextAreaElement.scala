@@ -107,13 +107,34 @@ trait HTMLTextAreaElement extends HTMLElement {
     * @param end The offset into the text field for the end of the selection.
     * @param direction The direction in which the selection is performed.
     */
+  def setSelectionRange(): Unit = js.native
+  def setSelectionRange(start: Double): Unit = js.native
   def setSelectionRange(start: Double, end: Double): Unit = js.native
+  def setSelectionRange(start: Null, end: Double): Unit = js.native
   @JSName("setSelectionRange")
   def setSelectionRange_backward(start: Double, end: Double, direction: backward): Unit = js.native
   @JSName("setSelectionRange")
+  def setSelectionRange_backward(start: Double, end: Null, direction: backward): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_backward(start: Null, end: Double, direction: backward): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_backward(start: Null, end: Null, direction: backward): Unit = js.native
+  @JSName("setSelectionRange")
   def setSelectionRange_forward(start: Double, end: Double, direction: forward): Unit = js.native
   @JSName("setSelectionRange")
+  def setSelectionRange_forward(start: Double, end: Null, direction: forward): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_forward(start: Null, end: Double, direction: forward): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_forward(start: Null, end: Null, direction: forward): Unit = js.native
+  @JSName("setSelectionRange")
   def setSelectionRange_none(start: Double, end: Double, direction: none): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_none(start: Double, end: Null, direction: none): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_none(start: Null, end: Double, direction: none): Unit = js.native
+  @JSName("setSelectionRange")
+  def setSelectionRange_none(start: Null, end: Null, direction: none): Unit = js.native
   
   val textLength: Double = js.native
   

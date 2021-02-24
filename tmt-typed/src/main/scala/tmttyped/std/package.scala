@@ -322,7 +322,7 @@ package object std {
   
   type PublicKeyCredentialType = tmttyped.std.stdStrings.`public-key`
   
-  type QueuingStrategySizeCallback[T] = js.Function1[/* chunk */ T, scala.Double]
+  type QueuingStrategySize[T] = js.Function1[/* chunk */ T, scala.Double]
   
   type RTCAnswerOptions = tmttyped.std.RTCOfferAnswerOptions
   
@@ -339,17 +339,9 @@ package object std {
   
   type RangeError = js.Error
   
-  type ReadableByteStreamControllerCallback = js.Function1[
-    /* controller */ tmttyped.std.ReadableByteStreamController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
+  type ReadableStreamController[T] = tmttyped.std.ReadableStreamDefaultController[T]
   
-  type ReadableStreamDefaultControllerCallback[R] = js.Function1[
-    /* controller */ tmttyped.std.ReadableStreamDefaultController[R], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type ReadableStreamErrorCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
+  type ReadableStreamReader[T] = tmttyped.std.ReadableStreamDefaultReader[T]
   
   /**
     * Make all properties in T readonly
@@ -381,6 +373,12 @@ package object std {
   type Required[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: -? T[P]}
     */ tmttyped.std.stdStrings.Required with org.scalablytyped.runtime.TopLevel[T]
+  
+  type ResizeObserverCallback = js.Function2[
+    /* entries */ js.Array[tmttyped.std.ResizeObserverEntry], 
+    /* observer */ tmttyped.std.ResizeObserver, 
+    scala.Unit
+  ]
   
   /**
     * Obtain the return type of a function type
@@ -426,12 +424,17 @@ package object std {
   */
   type Transferable = tmttyped.std._Transferable | js.typedarray.ArrayBuffer | org.scalajs.dom.raw.MessagePort
   
-  type TransformStreamDefaultControllerCallback[O] = js.Function1[
+  type TransformerFlushCallback[O] = js.Function1[
     /* controller */ tmttyped.std.TransformStreamDefaultController[O], 
     scala.Unit | js.Thenable[scala.Unit]
   ]
   
-  type TransformStreamDefaultControllerTransformCallback[I, O] = js.Function2[
+  type TransformerStartCallback[O] = js.Function1[
+    /* controller */ tmttyped.std.TransformStreamDefaultController[O], 
+    scala.Unit | js.Thenable[scala.Unit]
+  ]
+  
+  type TransformerTransformCallback[I, O] = js.Function2[
     /* chunk */ I, 
     /* controller */ tmttyped.std.TransformStreamDefaultController[O], 
     scala.Unit | js.Thenable[scala.Unit]
@@ -447,6 +450,33 @@ package object std {
     * Convert first character of string literal type to lowercase
     */
   type Uncapitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  
+  type UnderlyingSinkAbortCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
+  
+  type UnderlyingSinkCloseCallback = js.Function0[scala.Unit | js.Thenable[scala.Unit]]
+  
+  type UnderlyingSinkStartCallback = js.Function1[
+    /* controller */ tmttyped.std.WritableStreamDefaultController, 
+    scala.Unit | js.Thenable[scala.Unit]
+  ]
+  
+  type UnderlyingSinkWriteCallback[W] = js.Function2[
+    /* chunk */ W, 
+    /* controller */ tmttyped.std.WritableStreamDefaultController, 
+    scala.Unit | js.Thenable[scala.Unit]
+  ]
+  
+  type UnderlyingSourceCancelCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
+  
+  type UnderlyingSourcePullCallback[R] = js.Function1[
+    /* controller */ tmttyped.std.ReadableStreamController[R], 
+    scala.Unit | js.Thenable[scala.Unit]
+  ]
+  
+  type UnderlyingSourceStartCallback[R] = js.Function1[
+    /* controller */ tmttyped.std.ReadableStreamController[R], 
+    scala.Unit | js.Thenable[scala.Unit]
+  ]
   
   /**
     * Convert string literal type to uppercase
@@ -494,21 +524,6 @@ package object std {
   type WebKitCSSMatrix = tmttyped.std.DOMMatrix
   
   type WindowProxy = org.scalajs.dom.raw.Window
-  
-  type WritableStreamDefaultControllerCloseCallback = js.Function0[scala.Unit | js.Thenable[scala.Unit]]
-  
-  type WritableStreamDefaultControllerStartCallback = js.Function1[
-    /* controller */ tmttyped.std.WritableStreamDefaultController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type WritableStreamDefaultControllerWriteCallback[W] = js.Function2[
-    /* chunk */ W, 
-    /* controller */ tmttyped.std.WritableStreamDefaultController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type WritableStreamErrorCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
   
   /** The XPathEvaluator interface allows to compile and evaluate XPath expressions. */
   type XPathEvaluator = tmttyped.std.XPathEvaluatorBase

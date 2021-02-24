@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import tmttyped.std.anon.HighWaterMark
+import tmttyped.std.QueuingStrategyInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ByteLengthQueuingStrategy protected ()
   extends tmttyped.std.ByteLengthQueuingStrategy {
-  def this(options: HighWaterMark) = this()
+  def this(init: QueuingStrategyInit) = this()
   
   /* CompleteClass */
   @JSName("highWaterMark")
-  override var highWaterMark_ByteLengthQueuingStrategy: Double = js.native
+  override val highWaterMark_ByteLengthQueuingStrategy: Double = js.native
   
   /* CompleteClass */
   @JSName("size")

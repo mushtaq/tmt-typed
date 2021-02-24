@@ -12,7 +12,8 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   
   /**
     * Combines two or more arrays.
-    * @param items Additional items to add to the end of array1.
+    * This method returns a new array without modifying any existing arrays.
+    * @param items Additional arrays and/or items to add to the end of the array.
     */
   def concat(items: (js.Array[T] | T)*): js.Array[T] = js.native
   
@@ -210,7 +211,7 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   def includes(searchElement: T, fromIndex: Double): scala.Boolean = js.native
   
   /**
-    * Returns the index of the first occurrence of a value in an array.
+    * Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
     * @param searchElement The value to locate in the array.
     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
     */
@@ -222,8 +223,8 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   var iterator: js.Function0[IterableIterator[T]] = js.native
   
   /**
-    * Adds all the elements of an array separated by the specified separator string.
-    * @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
+    * Adds all the elements of an array into a string, separated by the specified separator string.
+    * @param separator A string used to separate one element of the array from the next in the resulting string. If omitted, the array elements are separated with a comma.
     */
   def join(): java.lang.String = js.native
   def join(separator: java.lang.String): java.lang.String = js.native
@@ -234,15 +235,15 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   def keys(): IterableIterator[Double] = js.native
   
   /**
-    * Returns the index of the last occurrence of a specified value in an array.
+    * Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
     * @param searchElement The value to locate in the array.
-    * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
+    * @param fromIndex The array index at which to begin searching backward. If fromIndex is omitted, the search starts at the last index in the array.
     */
   def lastIndexOf(searchElement: T): Double = js.native
   def lastIndexOf(searchElement: T, fromIndex: Double): Double = js.native
   
   /**
-    * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
+    * Gets or sets the length of the array. This is a number one higher than the highest index in the array.
     */
   var length: Double = js.native
   
@@ -259,12 +260,13 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   
   /**
     * Removes the last element from an array and returns it.
+    * If the array is empty, undefined is returned and the array is not modified.
     */
   def pop(): js.UndefOr[T] = js.native
   
   /**
-    * Appends new elements to an array, and returns the new length of the array.
-    * @param items New elements of the Array.
+    * Appends new elements to the end of an array, and returns the new length of the array.
+    * @param items New elements to add to the array.
     */
   def push(items: T*): Double = js.native
   
@@ -352,19 +354,25 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   ): U = js.native
   
   /**
-    * Reverses the elements in an Array.
+    * Reverses the elements in an array in place.
+    * This method mutates the array and returns a reference to the same array.
     */
   def reverse(): js.Array[T] = js.native
   
   /**
     * Removes the first element from an array and returns it.
+    * If the array is empty, undefined is returned and the array is not modified.
     */
   def shift(): js.UndefOr[T] = js.native
   
   /**
-    * Returns a section of an array.
-    * @param start The beginning of the specified portion of the array.
-    * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+    * Returns a copy of a section of an array.
+    * For both start and end, a negative index can be used to indicate an offset from the end of the array.
+    * For example, -2 refers to the second to last element of the array.
+    * @param start The beginning index of the specified portion of the array.
+    * If start is undefined, then the slice begins at index 0.
+    * @param end The end index of the specified portion of the array. This is exclusive of the element at the index 'end'.
+    * If end is undefined, then the slice extends to the end of the array.
     */
   def slice(): js.Array[T] = js.native
   def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[T] = js.native
@@ -386,7 +394,8 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   ): scala.Boolean = js.native
   
   /**
-    * Sorts an array.
+    * Sorts an array in place.
+    * This method mutates the array and returns a reference to the same array.
     * @param compareFn Function used to determine the order of the elements. It is expected to return
     * a negative value if first argument is less than second argument, zero if they're equal and a positive
     * value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
@@ -401,6 +410,7 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
     * @param start The zero-based location in the array from which to start removing elements.
     * @param deleteCount The number of elements to remove.
+    * @returns An array containing the elements that were deleted.
     */
   def splice(start: Double): js.Array[T] = js.native
   def splice(start: Double, deleteCount: Double): js.Array[T] = js.native
@@ -409,6 +419,7 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * @param start The zero-based location in the array from which to start removing elements.
     * @param deleteCount The number of elements to remove.
     * @param items Elements to insert into the array in place of the deleted elements.
+    * @returns An array containing the elements that were deleted.
     */
   def splice(start: Double, deleteCount: Double, items: T*): js.Array[T] = js.native
   
@@ -420,8 +431,8 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
   var unscopables: js.Function0[CopyWithin] = js.native
   
   /**
-    * Inserts new elements at the start of an array.
-    * @param items  Elements to insert at the start of the Array.
+    * Inserts new elements at the start of an array, and returns the new length of the array.
+    * @param items Elements to insert at the start of the array.
     */
   def unshift(items: T*): Double = js.native
   

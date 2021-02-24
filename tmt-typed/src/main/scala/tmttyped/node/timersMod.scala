@@ -27,8 +27,14 @@ object timersMod {
   
   @JSImport("timers", "setInterval")
   @js.native
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
+  @JSImport("timers", "setInterval")
+  @js.native
   def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
   
+  @JSImport("timers", "setTimeout")
+  @js.native
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
   @JSImport("timers", "setTimeout")
   @js.native
   def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native

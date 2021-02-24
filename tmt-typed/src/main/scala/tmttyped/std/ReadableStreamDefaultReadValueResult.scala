@@ -6,22 +6,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ReadableStreamReadValueResult[T] extends ReadableStreamReadResult[T] {
+trait ReadableStreamDefaultReadValueResult[T] extends ReadableStreamDefaultReadResult[T] {
   
   var done: `false`
   
   var value: T
 }
-object ReadableStreamReadValueResult {
+object ReadableStreamDefaultReadValueResult {
   
   @scala.inline
-  def apply[T](done: `false`, value: T): ReadableStreamReadValueResult[T] = {
+  def apply[T](done: `false`, value: T): ReadableStreamDefaultReadValueResult[T] = {
     val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReadableStreamReadValueResult[T]]
+    __obj.asInstanceOf[ReadableStreamDefaultReadValueResult[T]]
   }
   
   @scala.inline
-  implicit class ReadableStreamReadValueResultMutableBuilder[Self <: ReadableStreamReadValueResult[_], T] (val x: Self with ReadableStreamReadValueResult[T]) extends AnyVal {
+  implicit class ReadableStreamDefaultReadValueResultMutableBuilder[Self <: ReadableStreamDefaultReadValueResult[_], T] (val x: Self with ReadableStreamDefaultReadValueResult[T]) extends AnyVal {
     
     @scala.inline
     def setDone(value: `false`): Self = StObject.set(x, "done", value.asInstanceOf[js.Any])

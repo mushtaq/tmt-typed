@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait IntersectionObserverInit extends StObject {
   
-  var root: js.UndefOr[org.scalajs.dom.raw.Element | Null] = js.undefined
+  var root: js.UndefOr[org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document | Null] = js.undefined
   
   var rootMargin: js.UndefOr[java.lang.String] = js.undefined
   
@@ -25,7 +25,13 @@ object IntersectionObserverInit {
   implicit class IntersectionObserverInitMutableBuilder[Self <: IntersectionObserverInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setRoot(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    def setRoot(value: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRootDocument(value: org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRootElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRootMargin(value: java.lang.String): Self = StObject.set(x, "rootMargin", value.asInstanceOf[js.Any])

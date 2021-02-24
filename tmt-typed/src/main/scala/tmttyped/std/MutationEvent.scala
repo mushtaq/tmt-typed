@@ -5,7 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** Provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes. */
+/** Provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
+  * @deprecated DOM4 [DOM] provides a new mechanism using a MutationObserver interface which addresses the use cases that mutation events solve, but in a more performant manner. Thus, this specification describes mutation events for reference and completeness of legacy behavior, but deprecates the use of the MutationEvent interface. */
 @js.native
 trait MutationEvent extends Event {
   

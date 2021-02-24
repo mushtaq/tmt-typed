@@ -1,7 +1,6 @@
 package tmttyped.std.global
 
-import tmttyped.std.anon.HighWaterMark
-import tmttyped.std.stdNumbers.`1`
+import tmttyped.std.QueuingStrategyInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,13 +11,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class CountQueuingStrategy protected ()
   extends tmttyped.std.CountQueuingStrategy {
-  def this(options: HighWaterMark) = this()
+  def this(init: QueuingStrategyInit) = this()
   
   /* CompleteClass */
   @JSName("highWaterMark")
-  override var highWaterMark_CountQueuingStrategy: Double = js.native
+  override val highWaterMark_CountQueuingStrategy: Double = js.native
   
   /* CompleteClass */
   @JSName("size")
-  override def size_MCountQueuingStrategy(chunk: js.Any): `1` = js.native
+  override def size_MCountQueuingStrategy(chunk: js.Any): Double = js.native
 }

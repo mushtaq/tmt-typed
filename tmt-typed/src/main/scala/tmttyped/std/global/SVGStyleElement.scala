@@ -30,5 +30,8 @@ class SVGStyleElement ()
   override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
   
   /* CompleteClass */
+  override val sheet: org.scalajs.dom.raw.CSSStyleSheet | Null = js.native
+  
+  /* CompleteClass */
   override val style: org.scalajs.dom.raw.CSSStyleDeclaration = js.native
 }

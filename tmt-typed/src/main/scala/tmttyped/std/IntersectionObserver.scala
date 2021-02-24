@@ -12,7 +12,7 @@ trait IntersectionObserver extends StObject {
   
   def observe(target: org.scalajs.dom.raw.Element): Unit
   
-  val root: org.scalajs.dom.raw.Element | Null
+  val root: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document | Null
   
   val rootMargin: java.lang.String
   
@@ -47,7 +47,13 @@ object IntersectionObserver {
     def setObserve(value: org.scalajs.dom.raw.Element => Unit): Self = StObject.set(x, "observe", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRoot(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    def setRoot(value: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRootDocument(value: org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRootElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRootMargin(value: java.lang.String): Self = StObject.set(x, "rootMargin", value.asInstanceOf[js.Any])

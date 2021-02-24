@@ -1,6 +1,5 @@
 package tmttyped.std
 
-import tmttyped.std.stdNumbers.`1`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,15 +10,15 @@ trait CountQueuingStrategy
   extends QueuingStrategy[js.Any] {
   
   @JSName("highWaterMark")
-  var highWaterMark_CountQueuingStrategy: Double
+  val highWaterMark_CountQueuingStrategy: Double
   
   @JSName("size")
-  def size_MCountQueuingStrategy(chunk: js.Any): `1`
+  def size_MCountQueuingStrategy(chunk: js.Any): Double
 }
 object CountQueuingStrategy {
   
   @scala.inline
-  def apply(highWaterMark: Double, size: js.Any => `1`): CountQueuingStrategy = {
+  def apply(highWaterMark: Double, size: js.Any => Double): CountQueuingStrategy = {
     val __obj = js.Dynamic.literal(highWaterMark = highWaterMark.asInstanceOf[js.Any], size = js.Any.fromFunction1(size))
     __obj.asInstanceOf[CountQueuingStrategy]
   }
@@ -31,6 +30,6 @@ object CountQueuingStrategy {
     def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: js.Any => `1`): Self = StObject.set(x, "size", js.Any.fromFunction1(value))
+    def setSize(value: js.Any => Double): Self = StObject.set(x, "size", js.Any.fromFunction1(value))
   }
 }

@@ -1,6 +1,6 @@
 inThisBuild(
   Seq(
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     version := "0.1.0-SNAPSHOT",
     organization := "com.github.mushtaq.tmt-typed",
     organizationName := "ThoughtWorks",
@@ -31,7 +31,8 @@ lazy val `tmt-typed` = project
   .settings(
     Compile / npmDependencies ++= Seq(
       "@microsoft/fetch-event-source"   -> "^2.0.0",
-      "@types/rsocket-websocket-client" -> "^0.0.3"
+      "@types/rsocket-websocket-client" -> "^0.0.3",
+      "typescript"                      -> "^4.2.2"
     ),
     stEnableScalaJsDefined := Selection.All,
     stStdlib := List("ESNext", "DOM", "DOM.Iterable", "ScriptHost"),

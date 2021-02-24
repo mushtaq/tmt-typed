@@ -1141,6 +1141,8 @@ trait Document
   @JSName("createEvent")
   def createEvent_ServiceWorkerMessageEvent(eventInterface: tmttyped.std.stdStrings.ServiceWorkerMessageEvent): ServiceWorkerMessageEvent = js.native
   @JSName("createEvent")
+  def createEvent_SpeechRecognitionErrorEvent(eventInterface: tmttyped.std.stdStrings.SpeechRecognitionErrorEvent): SpeechRecognitionErrorEvent = js.native
+  @JSName("createEvent")
   def createEvent_SpeechRecognitionEvent(eventInterface: tmttyped.std.stdStrings.SpeechRecognitionEvent): SpeechRecognitionEvent = js.native
   @JSName("createEvent")
   def createEvent_SpeechSynthesisErrorEvent(eventInterface: tmttyped.std.stdStrings.SpeechSynthesisErrorEvent): SpeechSynthesisErrorEvent = js.native

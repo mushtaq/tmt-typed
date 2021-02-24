@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import org.scalajs.dom.raw.Document
 import tmttyped.std.IntersectionObserverCallback
 import tmttyped.std.IntersectionObserverInit
 import org.scalablytyped.runtime.StObject
@@ -22,7 +23,7 @@ class IntersectionObserver protected ()
   override def observe(target: org.scalajs.dom.raw.Element): Unit = js.native
   
   /* CompleteClass */
-  override val root: org.scalajs.dom.raw.Element | Null = js.native
+  override val root: org.scalajs.dom.raw.Element | Document | Null = js.native
   
   /* CompleteClass */
   override val rootMargin: java.lang.String = js.native

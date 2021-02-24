@@ -7,15 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait UnderlyingSink[W] extends StObject {
   
-  var abort: js.UndefOr[WritableStreamErrorCallback] = js.undefined
+  var abort: js.UndefOr[UnderlyingSinkAbortCallback] = js.undefined
   
-  var close: js.UndefOr[WritableStreamDefaultControllerCloseCallback] = js.undefined
+  var close: js.UndefOr[UnderlyingSinkCloseCallback] = js.undefined
   
-  var start: js.UndefOr[WritableStreamDefaultControllerStartCallback] = js.undefined
+  var start: js.UndefOr[UnderlyingSinkStartCallback] = js.undefined
   
   var `type`: js.UndefOr[scala.Nothing] = js.undefined
   
-  var write: js.UndefOr[WritableStreamDefaultControllerWriteCallback[W]] = js.undefined
+  var write: js.UndefOr[UnderlyingSinkWriteCallback[W]] = js.undefined
 }
 object UnderlyingSink {
   

@@ -22,13 +22,13 @@ class TextDecoder ()
   override val encoding: java.lang.String = js.native
   
   /**
-    * Returns true if error mode is "fatal", and false otherwise.
+    * Returns true if error mode is "fatal", otherwise false.
     */
   /* CompleteClass */
   override val fatal: scala.Boolean = js.native
   
   /**
-    * Returns true if ignore BOM flag is set, and false otherwise.
+    * Returns the value of ignore BOM.
     */
   /* CompleteClass */
   override val ignoreBOM: scala.Boolean = js.native

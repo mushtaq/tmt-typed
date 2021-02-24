@@ -75,18 +75,18 @@ trait SpeechRecognition extends EventTarget {
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -225,7 +225,7 @@ trait SpeechRecognition extends EventTarget {
   
   var onend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]) | Null = js.native
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _]) | Null = js.native
   
   var onnomatch: (js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionEvent, _]) | Null = js.native
   
@@ -295,18 +295,18 @@ trait SpeechRecognition extends EventTarget {
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SpeechRecognitionErrorEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")

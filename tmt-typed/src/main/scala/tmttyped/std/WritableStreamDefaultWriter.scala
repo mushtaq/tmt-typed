@@ -14,11 +14,11 @@ trait WritableStreamDefaultWriter[W] extends StObject {
   
   def close(): js.Promise[Unit] = js.native
   
-  val closed: js.Promise[Unit] = js.native
+  val closed: js.Promise[js.UndefOr[scala.Nothing]] = js.native
   
   val desiredSize: Double | Null = js.native
   
-  val ready: js.Promise[Unit] = js.native
+  val ready: js.Promise[js.UndefOr[scala.Nothing]] = js.native
   
   def releaseLock(): Unit = js.native
   

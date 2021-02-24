@@ -20,9 +20,8 @@ trait RTCInboundRTPStreamStats extends RTCRTPStreamStats {
 object RTCInboundRTPStreamStats {
   
   @scala.inline
-  def apply(id: java.lang.String, timestamp: Double, `type`: org.scalajs.dom.experimental.webrtc.RTCStatsType): RTCInboundRTPStreamStats = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+  def apply(): RTCInboundRTPStreamStats = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RTCInboundRTPStreamStats]
   }
   

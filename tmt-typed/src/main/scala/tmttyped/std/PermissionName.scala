@@ -1,5 +1,6 @@
 package tmttyped.std
 
+import tmttyped.std.stdStrings.nfc_
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,16 +9,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - tmttyped.std.stdStrings.accelerometer
   - tmttyped.std.stdStrings.`ambient-light-sensor`
+  - tmttyped.std.stdStrings.`background-fetch`
   - tmttyped.std.stdStrings.`background-sync`
   - tmttyped.std.stdStrings.bluetooth
   - tmttyped.std.stdStrings.camera
-  - tmttyped.std.stdStrings.clipboard
+  - tmttyped.std.stdStrings.`clipboard-read`
+  - tmttyped.std.stdStrings.`clipboard-write`
   - tmttyped.std.stdStrings.`device-info`
+  - tmttyped.std.stdStrings.`display-capture`
   - tmttyped.std.stdStrings.geolocation
   - tmttyped.std.stdStrings.gyroscope
   - tmttyped.std.stdStrings.magnetometer
   - tmttyped.std.stdStrings.microphone
   - tmttyped.std.stdStrings.midi
+  - tmttyped.std.stdStrings.nfc_
   - tmttyped.std.stdStrings.notifications
   - tmttyped.std.stdStrings.`persistent-storage`
   - tmttyped.std.stdStrings.push
@@ -33,6 +38,9 @@ object PermissionName {
   def `ambient-light-sensor`: tmttyped.std.stdStrings.`ambient-light-sensor` = "ambient-light-sensor".asInstanceOf[tmttyped.std.stdStrings.`ambient-light-sensor`]
   
   @scala.inline
+  def `background-fetch`: tmttyped.std.stdStrings.`background-fetch` = "background-fetch".asInstanceOf[tmttyped.std.stdStrings.`background-fetch`]
+  
+  @scala.inline
   def `background-sync`: tmttyped.std.stdStrings.`background-sync` = "background-sync".asInstanceOf[tmttyped.std.stdStrings.`background-sync`]
   
   @scala.inline
@@ -42,10 +50,16 @@ object PermissionName {
   def camera: tmttyped.std.stdStrings.camera = "camera".asInstanceOf[tmttyped.std.stdStrings.camera]
   
   @scala.inline
-  def clipboard: tmttyped.std.stdStrings.clipboard = "clipboard".asInstanceOf[tmttyped.std.stdStrings.clipboard]
+  def `clipboard-read`: tmttyped.std.stdStrings.`clipboard-read` = "clipboard-read".asInstanceOf[tmttyped.std.stdStrings.`clipboard-read`]
+  
+  @scala.inline
+  def `clipboard-write`: tmttyped.std.stdStrings.`clipboard-write` = "clipboard-write".asInstanceOf[tmttyped.std.stdStrings.`clipboard-write`]
   
   @scala.inline
   def `device-info`: tmttyped.std.stdStrings.`device-info` = "device-info".asInstanceOf[tmttyped.std.stdStrings.`device-info`]
+  
+  @scala.inline
+  def `display-capture`: tmttyped.std.stdStrings.`display-capture` = "display-capture".asInstanceOf[tmttyped.std.stdStrings.`display-capture`]
   
   @scala.inline
   def geolocation: tmttyped.std.stdStrings.geolocation = "geolocation".asInstanceOf[tmttyped.std.stdStrings.geolocation]
@@ -61,6 +75,9 @@ object PermissionName {
   
   @scala.inline
   def midi: tmttyped.std.stdStrings.midi = "midi".asInstanceOf[tmttyped.std.stdStrings.midi]
+  
+  @scala.inline
+  def nfc: nfc_ = "nfc".asInstanceOf[nfc_]
   
   @scala.inline
   def notifications: tmttyped.std.stdStrings.notifications = "notifications".asInstanceOf[tmttyped.std.stdStrings.notifications]

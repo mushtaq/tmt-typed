@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PointerEvent extends MouseEvent {
   
+  def getCoalescedEvents(): js.Array[org.scalajs.dom.raw.PointerEvent] = js.native
+  
+  def getPredictedEvents(): js.Array[org.scalajs.dom.raw.PointerEvent] = js.native
+  
   val height: Double = js.native
   
   val isPrimary: scala.Boolean = js.native
