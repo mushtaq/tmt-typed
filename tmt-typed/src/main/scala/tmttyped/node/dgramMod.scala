@@ -4,7 +4,6 @@ import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.eventsMod.EventEmitterOptions
 import tmttyped.node.netMod.AddressInfo
-import tmttyped.node.nodeEventsMod.^
 import tmttyped.node.nodeStrings.IPv4
 import tmttyped.node.nodeStrings.IPv6
 import tmttyped.node.nodeStrings.close
@@ -19,9 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object dgramMod {
   
+  @JSImport("dgram", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("dgram", "Socket")
   @js.native
-  class Socket () extends ^ {
+  class Socket ()
+    extends tmttyped.node.nodeEventsMod.^ {
     def this(options: EventEmitterOptions) = this()
     
     @JSName("addListener")
@@ -436,18 +440,14 @@ object dgramMod {
     def unref(): this.type = js.native
   }
   
-  @JSImport("dgram", "createSocket")
-  @js.native
-  def createSocket(options: SocketOptions): Socket = js.native
-  @JSImport("dgram", "createSocket")
-  @js.native
-  def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = js.native
-  @JSImport("dgram", "createSocket")
-  @js.native
-  def createSocket(`type`: SocketType): Socket = js.native
-  @JSImport("dgram", "createSocket")
-  @js.native
-  def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = js.native
+  @scala.inline
+  def createSocket(options: SocketOptions): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def createSocket(`type`: SocketType): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
   
   trait BindOptions extends StObject {
     

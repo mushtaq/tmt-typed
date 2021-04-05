@@ -12,7 +12,10 @@ class Selection ()
   extends tmttyped.std.Selection
 object Selection {
   
-  @JSGlobal("Selection.toString")
+  @JSGlobal("Selection")
   @js.native
-  def toString_(): java.lang.String = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def toString_(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toString")().asInstanceOf[java.lang.String]
 }

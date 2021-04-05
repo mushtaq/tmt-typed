@@ -26,7 +26,7 @@ object VRPose {
   
   @scala.inline
   def apply(timestamp: Double): VRPose = {
-    val __obj = js.Dynamic.literal(timestamp = timestamp.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(timestamp = timestamp.asInstanceOf[js.Any], angularAcceleration = null, angularVelocity = null, linearAcceleration = null, linearVelocity = null, orientation = null, position = null)
     __obj.asInstanceOf[VRPose]
   }
   

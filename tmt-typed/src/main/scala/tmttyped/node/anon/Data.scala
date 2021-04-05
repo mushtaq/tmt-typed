@@ -14,9 +14,9 @@ trait Data extends StObject {
 object Data {
   
   @scala.inline
-  def apply(data: js.Array[Double], `type`: tmttyped.node.nodeStrings.Buffer): Data = {
+  def apply(data: js.Array[Double]): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("Buffer")
     __obj.asInstanceOf[Data]
   }
   

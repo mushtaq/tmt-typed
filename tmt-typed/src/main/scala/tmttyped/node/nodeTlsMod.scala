@@ -99,183 +99,146 @@ object nodeTlsMod {
     *
     * Returns Error object, populating it with the reason, host and cert on failure.  On success, returns undefined.
     */
-  @JSImport("node:tls", "checkServerIdentity")
-  @js.native
-  def checkServerIdentity(host: java.lang.String, cert: PeerCertificate): js.UndefOr[js.Error] = js.native
+  @scala.inline
+  def checkServerIdentity(host: java.lang.String, cert: PeerCertificate): js.UndefOr[js.Error] = (^.asInstanceOf[js.Dynamic].applyDynamic("checkServerIdentity")(host.asInstanceOf[js.Any], cert.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[js.Error]]
   
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
+  @scala.inline
+  def connect(options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
   def connect(
     port: Double,
     host: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     secureConnectListener: js.Function0[Unit]
-  ): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, host: js.UndefOr[scala.Nothing], options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
+  ): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, host: js.UndefOr[scala.Nothing], options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
   def connect(
     port: Double,
     host: js.UndefOr[scala.Nothing],
     options: ConnectionOptions,
     secureConnectListener: js.Function0[Unit]
-  ): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, host: java.lang.String): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
+  ): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, host: java.lang.String): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
   def connect(
     port: Double,
     host: java.lang.String,
     options: js.UndefOr[scala.Nothing],
     secureConnectListener: js.Function0[Unit]
-  ): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, host: java.lang.String, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
+  ): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, host: java.lang.String, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
   def connect(
     port: Double,
     host: java.lang.String,
     options: ConnectionOptions,
     secureConnectListener: js.Function0[Unit]
-  ): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, options: js.UndefOr[scala.Nothing], secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = js.native
-  @JSImport("node:tls", "connect")
-  @js.native
-  def connect(port: Double, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = js.native
+  ): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, options: js.UndefOr[scala.Nothing], secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  @scala.inline
+  def connect(port: Double, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
   
-  @JSImport("node:tls", "createSecureContext")
-  @js.native
-  def createSecureContext(): SecureContext = js.native
-  @JSImport("node:tls", "createSecureContext")
-  @js.native
-  def createSecureContext(options: SecureContextOptions): SecureContext = js.native
+  @scala.inline
+  def createSecureContext(): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")().asInstanceOf[SecureContext]
+  @scala.inline
+  def createSecureContext(options: SecureContextOptions): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")(options.asInstanceOf[js.Any]).asInstanceOf[SecureContext]
   
   /**
     * @deprecated since v0.11.3 Use `tls.TLSSocket` instead.
     */
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  @scala.inline
+  def createSecurePair(): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")().asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: js.UndefOr[scala.Nothing],
     isServer: js.UndefOr[scala.Nothing],
     requestCert: js.UndefOr[scala.Nothing],
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: js.UndefOr[scala.Nothing], requestCert: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: js.UndefOr[scala.Nothing], requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: js.UndefOr[scala.Nothing],
     isServer: js.UndefOr[scala.Nothing],
     requestCert: Boolean,
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: js.UndefOr[scala.Nothing],
     isServer: Boolean,
     requestCert: js.UndefOr[scala.Nothing],
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: Boolean, requestCert: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: js.UndefOr[scala.Nothing], isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: js.UndefOr[scala.Nothing],
     isServer: Boolean,
     requestCert: Boolean,
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: SecureContext): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: SecureContext): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any]).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: SecureContext,
     isServer: js.UndefOr[scala.Nothing],
     requestCert: js.UndefOr[scala.Nothing],
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: SecureContext, isServer: js.UndefOr[scala.Nothing], requestCert: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: SecureContext, isServer: js.UndefOr[scala.Nothing], requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: SecureContext,
     isServer: js.UndefOr[scala.Nothing],
     requestCert: Boolean,
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: SecureContext, isServer: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: SecureContext, isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
   def createSecurePair(
     credentials: SecureContext,
     isServer: Boolean,
     requestCert: js.UndefOr[scala.Nothing],
     rejectUnauthorized: Boolean
-  ): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: SecureContext, isServer: Boolean, requestCert: Boolean): SecurePair = js.native
-  @JSImport("node:tls", "createSecurePair")
-  @js.native
-  def createSecurePair(credentials: SecureContext, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = js.native
+  ): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: SecureContext, isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  @scala.inline
+  def createSecurePair(credentials: SecureContext, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
   
-  @JSImport("node:tls", "createServer")
-  @js.native
-  def createServer(): tmttyped.node.tlsMod.Server = js.native
-  @JSImport("node:tls", "createServer")
-  @js.native
-  def createServer(options: TlsOptions): tmttyped.node.tlsMod.Server = js.native
-  @JSImport("node:tls", "createServer")
-  @js.native
+  @scala.inline
+  def createServer(): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.tlsMod.Server]
+  @scala.inline
+  def createServer(options: TlsOptions): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
+  @scala.inline
   def createServer(
     options: TlsOptions,
     secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]
-  ): tmttyped.node.tlsMod.Server = js.native
-  @JSImport("node:tls", "createServer")
-  @js.native
-  def createServer(secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]): tmttyped.node.tlsMod.Server = js.native
+  ): tmttyped.node.tlsMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], secureConnectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.Server]
+  @scala.inline
+  def createServer(secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(secureConnectionListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
   
-  @JSImport("node:tls", "getCiphers")
-  @js.native
-  def getCiphers(): js.Array[java.lang.String] = js.native
+  @scala.inline
+  def getCiphers(): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getCiphers")().asInstanceOf[js.Array[java.lang.String]]
   
   /**
     * An immutable array of strings representing the root certificates (in PEM

@@ -12,7 +12,10 @@ class MediaSource ()
   extends tmttyped.std.MediaSource
 object MediaSource {
   
-  @JSGlobal("MediaSource.isTypeSupported")
+  @JSGlobal("MediaSource")
   @js.native
-  def isTypeSupported(`type`: java.lang.String): scala.Boolean = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def isTypeSupported(`type`: java.lang.String): scala.Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isTypeSupported")(`type`.asInstanceOf[js.Any]).asInstanceOf[scala.Boolean]
 }

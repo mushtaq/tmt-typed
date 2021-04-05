@@ -2,7 +2,6 @@ package tmttyped.node
 
 import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.dnsMod.LookupOneOptions
-import tmttyped.node.nodeEventsMod.^
 import tmttyped.node.nodeStreamMod.Duplex
 import tmttyped.node.nodeStrings.close
 import tmttyped.node.nodeStrings.connect
@@ -19,10 +18,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object netMod {
   
+  @JSImport("net", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   // https://github.com/nodejs/node/blob/master/lib/net.js
   @JSImport("net", "Server")
   @js.native
-  class Server () extends ^ {
+  class Server ()
+    extends tmttyped.node.nodeEventsMod.^ {
     def this(connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
     def this(options: ServerOpts) = this()
     def this(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
@@ -379,83 +383,59 @@ object netMod {
     ): Boolean = js.native
   }
   
-  @JSImport("net", "connect")
-  @js.native
-  def connect(options: NetConnectOpts): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(options: NetConnectOpts, connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(path: java.lang.String): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(path: java.lang.String, connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(port: Double): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(port: Double, host: js.UndefOr[scala.Nothing], connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(port: Double, host: java.lang.String): Socket = js.native
-  @JSImport("net", "connect")
-  @js.native
-  def connect(port: Double, host: java.lang.String, connectionListener: js.Function0[Unit]): Socket = js.native
+  @scala.inline
+  def connect(options: NetConnectOpts): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def connect(options: NetConnectOpts, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def connect(path: java.lang.String): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def connect(path: java.lang.String, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def connect(port: Double): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def connect(port: Double, host: js.UndefOr[scala.Nothing], connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def connect(port: Double, host: java.lang.String): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def connect(port: Double, host: java.lang.String, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
   
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(options: NetConnectOpts): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(options: NetConnectOpts, connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(path: java.lang.String): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(path: java.lang.String, connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(port: Double): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(port: Double, host: js.UndefOr[scala.Nothing], connectionListener: js.Function0[Unit]): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(port: Double, host: java.lang.String): Socket = js.native
-  @JSImport("net", "createConnection")
-  @js.native
-  def createConnection(port: Double, host: java.lang.String, connectionListener: js.Function0[Unit]): Socket = js.native
+  @scala.inline
+  def createConnection(options: NetConnectOpts): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(options: NetConnectOpts, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(path: java.lang.String): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(path: java.lang.String, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(port: Double): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(port: Double, host: js.UndefOr[scala.Nothing], connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(port: Double, host: java.lang.String): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  @scala.inline
+  def createConnection(port: Double, host: java.lang.String, connectionListener: js.Function0[Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Socket]
   
-  @JSImport("net", "createServer")
-  @js.native
-  def createServer(): Server = js.native
-  @JSImport("net", "createServer")
-  @js.native
-  def createServer(connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
-  @JSImport("net", "createServer")
-  @js.native
-  def createServer(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
-  @JSImport("net", "createServer")
-  @js.native
-  def createServer(options: ServerOpts): Server = js.native
-  @JSImport("net", "createServer")
-  @js.native
-  def createServer(options: ServerOpts, connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = js.native
+  @scala.inline
+  def createServer(): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Server]
+  @scala.inline
+  def createServer(connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(connectionListener.asInstanceOf[js.Any]).asInstanceOf[Server]
+  @scala.inline
+  def createServer(options: js.UndefOr[scala.Nothing], connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Server]
+  @scala.inline
+  def createServer(options: ServerOpts): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[Server]
+  @scala.inline
+  def createServer(options: ServerOpts, connectionListener: js.Function1[/* socket */ Socket, Unit]): Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[Server]
   
-  @JSImport("net", "isIP")
-  @js.native
-  def isIP(input: java.lang.String): Double = js.native
+  @scala.inline
+  def isIP(input: java.lang.String): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("isIP")(input.asInstanceOf[js.Any]).asInstanceOf[Double]
   
-  @JSImport("net", "isIPv4")
-  @js.native
-  def isIPv4(input: java.lang.String): Boolean = js.native
+  @scala.inline
+  def isIPv4(input: java.lang.String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv4")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("net", "isIPv6")
-  @js.native
-  def isIPv6(input: java.lang.String): Boolean = js.native
+  @scala.inline
+  def isIPv6(input: java.lang.String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv6")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   trait AddressInfo extends StObject {
     

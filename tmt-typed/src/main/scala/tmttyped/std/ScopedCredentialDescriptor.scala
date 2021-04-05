@@ -17,7 +17,7 @@ object ScopedCredentialDescriptor {
   
   @scala.inline
   def apply(`type`: ScopedCredentialType): ScopedCredentialDescriptor = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(id = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScopedCredentialDescriptor]
   }

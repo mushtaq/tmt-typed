@@ -26,7 +26,7 @@ object StyleSheet {
   
   @scala.inline
   def apply(disabled: scala.Boolean, media: org.scalajs.dom.raw.MediaList, `type`: java.lang.String): org.scalajs.dom.raw.StyleSheet = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], href = null, ownerNode = null, parentStyleSheet = null, title = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[org.scalajs.dom.raw.StyleSheet]
   }

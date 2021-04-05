@@ -23,9 +23,9 @@ trait RequestResponseFrame extends Frame {
 object RequestResponseFrame {
   
   @scala.inline
-  def apply(flags: Double, streamId: Double, `type`: `0x04`): RequestResponseFrame = {
+  def apply(flags: Double, streamId: Double): RequestResponseFrame = {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x04)
     __obj.asInstanceOf[RequestResponseFrame]
   }
   

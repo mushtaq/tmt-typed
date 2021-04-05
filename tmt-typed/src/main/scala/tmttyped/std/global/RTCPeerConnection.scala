@@ -17,11 +17,13 @@ class RTCPeerConnection ()
 }
 object RTCPeerConnection {
   
-  @JSGlobal("RTCPeerConnection.generateCertificate")
+  @JSGlobal("RTCPeerConnection")
   @js.native
-  def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[tmttyped.std.RTCCertificate] = js.native
+  val ^ : js.Any = js.native
   
-  @JSGlobal("RTCPeerConnection.getDefaultIceServers")
-  @js.native
-  def getDefaultIceServers(): js.Array[RTCIceServer] = js.native
+  @scala.inline
+  def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[tmttyped.std.RTCCertificate] = ^.asInstanceOf[js.Dynamic].applyDynamic("generateCertificate")(keygenAlgorithm.asInstanceOf[js.Any]).asInstanceOf[js.Promise[tmttyped.std.RTCCertificate]]
+  
+  @scala.inline
+  def getDefaultIceServers(): js.Array[RTCIceServer] = ^.asInstanceOf[js.Dynamic].applyDynamic("getDefaultIceServers")().asInstanceOf[js.Array[RTCIceServer]]
 }

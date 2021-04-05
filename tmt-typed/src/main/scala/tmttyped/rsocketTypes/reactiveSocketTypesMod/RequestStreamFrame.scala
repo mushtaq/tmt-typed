@@ -25,16 +25,9 @@ trait RequestStreamFrame extends Frame {
 object RequestStreamFrame {
   
   @scala.inline
-  def apply(
-    data: Encodable,
-    flags: Double,
-    metadata: Encodable,
-    requestN: Double,
-    streamId: Double,
-    `type`: `0x06`
-  ): RequestStreamFrame = {
+  def apply(data: Encodable, flags: Double, metadata: Encodable, requestN: Double, streamId: Double): RequestStreamFrame = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], requestN = requestN.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x06)
     __obj.asInstanceOf[RequestStreamFrame]
   }
   

@@ -355,53 +355,39 @@ object httpMod {
     def writeProcessing(): Unit = js.native
   }
   
-  @JSImport("http", "createServer")
-  @js.native
-  def createServer(): Server = js.native
-  @JSImport("http", "createServer")
-  @js.native
-  def createServer(options: ServerOptions): Server = js.native
-  @JSImport("http", "createServer")
-  @js.native
-  def createServer(options: ServerOptions, requestListener: RequestListener): Server = js.native
-  @JSImport("http", "createServer")
-  @js.native
-  def createServer(requestListener: RequestListener): Server = js.native
+  @scala.inline
+  def createServer(): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Server]
+  @scala.inline
+  def createServer(options: ServerOptions): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[Server]
+  @scala.inline
+  def createServer(options: ServerOptions, requestListener: RequestListener): Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[Server]
+  @scala.inline
+  def createServer(requestListener: RequestListener): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[Server]
   
-  @JSImport("http", "get")
-  @js.native
-  def get(options: java.lang.String): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(options: URL): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(url: java.lang.String, options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
+  @scala.inline
+  def get(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
   def get(
     url: java.lang.String,
     options: RequestOptions,
     callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(url: URL, options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "get")
-  @js.native
-  def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
+  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   
   @JSImport("http", "globalAgent")
   @js.native
@@ -417,40 +403,30 @@ object httpMod {
   @js.native
   val maxHeaderSize: Double = js.native
   
-  @JSImport("http", "request")
-  @js.native
-  def request(options: java.lang.String): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(options: URL): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(url: java.lang.String, options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
+  @scala.inline
+  def request(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
   def request(
     url: java.lang.String,
     options: RequestOptions,
     callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(url: URL, options: RequestOptions): ClientRequest = js.native
-  @JSImport("http", "request")
-  @js.native
-  def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
+  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   
   trait AgentOptions extends StObject {
     

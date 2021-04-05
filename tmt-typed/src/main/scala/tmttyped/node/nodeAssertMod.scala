@@ -20,15 +20,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object nodeAssertMod {
   
   /** An alias of `assert.ok()`. */
+  @scala.inline
+  def apply(value: js.Any): /* asserts value */ Boolean = ^.asInstanceOf[js.Dynamic].apply(value.asInstanceOf[js.Any]).asInstanceOf[/* asserts value */ Boolean]
+  @scala.inline
+  def apply(value: js.Any, message: java.lang.String): /* asserts value */ Boolean = (^.asInstanceOf[js.Dynamic].apply(value.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts value */ Boolean]
+  @scala.inline
+  def apply(value: js.Any, message: js.Error): /* asserts value */ Boolean = (^.asInstanceOf[js.Dynamic].apply(value.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts value */ Boolean]
+  
   @JSImport("node:assert", JSImport.Namespace)
   @js.native
-  def apply(value: js.Any): /* asserts value */ Boolean = js.native
-  @JSImport("node:assert", JSImport.Namespace)
-  @js.native
-  def apply(value: js.Any, message: java.lang.String): /* asserts value */ Boolean = js.native
-  @JSImport("node:assert", JSImport.Namespace)
-  @js.native
-  def apply(value: js.Any, message: js.Error): /* asserts value */ Boolean = js.native
+  val ^ : js.Any = js.native
   
   @JSImport("node:assert", "AssertionError")
   @js.native
@@ -43,112 +44,79 @@ object nodeAssertMod {
     extends tmttyped.node.assertMod.CallTracker
   
   /** @deprecated since v9.9.0 - use deepStrictEqual() instead. */
-  @JSImport("node:assert", "deepEqual")
-  @js.native
-  def deepEqual(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "deepEqual")
-  @js.native
-  def deepEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "deepEqual")
-  @js.native
-  def deepEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def deepEqual(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def deepEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def deepEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "deepStrictEqual")
-  @js.native
-  def deepStrictEqual[T](actual: js.Any, expected: T): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
-  @JSImport("node:assert", "deepStrictEqual")
-  @js.native
-  def deepStrictEqual[T](actual: js.Any, expected: T, message: java.lang.String): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
-  @JSImport("node:assert", "deepStrictEqual")
-  @js.native
-  def deepStrictEqual[T](actual: js.Any, expected: T, message: js.Error): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
+  @scala.inline
+  def deepStrictEqual[T](actual: js.Any, expected: T): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("deepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
+  @scala.inline
+  def deepStrictEqual[T](actual: js.Any, expected: T, message: java.lang.String): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("deepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
+  @scala.inline
+  def deepStrictEqual[T](actual: js.Any, expected: T, message: js.Error): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("deepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
   
-  @JSImport("node:assert", "doesNotMatch")
-  @js.native
-  def doesNotMatch(value: java.lang.String, regExp: js.RegExp): Unit = js.native
-  @JSImport("node:assert", "doesNotMatch")
-  @js.native
-  def doesNotMatch(value: java.lang.String, regExp: js.RegExp, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "doesNotMatch")
-  @js.native
-  def doesNotMatch(value: java.lang.String, regExp: js.RegExp, message: js.Error): Unit = js.native
+  @scala.inline
+  def doesNotMatch(value: java.lang.String, regExp: js.RegExp): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotMatch")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotMatch(value: java.lang.String, regExp: js.RegExp, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotMatch")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotMatch(value: java.lang.String, regExp: js.RegExp, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotMatch")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]]): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]], message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Function0[js.Promise[_]], message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_]): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_], error: AssertPredicate): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_], error: AssertPredicate, message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_], message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "doesNotReject")
-  @js.native
-  def doesNotReject(block: js.Promise[_], message: js.Error): js.Promise[Unit] = js.native
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]], message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Function0[js.Promise[_]], message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_], error: AssertPredicate): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_], error: AssertPredicate, message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_], message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def doesNotReject(block: js.Promise[_], message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotReject")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
   
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_]): Unit = js.native
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_], error: AssertPredicate): Unit = js.native
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_], error: AssertPredicate, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_], error: AssertPredicate, message: js.Error): Unit = js.native
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_], message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "doesNotThrow")
-  @js.native
-  def doesNotThrow(block: js.Function0[_], message: js.Error): Unit = js.native
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_], error: AssertPredicate): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_], error: AssertPredicate, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_], error: AssertPredicate, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_], message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def doesNotThrow(block: js.Function0[_], message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("doesNotThrow")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /** @deprecated since v9.9.0 - use strictEqual() instead. */
-  @JSImport("node:assert", "equal")
-  @js.native
-  def equal(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "equal")
-  @js.native
-  def equal(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "equal")
-  @js.native
-  def equal(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def equal(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("equal")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def equal(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("equal")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def equal(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("equal")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(): scala.Nothing = js.native
+  @scala.inline
+  def fail(): scala.Nothing = ^.asInstanceOf[js.Dynamic].applyDynamic("fail")().asInstanceOf[scala.Nothing]
   /** @deprecated since v10.0.0 - use fail([message]) or other assert functions instead. */
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -156,12 +124,10 @@ object nodeAssertMod {
     operator: js.UndefOr[scala.Nothing],
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any, message: js.UndefOr[scala.Nothing], operator: java.lang.String): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any, message: js.UndefOr[scala.Nothing], operator: java.lang.String): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -169,12 +135,10 @@ object nodeAssertMod {
     operator: java.lang.String,
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any, message: java.lang.String): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any, message: java.lang.String): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -182,12 +146,10 @@ object nodeAssertMod {
     operator: js.UndefOr[scala.Nothing],
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any, message: java.lang.String, operator: java.lang.String): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any, message: java.lang.String, operator: java.lang.String): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -195,12 +157,10 @@ object nodeAssertMod {
     operator: java.lang.String,
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any, message: js.Error): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any, message: js.Error): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -208,12 +168,10 @@ object nodeAssertMod {
     operator: js.UndefOr[scala.Nothing],
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(actual: js.Any, expected: js.Any, message: js.Error, operator: java.lang.String): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(actual: js.Any, expected: js.Any, message: js.Error, operator: java.lang.String): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
   def fail(
     actual: js.Any,
     expected: js.Any,
@@ -221,108 +179,87 @@ object nodeAssertMod {
     operator: java.lang.String,
     // tslint:disable-next-line:ban-types
   stackStartFn: js.Function
-  ): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(message: java.lang.String): scala.Nothing = js.native
-  @JSImport("node:assert", "fail")
-  @js.native
-  def fail(message: js.Error): scala.Nothing = js.native
+  ): scala.Nothing = (^.asInstanceOf[js.Dynamic].applyDynamic("fail")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any], operator.asInstanceOf[js.Any], stackStartFn.asInstanceOf[js.Any])).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(message: java.lang.String): scala.Nothing = ^.asInstanceOf[js.Dynamic].applyDynamic("fail")(message.asInstanceOf[js.Any]).asInstanceOf[scala.Nothing]
+  @scala.inline
+  def fail(message: js.Error): scala.Nothing = ^.asInstanceOf[js.Dynamic].applyDynamic("fail")(message.asInstanceOf[js.Any]).asInstanceOf[scala.Nothing]
   
-  @JSImport("node:assert", "ifError")
-  @js.native
+  @scala.inline
   def ifError(value: js.Any): js.UndefOr[
     /* asserts value is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(null))),IArray())*/ Boolean
-  ] = js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("ifError")(value.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[
+    /* asserts value is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(null))),IArray())*/ Boolean
+  ]]
+  
+  @scala.inline
+  def `match`(value: java.lang.String, regExp: js.RegExp): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("match")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def `match`(value: java.lang.String, regExp: js.RegExp, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("match")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def `match`(value: java.lang.String, regExp: js.RegExp, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("match")(value.asInstanceOf[js.Any], regExp.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /** @deprecated since v9.9.0 - use notDeepStrictEqual() instead. */
-  @JSImport("node:assert", "notDeepEqual")
-  @js.native
-  def notDeepEqual(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "notDeepEqual")
-  @js.native
-  def notDeepEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "notDeepEqual")
-  @js.native
-  def notDeepEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def notDeepEqual(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notDeepEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notDeepEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "notDeepStrictEqual")
-  @js.native
-  def notDeepStrictEqual(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "notDeepStrictEqual")
-  @js.native
-  def notDeepStrictEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "notDeepStrictEqual")
-  @js.native
-  def notDeepStrictEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def notDeepStrictEqual(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notDeepStrictEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notDeepStrictEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notDeepStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /** @deprecated since v9.9.0 - use notStrictEqual() instead. */
-  @JSImport("node:assert", "notEqual")
-  @js.native
-  def notEqual(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "notEqual")
-  @js.native
-  def notEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "notEqual")
-  @js.native
-  def notEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def notEqual(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "notStrictEqual")
-  @js.native
-  def notStrictEqual(actual: js.Any, expected: js.Any): Unit = js.native
-  @JSImport("node:assert", "notStrictEqual")
-  @js.native
-  def notStrictEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "notStrictEqual")
-  @js.native
-  def notStrictEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = js.native
+  @scala.inline
+  def notStrictEqual(actual: js.Any, expected: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notStrictEqual(actual: js.Any, expected: js.Any, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def notStrictEqual(actual: js.Any, expected: js.Any, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("notStrictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:assert", "ok")
-  @js.native
-  def ok(value: js.Any): /* asserts value */ Boolean = js.native
-  @JSImport("node:assert", "ok")
-  @js.native
-  def ok(value: js.Any, message: java.lang.String): /* asserts value */ Boolean = js.native
-  @JSImport("node:assert", "ok")
-  @js.native
-  def ok(value: js.Any, message: js.Error): /* asserts value */ Boolean = js.native
+  @scala.inline
+  def ok(value: js.Any): /* asserts value */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("ok")(value.asInstanceOf[js.Any]).asInstanceOf[/* asserts value */ Boolean]
+  @scala.inline
+  def ok(value: js.Any, message: java.lang.String): /* asserts value */ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("ok")(value.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts value */ Boolean]
+  @scala.inline
+  def ok(value: js.Any, message: js.Error): /* asserts value */ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("ok")(value.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts value */ Boolean]
   
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]]): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]], message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Function0[js.Promise[_]], message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_]): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_], error: AssertPredicate): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_], error: AssertPredicate, message: js.Error): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_], message: java.lang.String): js.Promise[Unit] = js.native
-  @JSImport("node:assert", "rejects")
-  @js.native
-  def rejects(block: js.Promise[_], message: js.Error): js.Promise[Unit] = js.native
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]], error: AssertPredicate, message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]], message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Function0[js.Promise[_]], message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_], error: AssertPredicate): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_], error: AssertPredicate, message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_], error: AssertPredicate, message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_], message: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @scala.inline
+  def rejects(block: js.Promise[_], message: js.Error): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rejects")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
   
   @JSImport("node:assert", "strict")
   @js.native
@@ -331,42 +268,23 @@ object nodeAssertMod {
     equal | notEqual | deepEqual | notDeepEqual | ok | strictEqual | deepStrictEqual | ifError | tmttyped.node.nodeStrings.strict
   ]) with DeepEqual = js.native
   
-  @JSImport("node:assert", "strictEqual")
-  @js.native
-  def strictEqual[T](actual: js.Any, expected: T): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
-  @JSImport("node:assert", "strictEqual")
-  @js.native
-  def strictEqual[T](actual: js.Any, expected: T, message: java.lang.String): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
-  @JSImport("node:assert", "strictEqual")
-  @js.native
-  def strictEqual[T](actual: js.Any, expected: T, message: js.Error): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = js.native
+  @scala.inline
+  def strictEqual[T](actual: js.Any, expected: T): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("strictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
+  @scala.inline
+  def strictEqual[T](actual: js.Any, expected: T, message: java.lang.String): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("strictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
+  @scala.inline
+  def strictEqual[T](actual: js.Any, expected: T, message: js.Error): /* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("strictEqual")(actual.asInstanceOf[js.Any], expected.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[/* asserts actual is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(T))),IArray())*/ Boolean]
   
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_]): Unit = js.native
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_], error: AssertPredicate): Unit = js.native
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_], error: AssertPredicate, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_], error: AssertPredicate, message: js.Error): Unit = js.native
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_], message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "throws")
-  @js.native
-  def throws(block: js.Function0[_], message: js.Error): Unit = js.native
-  
-  @JSImport("node:assert", "match")
-  @js.native
-  def `match`(value: java.lang.String, regExp: js.RegExp): Unit = js.native
-  @JSImport("node:assert", "match")
-  @js.native
-  def `match`(value: java.lang.String, regExp: js.RegExp, message: java.lang.String): Unit = js.native
-  @JSImport("node:assert", "match")
-  @js.native
-  def `match`(value: java.lang.String, regExp: js.RegExp, message: js.Error): Unit = js.native
+  @scala.inline
+  def throws(block: js.Function0[_]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def throws(block: js.Function0[_], error: AssertPredicate): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def throws(block: js.Function0[_], error: AssertPredicate, message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def throws(block: js.Function0[_], error: AssertPredicate, message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any], error.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def throws(block: js.Function0[_], message: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def throws(block: js.Function0[_], message: js.Error): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("throws")(block.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[Unit]
 }

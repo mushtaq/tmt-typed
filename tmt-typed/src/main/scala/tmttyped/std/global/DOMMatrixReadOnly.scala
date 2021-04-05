@@ -16,22 +16,21 @@ class DOMMatrixReadOnly ()
 }
 object DOMMatrixReadOnly {
   
-  @JSGlobal("DOMMatrixReadOnly.fromFloat32Array")
+  @JSGlobal("DOMMatrixReadOnly")
   @js.native
-  def fromFloat32Array(array32: js.typedarray.Float32Array): tmttyped.std.DOMMatrixReadOnly = js.native
+  val ^ : js.Any = js.native
   
-  @JSGlobal("DOMMatrixReadOnly.fromFloat64Array")
-  @js.native
-  def fromFloat64Array(array64: js.typedarray.Float64Array): tmttyped.std.DOMMatrixReadOnly = js.native
+  @scala.inline
+  def fromFloat32Array(array32: js.typedarray.Float32Array): tmttyped.std.DOMMatrixReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat32Array")(array32.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrixReadOnly]
   
-  @JSGlobal("DOMMatrixReadOnly.fromMatrix")
-  @js.native
-  def fromMatrix(): tmttyped.std.DOMMatrixReadOnly = js.native
-  @JSGlobal("DOMMatrixReadOnly.fromMatrix")
-  @js.native
-  def fromMatrix(other: DOMMatrixInit): tmttyped.std.DOMMatrixReadOnly = js.native
+  @scala.inline
+  def fromFloat64Array(array64: js.typedarray.Float64Array): tmttyped.std.DOMMatrixReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat64Array")(array64.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrixReadOnly]
   
-  @JSGlobal("DOMMatrixReadOnly.toString")
-  @js.native
-  def toString_(): java.lang.String = js.native
+  @scala.inline
+  def fromMatrix(): tmttyped.std.DOMMatrixReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromMatrix")().asInstanceOf[tmttyped.std.DOMMatrixReadOnly]
+  @scala.inline
+  def fromMatrix(other: DOMMatrixInit): tmttyped.std.DOMMatrixReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromMatrix")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrixReadOnly]
+  
+  @scala.inline
+  def toString_(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toString")().asInstanceOf[java.lang.String]
 }

@@ -28,7 +28,7 @@ object GamepadPose {
   
   @scala.inline
   def apply(hasOrientation: scala.Boolean, hasPosition: scala.Boolean): GamepadPose = {
-    val __obj = js.Dynamic.literal(hasOrientation = hasOrientation.asInstanceOf[js.Any], hasPosition = hasPosition.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(hasOrientation = hasOrientation.asInstanceOf[js.Any], hasPosition = hasPosition.asInstanceOf[js.Any], angularAcceleration = null, angularVelocity = null, linearAcceleration = null, linearVelocity = null, orientation = null, position = null)
     __obj.asInstanceOf[GamepadPose]
   }
   

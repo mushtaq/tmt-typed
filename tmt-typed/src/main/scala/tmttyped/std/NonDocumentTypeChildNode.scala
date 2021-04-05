@@ -21,7 +21,7 @@ object NonDocumentTypeChildNode {
   
   @scala.inline
   def apply(): org.scalajs.dom.raw.NonDocumentTypeChildNode = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(nextElementSibling = null, previousElementSibling = null)
     __obj.asInstanceOf[org.scalajs.dom.raw.NonDocumentTypeChildNode]
   }
   

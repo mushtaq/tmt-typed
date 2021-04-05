@@ -14,7 +14,7 @@ object ExecOptionsWithBufferEncoding {
   
   @scala.inline
   def apply(): ExecOptionsWithBufferEncoding = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(encoding = null)
     __obj.asInstanceOf[ExecOptionsWithBufferEncoding]
   }
   

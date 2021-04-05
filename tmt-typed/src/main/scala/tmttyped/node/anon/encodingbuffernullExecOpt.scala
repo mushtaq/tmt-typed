@@ -41,7 +41,7 @@ object encodingbuffernullExecOpt {
   
   @scala.inline
   def apply(): encodingbuffernullExecOpt = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(encoding = null)
     __obj.asInstanceOf[encodingbuffernullExecOpt]
   }
   

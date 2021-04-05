@@ -9,21 +9,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object routingMetadataMod {
   
+  @JSImport("rsocket-core/RoutingMetadata", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("rsocket-core/RoutingMetadata", "RoutingMetadata")
   @js.native
   class RoutingMetadata protected () extends Iterable[String] {
     def this(buffer: Buffer) = this()
   }
   
-  @JSImport("rsocket-core/RoutingMetadata", "decodeRoutes")
-  @js.native
-  def decodeRoutes(routeMetadataBuffer: Buffer): js.Iterator[String] = js.native
+  @scala.inline
+  def decodeRoutes(routeMetadataBuffer: Buffer): js.Iterator[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeRoutes")(routeMetadataBuffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[String]]
   
-  @JSImport("rsocket-core/RoutingMetadata", "encodeRoute")
-  @js.native
-  def encodeRoute(route: String): Buffer = js.native
+  @scala.inline
+  def encodeRoute(route: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoute")(route.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/RoutingMetadata", "encodeRoutes")
-  @js.native
-  def encodeRoutes(routes: String*): Buffer = js.native
+  @scala.inline
+  def encodeRoutes(routes: String*): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoutes")(routes.asInstanceOf[js.Any]).asInstanceOf[Buffer]
 }

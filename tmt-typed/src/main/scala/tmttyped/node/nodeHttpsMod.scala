@@ -34,53 +34,39 @@ object nodeHttpsMod {
     def this(options: ServerOptions, requestListener: RequestListener) = this()
   }
   
-  @JSImport("node:https", "createServer")
-  @js.native
-  def createServer(): tmttyped.node.httpsMod.Server = js.native
-  @JSImport("node:https", "createServer")
-  @js.native
-  def createServer(options: ServerOptions): tmttyped.node.httpsMod.Server = js.native
-  @JSImport("node:https", "createServer")
-  @js.native
-  def createServer(options: ServerOptions, requestListener: RequestListener): tmttyped.node.httpsMod.Server = js.native
-  @JSImport("node:https", "createServer")
-  @js.native
-  def createServer(requestListener: RequestListener): tmttyped.node.httpsMod.Server = js.native
+  @scala.inline
+  def createServer(): tmttyped.node.httpsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.httpsMod.Server]
+  @scala.inline
+  def createServer(options: ServerOptions): tmttyped.node.httpsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpsMod.Server]
+  @scala.inline
+  def createServer(options: ServerOptions, requestListener: RequestListener): tmttyped.node.httpsMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpsMod.Server]
+  @scala.inline
+  def createServer(requestListener: RequestListener): tmttyped.node.httpsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpsMod.Server]
   
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: java.lang.String): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: URL): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(url: java.lang.String, options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
+  @scala.inline
+  def get(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
   def get(
     url: java.lang.String,
     options: RequestOptions,
     callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(url: URL, options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "get")
-  @js.native
-  def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
+  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   
   @JSImport("node:https", "globalAgent")
   @js.native
@@ -88,38 +74,28 @@ object nodeHttpsMod {
   @scala.inline
   def globalAgent_=(x: tmttyped.node.httpsMod.Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
   
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: java.lang.String): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: URL): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(url: java.lang.String, options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
+  @scala.inline
+  def request(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
   def request(
     url: java.lang.String,
     options: RequestOptions,
     callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(url: URL, options: RequestOptions): ClientRequest = js.native
-  @JSImport("node:https", "request")
-  @js.native
-  def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = js.native
+  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  @scala.inline
+  def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
 }

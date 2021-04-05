@@ -2,6 +2,7 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Shortcut
+import tmttyped.node.NodeJS.Require
 import tmttyped.node.nodeUrlMod.URL
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -16,6 +17,38 @@ object moduleMod extends Shortcut {
     extends tmttyped.node.NodeJS.Module {
     def this(id: java.lang.String) = this()
     def this(id: java.lang.String, parent: Module) = this()
+    
+    /* CompleteClass */
+    override var children: js.Array[tmttyped.node.NodeJS.Module] = js.native
+    
+    /* CompleteClass */
+    override var exports: js.Any = js.native
+    
+    /* CompleteClass */
+    override var filename: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var id: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var loaded: Boolean = js.native
+    
+    /**
+      * @since 11.14.0
+      *
+      * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
+      */
+    /* CompleteClass */
+    override var path: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var paths: js.Array[java.lang.String] = js.native
+    
+    /* CompleteClass */
+    override def require(id: java.lang.String): js.Any = js.native
+    /* CompleteClass */
+    @JSName("require")
+    override var require_Original: Require = js.native
   }
   @JSImport("module", JSImport.Namespace)
   @js.native
@@ -34,6 +67,38 @@ object moduleMod extends Shortcut {
     extends tmttyped.node.NodeJS.Module {
     def this(id: java.lang.String) = this()
     def this(id: java.lang.String, parent: Module) = this()
+    
+    /* CompleteClass */
+    override var children: js.Array[tmttyped.node.NodeJS.Module] = js.native
+    
+    /* CompleteClass */
+    override var exports: js.Any = js.native
+    
+    /* CompleteClass */
+    override var filename: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var id: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var loaded: Boolean = js.native
+    
+    /**
+      * @since 11.14.0
+      *
+      * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
+      */
+    /* CompleteClass */
+    override var path: java.lang.String = js.native
+    
+    /* CompleteClass */
+    override var paths: js.Array[java.lang.String] = js.native
+    
+    /* CompleteClass */
+    override def require(id: java.lang.String): js.Any = js.native
+    /* CompleteClass */
+    @JSName("require")
+    override var require_Original: Require = js.native
   }
   
   @scala.inline
@@ -57,45 +122,37 @@ object moduleMod extends Shortcut {
   def builtinModules_=(x: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("builtinModules")(x.asInstanceOf[js.Any])
   
   /* static member */
-  @JSImport("module", "createRequire")
-  @js.native
-  def createRequire(path: java.lang.String): NodeRequire = js.native
-  @JSImport("module", "createRequire")
-  @js.native
-  def createRequire(path: URL): NodeRequire = js.native
+  @scala.inline
+  def createRequire(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
+  @scala.inline
+  def createRequire(path: URL): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
   /**
     * @deprecated Deprecated since: v12.2.0. Please use createRequire() instead.
     */
   /* static member */
-  @JSImport("module", "createRequireFromPath")
-  @js.native
-  def createRequireFromPath(path: java.lang.String): NodeRequire = js.native
+  @scala.inline
+  def createRequireFromPath(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequireFromPath")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
-  @JSImport("module", "findSourceMap")
-  @js.native
-  def findSourceMap(path: java.lang.String): SourceMap = js.native
-  @JSImport("module", "findSourceMap")
-  @js.native
-  def findSourceMap(path: java.lang.String, error: js.Error): SourceMap = js.native
+  @scala.inline
+  def findSourceMap(path: java.lang.String): SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[SourceMap]
+  @scala.inline
+  def findSourceMap(path: java.lang.String, error: js.Error): SourceMap = (^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[SourceMap]
   
   /* static member */
-  @JSImport("module", "runMain")
-  @js.native
-  def runMain(): Unit = js.native
+  @scala.inline
+  def runMain(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("runMain")().asInstanceOf[Unit]
   
   /**
     * Updates all the live bindings for builtin ES Modules to match the properties of the CommonJS exports.
     * It does not add or remove exported names from the ES Modules.
     */
-  @JSImport("module", "syncBuiltinESMExports")
-  @js.native
-  def syncBuiltinESMExports(): Unit = js.native
+  @scala.inline
+  def syncBuiltinESMExports(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("syncBuiltinESMExports")().asInstanceOf[Unit]
   
   /* static member */
-  @JSImport("module", "wrap")
-  @js.native
-  def wrap(code: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def wrap(code: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
   trait SourceMapPayload extends StObject {
     

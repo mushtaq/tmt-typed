@@ -19,13 +19,9 @@ class Cipher protected () extends Transform {
   def setAutoPadding(): this.type = js.native
   def setAutoPadding(auto_padding: Boolean): this.type = js.native
   
-  def update(data: String, input_encoding: js.UndefOr[scala.Nothing], output_encoding: BinaryToTextEncoding): String = js.native
+  def update(data: String, input_encoding: js.UndefOr[scala.Nothing], output_encoding: Encoding): String = js.native
   def update(data: String, input_encoding: Encoding): Buffer = js.native
-  def update(data: String, input_encoding: Encoding, output_encoding: BinaryToTextEncoding): String = js.native
-  def update(
-    data: ArrayBufferView,
-    input_encoding: js.UndefOr[scala.Nothing],
-    output_encoding: BinaryToTextEncoding
-  ): String = js.native
+  def update(data: String, input_encoding: Encoding, output_encoding: Encoding): String = js.native
+  def update(data: ArrayBufferView, input_encoding: js.UndefOr[scala.Nothing], output_encoding: Encoding): String = js.native
   def update(data: BinaryLike): Buffer = js.native
 }

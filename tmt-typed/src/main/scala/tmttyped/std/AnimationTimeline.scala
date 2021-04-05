@@ -13,7 +13,7 @@ object AnimationTimeline {
   
   @scala.inline
   def apply(): AnimationTimeline = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(currentTime = null)
     __obj.asInstanceOf[AnimationTimeline]
   }
   

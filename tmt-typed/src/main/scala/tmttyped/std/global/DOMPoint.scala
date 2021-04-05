@@ -34,10 +34,12 @@ class DOMPoint ()
 }
 object DOMPoint {
   
-  @JSGlobal("DOMPoint.fromPoint")
+  @JSGlobal("DOMPoint")
   @js.native
-  def fromPoint(): tmttyped.std.DOMPoint = js.native
-  @JSGlobal("DOMPoint.fromPoint")
-  @js.native
-  def fromPoint(other: DOMPointInit): tmttyped.std.DOMPoint = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def fromPoint(): tmttyped.std.DOMPoint = ^.asInstanceOf[js.Dynamic].applyDynamic("fromPoint")().asInstanceOf[tmttyped.std.DOMPoint]
+  @scala.inline
+  def fromPoint(other: DOMPointInit): tmttyped.std.DOMPoint = ^.asInstanceOf[js.Dynamic].applyDynamic("fromPoint")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMPoint]
 }

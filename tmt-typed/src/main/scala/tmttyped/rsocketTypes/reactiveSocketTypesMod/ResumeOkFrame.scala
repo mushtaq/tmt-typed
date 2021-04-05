@@ -22,9 +22,9 @@ trait ResumeOkFrame extends Frame {
 object ResumeOkFrame {
   
   @scala.inline
-  def apply(clientPosition: Double, flags: Double, streamId: `0`, `type`: `0x0e`): ResumeOkFrame = {
-    val __obj = js.Dynamic.literal(clientPosition = clientPosition.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+  def apply(clientPosition: Double, flags: Double): ResumeOkFrame = {
+    val __obj = js.Dynamic.literal(clientPosition = clientPosition.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], streamId = 0)
+    __obj.updateDynamic("type")(0x0e)
     __obj.asInstanceOf[ResumeOkFrame]
   }
   

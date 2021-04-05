@@ -17,13 +17,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeOsMod {
   
+  @JSImport("node:os", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:os", "EOL")
   @js.native
   val EOL: java.lang.String = js.native
   
-  @JSImport("node:os", "arch")
-  @js.native
-  def arch(): java.lang.String = js.native
+  @scala.inline
+  def arch(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("arch")().asInstanceOf[java.lang.String]
   
   object constants {
     
@@ -614,89 +617,73 @@ object nodeOsMod {
     val signals: SignalConstants = js.native
   }
   
-  @JSImport("node:os", "cpus")
-  @js.native
-  def cpus(): js.Array[CpuInfo] = js.native
+  @scala.inline
+  def cpus(): js.Array[CpuInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("cpus")().asInstanceOf[js.Array[CpuInfo]]
   
-  @JSImport("node:os", "endianness")
-  @js.native
-  def endianness(): BE | LE = js.native
+  @scala.inline
+  def endianness(): BE | LE = ^.asInstanceOf[js.Dynamic].applyDynamic("endianness")().asInstanceOf[BE | LE]
   
-  @JSImport("node:os", "freemem")
-  @js.native
-  def freemem(): Double = js.native
+  @scala.inline
+  def freemem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("freemem")().asInstanceOf[Double]
   
   /**
     * Gets the priority of a process.
     * Defaults to current process.
     */
-  @JSImport("node:os", "getPriority")
-  @js.native
-  def getPriority(): Double = js.native
-  @JSImport("node:os", "getPriority")
-  @js.native
-  def getPriority(pid: Double): Double = js.native
+  @scala.inline
+  def getPriority(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")().asInstanceOf[Double]
+  @scala.inline
+  def getPriority(pid: Double): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")(pid.asInstanceOf[js.Any]).asInstanceOf[Double]
   
-  @JSImport("node:os", "homedir")
-  @js.native
-  def homedir(): java.lang.String = js.native
+  @scala.inline
+  def homedir(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("homedir")().asInstanceOf[java.lang.String]
   
-  @JSImport("node:os", "hostname")
-  @js.native
-  def hostname(): java.lang.String = js.native
+  @scala.inline
+  def hostname(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("hostname")().asInstanceOf[java.lang.String]
   
-  @JSImport("node:os", "loadavg")
-  @js.native
-  def loadavg(): js.Array[Double] = js.native
+  @scala.inline
+  def loadavg(): js.Array[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("loadavg")().asInstanceOf[js.Array[Double]]
   
-  @JSImport("node:os", "networkInterfaces")
-  @js.native
-  def networkInterfaces(): Dict[js.Array[NetworkInterfaceInfo]] = js.native
+  @scala.inline
+  def networkInterfaces(): Dict[js.Array[NetworkInterfaceInfo]] = ^.asInstanceOf[js.Dynamic].applyDynamic("networkInterfaces")().asInstanceOf[Dict[js.Array[NetworkInterfaceInfo]]]
   
-  @JSImport("node:os", "platform")
-  @js.native
-  def platform(): Platform = js.native
+  @scala.inline
+  def platform(): Platform = ^.asInstanceOf[js.Dynamic].applyDynamic("platform")().asInstanceOf[Platform]
   
-  @JSImport("node:os", "release")
-  @js.native
-  def release(): java.lang.String = js.native
+  @scala.inline
+  def release(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("release")().asInstanceOf[java.lang.String]
   
   /**
     * Sets the priority of the process specified process.
     * @param priority Must be in range of -20 to 19
     */
-  @JSImport("node:os", "setPriority")
-  @js.native
-  def setPriority(pid: Double, priority: Double): Unit = js.native
+  @scala.inline
+  def setPriority(pid: Double, priority: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(pid.asInstanceOf[js.Any], priority.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * Sets the priority of the current process.
     * @param priority Must be in range of -20 to 19
     */
-  @JSImport("node:os", "setPriority")
-  @js.native
-  def setPriority(priority: Double): Unit = js.native
+  @scala.inline
+  def setPriority(priority: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(priority.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("node:os", "tmpdir")
-  @js.native
-  def tmpdir(): java.lang.String = js.native
+  @scala.inline
+  def tmpdir(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("tmpdir")().asInstanceOf[java.lang.String]
   
-  @JSImport("node:os", "totalmem")
-  @js.native
-  def totalmem(): Double = js.native
+  @scala.inline
+  def totalmem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("totalmem")().asInstanceOf[Double]
   
-  @JSImport("node:os", "uptime")
-  @js.native
-  def uptime(): Double = js.native
+  @scala.inline
+  def `type`(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("type")().asInstanceOf[java.lang.String]
   
-  @JSImport("node:os", "userInfo")
-  @js.native
-  def userInfo(): UserInfo_[java.lang.String] = js.native
-  @JSImport("node:os", "userInfo")
-  @js.native
-  def userInfo(options: `2`): UserInfo_[Buffer] = js.native
-  @JSImport("node:os", "userInfo")
-  @js.native
-  def userInfo(options: `4`): UserInfo_[java.lang.String] = js.native
+  @scala.inline
+  def uptime(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("uptime")().asInstanceOf[Double]
+  
+  @scala.inline
+  def userInfo(): UserInfo_[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")().asInstanceOf[UserInfo_[java.lang.String]]
+  @scala.inline
+  def userInfo(options: `2`): UserInfo_[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[Buffer]]
+  @scala.inline
+  def userInfo(options: `4`): UserInfo_[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[java.lang.String]]
   
   /**
     * Returns a string identifying the kernel version.
@@ -705,11 +692,6 @@ object nodeOsMod {
     * `GetVersionExW()` will be used. See
     * https://en.wikipedia.org/wiki/Uname#Examples for more information.
     */
-  @JSImport("node:os", "version")
-  @js.native
-  def version(): java.lang.String = js.native
-  
-  @JSImport("node:os", "type")
-  @js.native
-  def `type`(): java.lang.String = js.native
+  @scala.inline
+  def version(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("version")().asInstanceOf[java.lang.String]
 }

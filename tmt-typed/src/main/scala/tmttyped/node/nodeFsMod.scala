@@ -55,6 +55,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeFsMod {
   
+  @JSImport("node:fs", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:fs", "BigIntStats")
   @js.native
   class BigIntStats ()
@@ -89,101 +93,74 @@ object nodeFsMod {
     def this(opts: WritableOptions) = this()
   }
   
-  @JSImport("node:fs", "access")
-  @js.native
-  def access(path: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "access")
-  @js.native
-  def access(path: PathLike, mode: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "access")
-  @js.native
-  def access(path: PathLike, mode: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def access(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def access(path: PathLike, mode: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def access(path: PathLike, mode: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "accessSync")
-  @js.native
-  def accessSync(path: PathLike): Unit = js.native
-  @JSImport("node:fs", "accessSync")
-  @js.native
-  def accessSync(path: PathLike, mode: Double): Unit = js.native
+  @scala.inline
+  def accessSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def accessSync(path: PathLike, mode: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: Double, data: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: Double, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: Double, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: Double, data: js.typedarray.Uint8Array, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: PathLike, data: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: PathLike, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
-  def appendFile(file: PathLike, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "appendFile")
-  @js.native
+  @scala.inline
+  def appendFile(file: Double, data: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: Double, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: Double, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: Double, data: js.typedarray.Uint8Array, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: PathLike, data: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: PathLike, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFile(file: PathLike, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def appendFile(
     file: PathLike,
     data: js.typedarray.Uint8Array,
     options: WriteFileOptions,
     callback: NoParamCallback
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: Double, data: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: Double, data: java.lang.String, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: Double, data: js.typedarray.Uint8Array): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: Double, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: PathLike, data: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: PathLike, data: java.lang.String, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: PathLike, data: js.typedarray.Uint8Array): Unit = js.native
-  @JSImport("node:fs", "appendFileSync")
-  @js.native
-  def appendFileSync(file: PathLike, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = js.native
+  @scala.inline
+  def appendFileSync(file: Double, data: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: Double, data: java.lang.String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: Double, data: js.typedarray.Uint8Array): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: Double, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: PathLike, data: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: PathLike, data: java.lang.String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: PathLike, data: js.typedarray.Uint8Array): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def appendFileSync(file: PathLike, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "chmod")
-  @js.native
-  def chmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def chmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "chmodSync")
-  @js.native
-  def chmodSync(path: PathLike, mode: Mode): Unit = js.native
+  @scala.inline
+  def chmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "chown")
-  @js.native
-  def chown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def chown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "chownSync")
-  @js.native
-  def chownSync(path: PathLike, uid: Double, gid: Double): Unit = js.native
+  @scala.inline
+  def chownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "close")
-  @js.native
-  def close(fd: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def close(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("close")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "closeSync")
-  @js.native
-  def closeSync(fd: Double): Unit = js.native
+  @scala.inline
+  def closeSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("closeSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   object constants {
     
@@ -432,80 +409,60 @@ object nodeFsMod {
     val X_OK: Double = js.native
   }
   
-  @JSImport("node:fs", "copyFile")
-  @js.native
-  def copyFile(src: PathLike, dest: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "copyFile")
-  @js.native
-  def copyFile(src: PathLike, dest: PathLike, flags: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def copyFile(src: PathLike, dest: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def copyFile(src: PathLike, dest: PathLike, flags: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "copyFileSync")
-  @js.native
-  def copyFileSync(src: PathLike, dest: PathLike): Unit = js.native
-  @JSImport("node:fs", "copyFileSync")
-  @js.native
-  def copyFileSync(src: PathLike, dest: PathLike, flags: Double): Unit = js.native
+  @scala.inline
+  def copyFileSync(src: PathLike, dest: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def copyFileSync(src: PathLike, dest: PathLike, flags: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "createReadStream")
-  @js.native
-  def createReadStream(path: PathLike): tmttyped.node.fsMod.ReadStream = js.native
-  @JSImport("node:fs", "createReadStream")
-  @js.native
-  def createReadStream(path: PathLike, options: java.lang.String): tmttyped.node.fsMod.ReadStream = js.native
-  @JSImport("node:fs", "createReadStream")
-  @js.native
-  def createReadStream(path: PathLike, options: AutoClose): tmttyped.node.fsMod.ReadStream = js.native
+  @scala.inline
+  def createReadStream(path: PathLike): tmttyped.node.fsMod.ReadStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  @scala.inline
+  def createReadStream(path: PathLike, options: java.lang.String): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  @scala.inline
+  def createReadStream(path: PathLike, options: AutoClose): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
   
-  @JSImport("node:fs", "createWriteStream")
-  @js.native
-  def createWriteStream(path: PathLike): tmttyped.node.fsMod.WriteStream = js.native
-  @JSImport("node:fs", "createWriteStream")
-  @js.native
-  def createWriteStream(path: PathLike, options: java.lang.String): tmttyped.node.fsMod.WriteStream = js.native
-  @JSImport("node:fs", "createWriteStream")
-  @js.native
-  def createWriteStream(path: PathLike, options: EmitClose): tmttyped.node.fsMod.WriteStream = js.native
+  @scala.inline
+  def createWriteStream(path: PathLike): tmttyped.node.fsMod.WriteStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  @scala.inline
+  def createWriteStream(path: PathLike, options: java.lang.String): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  @scala.inline
+  def createWriteStream(path: PathLike, options: EmitClose): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
   
-  @JSImport("node:fs", "exists")
-  @js.native
-  def exists(path: PathLike, callback: js.Function1[/* exists */ Boolean, Unit]): Unit = js.native
+  @scala.inline
+  def exists(path: PathLike, callback: js.Function1[/* exists */ Boolean, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("exists")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "existsSync")
-  @js.native
-  def existsSync(path: PathLike): Boolean = js.native
+  @scala.inline
+  def existsSync(path: PathLike): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("existsSync")(path.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("node:fs", "fchmod")
-  @js.native
-  def fchmod(fd: Double, mode: Mode, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def fchmod(fd: Double, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmod")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fchmodSync")
-  @js.native
-  def fchmodSync(fd: Double, mode: Mode): Unit = js.native
+  @scala.inline
+  def fchmodSync(fd: Double, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmodSync")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fchown")
-  @js.native
-  def fchown(fd: Double, uid: Double, gid: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def fchown(fd: Double, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchown")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fchownSync")
-  @js.native
-  def fchownSync(fd: Double, uid: Double, gid: Double): Unit = js.native
+  @scala.inline
+  def fchownSync(fd: Double, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchownSync")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fdatasync")
-  @js.native
-  def fdatasync(fd: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def fdatasync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fdatasync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fdatasyncSync")
-  @js.native
-  def fdatasyncSync(fd: Double): Unit = js.native
+  @scala.inline
+  def fdatasyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fdatasyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fstat")
-  @js.native
+  @scala.inline
   def fstat(
     fd: Double,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "fstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def fstat(
     fd: Double,
     options: js.UndefOr[scala.Nothing],
@@ -514,23 +471,20 @@ object nodeFsMod {
       tmttyped.node.fsMod.BigIntStats | tmttyped.node.fsMod.Stats, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "fstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def fstat(
     fd: Double,
     options: StatOptionsbigintfalseund,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "fstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def fstat(
     fd: Double,
     options: StatOptionsbiginttrue,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.BigIntStats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "fstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def fstat(
     fd: Double,
     options: StatOptions,
@@ -539,140 +493,102 @@ object nodeFsMod {
       /* stats */ tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "fstatSync")
-  @js.native
-  def fstatSync(fd: Double): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "fstatSync")
-  @js.native
-  def fstatSync(fd: Double, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "fstatSync")
-  @js.native
-  def fstatSync(fd: Double, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "fstatSync")
-  @js.native
-  def fstatSync(fd: Double, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "fstatSync")
-  @js.native
-  def fstatSync_Union(fd: Double): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
+  @scala.inline
+  def fstatSync(fd: Double): tmttyped.node.fsMod.Stats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def fstatSync(fd: Double, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def fstatSync(fd: Double, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.BigIntStats]
+  @scala.inline
+  def fstatSync(fd: Double, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
-  @JSImport("node:fs", "fsync")
-  @js.native
-  def fsync(fd: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def fstatSync_Union(fd: Double): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
-  @JSImport("node:fs", "fsyncSync")
-  @js.native
-  def fsyncSync(fd: Double): Unit = js.native
+  @scala.inline
+  def fsync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "ftruncate")
-  @js.native
-  def ftruncate(fd: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "ftruncate")
-  @js.native
-  def ftruncate(fd: Double, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "ftruncate")
-  @js.native
-  def ftruncate(fd: Double, len: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "ftruncate")
-  @js.native
-  def ftruncate(fd: Double, len: Null, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def fsyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fsyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "ftruncateSync")
-  @js.native
-  def ftruncateSync(fd: Double): Unit = js.native
-  @JSImport("node:fs", "ftruncateSync")
-  @js.native
-  def ftruncateSync(fd: Double, len: Double): Unit = js.native
+  @scala.inline
+  def ftruncate(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def ftruncate(fd: Double, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def ftruncate(fd: Double, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def ftruncate(fd: Double, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "futimes")
-  @js.native
-  def futimes(fd: Double, atime: Double, mtime: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def ftruncateSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def ftruncateSync(fd: Double, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: java.lang.String, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: java.lang.String, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: java.lang.String, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: js.Date, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: Double, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "futimesSync")
-  @js.native
-  def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = js.native
+  @scala.inline
+  def futimes(fd: Double, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimes(fd: Double, atime: Double, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lchmod")
-  @js.native
-  def lchmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def futimesSync(fd: Double, atime: java.lang.String, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: java.lang.String, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: java.lang.String, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: js.Date, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: js.Date, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: js.Date, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: Double, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: Double, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def futimesSync(fd: Double, atime: Double, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lchmodSync")
-  @js.native
-  def lchmodSync(path: PathLike, mode: Mode): Unit = js.native
+  @scala.inline
+  def lchmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lchown")
-  @js.native
-  def lchown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def lchmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lchownSync")
-  @js.native
-  def lchownSync(path: PathLike, uid: Double, gid: Double): Unit = js.native
+  @scala.inline
+  def lchown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "link")
-  @js.native
-  def link(existingPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def lchownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "linkSync")
-  @js.native
-  def linkSync(existingPath: PathLike, newPath: PathLike): Unit = js.native
+  @scala.inline
+  def link(existingPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lstat")
-  @js.native
+  @scala.inline
+  def linkSync(existingPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("linkSync")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  
+  @scala.inline
   def lstat(
     path: PathLike,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "lstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def lstat(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
@@ -681,23 +597,20 @@ object nodeFsMod {
       tmttyped.node.fsMod.BigIntStats | tmttyped.node.fsMod.Stats, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "lstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def lstat(
     path: PathLike,
     options: StatOptionsbigintfalseund,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "lstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def lstat(
     path: PathLike,
     options: StatOptionsbiginttrue,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.BigIntStats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "lstat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def lstat(
     path: PathLike,
     options: StatOptions,
@@ -706,286 +619,229 @@ object nodeFsMod {
       /* stats */ tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "lstatSync")
-  @js.native
-  def lstatSync(path: PathLike): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "lstatSync")
-  @js.native
-  def lstatSync(path: PathLike, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "lstatSync")
-  @js.native
-  def lstatSync(path: PathLike, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "lstatSync")
-  @js.native
-  def lstatSync(path: PathLike, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "lstatSync")
-  @js.native
-  def lstatSync_Union(path: PathLike): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
+  @scala.inline
+  def lstatSync(path: PathLike): tmttyped.node.fsMod.Stats = ^.asInstanceOf[js.Dynamic].applyDynamic("lstatSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def lstatSync(path: PathLike, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (^.asInstanceOf[js.Dynamic].applyDynamic("lstatSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def lstatSync(path: PathLike, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("lstatSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.BigIntStats]
+  @scala.inline
+  def lstatSync(path: PathLike, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("lstatSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "lutimes")
-  @js.native
-  def lutimes(path: PathLike, atime: Double, mtime: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def lstatSync_Union(path: PathLike): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = ^.asInstanceOf[js.Dynamic].applyDynamic("lstatSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: js.Date, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "lutimesSync")
-  @js.native
-  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
+  @scala.inline
+  def lutimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimes(path: PathLike, atime: Double, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "mkdir")
-  @js.native
-  def mkdir(path: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: java.lang.String, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: Double, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  
+  @scala.inline
+  def mkdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdir(
     path: PathLike,
     options: js.UndefOr[Mode],
     callback: js.Function2[ErrnoException | Null, js.UndefOr[java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
-  def mkdir(path: PathLike, options: js.UndefOr[Mode], callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def mkdir(path: PathLike, options: js.UndefOr[Mode], callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdir(
     path: PathLike,
     options: Null,
     callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
-  def mkdir(path: PathLike, options: Null, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
-  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def mkdir(path: PathLike, options: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdir(
     path: PathLike,
     options: MakeDirectoryOptionsrecur,
     callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdir(
     path: PathLike,
     options: MakeDirectoryOptions,
     callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[java.lang.String], Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync(path: PathLike): js.UndefOr[java.lang.String] = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecur): js.UndefOr[java.lang.String] = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecurMode): Unit = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[java.lang.String] = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync(path: PathLike, options: Mode): js.UndefOr[java.lang.String] = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync_Unit(path: PathLike): Unit = js.native
-  @JSImport("node:fs", "mkdirSync")
-  @js.native
-  def mkdirSync_Unit(path: PathLike, options: Mode): Unit = js.native
+  @scala.inline
+  def mkdirSync(path: PathLike): js.UndefOr[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[java.lang.String]]
+  @scala.inline
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecur): js.UndefOr[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[java.lang.String]]
+  @scala.inline
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecurMode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[java.lang.String]]
+  @scala.inline
+  def mkdirSync(path: PathLike, options: Mode): js.UndefOr[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[java.lang.String]]
   
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  @scala.inline
+  def mkdirSync_Unit(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def mkdirSync_Unit(path: PathLike, options: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: java.lang.String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ java.lang.String | Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: Null,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: BufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: `2`,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: BaseEncodingOptions,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "mkdtemp")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def mkdtemp(
     prefix: java.lang.String,
     options: buffer_,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync(prefix: java.lang.String): java.lang.String = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync(prefix: java.lang.String, options: java.lang.String): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync(prefix: java.lang.String, options: BufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync(prefix: java.lang.String, options: BaseEncodingOptions): java.lang.String = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync(prefix: java.lang.String, options: BufferEncodingOption): Buffer = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync_Union(prefix: java.lang.String): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "mkdtempSync")
-  @js.native
-  def mkdtempSync_Union(prefix: java.lang.String, options: BaseEncodingOptions): java.lang.String | Buffer = js.native
+  @scala.inline
+  def mkdtempSync(prefix: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  @scala.inline
+  def mkdtempSync(prefix: java.lang.String, options: java.lang.String): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def mkdtempSync(prefix: java.lang.String, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def mkdtempSync(prefix: java.lang.String, options: BaseEncodingOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def mkdtempSync(prefix: java.lang.String, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("node:fs", "open")
-  @js.native
+  @scala.inline
+  def mkdtempSync_Union(prefix: java.lang.String): java.lang.String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def mkdtempSync_Union(prefix: java.lang.String, options: BaseEncodingOptions): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  
+  @scala.inline
   def open(
     path: PathLike,
     flags: OpenMode,
     callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "open")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def open(
     path: PathLike,
     flags: OpenMode,
     mode: js.UndefOr[Mode],
     callback: js.Function2[ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "open")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def open(
     path: PathLike,
     flags: OpenMode,
     mode: Null,
     callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "openSync")
-  @js.native
-  def openSync(path: PathLike, flags: OpenMode): Double = js.native
-  @JSImport("node:fs", "openSync")
-  @js.native
-  def openSync(path: PathLike, flags: OpenMode, mode: Mode): Double = js.native
+  @scala.inline
+  def openSync(path: PathLike, flags: OpenMode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def openSync(path: PathLike, flags: OpenMode, mode: Mode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @JSImport("node:fs", "opendir")
-  @js.native
+  @scala.inline
   def opendir(
     path: java.lang.String,
     cb: js.Function2[/* err */ ErrnoException | Null, /* dir */ tmttyped.node.fsMod.Dir, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "opendir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def opendir(
     path: java.lang.String,
     options: OpenDirOptions,
     cb: js.Function2[/* err */ ErrnoException | Null, /* dir */ tmttyped.node.fsMod.Dir, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "opendirSync")
-  @js.native
-  def opendirSync(path: java.lang.String): tmttyped.node.fsMod.Dir = js.native
-  @JSImport("node:fs", "opendirSync")
-  @js.native
-  def opendirSync(path: java.lang.String, options: OpenDirOptions): tmttyped.node.fsMod.Dir = js.native
+  @scala.inline
+  def opendirSync(path: java.lang.String): tmttyped.node.fsMod.Dir = ^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Dir]
+  @scala.inline
+  def opendirSync(path: java.lang.String, options: OpenDirOptions): tmttyped.node.fsMod.Dir = (^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Dir]
   
   object promises {
+    
+    @JSImport("node:fs", "promises")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * Asynchronously tests a user's permissions for the file specified by path.
       * @param path A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
       * URL support is _experimental_.
       */
-    @JSImport("node:fs", "promises.access")
-    @js.native
-    def access(path: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.access")
-    @js.native
-    def access(path: PathLike, mode: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def access(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def access(path: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously append data to a file, creating the file if it does not exist.
@@ -999,59 +855,45 @@ object nodeFsMod {
       * If `mode` is a string, it is parsed as an octal integer.
       * If `flag` is not supplied, the default of `'a'` is used.
       */
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.appendFile")
-    @js.native
-    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
+    @scala.inline
+    def appendFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous chmod(2) - Change permissions of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
       */
-    @JSImport("node:fs", "promises.chmod")
-    @js.native
-    def chmod(path: PathLike, mode: Mode): js.Promise[Unit] = js.native
+    @scala.inline
+    def chmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous chown(2) - Change ownership of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.chown")
-    @js.native
-    def chown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def chown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously copies `src` to `dest`. By default, `dest` is overwritten if it already exists.
@@ -1064,57 +906,49 @@ object nodeFsMod {
       * supported flag is `fs.constants.COPYFILE_EXCL`, which causes the copy operation to fail if
       * `dest` already exists.
       */
-    @JSImport("node:fs", "promises.copyFile")
-    @js.native
-    def copyFile(src: PathLike, dest: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.copyFile")
-    @js.native
-    def copyFile(src: PathLike, dest: PathLike, flags: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def copyFile(src: PathLike, dest: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def copyFile(src: PathLike, dest: PathLike, flags: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous fchmod(2) - Change permissions of a file.
       * @param handle A `FileHandle`.
       * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
       */
-    @JSImport("node:fs", "promises.fchmod")
-    @js.native
-    def fchmod(handle: FileHandle, mode: Mode): js.Promise[Unit] = js.native
+    @scala.inline
+    def fchmod(handle: FileHandle, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmod")(handle.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous fchown(2) - Change ownership of a file.
       * @param handle A `FileHandle`.
       */
-    @JSImport("node:fs", "promises.fchown")
-    @js.native
-    def fchown(handle: FileHandle, uid: Double, gid: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def fchown(handle: FileHandle, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fchown")(handle.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous fdatasync(2) - synchronize a file's in-core state with storage device.
       * @param handle A `FileHandle`.
       */
-    @JSImport("node:fs", "promises.fdatasync")
-    @js.native
-    def fdatasync(handle: FileHandle): js.Promise[Unit] = js.native
+    @scala.inline
+    def fdatasync(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("fdatasync")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous fsync(2) - synchronize a file's in-core state with the underlying storage device.
       * @param handle A `FileHandle`.
       */
-    @JSImport("node:fs", "promises.fsync")
-    @js.native
-    def fsync(handle: FileHandle): js.Promise[Unit] = js.native
+    @scala.inline
+    def fsync(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous ftruncate(2) - Truncate a file to a specified length.
       * @param handle A `FileHandle`.
       * @param len If not specified, defaults to `0`.
       */
-    @JSImport("node:fs", "promises.ftruncate")
-    @js.native
-    def ftruncate(handle: FileHandle): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.ftruncate")
-    @js.native
-    def ftruncate(handle: FileHandle, len: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def ftruncate(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def ftruncate(handle: FileHandle, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(handle.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously change file timestamps of the file referenced by the supplied `FileHandle`.
@@ -1122,76 +956,60 @@ object nodeFsMod {
       * @param atime The last access time. If a string is provided, it will be coerced to number.
       * @param mtime The last modified time. If a string is provided, it will be coerced to number.
       */
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: java.lang.String, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: Double, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.futimes")
-    @js.native
-    def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def futimes(handle: FileHandle, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
       */
-    @JSImport("node:fs", "promises.lchmod")
-    @js.native
-    def lchmod(path: PathLike, mode: Mode): js.Promise[Unit] = js.native
+    @scala.inline
+    def lchmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous lchown(2) - Change ownership of a file. Does not dereference symbolic links.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.lchown")
-    @js.native
-    def lchown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def lchown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous link(2) - Create a new link (also known as a hard link) to an existing file.
       * @param existingPath A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param newPath A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.link")
-    @js.native
-    def link(existingPath: PathLike, newPath: PathLike): js.Promise[Unit] = js.native
+    @scala.inline
+    def link(existingPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous lstat(2) - Get file status. Does not dereference symbolic links.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.lstat")
-    @js.native
-    def lstat(path: PathLike): js.Promise[Stats] = js.native
-    @JSImport("node:fs", "promises.lstat")
-    @js.native
-    def lstat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = js.native
-    @JSImport("node:fs", "promises.lstat")
-    @js.native
-    def lstat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = js.native
-    @JSImport("node:fs", "promises.lstat")
-    @js.native
-    def lstat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = js.native
+    @scala.inline
+    def lstat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
+    @scala.inline
+    def lstat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
+    @scala.inline
+    def lstat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
+    @scala.inline
+    def lstat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
     
     /**
       * Changes the access and modification times of a file in the same way as `fsPromises.utimes()`,
@@ -1201,33 +1019,24 @@ object nodeFsMod {
       * @param atime The last access time. If a string is provided, it will be coerced to number.
       * @param mtime The last modified time. If a string is provided, it will be coerced to number.
       */
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.lutimes")
-    @js.native
-    def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def lutimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous mkdir(2) - create a directory.
@@ -1235,50 +1044,41 @@ object nodeFsMod {
       * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
       * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
       */
-    @JSImport("node:fs", "promises.mkdir")
-    @js.native
-    def mkdir(path: PathLike): js.Promise[Unit] = js.native
+    @scala.inline
+    def mkdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     /**
       * Asynchronous mkdir(2) - create a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
       * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
       */
-    @JSImport("node:fs", "promises.mkdir")
-    @js.native
-    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[js.UndefOr[java.lang.String]] = js.native
-    @JSImport("node:fs", "promises.mkdir")
-    @js.native
-    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.mkdir")
-    @js.native
-    def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[java.lang.String]] = js.native
-    @JSImport("node:fs", "promises.mkdir")
-    @js.native
-    def mkdir(path: PathLike, options: Mode): js.Promise[Unit] = js.native
+    @scala.inline
+    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[js.UndefOr[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[java.lang.String]]]
+    @scala.inline
+    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[java.lang.String]]]
+    @scala.inline
+    def mkdir(path: PathLike, options: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.mkdtemp")
-    @js.native
-    def mkdtemp(prefix: java.lang.String): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.mkdtemp")
-    @js.native
-    def mkdtemp(prefix: java.lang.String, options: BufferEncoding): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.mkdtemp")
-    @js.native
-    def mkdtemp(prefix: java.lang.String, options: BaseEncodingOptions): js.Promise[java.lang.String] = js.native
+    @scala.inline
+    def mkdtemp(prefix: java.lang.String): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def mkdtemp(prefix: java.lang.String, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def mkdtemp(prefix: java.lang.String, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.mkdtemp")
-    @js.native
-    def mkdtemp(prefix: java.lang.String, options: BufferEncodingOption): js.Promise[Buffer] = js.native
+    @scala.inline
+    def mkdtemp(prefix: java.lang.String, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
     
     /**
       * Asynchronous open(2) - open and possibly create a file.
@@ -1286,25 +1086,19 @@ object nodeFsMod {
       * @param mode A file mode. If a string is passed, it is parsed as an octal integer. If not
       * supplied, defaults to `0o666`.
       */
-    @JSImport("node:fs", "promises.open")
-    @js.native
-    def open(path: PathLike, flags: java.lang.String): js.Promise[FileHandle] = js.native
-    @JSImport("node:fs", "promises.open")
-    @js.native
-    def open(path: PathLike, flags: java.lang.String, mode: Mode): js.Promise[FileHandle] = js.native
-    @JSImport("node:fs", "promises.open")
-    @js.native
-    def open(path: PathLike, flags: Double): js.Promise[FileHandle] = js.native
-    @JSImport("node:fs", "promises.open")
-    @js.native
-    def open(path: PathLike, flags: Double, mode: Mode): js.Promise[FileHandle] = js.native
+    @scala.inline
+    def open(path: PathLike, flags: java.lang.String): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    @scala.inline
+    def open(path: PathLike, flags: java.lang.String, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    @scala.inline
+    def open(path: PathLike, flags: Double): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    @scala.inline
+    def open(path: PathLike, flags: Double, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
     
-    @JSImport("node:fs", "promises.opendir")
-    @js.native
-    def opendir(path: java.lang.String): js.Promise[Dir] = js.native
-    @JSImport("node:fs", "promises.opendir")
-    @js.native
-    def opendir(path: java.lang.String, options: OpenDirOptions): js.Promise[Dir] = js.native
+    @scala.inline
+    def opendir(path: java.lang.String): js.Promise[Dir] = ^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Dir]]
+    @scala.inline
+    def opendir(path: java.lang.String, options: OpenDirOptions): js.Promise[Dir] = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Dir]]
     
     /**
       * Asynchronously reads data from the file referenced by the supplied `FileHandle`.
@@ -1315,78 +1109,64 @@ object nodeFsMod {
       * @param position The offset from the beginning of the file from which data should be read. If
       * `null`, data will be read from the current position.
       */
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
     def read[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
+    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
     def read[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: Double,
       position: Double
-    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
+    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
     def read[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: Null,
       position: Double
-    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
+    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
     def read[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: Double,
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
+    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
     def read[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: Null,
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.read")
-    @js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = js.native
+    ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+    @scala.inline
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
     
     /**
       * Asynchronously reads the entire contents of a file.
@@ -1395,15 +1175,12 @@ object nodeFsMod {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: PathLike): js.Promise[Buffer] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: PathLike, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = js.native
+    @scala.inline
+    def readFile(path: PathLike): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    @scala.inline
+    def readFile(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readFile(path: PathLike, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1411,110 +1188,89 @@ object nodeFsMod {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: PathLike, options: EncodingFlag): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: PathLike, options: Flag): js.Promise[Buffer] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: FileHandle): js.Promise[Buffer] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: FileHandle, options: BufferEncoding): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: FileHandle, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: FileHandle, options: EncodingFlag): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readFile")
-    @js.native
-    def readFile(path: FileHandle, options: Flag): js.Promise[Buffer] = js.native
+    @scala.inline
+    def readFile(path: PathLike, options: EncodingFlag): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readFile(path: PathLike, options: Flag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    @scala.inline
+    def readFile(path: FileHandle): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    @scala.inline
+    def readFile(path: FileHandle, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readFile(path: FileHandle, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
+    @scala.inline
+    def readFile(path: FileHandle, options: EncodingFlag): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readFile(path: FileHandle, options: Flag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
     
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir(path: PathLike): js.Promise[js.Array[java.lang.String]] = js.native
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[java.lang.String]] = js.native
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir(path: PathLike, options: BaseEncodingOptionswithFi): js.Promise[js.Array[java.lang.String]] = js.native
+    @scala.inline
+    def readdir(path: PathLike): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    @scala.inline
+    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    @scala.inline
+    def readdir(path: PathLike, options: BaseEncodingOptionswithFi): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
       */
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Promise[js.Array[Dirent]] = js.native
+    @scala.inline
+    def readdir(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Promise[js.Array[Dirent]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Dirent]]]
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir(path: PathLike, options: Encoding): js.Promise[js.Array[Buffer]] = js.native
-    @JSImport("node:fs", "promises.readdir")
-    @js.native
-    def readdir_buffer(path: PathLike, options: buffer_): js.Promise[js.Array[Buffer]] = js.native
+    @scala.inline
+    def readdir(path: PathLike, options: Encoding): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
+    
+    @scala.inline
+    def readdir_buffer(path: PathLike, options: buffer_): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
     
     /**
       * Asynchronous readlink(2) - read value of a symbolic link.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.readlink")
-    @js.native
-    def readlink(path: PathLike): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readlink")
-    @js.native
-    def readlink(path: PathLike, options: java.lang.String): js.Promise[java.lang.String | Buffer] = js.native
-    @JSImport("node:fs", "promises.readlink")
-    @js.native
-    def readlink(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.readlink")
-    @js.native
-    def readlink(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = js.native
+    @scala.inline
+    def readlink(path: PathLike): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readlink(path: PathLike, options: java.lang.String): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
+    @scala.inline
+    def readlink(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def readlink(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
     /**
       * Asynchronous readlink(2) - read value of a symbolic link.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.readlink")
-    @js.native
-    def readlink(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = js.native
+    @scala.inline
+    def readlink(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
     
     /**
       * Asynchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.realpath")
-    @js.native
-    def realpath(path: PathLike): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.realpath")
-    @js.native
-    def realpath(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = js.native
-    @JSImport("node:fs", "promises.realpath")
-    @js.native
-    def realpath(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = js.native
+    @scala.inline
+    def realpath(path: PathLike): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def realpath(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
+    @scala.inline
+    def realpath(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
     /**
       * Asynchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @JSImport("node:fs", "promises.realpath")
-    @js.native
-    def realpath(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = js.native
+    @scala.inline
+    def realpath(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
     
     /**
       * Asynchronous rename(2) - Change the name or location of a file or directory.
@@ -1523,47 +1279,38 @@ object nodeFsMod {
       * @param newPath A path to a file. If a URL is provided, it must use the `file:` protocol.
       * URL support is _experimental_.
       */
-    @JSImport("node:fs", "promises.rename")
-    @js.native
-    def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = js.native
+    @scala.inline
+    def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously removes files and directories (modeled on the standard POSIX `rm` utility).
       */
-    @JSImport("node:fs", "promises.rm")
-    @js.native
-    def rm(path: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.rm")
-    @js.native
-    def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = js.native
+    @scala.inline
+    def rm(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous rmdir(2) - delete a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.rmdir")
-    @js.native
-    def rmdir(path: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.rmdir")
-    @js.native
-    def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = js.native
+    @scala.inline
+    def rmdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous stat(2) - Get file status.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.stat")
-    @js.native
-    def stat(path: PathLike): js.Promise[Stats] = js.native
-    @JSImport("node:fs", "promises.stat")
-    @js.native
-    def stat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = js.native
-    @JSImport("node:fs", "promises.stat")
-    @js.native
-    def stat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = js.native
-    @JSImport("node:fs", "promises.stat")
-    @js.native
-    def stat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = js.native
+    @scala.inline
+    def stat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
+    @scala.inline
+    def stat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
+    @scala.inline
+    def stat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
+    @scala.inline
+    def stat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
     
     /**
       * Asynchronous symlink(2) - Create a new symbolic link to an existing file.
@@ -1572,32 +1319,27 @@ object nodeFsMod {
       * @param type May be set to `'dir'`, `'file'`, or `'junction'` (default is `'file'`) and is only available on Windows (ignored on other platforms).
       * When using `'junction'`, the `target` argument will automatically be normalized to an absolute path.
       */
-    @JSImport("node:fs", "promises.symlink")
-    @js.native
-    def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.symlink")
-    @js.native
-    def symlink(target: PathLike, path: PathLike, `type`: java.lang.String): js.Promise[Unit] = js.native
+    @scala.inline
+    def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def symlink(target: PathLike, path: PathLike, `type`: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous truncate(2) - Truncate a file to a specified length.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param len If not specified, defaults to `0`.
       */
-    @JSImport("node:fs", "promises.truncate")
-    @js.native
-    def truncate(path: PathLike): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.truncate")
-    @js.native
-    def truncate(path: PathLike, len: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def truncate(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def truncate(path: PathLike, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous unlink(2) - delete a name and possibly the file it refers to.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
-    @JSImport("node:fs", "promises.unlink")
-    @js.native
-    def unlink(path: PathLike): js.Promise[Unit] = js.native
+    @scala.inline
+    def unlink(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously change file timestamps of the file referenced by the supplied path.
@@ -1605,33 +1347,24 @@ object nodeFsMod {
       * @param atime The last access time. If a string is provided, it will be coerced to number.
       * @param mtime The last modified time. If a string is provided, it will be coerced to number.
       */
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.utimes")
-    @js.native
-    def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
+    @scala.inline
+    def utimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously writes `string` to the file referenced by the supplied `FileHandle`.
@@ -1642,26 +1375,21 @@ object nodeFsMod {
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       * @param encoding The expected string encoding.
       */
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write(handle: FileHandle, string: java.lang.String): js.Promise[BufferBytesWritten] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    @scala.inline
+    def write(handle: FileHandle, string: java.lang.String): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+    @scala.inline
     def write(
       handle: FileHandle,
       string: java.lang.String,
       position: js.UndefOr[scala.Nothing],
       encoding: BufferEncoding
-    ): js.Promise[BufferBytesWritten] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write(handle: FileHandle, string: java.lang.String, position: Double): js.Promise[BufferBytesWritten] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write(handle: FileHandle, string: java.lang.String, position: Double, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write(handle: FileHandle, string: java.lang.String, position: Null, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = js.native
+    ): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+    @scala.inline
+    def write(handle: FileHandle, string: java.lang.String, position: Double): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+    @scala.inline
+    def write(handle: FileHandle, string: java.lang.String, position: Double, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+    @scala.inline
+    def write(handle: FileHandle, string: java.lang.String, position: Null, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
     /**
       * Asynchronously writes `buffer` to the file referenced by the supplied `FileHandle`.
       * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
@@ -1672,78 +1400,64 @@ object nodeFsMod {
       * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       */
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
     def write[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
     def write[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: Double,
       position: Double
-    ): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
     def write[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: js.UndefOr[scala.Nothing],
       length: Null,
       position: Double
-    ): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
     def write[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: Double,
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
+    ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
     def write[TBuffer /* <: js.typedarray.Uint8Array */](
       handle: FileHandle,
       buffer: TBuffer,
       offset: Null,
       length: js.UndefOr[scala.Nothing],
       position: Double
-    ): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = js.native
-    @JSImport("node:fs", "promises.write")
-    @js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = js.native
+    ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+    @scala.inline
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
     
     /**
       * Asynchronously writes data to a file, replacing the file if it already exists.
@@ -1758,46 +1472,33 @@ object nodeFsMod {
       * If `mode` is a string, it is parsed as an octal integer.
       * If `flag` is not supplied, the default of `'w'` is used.
       */
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = js.native
-    @JSImport("node:fs", "promises.writeFile")
-    @js.native
-    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = js.native
+    @scala.inline
+    def writeFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    @scala.inline
+    def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
   }
   
-  @JSImport("node:fs", "read")
-  @js.native
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -1810,9 +1511,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -1825,9 +1525,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -1840,9 +1539,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -1855,9 +1553,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -1870,9 +1567,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -1885,9 +1581,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -1900,9 +1595,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -1915,9 +1609,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -1930,9 +1623,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -1945,9 +1637,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -1960,9 +1651,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -1975,9 +1665,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -1990,9 +1679,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -2005,9 +1693,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -2020,9 +1707,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -2035,9 +1721,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -2050,9 +1735,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -2065,9 +1749,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -2080,9 +1763,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -2095,9 +1777,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: BigInt64Array,
@@ -2110,9 +1791,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: BigInt64Array,
@@ -2125,9 +1805,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: BigUint64Array,
@@ -2140,9 +1819,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "read")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def read(
     fd: Double,
     buffer: BigUint64Array,
@@ -2155,184 +1833,148 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "readFile")
-  @js.native
-  def readFile(path: Double, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  @scala.inline
+  def readFile(path: Double, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: java.lang.String,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: Null,
     callback: js.Function2[ErrnoException | Null, Buffer | java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: BaseEncodingOptionsflagst,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ java.lang.String | Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: EncodingBufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: Double,
     options: `3`,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
-  def readFile(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def readFile(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: java.lang.String,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: Null,
     callback: js.Function2[ErrnoException | Null, Buffer | java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: BaseEncodingOptionsflagst,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ java.lang.String | Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: EncodingBufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readFile(
     path: PathLike,
     options: `3`,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: Double): Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: Double, options: BufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: Double, options: BaseEncodingOptionsflagst): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: Double, options: EncodingBufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: Double, options: `3`): Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: PathLike): Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: PathLike, options: BufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: PathLike, options: BaseEncodingOptionsflagst): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: PathLike, options: EncodingBufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync(path: PathLike, options: `3`): Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync_Union(path: Double): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync_Union(path: Double, options: BufferEncoding): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync_Union(path: PathLike): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readFileSync")
-  @js.native
-  def readFileSync_Union(path: PathLike, options: BufferEncoding): java.lang.String | Buffer = js.native
+  @scala.inline
+  def readFileSync(path: Double): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def readFileSync(path: Double, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readFileSync(path: Double, options: BaseEncodingOptionsflagst): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readFileSync(path: Double, options: EncodingBufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readFileSync(path: Double, options: `3`): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def readFileSync(path: PathLike): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def readFileSync(path: PathLike, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readFileSync(path: PathLike, options: BaseEncodingOptionsflagst): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readFileSync(path: PathLike, options: EncodingBufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readFileSync(path: PathLike, options: `3`): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("node:fs", "readSync")
-  @js.native
-  def readSync(fd: Double, buffer: ArrayBufferView): Double = js.native
-  @JSImport("node:fs", "readSync")
-  @js.native
-  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = js.native
-  @JSImport("node:fs", "readSync")
-  @js.native
-  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = js.native
-  @JSImport("node:fs", "readSync")
-  @js.native
-  def readSync(fd: Double, buffer: ArrayBufferView, opts: ReadSyncOptions): Double = js.native
+  @scala.inline
+  def readFileSync_Union(path: Double): java.lang.String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readFileSync_Union(path: Double, options: BufferEncoding): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readFileSync_Union(path: PathLike): java.lang.String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readFileSync_Union(path: PathLike, options: BufferEncoding): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
   
-  @JSImport("node:fs", "readdir")
-  @js.native
+  @scala.inline
+  def readSync(fd: Double, buffer: ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def readSync(fd: Double, buffer: ArrayBufferView, opts: ReadSyncOptions): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Double]
+  
+  @scala.inline
   def readdir(
     path: PathLike,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: Null,
     callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: BufferEncoding,
     callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: BaseEncodingOptionswithFiEncoding,
@@ -2341,9 +1983,8 @@ object nodeFsMod {
       /* files */ js.Array[tmttyped.node.fsMod.Dirent], 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: BaseEncodingOptionswithFi,
@@ -2352,124 +1993,101 @@ object nodeFsMod {
       /* files */ js.Array[Buffer | java.lang.String], 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: Encoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: WithFileTypes,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[java.lang.String], Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readdir")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readdir(
     path: PathLike,
     options: buffer_,
     callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike): js.Array[java.lang.String] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[java.lang.String] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFi): js.Array[Buffer | java.lang.String] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Array[tmttyped.node.fsMod.Dirent] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike, options: Encoding): js.Array[Buffer] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync(path: PathLike, options: WithFileTypes): js.Array[java.lang.String] = js.native
-  @JSImport("node:fs", "readdirSync")
-  @js.native
-  def readdirSync_buffer(path: PathLike, options: buffer_): js.Array[Buffer] = js.native
+  @scala.inline
+  def readdirSync(path: PathLike): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+  @scala.inline
+  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
+  @scala.inline
+  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFi): js.Array[Buffer | java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer | java.lang.String]]
+  @scala.inline
+  def readdirSync(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Array[tmttyped.node.fsMod.Dirent] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[tmttyped.node.fsMod.Dirent]]
+  @scala.inline
+  def readdirSync(path: PathLike, options: Encoding): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
+  @scala.inline
+  def readdirSync(path: PathLike, options: WithFileTypes): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
   
-  @JSImport("node:fs", "readlink")
-  @js.native
+  @scala.inline
+  def readdirSync_buffer(path: PathLike, options: buffer_): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
+  
+  @scala.inline
   def readlink(
     path: PathLike,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: java.lang.String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ java.lang.String | Buffer, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: Null,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: BufferEncoding,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ java.lang.String, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: BaseEncodingOptions,
     callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ java.lang.String), Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "readlink")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readlink(
     path: PathLike,
     options: BufferEncodingOption,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ Buffer, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync(path: PathLike): java.lang.String = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync(path: PathLike, options: java.lang.String): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync(path: PathLike, options: BufferEncoding): java.lang.String = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync(path: PathLike, options: BaseEncodingOptions): java.lang.String = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync(path: PathLike, options: BufferEncodingOption): Buffer = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync_Union(path: PathLike): java.lang.String | Buffer = js.native
-  @JSImport("node:fs", "readlinkSync")
-  @js.native
-  def readlinkSync_Union(path: PathLike, options: BaseEncodingOptions): java.lang.String | Buffer = js.native
+  @scala.inline
+  def readlinkSync(path: PathLike): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readlinkSync(path: PathLike, options: java.lang.String): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readlinkSync(path: PathLike, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readlinkSync(path: PathLike, options: BaseEncodingOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def readlinkSync(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("node:fs", "readv")
-  @js.native
+  @scala.inline
+  def readlinkSync_Union(path: PathLike): java.lang.String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | Buffer]
+  @scala.inline
+  def readlinkSync_Union(path: PathLike, options: BaseEncodingOptions): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+  
+  @scala.inline
   def readv(
     fd: Double,
     buffers: js.Array[ArrayBufferView],
@@ -2479,9 +2097,8 @@ object nodeFsMod {
       /* buffers */ js.Array[ArrayBufferView], 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "readv")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readv")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def readv(
     fd: Double,
     buffers: js.Array[ArrayBufferView],
@@ -2492,201 +2109,170 @@ object nodeFsMod {
       /* buffers */ js.Array[ArrayBufferView], 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readv")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "readvSync")
-  @js.native
-  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = js.native
-  @JSImport("node:fs", "readvSync")
-  @js.native
-  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = js.native
+  @scala.inline
+  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
   
   object realpath {
     
-    @JSImport("node:fs", "realpath")
-    @js.native
+    @scala.inline
     def apply(
       path: PathLike,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: js.UndefOr[scala.Nothing],
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: java.lang.String,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String | Buffer, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: Null,
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: BufferEncoding,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: BaseEncodingOptions,
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def apply(
       path: PathLike,
       options: BufferEncodingOption,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
-    ): Unit = js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
     
-    @JSImport("node:fs", "realpath.native")
+    @JSImport("node:fs", "realpath")
     @js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
     def native(
       path: PathLike,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: js.UndefOr[scala.Nothing],
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: java.lang.String,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String | Buffer, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: Null,
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: BufferEncoding,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ java.lang.String, Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: BaseEncodingOptions,
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ java.lang.String), Unit]
-    ): Unit = js.native
-    @JSImport("node:fs", "realpath.native")
-    @js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
     def native(
       path: PathLike,
       options: BufferEncodingOption,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
-    ): Unit = js.native
+    ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   }
   
   object realpathSync {
     
-    @JSImport("node:fs", "realpathSync")
-    @js.native
-    def apply(path: PathLike): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync")
-    @js.native
-    def apply(path: PathLike, options: java.lang.String): java.lang.String | Buffer = js.native
-    @JSImport("node:fs", "realpathSync")
-    @js.native
-    def apply(path: PathLike, options: BufferEncoding): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync")
-    @js.native
-    def apply(path: PathLike, options: BaseEncodingOptions): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync")
-    @js.native
-    def apply(path: PathLike, options: BufferEncodingOption): Buffer = js.native
+    @scala.inline
+    def apply(path: PathLike): java.lang.String = ^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(path: PathLike, options: java.lang.String): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+    @scala.inline
+    def apply(path: PathLike, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(path: PathLike, options: BaseEncodingOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
     
-    @JSImport("node:fs", "realpathSync.native")
+    @JSImport("node:fs", "realpathSync")
     @js.native
-    def native(path: PathLike): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native(path: PathLike, options: java.lang.String): java.lang.String | Buffer = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native(path: PathLike, options: BufferEncoding): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native(path: PathLike, options: BaseEncodingOptions): java.lang.String = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native(path: PathLike, options: BufferEncodingOption): Buffer = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native_Union(path: PathLike): java.lang.String | Buffer = js.native
-    @JSImport("node:fs", "realpathSync.native")
-    @js.native
-    def native_Union(path: PathLike, options: BaseEncodingOptions): java.lang.String | Buffer = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def native(path: PathLike): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+    @scala.inline
+    def native(path: PathLike, options: java.lang.String): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
+    @scala.inline
+    def native(path: PathLike, options: BufferEncoding): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def native(path: PathLike, options: BaseEncodingOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def native(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+    
+    @scala.inline
+    def native_Union(path: PathLike): java.lang.String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | Buffer]
+    @scala.inline
+    def native_Union(path: PathLike, options: BaseEncodingOptions): java.lang.String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | Buffer]
   }
   
-  @JSImport("node:fs", "rename")
-  @js.native
-  def rename(oldPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def rename(oldPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "renameSync")
-  @js.native
-  def renameSync(oldPath: PathLike, newPath: PathLike): Unit = js.native
+  @scala.inline
+  def renameSync(oldPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("renameSync")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "rm")
-  @js.native
-  def rm(path: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "rm")
-  @js.native
-  def rm(path: PathLike, options: RmOptions, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def rm(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def rm(path: PathLike, options: RmOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "rmSync")
-  @js.native
-  def rmSync(path: PathLike): Unit = js.native
-  @JSImport("node:fs", "rmSync")
-  @js.native
-  def rmSync(path: PathLike, options: RmOptions): Unit = js.native
+  @scala.inline
+  def rmSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def rmSync(path: PathLike, options: RmOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "rmdir")
-  @js.native
-  def rmdir(path: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "rmdir")
-  @js.native
-  def rmdir(path: PathLike, options: RmDirOptions, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def rmdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def rmdir(path: PathLike, options: RmDirOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "rmdirSync")
-  @js.native
-  def rmdirSync(path: PathLike): Unit = js.native
-  @JSImport("node:fs", "rmdirSync")
-  @js.native
-  def rmdirSync(path: PathLike, options: RmDirOptions): Unit = js.native
+  @scala.inline
+  def rmdirSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def rmdirSync(path: PathLike, options: RmDirOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "stat")
-  @js.native
+  @scala.inline
   def stat(
     path: PathLike,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "stat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def stat(
     path: PathLike,
     options: js.UndefOr[scala.Nothing],
@@ -2695,23 +2281,20 @@ object nodeFsMod {
       tmttyped.node.fsMod.BigIntStats | tmttyped.node.fsMod.Stats, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "stat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def stat(
     path: PathLike,
     options: StatOptionsbigintfalseund,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "stat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def stat(
     path: PathLike,
     options: StatOptionsbiginttrue,
     callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.BigIntStats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "stat")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def stat(
     path: PathLike,
     options: StatOptions,
@@ -2720,239 +2303,187 @@ object nodeFsMod {
       /* stats */ tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "statSync")
-  @js.native
-  def statSync(path: PathLike): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "statSync")
-  @js.native
-  def statSync(path: PathLike, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = js.native
-  @JSImport("node:fs", "statSync")
-  @js.native
-  def statSync(path: PathLike, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "statSync")
-  @js.native
-  def statSync(path: PathLike, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
-  @JSImport("node:fs", "statSync")
-  @js.native
-  def statSync_Union(path: PathLike): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = js.native
+  @scala.inline
+  def statSync(path: PathLike): tmttyped.node.fsMod.Stats = ^.asInstanceOf[js.Dynamic].applyDynamic("statSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def statSync(path: PathLike, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (^.asInstanceOf[js.Dynamic].applyDynamic("statSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def statSync(path: PathLike, options: StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("statSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.BigIntStats]
+  @scala.inline
+  def statSync(path: PathLike, options: StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("statSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
+  
+  @scala.inline
+  def statSync_Union(path: PathLike): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = ^.asInstanceOf[js.Dynamic].applyDynamic("statSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
   object symlink {
     
+    @scala.inline
+    def apply(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].apply(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
+    def apply(target: PathLike, path: PathLike, `type`: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].apply(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
+    def apply(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].apply(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    @scala.inline
+    def apply(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].apply(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+    
     @JSImport("node:fs", "symlink")
     @js.native
-    def apply(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = js.native
-    @JSImport("node:fs", "symlink")
-    @js.native
-    def apply(target: PathLike, path: PathLike, `type`: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
-    @JSImport("node:fs", "symlink")
-    @js.native
-    def apply(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = js.native
-    @JSImport("node:fs", "symlink")
-    @js.native
-    def apply(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = js.native
+    val ^ : js.Any = js.native
   }
   
-  @JSImport("node:fs", "symlinkSync")
-  @js.native
-  def symlinkSync(target: PathLike, path: PathLike): Unit = js.native
-  @JSImport("node:fs", "symlinkSync")
-  @js.native
-  def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = js.native
+  @scala.inline
+  def symlinkSync(target: PathLike, path: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "truncate")
-  @js.native
-  def truncate(path: PathLike, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "truncate")
-  @js.native
-  def truncate(path: PathLike, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "truncate")
-  @js.native
-  def truncate(path: PathLike, len: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "truncate")
-  @js.native
-  def truncate(path: PathLike, len: Null, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def truncate(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def truncate(path: PathLike, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def truncate(path: PathLike, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def truncate(path: PathLike, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "truncateSync")
-  @js.native
-  def truncateSync(path: PathLike): Unit = js.native
-  @JSImport("node:fs", "truncateSync")
-  @js.native
-  def truncateSync(path: PathLike, len: Double): Unit = js.native
+  @scala.inline
+  def truncateSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def truncateSync(path: PathLike, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "unlink")
-  @js.native
-  def unlink(path: PathLike, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def unlink(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "unlinkSync")
-  @js.native
-  def unlinkSync(path: PathLike): Unit = js.native
+  @scala.inline
+  def unlinkSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "unwatchFile")
-  @js.native
-  def unwatchFile(filename: PathLike): Unit = js.native
-  @JSImport("node:fs", "unwatchFile")
-  @js.native
+  @scala.inline
+  def unwatchFile(filename: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unwatchFile")(filename.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
   def unwatchFile(
     filename: PathLike,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unwatchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "utimes")
-  @js.native
-  def utimes(path: PathLike, atime: Double, mtime: Double, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def utimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: java.lang.String, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: java.lang.String, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: js.Date, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: Double, mtime: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimes(path: PathLike, atime: Double, mtime: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: java.lang.String, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: java.lang.String, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: java.lang.String, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: js.Date, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
-  @JSImport("node:fs", "utimesSync")
-  @js.native
-  def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
+  @scala.inline
+  def utimesSync(path: PathLike, atime: java.lang.String, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: java.lang.String, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: java.lang.String, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: js.Date, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: Double, mtime: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def utimesSync(path: PathLike, atime: Double, mtime: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch(filename: PathLike): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  @scala.inline
+  def watch(filename: PathLike): FSWatcher = ^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any]).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     listener: js.Function2[/* event */ rename | change, /* filename */ java.lang.String, _]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: js.UndefOr[scala.Nothing],
     listener: js.Function2[/* event */ rename | change, /* filename */ java.lang.String, Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch(filename: PathLike, options: java.lang.String): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
+  def watch(filename: PathLike, options: java.lang.String): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: java.lang.String,
     listener: js.Function2[/* event */ rename | change, /* filename */ java.lang.String | Buffer, Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: Null,
     listener: js.Function2[change | rename, Buffer | (/* filename */ java.lang.String), Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch(filename: PathLike, options: BufferEncoding): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
+  def watch(filename: PathLike, options: BufferEncoding): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: BufferEncoding,
     listener: js.Function2[/* event */ rename | change, /* filename */ java.lang.String, Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch(filename: PathLike, options: Persistent): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
+  def watch(filename: PathLike, options: Persistent): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: Persistent,
     listener: js.Function2[change | rename, Buffer | (/* filename */ java.lang.String), Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch(filename: PathLike, options: Recursive): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
+  def watch(filename: PathLike, options: Recursive): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: Recursive,
     listener: js.Function2[/* event */ rename | change, /* filename */ Buffer, Unit]
-  ): FSWatcher = js.native
-  @JSImport("node:fs", "watch")
-  @js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  @scala.inline
   def watch(
     filename: PathLike,
     options: buffer_,
     listener: js.Function2[/* event */ rename | change, /* filename */ Buffer, Unit]
-  ): FSWatcher = js.native
+  ): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
   
-  @JSImport("node:fs", "watchFile")
-  @js.native
+  @scala.inline
   def watchFile(
     filename: PathLike,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "watchFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def watchFile(
     filename: PathLike,
     options: js.UndefOr[scala.Nothing],
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
-  @JSImport("node:fs", "watchFile")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def watchFile(
     filename: PathLike,
     options: Interval,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "watch")
-  @js.native
-  def watch_buffer(filename: PathLike, options: buffer_): FSWatcher = js.native
+  @scala.inline
+  def watch_buffer(filename: PathLike, options: buffer_): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
   
-  @JSImport("node:fs", "write")
-  @js.native
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -2962,9 +2493,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -2975,9 +2505,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -2989,9 +2518,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3004,9 +2532,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3019,9 +2546,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3034,9 +2560,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3048,9 +2573,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3063,9 +2587,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3078,9 +2601,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3093,9 +2615,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3107,9 +2628,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3122,9 +2642,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3137,9 +2656,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3152,9 +2670,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3165,9 +2682,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3179,9 +2695,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3194,9 +2709,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3209,9 +2723,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3224,9 +2737,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3238,9 +2750,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3253,9 +2764,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3268,9 +2778,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3283,9 +2792,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3297,9 +2805,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3312,9 +2819,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3327,9 +2833,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3342,9 +2847,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3355,9 +2859,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3369,9 +2872,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3384,9 +2886,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3399,9 +2900,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3414,9 +2914,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3428,9 +2927,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3443,9 +2941,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3458,9 +2955,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3473,9 +2969,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3487,9 +2982,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3502,9 +2996,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3517,9 +3010,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -3532,9 +3024,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.DataView, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3544,9 +3035,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3557,9 +3047,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3571,9 +3060,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3586,9 +3074,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3601,9 +3088,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3616,9 +3102,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3630,9 +3115,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3645,9 +3129,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3660,9 +3143,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3675,9 +3157,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3689,9 +3170,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3704,9 +3184,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3719,9 +3198,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3734,9 +3212,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3747,9 +3224,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3761,9 +3237,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3776,9 +3251,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3791,9 +3265,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3806,9 +3279,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3820,9 +3292,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3835,9 +3306,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3850,9 +3320,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3865,9 +3334,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3879,9 +3347,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3894,9 +3361,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3909,9 +3375,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3924,9 +3389,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3937,9 +3401,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3951,9 +3414,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3966,9 +3428,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3981,9 +3442,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -3996,9 +3456,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4010,9 +3469,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4025,9 +3483,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4040,9 +3497,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4055,9 +3511,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4069,9 +3524,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4084,9 +3538,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4099,9 +3552,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -4114,9 +3566,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4126,9 +3577,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4139,9 +3589,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4153,9 +3602,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4168,9 +3616,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4183,9 +3630,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4198,9 +3644,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4212,9 +3657,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4227,9 +3671,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4242,9 +3685,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4257,9 +3699,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4271,9 +3712,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4286,9 +3726,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4301,9 +3740,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4316,9 +3754,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4329,9 +3766,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4343,9 +3779,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4358,9 +3793,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4373,9 +3807,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4388,9 +3821,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4402,9 +3834,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4417,9 +3848,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4432,9 +3862,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4447,9 +3876,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4461,9 +3889,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4476,9 +3903,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4491,9 +3917,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4506,9 +3931,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4519,9 +3943,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4533,9 +3956,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4548,9 +3970,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4563,9 +3984,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4578,9 +3998,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4592,9 +4011,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4607,9 +4025,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4622,9 +4039,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4637,9 +4053,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4651,9 +4066,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4666,9 +4080,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4681,9 +4094,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -4696,9 +4108,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4708,9 +4119,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4721,9 +4131,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4735,9 +4144,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4750,9 +4158,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4765,9 +4172,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4780,9 +4186,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4794,9 +4199,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4809,9 +4213,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4824,9 +4227,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4839,9 +4241,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4853,9 +4254,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4868,9 +4268,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4883,9 +4282,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4898,9 +4296,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4911,9 +4308,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4925,9 +4321,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4940,9 +4335,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4955,9 +4349,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4970,9 +4363,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4984,9 +4376,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -4999,9 +4390,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5014,9 +4404,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5029,9 +4418,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5043,9 +4431,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5058,9 +4445,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5073,9 +4459,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5088,9 +4473,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5101,9 +4485,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5115,9 +4498,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5130,9 +4512,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5145,9 +4526,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5160,9 +4540,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5174,9 +4553,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5189,9 +4567,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5204,9 +4581,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5219,9 +4595,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5233,9 +4608,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5248,9 +4622,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5263,9 +4636,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -5278,9 +4650,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5290,9 +4661,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5303,9 +4673,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5317,9 +4686,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5332,9 +4700,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5347,9 +4714,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5362,9 +4728,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5376,9 +4741,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5391,9 +4755,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5406,9 +4769,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5421,9 +4783,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5435,9 +4796,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5450,9 +4810,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5465,9 +4824,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5480,9 +4838,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5493,9 +4850,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5507,9 +4863,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5522,9 +4877,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5537,9 +4891,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5552,9 +4905,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5566,9 +4918,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5581,9 +4932,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5596,9 +4946,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5611,9 +4960,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5625,9 +4973,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5640,9 +4987,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5655,9 +5001,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5670,9 +5015,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5683,9 +5027,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5697,9 +5040,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5712,9 +5054,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5727,9 +5068,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5742,9 +5082,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5756,9 +5095,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5771,9 +5109,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5786,9 +5123,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5801,9 +5137,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5815,9 +5150,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5830,9 +5164,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5845,9 +5178,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -5860,9 +5192,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5872,9 +5203,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5885,9 +5215,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5899,9 +5228,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5914,9 +5242,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5929,9 +5256,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5944,9 +5270,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5958,9 +5283,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5973,9 +5297,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -5988,9 +5311,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6003,9 +5325,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6017,9 +5338,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6032,9 +5352,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6047,9 +5366,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6062,9 +5380,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6075,9 +5392,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6089,9 +5405,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6104,9 +5419,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6119,9 +5433,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6134,9 +5447,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6148,9 +5460,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6163,9 +5474,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6178,9 +5488,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6193,9 +5502,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6207,9 +5515,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6222,9 +5529,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6237,9 +5543,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6252,9 +5557,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6265,9 +5569,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6279,9 +5582,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6294,9 +5596,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6309,9 +5610,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6324,9 +5624,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6338,9 +5637,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6353,9 +5651,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6368,9 +5665,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6383,9 +5679,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6397,9 +5692,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6412,9 +5706,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6427,9 +5720,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -6442,9 +5734,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6454,9 +5745,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6467,9 +5757,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6481,9 +5770,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6496,9 +5784,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6511,9 +5798,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6526,9 +5812,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6540,9 +5825,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6555,9 +5839,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6570,9 +5853,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6585,9 +5867,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6599,9 +5880,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6614,9 +5894,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6629,9 +5908,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6644,9 +5922,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6657,9 +5934,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6671,9 +5947,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6686,9 +5961,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6701,9 +5975,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6716,9 +5989,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6730,9 +6002,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6745,9 +6016,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6760,9 +6030,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6775,9 +6044,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6789,9 +6057,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6804,9 +6071,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6819,9 +6085,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6834,9 +6099,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6847,9 +6111,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6861,9 +6124,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6876,9 +6138,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6891,9 +6152,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6906,9 +6166,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6920,9 +6179,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6935,9 +6193,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6950,9 +6207,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6965,9 +6221,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6979,9 +6234,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -6994,9 +6248,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -7009,9 +6262,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -7024,9 +6276,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7036,9 +6287,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7049,9 +6299,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7063,9 +6312,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7078,9 +6326,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7093,9 +6340,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7108,9 +6354,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7122,9 +6367,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7137,9 +6381,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7152,9 +6395,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7167,9 +6409,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7181,9 +6422,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7196,9 +6436,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7211,9 +6450,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7226,9 +6464,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7239,9 +6476,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7253,9 +6489,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7268,9 +6503,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7283,9 +6517,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7298,9 +6531,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7312,9 +6544,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7327,9 +6558,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7342,9 +6572,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7357,9 +6586,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7371,9 +6599,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7386,9 +6613,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7401,9 +6627,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7416,9 +6641,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7429,9 +6653,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7443,9 +6666,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7458,9 +6680,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7473,9 +6694,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7488,9 +6708,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7502,9 +6721,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7517,9 +6735,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7532,9 +6749,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7547,9 +6763,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7561,9 +6776,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7576,9 +6790,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7591,9 +6804,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -7606,9 +6818,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7618,9 +6829,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7631,9 +6841,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7645,9 +6854,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7660,9 +6868,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7675,9 +6882,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7690,9 +6896,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7704,9 +6909,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7719,9 +6923,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7734,9 +6937,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7749,9 +6951,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7763,9 +6964,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7778,9 +6978,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7793,9 +6992,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7808,9 +7006,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7821,9 +7018,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7835,9 +7031,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7850,9 +7045,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7865,9 +7059,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7880,9 +7073,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7894,9 +7086,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7909,9 +7100,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7924,9 +7114,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7939,9 +7128,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7953,9 +7141,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7968,9 +7155,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7983,9 +7169,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -7998,9 +7183,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8011,9 +7195,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8025,9 +7208,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8040,9 +7222,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8055,9 +7236,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8070,9 +7250,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8084,9 +7263,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8099,9 +7277,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8114,9 +7291,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8129,9 +7305,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8143,9 +7318,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8158,9 +7332,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8173,9 +7346,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -8188,9 +7360,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8200,9 +7371,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8213,9 +7383,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8227,9 +7396,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8242,9 +7410,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8257,9 +7424,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8272,9 +7438,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8286,9 +7451,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8301,9 +7465,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8316,9 +7479,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8331,9 +7493,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8345,9 +7506,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8360,9 +7520,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8375,9 +7534,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8390,9 +7548,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8403,9 +7560,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8417,9 +7573,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8432,9 +7587,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8447,9 +7601,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8462,9 +7615,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8476,9 +7628,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8491,9 +7642,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8506,9 +7656,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8521,9 +7670,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8535,9 +7683,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8550,9 +7697,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8565,9 +7711,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8580,9 +7725,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8593,9 +7737,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8607,9 +7750,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8622,9 +7764,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8637,9 +7778,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8652,9 +7792,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8666,9 +7805,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8681,9 +7819,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8696,9 +7833,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8711,9 +7847,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8725,9 +7860,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8740,9 +7874,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8755,9 +7888,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -8770,9 +7902,8 @@ object nodeFsMod {
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8782,9 +7913,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8795,9 +7925,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8809,9 +7938,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8824,9 +7952,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8839,9 +7966,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8854,9 +7980,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8868,9 +7993,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8883,9 +8007,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8898,9 +8021,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8913,9 +8035,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8927,9 +8048,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8942,9 +8062,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8957,9 +8076,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8972,9 +8090,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8985,9 +8102,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -8999,9 +8115,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9014,9 +8129,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9029,9 +8143,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9044,9 +8157,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9058,9 +8170,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9073,9 +8184,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9088,9 +8198,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9103,9 +8212,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9117,9 +8225,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9132,9 +8239,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9147,9 +8253,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9162,9 +8267,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9175,9 +8279,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9189,9 +8292,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9204,9 +8306,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9219,9 +8320,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9234,9 +8334,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9248,9 +8347,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9263,9 +8361,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9278,9 +8375,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9293,9 +8389,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9307,9 +8402,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9322,9 +8416,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9337,9 +8430,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigInt64Array,
@@ -9352,9 +8444,8 @@ object nodeFsMod {
       /* buffer */ BigInt64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9364,9 +8455,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9377,9 +8467,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9391,9 +8480,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9406,9 +8494,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9421,9 +8508,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9436,9 +8522,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9450,9 +8535,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9465,9 +8549,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9480,9 +8563,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9495,9 +8577,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9509,9 +8590,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9524,9 +8604,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9539,9 +8618,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9554,9 +8632,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9567,9 +8644,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9581,9 +8657,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9596,9 +8671,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9611,9 +8685,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9626,9 +8699,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9640,9 +8712,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9655,9 +8726,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9670,9 +8740,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9685,9 +8754,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9699,9 +8767,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9714,9 +8781,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9729,9 +8795,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9744,9 +8809,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9757,9 +8821,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9771,9 +8834,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9786,9 +8848,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9801,9 +8862,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9816,9 +8876,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9830,9 +8889,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9845,9 +8903,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9860,9 +8917,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9875,9 +8931,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9889,9 +8944,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9904,9 +8958,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9919,9 +8972,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     buffer: BigUint64Array,
@@ -9934,9 +8986,8 @@ object nodeFsMod {
       /* buffer */ BigUint64Array, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -9946,9 +8997,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -9959,9 +9009,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -9973,9 +9022,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -9987,9 +9035,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10001,9 +9048,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10014,9 +9060,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10028,9 +9073,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10042,9 +9086,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10056,9 +9099,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10069,9 +9111,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10083,9 +9124,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10097,9 +9137,8 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "write")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def write(
     fd: Double,
     string: java.lang.String,
@@ -10111,153 +9150,117 @@ object nodeFsMod {
       /* str */ java.lang.String, 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: Double, data: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: Double, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: Double, data: ArrayBufferView, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: Double, data: ArrayBufferView, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: PathLike, data: java.lang.String, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: PathLike, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: PathLike, data: ArrayBufferView, callback: NoParamCallback): Unit = js.native
-  @JSImport("node:fs", "writeFile")
-  @js.native
-  def writeFile(path: PathLike, data: ArrayBufferView, options: WriteFileOptions, callback: NoParamCallback): Unit = js.native
+  @scala.inline
+  def writeFile(path: Double, data: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: Double, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: Double, data: ArrayBufferView, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: Double, data: ArrayBufferView, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: PathLike, data: java.lang.String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: PathLike, data: java.lang.String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: PathLike, data: ArrayBufferView, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFile(path: PathLike, data: ArrayBufferView, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: Double, data: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: Double, data: java.lang.String, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: Double, data: ArrayBufferView): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: Double, data: ArrayBufferView, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: PathLike, data: java.lang.String): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: PathLike, data: java.lang.String, options: WriteFileOptions): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: PathLike, data: ArrayBufferView): Unit = js.native
-  @JSImport("node:fs", "writeFileSync")
-  @js.native
-  def writeFileSync(path: PathLike, data: ArrayBufferView, options: WriteFileOptions): Unit = js.native
+  @scala.inline
+  def writeFileSync(path: Double, data: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: Double, data: java.lang.String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: Double, data: ArrayBufferView): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: Double, data: ArrayBufferView, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: PathLike, data: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: PathLike, data: java.lang.String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: PathLike, data: ArrayBufferView): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
+  def writeFileSync(path: PathLike, data: ArrayBufferView, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     buffer: ArrayBufferView,
     offset: js.UndefOr[scala.Nothing],
     length: js.UndefOr[scala.Nothing],
     position: Double
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: js.UndefOr[scala.Nothing], length: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: js.UndefOr[scala.Nothing], length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     buffer: ArrayBufferView,
     offset: js.UndefOr[scala.Nothing],
     length: Double,
     position: Double
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     buffer: ArrayBufferView,
     offset: js.UndefOr[scala.Nothing],
     length: Null,
     position: Double
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     buffer: ArrayBufferView,
     offset: Double,
     length: js.UndefOr[scala.Nothing],
     position: Double
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Null, position: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     buffer: ArrayBufferView,
     offset: Null,
     length: js.UndefOr[scala.Nothing],
     position: Double
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double, position: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Null, position: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, string: java.lang.String): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, string: java.lang.String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
   def writeSync(
     fd: Double,
     string: java.lang.String,
     position: js.UndefOr[scala.Nothing],
     encoding: BufferEncoding
-  ): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, string: java.lang.String, position: Double): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, string: java.lang.String, position: Double, encoding: BufferEncoding): Double = js.native
-  @JSImport("node:fs", "writeSync")
-  @js.native
-  def writeSync(fd: Double, string: java.lang.String, position: Null, encoding: BufferEncoding): Double = js.native
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, string: java.lang.String, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, string: java.lang.String, position: Double, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writeSync(fd: Double, string: java.lang.String, position: Null, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @JSImport("node:fs", "writev")
-  @js.native
+  @scala.inline
   def writev(
     fd: Double,
     buffers: js.Array[ArrayBufferView],
@@ -10267,9 +9270,8 @@ object nodeFsMod {
       /* buffers */ js.Array[ArrayBufferView], 
       Unit
     ]
-  ): Unit = js.native
-  @JSImport("node:fs", "writev")
-  @js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writev")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  @scala.inline
   def writev(
     fd: Double,
     buffers: js.Array[ArrayBufferView],
@@ -10280,12 +9282,10 @@ object nodeFsMod {
       /* buffers */ js.Array[ArrayBufferView], 
       Unit
     ]
-  ): Unit = js.native
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writev")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @JSImport("node:fs", "writevSync")
-  @js.native
-  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = js.native
-  @JSImport("node:fs", "writevSync")
-  @js.native
-  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = js.native
+  @scala.inline
+  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
 }

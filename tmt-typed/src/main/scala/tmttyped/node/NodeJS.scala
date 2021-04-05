@@ -643,34 +643,93 @@ object NodeJS {
     }
   }
   
-  @js.native
   trait Module extends StObject {
     
-    var children: js.Array[Module] = js.native
+    var children: js.Array[Module]
     
-    var exports: js.Any = js.native
+    var exports: js.Any
     
-    var filename: java.lang.String = js.native
+    var filename: java.lang.String
     
-    var id: java.lang.String = js.native
+    var id: java.lang.String
     
-    var loaded: Boolean = js.native
+    var loaded: Boolean
     
     /** @deprecated since 14.6.0 Please use `require.main` and `module.children` instead. */
-    var parent: js.UndefOr[Module | Null] = js.native
+    var parent: js.UndefOr[Module | Null] = js.undefined
     
     /**
       * @since 11.14.0
       *
       * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
       */
-    var path: java.lang.String = js.native
+    var path: java.lang.String
     
-    var paths: js.Array[java.lang.String] = js.native
+    var paths: js.Array[java.lang.String]
     
-    def require(id: java.lang.String): js.Any = js.native
+    def require(id: java.lang.String): js.Any
     @JSName("require")
-    var require_Original: Require = js.native
+    var require_Original: Require
+  }
+  object Module {
+    
+    @scala.inline
+    def apply(
+      children: js.Array[Module],
+      exports: js.Any,
+      filename: java.lang.String,
+      id: java.lang.String,
+      loaded: Boolean,
+      path: java.lang.String,
+      paths: js.Array[java.lang.String],
+      require: Require
+    ): Module = {
+      val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loaded = loaded.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], require = require.asInstanceOf[js.Any])
+      __obj.asInstanceOf[Module]
+    }
+    
+    @scala.inline
+    implicit class ModuleMutableBuilder[Self <: Module] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setChildren(value: js.Array[Module]): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setChildrenVarargs(value: Module*): Self = StObject.set(x, "children", js.Array(value :_*))
+      
+      @scala.inline
+      def setExports(value: js.Any): Self = StObject.set(x, "exports", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setFilename(value: java.lang.String): Self = StObject.set(x, "filename", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setLoaded(value: Boolean): Self = StObject.set(x, "loaded", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setParent(value: Module): Self = StObject.set(x, "parent", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setParentNull: Self = StObject.set(x, "parent", null)
+      
+      @scala.inline
+      def setParentUndefined: Self = StObject.set(x, "parent", js.undefined)
+      
+      @scala.inline
+      def setPath(value: java.lang.String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setPaths(value: js.Array[java.lang.String]): Self = StObject.set(x, "paths", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setPathsVarargs(value: java.lang.String*): Self = StObject.set(x, "paths", js.Array(value :_*))
+      
+      @scala.inline
+      def setRequire(value: Require): Self = StObject.set(x, "require", value.asInstanceOf[js.Any])
+    }
   }
   
   type ReadOnlyDict[T] = StringDictionary[js.UndefOr[T]]

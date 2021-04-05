@@ -14,8 +14,8 @@ trait LookupAllOptions extends LookupOptions {
 object LookupAllOptions {
   
   @scala.inline
-  def apply(all: `true`): LookupAllOptions = {
-    val __obj = js.Dynamic.literal(all = all.asInstanceOf[js.Any])
+  def apply(): LookupAllOptions = {
+    val __obj = js.Dynamic.literal(all = true)
     __obj.asInstanceOf[LookupAllOptions]
   }
   

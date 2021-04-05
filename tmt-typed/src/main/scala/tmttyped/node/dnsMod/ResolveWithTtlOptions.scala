@@ -14,8 +14,8 @@ trait ResolveWithTtlOptions extends ResolveOptions {
 object ResolveWithTtlOptions {
   
   @scala.inline
-  def apply(ttl: `true`): ResolveWithTtlOptions = {
-    val __obj = js.Dynamic.literal(ttl = ttl.asInstanceOf[js.Any])
+  def apply(): ResolveWithTtlOptions = {
+    val __obj = js.Dynamic.literal(ttl = true)
     __obj.asInstanceOf[ResolveWithTtlOptions]
   }
   

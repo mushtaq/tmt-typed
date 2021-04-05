@@ -30,7 +30,7 @@ object PushSubscription {
     toJSON: () => org.scalajs.dom.experimental.push.PushSubscriptionJSON,
     unsubscribe: () => js.Promise[scala.Boolean]
   ): org.scalajs.dom.experimental.push.PushSubscription = {
-    val __obj = js.Dynamic.literal(endpoint = endpoint.asInstanceOf[js.Any], getKey = js.Any.fromFunction1(getKey), options = options.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), unsubscribe = js.Any.fromFunction0(unsubscribe))
+    val __obj = js.Dynamic.literal(endpoint = endpoint.asInstanceOf[js.Any], getKey = js.Any.fromFunction1(getKey), options = options.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), unsubscribe = js.Any.fromFunction0(unsubscribe), expirationTime = null)
     __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscription]
   }
   

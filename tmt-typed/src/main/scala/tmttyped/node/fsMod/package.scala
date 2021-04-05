@@ -7,21 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object fsMod {
   
-  type Mode = scala.Double | java.lang.String
-  
-  type NoParamCallback = js.Function1[/* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, scala.Unit]
-  
-  type OpenMode = scala.Double | java.lang.String
-  
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - tmttyped.node.Buffer
-    - tmttyped.node.nodeUrlMod.URL
-  */
-  type PathLike = tmttyped.node.fsMod._PathLike | java.lang.String
-  
-  type WriteFileOptions = tmttyped.node.anon.BaseEncodingOptionsmodeMoEncoding | java.lang.String | scala.Null
-  
   @scala.inline
   def access(path: tmttyped.node.fsMod.PathLike, callback: tmttyped.node.fsMod.NoParamCallback): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -8777,4 +8762,19 @@ package object fsMod {
   def writevSync(fd: scala.Double, buffers: js.Array[tmttyped.node.NodeJS.ArrayBufferView]): scala.Double = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
   @scala.inline
   def writevSync(fd: scala.Double, buffers: js.Array[tmttyped.node.NodeJS.ArrayBufferView], position: scala.Double): scala.Double = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
+  
+  type Mode = scala.Double | java.lang.String
+  
+  type NoParamCallback = js.Function1[/* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, scala.Unit]
+  
+  type OpenMode = scala.Double | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - tmttyped.node.Buffer
+    - tmttyped.node.nodeUrlMod.URL
+  */
+  type PathLike = tmttyped.node.fsMod._PathLike | java.lang.String
+  
+  type WriteFileOptions = tmttyped.node.anon.BaseEncodingOptionsmodeMoEncoding | java.lang.String | scala.Null
 }

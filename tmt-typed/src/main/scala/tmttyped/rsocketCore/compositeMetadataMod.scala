@@ -11,6 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object compositeMetadataMod {
   
+  @JSImport("rsocket-core/CompositeMetadata", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("rsocket-core/CompositeMetadata", "CompositeMetadata")
   @js.native
   class CompositeMetadata protected () extends Iterable[Entry] {
@@ -87,43 +91,33 @@ object compositeMetadataMod {
     val `type`: default = js.native
   }
   
-  @JSImport("rsocket-core/CompositeMetadata", "decodeCompositeMetadata")
-  @js.native
-  def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = js.native
+  @scala.inline
+  def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeCompositeMetadata")(buffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[Entry]]
   
-  @JSImport("rsocket-core/CompositeMetadata", "decodeMimeAndContentBuffersSlices")
-  @js.native
-  def decodeMimeAndContentBuffersSlices(compositeMetadata: Buffer, entryIndex: Double): js.Array[Buffer] = js.native
+  @scala.inline
+  def decodeMimeAndContentBuffersSlices(compositeMetadata: Buffer, entryIndex: Double): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeAndContentBuffersSlices")(compositeMetadata.asInstanceOf[js.Any], entryIndex.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
   
-  @JSImport("rsocket-core/CompositeMetadata", "decodeMimeTypeFromMimeBuffer")
-  @js.native
-  def decodeMimeTypeFromMimeBuffer(flyweightMimeBuffer: Buffer): String = js.native
+  @scala.inline
+  def decodeMimeTypeFromMimeBuffer(flyweightMimeBuffer: Buffer): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeTypeFromMimeBuffer")(flyweightMimeBuffer.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @JSImport("rsocket-core/CompositeMetadata", "encodeAndAddCustomMetadata")
-  @js.native
-  def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddCustomMetadata")(compositeMetaData.asInstanceOf[js.Any], customMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/CompositeMetadata", "encodeAndAddWellKnownMetadata")
-  @js.native
-  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = js.native
-  @JSImport("rsocket-core/CompositeMetadata", "encodeAndAddWellKnownMetadata")
-  @js.native
-  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: default, metadata: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: default, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/CompositeMetadata", "encodeCompositeMetadata")
-  @js.native
-  def encodeCompositeMetadata(metadata: js.Array[js.Tuple2[String | default | Double, Buffer | js.Function0[Buffer]]]): Buffer = js.native
-  @JSImport("rsocket-core/CompositeMetadata", "encodeCompositeMetadata")
-  @js.native
-  def encodeCompositeMetadata(metadata: Map[String | default | Double, Buffer | js.Function0[Buffer]]): Buffer = js.native
+  @scala.inline
+  def encodeCompositeMetadata(metadata: js.Array[js.Tuple2[String | default | Double, Buffer | js.Function0[Buffer]]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeCompositeMetadata(metadata: Map[String | default | Double, Buffer | js.Function0[Buffer]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/CompositeMetadata", "encodeCustomMetadataHeader")
-  @js.native
-  def encodeCustomMetadataHeader(customMime: String, metadataLength: Double): Buffer = js.native
+  @scala.inline
+  def encodeCustomMetadataHeader(customMime: String, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeCustomMetadataHeader")(customMime.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/CompositeMetadata", "encodeWellKnownMetadataHeader")
-  @js.native
-  def encodeWellKnownMetadataHeader(mimeType: Double, metadataLength: Double): Buffer = js.native
+  @scala.inline
+  def encodeWellKnownMetadataHeader(mimeType: Double, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeWellKnownMetadataHeader")(mimeType.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   trait Entry extends StObject {
     

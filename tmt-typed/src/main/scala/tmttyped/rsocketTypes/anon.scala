@@ -20,8 +20,8 @@ object anon {
   object `0` {
     
     @scala.inline
-    def apply(kind: CONNECTING): `0` = {
-      val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    def apply(): `0` = {
+      val __obj = js.Dynamic.literal(kind = "CONNECTING")
       __obj.asInstanceOf[`0`]
     }
     
@@ -40,8 +40,8 @@ object anon {
   object `1` {
     
     @scala.inline
-    def apply(kind: CONNECTED): `1` = {
-      val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    def apply(): `1` = {
+      val __obj = js.Dynamic.literal(kind = "CONNECTED")
       __obj.asInstanceOf[`1`]
     }
     
@@ -60,8 +60,8 @@ object anon {
   object `2` {
     
     @scala.inline
-    def apply(kind: CLOSED): `2` = {
-      val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    def apply(): `2` = {
+      val __obj = js.Dynamic.literal(kind = "CLOSED")
       __obj.asInstanceOf[`2`]
     }
     
@@ -82,8 +82,8 @@ object anon {
   object Error {
     
     @scala.inline
-    def apply(error: js.Error, kind: ERROR): Error = {
-      val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+    def apply(error: js.Error): Error = {
+      val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], kind = "ERROR")
       __obj.asInstanceOf[Error]
     }
     
@@ -105,8 +105,8 @@ object anon {
   object Kind {
     
     @scala.inline
-    def apply(kind: NOT_CONNECTED): Kind = {
-      val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+    def apply(): Kind = {
+      val __obj = js.Dynamic.literal(kind = "NOT_CONNECTED")
       __obj.asInstanceOf[Kind]
     }
     

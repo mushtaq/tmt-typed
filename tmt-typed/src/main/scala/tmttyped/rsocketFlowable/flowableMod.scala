@@ -17,17 +17,18 @@ object flowableMod {
   /* static members */
   object default {
     
-    @JSImport("rsocket-flowable/Flowable", "default.error")
+    @JSImport("rsocket-flowable/Flowable", JSImport.Default)
     @js.native
-    def error(error: js.Error): Flowable[scala.Nothing] = js.native
+    val ^ : js.Any = js.native
     
-    @JSImport("rsocket-flowable/Flowable", "default.just")
-    @js.native
-    def just[U](values: U*): Flowable[U] = js.native
+    @scala.inline
+    def error(error: js.Error): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("error")(error.asInstanceOf[js.Any]).asInstanceOf[Flowable[scala.Nothing]]
     
-    @JSImport("rsocket-flowable/Flowable", "default.never")
-    @js.native
-    def never(): Flowable[scala.Nothing] = js.native
+    @scala.inline
+    def just[U](values: U*): Flowable[U] = ^.asInstanceOf[js.Dynamic].applyDynamic("just")(values.asInstanceOf[js.Any]).asInstanceOf[Flowable[U]]
+    
+    @scala.inline
+    def never(): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("never")().asInstanceOf[Flowable[scala.Nothing]]
   }
   
   /* import warning: RemoveDifficultInheritance.summarizeChanges 

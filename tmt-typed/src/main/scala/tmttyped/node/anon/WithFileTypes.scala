@@ -17,7 +17,7 @@ object WithFileTypes {
   
   @scala.inline
   def apply(): WithFileTypes = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(encoding = null)
     __obj.asInstanceOf[WithFileTypes]
   }
   

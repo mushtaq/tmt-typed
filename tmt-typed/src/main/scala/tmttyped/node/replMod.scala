@@ -19,6 +19,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object replMod {
   
+  @JSImport("repl", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   /**
     * Provides a customizable Read-Eval-Print-Loop (REPL).
     *
@@ -287,15 +291,12 @@ object replMod {
     * @param options The options for the `REPLServer`. If `options` is a string, then it specifies
     * the input prompt.
     */
-  @JSImport("repl", "start")
-  @js.native
-  def start(): REPLServer = js.native
-  @JSImport("repl", "start")
-  @js.native
-  def start(options: java.lang.String): REPLServer = js.native
-  @JSImport("repl", "start")
-  @js.native
-  def start(options: ReplOptions): REPLServer = js.native
+  @scala.inline
+  def start(): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[REPLServer]
+  @scala.inline
+  def start(options: java.lang.String): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
+  @scala.inline
+  def start(options: ReplOptions): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
   
   /**
     * This is the default "writer" value, if none is passed in the REPL options,
@@ -305,23 +306,43 @@ object replMod {
   @js.native
   val writer: REPLWriter with Options = js.native
   
-  @js.native
   trait REPLCommand extends StObject {
     
     /**
       * The function to execute, optionally accepting a single string argument.
       */
-    def action(text: java.lang.String): Unit = js.native
+    def action(text: java.lang.String): Unit
     /**
       * The function to execute, optionally accepting a single string argument.
       */
     @JSName("action")
-    var action_Original: REPLCommandAction = js.native
+    var action_Original: REPLCommandAction
     
     /**
       * Help text to be displayed when `.help` is entered.
       */
-    var help: js.UndefOr[java.lang.String] = js.native
+    var help: js.UndefOr[java.lang.String] = js.undefined
+  }
+  object REPLCommand {
+    
+    @scala.inline
+    def apply(action: REPLCommandAction): REPLCommand = {
+      val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
+      __obj.asInstanceOf[REPLCommand]
+    }
+    
+    @scala.inline
+    implicit class REPLCommandMutableBuilder[Self <: REPLCommand] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setAction(value: REPLCommandAction): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setHelp(value: java.lang.String): Self = StObject.set(x, "help", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setHelpUndefined: Self = StObject.set(x, "help", js.undefined)
+    }
   }
   
   type REPLCommandAction = js.ThisFunction1[/* this */ REPLServer, /* text */ java.lang.String, Unit]

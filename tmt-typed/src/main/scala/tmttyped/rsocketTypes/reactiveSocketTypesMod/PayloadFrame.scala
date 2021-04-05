@@ -23,9 +23,9 @@ trait PayloadFrame extends Frame {
 object PayloadFrame {
   
   @scala.inline
-  def apply(flags: Double, streamId: Double, `type`: `0x0a`): PayloadFrame = {
+  def apply(flags: Double, streamId: Double): PayloadFrame = {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x0a)
     __obj.asInstanceOf[PayloadFrame]
   }
   

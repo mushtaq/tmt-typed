@@ -21,6 +21,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeHttp2Mod {
   
+  @JSImport("node:http2", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:http2", "Http2ServerRequest")
   @js.native
   class Http2ServerRequest protected ()
@@ -40,78 +44,64 @@ object nodeHttp2Mod {
     def this(stream: ServerHttp2Stream) = this()
   }
   
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: java.lang.String): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  @scala.inline
+  def connect(authority: java.lang.String): ClientHttp2Session = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any]).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: java.lang.String,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: java.lang.String,
     options: js.UndefOr[scala.Nothing],
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: java.lang.String, options: ClientSessionOptions): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
+  def connect(authority: java.lang.String, options: ClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: java.lang.String,
     options: ClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: java.lang.String, options: SecureClientSessionOptions): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
+  def connect(authority: java.lang.String, options: SecureClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: java.lang.String,
     options: SecureClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: URL): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
+  def connect(authority: URL): ClientHttp2Session = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any]).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: URL,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: URL,
     options: js.UndefOr[scala.Nothing],
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: URL, options: ClientSessionOptions): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
+  def connect(authority: URL, options: ClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: URL,
     options: ClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
-  def connect(authority: URL, options: SecureClientSessionOptions): ClientHttp2Session = js.native
-  @JSImport("node:http2", "connect")
-  @js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
+  def connect(authority: URL, options: SecureClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  @scala.inline
   def connect(
     authority: URL,
     options: SecureClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
-  ): ClientHttp2Session = js.native
+  ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   
   object constants {
     
@@ -948,23 +938,19 @@ object nodeHttp2Mod {
     val PADDING_STRATEGY_NONE: Double = js.native
   }
   
-  @JSImport("node:http2", "createSecureServer")
-  @js.native
-  def createSecureServer(): Http2SecureServer = js.native
-  @JSImport("node:http2", "createSecureServer")
-  @js.native
+  @scala.inline
+  def createSecureServer(): Http2SecureServer = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureServer")().asInstanceOf[Http2SecureServer]
+  @scala.inline
   def createSecureServer(
     onRequestHandler: js.Function2[
       /* request */ tmttyped.node.http2Mod.Http2ServerRequest, 
       /* response */ tmttyped.node.http2Mod.Http2ServerResponse, 
       Unit
     ]
-  ): Http2SecureServer = js.native
-  @JSImport("node:http2", "createSecureServer")
-  @js.native
-  def createSecureServer(options: SecureServerOptions): Http2SecureServer = js.native
-  @JSImport("node:http2", "createSecureServer")
-  @js.native
+  ): Http2SecureServer = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureServer")(onRequestHandler.asInstanceOf[js.Any]).asInstanceOf[Http2SecureServer]
+  @scala.inline
+  def createSecureServer(options: SecureServerOptions): Http2SecureServer = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureServer")(options.asInstanceOf[js.Any]).asInstanceOf[Http2SecureServer]
+  @scala.inline
   def createSecureServer(
     options: SecureServerOptions,
     onRequestHandler: js.Function2[
@@ -972,25 +958,21 @@ object nodeHttp2Mod {
       /* response */ tmttyped.node.http2Mod.Http2ServerResponse, 
       Unit
     ]
-  ): Http2SecureServer = js.native
+  ): Http2SecureServer = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecureServer")(options.asInstanceOf[js.Any], onRequestHandler.asInstanceOf[js.Any])).asInstanceOf[Http2SecureServer]
   
-  @JSImport("node:http2", "createServer")
-  @js.native
-  def createServer(): Http2Server = js.native
-  @JSImport("node:http2", "createServer")
-  @js.native
+  @scala.inline
+  def createServer(): Http2Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Http2Server]
+  @scala.inline
   def createServer(
     onRequestHandler: js.Function2[
       /* request */ tmttyped.node.http2Mod.Http2ServerRequest, 
       /* response */ tmttyped.node.http2Mod.Http2ServerResponse, 
       Unit
     ]
-  ): Http2Server = js.native
-  @JSImport("node:http2", "createServer")
-  @js.native
-  def createServer(options: ServerOptions): Http2Server = js.native
-  @JSImport("node:http2", "createServer")
-  @js.native
+  ): Http2Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(onRequestHandler.asInstanceOf[js.Any]).asInstanceOf[Http2Server]
+  @scala.inline
+  def createServer(options: ServerOptions): Http2Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[Http2Server]
+  @scala.inline
   def createServer(
     options: ServerOptions,
     onRequestHandler: js.Function2[
@@ -998,17 +980,14 @@ object nodeHttp2Mod {
       /* response */ tmttyped.node.http2Mod.Http2ServerResponse, 
       Unit
     ]
-  ): Http2Server = js.native
+  ): Http2Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], onRequestHandler.asInstanceOf[js.Any])).asInstanceOf[Http2Server]
   
-  @JSImport("node:http2", "getDefaultSettings")
-  @js.native
-  def getDefaultSettings(): Settings = js.native
+  @scala.inline
+  def getDefaultSettings(): Settings = ^.asInstanceOf[js.Dynamic].applyDynamic("getDefaultSettings")().asInstanceOf[Settings]
   
-  @JSImport("node:http2", "getPackedSettings")
-  @js.native
-  def getPackedSettings(settings: Settings): Buffer = js.native
+  @scala.inline
+  def getPackedSettings(settings: Settings): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("getPackedSettings")(settings.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("node:http2", "getUnpackedSettings")
-  @js.native
-  def getUnpackedSettings(buf: js.typedarray.Uint8Array): Settings = js.native
+  @scala.inline
+  def getUnpackedSettings(buf: js.typedarray.Uint8Array): Settings = ^.asInstanceOf[js.Dynamic].applyDynamic("getUnpackedSettings")(buf.asInstanceOf[js.Any]).asInstanceOf[Settings]
 }

@@ -27,6 +27,10 @@ object wellKnownAuthTypeMod {
   /* static members */
   object default {
     
+    @JSImport("rsocket-core/WellKnownAuthType", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
     /**
       * Find the {@link WellKnownAuthType} for the given identifier (as an {@link number}). Valid
       * identifiers are defined to be integers between 0 and 127, inclusive. Identifiers outside of
@@ -41,9 +45,8 @@ object wellKnownAuthTypeMod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_AUTH_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @JSImport("rsocket-core/WellKnownAuthType", "default.fromIdentifier")
-    @js.native
-    def fromIdentifier(id: Double): WellKnownAuthType = js.native
+    @scala.inline
+    def fromIdentifier(id: Double): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
     
     /**
       * Find the {@link WellKnownAuthType} for the given {@link String} representation. If the
@@ -54,9 +57,8 @@ object wellKnownAuthTypeMod {
       * @return the matching {@link WellKnownAuthType}, or {@link #UNPARSEABLE_AUTH_TYPE} if none
       *     matches
       */
-    @JSImport("rsocket-core/WellKnownAuthType", "default.fromString")
-    @js.native
-    def fromString(authTypeString: String): WellKnownAuthType = js.native
+    @scala.inline
+    def fromString(authTypeString: String): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(authTypeString.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
   }
   
   @JSImport("rsocket-core/WellKnownAuthType", "BEARER")

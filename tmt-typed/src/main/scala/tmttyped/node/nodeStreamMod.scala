@@ -22,6 +22,9 @@ object nodeStreamMod {
   @js.native
   class ^ ()
     extends tmttyped.node.streamMod.^
+  @JSImport("node:stream", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
   
   // Note: Duplex extends both Readable and Writable.
   @JSImport("node:stream", "Duplex")
@@ -46,22 +49,22 @@ object nodeStreamMod {
   }
   object Readable {
     
+    @JSImport("node:stream", "Readable")
+    @js.native
+    val ^ : js.Any = js.native
+    
     /**
       * A utility method for creating Readable Streams out of iterators.
       */
     /* static member */
-    @JSImport("node:stream", "Readable.from")
-    @js.native
-    def from(iterable: js.Iterable[_]): tmttyped.node.streamMod.Readable = js.native
-    @JSImport("node:stream", "Readable.from")
-    @js.native
-    def from(iterable: js.Iterable[_], options: ReadableOptions): tmttyped.node.streamMod.Readable = js.native
-    @JSImport("node:stream", "Readable.from")
-    @js.native
-    def from(iterable: AsyncIterable[_]): tmttyped.node.streamMod.Readable = js.native
-    @JSImport("node:stream", "Readable.from")
-    @js.native
-    def from(iterable: AsyncIterable[_], options: ReadableOptions): tmttyped.node.streamMod.Readable = js.native
+    @scala.inline
+    def from(iterable: js.Iterable[_]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
+    @scala.inline
+    def from(iterable: js.Iterable[_], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
+    @scala.inline
+    def from(iterable: AsyncIterable[_]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
+    @scala.inline
+    def from(iterable: AsyncIterable[_], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
   }
   
   @JSImport("node:stream", "Stream")
@@ -86,100 +89,82 @@ object nodeStreamMod {
     def this(opts: WritableOptions) = this()
   }
   
-  @JSImport("node:stream", "finished")
-  @js.native
-  def finished(stream: ReadWriteStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = js.native
-  @JSImport("node:stream", "finished")
-  @js.native
+  @scala.inline
+  def finished(stream: ReadWriteStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  @scala.inline
   def finished(
     stream: ReadWriteStream,
     options: FinishedOptions,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
-  ): js.Function0[Unit] = js.native
-  @JSImport("node:stream", "finished")
-  @js.native
-  def finished(stream: ReadableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = js.native
-  @JSImport("node:stream", "finished")
-  @js.native
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  @scala.inline
+  def finished(stream: ReadableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  @scala.inline
   def finished(
     stream: ReadableStream,
     options: FinishedOptions,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
-  ): js.Function0[Unit] = js.native
-  @JSImport("node:stream", "finished")
-  @js.native
-  def finished(stream: WritableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = js.native
-  @JSImport("node:stream", "finished")
-  @js.native
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  @scala.inline
+  def finished(stream: WritableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  @scala.inline
   def finished(
     stream: WritableStream,
     options: FinishedOptions,
     callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
-  ): js.Function0[Unit] = js.native
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
   
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  @scala.inline
   def pipeline(
     stream1: ReadableStream,
     stream2: ReadWriteStream,
     streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  @scala.inline
   def pipeline(
     stream1: ReadableStream,
     stream2: WritableStream,
     streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
-  def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): WritableStream = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  @scala.inline
+  def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): WritableStream = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[WritableStream]
+  @scala.inline
   def pipeline(
     streams: js.Array[ReadableStream | WritableStream | ReadWriteStream],
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
-  ): WritableStream = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
-  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: T): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
-  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: T, callback: js.Function1[/* err */ ErrnoException | Null, Unit]): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
-  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: ReadWriteStream, stream3: T): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  @scala.inline
+  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: T, callback: js.Function1[/* err */ ErrnoException | Null, Unit]): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: ReadWriteStream, stream3: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
   def pipeline[T /* <: WritableStream */](
     stream1: ReadableStream,
     stream2: ReadWriteStream,
     stream3: T,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
-  ): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
-  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: ReadWriteStream, stream3: ReadWriteStream, stream4: T): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def pipeline[T /* <: WritableStream */](stream1: ReadableStream, stream2: ReadWriteStream, stream3: ReadWriteStream, stream4: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any], stream4.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
   def pipeline[T /* <: WritableStream */](
     stream1: ReadableStream,
     stream2: ReadWriteStream,
     stream3: ReadWriteStream,
     stream4: T,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
-  ): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any], stream4.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
   def pipeline[T /* <: WritableStream */](
     stream1: ReadableStream,
     stream2: ReadWriteStream,
     stream3: ReadWriteStream,
     stream4: ReadWriteStream,
     stream5: T
-  ): T = js.native
-  @JSImport("node:stream", "pipeline")
-  @js.native
+  ): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any], stream4.asInstanceOf[js.Any], stream5.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
   def pipeline[T /* <: WritableStream */](
     stream1: ReadableStream,
     stream2: ReadWriteStream,
@@ -187,5 +172,5 @@ object nodeStreamMod {
     stream4: ReadWriteStream,
     stream5: T,
     callback: js.Function1[/* err */ ErrnoException | Null, Unit]
-  ): T = js.native
+  ): T = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], stream3.asInstanceOf[js.Any], stream4.asInstanceOf[js.Any], stream5.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[T]
 }

@@ -17,6 +17,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeUrlMod {
   
+  @JSImport("node:url", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:url", "URL")
   @js.native
   class URL protected ()
@@ -38,79 +42,63 @@ object nodeUrlMod {
     def this(init: tmttyped.node.urlMod.URLSearchParams) = this()
   }
   
-  @JSImport("node:url", "domainToASCII")
-  @js.native
-  def domainToASCII(domain: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def domainToASCII(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
-  @JSImport("node:url", "domainToUnicode")
-  @js.native
-  def domainToUnicode(domain: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def domainToUnicode(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
   /**
     * This function ensures the correct decodings of percent-encoded characters as
     * well as ensuring a cross-platform valid absolute path string.
     * @param url The file URL string or URL object to convert to a path.
     */
-  @JSImport("node:url", "fileURLToPath")
-  @js.native
-  def fileURLToPath(url: java.lang.String): java.lang.String = js.native
-  @JSImport("node:url", "fileURLToPath")
-  @js.native
-  def fileURLToPath(url: URL_): java.lang.String = js.native
+  @scala.inline
+  def fileURLToPath(url: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  @scala.inline
+  def fileURLToPath(url: URL_): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
-  @JSImport("node:url", "format")
-  @js.native
-  def format(URL: URL_): java.lang.String = js.native
-  @JSImport("node:url", "format")
-  @js.native
-  def format(URL: URL_, options: URLFormatOptions): java.lang.String = js.native
-  @JSImport("node:url", "format")
-  @js.native
-  def format(urlObject: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def format(URL: URL_): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(URL.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  @scala.inline
+  def format(URL: URL_, options: URLFormatOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(URL.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def format(urlObject: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   /** @deprecated since v11.0.0 - Use the WHATWG URL API. */
-  @JSImport("node:url", "format")
-  @js.native
-  def format(urlObject: UrlObject): java.lang.String = js.native
+  @scala.inline
+  def format(urlObject: UrlObject): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
   /** @deprecated since v11.0.0 - Use the WHATWG URL API. */
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse(urlStr: java.lang.String): UrlWithStringQuery = js.native
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse(urlStr: java.lang.String, parseQueryString: js.UndefOr[scala.Nothing], slashesDenoteHost: Boolean): UrlWithStringQuery = js.native
+  @scala.inline
+  def parse(urlStr: java.lang.String): UrlWithStringQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any]).asInstanceOf[UrlWithStringQuery]
+  @scala.inline
+  def parse(urlStr: java.lang.String, parseQueryString: js.UndefOr[scala.Nothing], slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
   /** @deprecated since v11.0.0 - Use the WHATWG URL API. */
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse(urlStr: java.lang.String, parseQueryString: Boolean): Url = js.native
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse(urlStr: java.lang.String, parseQueryString: Boolean, slashesDenoteHost: Boolean): Url = js.native
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse_false(urlStr: java.lang.String, parseQueryString: `false`): UrlWithStringQuery = js.native
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse_false(urlStr: java.lang.String, parseQueryString: `false`, slashesDenoteHost: Boolean): UrlWithStringQuery = js.native
+  @scala.inline
+  def parse(urlStr: java.lang.String, parseQueryString: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[Url]
+  @scala.inline
+  def parse(urlStr: java.lang.String, parseQueryString: Boolean, slashesDenoteHost: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[Url]
+  
+  @scala.inline
+  def parse_false(urlStr: java.lang.String, parseQueryString: `false`): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
+  @scala.inline
+  def parse_false(urlStr: java.lang.String, parseQueryString: `false`, slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
+  
   /** @deprecated since v11.0.0 - Use the WHATWG URL API. */
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse_true(urlStr: java.lang.String, parseQueryString: `true`): UrlWithParsedQuery = js.native
-  @JSImport("node:url", "parse")
-  @js.native
-  def parse_true(urlStr: java.lang.String, parseQueryString: `true`, slashesDenoteHost: Boolean): UrlWithParsedQuery = js.native
+  @scala.inline
+  def parse_true(urlStr: java.lang.String, parseQueryString: `true`): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
+  @scala.inline
+  def parse_true(urlStr: java.lang.String, parseQueryString: `true`, slashesDenoteHost: Boolean): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlStr.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
   
   /**
     * This function ensures that path is resolved absolutely, and that the URL
     * control characters are correctly encoded when converting into a File URL.
     * @param url The path to convert to a File URL.
     */
-  @JSImport("node:url", "pathToFileURL")
-  @js.native
-  def pathToFileURL(url: java.lang.String): URL_ = js.native
+  @scala.inline
+  def pathToFileURL(url: java.lang.String): URL_ = ^.asInstanceOf[js.Dynamic].applyDynamic("pathToFileURL")(url.asInstanceOf[js.Any]).asInstanceOf[URL_]
   
   /** @deprecated since v11.0.0 - Use the WHATWG URL API. */
-  @JSImport("node:url", "resolve")
-  @js.native
-  def resolve(from: java.lang.String, to: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def resolve(from: java.lang.String, to: java.lang.String): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(from.asInstanceOf[js.Any], to.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
 }

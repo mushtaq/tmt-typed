@@ -15,9 +15,9 @@ trait AnyCnameRecord extends AnyRecord {
 object AnyCnameRecord {
   
   @scala.inline
-  def apply(`type`: CNAME, value: String): AnyCnameRecord = {
+  def apply(value: String): AnyCnameRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("CNAME")
     __obj.asInstanceOf[AnyCnameRecord]
   }
   

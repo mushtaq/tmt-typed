@@ -13,7 +13,7 @@ object Slottable {
   
   @scala.inline
   def apply(): Slottable = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(assignedSlot = null)
     __obj.asInstanceOf[Slottable]
   }
   

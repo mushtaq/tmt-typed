@@ -1,10 +1,5 @@
 package tmttyped.rsocketTypes.reactiveSocketTypesMod
 
-import tmttyped.rsocketTypes.rsocketTypesStrings.CLOSED
-import tmttyped.rsocketTypes.rsocketTypesStrings.CONNECTED
-import tmttyped.rsocketTypes.rsocketTypesStrings.CONNECTING
-import tmttyped.rsocketTypes.rsocketTypesStrings.ERROR
-import tmttyped.rsocketTypes.rsocketTypesStrings.NOT_CONNECTED
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,32 +16,32 @@ trait ConnectionStatus extends StObject
 object ConnectionStatus {
   
   @scala.inline
-  def `0`(kind: CONNECTING): tmttyped.rsocketTypes.anon.`0` = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+  def `0`(): tmttyped.rsocketTypes.anon.`0` = {
+    val __obj = js.Dynamic.literal(kind = "CONNECTING")
     __obj.asInstanceOf[tmttyped.rsocketTypes.anon.`0`]
   }
   
   @scala.inline
-  def `1`(kind: CONNECTED): tmttyped.rsocketTypes.anon.`1` = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+  def `1`(): tmttyped.rsocketTypes.anon.`1` = {
+    val __obj = js.Dynamic.literal(kind = "CONNECTED")
     __obj.asInstanceOf[tmttyped.rsocketTypes.anon.`1`]
   }
   
   @scala.inline
-  def `2`(kind: CLOSED): tmttyped.rsocketTypes.anon.`2` = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+  def `2`(): tmttyped.rsocketTypes.anon.`2` = {
+    val __obj = js.Dynamic.literal(kind = "CLOSED")
     __obj.asInstanceOf[tmttyped.rsocketTypes.anon.`2`]
   }
   
   @scala.inline
-  def Error(error: js.Error, kind: ERROR): tmttyped.rsocketTypes.anon.Error = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
+  def Error(error: js.Error): tmttyped.rsocketTypes.anon.Error = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], kind = "ERROR")
     __obj.asInstanceOf[tmttyped.rsocketTypes.anon.Error]
   }
   
   @scala.inline
-  def Kind(kind: NOT_CONNECTED): tmttyped.rsocketTypes.anon.Kind = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
+  def Kind(): tmttyped.rsocketTypes.anon.Kind = {
+    val __obj = js.Dynamic.literal(kind = "NOT_CONNECTED")
     __obj.asInstanceOf[tmttyped.rsocketTypes.anon.Kind]
   }
 }

@@ -16,17 +16,18 @@ object singleMod {
   /* static members */
   object default {
     
-    @JSImport("rsocket-flowable/Single", "default.error")
+    @JSImport("rsocket-flowable/Single", JSImport.Default)
     @js.native
-    def error(error: js.Error): Single[scala.Nothing] = js.native
+    val ^ : js.Any = js.native
     
-    @JSImport("rsocket-flowable/Single", "default.never")
-    @js.native
-    def never(): Single[scala.Nothing] = js.native
+    @scala.inline
+    def error(error: js.Error): Single[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("error")(error.asInstanceOf[js.Any]).asInstanceOf[Single[scala.Nothing]]
     
-    @JSImport("rsocket-flowable/Single", "default.of")
-    @js.native
-    def of[U](value: U): Single[U] = js.native
+    @scala.inline
+    def never(): Single[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("never")().asInstanceOf[Single[scala.Nothing]]
+    
+    @scala.inline
+    def of[U](value: U): Single[U] = ^.asInstanceOf[js.Dynamic].applyDynamic("of")(value.asInstanceOf[js.Any]).asInstanceOf[Single[U]]
   }
   
   type CancelCallback = js.Function0[Unit]

@@ -16,18 +16,18 @@ class DOMMatrix ()
 }
 object DOMMatrix {
   
-  @JSGlobal("DOMMatrix.fromFloat32Array")
+  @JSGlobal("DOMMatrix")
   @js.native
-  def fromFloat32Array(array32: js.typedarray.Float32Array): tmttyped.std.DOMMatrix = js.native
+  val ^ : js.Any = js.native
   
-  @JSGlobal("DOMMatrix.fromFloat64Array")
-  @js.native
-  def fromFloat64Array(array64: js.typedarray.Float64Array): tmttyped.std.DOMMatrix = js.native
+  @scala.inline
+  def fromFloat32Array(array32: js.typedarray.Float32Array): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat32Array")(array32.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrix]
   
-  @JSGlobal("DOMMatrix.fromMatrix")
-  @js.native
-  def fromMatrix(): tmttyped.std.DOMMatrix = js.native
-  @JSGlobal("DOMMatrix.fromMatrix")
-  @js.native
-  def fromMatrix(other: DOMMatrixInit): tmttyped.std.DOMMatrix = js.native
+  @scala.inline
+  def fromFloat64Array(array64: js.typedarray.Float64Array): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat64Array")(array64.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrix]
+  
+  @scala.inline
+  def fromMatrix(): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromMatrix")().asInstanceOf[tmttyped.std.DOMMatrix]
+  @scala.inline
+  def fromMatrix(other: DOMMatrixInit): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromMatrix")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrix]
 }

@@ -16,8 +16,8 @@ trait PushPermissionDescriptor extends PermissionDescriptor {
 object PushPermissionDescriptor {
   
   @scala.inline
-  def apply(name: push): PushPermissionDescriptor = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def apply(): PushPermissionDescriptor = {
+    val __obj = js.Dynamic.literal(name = "push")
     __obj.asInstanceOf[PushPermissionDescriptor]
   }
   

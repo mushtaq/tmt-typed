@@ -54,17 +54,17 @@ class DOMQuad ()
 }
 object DOMQuad {
   
-  @JSGlobal("DOMQuad.fromQuad")
+  @JSGlobal("DOMQuad")
   @js.native
-  def fromQuad(): tmttyped.std.DOMQuad = js.native
-  @JSGlobal("DOMQuad.fromQuad")
-  @js.native
-  def fromQuad(other: DOMQuadInit): tmttyped.std.DOMQuad = js.native
+  val ^ : js.Any = js.native
   
-  @JSGlobal("DOMQuad.fromRect")
-  @js.native
-  def fromRect(): tmttyped.std.DOMQuad = js.native
-  @JSGlobal("DOMQuad.fromRect")
-  @js.native
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMQuad = js.native
+  @scala.inline
+  def fromQuad(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")().asInstanceOf[tmttyped.std.DOMQuad]
+  @scala.inline
+  def fromQuad(other: DOMQuadInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
+  
+  @scala.inline
+  def fromRect(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMQuad]
+  @scala.inline
+  def fromRect(other: DOMRectInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
 }

@@ -7,25 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object childProcessMod {
   
-  type Serializable = java.lang.String | js.Object | scala.Double | scala.Boolean
-  
-  /* Rewritten from type alias, can be one of: 
-    - tmttyped.node.nodeStrings.pipe
-    - tmttyped.node.nodeStrings.ignore
-    - tmttyped.node.nodeStrings.inherit
-    - js.Array[
-  js.UndefOr[
-    tmttyped.node.nodeStrings.pipe | tmttyped.node.nodeStrings.ipc | tmttyped.node.nodeStrings.ignore | tmttyped.node.nodeStrings.inherit | tmttyped.node.nodeStreamMod.Stream | scala.Double | scala.Null
-  ]]
-  */
-  type StdioOptions = tmttyped.node.childProcessMod._StdioOptions | (js.Array[
-    js.UndefOr[
-      tmttyped.node.nodeStrings.pipe | tmttyped.node.nodeStrings.ipc | tmttyped.node.nodeStrings.ignore | tmttyped.node.nodeStrings.inherit | tmttyped.node.nodeStreamMod.Stream | scala.Double | scala.Null
-    ]
-  ])
-  
-  type StdioPipe = js.UndefOr[scala.Null | tmttyped.node.nodeStrings.pipe]
-  
   // no `options` definitely means stdout/stderr are `string`.
   // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   // fallback if nothing else matches. Worst case is always `string | Buffer`.
@@ -145,7 +126,7 @@ package object childProcessMod {
     file: java.lang.String,
     args: js.UndefOr[scala.Nothing],
     callback: js.Function3[
-      tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       tmttyped.node.Buffer | (/* stdout */ java.lang.String), 
       tmttyped.node.Buffer | (/* stderr */ java.lang.String), 
       scala.Unit
@@ -165,7 +146,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: tmttyped.node.fsMod.BaseEncodingOptions with tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -178,7 +159,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -191,7 +172,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: scala.Null,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -204,7 +185,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ tmttyped.node.Buffer, 
       /* stderr */ tmttyped.node.Buffer, 
       scala.Unit
@@ -217,7 +198,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithOtherEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -230,7 +211,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithStringEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -243,7 +224,7 @@ package object childProcessMod {
     args: js.UndefOr[scala.Nothing],
     options: tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -258,7 +239,7 @@ package object childProcessMod {
     file: java.lang.String,
     args: js.Array[java.lang.String],
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -278,7 +259,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: tmttyped.node.fsMod.BaseEncodingOptions with tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -291,7 +272,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: js.UndefOr[scala.Nothing],
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -304,7 +285,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: scala.Null,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -317,7 +298,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ tmttyped.node.Buffer, 
       /* stderr */ tmttyped.node.Buffer, 
       scala.Unit
@@ -330,7 +311,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithOtherEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -343,7 +324,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithStringEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -356,7 +337,7 @@ package object childProcessMod {
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -368,7 +349,7 @@ package object childProcessMod {
     file: java.lang.String,
     args: scala.Null,
     callback: js.Function3[
-      tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       tmttyped.node.Buffer | (/* stdout */ java.lang.String), 
       tmttyped.node.Buffer | (/* stderr */ java.lang.String), 
       scala.Unit
@@ -388,7 +369,7 @@ package object childProcessMod {
     args: scala.Null,
     options: tmttyped.node.fsMod.BaseEncodingOptions with tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -401,7 +382,7 @@ package object childProcessMod {
     args: scala.Null,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -414,7 +395,7 @@ package object childProcessMod {
     args: scala.Null,
     options: scala.Null,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -427,7 +408,7 @@ package object childProcessMod {
     args: scala.Null,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ tmttyped.node.Buffer, 
       /* stderr */ tmttyped.node.Buffer, 
       scala.Unit
@@ -440,7 +421,7 @@ package object childProcessMod {
     args: scala.Null,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithOtherEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -453,7 +434,7 @@ package object childProcessMod {
     args: scala.Null,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithStringEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -466,7 +447,7 @@ package object childProcessMod {
     args: scala.Null,
     options: tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -478,7 +459,7 @@ package object childProcessMod {
   def execFile(
     file: java.lang.String,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -496,7 +477,7 @@ package object childProcessMod {
     file: java.lang.String,
     options: tmttyped.node.fsMod.BaseEncodingOptions with tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -509,7 +490,7 @@ package object childProcessMod {
     file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ tmttyped.node.Buffer, 
       /* stderr */ tmttyped.node.Buffer, 
       scala.Unit
@@ -523,7 +504,7 @@ package object childProcessMod {
     file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithOtherEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String | tmttyped.node.Buffer, 
       /* stderr */ java.lang.String | tmttyped.node.Buffer, 
       scala.Unit
@@ -536,7 +517,7 @@ package object childProcessMod {
     file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileOptionsWithStringEncoding,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -549,7 +530,7 @@ package object childProcessMod {
     file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileOptions,
     callback: js.Function3[
-      /* error */ tmttyped.node.childProcessMod.ExecException | scala.Null, 
+      /* error */ tmttyped.node.childProcessMod.ExecFileException | scala.Null, 
       /* stdout */ java.lang.String, 
       /* stderr */ java.lang.String, 
       scala.Unit
@@ -767,4 +748,25 @@ package object childProcessMod {
     command: java.lang.String,
     options: tmttyped.node.childProcessMod.SpawnSyncOptionsWithStringEncoding
   ): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String]]
+  
+  type ExecFileException = tmttyped.node.childProcessMod.ExecException with tmttyped.node.NodeJS.ErrnoException
+  
+  type Serializable = java.lang.String | js.Object | scala.Double | scala.Boolean
+  
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.node.nodeStrings.pipe
+    - tmttyped.node.nodeStrings.ignore
+    - tmttyped.node.nodeStrings.inherit
+    - js.Array[
+  js.UndefOr[
+    tmttyped.node.nodeStrings.pipe | tmttyped.node.nodeStrings.ipc | tmttyped.node.nodeStrings.ignore | tmttyped.node.nodeStrings.inherit | tmttyped.node.nodeStreamMod.Stream | scala.Double | scala.Null
+  ]]
+  */
+  type StdioOptions = tmttyped.node.childProcessMod._StdioOptions | (js.Array[
+    js.UndefOr[
+      tmttyped.node.nodeStrings.pipe | tmttyped.node.nodeStrings.ipc | tmttyped.node.nodeStrings.ignore | tmttyped.node.nodeStrings.inherit | tmttyped.node.nodeStreamMod.Stream | scala.Double | scala.Null
+    ]
+  ])
+  
+  type StdioPipe = js.UndefOr[scala.Null | tmttyped.node.nodeStrings.pipe]
 }

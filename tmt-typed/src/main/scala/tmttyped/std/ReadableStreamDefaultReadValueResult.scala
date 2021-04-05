@@ -15,8 +15,8 @@ trait ReadableStreamDefaultReadValueResult[T] extends ReadableStreamDefaultReadR
 object ReadableStreamDefaultReadValueResult {
   
   @scala.inline
-  def apply[T](done: `false`, value: T): ReadableStreamDefaultReadValueResult[T] = {
-    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply[T](value: T): ReadableStreamDefaultReadValueResult[T] = {
+    val __obj = js.Dynamic.literal(done = false, value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadableStreamDefaultReadValueResult[T]]
   }
   

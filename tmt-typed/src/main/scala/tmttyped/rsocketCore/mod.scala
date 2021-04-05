@@ -26,6 +26,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object mod {
   
+  @JSImport("rsocket-core", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("rsocket-core", "APPLICATION_AVRO")
   @js.native
   val APPLICATION_AVRO: tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType = js.native
@@ -641,6 +645,10 @@ object mod {
   /* static members */
   object WellKnownAuthType {
     
+    @JSImport("rsocket-core", "WellKnownAuthType")
+    @js.native
+    val ^ : js.Any = js.native
+    
     /**
       * Find the {@link WellKnownAuthType} for the given identifier (as an {@link number}). Valid
       * identifiers are defined to be integers between 0 and 127, inclusive. Identifiers outside of
@@ -655,9 +663,8 @@ object mod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_AUTH_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @JSImport("rsocket-core", "WellKnownAuthType.fromIdentifier")
-    @js.native
-    def fromIdentifier(id: Double): tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType = js.native
+    @scala.inline
+    def fromIdentifier(id: Double): tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType]
     
     /**
       * Find the {@link WellKnownAuthType} for the given {@link String} representation. If the
@@ -668,9 +675,8 @@ object mod {
       * @return the matching {@link WellKnownAuthType}, or {@link #UNPARSEABLE_AUTH_TYPE} if none
       *     matches
       */
-    @JSImport("rsocket-core", "WellKnownAuthType.fromString")
-    @js.native
-    def fromString(authTypeString: String): tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType = js.native
+    @scala.inline
+    def fromString(authTypeString: String): tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(authTypeString.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketCore.wellKnownAuthTypeMod.WellKnownAuthType]
   }
   
   @JSImport("rsocket-core", "WellKnownMimeType")
@@ -681,6 +687,10 @@ object mod {
   }
   /* static members */
   object WellKnownMimeType {
+    
+    @JSImport("rsocket-core", "WellKnownMimeType")
+    @js.native
+    val ^ : js.Any = js.native
     
     /**
       * Find the {@link WellKnownMimeType} for the given identifier (as an {@code int}). Valid
@@ -696,9 +706,8 @@ object mod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_MIME_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @JSImport("rsocket-core", "WellKnownMimeType.fromIdentifier")
-    @js.native
-    def fromIdentifier(id: Double): tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType = js.native
+    @scala.inline
+    def fromIdentifier(id: Double): tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType]
     
     /**
       * Find the {@link WellKnownMimeType} for the given {@link String} representation. If the
@@ -708,9 +717,8 @@ object mod {
       * @param mimeType the looked up mime type
       * @return the matching {@link WellKnownMimeType}, or {@link #UNPARSEABLE_MIME_TYPE} if none matches
       */
-    @JSImport("rsocket-core", "WellKnownMimeType.fromString")
-    @js.native
-    def fromString(mimeType: String): tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType = js.native
+    @scala.inline
+    def fromString(mimeType: String): tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(mimeType.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketCore.wellKnownMimeTypeMod.WellKnownMimeType]
   }
   
   @JSImport("rsocket-core", "WellKnownMimeTypeEntry")
@@ -720,79 +728,60 @@ object mod {
     def this(content: Buffer, `type`: tmttyped.rsocketCore.wellKnownMimeTypeMod.default) = this()
   }
   
-  @JSImport("rsocket-core", "byteLength")
-  @js.native
-  def byteLength(data: js.Any, encoding: Encoding): Double = js.native
+  @scala.inline
+  def byteLength(data: js.Any, encoding: Encoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(data.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @JSImport("rsocket-core", "createBuffer")
-  @js.native
-  def createBuffer(args: js.Any*): Buffer = js.native
+  @scala.inline
+  def createBuffer(args: js.Any*): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("createBuffer")(args.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "createErrorFromFrame")
-  @js.native
-  def createErrorFromFrame(frame: ErrorFrame): ErrorsourceErrorSource = js.native
+  @scala.inline
+  def createErrorFromFrame(frame: ErrorFrame): ErrorsourceErrorSource = ^.asInstanceOf[js.Dynamic].applyDynamic("createErrorFromFrame")(frame.asInstanceOf[js.Any]).asInstanceOf[ErrorsourceErrorSource]
   
-  @JSImport("rsocket-core", "decodeAuthMetadata")
-  @js.native
-  def decodeAuthMetadata(metadata: Buffer): AuthMetadata = js.native
+  @scala.inline
+  def decodeAuthMetadata(metadata: Buffer): AuthMetadata = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeAuthMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[AuthMetadata]
   
-  @JSImport("rsocket-core", "decodeCompositeMetadata")
-  @js.native
-  def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = js.native
+  @scala.inline
+  def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeCompositeMetadata")(buffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[Entry]]
   
-  @JSImport("rsocket-core", "decodeRoutes")
-  @js.native
-  def decodeRoutes(routeMetadataBuffer: Buffer): js.Iterator[String] = js.native
+  @scala.inline
+  def decodeRoutes(routeMetadataBuffer: Buffer): js.Iterator[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeRoutes")(routeMetadataBuffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[String]]
   
-  @JSImport("rsocket-core", "decodeSimpleAuthPayload")
-  @js.native
-  def decodeSimpleAuthPayload(authPayload: Buffer): UsernameAndPassword = js.native
+  @scala.inline
+  def decodeSimpleAuthPayload(authPayload: Buffer): UsernameAndPassword = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeSimpleAuthPayload")(authPayload.asInstanceOf[js.Any]).asInstanceOf[UsernameAndPassword]
   
-  @JSImport("rsocket-core", "deserializeFrame")
-  @js.native
-  def deserializeFrame(buffer: Buffer): Frame = js.native
-  @JSImport("rsocket-core", "deserializeFrame")
-  @js.native
-  def deserializeFrame(buffer: Buffer, encoders: Encoders[_]): Frame = js.native
+  @scala.inline
+  def deserializeFrame(buffer: Buffer): Frame = ^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrame")(buffer.asInstanceOf[js.Any]).asInstanceOf[Frame]
+  @scala.inline
+  def deserializeFrame(buffer: Buffer, encoders: Encoders[_]): Frame = (^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrame")(buffer.asInstanceOf[js.Any], encoders.asInstanceOf[js.Any])).asInstanceOf[Frame]
   
-  @JSImport("rsocket-core", "deserializeFrameWithLength")
-  @js.native
-  def deserializeFrameWithLength(buffer: Buffer): Frame = js.native
-  @JSImport("rsocket-core", "deserializeFrameWithLength")
-  @js.native
-  def deserializeFrameWithLength(buffer: Buffer, encoders: Encoders[_]): Frame = js.native
+  @scala.inline
+  def deserializeFrameWithLength(buffer: Buffer): Frame = ^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrameWithLength")(buffer.asInstanceOf[js.Any]).asInstanceOf[Frame]
+  @scala.inline
+  def deserializeFrameWithLength(buffer: Buffer, encoders: Encoders[_]): Frame = (^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrameWithLength")(buffer.asInstanceOf[js.Any], encoders.asInstanceOf[js.Any])).asInstanceOf[Frame]
   
-  @JSImport("rsocket-core", "deserializeFrames")
-  @js.native
-  def deserializeFrames(buffer: Buffer): js.Tuple2[js.Array[Frame], Buffer] = js.native
-  @JSImport("rsocket-core", "deserializeFrames")
-  @js.native
-  def deserializeFrames(buffer: Buffer, encoders: Encoders[_]): js.Tuple2[js.Array[Frame], Buffer] = js.native
+  @scala.inline
+  def deserializeFrames(buffer: Buffer): js.Tuple2[js.Array[Frame], Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrames")(buffer.asInstanceOf[js.Any]).asInstanceOf[js.Tuple2[js.Array[Frame], Buffer]]
+  @scala.inline
+  def deserializeFrames(buffer: Buffer, encoders: Encoders[_]): js.Tuple2[js.Array[Frame], Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("deserializeFrames")(buffer.asInstanceOf[js.Any], encoders.asInstanceOf[js.Any])).asInstanceOf[js.Tuple2[js.Array[Frame], Buffer]]
   
-  @JSImport("rsocket-core", "encodeAndAddCustomMetadata")
-  @js.native
-  def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddCustomMetadata")(compositeMetaData.asInstanceOf[js.Any], customMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeAndAddWellKnownMetadata")
-  @js.native
-  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = js.native
-  @JSImport("rsocket-core", "encodeAndAddWellKnownMetadata")
-  @js.native
+  @scala.inline
+  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
   def encodeAndAddWellKnownMetadata(
     compositeMetaData: Buffer,
     knownMimeType: tmttyped.rsocketCore.wellKnownMimeTypeMod.default,
     metadata: Buffer
-  ): Buffer = js.native
+  ): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeBearerAuthMetadata")
-  @js.native
-  def encodeBearerAuthMetadata(token: String): Buffer = js.native
-  @JSImport("rsocket-core", "encodeBearerAuthMetadata")
-  @js.native
-  def encodeBearerAuthMetadata(token: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeBearerAuthMetadata(token: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeBearerAuthMetadata")(token.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeBearerAuthMetadata(token: Buffer): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeBearerAuthMetadata")(token.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeCompositeMetadata")
-  @js.native
+  @scala.inline
   def encodeCompositeMetadata(
     metadata: js.Array[
       js.Tuple2[
@@ -800,104 +789,79 @@ object mod {
         Buffer | js.Function0[Buffer]
       ]
     ]
-  ): Buffer = js.native
-  @JSImport("rsocket-core", "encodeCompositeMetadata")
-  @js.native
+  ): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
   def encodeCompositeMetadata(
     metadata: Map[
       String | tmttyped.rsocketCore.wellKnownMimeTypeMod.default | Double, 
       Buffer | js.Function0[Buffer]
     ]
-  ): Buffer = js.native
+  ): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeCustomAuthMetadata")
-  @js.native
-  def encodeCustomAuthMetadata(customAuthType: String, authPayloadBuffer: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeCustomAuthMetadata(customAuthType: String, authPayloadBuffer: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeCustomAuthMetadata")(customAuthType.asInstanceOf[js.Any], authPayloadBuffer.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeRoute")
-  @js.native
-  def encodeRoute(route: String): Buffer = js.native
+  @scala.inline
+  def encodeRoute(route: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoute")(route.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeRoutes")
-  @js.native
-  def encodeRoutes(routes: String*): Buffer = js.native
+  @scala.inline
+  def encodeRoutes(routes: String*): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoutes")(routes.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: String, password: String): Buffer = js.native
-  @JSImport("rsocket-core", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: String, password: Buffer): Buffer = js.native
-  @JSImport("rsocket-core", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: Buffer, password: String): Buffer = js.native
-  @JSImport("rsocket-core", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: Buffer, password: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: String, password: String): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: String, password: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: Buffer, password: String): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: Buffer, password: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "encodeWellKnownAuthMetadata")
-  @js.native
-  def encodeWellKnownAuthMetadata(authType: tmttyped.rsocketCore.wellKnownAuthTypeMod.default, authPayloadBuffer: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeWellKnownAuthMetadata(authType: tmttyped.rsocketCore.wellKnownAuthTypeMod.default, authPayloadBuffer: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeWellKnownAuthMetadata")(authType.asInstanceOf[js.Any], authPayloadBuffer.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "getErrorCodeExplanation")
-  @js.native
-  def getErrorCodeExplanation(code: Double): String = js.native
+  @scala.inline
+  def getErrorCodeExplanation(code: Double): String = ^.asInstanceOf[js.Dynamic].applyDynamic("getErrorCodeExplanation")(code.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @JSImport("rsocket-core", "isComplete")
-  @js.native
-  def isComplete(flags: Double): Boolean = js.native
+  @scala.inline
+  def isComplete(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isComplete")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isIgnore")
-  @js.native
-  def isIgnore(flags: Double): Boolean = js.native
+  @scala.inline
+  def isIgnore(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIgnore")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isLease")
-  @js.native
-  def isLease(flags: Double): Boolean = js.native
+  @scala.inline
+  def isLease(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isLease")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isMetadata")
-  @js.native
-  def isMetadata(flags: Double): Boolean = js.native
+  @scala.inline
+  def isMetadata(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isMetadata")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isNext")
-  @js.native
-  def isNext(flags: Double): Boolean = js.native
+  @scala.inline
+  def isNext(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNext")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isRespond")
-  @js.native
-  def isRespond(flags: Double): Boolean = js.native
+  @scala.inline
+  def isRespond(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRespond")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "isResumeEnable")
-  @js.native
-  def isResumeEnable(flags: Double): Boolean = js.native
+  @scala.inline
+  def isResumeEnable(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isResumeEnable")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core", "printFrame")
-  @js.native
-  def printFrame(frame: Frame): String = js.native
+  @scala.inline
+  def printFrame(frame: Frame): String = ^.asInstanceOf[js.Dynamic].applyDynamic("printFrame")(frame.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @JSImport("rsocket-core", "readUInt24BE")
-  @js.native
-  def readUInt24BE(buffer: Buffer, offset: Double): Double = js.native
+  @scala.inline
+  def readUInt24BE(buffer: Buffer, offset: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readUInt24BE")(buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @JSImport("rsocket-core", "serializeFrame")
-  @js.native
-  def serializeFrame(frame: Frame): Buffer = js.native
-  @JSImport("rsocket-core", "serializeFrame")
-  @js.native
-  def serializeFrame(frame: Frame, encoders: Encoders[_]): Buffer = js.native
+  @scala.inline
+  def serializeFrame(frame: Frame): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serializeFrame")(frame.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def serializeFrame(frame: Frame, encoders: Encoders[_]): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("serializeFrame")(frame.asInstanceOf[js.Any], encoders.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "serializeFrameWithLength")
-  @js.native
-  def serializeFrameWithLength(frame: Frame): Buffer = js.native
-  @JSImport("rsocket-core", "serializeFrameWithLength")
-  @js.native
-  def serializeFrameWithLength(frame: Frame, encoders: Encoders[_]): Buffer = js.native
+  @scala.inline
+  def serializeFrameWithLength(frame: Frame): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serializeFrameWithLength")(frame.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def serializeFrameWithLength(frame: Frame, encoders: Encoders[_]): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("serializeFrameWithLength")(frame.asInstanceOf[js.Any], encoders.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "toBuffer")
-  @js.native
-  def toBuffer(data: js.Any): Buffer = js.native
+  @scala.inline
+  def toBuffer(data: js.Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("toBuffer")(data.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core", "writeUInt24BE")
-  @js.native
-  def writeUInt24BE(buffer: Buffer, value: Double, offset: Double): Double = js.native
+  @scala.inline
+  def writeUInt24BE(buffer: Buffer, value: Double, offset: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeUInt24BE")(buffer.asInstanceOf[js.Any], value.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[Double]
 }

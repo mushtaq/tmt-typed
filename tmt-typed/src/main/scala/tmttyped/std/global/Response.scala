@@ -64,14 +64,15 @@ class Response ()
 }
 object Response {
   
-  @JSGlobal("Response.error")
+  @JSGlobal("Response")
   @js.native
-  def error(): org.scalajs.dom.experimental.Response = js.native
+  val ^ : js.Any = js.native
   
-  @JSGlobal("Response.redirect")
-  @js.native
-  def redirect(url: java.lang.String): org.scalajs.dom.experimental.Response = js.native
-  @JSGlobal("Response.redirect")
-  @js.native
-  def redirect(url: java.lang.String, status: Double): org.scalajs.dom.experimental.Response = js.native
+  @scala.inline
+  def error(): org.scalajs.dom.experimental.Response = ^.asInstanceOf[js.Dynamic].applyDynamic("error")().asInstanceOf[org.scalajs.dom.experimental.Response]
+  
+  @scala.inline
+  def redirect(url: java.lang.String): org.scalajs.dom.experimental.Response = ^.asInstanceOf[js.Dynamic].applyDynamic("redirect")(url.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.experimental.Response]
+  @scala.inline
+  def redirect(url: java.lang.String, status: Double): org.scalajs.dom.experimental.Response = (^.asInstanceOf[js.Dynamic].applyDynamic("redirect")(url.asInstanceOf[js.Any], status.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.experimental.Response]
 }

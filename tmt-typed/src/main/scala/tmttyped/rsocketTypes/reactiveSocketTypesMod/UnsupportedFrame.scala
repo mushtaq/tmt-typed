@@ -22,8 +22,8 @@ trait UnsupportedFrame extends Frame {
 object UnsupportedFrame {
   
   @scala.inline
-  def apply(flags: Double, streamId: `0`, `type`: `0x3f` | `0x0c` | `0x00`): UnsupportedFrame = {
-    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
+  def apply(flags: Double, `type`: `0x3f` | `0x0c` | `0x00`): UnsupportedFrame = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], streamId = 0)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsupportedFrame]
   }

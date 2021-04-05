@@ -11,6 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodePerfHooksMod {
   
+  @JSImport("node:perf_hooks", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:perf_hooks", "PerformanceObserver")
   @js.native
   class PerformanceObserver protected ()
@@ -65,12 +69,10 @@ object nodePerfHooksMod {
     val NODE_PERFORMANCE_GC_WEAKCB: Double = js.native
   }
   
-  @JSImport("node:perf_hooks", "monitorEventLoopDelay")
-  @js.native
-  def monitorEventLoopDelay(): EventLoopDelayMonitor = js.native
-  @JSImport("node:perf_hooks", "monitorEventLoopDelay")
-  @js.native
-  def monitorEventLoopDelay(options: EventLoopMonitorOptions): EventLoopDelayMonitor = js.native
+  @scala.inline
+  def monitorEventLoopDelay(): EventLoopDelayMonitor = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")().asInstanceOf[EventLoopDelayMonitor]
+  @scala.inline
+  def monitorEventLoopDelay(options: EventLoopMonitorOptions): EventLoopDelayMonitor = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")(options.asInstanceOf[js.Any]).asInstanceOf[EventLoopDelayMonitor]
   
   @JSImport("node:perf_hooks", "performance")
   @js.native

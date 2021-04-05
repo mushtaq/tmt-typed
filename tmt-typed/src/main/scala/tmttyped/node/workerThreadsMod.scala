@@ -3,7 +3,6 @@ package tmttyped.node
 import tmttyped.node.NodeJS.Dict
 import tmttyped.node.anon.Message
 import tmttyped.node.eventsMod.EventEmitterOptions
-import tmttyped.node.nodeEventsMod.^
 import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.nodeStreamMod.Writable
 import tmttyped.node.nodeStrings.close
@@ -21,6 +20,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object workerThreadsMod {
   
+  @JSImport("worker_threads", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("worker_threads", "MessageChannel")
   @js.native
   class MessageChannel () extends StObject {
@@ -33,7 +36,7 @@ object workerThreadsMod {
   @JSImport("worker_threads", "MessagePort")
   @js.native
   class MessagePort ()
-    extends ^
+    extends tmttyped.node.nodeEventsMod.^
        with _TransferListItem {
     def this(options: EventEmitterOptions) = this()
     
@@ -111,7 +114,8 @@ object workerThreadsMod {
   
   @JSImport("worker_threads", "Worker")
   @js.native
-  class Worker protected () extends ^ {
+  class Worker protected ()
+    extends tmttyped.node.nodeEventsMod.^ {
     /**
       * @param filename  The path to the Worker’s main script or module.
       *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
@@ -258,9 +262,8 @@ object workerThreadsMod {
     *
     * This operation cannot be undone.
     */
-  @JSImport("worker_threads", "markAsUntransferable")
-  @js.native
-  def markAsUntransferable(`object`: js.Object): Unit = js.native
+  @scala.inline
+  def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Transfer a `MessagePort` to a different `vm` Context. The original `port`
@@ -276,9 +279,8 @@ object workerThreadsMod {
     * `EventEmitter`, and only `port.onmessage()` can be used to receive
     * events using it.
     */
-  @JSImport("worker_threads", "moveMessagePortToContext")
-  @js.native
-  def moveMessagePortToContext(port: MessagePort, context: Context): MessagePort = js.native
+  @scala.inline
+  def moveMessagePortToContext(port: MessagePort, context: Context): MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[MessagePort]
   
   @JSImport("worker_threads", "parentPort")
   @js.native
@@ -290,9 +292,8 @@ object workerThreadsMod {
     * that contains the message payload, corresponding to the oldest message in the
     * `MessagePort`’s queue.
     */
-  @JSImport("worker_threads", "receiveMessageOnPort")
-  @js.native
-  def receiveMessageOnPort(port: MessagePort): js.UndefOr[Message] = js.native
+  @scala.inline
+  def receiveMessageOnPort(port: MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
   
   @JSImport("worker_threads", "resourceLimits")
   @js.native

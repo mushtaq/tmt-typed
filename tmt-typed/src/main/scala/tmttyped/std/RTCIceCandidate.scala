@@ -40,7 +40,8 @@ object RTCIceCandidate {
   
   @scala.inline
   def apply(candidate: java.lang.String, toJSON: () => org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): org.scalajs.dom.experimental.webrtc.RTCIceCandidate = {
-    val __obj = js.Dynamic.literal(candidate = candidate.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    val __obj = js.Dynamic.literal(candidate = candidate.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), component = null, foundation = null, port = null, priority = null, protocol = null, relatedAddress = null, relatedPort = null, sdpMLineIndex = null, sdpMid = null, tcpType = null, usernameFragment = null)
+    __obj.updateDynamic("type")(null)
     __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCIceCandidate]
   }
   

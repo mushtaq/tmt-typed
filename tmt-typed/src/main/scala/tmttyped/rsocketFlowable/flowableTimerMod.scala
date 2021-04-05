@@ -8,7 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object flowableTimerMod {
   
-  @JSImport("rsocket-flowable/FlowableTimer", "every")
+  @JSImport("rsocket-flowable/FlowableTimer", JSImport.Namespace)
   @js.native
-  def every(ms: Double): default[Double] = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def every(ms: Double): default[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("every")(ms.asInstanceOf[js.Any]).asInstanceOf[default[Double]]
 }

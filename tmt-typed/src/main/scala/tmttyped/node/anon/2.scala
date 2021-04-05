@@ -14,8 +14,8 @@ trait `2` extends BufferEncodingOption {
 object `2` {
   
   @scala.inline
-  def apply(encoding: buffer_): `2` = {
-    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+  def apply(): `2` = {
+    val __obj = js.Dynamic.literal(encoding = "buffer")
     __obj.asInstanceOf[`2`]
   }
   

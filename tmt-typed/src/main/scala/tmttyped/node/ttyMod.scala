@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object ttyMod {
   
+  @JSImport("tty", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("tty", "ReadStream")
   @js.native
   class ReadStream protected () extends Socket {
@@ -93,9 +97,8 @@ object ttyMod {
     var rows: Double = js.native
   }
   
-  @JSImport("tty", "isatty")
-  @js.native
-  def isatty(fd: Double): Boolean = js.native
+  @scala.inline
+  def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /**
     * -1 - to the left from cursor

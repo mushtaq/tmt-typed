@@ -25,7 +25,7 @@ object GeolocationCoordinates {
   
   @scala.inline
   def apply(accuracy: Double, latitude: Double, longitude: Double): GeolocationCoordinates = {
-    val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any], latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any], latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], altitude = null, altitudeAccuracy = null, heading = null, speed = null)
     __obj.asInstanceOf[GeolocationCoordinates]
   }
   

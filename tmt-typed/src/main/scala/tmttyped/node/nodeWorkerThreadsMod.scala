@@ -13,6 +13,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeWorkerThreadsMod {
   
+  @JSImport("node:worker_threads", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:worker_threads", "MessageChannel")
   @js.native
   class MessageChannel ()
@@ -58,9 +62,8 @@ object nodeWorkerThreadsMod {
     *
     * This operation cannot be undone.
     */
-  @JSImport("node:worker_threads", "markAsUntransferable")
-  @js.native
-  def markAsUntransferable(`object`: js.Object): Unit = js.native
+  @scala.inline
+  def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Transfer a `MessagePort` to a different `vm` Context. The original `port`
@@ -76,9 +79,8 @@ object nodeWorkerThreadsMod {
     * `EventEmitter`, and only `port.onmessage()` can be used to receive
     * events using it.
     */
-  @JSImport("node:worker_threads", "moveMessagePortToContext")
-  @js.native
-  def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, context: Context): tmttyped.node.workerThreadsMod.MessagePort = js.native
+  @scala.inline
+  def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, context: Context): tmttyped.node.workerThreadsMod.MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.workerThreadsMod.MessagePort]
   
   @JSImport("node:worker_threads", "parentPort")
   @js.native
@@ -90,9 +92,8 @@ object nodeWorkerThreadsMod {
     * that contains the message payload, corresponding to the oldest message in the
     * `MessagePort`’s queue.
     */
-  @JSImport("node:worker_threads", "receiveMessageOnPort")
-  @js.native
-  def receiveMessageOnPort(port: tmttyped.node.workerThreadsMod.MessagePort): js.UndefOr[Message] = js.native
+  @scala.inline
+  def receiveMessageOnPort(port: tmttyped.node.workerThreadsMod.MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
   
   @JSImport("node:worker_threads", "resourceLimits")
   @js.native

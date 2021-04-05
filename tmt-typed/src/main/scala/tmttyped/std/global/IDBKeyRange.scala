@@ -43,46 +43,41 @@ class IDBKeyRange ()
 }
 object IDBKeyRange {
   
+  @JSGlobal("IDBKeyRange")
+  @js.native
+  val ^ : js.Any = js.native
+  
   /**
     * Returns a new IDBKeyRange spanning from lower to upper. If lowerOpen is true, lower is not included in the range. If upperOpen is true, upper is not included in the range.
     */
-  @JSGlobal("IDBKeyRange.bound")
-  @js.native
-  def bound(lower: js.Any, upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = js.native
-  @JSGlobal("IDBKeyRange.bound")
-  @js.native
-  def bound(lower: js.Any, upper: js.Any, lowerOpen: js.UndefOr[scala.Nothing], upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
-  @JSGlobal("IDBKeyRange.bound")
-  @js.native
-  def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
-  @JSGlobal("IDBKeyRange.bound")
-  @js.native
-  def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean, upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
+  @scala.inline
+  def bound(lower: js.Any, upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def bound(lower: js.Any, upper: js.Any, lowerOpen: js.UndefOr[scala.Nothing], upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any], upperOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean, upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any], upperOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   
   /**
     * Returns a new IDBKeyRange starting at key with no upper bound. If open is true, key is not included in the range.
     */
-  @JSGlobal("IDBKeyRange.lowerBound")
-  @js.native
-  def lowerBound(lower: js.Any): org.scalajs.dom.raw.IDBKeyRange = js.native
-  @JSGlobal("IDBKeyRange.lowerBound")
-  @js.native
-  def lowerBound(lower: js.Any, open: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
+  @scala.inline
+  def lowerBound(lower: js.Any): org.scalajs.dom.raw.IDBKeyRange = ^.asInstanceOf[js.Dynamic].applyDynamic("lowerBound")(lower.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def lowerBound(lower: js.Any, open: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("lowerBound")(lower.asInstanceOf[js.Any], open.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   
   /**
     * Returns a new IDBKeyRange spanning only key.
     */
-  @JSGlobal("IDBKeyRange.only")
-  @js.native
-  def only(value: js.Any): org.scalajs.dom.raw.IDBKeyRange = js.native
+  @scala.inline
+  def only(value: js.Any): org.scalajs.dom.raw.IDBKeyRange = ^.asInstanceOf[js.Dynamic].applyDynamic("only")(value.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   
   /**
     * Returns a new IDBKeyRange with no lower bound and ending at key. If open is true, key is not included in the range.
     */
-  @JSGlobal("IDBKeyRange.upperBound")
-  @js.native
-  def upperBound(upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = js.native
-  @JSGlobal("IDBKeyRange.upperBound")
-  @js.native
-  def upperBound(upper: js.Any, open: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
+  @scala.inline
+  def upperBound(upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = ^.asInstanceOf[js.Dynamic].applyDynamic("upperBound")(upper.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def upperBound(upper: js.Any, open: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("upperBound")(upper.asInstanceOf[js.Any], open.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
 }

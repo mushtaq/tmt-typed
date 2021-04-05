@@ -13,7 +13,7 @@ object LinkStyle {
   
   @scala.inline
   def apply(): org.scalajs.dom.raw.LinkStyle = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(sheet = null)
     __obj.asInstanceOf[org.scalajs.dom.raw.LinkStyle]
   }
   

@@ -43,6 +43,10 @@ class Range ()
 }
 object Range {
   
+  @JSGlobal("Range")
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSGlobal("Range.END_TO_END")
   @js.native
   val END_TO_END: Double = js.native
@@ -59,7 +63,6 @@ object Range {
   @js.native
   val START_TO_START: Double = js.native
   
-  @JSGlobal("Range.toString")
-  @js.native
-  def toString_(): java.lang.String = js.native
+  @scala.inline
+  def toString_(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toString")().asInstanceOf[java.lang.String]
 }

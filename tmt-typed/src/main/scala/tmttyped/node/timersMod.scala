@@ -9,33 +9,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object timersMod {
   
-  @JSImport("timers", "clearImmediate")
+  @JSImport("timers", JSImport.Namespace)
   @js.native
-  def clearImmediate(immediateId: Immediate): Unit = js.native
+  val ^ : js.Any = js.native
   
-  @JSImport("timers", "clearInterval")
-  @js.native
-  def clearInterval(intervalId: Timeout): Unit = js.native
+  @scala.inline
+  def clearImmediate(immediateId: Immediate): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearImmediate")(immediateId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("timers", "clearTimeout")
-  @js.native
-  def clearTimeout(timeoutId: Timeout): Unit = js.native
+  @scala.inline
+  def clearInterval(intervalId: Timeout): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearInterval")(intervalId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("timers", "setImmediate")
-  @js.native
-  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = js.native
+  @scala.inline
+  def clearTimeout(timeoutId: Timeout): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearTimeout")(timeoutId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSImport("timers", "setInterval")
-  @js.native
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-  @JSImport("timers", "setInterval")
-  @js.native
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
+  @scala.inline
+  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(callback.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Immediate]
   
-  @JSImport("timers", "setTimeout")
-  @js.native
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-  @JSImport("timers", "setTimeout")
-  @js.native
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
+  @scala.inline
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  @scala.inline
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  
+  @scala.inline
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  @scala.inline
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
 }

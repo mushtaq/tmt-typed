@@ -34,10 +34,12 @@ class DOMPointReadOnly ()
 }
 object DOMPointReadOnly {
   
-  @JSGlobal("DOMPointReadOnly.fromPoint")
+  @JSGlobal("DOMPointReadOnly")
   @js.native
-  def fromPoint(): tmttyped.std.DOMPointReadOnly = js.native
-  @JSGlobal("DOMPointReadOnly.fromPoint")
-  @js.native
-  def fromPoint(other: DOMPointInit): tmttyped.std.DOMPointReadOnly = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def fromPoint(): tmttyped.std.DOMPointReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromPoint")().asInstanceOf[tmttyped.std.DOMPointReadOnly]
+  @scala.inline
+  def fromPoint(other: DOMPointInit): tmttyped.std.DOMPointReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromPoint")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMPointReadOnly]
 }

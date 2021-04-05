@@ -18,7 +18,7 @@ object DeviceRotationRate {
   
   @scala.inline
   def apply(): org.scalajs.dom.experimental.deviceorientation.DeviceRotationRate = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(alpha = null, beta = null, gamma = null)
     __obj.asInstanceOf[org.scalajs.dom.experimental.deviceorientation.DeviceRotationRate]
   }
   

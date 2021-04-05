@@ -15,9 +15,9 @@ trait AnyTxtRecord extends AnyRecord {
 object AnyTxtRecord {
   
   @scala.inline
-  def apply(entries: js.Array[String], `type`: TXT): AnyTxtRecord = {
+  def apply(entries: js.Array[String]): AnyTxtRecord = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("TXT")
     __obj.asInstanceOf[AnyTxtRecord]
   }
   

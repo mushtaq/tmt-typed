@@ -16,8 +16,8 @@ trait MidiPermissionDescriptor extends PermissionDescriptor {
 object MidiPermissionDescriptor {
   
   @scala.inline
-  def apply(name: midi): MidiPermissionDescriptor = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def apply(): MidiPermissionDescriptor = {
+    val __obj = js.Dynamic.literal(name = "midi")
     __obj.asInstanceOf[MidiPermissionDescriptor]
   }
   

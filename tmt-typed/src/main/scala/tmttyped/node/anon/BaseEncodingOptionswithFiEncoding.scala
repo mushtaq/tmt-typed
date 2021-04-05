@@ -17,8 +17,8 @@ trait BaseEncodingOptionswithFiEncoding extends StObject {
 object BaseEncodingOptionswithFiEncoding {
   
   @scala.inline
-  def apply(withFileTypes: `true`): BaseEncodingOptionswithFiEncoding = {
-    val __obj = js.Dynamic.literal(withFileTypes = withFileTypes.asInstanceOf[js.Any])
+  def apply(): BaseEncodingOptionswithFiEncoding = {
+    val __obj = js.Dynamic.literal(withFileTypes = true)
     __obj.asInstanceOf[BaseEncodingOptionswithFiEncoding]
   }
   

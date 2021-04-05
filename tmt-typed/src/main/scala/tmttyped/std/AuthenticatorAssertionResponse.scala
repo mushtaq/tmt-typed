@@ -21,7 +21,7 @@ object AuthenticatorAssertionResponse {
     clientDataJSON: js.typedarray.ArrayBuffer,
     signature: js.typedarray.ArrayBuffer
   ): AuthenticatorAssertionResponse = {
-    val __obj = js.Dynamic.literal(authenticatorData = authenticatorData.asInstanceOf[js.Any], clientDataJSON = clientDataJSON.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(authenticatorData = authenticatorData.asInstanceOf[js.Any], clientDataJSON = clientDataJSON.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any], userHandle = null)
     __obj.asInstanceOf[AuthenticatorAssertionResponse]
   }
   

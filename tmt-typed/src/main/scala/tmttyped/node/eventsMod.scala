@@ -58,29 +58,23 @@ object eventsMod {
   
   /** @deprecated since v4.0.0 */
   /* static member */
-  @JSImport("events", "listenerCount")
-  @js.native
-  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): Double = js.native
-  @JSImport("events", "listenerCount")
-  @js.native
-  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: js.Symbol): Double = js.native
+  @scala.inline
+  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
+  @scala.inline
+  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
   
   /* static member */
-  @JSImport("events", "on")
-  @js.native
-  def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): AsyncIterableIterator[_] = js.native
+  @scala.inline
+  def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): AsyncIterableIterator[_] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[_]]
   
   /* static member */
-  @JSImport("events", "once")
-  @js.native
-  def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = js.native
+  @scala.inline
+  def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
   /* static member */
-  @JSImport("events", "once")
-  @js.native
-  def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = js.native
-  @JSImport("events", "once")
-  @js.native
-  def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[_]] = js.native
+  @scala.inline
+  def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
+  @scala.inline
+  def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
   
   @js.native
   trait DOMEventTarget extends StObject {

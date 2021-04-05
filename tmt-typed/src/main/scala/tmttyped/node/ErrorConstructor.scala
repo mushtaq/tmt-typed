@@ -16,7 +16,7 @@ trait ErrorConstructor extends StObject {
   /**
     * Optional override for formatting stack traces
     *
-    * @see https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+    * @see https://v8.dev/docs/stack-trace-api#customizing-stack-traces
     */
   var prepareStackTrace: js.UndefOr[js.Function2[/* err */ js.Error, /* stackTraces */ js.Array[CallSite], _]] = js.native
   

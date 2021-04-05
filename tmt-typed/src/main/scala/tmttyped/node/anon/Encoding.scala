@@ -16,8 +16,8 @@ trait Encoding extends StObject {
 object Encoding {
   
   @scala.inline
-  def apply(encoding: buffer_): Encoding = {
-    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+  def apply(): Encoding = {
+    val __obj = js.Dynamic.literal(encoding = "buffer")
     __obj.asInstanceOf[Encoding]
   }
   

@@ -16,9 +16,9 @@ trait FormatType[PubF /* <: KeyFormat */] extends StObject {
 object FormatType {
   
   @scala.inline
-  def apply[PubF /* <: KeyFormat */](format: PubF, `type`: spki): FormatType[PubF] = {
+  def apply[PubF /* <: KeyFormat */](format: PubF): FormatType[PubF] = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("spki")
     __obj.asInstanceOf[FormatType[PubF]]
   }
   

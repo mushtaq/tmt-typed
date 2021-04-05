@@ -17,7 +17,10 @@ class DeviceMotionEvent protected ()
 }
 object DeviceMotionEvent {
   
-  @JSGlobal("DeviceMotionEvent.requestPermission")
+  @JSGlobal("DeviceMotionEvent")
   @js.native
-  def requestPermission(): js.Promise[PermissionState] = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def requestPermission(): js.Promise[PermissionState] = ^.asInstanceOf[js.Dynamic].applyDynamic("requestPermission")().asInstanceOf[js.Promise[PermissionState]]
 }

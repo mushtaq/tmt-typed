@@ -15,7 +15,7 @@ object PushSubscriptionOptions {
   
   @scala.inline
   def apply(userVisibleOnly: scala.Boolean): org.scalajs.dom.experimental.push.PushSubscriptionOptions = {
-    val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any], applicationServerKey = null)
     __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscriptionOptions]
   }
   

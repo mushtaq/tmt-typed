@@ -16,9 +16,9 @@ trait AnyARecord
 object AnyARecord {
   
   @scala.inline
-  def apply(address: String, ttl: Double, `type`: A): AnyARecord = {
+  def apply(address: String, ttl: Double): AnyARecord = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("A")
     __obj.asInstanceOf[AnyARecord]
   }
   

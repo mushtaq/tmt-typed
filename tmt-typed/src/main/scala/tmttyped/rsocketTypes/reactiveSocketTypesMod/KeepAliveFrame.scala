@@ -24,9 +24,9 @@ trait KeepAliveFrame extends Frame {
 object KeepAliveFrame {
   
   @scala.inline
-  def apply(flags: Double, lastReceivedPosition: Double, streamId: `0`, `type`: `0x03`): KeepAliveFrame = {
-    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], lastReceivedPosition = lastReceivedPosition.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+  def apply(flags: Double, lastReceivedPosition: Double): KeepAliveFrame = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], lastReceivedPosition = lastReceivedPosition.asInstanceOf[js.Any], streamId = 0)
+    __obj.updateDynamic("type")(0x03)
     __obj.asInstanceOf[KeepAliveFrame]
   }
   

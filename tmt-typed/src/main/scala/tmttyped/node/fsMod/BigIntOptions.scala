@@ -13,8 +13,8 @@ trait BigIntOptions extends StObject {
 object BigIntOptions {
   
   @scala.inline
-  def apply(bigint: `true`): BigIntOptions = {
-    val __obj = js.Dynamic.literal(bigint = bigint.asInstanceOf[js.Any])
+  def apply(): BigIntOptions = {
+    val __obj = js.Dynamic.literal(bigint = true)
     __obj.asInstanceOf[BigIntOptions]
   }
   

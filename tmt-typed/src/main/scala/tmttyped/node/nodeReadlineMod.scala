@@ -13,6 +13,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeReadlineMod {
   
+  @JSImport("node:readline", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:readline", "Interface")
   @js.native
   class Interface protected ()
@@ -66,108 +70,83 @@ object nodeReadlineMod {
   /**
     * Clears the current line of this WriteStream in a direction identified by `dir`.
     */
-  @JSImport("node:readline", "clearLine")
-  @js.native
-  def clearLine(stream: WritableStream, dir: Direction): Boolean = js.native
-  @JSImport("node:readline", "clearLine")
-  @js.native
-  def clearLine(stream: WritableStream, dir: Direction, callback: js.Function0[Unit]): Boolean = js.native
+  @scala.inline
+  def clearLine(stream: WritableStream, dir: Direction): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("clearLine")(stream.asInstanceOf[js.Any], dir.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  @scala.inline
+  def clearLine(stream: WritableStream, dir: Direction, callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("clearLine")(stream.asInstanceOf[js.Any], dir.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
   /**
     * Clears this `WriteStream` from the current cursor down.
     */
-  @JSImport("node:readline", "clearScreenDown")
-  @js.native
-  def clearScreenDown(stream: WritableStream): Boolean = js.native
-  @JSImport("node:readline", "clearScreenDown")
-  @js.native
-  def clearScreenDown(stream: WritableStream, callback: js.Function0[Unit]): Boolean = js.native
+  @scala.inline
+  def clearScreenDown(stream: WritableStream): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("clearScreenDown")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  @scala.inline
+  def clearScreenDown(stream: WritableStream, callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("clearScreenDown")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
+  @scala.inline
+  def createInterface(input: ReadableStream): tmttyped.node.readlineMod.Interface = ^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
   def createInterface(
     input: ReadableStream,
     output: js.UndefOr[scala.Nothing],
     completer: js.UndefOr[scala.Nothing],
     terminal: Boolean
-  ): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: AsyncCompleter): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
+  ): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: AsyncCompleter): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
   def createInterface(
     input: ReadableStream,
     output: js.UndefOr[scala.Nothing],
     completer: AsyncCompleter,
     terminal: Boolean
-  ): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: Completer): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: Completer, terminal: Boolean): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: WritableStream): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
+  ): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: Completer): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: js.UndefOr[scala.Nothing], completer: Completer, terminal: Boolean): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: WritableStream): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
   def createInterface(
     input: ReadableStream,
     output: WritableStream,
     completer: js.UndefOr[scala.Nothing],
     terminal: Boolean
-  ): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: WritableStream, completer: AsyncCompleter): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: WritableStream, completer: AsyncCompleter, terminal: Boolean): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: WritableStream, completer: Completer): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(input: ReadableStream, output: WritableStream, completer: Completer, terminal: Boolean): tmttyped.node.readlineMod.Interface = js.native
-  @JSImport("node:readline", "createInterface")
-  @js.native
-  def createInterface(options: ReadLineOptions): tmttyped.node.readlineMod.Interface = js.native
+  ): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: WritableStream, completer: AsyncCompleter): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: WritableStream, completer: AsyncCompleter, terminal: Boolean): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: WritableStream, completer: Completer): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(input: ReadableStream, output: WritableStream, completer: Completer, terminal: Boolean): tmttyped.node.readlineMod.Interface = (^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(input.asInstanceOf[js.Any], output.asInstanceOf[js.Any], completer.asInstanceOf[js.Any], terminal.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.readlineMod.Interface]
+  @scala.inline
+  def createInterface(options: ReadLineOptions): tmttyped.node.readlineMod.Interface = ^.asInstanceOf[js.Dynamic].applyDynamic("createInterface")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.readlineMod.Interface]
   
   /**
     * Moves this WriteStream's cursor to the specified position.
     */
-  @JSImport("node:readline", "cursorTo")
-  @js.native
-  def cursorTo(stream: WritableStream, x: Double): Boolean = js.native
-  @JSImport("node:readline", "cursorTo")
-  @js.native
-  def cursorTo(stream: WritableStream, x: Double, y: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Boolean = js.native
-  @JSImport("node:readline", "cursorTo")
-  @js.native
-  def cursorTo(stream: WritableStream, x: Double, y: Double): Boolean = js.native
-  @JSImport("node:readline", "cursorTo")
-  @js.native
-  def cursorTo(stream: WritableStream, x: Double, y: Double, callback: js.Function0[Unit]): Boolean = js.native
+  @scala.inline
+  def cursorTo(stream: WritableStream, x: Double): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("cursorTo")(stream.asInstanceOf[js.Any], x.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  @scala.inline
+  def cursorTo(stream: WritableStream, x: Double, y: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("cursorTo")(stream.asInstanceOf[js.Any], x.asInstanceOf[js.Any], y.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  @scala.inline
+  def cursorTo(stream: WritableStream, x: Double, y: Double): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("cursorTo")(stream.asInstanceOf[js.Any], x.asInstanceOf[js.Any], y.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  @scala.inline
+  def cursorTo(stream: WritableStream, x: Double, y: Double, callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("cursorTo")(stream.asInstanceOf[js.Any], x.asInstanceOf[js.Any], y.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
-  @JSImport("node:readline", "emitKeypressEvents")
-  @js.native
-  def emitKeypressEvents(stream: ReadableStream): Unit = js.native
-  @JSImport("node:readline", "emitKeypressEvents")
-  @js.native
-  def emitKeypressEvents(stream: ReadableStream, readlineInterface: tmttyped.node.readlineMod.Interface): Unit = js.native
+  @scala.inline
+  def emitKeypressEvents(stream: ReadableStream): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("emitKeypressEvents")(stream.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  @scala.inline
+  def emitKeypressEvents(stream: ReadableStream, readlineInterface: tmttyped.node.readlineMod.Interface): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("emitKeypressEvents")(stream.asInstanceOf[js.Any], readlineInterface.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Moves this WriteStream's cursor relative to its current position.
     */
-  @JSImport("node:readline", "moveCursor")
-  @js.native
-  def moveCursor(stream: WritableStream, dx: Double, dy: Double): Boolean = js.native
-  @JSImport("node:readline", "moveCursor")
-  @js.native
-  def moveCursor(stream: WritableStream, dx: Double, dy: Double, callback: js.Function0[Unit]): Boolean = js.native
+  @scala.inline
+  def moveCursor(stream: WritableStream, dx: Double, dy: Double): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("moveCursor")(stream.asInstanceOf[js.Any], dx.asInstanceOf[js.Any], dy.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  @scala.inline
+  def moveCursor(stream: WritableStream, dx: Double, dy: Double, callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("moveCursor")(stream.asInstanceOf[js.Any], dx.asInstanceOf[js.Any], dy.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
 }

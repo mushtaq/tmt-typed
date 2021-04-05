@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object global {
   
   @scala.inline
+  def ActiveXObject: tmttyped.std.ActiveXObject = js.Dynamic.global.selectDynamic("ActiveXObject").asInstanceOf[tmttyped.std.ActiveXObject]
+  @scala.inline
+  def ActiveXObject_=(x: tmttyped.std.ActiveXObject): scala.Unit = js.Dynamic.global.updateDynamic("ActiveXObject")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
   def AggregateError: tmttyped.std.AggregateErrorConstructor = js.Dynamic.global.selectDynamic("AggregateError").asInstanceOf[tmttyped.std.AggregateErrorConstructor]
   @scala.inline
   def AggregateError_=(x: tmttyped.std.AggregateErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("AggregateError")(x.asInstanceOf[js.Any])
@@ -24,9 +29,20 @@ package object global {
   def Array_=(x: tmttyped.std.ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
+  def Atomics: tmttyped.std.Atomics = js.Dynamic.global.selectDynamic("Atomics").asInstanceOf[tmttyped.std.Atomics]
+  @scala.inline
+  def Atomics_=(x: tmttyped.std.Atomics): scala.Unit = js.Dynamic.global.updateDynamic("Atomics")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def BigInt: tmttyped.std.BigIntConstructor = js.Dynamic.global.selectDynamic("BigInt").asInstanceOf[tmttyped.std.BigIntConstructor]
+  
+  @scala.inline
   def BigInt64Array: tmttyped.std.BigInt64ArrayConstructor = js.Dynamic.global.selectDynamic("BigInt64Array").asInstanceOf[tmttyped.std.BigInt64ArrayConstructor]
   @scala.inline
   def BigInt64Array_=(x: tmttyped.std.BigInt64ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigInt64Array")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def BigInt_=(x: tmttyped.std.BigIntConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigInt")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def BigUint64Array: tmttyped.std.BigUint64ArrayConstructor = js.Dynamic.global.selectDynamic("BigUint64Array").asInstanceOf[tmttyped.std.BigUint64ArrayConstructor]
@@ -84,6 +100,11 @@ package object global {
   def Function_=(x: tmttyped.std.FunctionConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Function")(x.asInstanceOf[js.Any])
   
   @scala.inline
+  def Infinity: scala.Double = js.Dynamic.global.selectDynamic("Infinity").asInstanceOf[scala.Double]
+  @scala.inline
+  def Infinity_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("Infinity")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
   def Int16Array: tmttyped.std.Int16ArrayConstructor = js.Dynamic.global.selectDynamic("Int16Array").asInstanceOf[tmttyped.std.Int16ArrayConstructor]
   @scala.inline
   def Int16Array_=(x: tmttyped.std.Int16ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Int16Array")(x.asInstanceOf[js.Any])
@@ -98,10 +119,32 @@ package object global {
   @scala.inline
   def Int8Array_=(x: tmttyped.std.Int8ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Int8Array")(x.asInstanceOf[js.Any])
   
+  /**
+    * An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
+    */
+  @scala.inline
+  def JSON: tmttyped.std.JSON = js.Dynamic.global.selectDynamic("JSON").asInstanceOf[tmttyped.std.JSON]
+  @scala.inline
+  def JSON_=(x: tmttyped.std.JSON): scala.Unit = js.Dynamic.global.updateDynamic("JSON")(x.asInstanceOf[js.Any])
+  
   @scala.inline
   def Map: tmttyped.std.MapConstructor = js.Dynamic.global.selectDynamic("Map").asInstanceOf[tmttyped.std.MapConstructor]
   @scala.inline
   def Map_=(x: tmttyped.std.MapConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Map")(x.asInstanceOf[js.Any])
+  
+  /** An intrinsic object that provides basic mathematics functionality and constants. */
+  @scala.inline
+  def Math: tmttyped.std.Math = js.Dynamic.global.selectDynamic("Math").asInstanceOf[tmttyped.std.Math]
+  @scala.inline
+  def Math_=(x: tmttyped.std.Math): scala.Unit = js.Dynamic.global.updateDynamic("Math")(x.asInstanceOf[js.Any])
+  
+  /////////////////////////////
+  /// ECMAScript APIs
+  /////////////////////////////
+  @scala.inline
+  def NaN: scala.Double = js.Dynamic.global.selectDynamic("NaN").asInstanceOf[scala.Double]
+  @scala.inline
+  def NaN_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("NaN")(x.asInstanceOf[js.Any])
   
   /** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
   @scala.inline
@@ -123,6 +166,11 @@ package object global {
   def Promise_=(x: tmttyped.std.PromiseConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Promise")(x.asInstanceOf[js.Any])
   
   @scala.inline
+  def Proxy: tmttyped.std.ProxyConstructor = js.Dynamic.global.selectDynamic("Proxy").asInstanceOf[tmttyped.std.ProxyConstructor]
+  @scala.inline
+  def Proxy_=(x: tmttyped.std.ProxyConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Proxy")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
   def RangeError: tmttyped.std.RangeErrorConstructor = js.Dynamic.global.selectDynamic("RangeError").asInstanceOf[tmttyped.std.RangeErrorConstructor]
   @scala.inline
   def RangeError_=(x: tmttyped.std.RangeErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("RangeError")(x.asInstanceOf[js.Any])
@@ -136,6 +184,11 @@ package object global {
   def RegExp: tmttyped.std.RegExpConstructor = js.Dynamic.global.selectDynamic("RegExp").asInstanceOf[tmttyped.std.RegExpConstructor]
   @scala.inline
   def RegExp_=(x: tmttyped.std.RegExpConstructor): scala.Unit = js.Dynamic.global.updateDynamic("RegExp")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def ServiceUIFrameContext: tmttyped.std.ServiceUIFrameContext = js.Dynamic.global.selectDynamic("ServiceUIFrameContext").asInstanceOf[tmttyped.std.ServiceUIFrameContext]
+  @scala.inline
+  def ServiceUIFrameContext_=(x: tmttyped.std.ServiceUIFrameContext): scala.Unit = js.Dynamic.global.updateDynamic("ServiceUIFrameContext")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def Set: tmttyped.std.SetConstructor = js.Dynamic.global.selectDynamic("Set").asInstanceOf[tmttyped.std.SetConstructor]
@@ -154,6 +207,9 @@ package object global {
   def String: tmttyped.std.StringConstructor = js.Dynamic.global.selectDynamic("String").asInstanceOf[tmttyped.std.StringConstructor]
   @scala.inline
   def String_=(x: tmttyped.std.StringConstructor): scala.Unit = js.Dynamic.global.updateDynamic("String")(x.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def Symbol: tmttyped.std.SymbolConstructor = js.Dynamic.global.selectDynamic("Symbol").asInstanceOf[tmttyped.std.SymbolConstructor]
   
   @scala.inline
   def SyntaxError: tmttyped.std.SyntaxErrorConstructor = js.Dynamic.global.selectDynamic("SyntaxError").asInstanceOf[tmttyped.std.SyntaxErrorConstructor]
@@ -209,61 +265,6 @@ package object global {
   def WeakSet: tmttyped.std.WeakSetConstructor = js.Dynamic.global.selectDynamic("WeakSet").asInstanceOf[tmttyped.std.WeakSetConstructor]
   @scala.inline
   def WeakSet_=(x: tmttyped.std.WeakSetConstructor): scala.Unit = js.Dynamic.global.updateDynamic("WeakSet")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def ActiveXObject: tmttyped.std.ActiveXObject = js.Dynamic.global.selectDynamic("ActiveXObject").asInstanceOf[tmttyped.std.ActiveXObject]
-  @scala.inline
-  def ActiveXObject_=(x: tmttyped.std.ActiveXObject): scala.Unit = js.Dynamic.global.updateDynamic("ActiveXObject")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def Atomics: tmttyped.std.Atomics = js.Dynamic.global.selectDynamic("Atomics").asInstanceOf[tmttyped.std.Atomics]
-  @scala.inline
-  def Atomics_=(x: tmttyped.std.Atomics): scala.Unit = js.Dynamic.global.updateDynamic("Atomics")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def BigInt: tmttyped.std.BigIntConstructor = js.Dynamic.global.selectDynamic("BigInt").asInstanceOf[tmttyped.std.BigIntConstructor]
-  @scala.inline
-  def BigInt_=(x: tmttyped.std.BigIntConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigInt")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def Infinity: scala.Double = js.Dynamic.global.selectDynamic("Infinity").asInstanceOf[scala.Double]
-  @scala.inline
-  def Infinity_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("Infinity")(x.asInstanceOf[js.Any])
-  
-  /**
-    * An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
-    */
-  @scala.inline
-  def JSON: tmttyped.std.JSON = js.Dynamic.global.selectDynamic("JSON").asInstanceOf[tmttyped.std.JSON]
-  @scala.inline
-  def JSON_=(x: tmttyped.std.JSON): scala.Unit = js.Dynamic.global.updateDynamic("JSON")(x.asInstanceOf[js.Any])
-  
-  /** An intrinsic object that provides basic mathematics functionality and constants. */
-  @scala.inline
-  def Math: tmttyped.std.Math = js.Dynamic.global.selectDynamic("Math").asInstanceOf[tmttyped.std.Math]
-  @scala.inline
-  def Math_=(x: tmttyped.std.Math): scala.Unit = js.Dynamic.global.updateDynamic("Math")(x.asInstanceOf[js.Any])
-  
-  /////////////////////////////
-  /// ECMAScript APIs
-  /////////////////////////////
-  @scala.inline
-  def NaN: scala.Double = js.Dynamic.global.selectDynamic("NaN").asInstanceOf[scala.Double]
-  @scala.inline
-  def NaN_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("NaN")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def Proxy: tmttyped.std.ProxyConstructor = js.Dynamic.global.selectDynamic("Proxy").asInstanceOf[tmttyped.std.ProxyConstructor]
-  @scala.inline
-  def Proxy_=(x: tmttyped.std.ProxyConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Proxy")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def ServiceUIFrameContext: tmttyped.std.ServiceUIFrameContext = js.Dynamic.global.selectDynamic("ServiceUIFrameContext").asInstanceOf[tmttyped.std.ServiceUIFrameContext]
-  @scala.inline
-  def ServiceUIFrameContext_=(x: tmttyped.std.ServiceUIFrameContext): scala.Unit = js.Dynamic.global.updateDynamic("ServiceUIFrameContext")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def Symbol: tmttyped.std.SymbolConstructor = js.Dynamic.global.selectDynamic("Symbol").asInstanceOf[tmttyped.std.SymbolConstructor]
   
   @scala.inline
   def addEventListener(`type`: java.lang.String, listener: tmttyped.std.EventListenerOrEventListenerObject): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]

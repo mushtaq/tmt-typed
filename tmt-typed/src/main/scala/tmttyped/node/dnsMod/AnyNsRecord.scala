@@ -15,9 +15,9 @@ trait AnyNsRecord extends AnyRecord {
 object AnyNsRecord {
   
   @scala.inline
-  def apply(`type`: NS, value: String): AnyNsRecord = {
+  def apply(value: String): AnyNsRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("NS")
     __obj.asInstanceOf[AnyNsRecord]
   }
   

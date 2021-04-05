@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeReplMod {
   
+  @JSImport("node:repl", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   /**
     * Provides a customizable Read-Eval-Print-Loop (REPL).
     *
@@ -74,15 +78,12 @@ object nodeReplMod {
     * @param options The options for the `REPLServer`. If `options` is a string, then it specifies
     * the input prompt.
     */
-  @JSImport("node:repl", "start")
-  @js.native
-  def start(): tmttyped.node.replMod.REPLServer = js.native
-  @JSImport("node:repl", "start")
-  @js.native
-  def start(options: java.lang.String): tmttyped.node.replMod.REPLServer = js.native
-  @JSImport("node:repl", "start")
-  @js.native
-  def start(options: ReplOptions): tmttyped.node.replMod.REPLServer = js.native
+  @scala.inline
+  def start(): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[tmttyped.node.replMod.REPLServer]
+  @scala.inline
+  def start(options: java.lang.String): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
+  @scala.inline
+  def start(options: ReplOptions): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
   
   /**
     * This is the default "writer" value, if none is passed in the REPL options,

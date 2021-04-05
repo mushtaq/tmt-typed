@@ -13,9 +13,9 @@ trait `0` extends StObject {
 object `0` {
   
   @scala.inline
-  def apply(`type`: pkcs8): `0` = {
+  def apply(): `0` = {
     val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("pkcs8")
     __obj.asInstanceOf[`0`]
   }
   

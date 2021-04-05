@@ -17,7 +17,10 @@ class DeviceOrientationEvent protected ()
 }
 object DeviceOrientationEvent {
   
-  @JSGlobal("DeviceOrientationEvent.requestPermission")
+  @JSGlobal("DeviceOrientationEvent")
   @js.native
-  def requestPermission(): js.Promise[PermissionState] = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def requestPermission(): js.Promise[PermissionState] = ^.asInstanceOf[js.Dynamic].applyDynamic("requestPermission")().asInstanceOf[js.Promise[PermissionState]]
 }

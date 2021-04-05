@@ -7,20 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object cryptoMod {
   
-  type BinaryLike = java.lang.String | tmttyped.node.NodeJS.ArrayBufferView
-  
-  type CipherKey = tmttyped.node.cryptoMod.BinaryLike | tmttyped.node.cryptoMod.KeyObject
-  
   /** @deprecated since v10.0.0 */
   @scala.inline
   def DEFAULT_ENCODING: tmttyped.node.BufferEncoding = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].selectDynamic("DEFAULT_ENCODING").asInstanceOf[tmttyped.node.BufferEncoding]
-  
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - tmttyped.node.Buffer
-    - tmttyped.node.cryptoMod.KeyObject
-  */
-  type KeyLike = tmttyped.node.cryptoMod._KeyLike | java.lang.String
   
   /** @deprecated since v10.0.0 use `createCipheriv()` */
   @scala.inline
@@ -1189,4 +1178,15 @@ package object cryptoMod {
     key: tmttyped.node.cryptoMod.VerifyPublicKeyInput,
     signature: tmttyped.node.NodeJS.ArrayBufferView
   ): scala.Boolean = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("verify")(algorithm.asInstanceOf[js.Any], data.asInstanceOf[js.Any], key.asInstanceOf[js.Any], signature.asInstanceOf[js.Any])).asInstanceOf[scala.Boolean]
+  
+  type BinaryLike = java.lang.String | tmttyped.node.NodeJS.ArrayBufferView
+  
+  type CipherKey = tmttyped.node.cryptoMod.BinaryLike | tmttyped.node.cryptoMod.KeyObject
+  
+  /* Rewritten from type alias, can be one of: 
+    - java.lang.String
+    - tmttyped.node.Buffer
+    - tmttyped.node.cryptoMod.KeyObject
+  */
+  type KeyLike = tmttyped.node.cryptoMod._KeyLike | java.lang.String
 }

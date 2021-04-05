@@ -94,30 +94,22 @@ object global {
       * @param encoding encoding used for call to buf.fill while initalizing
       */
     /* static member */
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: BufferEncoding): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: java.lang.String): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: java.lang.String, encoding: BufferEncoding): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: Double): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: Double, encoding: BufferEncoding): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: tmttyped.node.Buffer): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.alloc")
-    @js.native
-    def alloc(size: Double, fill: tmttyped.node.Buffer, encoding: BufferEncoding): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def alloc(size: Double): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: java.lang.String): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: java.lang.String, encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: Double): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: Double, encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: tmttyped.node.Buffer): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def alloc(size: Double, fill: tmttyped.node.Buffer, encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("alloc")(size.asInstanceOf[js.Any], fill.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * Allocates a new buffer of {size} octets, leaving memory not initialized, so the contents
@@ -126,9 +118,8 @@ object global {
       * @param size count of octets to allocate
       */
     /* static member */
-    @JSGlobal("Buffer.allocUnsafe")
-    @js.native
-    def allocUnsafe(size: Double): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def allocUnsafe(size: Double): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("allocUnsafe")(size.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * Allocates a new non-pooled buffer of {size} octets, leaving memory not initialized, so the contents
@@ -137,9 +128,8 @@ object global {
       * @param size count of octets to allocate
       */
     /* static member */
-    @JSGlobal("Buffer.allocUnsafeSlow")
-    @js.native
-    def allocUnsafeSlow(size: Double): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def allocUnsafeSlow(size: Double): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("allocUnsafeSlow")(size.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * Gives the actual byte length of a string. encoding defaults to 'utf8'.
@@ -149,38 +139,29 @@ object global {
       * @param encoding encoding used to evaluate (defaults to 'utf8')
       */
     /* static member */
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: java.lang.String): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: java.lang.String, encoding: BufferEncoding): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: ArrayBufferView): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: SharedArrayBuffer): Double = js.native
-    @JSGlobal("Buffer.byteLength")
-    @js.native
-    def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
+    @scala.inline
+    def byteLength(string: java.lang.String): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any]).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: java.lang.String, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: js.typedarray.ArrayBuffer): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any]).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: ArrayBufferView): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any]).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: SharedArrayBuffer): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any]).asInstanceOf[Double]
+    @scala.inline
+    def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("byteLength")(string.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
     
     /**
       * The same as buf1.compare(buf2).
       */
     /* static member */
-    @JSGlobal("Buffer.compare")
-    @js.native
-    def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
+    @scala.inline
+    def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("compare")(buf1.asInstanceOf[js.Any], buf2.asInstanceOf[js.Any])).asInstanceOf[Double]
     
     /**
       * Returns a buffer which is the result of concatenating all the buffers in the list together.
@@ -194,12 +175,10 @@ object global {
       *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
       */
     /* static member */
-    @JSGlobal("Buffer.concat")
-    @js.native
-    def concat(list: js.Array[js.typedarray.Uint8Array]): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.concat")
-    @js.native
-    def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def concat(list: js.Array[js.typedarray.Uint8Array]): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("concat")(list.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("concat")(list.asInstanceOf[js.Any], totalLength.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * When passed a reference to the .buffer property of a TypedArray instance,
@@ -215,53 +194,44 @@ object global {
       * If provided, the {encoding} parameter identifies the character encoding.
       * If not provided, {encoding} defaults to 'utf8'.
       */
-    @JSGlobal("Buffer.from")
-    @js.native
+    @scala.inline
     def from(
       arrayBuffer: WithImplicitCoercion[
           js.Array[Double] | js.typedarray.ArrayBuffer | SharedArrayBuffer | java.lang.String | js.typedarray.Uint8Array
         ]
-    ): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
+    ): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(arrayBuffer.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
     def from(
       arrayBuffer: WithImplicitCoercion[js.typedarray.ArrayBuffer | SharedArrayBuffer],
       byteOffset: js.UndefOr[scala.Nothing],
       length: Double
-    ): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
+    ): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(arrayBuffer.asInstanceOf[js.Any], byteOffset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
     def from(
       arrayBuffer: WithImplicitCoercion[js.typedarray.ArrayBuffer | SharedArrayBuffer],
       byteOffset: Double
-    ): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
+    ): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(arrayBuffer.asInstanceOf[js.Any], byteOffset.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
     def from(
       arrayBuffer: WithImplicitCoercion[js.typedarray.ArrayBuffer | SharedArrayBuffer],
       byteOffset: Double,
       length: Double
-    ): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
-    def from(data: js.Array[Double]): tmttyped.node.Buffer = js.native
+    ): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(arrayBuffer.asInstanceOf[js.Any], byteOffset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def from(data: js.Array[Double]): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(data.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
     /**
       * Creates a new Buffer using the passed {data}
       * @param data data to create a new Buffer
       */
     /* static member */
-    @JSGlobal("Buffer.from")
-    @js.native
-    def from(data: js.typedarray.Uint8Array): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
-    def from(str: WithImplicitCoercion[java.lang.String], encoding: BufferEncoding): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
-    def from(str: ToPrimitive): tmttyped.node.Buffer = js.native
-    @JSGlobal("Buffer.from")
-    @js.native
-    def from(str: ToPrimitive, encoding: BufferEncoding): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def from(data: js.typedarray.Uint8Array): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(data.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def from(str: WithImplicitCoercion[java.lang.String], encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(str.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def from(str: ToPrimitive): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(str.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+    @scala.inline
+    def from(str: ToPrimitive, encoding: BufferEncoding): tmttyped.node.Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(str.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * Returns true if {obj} is a Buffer
@@ -269,9 +239,8 @@ object global {
       * @param obj object to test.
       */
     /* static member */
-    @JSGlobal("Buffer.isBuffer")
-    @js.native
-    def isBuffer(obj: js.Any): /* is node.Buffer */ Boolean = js.native
+    @scala.inline
+    def isBuffer(obj: js.Any): /* is node.Buffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBuffer")(obj.asInstanceOf[js.Any]).asInstanceOf[/* is node.Buffer */ Boolean]
     
     /**
       * Returns true if {encoding} is a valid encoding argument.
@@ -280,18 +249,16 @@ object global {
       * @param encoding string to test.
       */
     /* static member */
-    @JSGlobal("Buffer.isEncoding")
-    @js.native
-    def isEncoding(encoding: java.lang.String): /* is node.BufferEncoding */ Boolean = js.native
+    @scala.inline
+    def isEncoding(encoding: java.lang.String): /* is node.BufferEncoding */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isEncoding")(encoding.asInstanceOf[js.Any]).asInstanceOf[/* is node.BufferEncoding */ Boolean]
     
     /**
       * Creates a new Buffer using the passed {data}
       * @param values to create a new Buffer
       */
     /* static member */
-    @JSGlobal("Buffer.of")
-    @js.native
-    def of(items: Double*): tmttyped.node.Buffer = js.native
+    @scala.inline
+    def of(items: Double*): tmttyped.node.Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("of")(items.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
     
     /**
       * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
@@ -304,17 +271,14 @@ object global {
     def poolSize_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("poolSize")(x.asInstanceOf[js.Any])
   }
   
-  @JSGlobal("clearImmediate")
-  @js.native
-  def clearImmediate(immediateId: Immediate): Unit = js.native
+  @scala.inline
+  def clearImmediate(immediateId: Immediate): Unit = js.Dynamic.global.applyDynamic("clearImmediate")(immediateId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSGlobal("clearInterval")
-  @js.native
-  def clearInterval(intervalId: Timeout): Unit = js.native
+  @scala.inline
+  def clearInterval(intervalId: Timeout): Unit = js.Dynamic.global.applyDynamic("clearInterval")(intervalId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @JSGlobal("clearTimeout")
-  @js.native
-  def clearTimeout(timeoutId: Timeout): Unit = js.native
+  @scala.inline
+  def clearTimeout(timeoutId: Timeout): Unit = js.Dynamic.global.applyDynamic("clearTimeout")(timeoutId.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   object console extends Shortcut {
     
@@ -1003,9 +967,8 @@ object global {
   @scala.inline
   def process_=(x: Process): Unit = js.Dynamic.global.updateDynamic("process")(x.asInstanceOf[js.Any])
   
-  @JSGlobal("queueMicrotask")
-  @js.native
-  def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
+  @scala.inline
+  def queueMicrotask(callback: js.Function0[Unit]): Unit = js.Dynamic.global.applyDynamic("queueMicrotask")(callback.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   @JSGlobal("require")
   @js.native
@@ -1013,23 +976,18 @@ object global {
   @scala.inline
   def require_=(x: NodeRequire): Unit = js.Dynamic.global.updateDynamic("require")(x.asInstanceOf[js.Any])
   
-  @JSGlobal("setImmediate")
-  @js.native
-  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = js.native
+  @scala.inline
+  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = (js.Dynamic.global.applyDynamic("setImmediate")(callback.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Immediate]
   
-  @JSGlobal("setInterval")
-  @js.native
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-  @JSGlobal("setInterval")
-  @js.native
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
+  @scala.inline
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (js.Dynamic.global.applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  @scala.inline
+  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (js.Dynamic.global.applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
   
-  @JSGlobal("setTimeout")
-  @js.native
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-  @JSGlobal("setTimeout")
-  @js.native
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
+  @scala.inline
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (js.Dynamic.global.applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  @scala.inline
+  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (js.Dynamic.global.applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
   
   /*----------------------------------------------*
   *                                               *

@@ -15,9 +15,9 @@ trait AnySrvRecord
 object AnySrvRecord {
   
   @scala.inline
-  def apply(name: String, port: Double, priority: Double, `type`: SRV, weight: Double): AnySrvRecord = {
+  def apply(name: String, port: Double, priority: Double, weight: Double): AnySrvRecord = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("SRV")
     __obj.asInstanceOf[AnySrvRecord]
   }
   

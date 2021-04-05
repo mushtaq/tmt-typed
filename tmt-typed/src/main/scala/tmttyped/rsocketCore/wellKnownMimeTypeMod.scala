@@ -27,6 +27,10 @@ object wellKnownMimeTypeMod {
   /* static members */
   object default {
     
+    @JSImport("rsocket-core/WellKnownMimeType", JSImport.Default)
+    @js.native
+    val ^ : js.Any = js.native
+    
     /**
       * Find the {@link WellKnownMimeType} for the given identifier (as an {@code int}). Valid
       * identifiers are defined to be integers between 0 and 127, inclusive. Identifiers outside of
@@ -41,9 +45,8 @@ object wellKnownMimeTypeMod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_MIME_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @JSImport("rsocket-core/WellKnownMimeType", "default.fromIdentifier")
-    @js.native
-    def fromIdentifier(id: Double): WellKnownMimeType = js.native
+    @scala.inline
+    def fromIdentifier(id: Double): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
     
     /**
       * Find the {@link WellKnownMimeType} for the given {@link String} representation. If the
@@ -53,9 +56,8 @@ object wellKnownMimeTypeMod {
       * @param mimeType the looked up mime type
       * @return the matching {@link WellKnownMimeType}, or {@link #UNPARSEABLE_MIME_TYPE} if none matches
       */
-    @JSImport("rsocket-core/WellKnownMimeType", "default.fromString")
-    @js.native
-    def fromString(mimeType: String): WellKnownMimeType = js.native
+    @scala.inline
+    def fromString(mimeType: String): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(mimeType.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
   }
   
   @JSImport("rsocket-core/WellKnownMimeType", "APPLICATION_AVRO")

@@ -26,9 +26,9 @@ trait LeaseFrame extends Frame {
 object LeaseFrame {
   
   @scala.inline
-  def apply(flags: Double, requestCount: Double, streamId: `0`, ttl: Double, `type`: `0x02`): LeaseFrame = {
-    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], requestCount = requestCount.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+  def apply(flags: Double, requestCount: Double, ttl: Double): LeaseFrame = {
+    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], requestCount = requestCount.asInstanceOf[js.Any], streamId = 0, ttl = ttl.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x02)
     __obj.asInstanceOf[LeaseFrame]
   }
   

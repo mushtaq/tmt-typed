@@ -62,7 +62,7 @@ object MutationRecord {
     target: org.scalajs.dom.raw.Node,
     `type`: MutationRecordType
   ): org.scalajs.dom.raw.MutationRecord = {
-    val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], attributeName = null, attributeNamespace = null, nextSibling = null, oldValue = null, previousSibling = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[org.scalajs.dom.raw.MutationRecord]
   }

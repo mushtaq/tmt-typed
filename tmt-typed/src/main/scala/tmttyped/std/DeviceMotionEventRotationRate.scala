@@ -17,7 +17,7 @@ object DeviceMotionEventRotationRate {
   
   @scala.inline
   def apply(): DeviceMotionEventRotationRate = {
-    val __obj = js.Dynamic.literal()
+    val __obj = js.Dynamic.literal(alpha = null, beta = null, gamma = null)
     __obj.asInstanceOf[DeviceMotionEventRotationRate]
   }
   

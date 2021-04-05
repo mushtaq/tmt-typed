@@ -21,9 +21,9 @@ trait RequestNFrame extends Frame {
 object RequestNFrame {
   
   @scala.inline
-  def apply(flags: Double, requestN: Double, streamId: Double, `type`: `0x08`): RequestNFrame = {
+  def apply(flags: Double, requestN: Double, streamId: Double): RequestNFrame = {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], requestN = requestN.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x08)
     __obj.asInstanceOf[RequestNFrame]
   }
   

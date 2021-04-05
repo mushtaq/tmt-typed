@@ -15,9 +15,9 @@ trait AnyPtrRecord extends AnyRecord {
 object AnyPtrRecord {
   
   @scala.inline
-  def apply(`type`: PTR, value: String): AnyPtrRecord = {
+  def apply(value: String): AnyPtrRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("PTR")
     __obj.asInstanceOf[AnyPtrRecord]
   }
   

@@ -1,7 +1,5 @@
 package tmttyped.node.dnsMod
 
-import tmttyped.node.nodeStrings.A
-import tmttyped.node.nodeStrings.AAAA
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,16 +14,16 @@ trait AnyRecordWithTtl extends StObject
 object AnyRecordWithTtl {
   
   @scala.inline
-  def AnyARecord(address: String, ttl: Double, `type`: A): tmttyped.node.dnsMod.AnyARecord = {
+  def AnyARecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyARecord = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("A")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyARecord]
   }
   
   @scala.inline
-  def AnyAaaaRecord(address: String, ttl: Double, `type`: AAAA): tmttyped.node.dnsMod.AnyAaaaRecord = {
+  def AnyAaaaRecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyAaaaRecord = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")("AAAA")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyAaaaRecord]
   }
 }

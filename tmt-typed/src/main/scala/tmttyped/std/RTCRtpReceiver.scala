@@ -32,7 +32,7 @@ object RTCRtpReceiver {
     getSynchronizationSources: () => js.Array[RTCRtpSynchronizationSource],
     track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack
   ): RTCRtpReceiver = {
-    val __obj = js.Dynamic.literal(getContributingSources = js.Any.fromFunction0(getContributingSources), getParameters = js.Any.fromFunction0(getParameters), getStats = js.Any.fromFunction0(getStats), getSynchronizationSources = js.Any.fromFunction0(getSynchronizationSources), track = track.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(getContributingSources = js.Any.fromFunction0(getContributingSources), getParameters = js.Any.fromFunction0(getParameters), getStats = js.Any.fromFunction0(getStats), getSynchronizationSources = js.Any.fromFunction0(getSynchronizationSources), track = track.asInstanceOf[js.Any], rtcpTransport = null, transport = null)
     __obj.asInstanceOf[RTCRtpReceiver]
   }
   

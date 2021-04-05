@@ -25,9 +25,9 @@ trait RequestChannelFrame extends Frame {
 object RequestChannelFrame {
   
   @scala.inline
-  def apply(flags: Double, requestN: Double, streamId: Double, `type`: `0x07`): RequestChannelFrame = {
+  def apply(flags: Double, requestN: Double, streamId: Double): RequestChannelFrame = {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], requestN = requestN.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x07)
     __obj.asInstanceOf[RequestChannelFrame]
   }
   

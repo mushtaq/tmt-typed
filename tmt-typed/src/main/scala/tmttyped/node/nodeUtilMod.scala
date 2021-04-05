@@ -12,6 +12,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeUtilMod {
   
+  @JSImport("node:util", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:util", "TextDecoder")
   @js.native
   class TextDecoder ()
@@ -26,31 +30,37 @@ object nodeUtilMod {
   class TextEncoder ()
     extends tmttyped.node.utilMod.TextEncoder
   
-  @JSImport("node:util", "callbackify")
-  @js.native
-  def callbackify(fn: js.Function0[js.Promise[Unit]]): js.Function1[/* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
-  def callbackify[T1](fn: js.Function1[/* arg1 */ T1, js.Promise[Unit]]): js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  @scala.inline
+  def callbackify(fn: js.Function0[js.Promise[Unit]]): js.Function1[/* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[/* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit]]
+  @scala.inline
+  def callbackify[T1](fn: js.Function1[/* arg1 */ T1, js.Promise[Unit]]): js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit]]
+  @scala.inline
   def callbackify[T1, T2](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]]): js.Function3[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
     /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+    Unit
+  ]]
+  @scala.inline
   def callbackify[T1, T2, T3](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]]): js.Function4[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
     /* arg3 */ T3, 
     /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+    Unit
+  ]]
+  @scala.inline
   def callbackify[T1, T2, T3, T4](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]]): js.Function5[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
@@ -58,9 +68,15 @@ object nodeUtilMod {
     /* arg4 */ T4, 
     /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+    Unit
+  ]]
+  @scala.inline
   def callbackify[T1, T2, T3, T4, T5](
     fn: js.Function5[
       /* arg1 */ T1, 
@@ -78,9 +94,16 @@ object nodeUtilMod {
     /* arg5 */ T5, 
     /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+    Unit
+  ]]
+  @scala.inline
   def callbackify[T1, T2, T3, T4, T5, T6](
     fn: js.Function6[
       /* arg1 */ T1, 
@@ -100,9 +123,18 @@ object nodeUtilMod {
     /* arg6 */ T6, 
     /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1T2T3T4T5T6TResult[T1, T2, T3, T4, T5, T6, TResult](
     fn: js.Function6[
       /* arg1 */ T1, 
@@ -122,9 +154,18 @@ object nodeUtilMod {
     /* arg6 */ T6, 
     /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1T2T3T4T5TResult[T1, T2, T3, T4, T5, TResult](
     fn: js.Function5[
       /* arg1 */ T1, 
@@ -142,9 +183,17 @@ object nodeUtilMod {
     /* arg5 */ T5, 
     /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1T2T3T4TResult[T1, T2, T3, T4, TResult](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[TResult]]): js.Function5[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
@@ -152,107 +201,114 @@ object nodeUtilMod {
     /* arg4 */ T4, 
     /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1T2T3TResult[T1, T2, T3, TResult](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[TResult]]): js.Function4[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
     /* arg3 */ T3, 
     /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1T2TResult[T1, T2, TResult](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[TResult]]): js.Function3[
     /* arg1 */ T1, 
     /* arg2 */ T2, 
     /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_T1TResult[T1, TResult](fn: js.Function1[/* arg1 */ T1, js.Promise[TResult]]): js.Function2[
     /* arg1 */ T1, 
     /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
-  @JSImport("node:util", "callbackify")
-  @js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[
+    /* arg1 */ T1, 
+    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+    Unit
+  ]]
+  
+  @scala.inline
   def callbackify_TResult[TResult](fn: js.Function0[js.Promise[TResult]]): js.Function1[
     /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
     Unit
-  ] = js.native
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[
+    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+    Unit
+  ]]
   
-  @JSImport("node:util", "debuglog")
-  @js.native
-  def debuglog(key: java.lang.String): js.Function2[/* msg */ java.lang.String, /* repeated */ js.Any, Unit] = js.native
+  @scala.inline
+  def debuglog(key: java.lang.String): js.Function2[/* msg */ java.lang.String, /* repeated */ js.Any, Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("debuglog")(key.asInstanceOf[js.Any]).asInstanceOf[js.Function2[/* msg */ java.lang.String, /* repeated */ js.Any, Unit]]
   
-  @JSImport("node:util", "deprecate")
-  @js.native
-  def deprecate[T /* <: js.Function */](fn: T, message: java.lang.String): T = js.native
-  @JSImport("node:util", "deprecate")
-  @js.native
-  def deprecate[T /* <: js.Function */](fn: T, message: java.lang.String, code: java.lang.String): T = js.native
+  @scala.inline
+  def deprecate[T /* <: js.Function */](fn: T, message: java.lang.String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], message.asInstanceOf[js.Any])).asInstanceOf[T]
+  @scala.inline
+  def deprecate[T /* <: js.Function */](fn: T, message: java.lang.String, code: java.lang.String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], message.asInstanceOf[js.Any], code.asInstanceOf[js.Any])).asInstanceOf[T]
   
-  @JSImport("node:util", "format")
-  @js.native
-  def format(format: js.UndefOr[scala.Nothing], param: js.Any*): java.lang.String = js.native
-  @JSImport("node:util", "format")
-  @js.native
-  def format(format: js.Any, param: js.Any*): java.lang.String = js.native
+  @scala.inline
+  def format(format: js.UndefOr[scala.Nothing], param: js.Any*): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(format.asInstanceOf[js.Any], param.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def format(format: js.Any, param: js.Any*): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(format.asInstanceOf[js.Any], param.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
   
-  @JSImport("node:util", "formatWithOptions")
-  @js.native
-  def formatWithOptions(inspectOptions: InspectOptions, format: js.UndefOr[scala.Nothing], param: js.Any*): java.lang.String = js.native
-  @JSImport("node:util", "formatWithOptions")
-  @js.native
-  def formatWithOptions(inspectOptions: InspectOptions, format: js.Any, param: js.Any*): java.lang.String = js.native
+  @scala.inline
+  def formatWithOptions(inspectOptions: InspectOptions, format: js.UndefOr[scala.Nothing], param: js.Any*): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any], param.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  @scala.inline
+  def formatWithOptions(inspectOptions: InspectOptions, format: js.Any, param: js.Any*): java.lang.String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any], param.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
   
-  @JSImport("node:util", "inherits")
-  @js.native
-  def inherits(constructor: js.Any, superConstructor: js.Any): Unit = js.native
+  @scala.inline
+  def inherits(constructor: js.Any, superConstructor: js.Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inherits")(constructor.asInstanceOf[js.Any], superConstructor.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   object inspect {
     
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, options: InspectOptions): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
+    @scala.inline
+    def apply(`object`: js.Any): java.lang.String = ^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, options: InspectOptions): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
     def apply(
       `object`: js.Any,
       showHidden: js.UndefOr[scala.Nothing],
       depth: js.UndefOr[scala.Nothing],
       color: Boolean
-    ): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Double): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Double, color: Boolean): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Null, color: Boolean): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: Boolean): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: Boolean, depth: js.UndefOr[scala.Nothing], color: Boolean): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: Boolean, depth: Double): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: Boolean, depth: Double, color: Boolean): java.lang.String = js.native
-    @JSImport("node:util", "inspect")
-    @js.native
-    def apply(`object`: js.Any, showHidden: Boolean, depth: Null, color: Boolean): java.lang.String = js.native
+    ): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Double): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Double, color: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: js.UndefOr[scala.Nothing], depth: Null, color: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: Boolean, depth: js.UndefOr[scala.Nothing], color: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: Boolean, depth: Double): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: Boolean, depth: Double, color: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    @scala.inline
+    def apply(`object`: js.Any, showHidden: Boolean, depth: Null, color: Boolean): java.lang.String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+    
     @JSImport("node:util", "inspect")
     @js.native
     val ^ : js.Any = js.native
@@ -313,6 +369,10 @@ object nodeUtilMod {
       @scala.inline
       def module_=(x: java.lang.String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("module")(x.asInstanceOf[js.Any])
       
+      @JSImport("node:util", "inspect.styles.null")
+      @js.native
+      val `null`: java.lang.String = js.native
+      
       @JSImport("node:util", "inspect.styles.number")
       @js.native
       def number: java.lang.String = js.native
@@ -348,115 +408,89 @@ object nodeUtilMod {
       def undefined: java.lang.String = js.native
       @scala.inline
       def undefined_=(x: java.lang.String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("undefined")(x.asInstanceOf[js.Any])
-      
-      @JSImport("node:util", "inspect.styles.null")
-      @js.native
-      val `null`: java.lang.String = js.native
     }
   }
   
   /** @deprecated since v4.0.0 - use `Array.isArray()` instead. */
-  @JSImport("node:util", "isArray")
-  @js.native
-  def isArray(`object`: js.Any): /* is std.Array<any> */ Boolean = js.native
+  @scala.inline
+  def isArray(`object`: js.Any): /* is std.Array<any> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArray")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Array<any> */ Boolean]
   
   /** @deprecated since v4.0.0 - use `typeof value === 'boolean'` instead. */
-  @JSImport("node:util", "isBoolean")
-  @js.native
-  def isBoolean(`object`: js.Any): /* is boolean */ Boolean = js.native
+  @scala.inline
+  def isBoolean(`object`: js.Any): /* is boolean */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBoolean")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is boolean */ Boolean]
   
   /** @deprecated since v4.0.0 - use `Buffer.isBuffer()` instead. */
-  @JSImport("node:util", "isBuffer")
-  @js.native
-  def isBuffer(`object`: js.Any): /* is node.Buffer */ Boolean = js.native
+  @scala.inline
+  def isBuffer(`object`: js.Any): /* is node.Buffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.Buffer */ Boolean]
   
   /** @deprecated since v4.0.0 - use `util.types.isDate()` instead. */
-  @JSImport("node:util", "isDate")
-  @js.native
-  def isDate(`object`: js.Any): /* is std.Date */ Boolean = js.native
+  @scala.inline
+  def isDate(`object`: js.Any): /* is std.Date */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDate")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Date */ Boolean]
   
-  @JSImport("node:util", "isDeepStrictEqual")
-  @js.native
-  def isDeepStrictEqual(val1: js.Any, val2: js.Any): Boolean = js.native
+  @scala.inline
+  def isDeepStrictEqual(val1: js.Any, val2: js.Any): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("isDeepStrictEqual")(val1.asInstanceOf[js.Any], val2.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
   /** @deprecated since v4.0.0 - use `util.types.isNativeError()` instead. */
-  @JSImport("node:util", "isError")
-  @js.native
-  def isError(`object`: js.Any): /* is std.Error */ Boolean = js.native
+  @scala.inline
+  def isError(`object`: js.Any): /* is std.Error */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isError")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Error */ Boolean]
   
   /** @deprecated since v4.0.0 - use `typeof value === 'function'` instead. */
-  @JSImport("node:util", "isFunction")
-  @js.native
-  def isFunction(`object`: js.Any): Boolean = js.native
+  @scala.inline
+  def isFunction(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isFunction")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /** @deprecated since v4.0.0 - use `value === null` instead. */
-  @JSImport("node:util", "isNull")
-  @js.native
-  def isNull(`object`: js.Any): /* is null */ Boolean = js.native
+  @scala.inline
+  def isNull(`object`: js.Any): /* is null */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNull")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is null */ Boolean]
   
   /** @deprecated since v4.0.0 - use `value === null || value === undefined` instead. */
-  @JSImport("node:util", "isNullOrUndefined")
-  @js.native
-  def isNullOrUndefined(`object`: js.Any): Boolean = js.native
+  @scala.inline
+  def isNullOrUndefined(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNullOrUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /** @deprecated since v4.0.0 - use `typeof value === 'number'` instead. */
-  @JSImport("node:util", "isNumber")
-  @js.native
-  def isNumber(`object`: js.Any): /* is number */ Boolean = js.native
+  @scala.inline
+  def isNumber(`object`: js.Any): /* is number */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNumber")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is number */ Boolean]
   
   /** @deprecated since v4.0.0 - use `value !== null && typeof value === 'object'` instead. */
-  @JSImport("node:util", "isObject")
-  @js.native
-  def isObject(`object`: js.Any): Boolean = js.native
+  @scala.inline
+  def isObject(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /** @deprecated since v4.0.0 - use `(typeof value !== 'object' && typeof value !== 'function') || value === null` instead. */
-  @JSImport("node:util", "isPrimitive")
-  @js.native
-  def isPrimitive(`object`: js.Any): Boolean = js.native
+  @scala.inline
+  def isPrimitive(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isPrimitive")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /** @deprecated since v4.0.0 - use `util.types.isRegExp()` instead. */
-  @JSImport("node:util", "isRegExp")
-  @js.native
-  def isRegExp(`object`: js.Any): /* is std.RegExp */ Boolean = js.native
+  @scala.inline
+  def isRegExp(`object`: js.Any): /* is std.RegExp */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRegExp")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.RegExp */ Boolean]
   
   /** @deprecated since v4.0.0 - use `typeof value === 'string'` instead. */
-  @JSImport("node:util", "isString")
-  @js.native
-  def isString(`object`: js.Any): /* is string */ Boolean = js.native
+  @scala.inline
+  def isString(`object`: js.Any): /* is string */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isString")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is string */ Boolean]
   
   /** @deprecated since v4.0.0 - use `typeof value === 'symbol'` instead. */
-  @JSImport("node:util", "isSymbol")
-  @js.native
-  def isSymbol(`object`: js.Any): /* is symbol */ Boolean = js.native
+  @scala.inline
+  def isSymbol(`object`: js.Any): /* is symbol */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSymbol")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is symbol */ Boolean]
   
   /** @deprecated since v4.0.0 - use `value === undefined` instead. */
-  @JSImport("node:util", "isUndefined")
-  @js.native
-  def isUndefined(`object`: js.Any): /* is undefined */ Boolean = js.native
+  @scala.inline
+  def isUndefined(`object`: js.Any): /* is undefined */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is undefined */ Boolean]
   
   /** @deprecated since v0.11.3 - use a third party module instead. */
-  @JSImport("node:util", "log")
-  @js.native
-  def log(string: java.lang.String): Unit = js.native
+  @scala.inline
+  def log(string: java.lang.String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("log")(string.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   object promisify {
     
-    @JSImport("node:util", "promisify")
-    @js.native
-    def apply(fn: js.Function): js.Function = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
-    def apply(fn: js.Function1[/* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], Unit]): js.Function0[js.Promise[Unit]] = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
+    @scala.inline
+    def apply(fn: js.Function): js.Function = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function]
+    @scala.inline
+    def apply(fn: js.Function1[/* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], Unit]): js.Function0[js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function0[js.Promise[Unit]]]
+    @scala.inline
     def apply[T1](
       fn: js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], Unit]
-    ): js.Function1[/* arg1 */ T1, js.Promise[Unit]] = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
-    def apply[TCustom /* <: js.Function */](fn: CustomPromisify[TCustom]): TCustom = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
+    ): js.Function1[/* arg1 */ T1, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[/* arg1 */ T1, js.Promise[Unit]]]
+    @scala.inline
+    def apply[TCustom /* <: js.Function */](fn: CustomPromisify[TCustom]): TCustom = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[TCustom]
+    @scala.inline
     def apply[T1, T2](
       fn: js.Function3[
           /* arg1 */ T1, 
@@ -464,9 +498,8 @@ object nodeUtilMod {
           /* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], 
           Unit
         ]
-    ): js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]] = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
+    ): js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]]]
+    @scala.inline
     def apply[T1, T2, T3](
       fn: js.Function4[
           /* arg1 */ T1, 
@@ -475,9 +508,8 @@ object nodeUtilMod {
           /* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], 
           Unit
         ]
-    ): js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]] = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
+    ): js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]]]
+    @scala.inline
     def apply[T1, T2, T3, T4](
       fn: js.Function5[
           /* arg1 */ T1, 
@@ -487,9 +519,8 @@ object nodeUtilMod {
           /* callback */ js.Function1[/* err */ js.UndefOr[js.Any], Unit], 
           Unit
         ]
-    ): js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]] = js.native
-    @JSImport("node:util", "promisify")
-    @js.native
+    ): js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]]]
+    @scala.inline
     def apply[T1, T2, T3, T4, T5](
       fn: js.Function6[
           /* arg1 */ T1, 
@@ -507,7 +538,18 @@ object nodeUtilMod {
         /* arg4 */ T4, 
         /* arg5 */ T5, 
         js.Promise[Unit]
-      ] = js.native
+      ] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
+        /* arg1 */ T1, 
+        /* arg2 */ T2, 
+        /* arg3 */ T3, 
+        /* arg4 */ T4, 
+        /* arg5 */ T5, 
+        js.Promise[Unit]
+      ]]
+    
+    @JSImport("node:util", "promisify")
+    @js.native
+    val ^ : js.Any = js.native
     
     @JSImport("node:util", "promisify.custom")
     @js.native
@@ -516,166 +558,129 @@ object nodeUtilMod {
   
   object types {
     
-    @JSImport("node:util", "types.isAnyArrayBuffer")
+    @JSImport("node:util", "types")
     @js.native
-    def isAnyArrayBuffer(`object`: js.Any): /* is std.ArrayBufferLike */ Boolean = js.native
+    val ^ : js.Any = js.native
     
-    @JSImport("node:util", "types.isArgumentsObject")
-    @js.native
-    def isArgumentsObject(`object`: js.Any): /* is std.IArguments */ Boolean = js.native
+    @scala.inline
+    def isAnyArrayBuffer(`object`: js.Any): /* is std.ArrayBufferLike */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isAnyArrayBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.ArrayBufferLike */ Boolean]
     
-    @JSImport("node:util", "types.isArrayBuffer")
-    @js.native
-    def isArrayBuffer(`object`: js.Any): /* is std.ArrayBuffer */ Boolean = js.native
+    @scala.inline
+    def isArgumentsObject(`object`: js.Any): /* is std.IArguments */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArgumentsObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.IArguments */ Boolean]
     
-    @JSImport("node:util", "types.isArrayBufferView")
-    @js.native
-    def isArrayBufferView(`object`: js.Any): /* is node.NodeJS.ArrayBufferView */ Boolean = js.native
+    @scala.inline
+    def isArrayBuffer(`object`: js.Any): /* is std.ArrayBuffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArrayBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.ArrayBuffer */ Boolean]
     
-    @JSImport("node:util", "types.isAsyncFunction")
-    @js.native
-    def isAsyncFunction(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isArrayBufferView(`object`: js.Any): /* is node.NodeJS.ArrayBufferView */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArrayBufferView")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.NodeJS.ArrayBufferView */ Boolean]
     
-    @JSImport("node:util", "types.isBigInt64Array")
-    @js.native
-    def isBigInt64Array(value: js.Any): /* is std.BigInt64Array */ Boolean = js.native
+    @scala.inline
+    def isAsyncFunction(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isAsyncFunction")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isBigUint64Array")
-    @js.native
-    def isBigUint64Array(value: js.Any): /* is std.BigUint64Array */ Boolean = js.native
+    @scala.inline
+    def isBigInt64Array(value: js.Any): /* is std.BigInt64Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBigInt64Array")(value.asInstanceOf[js.Any]).asInstanceOf[/* is std.BigInt64Array */ Boolean]
     
-    @JSImport("node:util", "types.isBooleanObject")
-    @js.native
-    def isBooleanObject(`object`: js.Any): /* is std.Boolean */ Boolean = js.native
+    @scala.inline
+    def isBigUint64Array(value: js.Any): /* is std.BigUint64Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBigUint64Array")(value.asInstanceOf[js.Any]).asInstanceOf[/* is std.BigUint64Array */ Boolean]
     
-    @JSImport("node:util", "types.isBoxedPrimitive")
-    @js.native
-    def isBoxedPrimitive(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isBooleanObject(`object`: js.Any): /* is std.Boolean */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBooleanObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Boolean */ Boolean]
     
-    @JSImport("node:util", "types.isDataView")
-    @js.native
-    def isDataView(`object`: js.Any): /* is std.DataView */ Boolean = js.native
+    @scala.inline
+    def isBoxedPrimitive(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBoxedPrimitive")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isDate")
-    @js.native
-    def isDate(`object`: js.Any): /* is std.Date */ Boolean = js.native
+    @scala.inline
+    def isDataView(`object`: js.Any): /* is std.DataView */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDataView")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.DataView */ Boolean]
     
-    @JSImport("node:util", "types.isExternal")
-    @js.native
-    def isExternal(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isDate(`object`: js.Any): /* is std.Date */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDate")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Date */ Boolean]
     
-    @JSImport("node:util", "types.isFloat32Array")
-    @js.native
-    def isFloat32Array(`object`: js.Any): /* is std.Float32Array */ Boolean = js.native
+    @scala.inline
+    def isExternal(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isExternal")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isFloat64Array")
-    @js.native
-    def isFloat64Array(`object`: js.Any): /* is std.Float64Array */ Boolean = js.native
+    @scala.inline
+    def isFloat32Array(`object`: js.Any): /* is std.Float32Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isFloat32Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Float32Array */ Boolean]
     
-    @JSImport("node:util", "types.isGeneratorFunction")
-    @js.native
-    def isGeneratorFunction(`object`: js.Any): /* is std.GeneratorFunction */ Boolean = js.native
+    @scala.inline
+    def isFloat64Array(`object`: js.Any): /* is std.Float64Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isFloat64Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Float64Array */ Boolean]
     
-    @JSImport("node:util", "types.isGeneratorObject")
-    @js.native
-    def isGeneratorObject(`object`: js.Any): /* is std.Generator<unknown, any, unknown> */ Boolean = js.native
+    @scala.inline
+    def isGeneratorFunction(`object`: js.Any): /* is std.GeneratorFunction */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isGeneratorFunction")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.GeneratorFunction */ Boolean]
     
-    @JSImport("node:util", "types.isInt16Array")
-    @js.native
-    def isInt16Array(`object`: js.Any): /* is std.Int16Array */ Boolean = js.native
+    @scala.inline
+    def isGeneratorObject(`object`: js.Any): /* is std.Generator<unknown, any, unknown> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isGeneratorObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Generator<unknown, any, unknown> */ Boolean]
     
-    @JSImport("node:util", "types.isInt32Array")
-    @js.native
-    def isInt32Array(`object`: js.Any): /* is std.Int32Array */ Boolean = js.native
+    @scala.inline
+    def isInt16Array(`object`: js.Any): /* is std.Int16Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isInt16Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Int16Array */ Boolean]
     
-    @JSImport("node:util", "types.isInt8Array")
-    @js.native
-    def isInt8Array(`object`: js.Any): /* is std.Int8Array */ Boolean = js.native
+    @scala.inline
+    def isInt32Array(`object`: js.Any): /* is std.Int32Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isInt32Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Int32Array */ Boolean]
     
-    @JSImport("node:util", "types.isMap")
-    @js.native
-    def isMap[T](`object`: T): Boolean = js.native
-    @JSImport("node:util", "types.isMap")
-    @js.native
-    def isMap[T](`object`: js.Object): Boolean = js.native
+    @scala.inline
+    def isInt8Array(`object`: js.Any): /* is std.Int8Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isInt8Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Int8Array */ Boolean]
     
-    @JSImport("node:util", "types.isMapIterator")
-    @js.native
-    def isMapIterator(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isMap[T](`object`: T): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isMap")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    @scala.inline
+    def isMap[T](`object`: js.Object): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isMap")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isModuleNamespaceObject")
-    @js.native
-    def isModuleNamespaceObject(value: js.Any): Boolean = js.native
+    @scala.inline
+    def isMapIterator(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isMapIterator")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isNativeError")
-    @js.native
-    def isNativeError(`object`: js.Any): /* is std.Error */ Boolean = js.native
+    @scala.inline
+    def isModuleNamespaceObject(value: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isModuleNamespaceObject")(value.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isNumberObject")
-    @js.native
-    def isNumberObject(`object`: js.Any): /* is std.Number */ Boolean = js.native
+    @scala.inline
+    def isNativeError(`object`: js.Any): /* is std.Error */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNativeError")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Error */ Boolean]
     
-    @JSImport("node:util", "types.isPromise")
-    @js.native
-    def isPromise(`object`: js.Any): /* is std.Promise<any> */ Boolean = js.native
+    @scala.inline
+    def isNumberObject(`object`: js.Any): /* is std.Number */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNumberObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Number */ Boolean]
     
-    @JSImport("node:util", "types.isProxy")
-    @js.native
-    def isProxy(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isPromise(`object`: js.Any): /* is std.Promise<any> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isPromise")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Promise<any> */ Boolean]
     
-    @JSImport("node:util", "types.isRegExp")
-    @js.native
-    def isRegExp(`object`: js.Any): /* is std.RegExp */ Boolean = js.native
+    @scala.inline
+    def isProxy(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isProxy")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isSet")
-    @js.native
-    def isSet[T](`object`: T): Boolean = js.native
-    @JSImport("node:util", "types.isSet")
-    @js.native
-    def isSet[T](`object`: js.Object): Boolean = js.native
+    @scala.inline
+    def isRegExp(`object`: js.Any): /* is std.RegExp */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRegExp")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.RegExp */ Boolean]
     
-    @JSImport("node:util", "types.isSetIterator")
-    @js.native
-    def isSetIterator(`object`: js.Any): Boolean = js.native
+    @scala.inline
+    def isSet[T](`object`: T): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSet")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    @scala.inline
+    def isSet[T](`object`: js.Object): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSet")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isSharedArrayBuffer")
-    @js.native
-    def isSharedArrayBuffer(`object`: js.Any): /* is std.SharedArrayBuffer */ Boolean = js.native
+    @scala.inline
+    def isSetIterator(`object`: js.Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSetIterator")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     
-    @JSImport("node:util", "types.isStringObject")
-    @js.native
-    def isStringObject(`object`: js.Any): /* is node.String */ Boolean = js.native
+    @scala.inline
+    def isSharedArrayBuffer(`object`: js.Any): /* is std.SharedArrayBuffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSharedArrayBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.SharedArrayBuffer */ Boolean]
     
-    @JSImport("node:util", "types.isSymbolObject")
-    @js.native
-    def isSymbolObject(`object`: js.Any): /* is std.Symbol */ Boolean = js.native
+    @scala.inline
+    def isStringObject(`object`: js.Any): /* is node.String */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isStringObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.String */ Boolean]
     
-    @JSImport("node:util", "types.isTypedArray")
-    @js.native
-    def isTypedArray(`object`: js.Any): /* is node.NodeJS.TypedArray */ Boolean = js.native
+    @scala.inline
+    def isSymbolObject(`object`: js.Any): /* is std.Symbol */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSymbolObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Symbol */ Boolean]
     
-    @JSImport("node:util", "types.isUint16Array")
-    @js.native
-    def isUint16Array(`object`: js.Any): /* is std.Uint16Array */ Boolean = js.native
+    @scala.inline
+    def isTypedArray(`object`: js.Any): /* is node.NodeJS.TypedArray */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isTypedArray")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.NodeJS.TypedArray */ Boolean]
     
-    @JSImport("node:util", "types.isUint32Array")
-    @js.native
-    def isUint32Array(`object`: js.Any): /* is std.Uint32Array */ Boolean = js.native
+    @scala.inline
+    def isUint16Array(`object`: js.Any): /* is std.Uint16Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUint16Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Uint16Array */ Boolean]
     
-    @JSImport("node:util", "types.isUint8Array")
-    @js.native
-    def isUint8Array(`object`: js.Any): /* is std.Uint8Array */ Boolean = js.native
+    @scala.inline
+    def isUint32Array(`object`: js.Any): /* is std.Uint32Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUint32Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Uint32Array */ Boolean]
     
-    @JSImport("node:util", "types.isUint8ClampedArray")
-    @js.native
-    def isUint8ClampedArray(`object`: js.Any): /* is std.Uint8ClampedArray */ Boolean = js.native
+    @scala.inline
+    def isUint8Array(`object`: js.Any): /* is std.Uint8Array */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUint8Array")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Uint8Array */ Boolean]
     
-    @JSImport("node:util", "types.isWeakMap")
-    @js.native
-    def isWeakMap(`object`: js.Any): /* is std.WeakMap<any, any> */ Boolean = js.native
+    @scala.inline
+    def isUint8ClampedArray(`object`: js.Any): /* is std.Uint8ClampedArray */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUint8ClampedArray")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Uint8ClampedArray */ Boolean]
     
-    @JSImport("node:util", "types.isWeakSet")
-    @js.native
-    def isWeakSet(`object`: js.Any): /* is std.WeakSet<any> */ Boolean = js.native
+    @scala.inline
+    def isWeakMap(`object`: js.Any): /* is std.WeakMap<any, any> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isWeakMap")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.WeakMap<any, any> */ Boolean]
+    
+    @scala.inline
+    def isWeakSet(`object`: js.Any): /* is std.WeakSet<any> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isWeakSet")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.WeakSet<any> */ Boolean]
   }
 }

@@ -29,7 +29,10 @@ class PublicKeyCredential ()
 }
 object PublicKeyCredential {
   
-  @JSGlobal("PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable")
+  @JSGlobal("PublicKeyCredential")
   @js.native
-  def isUserVerifyingPlatformAuthenticatorAvailable(): js.Promise[scala.Boolean] = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def isUserVerifyingPlatformAuthenticatorAvailable(): js.Promise[scala.Boolean] = ^.asInstanceOf[js.Dynamic].applyDynamic("isUserVerifyingPlatformAuthenticatorAvailable")().asInstanceOf[js.Promise[scala.Boolean]]
 }

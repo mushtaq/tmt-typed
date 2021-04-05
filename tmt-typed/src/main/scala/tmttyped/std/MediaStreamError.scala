@@ -17,7 +17,7 @@ object MediaStreamError {
   
   @scala.inline
   def apply(name: java.lang.String): MediaStreamError = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], constraintName = null, message = null)
     __obj.asInstanceOf[MediaStreamError]
   }
   

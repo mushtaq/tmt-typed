@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object http2Mod {
   
-  type ServerOptions = tmttyped.node.http2Mod.ServerSessionOptions
-  
   @scala.inline
   def connect(authority: java.lang.String): tmttyped.node.http2Mod.ClientHttp2Session = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.http2Mod.ClientHttp2Session]
   @scala.inline
@@ -155,4 +153,6 @@ package object http2Mod {
   
   @scala.inline
   def getUnpackedSettings(buf: js.typedarray.Uint8Array): tmttyped.node.http2Mod.Settings = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("getUnpackedSettings")(buf.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.http2Mod.Settings]
+  
+  type ServerOptions = tmttyped.node.http2Mod.ServerSessionOptions
 }

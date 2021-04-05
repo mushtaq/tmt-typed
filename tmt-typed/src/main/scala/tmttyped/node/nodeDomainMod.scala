@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeDomainMod {
   
+  @JSImport("node:domain", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:domain", "Domain")
   @js.native
   class Domain ()
@@ -15,7 +19,6 @@ object nodeDomainMod {
     def this(options: EventEmitterOptions) = this()
   }
   
-  @JSImport("node:domain", "create")
-  @js.native
-  def create(): tmttyped.node.domainMod.Domain = js.native
+  @scala.inline
+  def create(): tmttyped.node.domainMod.Domain = ^.asInstanceOf[js.Dynamic].applyDynamic("create")().asInstanceOf[tmttyped.node.domainMod.Domain]
 }

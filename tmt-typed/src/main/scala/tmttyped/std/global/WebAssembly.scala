@@ -24,6 +24,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object WebAssembly {
   
+  @JSGlobal("WebAssembly")
+  @js.native
+  val ^ : js.Any = js.native
+  
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.CompileError")
   @js.native
@@ -71,17 +75,18 @@ object WebAssembly {
   
   object Module {
     
-    @JSGlobal("WebAssembly.Module.customSections")
+    @JSGlobal("WebAssembly.Module")
     @js.native
-    def customSections(moduleObject: tmttyped.std.WebAssembly.Module, sectionName: java.lang.String): js.Array[js.typedarray.ArrayBuffer] = js.native
+    val ^ : js.Any = js.native
     
-    @JSGlobal("WebAssembly.Module.exports")
-    @js.native
-    def exports(moduleObject: tmttyped.std.WebAssembly.Module): js.Array[ModuleExportDescriptor] = js.native
+    @scala.inline
+    def customSections(moduleObject: tmttyped.std.WebAssembly.Module, sectionName: java.lang.String): js.Array[js.typedarray.ArrayBuffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("customSections")(moduleObject.asInstanceOf[js.Any], sectionName.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.typedarray.ArrayBuffer]]
     
-    @JSGlobal("WebAssembly.Module.imports")
-    @js.native
-    def imports(moduleObject: tmttyped.std.WebAssembly.Module): js.Array[ModuleImportDescriptor] = js.native
+    @scala.inline
+    def exports(moduleObject: tmttyped.std.WebAssembly.Module): js.Array[ModuleExportDescriptor] = ^.asInstanceOf[js.Dynamic].applyDynamic("exports")(moduleObject.asInstanceOf[js.Any]).asInstanceOf[js.Array[ModuleExportDescriptor]]
+    
+    @scala.inline
+    def imports(moduleObject: tmttyped.std.WebAssembly.Module): js.Array[ModuleImportDescriptor] = ^.asInstanceOf[js.Dynamic].applyDynamic("imports")(moduleObject.asInstanceOf[js.Any]).asInstanceOf[js.Array[ModuleImportDescriptor]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -103,44 +108,32 @@ object WebAssembly {
     def this(descriptor: TableDescriptor) = this()
   }
   
-  @JSGlobal("WebAssembly.compile")
-  @js.native
-  def compile(bytes: BufferSource): js.Promise[Module] = js.native
+  @scala.inline
+  def compile(bytes: BufferSource): js.Promise[Module] = ^.asInstanceOf[js.Dynamic].applyDynamic("compile")(bytes.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Module]]
   
-  @JSGlobal("WebAssembly.compileStreaming")
-  @js.native
-  def compileStreaming(source: js.Promise[org.scalajs.dom.experimental.Response]): js.Promise[Module] = js.native
-  @JSGlobal("WebAssembly.compileStreaming")
-  @js.native
-  def compileStreaming(source: org.scalajs.dom.experimental.Response): js.Promise[Module] = js.native
+  @scala.inline
+  def compileStreaming(source: js.Promise[org.scalajs.dom.experimental.Response]): js.Promise[Module] = ^.asInstanceOf[js.Dynamic].applyDynamic("compileStreaming")(source.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Module]]
+  @scala.inline
+  def compileStreaming(source: org.scalajs.dom.experimental.Response): js.Promise[Module] = ^.asInstanceOf[js.Dynamic].applyDynamic("compileStreaming")(source.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Module]]
   
-  @JSGlobal("WebAssembly.instantiate")
-  @js.native
-  def instantiate(bytes: BufferSource): js.Promise[WebAssemblyInstantiatedSource] = js.native
-  @JSGlobal("WebAssembly.instantiate")
-  @js.native
-  def instantiate(bytes: BufferSource, importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = js.native
-  @JSGlobal("WebAssembly.instantiate")
-  @js.native
-  def instantiate(moduleObject: Module): js.Promise[Instance] = js.native
-  @JSGlobal("WebAssembly.instantiate")
-  @js.native
-  def instantiate(moduleObject: Module, importObject: Imports): js.Promise[Instance] = js.native
+  @scala.inline
+  def instantiate(bytes: BufferSource): js.Promise[WebAssemblyInstantiatedSource] = ^.asInstanceOf[js.Dynamic].applyDynamic("instantiate")(bytes.asInstanceOf[js.Any]).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
+  @scala.inline
+  def instantiate(bytes: BufferSource, importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = (^.asInstanceOf[js.Dynamic].applyDynamic("instantiate")(bytes.asInstanceOf[js.Any], importObject.asInstanceOf[js.Any])).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
+  @scala.inline
+  def instantiate(moduleObject: Module): js.Promise[Instance] = ^.asInstanceOf[js.Dynamic].applyDynamic("instantiate")(moduleObject.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Instance]]
+  @scala.inline
+  def instantiate(moduleObject: Module, importObject: Imports): js.Promise[Instance] = (^.asInstanceOf[js.Dynamic].applyDynamic("instantiate")(moduleObject.asInstanceOf[js.Any], importObject.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Instance]]
   
-  @JSGlobal("WebAssembly.instantiateStreaming")
-  @js.native
-  def instantiateStreaming(response: js.Thenable[org.scalajs.dom.experimental.Response]): js.Promise[WebAssemblyInstantiatedSource] = js.native
-  @JSGlobal("WebAssembly.instantiateStreaming")
-  @js.native
-  def instantiateStreaming(response: js.Thenable[org.scalajs.dom.experimental.Response], importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = js.native
-  @JSGlobal("WebAssembly.instantiateStreaming")
-  @js.native
-  def instantiateStreaming(response: org.scalajs.dom.experimental.Response): js.Promise[WebAssemblyInstantiatedSource] = js.native
-  @JSGlobal("WebAssembly.instantiateStreaming")
-  @js.native
-  def instantiateStreaming(response: org.scalajs.dom.experimental.Response, importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = js.native
+  @scala.inline
+  def instantiateStreaming(response: js.Thenable[org.scalajs.dom.experimental.Response]): js.Promise[WebAssemblyInstantiatedSource] = ^.asInstanceOf[js.Dynamic].applyDynamic("instantiateStreaming")(response.asInstanceOf[js.Any]).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
+  @scala.inline
+  def instantiateStreaming(response: js.Thenable[org.scalajs.dom.experimental.Response], importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = (^.asInstanceOf[js.Dynamic].applyDynamic("instantiateStreaming")(response.asInstanceOf[js.Any], importObject.asInstanceOf[js.Any])).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
+  @scala.inline
+  def instantiateStreaming(response: org.scalajs.dom.experimental.Response): js.Promise[WebAssemblyInstantiatedSource] = ^.asInstanceOf[js.Dynamic].applyDynamic("instantiateStreaming")(response.asInstanceOf[js.Any]).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
+  @scala.inline
+  def instantiateStreaming(response: org.scalajs.dom.experimental.Response, importObject: Imports): js.Promise[WebAssemblyInstantiatedSource] = (^.asInstanceOf[js.Dynamic].applyDynamic("instantiateStreaming")(response.asInstanceOf[js.Any], importObject.asInstanceOf[js.Any])).asInstanceOf[js.Promise[WebAssemblyInstantiatedSource]]
   
-  @JSGlobal("WebAssembly.validate")
-  @js.native
-  def validate(bytes: BufferSource): scala.Boolean = js.native
+  @scala.inline
+  def validate(bytes: BufferSource): scala.Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("validate")(bytes.asInstanceOf[js.Any]).asInstanceOf[scala.Boolean]
 }

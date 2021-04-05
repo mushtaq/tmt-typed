@@ -62,10 +62,12 @@ class SVGRect ()
 /* was `typeof DOMRect` */
 object SVGRect {
   
-  @JSGlobal("SVGRect.fromRect")
+  @JSGlobal("SVGRect")
   @js.native
-  def fromRect(): tmttyped.std.DOMRect = js.native
-  @JSGlobal("SVGRect.fromRect")
-  @js.native
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMRect = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def fromRect(): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMRect]
+  @scala.inline
+  def fromRect(other: DOMRectInit): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMRect]
 }

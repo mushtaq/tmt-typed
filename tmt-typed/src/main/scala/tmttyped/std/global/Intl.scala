@@ -29,37 +29,31 @@ object Intl {
   
   object Collator {
     
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(): tmttyped.std.Intl.Collator = js.native
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: CollatorOptions): tmttyped.std.Intl.Collator = js.native
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(locales: java.lang.String): tmttyped.std.Intl.Collator = js.native
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(locales: java.lang.String, options: CollatorOptions): tmttyped.std.Intl.Collator = js.native
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.Collator = js.native
-    @JSGlobal("Intl.Collator")
-    @js.native
-    def apply(locales: js.Array[java.lang.String], options: CollatorOptions): tmttyped.std.Intl.Collator = js.native
+    @scala.inline
+    def apply(): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: js.UndefOr[scala.Nothing], options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: java.lang.String): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: java.lang.String, options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String], options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
     
-    @JSGlobal("Intl.Collator.supportedLocalesOf")
+    @JSGlobal("Intl.Collator")
     @js.native
-    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.Collator.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: java.lang.String, options: CollatorOptions): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.Collator.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.Collator.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String], options: CollatorOptions): js.Array[java.lang.String] = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String, options: CollatorOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String], options: CollatorOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -81,37 +75,31 @@ object Intl {
   
   object DateTimeFormat {
     
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(): tmttyped.std.Intl.DateTimeFormat = js.native
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = js.native
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(locales: java.lang.String): tmttyped.std.Intl.DateTimeFormat = js.native
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(locales: java.lang.String, options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = js.native
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.DateTimeFormat = js.native
-    @JSGlobal("Intl.DateTimeFormat")
-    @js.native
-    def apply(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = js.native
+    @scala.inline
+    def apply(): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: java.lang.String): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: java.lang.String, options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
     
-    @JSGlobal("Intl.DateTimeFormat.supportedLocalesOf")
+    @JSGlobal("Intl.DateTimeFormat")
     @js.native
-    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.DateTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: java.lang.String, options: DateTimeFormatOptions): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.DateTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.DateTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): js.Array[java.lang.String] = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String, options: DateTimeFormatOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -127,37 +115,31 @@ object Intl {
   
   object NumberFormat {
     
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(): tmttyped.std.Intl.NumberFormat = js.native
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = js.native
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(locales: java.lang.String): tmttyped.std.Intl.NumberFormat = js.native
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(locales: java.lang.String, options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = js.native
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.NumberFormat = js.native
-    @JSGlobal("Intl.NumberFormat")
-    @js.native
-    def apply(locales: js.Array[java.lang.String], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = js.native
+    @scala.inline
+    def apply(): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: java.lang.String): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: java.lang.String, options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
     
-    @JSGlobal("Intl.NumberFormat.supportedLocalesOf")
+    @JSGlobal("Intl.NumberFormat")
     @js.native
-    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.NumberFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: java.lang.String, options: NumberFormatOptions): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.NumberFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.NumberFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String], options: NumberFormatOptions): js.Array[java.lang.String] = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String, options: NumberFormatOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String], options: NumberFormatOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -173,37 +155,31 @@ object Intl {
   
   object PluralRules {
     
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(): tmttyped.std.Intl.PluralRules = js.native
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = js.native
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(locales: java.lang.String): tmttyped.std.Intl.PluralRules = js.native
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(locales: java.lang.String, options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = js.native
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.PluralRules = js.native
-    @JSGlobal("Intl.PluralRules")
-    @js.native
-    def apply(locales: js.Array[java.lang.String], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = js.native
+    @scala.inline
+    def apply(): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: java.lang.String): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: java.lang.String, options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: js.Array[java.lang.String], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
     
-    @JSGlobal("Intl.PluralRules.supportedLocalesOf")
+    @JSGlobal("Intl.PluralRules")
     @js.native
-    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.PluralRules.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: java.lang.String, options: PluralRulesOptions): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.PluralRules.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = js.native
-    @JSGlobal("Intl.PluralRules.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[java.lang.String], options: PluralRulesOptions): js.Array[java.lang.String] = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: java.lang.String, options: PluralRulesOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String]): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[java.lang.String]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[java.lang.String], options: PluralRulesOptions): js.Array[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[java.lang.String]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -236,12 +212,14 @@ object Intl {
     */
   object RelativeTimeFormat {
     
-    @JSGlobal("Intl.RelativeTimeFormat.supportedLocalesOf")
+    @JSGlobal("Intl.RelativeTimeFormat")
     @js.native
-    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag]): js.Array[BCP47LanguageTag] = js.native
-    @JSGlobal("Intl.RelativeTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag], options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag]): js.Array[BCP47LanguageTag] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[BCP47LanguageTag]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag], options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[BCP47LanguageTag]]
     /**
       * Returns an array containing those of the provided locales
       * that are supported in date and time formatting
@@ -273,12 +251,10 @@ object Intl {
       *
       * [Specification](https://tc39.es/ecma402/#sec-Intl.RelativeTimeFormat.supportedLocalesOf).
       */
-    @JSGlobal("Intl.RelativeTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: BCP47LanguageTag): js.Array[BCP47LanguageTag] = js.native
-    @JSGlobal("Intl.RelativeTimeFormat.supportedLocalesOf")
-    @js.native
-    def supportedLocalesOf(locales: BCP47LanguageTag, options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = js.native
+    @scala.inline
+    def supportedLocalesOf(locales: BCP47LanguageTag): js.Array[BCP47LanguageTag] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[BCP47LanguageTag]]
+    @scala.inline
+    def supportedLocalesOf(locales: BCP47LanguageTag, options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[BCP47LanguageTag]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */

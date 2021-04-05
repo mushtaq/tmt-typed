@@ -9,12 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeTraceEventsMod {
   
+  @JSImport("node:trace_events", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   /**
     * Creates and returns a Tracing object for the given set of categories.
     */
-  @JSImport("node:trace_events", "createTracing")
-  @js.native
-  def createTracing(options: CreateTracingOptions): Tracing = js.native
+  @scala.inline
+  def createTracing(options: CreateTracingOptions): Tracing = ^.asInstanceOf[js.Dynamic].applyDynamic("createTracing")(options.asInstanceOf[js.Any]).asInstanceOf[Tracing]
   
   /**
     * Returns a comma-separated list of all currently-enabled trace event
@@ -22,7 +25,6 @@ object nodeTraceEventsMod {
     * determined by the union of all currently-enabled `Tracing` objects and
     * any categories enabled using the `--trace-event-categories` flag.
     */
-  @JSImport("node:trace_events", "getEnabledCategories")
-  @js.native
-  def getEnabledCategories(): js.UndefOr[java.lang.String] = js.native
+  @scala.inline
+  def getEnabledCategories(): js.UndefOr[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[java.lang.String]]
 }

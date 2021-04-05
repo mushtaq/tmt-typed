@@ -61,10 +61,12 @@ class DOMRect ()
 }
 object DOMRect {
   
-  @JSGlobal("DOMRect.fromRect")
+  @JSGlobal("DOMRect")
   @js.native
-  def fromRect(): tmttyped.std.DOMRect = js.native
-  @JSGlobal("DOMRect.fromRect")
-  @js.native
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMRect = js.native
+  val ^ : js.Any = js.native
+  
+  @scala.inline
+  def fromRect(): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMRect]
+  @scala.inline
+  def fromRect(other: DOMRectInit): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMRect]
 }

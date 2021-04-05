@@ -23,9 +23,9 @@ trait RequestFnfFrame extends Frame {
 object RequestFnfFrame {
   
   @scala.inline
-  def apply(flags: Double, streamId: Double, `type`: `0x05`): RequestFnfFrame = {
+  def apply(flags: Double, streamId: Double): RequestFnfFrame = {
     val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any], streamId = streamId.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(0x05)
     __obj.asInstanceOf[RequestFnfFrame]
   }
   

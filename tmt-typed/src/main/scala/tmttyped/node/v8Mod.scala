@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object v8Mod {
   
+  @JSImport("v8", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   /**
     * A subclass of `Serializer` that serializes `TypedArray` (in particular `Buffer`) and `DataView` objects as host objects,
     * and only stores the part of their underlying `ArrayBuffers` that they are referring to.
@@ -134,20 +138,17 @@ object v8Mod {
     * Returns an integer representing a "version tag" derived from the V8 version, command line flags and detected CPU features.
     * This is useful for determining whether a vm.Script cachedData buffer is compatible with this instance of V8.
     */
-  @JSImport("v8", "cachedDataVersionTag")
-  @js.native
-  def cachedDataVersionTag(): Double = js.native
+  @scala.inline
+  def cachedDataVersionTag(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("cachedDataVersionTag")().asInstanceOf[Double]
   
   /**
     * Uses a `DefaultDeserializer` with default options to read a JS value from a buffer.
     */
-  @JSImport("v8", "deserialize")
-  @js.native
-  def deserialize(data: TypedArray): js.Any = js.native
+  @scala.inline
+  def deserialize(data: TypedArray): js.Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(data.asInstanceOf[js.Any]).asInstanceOf[js.Any]
   
-  @JSImport("v8", "getHeapCodeStatistics")
-  @js.native
-  def getHeapCodeStatistics(): HeapCodeStatistics = js.native
+  @scala.inline
+  def getHeapCodeStatistics(): HeapCodeStatistics = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapCodeStatistics")().asInstanceOf[HeapCodeStatistics]
   
   /**
     * Generates a snapshot of the current V8 heap and returns a Readable
@@ -157,28 +158,23 @@ object v8Mod {
     * Chrome DevTools. The JSON schema is undocumented and specific to the
     * V8 engine, and may change from one version of V8 to the next.
     */
-  @JSImport("v8", "getHeapSnapshot")
-  @js.native
-  def getHeapSnapshot(): Readable = js.native
+  @scala.inline
+  def getHeapSnapshot(): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSnapshot")().asInstanceOf[Readable]
   
-  @JSImport("v8", "getHeapSpaceStatistics")
-  @js.native
-  def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = js.native
+  @scala.inline
+  def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSpaceStatistics")().asInstanceOf[js.Array[HeapSpaceInfo]]
   
-  @JSImport("v8", "getHeapStatistics")
-  @js.native
-  def getHeapStatistics(): HeapInfo = js.native
+  @scala.inline
+  def getHeapStatistics(): HeapInfo = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapStatistics")().asInstanceOf[HeapInfo]
   
   /**
     * Uses a `DefaultSerializer` to serialize value into a buffer.
     */
-  @JSImport("v8", "serialize")
-  @js.native
-  def serialize(value: js.Any): Buffer = js.native
+  @scala.inline
+  def serialize(value: js.Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("v8", "setFlagsFromString")
-  @js.native
-  def setFlagsFromString(flags: java.lang.String): Unit = js.native
+  @scala.inline
+  def setFlagsFromString(flags: java.lang.String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     *
@@ -189,12 +185,10 @@ object v8Mod {
     * `{thread_id}` will be `0` when `writeHeapSnapshot()` is called from
     * the main Node.js thread or the id of a worker thread.
     */
-  @JSImport("v8", "writeHeapSnapshot")
-  @js.native
-  def writeHeapSnapshot(): java.lang.String = js.native
-  @JSImport("v8", "writeHeapSnapshot")
-  @js.native
-  def writeHeapSnapshot(fileName: java.lang.String): java.lang.String = js.native
+  @scala.inline
+  def writeHeapSnapshot(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[java.lang.String]
+  @scala.inline
+  def writeHeapSnapshot(fileName: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(fileName.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
   // ** Signifies if the --zap_code_space option is enabled or not.  1 == enabled, 0 == disabled. */
   /* Rewritten from type alias, can be one of: 

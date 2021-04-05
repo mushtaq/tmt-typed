@@ -9,41 +9,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object authMetadataMod {
   
-  @JSImport("rsocket-core/AuthMetadata", "decodeAuthMetadata")
+  @JSImport("rsocket-core/AuthMetadata", JSImport.Namespace)
   @js.native
-  def decodeAuthMetadata(metadata: Buffer): AuthMetadata = js.native
+  val ^ : js.Any = js.native
   
-  @JSImport("rsocket-core/AuthMetadata", "decodeSimpleAuthPayload")
-  @js.native
-  def decodeSimpleAuthPayload(authPayload: Buffer): UsernameAndPassword = js.native
+  @scala.inline
+  def decodeAuthMetadata(metadata: Buffer): AuthMetadata = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeAuthMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[AuthMetadata]
   
-  @JSImport("rsocket-core/AuthMetadata", "encodeBearerAuthMetadata")
-  @js.native
-  def encodeBearerAuthMetadata(token: String): Buffer = js.native
-  @JSImport("rsocket-core/AuthMetadata", "encodeBearerAuthMetadata")
-  @js.native
-  def encodeBearerAuthMetadata(token: Buffer): Buffer = js.native
+  @scala.inline
+  def decodeSimpleAuthPayload(authPayload: Buffer): UsernameAndPassword = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeSimpleAuthPayload")(authPayload.asInstanceOf[js.Any]).asInstanceOf[UsernameAndPassword]
   
-  @JSImport("rsocket-core/AuthMetadata", "encodeCustomAuthMetadata")
-  @js.native
-  def encodeCustomAuthMetadata(customAuthType: String, authPayloadBuffer: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeBearerAuthMetadata(token: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeBearerAuthMetadata")(token.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeBearerAuthMetadata(token: Buffer): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeBearerAuthMetadata")(token.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/AuthMetadata", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: String, password: String): Buffer = js.native
-  @JSImport("rsocket-core/AuthMetadata", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: String, password: Buffer): Buffer = js.native
-  @JSImport("rsocket-core/AuthMetadata", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: Buffer, password: String): Buffer = js.native
-  @JSImport("rsocket-core/AuthMetadata", "encodeSimpleAuthMetadata")
-  @js.native
-  def encodeSimpleAuthMetadata(username: Buffer, password: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeCustomAuthMetadata(customAuthType: String, authPayloadBuffer: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeCustomAuthMetadata")(customAuthType.asInstanceOf[js.Any], authPayloadBuffer.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @JSImport("rsocket-core/AuthMetadata", "encodeWellKnownAuthMetadata")
-  @js.native
-  def encodeWellKnownAuthMetadata(authType: default, authPayloadBuffer: Buffer): Buffer = js.native
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: String, password: String): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: String, password: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: Buffer, password: String): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  @scala.inline
+  def encodeSimpleAuthMetadata(username: Buffer, password: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeSimpleAuthMetadata")(username.asInstanceOf[js.Any], password.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  
+  @scala.inline
+  def encodeWellKnownAuthMetadata(authType: default, authPayloadBuffer: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeWellKnownAuthMetadata")(authType.asInstanceOf[js.Any], authPayloadBuffer.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   trait AuthMetadata extends StObject {
     

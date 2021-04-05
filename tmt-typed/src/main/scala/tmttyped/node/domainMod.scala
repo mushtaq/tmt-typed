@@ -3,7 +3,6 @@ package tmttyped.node
 import tmttyped.node.NodeJS.Timer
 import tmttyped.node.eventsMod.EventEmitterOptions
 import tmttyped.node.eventsMod.global.NodeJS.EventEmitter
-import tmttyped.node.nodeEventsMod.^
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,10 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object domainMod {
   
+  @JSImport("domain", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("domain", "Domain")
   @js.native
   class Domain ()
-    extends ^
+    extends tmttyped.node.nodeEventsMod.^
        with tmttyped.node.domainMod.global.NodeJS.Domain {
     def this(options: EventEmitterOptions) = this()
     
@@ -22,12 +25,11 @@ object domainMod {
     
     def exit(): Unit = js.native
     
-    var members: js.Array[^ | Timer] = js.native
+    var members: js.Array[tmttyped.node.nodeEventsMod.^ | Timer] = js.native
   }
   
-  @JSImport("domain", "create")
-  @js.native
-  def create(): Domain = js.native
+  @scala.inline
+  def create(): Domain = ^.asInstanceOf[js.Dynamic].applyDynamic("create")().asInstanceOf[Domain]
   
   object global {
     

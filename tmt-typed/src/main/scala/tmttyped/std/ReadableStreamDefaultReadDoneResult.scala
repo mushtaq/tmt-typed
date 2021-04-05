@@ -16,8 +16,8 @@ trait ReadableStreamDefaultReadDoneResult
 object ReadableStreamDefaultReadDoneResult {
   
   @scala.inline
-  def apply(done: `true`): ReadableStreamDefaultReadDoneResult = {
-    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any])
+  def apply(): ReadableStreamDefaultReadDoneResult = {
+    val __obj = js.Dynamic.literal(done = true)
     __obj.asInstanceOf[ReadableStreamDefaultReadDoneResult]
   }
   

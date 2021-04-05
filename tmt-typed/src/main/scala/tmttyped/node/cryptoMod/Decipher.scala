@@ -20,8 +20,8 @@ class Decipher protected () extends Transform {
   def setAutoPadding(auto_padding: Boolean): this.type = js.native
   
   def update(data: String, input_encoding: js.UndefOr[scala.Nothing], output_encoding: Encoding): String = js.native
-  def update(data: String, input_encoding: BinaryToTextEncoding): Buffer = js.native
-  def update(data: String, input_encoding: BinaryToTextEncoding, output_encoding: Encoding): String = js.native
+  def update(data: String, input_encoding: Encoding): Buffer = js.native
+  def update(data: String, input_encoding: Encoding, output_encoding: Encoding): String = js.native
   def update(data: ArrayBufferView): Buffer = js.native
   def update(data: ArrayBufferView, input_encoding: js.UndefOr[scala.Nothing], output_encoding: Encoding): String = js.native
 }

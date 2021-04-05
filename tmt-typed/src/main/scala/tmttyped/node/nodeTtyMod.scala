@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeTtyMod {
   
+  @JSImport("node:tty", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("node:tty", "ReadStream")
   @js.native
   class ReadStream protected ()
@@ -23,7 +27,6 @@ object nodeTtyMod {
     def this(fd: Double) = this()
   }
   
-  @JSImport("node:tty", "isatty")
-  @js.native
-  def isatty(fd: Double): Boolean = js.native
+  @scala.inline
+  def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
 }

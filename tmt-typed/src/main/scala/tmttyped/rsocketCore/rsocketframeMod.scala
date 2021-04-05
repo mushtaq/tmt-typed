@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object rsocketframeMod {
   
+  @JSImport("rsocket-core/RSocketFrame", JSImport.Namespace)
+  @js.native
+  val ^ : js.Any = js.native
+  
   @JSImport("rsocket-core/RSocketFrame", "CONNECTION_STREAM_ID")
   @js.native
   val CONNECTION_STREAM_ID: /* 0 */ Double = js.native
@@ -303,53 +307,41 @@ object rsocketframeMod {
   @js.native
   val MAX_VERSION: /* 65535 */ Double = js.native
   
-  @JSImport("rsocket-core/RSocketFrame", "createErrorFromFrame")
-  @js.native
-  def createErrorFromFrame(frame: ErrorFrame): ErrorsourceErrorSource = js.native
+  @scala.inline
+  def createErrorFromFrame(frame: ErrorFrame): ErrorsourceErrorSource = ^.asInstanceOf[js.Dynamic].applyDynamic("createErrorFromFrame")(frame.asInstanceOf[js.Any]).asInstanceOf[ErrorsourceErrorSource]
   
-  @JSImport("rsocket-core/RSocketFrame", "getErrorCodeExplanation")
-  @js.native
-  def getErrorCodeExplanation(code: Double): String = js.native
+  @scala.inline
+  def getErrorCodeExplanation(code: Double): String = ^.asInstanceOf[js.Dynamic].applyDynamic("getErrorCodeExplanation")(code.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @JSImport("rsocket-core/RSocketFrame", "getFrameTypeName")
-  @js.native
-  def getFrameTypeName(`type`: Double): String = js.native
+  @scala.inline
+  def getFrameTypeName(`type`: Double): String = ^.asInstanceOf[js.Dynamic].applyDynamic("getFrameTypeName")(`type`.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @JSImport("rsocket-core/RSocketFrame", "isComplete")
-  @js.native
-  def isComplete(flags: Double): Boolean = js.native
+  @scala.inline
+  def isComplete(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isComplete")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isIgnore")
-  @js.native
-  def isIgnore(flags: Double): Boolean = js.native
+  @scala.inline
+  def isIgnore(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIgnore")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isLease")
-  @js.native
-  def isLease(flags: Double): Boolean = js.native
+  @scala.inline
+  def isLease(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isLease")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isMetadata")
-  @js.native
-  def isMetadata(flags: Double): Boolean = js.native
+  @scala.inline
+  def isMetadata(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isMetadata")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isNext")
-  @js.native
-  def isNext(flags: Double): Boolean = js.native
+  @scala.inline
+  def isNext(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNext")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isRespond")
-  @js.native
-  def isRespond(flags: Double): Boolean = js.native
+  @scala.inline
+  def isRespond(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRespond")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isResumeEnable")
-  @js.native
-  def isResumeEnable(flags: Double): Boolean = js.native
+  @scala.inline
+  def isResumeEnable(flags: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isResumeEnable")(flags.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "isResumePositionFrameType")
-  @js.native
-  def isResumePositionFrameType(`type`: Double): Boolean = js.native
+  @scala.inline
+  def isResumePositionFrameType(`type`: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isResumePositionFrameType")(`type`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @JSImport("rsocket-core/RSocketFrame", "printFrame")
-  @js.native
-  def printFrame(frame: Frame): String = js.native
+  @scala.inline
+  def printFrame(frame: Frame): String = ^.asInstanceOf[js.Dynamic].applyDynamic("printFrame")(frame.asInstanceOf[js.Any]).asInstanceOf[String]
   
   trait ErrorSource extends StObject {
     
