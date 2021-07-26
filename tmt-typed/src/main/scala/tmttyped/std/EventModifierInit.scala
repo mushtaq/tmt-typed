@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait EventModifierInit extends UIEventInit {
+trait EventModifierInit
+  extends StObject
+     with UIEventInit {
   
   var altKey: js.UndefOr[scala.Boolean] = js.undefined
   

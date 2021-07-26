@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SafeArray")
 @js.native
 class SafeArray[T] protected ()
-  extends tmttyped.std.SafeArray[T] {
+  extends StObject
+     with tmttyped.std.SafeArray[T] {
   
   /* CompleteClass */
   override var SafeArray_typekey: tmttyped.std.SafeArray[T] = js.native

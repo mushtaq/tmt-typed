@@ -8,7 +8,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DevicePermissionDescriptor extends PermissionDescriptor {
+trait DevicePermissionDescriptor
+  extends StObject
+     with PermissionDescriptor {
   
   var deviceId: js.UndefOr[java.lang.String] = js.undefined
   

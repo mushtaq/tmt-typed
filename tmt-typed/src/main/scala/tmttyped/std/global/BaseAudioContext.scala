@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BaseAudioContext")
 @js.native
 class BaseAudioContext ()
-  extends tmttyped.std.BaseAudioContext
+  extends StObject
+     with tmttyped.std.BaseAudioContext

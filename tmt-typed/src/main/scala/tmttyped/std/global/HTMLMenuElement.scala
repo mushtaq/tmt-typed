@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLMenuElement")
 @js.native
 class HTMLMenuElement ()
-  extends tmttyped.std.HTMLMenuElement {
+  extends StObject
+     with tmttyped.std.HTMLMenuElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

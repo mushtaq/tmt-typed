@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PushSubscriptionOptions")
 @js.native
 class PushSubscriptionOptions ()
-  extends tmttyped.std.PushSubscriptionOptions {
+  extends StObject
+     with tmttyped.std.PushSubscriptionOptions {
   
   /* CompleteClass */
   override val applicationServerKey: js.typedarray.ArrayBuffer | Null = js.native

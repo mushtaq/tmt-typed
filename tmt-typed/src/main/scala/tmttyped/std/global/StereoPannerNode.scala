@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StereoPannerNode")
 @js.native
 class StereoPannerNode protected ()
-  extends tmttyped.std.StereoPannerNode {
+  extends StObject
+     with tmttyped.std.StereoPannerNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: StereoPannerOptions) = this()
 }

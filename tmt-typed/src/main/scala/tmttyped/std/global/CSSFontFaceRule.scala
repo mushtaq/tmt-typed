@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSFontFaceRule")
 @js.native
 class CSSFontFaceRule ()
-  extends tmttyped.std.CSSFontFaceRule {
+  extends StObject
+     with tmttyped.std.CSSFontFaceRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

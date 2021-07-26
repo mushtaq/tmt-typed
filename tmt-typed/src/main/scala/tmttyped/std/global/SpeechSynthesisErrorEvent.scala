@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechSynthesisErrorEvent")
 @js.native
 class SpeechSynthesisErrorEvent protected ()
-  extends tmttyped.std.SpeechSynthesisErrorEvent {
+  extends StObject
+     with tmttyped.std.SpeechSynthesisErrorEvent {
   def this(`type`: java.lang.String, eventInitDict: SpeechSynthesisErrorEventInit) = this()
 }

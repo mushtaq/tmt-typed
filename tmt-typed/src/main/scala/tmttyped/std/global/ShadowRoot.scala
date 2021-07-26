@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ShadowRoot")
 @js.native
 class ShadowRoot ()
-  extends tmttyped.std.ShadowRoot {
+  extends StObject
+     with tmttyped.std.ShadowRoot {
   
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.raw.Element | Null = js.native

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DocumentFragment")
 @js.native
 class DocumentFragment ()
-  extends tmttyped.std.DocumentFragment {
+  extends StObject
+     with tmttyped.std.DocumentFragment {
   
   /**
     * Returns the first element within node's descendants whose ID is elementId.

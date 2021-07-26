@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VTTRegion")
 @js.native
 class VTTRegion ()
-  extends tmttyped.std.VTTRegion {
+  extends StObject
+     with tmttyped.std.VTTRegion {
   
   /* CompleteClass */
   override var id: java.lang.String = js.native

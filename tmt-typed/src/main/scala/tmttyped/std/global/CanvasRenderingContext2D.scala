@@ -13,7 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CanvasRenderingContext2D")
 @js.native
 class CanvasRenderingContext2D ()
-  extends tmttyped.std.CanvasRenderingContext2D {
+  extends StObject
+     with tmttyped.std.CanvasRenderingContext2D {
   
   /* CompleteClass */
   override def clearRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native

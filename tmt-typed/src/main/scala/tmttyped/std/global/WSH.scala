@@ -78,11 +78,11 @@ object WSH {
   @scala.inline
   def GetObject(strPathname: java.lang.String): js.Any = ^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any]).asInstanceOf[js.Any]
   @scala.inline
-  def GetObject(strPathname: java.lang.String, strProgID: js.UndefOr[scala.Nothing], strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
-  @scala.inline
   def GetObject(strPathname: java.lang.String, strProgID: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any])).asInstanceOf[js.Any]
   @scala.inline
   def GetObject(strPathname: java.lang.String, strProgID: java.lang.String, strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  @scala.inline
+  def GetObject(strPathname: java.lang.String, strProgID: Unit, strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
   
   /**
     * Gets/sets the script mode - interactive(true) or batch(false).

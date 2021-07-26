@@ -15,20 +15,18 @@ object nodeReplMod {
   val ^ : js.Any = js.native
   
   /**
-    * Provides a customizable Read-Eval-Print-Loop (REPL).
+    * Instances of `repl.REPLServer` are created using the {@link start} method
+    * or directly using the JavaScript `new` keyword.
     *
-    * Instances of `repl.REPLServer` will accept individual lines of user input, evaluate those
-    * according to a user-defined evaluation function, then output the result. Input and output
-    * may be from `stdin` and `stdout`, respectively, or may be connected to any Node.js `stream`.
+    * ```js
+    * const repl = require('repl');
     *
-    * Instances of `repl.REPLServer` support automatic completion of inputs, simplistic Emacs-style
-    * line editing, multi-line inputs, ANSI-styled output, saving and restoring current REPL session
-    * state, error recovery, and customizable evaluation functions.
+    * const options = { useColors: true };
     *
-    * Instances of `repl.REPLServer` are created using the `repl.start()` method and _should not_
-    * be created directly using the JavaScript `new` keyword.
-    *
-    * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_repl
+    * const firstInstance = repl.start(options);
+    * const secondInstance = new repl.REPLServer(options);
+    * ```
+    * @since v0.1.91
     */
   @JSImport("node:repl", "REPLServer")
   @js.native
@@ -42,8 +40,7 @@ object nodeReplMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  class REPLServer protected ()
-    extends tmttyped.node.replMod.REPLServer
+  class REPLServer protected () extends StObject
   
   /**
     * A flag passed in the REPL options. Evaluates expressions in sloppy mode.
@@ -73,10 +70,17 @@ object nodeReplMod {
   }
   
   /**
-    * Creates and starts a `repl.REPLServer` instance.
+    * The `repl.start()` method creates and starts a {@link REPLServer} instance.
     *
-    * @param options The options for the `REPLServer`. If `options` is a string, then it specifies
-    * the input prompt.
+    * If `options` is a string, then it specifies the input prompt:
+    *
+    * ```js
+    * const repl = require('repl');
+    *
+    * // a Unix style prompt
+    * repl.start('$ ');
+    * ```
+    * @since v0.1.91
     */
   @scala.inline
   def start(): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[tmttyped.node.replMod.REPLServer]

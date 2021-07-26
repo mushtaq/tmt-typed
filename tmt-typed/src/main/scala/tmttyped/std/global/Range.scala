@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Range")
 @js.native
 class Range ()
-  extends tmttyped.std.Range {
+  extends StObject
+     with tmttyped.std.Range {
   
   /**
     * Returns true if range is collapsed, and false otherwise.

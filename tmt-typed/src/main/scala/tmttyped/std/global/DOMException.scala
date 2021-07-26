@@ -9,10 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMException")
 @js.native
 class DOMException ()
-  extends tmttyped.std.DOMException {
+  extends StObject
+     with tmttyped.std.DOMException {
   def this(message: java.lang.String) = this()
-  def this(message: js.UndefOr[scala.Nothing], name: java.lang.String) = this()
   def this(message: java.lang.String, name: java.lang.String) = this()
+  def this(message: Unit, name: java.lang.String) = this()
   
   /* CompleteClass */
   override val ABORT_ERR: Double = js.native

@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TemplateStringsArray
-  extends ReadonlyArray[java.lang.String] {
+  extends StObject
+     with ReadonlyArray[java.lang.String] {
   
   val raw: js.Array[java.lang.String] = js.native
 }

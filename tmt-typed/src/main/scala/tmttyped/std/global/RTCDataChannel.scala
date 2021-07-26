@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCDataChannel")
 @js.native
 class RTCDataChannel ()
-  extends tmttyped.std.RTCDataChannel
+  extends StObject
+     with tmttyped.std.RTCDataChannel

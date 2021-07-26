@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBCursorWithValue")
 @js.native
 class IDBCursorWithValue ()
-  extends tmttyped.std.IDBCursorWithValue
+  extends StObject
+     with tmttyped.std.IDBCursorWithValue

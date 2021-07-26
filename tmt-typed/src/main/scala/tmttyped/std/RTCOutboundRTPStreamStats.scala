@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCOutboundRTPStreamStats extends RTCRTPStreamStats {
+trait RTCOutboundRTPStreamStats
+  extends StObject
+     with RTCRTPStreamStats {
   
   var bytesSent: js.UndefOr[Double] = js.undefined
   

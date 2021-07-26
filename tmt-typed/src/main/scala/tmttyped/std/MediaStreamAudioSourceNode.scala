@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A type of AudioNode which operates as an audio source whose media is received from a MediaStream obtained using the WebRTC or Media Capture and Streams APIs. */
 @js.native
-trait MediaStreamAudioSourceNode extends AudioNode {
+trait MediaStreamAudioSourceNode
+  extends StObject
+     with AudioNode {
   
   val mediaStream: org.scalajs.dom.experimental.mediastream.MediaStream = js.native
 }

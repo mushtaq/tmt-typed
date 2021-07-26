@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XMLHttpRequest")
 @js.native
 class XMLHttpRequest ()
-  extends tmttyped.std.XMLHttpRequest
+  extends StObject
+     with tmttyped.std.XMLHttpRequest
 object XMLHttpRequest {
   
   @JSGlobal("XMLHttpRequest.DONE")

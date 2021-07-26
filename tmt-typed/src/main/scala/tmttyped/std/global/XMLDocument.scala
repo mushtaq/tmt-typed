@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XMLDocument")
 @js.native
 class XMLDocument ()
-  extends tmttyped.std.XMLDocument {
+  extends StObject
+     with tmttyped.std.XMLDocument {
   
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.raw.Element | Null = js.native

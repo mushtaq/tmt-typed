@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("FileList")
 @js.native
 class FileList ()
-  extends tmttyped.std.FileList
+  extends StObject
+     with tmttyped.std.FileList

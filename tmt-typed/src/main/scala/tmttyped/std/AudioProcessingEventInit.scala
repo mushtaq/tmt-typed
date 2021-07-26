@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AudioProcessingEventInit extends EventInit {
+trait AudioProcessingEventInit
+  extends StObject
+     with EventInit {
   
   var inputBuffer: org.scalajs.dom.raw.AudioBuffer
   

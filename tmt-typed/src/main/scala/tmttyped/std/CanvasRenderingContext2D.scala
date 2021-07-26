@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The CanvasRenderingContext2D interface, part of the Canvas API, provides the 2D rendering context for the drawing surface of a <canvas> element. It is used for drawing shapes, text, images, and other objects. */
 @js.native
 trait CanvasRenderingContext2D
-  extends CanvasCompositing
+  extends StObject
+     with CanvasCompositing
      with CanvasDrawImage
      with CanvasDrawPath
      with CanvasFillStrokeStyles

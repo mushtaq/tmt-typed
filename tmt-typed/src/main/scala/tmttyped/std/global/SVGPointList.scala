@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGPointList")
 @js.native
 class SVGPointList ()
-  extends tmttyped.std.SVGPointList
+  extends StObject
+     with tmttyped.std.SVGPointList

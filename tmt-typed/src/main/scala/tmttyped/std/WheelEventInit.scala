@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait WheelEventInit extends MouseEventInit {
+trait WheelEventInit
+  extends StObject
+     with MouseEventInit {
   
   var deltaMode: js.UndefOr[Double] = js.undefined
   

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechRecognitionAlternative")
 @js.native
 class SpeechRecognitionAlternative ()
-  extends tmttyped.std.SpeechRecognitionAlternative {
+  extends StObject
+     with tmttyped.std.SpeechRecognitionAlternative {
   
   /* CompleteClass */
   override val confidence: Double = js.native

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A list of StyleSheet. */
 @js.native
 trait StyleSheetList
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.CSSStyleSheet] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.CSSStyleSheet] {
   
   def item(index: Double): org.scalajs.dom.raw.CSSStyleSheet | Null = js.native
   

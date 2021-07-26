@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLSync")
 @js.native
 class WebGLSync ()
-  extends tmttyped.std.WebGLObject
+  extends StObject
+     with tmttyped.std.WebGLSync

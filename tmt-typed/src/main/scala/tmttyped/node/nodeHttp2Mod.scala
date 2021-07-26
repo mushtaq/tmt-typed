@@ -1,5 +1,6 @@
 package tmttyped.node
 
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.http2Mod.ClientHttp2Session
 import tmttyped.node.http2Mod.ClientSessionOptions
 import tmttyped.node.http2Mod.Http2SecureServer
@@ -27,8 +28,7 @@ object nodeHttp2Mod {
   
   @JSImport("node:http2", "Http2ServerRequest")
   @js.native
-  class Http2ServerRequest protected ()
-    extends tmttyped.node.http2Mod.Http2ServerRequest {
+  class Http2ServerRequest protected () extends StObject {
     def this(
       stream: ServerHttp2Stream,
       headers: IncomingHttpHeaders,
@@ -39,8 +39,7 @@ object nodeHttp2Mod {
   
   @JSImport("node:http2", "Http2ServerResponse")
   @js.native
-  class Http2ServerResponse protected ()
-    extends tmttyped.node.http2Mod.Http2ServerResponse {
+  class Http2ServerResponse protected () extends StObject {
     def this(stream: ServerHttp2Stream) = this()
   }
   
@@ -54,7 +53,7 @@ object nodeHttp2Mod {
   @scala.inline
   def connect(
     authority: java.lang.String,
-    options: js.UndefOr[scala.Nothing],
+    options: Unit,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
@@ -83,7 +82,7 @@ object nodeHttp2Mod {
   @scala.inline
   def connect(
     authority: URL,
-    options: js.UndefOr[scala.Nothing],
+    options: Unit,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
@@ -990,4 +989,8 @@ object nodeHttp2Mod {
   
   @scala.inline
   def getUnpackedSettings(buf: js.typedarray.Uint8Array): Settings = ^.asInstanceOf[js.Dynamic].applyDynamic("getUnpackedSettings")(buf.asInstanceOf[js.Any]).asInstanceOf[Settings]
+  
+  @JSImport("node:http2", "sensitiveHeaders")
+  @js.native
+  val sensitiveHeaders: js.Symbol = js.native
 }

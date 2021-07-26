@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RandomSource")
 @js.native
 class RandomSource ()
-  extends tmttyped.std.RandomSource
+  extends StObject
+     with tmttyped.std.RandomSource

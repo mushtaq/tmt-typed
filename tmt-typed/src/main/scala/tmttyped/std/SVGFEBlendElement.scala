@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <feBlend> element. */
 @js.native
 trait SVGFEBlendElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
   val SVG_FEBLEND_MODE_COLOR: Double = js.native

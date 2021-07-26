@@ -21,13 +21,13 @@ trait AbortController extends StObject {
 object AbortController {
   
   @scala.inline
-  def apply(abort: () => Unit, signal: org.scalajs.dom.experimental.AbortSignal): org.scalajs.dom.experimental.AbortController = {
+  def apply(abort: () => Unit, signal: org.scalajs.dom.experimental.AbortSignal): AbortController = {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction0(abort), signal = signal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.experimental.AbortController]
+    __obj.asInstanceOf[AbortController]
   }
   
   @scala.inline
-  implicit class AbortControllerMutableBuilder[Self <: org.scalajs.dom.experimental.AbortController] (val x: Self) extends AnyVal {
+  implicit class AbortControllerMutableBuilder[Self <: AbortController] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAbort(value: () => Unit): Self = StObject.set(x, "abort", js.Any.fromFunction0(value))

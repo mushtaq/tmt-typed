@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ValidityState")
 @js.native
 class ValidityState ()
-  extends tmttyped.std.ValidityState {
+  extends StObject
+     with tmttyped.std.ValidityState {
   
   /* CompleteClass */
   override val badInput: scala.Boolean = js.native

@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ImageBitmapRenderingContext")
 @js.native
 class ImageBitmapRenderingContext ()
-  extends tmttyped.std.ImageBitmapRenderingContext
+  extends StObject
+     with tmttyped.std.ImageBitmapRenderingContext

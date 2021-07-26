@@ -9,10 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Image")
 @js.native
 class Image ()
-  extends tmttyped.std.HTMLImageElement {
+  extends StObject
+     with tmttyped.std.HTMLImageElement {
   def this(width: Double) = this()
-  def this(width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(width: Double, height: Double) = this()
+  def this(width: Unit, height: Double) = this()
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

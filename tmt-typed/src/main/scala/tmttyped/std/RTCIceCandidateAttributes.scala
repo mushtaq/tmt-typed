@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCIceCandidateAttributes extends RTCStats {
+trait RTCIceCandidateAttributes
+  extends StObject
+     with RTCStats {
   
   var addressSourceUrl: js.UndefOr[java.lang.String] = js.undefined
   

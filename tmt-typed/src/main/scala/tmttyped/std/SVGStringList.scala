@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The SVGStringList defines a list of DOMString objects. */
 @js.native
 trait SVGStringList
-  extends /* index */ NumberDictionary[java.lang.String] {
+  extends StObject
+     with /* index */ NumberDictionary[java.lang.String] {
   
   def appendItem(newItem: java.lang.String): java.lang.String = js.native
   

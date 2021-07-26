@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCIceCandidateDictionary extends RTCIceGatherCandidate {
+trait RTCIceCandidateDictionary
+  extends StObject
+     with RTCIceGatherCandidate {
   
   var foundation: js.UndefOr[java.lang.String] = js.undefined
   

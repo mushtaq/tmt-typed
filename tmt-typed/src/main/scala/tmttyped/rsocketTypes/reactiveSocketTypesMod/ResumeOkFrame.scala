@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ResumeOkFrame extends Frame {
+trait ResumeOkFrame
+  extends StObject
+     with Frame {
   
   var clientPosition: Double
   

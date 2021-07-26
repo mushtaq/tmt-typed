@@ -11,7 +11,7 @@ trait IDBFactory extends StObject {
   
   /**
     * Compares two values as keys. Returns -1 if key1 precedes key2, 1 if key2 precedes key1, and 0 if the keys are equal.
-    * 
+    *
     * Throws a "DataError" DOMException if either input is not a valid key.
     */
   def cmp(first: js.Any, second: js.Any): Double = js.native

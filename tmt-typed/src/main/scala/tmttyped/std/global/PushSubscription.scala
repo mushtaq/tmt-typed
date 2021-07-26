@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PushSubscription")
 @js.native
 class PushSubscription ()
-  extends tmttyped.std.PushSubscription {
+  extends StObject
+     with tmttyped.std.PushSubscription {
   
   /* CompleteClass */
   override val endpoint: java.lang.String = js.native

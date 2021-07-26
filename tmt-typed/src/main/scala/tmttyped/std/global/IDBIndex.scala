@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBIndex")
 @js.native
 class IDBIndex ()
-  extends tmttyped.std.IDBIndex
+  extends StObject
+     with tmttyped.std.IDBIndex

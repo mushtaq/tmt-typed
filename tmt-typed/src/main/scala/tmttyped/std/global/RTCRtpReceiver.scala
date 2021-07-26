@@ -13,7 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCRtpReceiver")
 @js.native
 class RTCRtpReceiver ()
-  extends tmttyped.std.RTCRtpReceiver {
+  extends StObject
+     with tmttyped.std.RTCRtpReceiver {
   
   /* CompleteClass */
   override def getContributingSources(): js.Array[RTCRtpContributingSource] = js.native
@@ -26,9 +27,6 @@ class RTCRtpReceiver ()
   
   /* CompleteClass */
   override def getSynchronizationSources(): js.Array[RTCRtpSynchronizationSource] = js.native
-  
-  /* CompleteClass */
-  override val rtcpTransport: tmttyped.std.RTCDtlsTransport | Null = js.native
   
   /* CompleteClass */
   override val track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack = js.native

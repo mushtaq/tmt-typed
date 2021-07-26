@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PaymentResponse")
 @js.native
 class PaymentResponse ()
-  extends tmttyped.std.PaymentResponse
+  extends StObject
+     with tmttyped.std.PaymentResponse

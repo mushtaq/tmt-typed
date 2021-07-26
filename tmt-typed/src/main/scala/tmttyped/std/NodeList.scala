@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll(). */
 @js.native
 trait NodeList
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.Node] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.Node] {
   
   /**
     * Returns an array of key, value pairs for every entry in the list.

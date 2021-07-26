@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ChannelSplitterOptions extends AudioNodeOptions {
+trait ChannelSplitterOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var numberOfOutputs: js.UndefOr[Double] = js.undefined
 }

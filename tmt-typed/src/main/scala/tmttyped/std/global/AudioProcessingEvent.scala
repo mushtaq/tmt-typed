@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AudioProcessingEvent")
 @js.native
 class AudioProcessingEvent protected ()
-  extends tmttyped.std.AudioProcessingEvent {
+  extends StObject
+     with tmttyped.std.AudioProcessingEvent {
   def this(`type`: java.lang.String, eventInitDict: AudioProcessingEventInit) = this()
 }

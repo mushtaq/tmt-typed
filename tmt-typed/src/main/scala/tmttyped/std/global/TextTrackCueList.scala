@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextTrackCueList")
 @js.native
 class TextTrackCueList ()
-  extends tmttyped.std.TextTrackCueList
+  extends StObject
+     with tmttyped.std.TextTrackCueList

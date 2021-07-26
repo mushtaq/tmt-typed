@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CustomElementRegistry")
 @js.native
 class CustomElementRegistry ()
-  extends tmttyped.std.CustomElementRegistry
+  extends StObject
+     with tmttyped.std.CustomElementRegistry

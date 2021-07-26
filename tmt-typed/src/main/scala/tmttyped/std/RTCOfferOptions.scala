@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCOfferOptions extends RTCOfferAnswerOptions {
+trait RTCOfferOptions
+  extends StObject
+     with RTCOfferAnswerOptions {
   
   var iceRestart: js.UndefOr[scala.Boolean] = js.undefined
   
@@ -16,13 +18,13 @@ trait RTCOfferOptions extends RTCOfferAnswerOptions {
 object RTCOfferOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCOfferOptions = {
+  def apply(): RTCOfferOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCOfferOptions]
+    __obj.asInstanceOf[RTCOfferOptions]
   }
   
   @scala.inline
-  implicit class RTCOfferOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCOfferOptions] (val x: Self) extends AnyVal {
+  implicit class RTCOfferOptionsMutableBuilder[Self <: RTCOfferOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setIceRestart(value: scala.Boolean): Self = StObject.set(x, "iceRestart", value.asInstanceOf[js.Any])

@@ -10,7 +10,9 @@ object singleMod {
   
   @JSImport("rsocket-flowable/Single", JSImport.Default)
   @js.native
-  class default[T] protected () extends Single[T] {
+  class default[T] protected ()
+    extends StObject
+       with Single[T] {
     def this(source: Source[T]) = this()
   }
   /* static members */
@@ -88,9 +90,9 @@ object singleMod {
     def subscribe(partialSubscriber: Partial[IFutureSubscriber[T]]): Unit = js.native
     
     def `then`(): Unit = js.native
-    def `then`(successFn: js.UndefOr[scala.Nothing], errorFn: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
     def `then`(successFn: js.Function1[/* data */ T, Unit]): Unit = js.native
     def `then`(successFn: js.Function1[/* data */ T, Unit], errorFn: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
+    def `then`(successFn: Unit, errorFn: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   }
   
   type Source[T] = js.Function1[/* subject */ IFutureSubject[T], Unit]

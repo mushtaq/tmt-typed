@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAngle")
 @js.native
 class SVGAngle ()
-  extends tmttyped.std.SVGAngle {
+  extends StObject
+     with tmttyped.std.SVGAngle {
   
   /* CompleteClass */
   override val SVG_ANGLETYPE_DEG: Double = js.native

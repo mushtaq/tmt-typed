@@ -28,13 +28,13 @@ trait WebGLContextAttributes extends StObject {
 object WebGLContextAttributes {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.WebGLContextAttributes = {
+  def apply(): WebGLContextAttributes = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.WebGLContextAttributes]
+    __obj.asInstanceOf[WebGLContextAttributes]
   }
   
   @scala.inline
-  implicit class WebGLContextAttributesMutableBuilder[Self <: org.scalajs.dom.raw.WebGLContextAttributes] (val x: Self) extends AnyVal {
+  implicit class WebGLContextAttributesMutableBuilder[Self <: WebGLContextAttributes] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlpha(value: scala.Boolean): Self = StObject.set(x, "alpha", value.asInstanceOf[js.Any])

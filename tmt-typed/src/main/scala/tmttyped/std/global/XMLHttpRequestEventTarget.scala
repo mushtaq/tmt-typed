@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XMLHttpRequestEventTarget")
 @js.native
 class XMLHttpRequestEventTarget ()
-  extends tmttyped.std.XMLHttpRequestEventTarget
+  extends StObject
+     with tmttyped.std.XMLHttpRequestEventTarget

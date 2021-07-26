@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ExecFileOptionsWithBufferEncoding extends ExecFileOptions {
+trait ExecFileOptionsWithBufferEncoding
+  extends StObject
+     with ExecFileOptions {
   
   var encoding: buffer_ | Null
 }

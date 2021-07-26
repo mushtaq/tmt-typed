@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StaticRange")
 @js.native
 class StaticRange protected ()
-  extends tmttyped.std.AbstractRange {
+  extends StObject
+     with tmttyped.std.AbstractRange {
   def this(init: StaticRangeInit) = this()
   
   /**

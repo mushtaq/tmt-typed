@@ -32,8 +32,6 @@ trait DocumentEvent extends StObject {
   @JSName("createEvent")
   def createEvent_CustomEvent(eventInterface: tmttyped.std.stdStrings.CustomEvent): org.scalajs.dom.raw.CustomEvent = js.native
   @JSName("createEvent")
-  def createEvent_DeviceLightEvent(eventInterface: tmttyped.std.stdStrings.DeviceLightEvent): DeviceLightEvent = js.native
-  @JSName("createEvent")
   def createEvent_DeviceMotionEvent(eventInterface: tmttyped.std.stdStrings.DeviceMotionEvent): org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent = js.native
   @JSName("createEvent")
   def createEvent_DeviceOrientationEvent(eventInterface: tmttyped.std.stdStrings.DeviceOrientationEvent): org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent = js.native
@@ -62,14 +60,6 @@ trait DocumentEvent extends StObject {
   @JSName("createEvent")
   def createEvent_ListeningStateChangedEvent(eventInterface: tmttyped.std.stdStrings.ListeningStateChangedEvent): ListeningStateChangedEvent = js.native
   @JSName("createEvent")
-  def createEvent_MSGestureEvent(eventInterface: tmttyped.std.stdStrings.MSGestureEvent): MSGestureEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSMediaKeyMessageEvent(eventInterface: tmttyped.std.stdStrings.MSMediaKeyMessageEvent): MSMediaKeyMessageEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSMediaKeyNeededEvent(eventInterface: tmttyped.std.stdStrings.MSMediaKeyNeededEvent): MSMediaKeyNeededEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSPointerEvent(eventInterface: tmttyped.std.stdStrings.MSPointerEvent): MSPointerEvent = js.native
-  @JSName("createEvent")
   def createEvent_MediaEncryptedEvent(eventInterface: tmttyped.std.stdStrings.MediaEncryptedEvent): MediaEncryptedEvent = js.native
   @JSName("createEvent")
   def createEvent_MediaKeyMessageEvent(eventInterface: tmttyped.std.stdStrings.MediaKeyMessageEvent): MediaKeyMessageEvent = js.native
@@ -97,6 +87,8 @@ trait DocumentEvent extends StObject {
   def createEvent_OverflowEvent(eventInterface: tmttyped.std.stdStrings.OverflowEvent): OverflowEvent = js.native
   @JSName("createEvent")
   def createEvent_PageTransitionEvent(eventInterface: tmttyped.std.stdStrings.PageTransitionEvent): PageTransitionEvent = js.native
+  @JSName("createEvent")
+  def createEvent_PaymentMethodChangeEvent(eventInterface: tmttyped.std.stdStrings.PaymentMethodChangeEvent): PaymentMethodChangeEvent = js.native
   @JSName("createEvent")
   def createEvent_PaymentRequestUpdateEvent(eventInterface: tmttyped.std.stdStrings.PaymentRequestUpdateEvent): PaymentRequestUpdateEvent = js.native
   @JSName("createEvent")
@@ -130,8 +122,6 @@ trait DocumentEvent extends StObject {
   @JSName("createEvent")
   def createEvent_RTCSsrcConflictEvent(eventInterface: tmttyped.std.stdStrings.RTCSsrcConflictEvent): RTCSsrcConflictEvent = js.native
   @JSName("createEvent")
-  def createEvent_RTCStatsEvent(eventInterface: tmttyped.std.stdStrings.RTCStatsEvent): RTCStatsEvent = js.native
-  @JSName("createEvent")
   def createEvent_RTCTrackEvent(eventInterface: tmttyped.std.stdStrings.RTCTrackEvent): RTCTrackEvent = js.native
   @JSName("createEvent")
   def createEvent_SVGZoomEvent(eventInterface: tmttyped.std.stdStrings.SVGZoomEvent): SVGZoomEvent = js.native
@@ -139,8 +129,6 @@ trait DocumentEvent extends StObject {
   def createEvent_SVGZoomEvents(eventInterface: SVGZoomEvents): SVGZoomEvent = js.native
   @JSName("createEvent")
   def createEvent_SecurityPolicyViolationEvent(eventInterface: tmttyped.std.stdStrings.SecurityPolicyViolationEvent): SecurityPolicyViolationEvent = js.native
-  @JSName("createEvent")
-  def createEvent_ServiceWorkerMessageEvent(eventInterface: tmttyped.std.stdStrings.ServiceWorkerMessageEvent): ServiceWorkerMessageEvent = js.native
   @JSName("createEvent")
   def createEvent_SpeechRecognitionErrorEvent(eventInterface: tmttyped.std.stdStrings.SpeechRecognitionErrorEvent): SpeechRecognitionErrorEvent = js.native
   @JSName("createEvent")

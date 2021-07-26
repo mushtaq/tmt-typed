@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLMarqueeElement")
 @js.native
 class HTMLMarqueeElement ()
-  extends tmttyped.std.HTMLMarqueeElement {
+  extends StObject
+     with tmttyped.std.HTMLMarqueeElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

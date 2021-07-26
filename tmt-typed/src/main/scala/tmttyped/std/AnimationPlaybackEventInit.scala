@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AnimationPlaybackEventInit extends EventInit {
+trait AnimationPlaybackEventInit
+  extends StObject
+     with EventInit {
   
   var currentTime: js.UndefOr[Double | Null] = js.undefined
   

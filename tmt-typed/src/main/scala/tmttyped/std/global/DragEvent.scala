@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DragEvent")
 @js.native
 class DragEvent protected ()
-  extends tmttyped.std.DragEvent {
+  extends StObject
+     with tmttyped.std.DragEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: DragEventInit) = this()
 }

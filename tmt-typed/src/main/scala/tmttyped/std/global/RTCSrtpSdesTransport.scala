@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCSrtpSdesTransport")
 @js.native
 class RTCSrtpSdesTransport protected ()
-  extends tmttyped.std.RTCSrtpSdesTransport {
+  extends StObject
+     with tmttyped.std.RTCSrtpSdesTransport {
   def this(
     transport: tmttyped.std.RTCIceTransport,
     encryptParameters: RTCSrtpSdesParameters,

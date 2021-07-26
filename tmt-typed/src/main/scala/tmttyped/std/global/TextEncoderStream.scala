@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextEncoderStream")
 @js.native
 class TextEncoderStream ()
-  extends tmttyped.std.TextEncoderStream {
+  extends StObject
+     with tmttyped.std.TextEncoderStream {
   
   /**
     * Returns "utf-8".
@@ -18,13 +19,13 @@ class TextEncoderStream ()
   override val encoding: java.lang.String = js.native
   
   /* CompleteClass */
-  override val readable: org.scalajs.dom.experimental.ReadableStream[_] = js.native
+  override val readable: org.scalajs.dom.experimental.ReadableStream[js.Any] = js.native
   /* CompleteClass */
   @JSName("readable")
   override val readable_TextEncoderStream: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] = js.native
   
   /* CompleteClass */
-  override val writable: tmttyped.std.WritableStream[_] = js.native
+  override val writable: tmttyped.std.WritableStream[js.Any] = js.native
   /* CompleteClass */
   @JSName("writable")
   override val writable_TextEncoderStream: tmttyped.std.WritableStream[java.lang.String] = js.native

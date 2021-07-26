@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLFormControlsCollection")
 @js.native
 class HTMLFormControlsCollection ()
-  extends tmttyped.std.HTMLFormControlsCollection
+  extends StObject
+     with tmttyped.std.HTMLFormControlsCollection

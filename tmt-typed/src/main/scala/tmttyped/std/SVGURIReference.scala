@@ -12,13 +12,13 @@ trait SVGURIReference extends StObject {
 object SVGURIReference {
   
   @scala.inline
-  def apply(href: org.scalajs.dom.raw.SVGAnimatedString): org.scalajs.dom.raw.SVGURIReference = {
+  def apply(href: org.scalajs.dom.raw.SVGAnimatedString): SVGURIReference = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGURIReference]
+    __obj.asInstanceOf[SVGURIReference]
   }
   
   @scala.inline
-  implicit class SVGURIReferenceMutableBuilder[Self <: org.scalajs.dom.raw.SVGURIReference] (val x: Self) extends AnyVal {
+  implicit class SVGURIReferenceMutableBuilder[Self <: SVGURIReference] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setHref(value: org.scalajs.dom.raw.SVGAnimatedString): Self = StObject.set(x, "href", value.asInstanceOf[js.Any])

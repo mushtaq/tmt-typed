@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Screen")
 @js.native
-class Screen_ () extends Screen {
+class Screen_ ()
+  extends StObject
+     with Screen {
   
   /* CompleteClass */
   override val availHeight: Double = js.native

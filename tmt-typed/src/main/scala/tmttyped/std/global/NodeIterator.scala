@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("NodeIterator")
 @js.native
 class NodeIterator ()
-  extends tmttyped.std.NodeIterator {
+  extends StObject
+     with tmttyped.std.NodeIterator {
   
   /* CompleteClass */
   override def detach(): Unit = js.native

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VRPose")
 @js.native
 class VRPose ()
-  extends tmttyped.std.VRPose {
+  extends StObject
+     with tmttyped.std.VRPose {
   
   /* CompleteClass */
   override val angularAcceleration: js.typedarray.Float32Array | Null = js.native
@@ -28,7 +29,4 @@ class VRPose ()
   
   /* CompleteClass */
   override val position: js.typedarray.Float32Array | Null = js.native
-  
-  /* CompleteClass */
-  override val timestamp: Double = js.native
 }

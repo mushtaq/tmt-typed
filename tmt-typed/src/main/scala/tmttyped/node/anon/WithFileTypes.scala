@@ -1,6 +1,6 @@
 package tmttyped.node.anon
 
-import tmttyped.node.BufferEncoding
+import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.nodeBooleans.`false`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js

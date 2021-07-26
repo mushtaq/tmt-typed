@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGUnitTypes")
 @js.native
 class SVGUnitTypes ()
-  extends tmttyped.std.SVGUnitTypes {
+  extends StObject
+     with tmttyped.std.SVGUnitTypes {
   
   /* CompleteClass */
   override val SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: Double = js.native

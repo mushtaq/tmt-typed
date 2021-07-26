@@ -38,13 +38,13 @@ object NavigatorID {
     userAgent: java.lang.String,
     vendor: java.lang.String,
     vendorSub: java.lang.String
-  ): org.scalajs.dom.raw.NavigatorID = {
+  ): NavigatorID = {
     val __obj = js.Dynamic.literal(appCodeName = appCodeName.asInstanceOf[js.Any], appName = appName.asInstanceOf[js.Any], appVersion = appVersion.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], product = product.asInstanceOf[js.Any], productSub = productSub.asInstanceOf[js.Any], userAgent = userAgent.asInstanceOf[js.Any], vendor = vendor.asInstanceOf[js.Any], vendorSub = vendorSub.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.NavigatorID]
+    __obj.asInstanceOf[NavigatorID]
   }
   
   @scala.inline
-  implicit class NavigatorIDMutableBuilder[Self <: org.scalajs.dom.raw.NavigatorID] (val x: Self) extends AnyVal {
+  implicit class NavigatorIDMutableBuilder[Self <: NavigatorID] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAppCodeName(value: java.lang.String): Self = StObject.set(x, "appCodeName", value.asInstanceOf[js.Any])

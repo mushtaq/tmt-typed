@@ -1,6 +1,7 @@
 package tmttyped.node.anon
 
 import tmttyped.node.nodeStrings.buffer_
+import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.processMod.global.NodeJS.ProcessEnv
 import tmttyped.node.processMod.global.NodeJS.Signals
 import org.scalablytyped.runtime.StObject
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined {  encoding :'buffer' | null} & node.child_process.ExecOptions */
 trait encodingbuffernullExecOpt extends StObject {
   
-  var cwd: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String | URL] = js.undefined
   
   var encoding: buffer_ | Null
   
@@ -49,7 +50,7 @@ object encodingbuffernullExecOpt {
   implicit class encodingbuffernullExecOptMutableBuilder[Self <: encodingbuffernullExecOpt] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCwd(value: String): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
+    def setCwd(value: String | URL): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCwdUndefined: Self = StObject.set(x, "cwd", js.undefined)

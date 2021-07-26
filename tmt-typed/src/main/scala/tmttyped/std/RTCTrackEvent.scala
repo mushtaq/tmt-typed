@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RTCTrackEvent extends Event {
+trait RTCTrackEvent
+  extends StObject
+     with Event {
   
   val receiver: RTCRtpReceiver = js.native
   

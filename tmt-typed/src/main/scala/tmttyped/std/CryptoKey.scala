@@ -24,14 +24,14 @@ object CryptoKey {
     extractable: scala.Boolean,
     `type`: org.scalajs.dom.crypto.KeyType,
     usages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): org.scalajs.dom.crypto.CryptoKey = {
+  ): CryptoKey = {
     val __obj = js.Dynamic.literal(algorithm = algorithm.asInstanceOf[js.Any], extractable = extractable.asInstanceOf[js.Any], usages = usages.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.CryptoKey]
+    __obj.asInstanceOf[CryptoKey]
   }
   
   @scala.inline
-  implicit class CryptoKeyMutableBuilder[Self <: org.scalajs.dom.crypto.CryptoKey] (val x: Self) extends AnyVal {
+  implicit class CryptoKeyMutableBuilder[Self <: CryptoKey] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlgorithm(value: org.scalajs.dom.crypto.KeyAlgorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])

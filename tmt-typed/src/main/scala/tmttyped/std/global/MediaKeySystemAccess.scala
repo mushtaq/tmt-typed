@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaKeySystemAccess")
 @js.native
 class MediaKeySystemAccess ()
-  extends tmttyped.std.MediaKeySystemAccess {
+  extends StObject
+     with tmttyped.std.MediaKeySystemAccess {
   
   /* CompleteClass */
   override def createMediaKeys(): js.Promise[tmttyped.std.MediaKeys] = js.native

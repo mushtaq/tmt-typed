@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DeviceMotionEvent")
 @js.native
 class DeviceMotionEvent protected ()
-  extends tmttyped.std.DeviceMotionEvent {
+  extends StObject
+     with tmttyped.std.DeviceMotionEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: DeviceMotionEventInit) = this()
 }

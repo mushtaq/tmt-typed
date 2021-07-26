@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** An audio-processing graph built from audio modules linked together, each represented by an AudioNode. */
 @js.native
-trait AudioContext extends BaseAudioContext {
+trait AudioContext
+  extends StObject
+     with BaseAudioContext {
   
   val baseLatency: Double = js.native
   

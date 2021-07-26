@@ -9,14 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ArrayConstructor
-  extends Instantiable0[js.Array[js.Any]]
+  extends StObject
+     with Instantiable0[js.Array[js.Any]]
      with Instantiable1[
       (/* arrayLength */ Double) | (/* items (repeated) */ js.Object), 
       js.Array[js.Any | js.Object]
     ] {
   
-  def apply(): js.Array[_] = js.native
-  def apply(arrayLength: Double): js.Array[_] = js.native
+  def apply(): js.Array[js.Any] = js.native
+  def apply(arrayLength: Double): js.Array[js.Any] = js.native
   def apply[T](items: T*): js.Array[T] = js.native
   
   /**

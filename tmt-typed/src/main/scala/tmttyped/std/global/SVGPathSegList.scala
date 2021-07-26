@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGPathSegList")
 @js.native
 class SVGPathSegList ()
-  extends tmttyped.std.SVGPathSegList {
+  extends StObject
+     with tmttyped.std.SVGPathSegList {
   
   /* CompleteClass */
   override def appendItem(newItem: org.scalajs.dom.raw.SVGPathSeg): org.scalajs.dom.raw.SVGPathSeg = js.native

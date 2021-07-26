@@ -29,13 +29,13 @@ object PushSubscription {
     options: org.scalajs.dom.experimental.push.PushSubscriptionOptions,
     toJSON: () => org.scalajs.dom.experimental.push.PushSubscriptionJSON,
     unsubscribe: () => js.Promise[scala.Boolean]
-  ): org.scalajs.dom.experimental.push.PushSubscription = {
+  ): PushSubscription = {
     val __obj = js.Dynamic.literal(endpoint = endpoint.asInstanceOf[js.Any], getKey = js.Any.fromFunction1(getKey), options = options.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), unsubscribe = js.Any.fromFunction0(unsubscribe), expirationTime = null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscription]
+    __obj.asInstanceOf[PushSubscription]
   }
   
   @scala.inline
-  implicit class PushSubscriptionMutableBuilder[Self <: org.scalajs.dom.experimental.push.PushSubscription] (val x: Self) extends AnyVal {
+  implicit class PushSubscriptionMutableBuilder[Self <: PushSubscription] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setEndpoint(value: java.lang.String): Self = StObject.set(x, "endpoint", value.asInstanceOf[js.Any])

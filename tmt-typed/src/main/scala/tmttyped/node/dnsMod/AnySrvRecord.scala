@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AnySrvRecord
-  extends SrvRecord
+  extends StObject
+     with SrvRecord
      with AnyRecord {
   
   var `type`: SRV

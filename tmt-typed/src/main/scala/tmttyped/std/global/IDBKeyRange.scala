@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBKeyRange")
 @js.native
 class IDBKeyRange ()
-  extends tmttyped.std.IDBKeyRange {
+  extends StObject
+     with tmttyped.std.IDBKeyRange {
   
   /**
     * Returns true if key is included in the range, and false otherwise.
@@ -53,11 +54,11 @@ object IDBKeyRange {
   @scala.inline
   def bound(lower: js.Any, upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   @scala.inline
-  def bound(lower: js.Any, upper: js.Any, lowerOpen: js.UndefOr[scala.Nothing], upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any], upperOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
-  @scala.inline
   def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   @scala.inline
   def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean, upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any], upperOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+  @scala.inline
+  def bound(lower: js.Any, upper: js.Any, lowerOpen: Unit, upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = (^.asInstanceOf[js.Dynamic].applyDynamic("bound")(lower.asInstanceOf[js.Any], upper.asInstanceOf[js.Any], lowerOpen.asInstanceOf[js.Any], upperOpen.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
   
   /**
     * Returns a new IDBKeyRange starting at key with no upper bound. If open is true, key is not included in the range.

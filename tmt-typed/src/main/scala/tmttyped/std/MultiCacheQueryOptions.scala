@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MultiCacheQueryOptions extends CacheQueryOptions {
+trait MultiCacheQueryOptions
+  extends StObject
+     with CacheQueryOptions {
   
   var cacheName: js.UndefOr[java.lang.String] = js.undefined
 }

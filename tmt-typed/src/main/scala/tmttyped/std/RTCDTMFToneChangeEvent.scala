@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events sent to indicate that DTMF tones have started or finished playing. This interface is used by the tonechange event. */
 @js.native
-trait RTCDTMFToneChangeEvent extends Event {
+trait RTCDTMFToneChangeEvent
+  extends StObject
+     with Event {
   
   val tone: java.lang.String = js.native
 }

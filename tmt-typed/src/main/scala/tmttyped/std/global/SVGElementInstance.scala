@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGElementInstance")
 @js.native
 class SVGElementInstance ()
-  extends tmttyped.std.SVGElementInstance
+  extends StObject
+     with tmttyped.std.SVGElementInstance

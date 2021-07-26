@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGNumber")
 @js.native
 class SVGNumber ()
-  extends tmttyped.std.SVGNumber {
+  extends StObject
+     with tmttyped.std.SVGNumber {
   
   /* CompleteClass */
   override var value: Double = js.native

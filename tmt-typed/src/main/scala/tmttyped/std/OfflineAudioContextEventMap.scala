@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait OfflineAudioContextEventMap extends BaseAudioContextEventMap {
+trait OfflineAudioContextEventMap
+  extends StObject
+     with BaseAudioContextEventMap {
   
   var complete: org.scalajs.dom.raw.OfflineAudioCompletionEvent
 }

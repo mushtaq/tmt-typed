@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaStream")
 @js.native
 class MediaStream ()
-  extends tmttyped.std.MediaStream {
+  extends StObject
+     with tmttyped.std.MediaStream {
   def this(stream: org.scalajs.dom.experimental.mediastream.MediaStream) = this()
   def this(tracks: js.Array[org.scalajs.dom.experimental.mediastream.MediaStreamTrack]) = this()
 }

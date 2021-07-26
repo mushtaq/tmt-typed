@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AuthenticatorAttestationResponse extends AuthenticatorResponse {
+trait AuthenticatorAttestationResponse
+  extends StObject
+     with AuthenticatorResponse {
   
   val attestationObject: js.typedarray.ArrayBuffer
 }

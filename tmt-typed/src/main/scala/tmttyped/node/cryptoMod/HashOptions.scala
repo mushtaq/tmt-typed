@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait HashOptions extends TransformOptions {
+trait HashOptions
+  extends StObject
+     with TransformOptions {
   
   /**
     * For XOF hash functions such as `shake256`, the

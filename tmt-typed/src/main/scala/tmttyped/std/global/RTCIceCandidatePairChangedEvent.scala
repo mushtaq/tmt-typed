@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIceCandidatePairChangedEvent")
 @js.native
 class RTCIceCandidatePairChangedEvent ()
-  extends tmttyped.std.RTCIceCandidatePairChangedEvent
+  extends StObject
+     with tmttyped.std.RTCIceCandidatePairChangedEvent

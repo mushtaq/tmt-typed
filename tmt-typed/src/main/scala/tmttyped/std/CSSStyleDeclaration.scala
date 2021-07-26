@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** An object that is a CSS declaration block, and exposes style information and various style-related methods and properties. */
 @js.native
 trait CSSStyleDeclaration
-  extends /* index */ NumberDictionary[java.lang.String] {
+  extends StObject
+     with /* index */ NumberDictionary[java.lang.String] {
   
   var alignContent: java.lang.String = js.native
   

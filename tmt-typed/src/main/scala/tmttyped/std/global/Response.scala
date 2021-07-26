@@ -12,10 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Response")
 @js.native
 class Response ()
-  extends tmttyped.std.Response {
+  extends StObject
+     with tmttyped.std.Response {
   def this(body: BodyInit) = this()
-  def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   def this(body: Null, init: ResponseInit) = this()
+  def this(body: Unit, init: ResponseInit) = this()
+  def this(body: BodyInit, init: ResponseInit) = this()
   
   /* CompleteClass */
   override def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
@@ -36,7 +38,7 @@ class Response ()
   override val headers: org.scalajs.dom.experimental.Headers = js.native
   
   /* CompleteClass */
-  override def json(): js.Promise[_] = js.native
+  override def json(): js.Promise[js.Any] = js.native
   
   /* CompleteClass */
   override val ok: scala.Boolean = js.native

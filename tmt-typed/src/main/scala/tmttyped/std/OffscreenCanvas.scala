@@ -11,14 +11,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait OffscreenCanvas
-  extends EventTarget
+  extends StObject
+     with EventTarget
      with _CanvasImageSource
      with _TexImageSource
      with _Transferable {
   
   /**
     * Returns a promise that will fulfill with a new Blob object representing a file containing the image in the OffscreenCanvas object.
-    * 
+    *
     * The argument, if provided, is a dictionary that controls the encoding options of the image file to be created. The type field specifies the file format and has a default value of "image/png"; that type is also used if the requested type isn't supported. If the image format supports variable quality (such as "image/jpeg"), then the quality field is a number in the range 0.0 to 1.0 inclusive indicating the desired quality level for the resulting image.
     */
   def convertToBlob(): js.Promise[org.scalajs.dom.raw.Blob] = js.native
@@ -28,9 +29,9 @@ trait OffscreenCanvas
   def getContext(contextId: OffscreenRenderingContextId, options: js.Any): OffscreenRenderingContext | Null = js.native
   /**
     * Returns an object that exposes an API for drawing on the OffscreenCanvas object. contextId specifies the desired API: "2d", "bitmaprenderer", "webgl", or "webgl2". options is handled by that API.
-    * 
+    *
     * This specification defines the "2d" context below, which is similar but distinct from the "2d" context that is created from a canvas element. The WebGL specifications define the "webgl" and "webgl2" contexts. [WEBGL]
-    * 
+    *
     * Returns null if the canvas has already been initialized with another context type (e.g., trying to get a "2d" context after getting a "webgl" context).
     */
   @JSName("getContext")
@@ -52,7 +53,7 @@ trait OffscreenCanvas
   
   /**
     * These attributes return the dimensions of the OffscreenCanvas object's bitmap.
-    * 
+    *
     * They can be set, to replace the bitmap with a new, transparent black bitmap of the specified dimensions (effectively resizing it).
     */
   var height: Double = js.native
@@ -64,7 +65,7 @@ trait OffscreenCanvas
   
   /**
     * These attributes return the dimensions of the OffscreenCanvas object's bitmap.
-    * 
+    *
     * They can be set, to replace the bitmap with a new, transparent black bitmap of the specified dimensions (effectively resizing it).
     */
   var width: Double = js.native

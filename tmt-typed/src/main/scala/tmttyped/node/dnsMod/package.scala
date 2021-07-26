@@ -7,17 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object dnsMod {
   
-  // Supported getaddrinfo flags.
   @scala.inline
   def ADDRCONFIG: scala.Double = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ADDRCONFIG").asInstanceOf[scala.Double]
   
   @scala.inline
   def ADDRGETNETWORKPARAMS: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ADDRGETNETWORKPARAMS").asInstanceOf[java.lang.String]
   
-  /**
-    * If `dns.V4MAPPED` is specified, return resolved IPv6 addresses as
-    * well as IPv4 mapped IPv6 addresses.
-    */
   @scala.inline
   def ALL: scala.Double = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ALL").asInstanceOf[scala.Double]
   
@@ -63,7 +58,6 @@ package object dnsMod {
   @scala.inline
   def LOADIPHLPAPI: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("LOADIPHLPAPI").asInstanceOf[java.lang.String]
   
-  // Error codes
   @scala.inline
   def NODATA: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NODATA").asInstanceOf[java.lang.String]
   
@@ -97,7 +91,6 @@ package object dnsMod {
   @scala.inline
   def getServers(): js.Array[java.lang.String] = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[java.lang.String]]
   
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def lookup(
     hostname: java.lang.String,
@@ -108,7 +101,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def lookup(
     hostname: java.lang.String,
@@ -120,7 +112,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def lookup(
     hostname: java.lang.String,
@@ -131,7 +122,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def lookup(
     hostname: java.lang.String,
@@ -143,7 +133,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def lookup(
     hostname: java.lang.String,
@@ -168,7 +157,6 @@ package object dnsMod {
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -178,7 +166,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -191,7 +178,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -202,7 +188,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -213,7 +198,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -224,7 +208,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -235,7 +218,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -246,7 +228,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -257,7 +238,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -268,7 +248,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -279,7 +258,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -290,7 +268,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -301,7 +278,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve(
     hostname: java.lang.String,
@@ -313,7 +289,6 @@ package object dnsMod {
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve4(
     hostname: java.lang.String,
@@ -323,7 +298,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve4(
     hostname: java.lang.String,
@@ -334,7 +308,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve4(
     hostname: java.lang.String,
@@ -346,7 +319,6 @@ package object dnsMod {
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve6(
     hostname: java.lang.String,
@@ -356,7 +328,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve6(
     hostname: java.lang.String,
@@ -367,7 +338,6 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  // NOTE: This namespace provides design-time support for util.promisify. Exported members do not exist at runtime.
   @scala.inline
   def resolve6(
     hostname: java.lang.String,
@@ -388,6 +358,16 @@ package object dnsMod {
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def resolveCaa(
+    hostname: java.lang.String,
+    callback: js.Function2[
+      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
+      /* records */ js.Array[tmttyped.node.dnsMod.CaaRecord], 
+      scala.Unit
+    ]
+  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def resolveCname(

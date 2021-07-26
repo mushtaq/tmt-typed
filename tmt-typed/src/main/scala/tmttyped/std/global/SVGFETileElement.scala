@@ -1,5 +1,8 @@
 package tmttyped.std.global
 
+import org.scalajs.dom.raw.EventListenerOptions
+import tmttyped.std.AddEventListenerOptions
+import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGFETileElement")
 @js.native
 class SVGFETileElement ()
-  extends tmttyped.std.SVGFETileElement {
+  extends StObject
+     with tmttyped.std.SVGFETileElement {
+  
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: AddEventListenerOptions
+  ): Unit = js.native
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native
@@ -31,6 +46,17 @@ class SVGFETileElement ()
     */
   /* CompleteClass */
   override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: EventListenerOptions
+  ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   /* CompleteClass */
   override val result: org.scalajs.dom.raw.SVGAnimatedString = js.native

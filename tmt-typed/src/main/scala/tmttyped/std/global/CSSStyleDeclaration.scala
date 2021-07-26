@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSStyleDeclaration")
 @js.native
 class CSSStyleDeclaration ()
-  extends tmttyped.std.CSSStyleDeclaration
+  extends StObject
+     with tmttyped.std.CSSStyleDeclaration

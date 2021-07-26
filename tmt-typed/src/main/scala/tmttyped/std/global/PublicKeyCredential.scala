@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PublicKeyCredential")
 @js.native
 class PublicKeyCredential ()
-  extends tmttyped.std.PublicKeyCredential {
+  extends StObject
+     with tmttyped.std.PublicKeyCredential {
   
   /* CompleteClass */
   override def getClientExtensionResults(): AuthenticationExtensionsClientOutputs = js.native

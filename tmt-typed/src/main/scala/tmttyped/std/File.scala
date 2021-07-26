@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Provides information about files and allows JavaScript in a web page to access their content. */
 @js.native
-trait File extends Blob {
+trait File
+  extends StObject
+     with Blob {
   
   val lastModified: Double = js.native
   

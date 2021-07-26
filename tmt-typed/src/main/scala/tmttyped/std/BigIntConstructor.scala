@@ -8,8 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BigIntConstructor extends StObject {
   
-  def apply(): js.BigInt = js.native
-  def apply(value: js.Any): js.BigInt = js.native
+  def apply(value: java.lang.String): js.BigInt = js.native
+  def apply(value: js.BigInt): js.BigInt = js.native
+  def apply(value: scala.Boolean): js.BigInt = js.native
+  def apply(value: Double): js.BigInt = js.native
   
   /**
     * Interprets the low bits of a BigInt as a 2's-complement signed integer.

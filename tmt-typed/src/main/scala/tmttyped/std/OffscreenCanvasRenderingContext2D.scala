@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait OffscreenCanvasRenderingContext2D
-  extends CanvasCompositing
+  extends StObject
+     with CanvasCompositing
      with CanvasDrawImage
      with CanvasDrawPath
      with CanvasFillStrokeStyles

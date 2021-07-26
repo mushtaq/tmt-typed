@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DeviceOrientationEventInit extends EventInit {
+trait DeviceOrientationEventInit
+  extends StObject
+     with EventInit {
   
   var absolute: js.UndefOr[scala.Boolean] = js.undefined
   
@@ -18,13 +20,13 @@ trait DeviceOrientationEventInit extends EventInit {
 object DeviceOrientationEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEventInit = {
+  def apply(): DeviceOrientationEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEventInit]
+    __obj.asInstanceOf[DeviceOrientationEventInit]
   }
   
   @scala.inline
-  implicit class DeviceOrientationEventInitMutableBuilder[Self <: org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEventInit] (val x: Self) extends AnyVal {
+  implicit class DeviceOrientationEventInitMutableBuilder[Self <: DeviceOrientationEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAbsolute(value: scala.Boolean): Self = StObject.set(x, "absolute", value.asInstanceOf[js.Any])

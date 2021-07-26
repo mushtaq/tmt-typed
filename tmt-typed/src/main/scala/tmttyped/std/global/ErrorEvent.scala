@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ErrorEvent")
 @js.native
 class ErrorEvent protected ()
-  extends tmttyped.std.ErrorEvent {
+  extends StObject
+     with tmttyped.std.ErrorEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: ErrorEventInit) = this()
 }

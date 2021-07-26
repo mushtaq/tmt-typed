@@ -47,13 +47,13 @@ object AudioListener {
     upX: org.scalajs.dom.raw.AudioParam,
     upY: org.scalajs.dom.raw.AudioParam,
     upZ: org.scalajs.dom.raw.AudioParam
-  ): org.scalajs.dom.raw.AudioListener = {
+  ): AudioListener = {
     val __obj = js.Dynamic.literal(forwardX = forwardX.asInstanceOf[js.Any], forwardY = forwardY.asInstanceOf[js.Any], forwardZ = forwardZ.asInstanceOf[js.Any], positionX = positionX.asInstanceOf[js.Any], positionY = positionY.asInstanceOf[js.Any], positionZ = positionZ.asInstanceOf[js.Any], setOrientation = js.Any.fromFunction6(setOrientation), setPosition = js.Any.fromFunction3(setPosition), upX = upX.asInstanceOf[js.Any], upY = upY.asInstanceOf[js.Any], upZ = upZ.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.AudioListener]
+    __obj.asInstanceOf[AudioListener]
   }
   
   @scala.inline
-  implicit class AudioListenerMutableBuilder[Self <: org.scalajs.dom.raw.AudioListener] (val x: Self) extends AnyVal {
+  implicit class AudioListenerMutableBuilder[Self <: AudioListener] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setForwardX(value: org.scalajs.dom.raw.AudioParam): Self = StObject.set(x, "forwardX", value.asInstanceOf[js.Any])

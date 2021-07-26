@@ -61,14 +61,14 @@ object MutationRecord {
     removedNodes: org.scalajs.dom.raw.NodeList,
     target: org.scalajs.dom.raw.Node,
     `type`: MutationRecordType
-  ): org.scalajs.dom.raw.MutationRecord = {
+  ): MutationRecord = {
     val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], attributeName = null, attributeNamespace = null, nextSibling = null, oldValue = null, previousSibling = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.MutationRecord]
+    __obj.asInstanceOf[MutationRecord]
   }
   
   @scala.inline
-  implicit class MutationRecordMutableBuilder[Self <: org.scalajs.dom.raw.MutationRecord] (val x: Self) extends AnyVal {
+  implicit class MutationRecordMutableBuilder[Self <: MutationRecord] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAddedNodes(value: org.scalajs.dom.raw.NodeList): Self = StObject.set(x, "addedNodes", value.asInstanceOf[js.Any])

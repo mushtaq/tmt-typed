@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGFEFuncGElement")
 @js.native
 class SVGFEFuncGElement ()
-  extends tmttyped.std.SVGFEFuncGElement {
+  extends StObject
+     with tmttyped.std.SVGFEFuncGElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

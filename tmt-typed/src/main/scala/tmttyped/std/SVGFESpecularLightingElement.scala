@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <feSpecularLighting> element. */
 @js.native
 trait SVGFESpecularLightingElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
   /* InferMemberOverrides */

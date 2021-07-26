@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCErrorEvent")
 @js.native
 class RTCErrorEvent protected ()
-  extends tmttyped.std.RTCErrorEvent {
+  extends StObject
+     with tmttyped.std.RTCErrorEvent {
   def this(`type`: java.lang.String, eventInitDict: RTCErrorEventInit) = this()
 }

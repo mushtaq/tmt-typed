@@ -12,26 +12,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMQuad")
 @js.native
 class DOMQuad ()
-  extends tmttyped.std.DOMQuad {
+  extends StObject
+     with tmttyped.std.DOMQuad {
   def this(p1: DOMPointInit) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: DOMPointInit) = this()
+  def this(p1: Unit, p2: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: js.UndefOr[scala.Nothing], p3: DOMPointInit) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: DOMPointInit, p3: DOMPointInit) = this()
-  def this(p1: DOMPointInit, p2: js.UndefOr[scala.Nothing], p3: DOMPointInit) = this()
+  def this(p1: Unit, p2: Unit, p3: DOMPointInit) = this()
+  def this(p1: Unit, p2: DOMPointInit, p3: DOMPointInit) = this()
+  def this(p1: DOMPointInit, p2: Unit, p3: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit) = this()
-  def this(
-    p1: js.UndefOr[scala.Nothing],
-    p2: js.UndefOr[scala.Nothing],
-    p3: js.UndefOr[scala.Nothing],
-    p4: DOMPointInit
-  ) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: js.UndefOr[scala.Nothing], p3: DOMPointInit, p4: DOMPointInit) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: DOMPointInit, p3: js.UndefOr[scala.Nothing], p4: DOMPointInit) = this()
-  def this(p1: js.UndefOr[scala.Nothing], p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
-  def this(p1: DOMPointInit, p2: js.UndefOr[scala.Nothing], p3: js.UndefOr[scala.Nothing], p4: DOMPointInit) = this()
-  def this(p1: DOMPointInit, p2: js.UndefOr[scala.Nothing], p3: DOMPointInit, p4: DOMPointInit) = this()
-  def this(p1: DOMPointInit, p2: DOMPointInit, p3: js.UndefOr[scala.Nothing], p4: DOMPointInit) = this()
+  def this(p1: Unit, p2: Unit, p3: Unit, p4: DOMPointInit) = this()
+  def this(p1: Unit, p2: Unit, p3: DOMPointInit, p4: DOMPointInit) = this()
+  def this(p1: Unit, p2: DOMPointInit, p3: Unit, p4: DOMPointInit) = this()
+  def this(p1: Unit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
+  def this(p1: DOMPointInit, p2: Unit, p3: Unit, p4: DOMPointInit) = this()
+  def this(p1: DOMPointInit, p2: Unit, p3: DOMPointInit, p4: DOMPointInit) = this()
+  def this(p1: DOMPointInit, p2: DOMPointInit, p3: Unit, p4: DOMPointInit) = this()
   def this(p1: DOMPointInit, p2: DOMPointInit, p3: DOMPointInit, p4: DOMPointInit) = this()
   
   /* CompleteClass */

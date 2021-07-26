@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DelayOptions extends AudioNodeOptions {
+trait DelayOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var delayTime: js.UndefOr[Double] = js.undefined
   

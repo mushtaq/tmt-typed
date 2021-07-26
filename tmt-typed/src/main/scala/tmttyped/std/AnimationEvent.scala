@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events providing information related to animations. */
 @js.native
-trait AnimationEvent extends Event {
+trait AnimationEvent
+  extends StObject
+     with Event {
   
   val animationName: java.lang.String = js.native
   

@@ -12,13 +12,13 @@ trait LinkStyle extends StObject {
 object LinkStyle {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.LinkStyle = {
+  def apply(): LinkStyle = {
     val __obj = js.Dynamic.literal(sheet = null)
-    __obj.asInstanceOf[org.scalajs.dom.raw.LinkStyle]
+    __obj.asInstanceOf[LinkStyle]
   }
   
   @scala.inline
-  implicit class LinkStyleMutableBuilder[Self <: org.scalajs.dom.raw.LinkStyle] (val x: Self) extends AnyVal {
+  implicit class LinkStyleMutableBuilder[Self <: LinkStyle] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = StObject.set(x, "sheet", value.asInstanceOf[js.Any])

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SecurityPolicyViolationEvent")
 @js.native
 class SecurityPolicyViolationEvent protected ()
-  extends tmttyped.std.SecurityPolicyViolationEvent {
+  extends StObject
+     with tmttyped.std.SecurityPolicyViolationEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: SecurityPolicyViolationEventInit) = this()
 }

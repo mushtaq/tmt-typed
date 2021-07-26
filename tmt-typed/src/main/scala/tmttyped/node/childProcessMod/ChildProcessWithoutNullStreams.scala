@@ -9,27 +9,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 // return this object when stdio option is undefined or not specified
 @js.native
-trait ChildProcessWithoutNullStreams extends ChildProcess {
+trait ChildProcessWithoutNullStreams extends StObject {
   
-  @JSName("stderr")
-  var stderr_ChildProcessWithoutNullStreams: Readable = js.native
+  var stderr: Readable = js.native
   
-  @JSName("stdin")
-  var stdin_ChildProcessWithoutNullStreams: Writable = js.native
+  var stdin: Writable = js.native
   
-  @JSName("stdio")
-  val stdio_ChildProcessWithoutNullStreams: js.Tuple5[
+  val stdio: js.Tuple5[
     Writable, 
-    // stdin
-  Readable, 
-    // stdout
-  Readable, 
+    Readable, 
+    Readable, 
     js.UndefOr[(// stderr
   Readable) | Writable | Null], 
     js.UndefOr[(// extra, no modification
   Readable) | Writable | Null]
   ] = js.native
   
-  @JSName("stdout")
-  var stdout_ChildProcessWithoutNullStreams: Readable = js.native
+  var stdout: Readable = js.native
 }

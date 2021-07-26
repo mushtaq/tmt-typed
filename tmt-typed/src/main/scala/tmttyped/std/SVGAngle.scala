@@ -45,13 +45,13 @@ object SVGAngle {
     value: Double,
     valueAsString: java.lang.String,
     valueInSpecifiedUnits: Double
-  ): org.scalajs.dom.raw.SVGAngle = {
+  ): SVGAngle = {
     val __obj = js.Dynamic.literal(SVG_ANGLETYPE_DEG = SVG_ANGLETYPE_DEG.asInstanceOf[js.Any], SVG_ANGLETYPE_GRAD = SVG_ANGLETYPE_GRAD.asInstanceOf[js.Any], SVG_ANGLETYPE_RAD = SVG_ANGLETYPE_RAD.asInstanceOf[js.Any], SVG_ANGLETYPE_UNKNOWN = SVG_ANGLETYPE_UNKNOWN.asInstanceOf[js.Any], SVG_ANGLETYPE_UNSPECIFIED = SVG_ANGLETYPE_UNSPECIFIED.asInstanceOf[js.Any], convertToSpecifiedUnits = js.Any.fromFunction1(convertToSpecifiedUnits), newValueSpecifiedUnits = js.Any.fromFunction2(newValueSpecifiedUnits), unitType = unitType.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], valueAsString = valueAsString.asInstanceOf[js.Any], valueInSpecifiedUnits = valueInSpecifiedUnits.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAngle]
+    __obj.asInstanceOf[SVGAngle]
   }
   
   @scala.inline
-  implicit class SVGAngleMutableBuilder[Self <: org.scalajs.dom.raw.SVGAngle] (val x: Self) extends AnyVal {
+  implicit class SVGAngleMutableBuilder[Self <: SVGAngle] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setConvertToSpecifiedUnits(value: Double => Unit): Self = StObject.set(x, "convertToSpecifiedUnits", js.Any.fromFunction1(value))

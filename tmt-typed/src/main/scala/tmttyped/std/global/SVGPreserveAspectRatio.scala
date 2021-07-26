@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGPreserveAspectRatio")
 @js.native
 class SVGPreserveAspectRatio ()
-  extends tmttyped.std.SVGPreserveAspectRatio {
+  extends StObject
+     with tmttyped.std.SVGPreserveAspectRatio {
   
   /* CompleteClass */
   override val SVG_MEETORSLICE_MEET: Double = js.native

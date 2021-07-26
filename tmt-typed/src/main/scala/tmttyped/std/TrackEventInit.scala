@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait TrackEventInit extends EventInit {
+trait TrackEventInit
+  extends StObject
+     with EventInit {
   
   var track: js.UndefOr[org.scalajs.dom.raw.TextTrack | Null] = js.undefined
 }

@@ -45,13 +45,13 @@ trait MutationObserverInit extends StObject {
 object MutationObserverInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.MutationObserverInit = {
+  def apply(): MutationObserverInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.MutationObserverInit]
+    __obj.asInstanceOf[MutationObserverInit]
   }
   
   @scala.inline
-  implicit class MutationObserverInitMutableBuilder[Self <: org.scalajs.dom.raw.MutationObserverInit] (val x: Self) extends AnyVal {
+  implicit class MutationObserverInitMutableBuilder[Self <: MutationObserverInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAttributeFilter(value: js.Array[java.lang.String]): Self = StObject.set(x, "attributeFilter", value.asInstanceOf[js.Any])

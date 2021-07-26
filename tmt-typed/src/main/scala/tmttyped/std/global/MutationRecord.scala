@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MutationRecord")
 @js.native
 class MutationRecord ()
-  extends tmttyped.std.MutationRecord {
+  extends StObject
+     with tmttyped.std.MutationRecord {
   
   /**
     * Return the nodes added and removed respectively.

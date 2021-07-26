@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaKeyStatusMap")
 @js.native
 class MediaKeyStatusMap ()
-  extends tmttyped.std.MediaKeyStatusMap
+  extends StObject
+     with tmttyped.std.MediaKeyStatusMap

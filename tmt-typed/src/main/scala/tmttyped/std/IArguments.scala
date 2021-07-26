@@ -8,13 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait IArguments
-  extends /* index */ NumberDictionary[js.Any] {
+  extends StObject
+     with /* index */ NumberDictionary[js.Any] {
   
   var callee: js.Function = js.native
   
   /** Iterator */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[_]] = js.native
+  var iterator: js.Function0[IterableIterator[js.Any]] = js.native
   
   var length: Double = js.native
 }

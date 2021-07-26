@@ -1,6 +1,9 @@
 package tmttyped.std.global
 
+import org.scalajs.dom.raw.EventListenerOptions
+import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.Document
+import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,10 +12,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Document")
 @js.native
-class Document_ () extends Document {
+class Document_ ()
+  extends StObject
+     with Document {
   
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.raw.Element | Null = js.native
+  
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: AddEventListenerOptions
+  ): Unit = js.native
   
   /* CompleteClass */
   override def caretPositionFromPoint(x: Double, y: Double): tmttyped.std.CaretPosition | Null = js.native
@@ -44,6 +60,17 @@ class Document_ () extends Document {
   
   /* CompleteClass */
   override val pointerLockElement: org.scalajs.dom.raw.Element | Null = js.native
+  
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: EventListenerOptions
+  ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   /**
     * Retrieves a collection of styleSheet objects representing the style sheets that correspond to each instance of a link or style object in the document.

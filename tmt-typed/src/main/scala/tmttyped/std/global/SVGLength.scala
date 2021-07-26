@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGLength")
 @js.native
 class SVGLength ()
-  extends tmttyped.std.SVGLength {
+  extends StObject
+     with tmttyped.std.SVGLength {
   
   /* CompleteClass */
   override val SVG_LENGTHTYPE_CM: Double = js.native

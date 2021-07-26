@@ -10,5 +10,5 @@ package object reactiveSocketTypesMod {
   @scala.inline
   def CONNECTION_STATUS: tmttyped.rsocketTypes.reactiveSocketTypesMod.ConnectionStatus = tmttyped.rsocketTypes.reactiveSocketTypesMod.^.asInstanceOf[js.Dynamic].selectDynamic("CONNECTION_STATUS").asInstanceOf[tmttyped.rsocketTypes.reactiveSocketTypesMod.ConnectionStatus]
   
-  type Encodable = java.lang.String | tmttyped.node.Buffer | js.typedarray.Uint8Array
+  type Encodable = java.lang.String | tmttyped.node.bufferMod.global.Buffer | js.typedarray.Uint8Array
 }

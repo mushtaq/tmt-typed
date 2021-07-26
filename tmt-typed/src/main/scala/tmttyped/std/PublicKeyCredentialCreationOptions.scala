@@ -57,12 +57,6 @@ object PublicKeyCredentialCreationOptions {
     def setChallenge(value: BufferSource): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChallengeArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChallengeArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setExcludeCredentials(value: js.Array[PublicKeyCredentialDescriptor]): Self = StObject.set(x, "excludeCredentials", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("EventSource")
 @js.native
 class EventSource protected ()
-  extends tmttyped.std.EventSource {
+  extends StObject
+     with tmttyped.std.EventSource {
   def this(url: java.lang.String) = this()
   def this(url: java.lang.String, eventSourceInitDict: EventSourceInit) = this()
 }

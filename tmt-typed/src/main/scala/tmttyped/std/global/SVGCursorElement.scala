@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGCursorElement")
 @js.native
 class SVGCursorElement ()
-  extends tmttyped.std.SVGCursorElement {
+  extends StObject
+     with tmttyped.std.SVGCursorElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

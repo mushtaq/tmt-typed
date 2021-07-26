@@ -1,6 +1,5 @@
 package tmttyped.node.http2Mod
 
-import tmttyped.node.nodeNetMod.Server
 import tmttyped.node.nodeStrings.checkContinue
 import tmttyped.node.nodeStrings.request
 import tmttyped.node.nodeStrings.session
@@ -13,8 +12,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Http2Server extends Server {
+trait Http2Server
+  extends StObject
+     with HTTP2ServerCommon {
   
+  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_checkContinue(
     event: checkContinue,
@@ -42,6 +45,8 @@ trait Http2Server extends Server {
   @JSName("addListener")
   def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_checkContinue(event: checkContinue, request: Http2ServerRequest, response: Http2ServerResponse): Boolean = js.native
   @JSName("emit")
@@ -55,6 +60,8 @@ trait Http2Server extends Server {
   @JSName("emit")
   def emit_timeout(event: timeout): Boolean = js.native
   
+  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_checkContinue(
     event: checkContinue,
@@ -82,6 +89,8 @@ trait Http2Server extends Server {
   @JSName("on")
   def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
+  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_checkContinue(
     event: checkContinue,
@@ -109,6 +118,8 @@ trait Http2Server extends Server {
   @JSName("once")
   def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
+  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_checkContinue(
     event: checkContinue,
@@ -136,6 +147,8 @@ trait Http2Server extends Server {
   @JSName("prependListener")
   def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_checkContinue(
     event: checkContinue,
@@ -162,9 +175,4 @@ trait Http2Server extends Server {
   ): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
-  
-  def setTimeout(): this.type = js.native
-  def setTimeout(msec: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): this.type = js.native
-  def setTimeout(msec: Double): this.type = js.native
-  def setTimeout(msec: Double, callback: js.Function0[Unit]): this.type = js.native
 }

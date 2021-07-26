@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("UIEvent")
 @js.native
 class UIEvent protected ()
-  extends tmttyped.std.UIEvent {
+  extends StObject
+     with tmttyped.std.UIEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: UIEventInit) = this()
 }

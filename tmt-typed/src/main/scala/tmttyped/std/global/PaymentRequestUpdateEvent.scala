@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PaymentRequestUpdateEvent")
 @js.native
 class PaymentRequestUpdateEvent protected ()
-  extends tmttyped.std.PaymentRequestUpdateEvent {
+  extends StObject
+     with tmttyped.std.PaymentRequestUpdateEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: PaymentRequestUpdateEventInit) = this()
 }

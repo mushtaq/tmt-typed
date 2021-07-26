@@ -5,11 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCPeerConnectionIceErrorEventInit extends EventInit {
+trait RTCPeerConnectionIceErrorEventInit
+  extends StObject
+     with EventInit {
+  
+  var address: js.UndefOr[java.lang.String | Null] = js.undefined
   
   var errorCode: Double
   
-  var hostCandidate: js.UndefOr[java.lang.String] = js.undefined
+  var port: js.UndefOr[Double | Null] = js.undefined
   
   var statusText: js.UndefOr[java.lang.String] = js.undefined
   
@@ -27,13 +31,25 @@ object RTCPeerConnectionIceErrorEventInit {
   implicit class RTCPeerConnectionIceErrorEventInitMutableBuilder[Self <: RTCPeerConnectionIceErrorEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
+    def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAddressNull: Self = StObject.set(x, "address", null)
+    
+    @scala.inline
+    def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
+    
+    @scala.inline
     def setErrorCode(value: Double): Self = StObject.set(x, "errorCode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHostCandidate(value: java.lang.String): Self = StObject.set(x, "hostCandidate", value.asInstanceOf[js.Any])
+    def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHostCandidateUndefined: Self = StObject.set(x, "hostCandidate", js.undefined)
+    def setPortNull: Self = StObject.set(x, "port", null)
+    
+    @scala.inline
+    def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
     
     @scala.inline
     def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])

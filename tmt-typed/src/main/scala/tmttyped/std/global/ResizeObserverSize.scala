@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ResizeObserverSize")
 @js.native
 class ResizeObserverSize ()
-  extends tmttyped.std.ResizeObserverSize {
+  extends StObject
+     with tmttyped.std.ResizeObserverSize {
   
   /* CompleteClass */
   override val blockSize: Double = js.native

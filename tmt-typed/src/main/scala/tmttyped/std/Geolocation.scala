@@ -14,7 +14,7 @@ trait Geolocation extends StObject {
   def getCurrentPosition(successCallback: PositionCallback): Unit = js.native
   def getCurrentPosition(
     successCallback: PositionCallback,
-    errorCallback: js.UndefOr[scala.Nothing],
+    errorCallback: Unit,
     options: org.scalajs.dom.raw.PositionOptions
   ): Unit = js.native
   def getCurrentPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Unit = js.native
@@ -27,7 +27,7 @@ trait Geolocation extends StObject {
   def watchPosition(successCallback: PositionCallback): Double = js.native
   def watchPosition(
     successCallback: PositionCallback,
-    errorCallback: js.UndefOr[scala.Nothing],
+    errorCallback: Unit,
     options: org.scalajs.dom.raw.PositionOptions
   ): Double = js.native
   def watchPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Double = js.native

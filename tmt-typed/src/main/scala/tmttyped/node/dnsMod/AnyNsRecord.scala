@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AnyNsRecord extends AnyRecord {
+trait AnyNsRecord
+  extends StObject
+     with AnyRecord {
   
   var `type`: NS
   

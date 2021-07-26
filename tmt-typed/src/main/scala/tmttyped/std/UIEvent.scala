@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Simple user interface events. */
 @js.native
-trait UIEvent extends Event {
+trait UIEvent
+  extends StObject
+     with Event {
   
   val detail: Double = js.native
   

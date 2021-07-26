@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("NamedNodeMap")
 @js.native
 class NamedNodeMap ()
-  extends tmttyped.std.NamedNodeMap
+  extends StObject
+     with tmttyped.std.NamedNodeMap

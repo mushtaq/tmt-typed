@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait GeneratorFunctionConstructor
-  extends /**
+  extends StObject
+     with /**
   * Creates a new Generator function.
   * @param args A list of arguments the function accepts.
   */

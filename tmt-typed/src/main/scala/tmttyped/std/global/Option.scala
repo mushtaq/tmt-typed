@@ -9,62 +9,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Option")
 @js.native
 class Option ()
-  extends tmttyped.std.HTMLOptionElement {
+  extends StObject
+     with tmttyped.std.HTMLOptionElement {
   def this(text: java.lang.String) = this()
-  def this(text: js.UndefOr[scala.Nothing], value: java.lang.String) = this()
   def this(text: java.lang.String, value: java.lang.String) = this()
-  def this(text: js.UndefOr[scala.Nothing], value: js.UndefOr[scala.Nothing], defaultSelected: scala.Boolean) = this()
-  def this(text: js.UndefOr[scala.Nothing], value: java.lang.String, defaultSelected: scala.Boolean) = this()
-  def this(text: java.lang.String, value: js.UndefOr[scala.Nothing], defaultSelected: scala.Boolean) = this()
+  def this(text: Unit, value: java.lang.String) = this()
   def this(text: java.lang.String, value: java.lang.String, defaultSelected: scala.Boolean) = this()
-  def this(
-    text: js.UndefOr[scala.Nothing],
-    value: js.UndefOr[scala.Nothing],
-    defaultSelected: js.UndefOr[scala.Nothing],
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: js.UndefOr[scala.Nothing],
-    value: js.UndefOr[scala.Nothing],
-    defaultSelected: scala.Boolean,
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: js.UndefOr[scala.Nothing],
-    value: java.lang.String,
-    defaultSelected: js.UndefOr[scala.Nothing],
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: js.UndefOr[scala.Nothing],
-    value: java.lang.String,
-    defaultSelected: scala.Boolean,
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: java.lang.String,
-    value: js.UndefOr[scala.Nothing],
-    defaultSelected: js.UndefOr[scala.Nothing],
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: java.lang.String,
-    value: js.UndefOr[scala.Nothing],
-    defaultSelected: scala.Boolean,
-    selected: scala.Boolean
-  ) = this()
-  def this(
-    text: java.lang.String,
-    value: java.lang.String,
-    defaultSelected: js.UndefOr[scala.Nothing],
-    selected: scala.Boolean
-  ) = this()
+  def this(text: java.lang.String, value: Unit, defaultSelected: scala.Boolean) = this()
+  def this(text: Unit, value: java.lang.String, defaultSelected: scala.Boolean) = this()
+  def this(text: Unit, value: Unit, defaultSelected: scala.Boolean) = this()
   def this(
     text: java.lang.String,
     value: java.lang.String,
     defaultSelected: scala.Boolean,
     selected: scala.Boolean
   ) = this()
+  def this(text: java.lang.String, value: java.lang.String, defaultSelected: Unit, selected: scala.Boolean) = this()
+  def this(text: java.lang.String, value: Unit, defaultSelected: scala.Boolean, selected: scala.Boolean) = this()
+  def this(text: java.lang.String, value: Unit, defaultSelected: Unit, selected: scala.Boolean) = this()
+  def this(text: Unit, value: java.lang.String, defaultSelected: scala.Boolean, selected: scala.Boolean) = this()
+  def this(text: Unit, value: java.lang.String, defaultSelected: Unit, selected: scala.Boolean) = this()
+  def this(text: Unit, value: Unit, defaultSelected: scala.Boolean, selected: scala.Boolean) = this()
+  def this(text: Unit, value: Unit, defaultSelected: Unit, selected: scala.Boolean) = this()
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

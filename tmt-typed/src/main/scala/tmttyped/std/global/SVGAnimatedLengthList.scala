@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAnimatedLengthList")
 @js.native
 class SVGAnimatedLengthList ()
-  extends tmttyped.std.SVGAnimatedLengthList {
+  extends StObject
+     with tmttyped.std.SVGAnimatedLengthList {
   
   /* CompleteClass */
   override val animVal: org.scalajs.dom.raw.SVGLengthList = js.native

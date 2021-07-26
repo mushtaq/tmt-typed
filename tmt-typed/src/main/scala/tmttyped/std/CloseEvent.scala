@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute. */
 @js.native
-trait CloseEvent extends Event {
+trait CloseEvent
+  extends StObject
+     with Event {
   
   /**
     * Returns the WebSocket connection close code provided by the server.

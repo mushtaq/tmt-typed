@@ -16,7 +16,7 @@ trait MutationObserver extends StObject {
   
   /**
     * Instructs the user agent to observe a given target (a node) and report any mutations based on the criteria given by options (an object).
-    * 
+    *
     * The options argument allows for setting mutation observation options via object members.
     */
   def observe(target: org.scalajs.dom.raw.Node): Unit = js.native

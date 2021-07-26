@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ScriptProcessorNode")
 @js.native
 class ScriptProcessorNode ()
-  extends tmttyped.std.ScriptProcessorNode
+  extends StObject
+     with tmttyped.std.ScriptProcessorNode

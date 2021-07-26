@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLOptGroupElement")
 @js.native
 class HTMLOptGroupElement ()
-  extends tmttyped.std.HTMLOptGroupElement {
+  extends StObject
+     with tmttyped.std.HTMLOptGroupElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

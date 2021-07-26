@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DeviceMotionEventInit extends EventInit {
+trait DeviceMotionEventInit
+  extends StObject
+     with EventInit {
   
   var acceleration: js.UndefOr[DeviceMotionEventAccelerationInit] = js.undefined
   
@@ -18,13 +20,13 @@ trait DeviceMotionEventInit extends EventInit {
 object DeviceMotionEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.deviceorientation.DeviceMotionEventInit = {
+  def apply(): DeviceMotionEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.deviceorientation.DeviceMotionEventInit]
+    __obj.asInstanceOf[DeviceMotionEventInit]
   }
   
   @scala.inline
-  implicit class DeviceMotionEventInitMutableBuilder[Self <: org.scalajs.dom.experimental.deviceorientation.DeviceMotionEventInit] (val x: Self) extends AnyVal {
+  implicit class DeviceMotionEventInitMutableBuilder[Self <: DeviceMotionEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAcceleration(value: DeviceMotionEventAccelerationInit): Self = StObject.set(x, "acceleration", value.asInstanceOf[js.Any])

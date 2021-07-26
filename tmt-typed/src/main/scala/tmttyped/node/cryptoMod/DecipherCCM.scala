@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DecipherCCM extends Decipher {
+trait DecipherCCM extends StObject {
   
   def setAAD(buffer: ArrayBufferView, options: PlaintextLength): this.type = js.native
   

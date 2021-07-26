@@ -13,15 +13,16 @@ trait UnderlyingSink[W] extends StObject {
   
   var start: js.UndefOr[UnderlyingSinkStartCallback] = js.undefined
   
-  var `type`: js.UndefOr[scala.Nothing] = js.undefined
+  var `type`: Unit
   
   var write: js.UndefOr[UnderlyingSinkWriteCallback[W]] = js.undefined
 }
 object UnderlyingSink {
   
   @scala.inline
-  def apply[W](): UnderlyingSink[W] = {
+  def apply[W](`type`: Unit): UnderlyingSink[W] = {
     val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnderlyingSink[W]]
   }
   
@@ -45,6 +46,9 @@ object UnderlyingSink {
     
     @scala.inline
     def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
+    
+    @scala.inline
+    def setType(value: Unit): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWrite(value: (W, /* controller */ WritableStreamDefaultController) => Unit | js.Thenable[Unit]): Self = StObject.set(x, "write", js.Any.fromFunction2(value))

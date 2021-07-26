@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLUniformLocation")
 @js.native
 class WebGLUniformLocation ()
-  extends tmttyped.std.WebGLUniformLocation
+  extends StObject
+     with tmttyped.std.WebGLUniformLocation

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PerformanceObserver")
 @js.native
 class PerformanceObserver protected ()
-  extends tmttyped.std.PerformanceObserver {
+  extends StObject
+     with tmttyped.std.PerformanceObserver {
   def this(callback: PerformanceObserverCallback) = this()
 }
 object PerformanceObserver {

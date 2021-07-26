@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGTransform")
 @js.native
 class SVGTransform ()
-  extends tmttyped.std.SVGTransform {
+  extends StObject
+     with tmttyped.std.SVGTransform {
   
   /* CompleteClass */
   override val SVG_TRANSFORM_MATRIX: Double = js.native

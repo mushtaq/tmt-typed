@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMRectList")
 @js.native
 class DOMRectList ()
-  extends tmttyped.std.DOMRectList
+  extends StObject
+     with tmttyped.std.DOMRectList

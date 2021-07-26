@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait BigInt64ArrayConstructor
-  extends Instantiable0[BigInt64Array]
+  extends StObject
+     with Instantiable0[BigInt64Array]
      with Instantiable1[
       (/* buffer */ ArrayBufferLike) | (/* length */ Double) | (/* array */ js.Iterable[js.BigInt]), 
       BigInt64Array
@@ -19,7 +20,7 @@ trait BigInt64ArrayConstructor
      with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, BigInt64Array]
      with Instantiable3[
       /* buffer */ ArrayBufferLike, 
-      js.UndefOr[/* byteOffset */ Double], 
+      (/* byteOffset */ Double) | (/* byteOffset */ Unit), 
       /* length */ Double, 
       BigInt64Array
     ] {

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PeriodicWave")
 @js.native
 class PeriodicWave protected ()
-  extends tmttyped.std.PeriodicWave {
+  extends StObject
+     with tmttyped.std.PeriodicWave {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: PeriodicWaveOptions) = this()
 }

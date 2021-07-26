@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SecurityPolicyViolationEventInit extends EventInit {
+trait SecurityPolicyViolationEventInit
+  extends StObject
+     with EventInit {
   
   var blockedURI: js.UndefOr[java.lang.String] = js.undefined
   

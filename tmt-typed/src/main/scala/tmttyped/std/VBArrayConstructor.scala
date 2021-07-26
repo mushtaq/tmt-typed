@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait VBArrayConstructor
-  extends Instantiable1[/* safeArray */ SafeArray[js.Object], VBArray[js.Object]]
+  extends StObject
+     with Instantiable1[/* safeArray */ SafeArray[js.Object], VBArray[js.Object]]

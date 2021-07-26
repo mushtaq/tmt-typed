@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLModElement")
 @js.native
 class HTMLModElement ()
-  extends tmttyped.std.HTMLModElement {
+  extends StObject
+     with tmttyped.std.HTMLModElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

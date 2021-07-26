@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCIceCandidatePairStats extends RTCStats {
+trait RTCIceCandidatePairStats
+  extends StObject
+     with RTCStats {
   
   var availableIncomingBitrate: js.UndefOr[Double] = js.undefined
   

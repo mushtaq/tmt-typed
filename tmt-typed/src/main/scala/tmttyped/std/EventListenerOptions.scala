@@ -12,13 +12,13 @@ trait EventListenerOptions extends StObject {
 object EventListenerOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.EventListenerOptions = {
+  def apply(): EventListenerOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.EventListenerOptions]
+    __obj.asInstanceOf[EventListenerOptions]
   }
   
   @scala.inline
-  implicit class EventListenerOptionsMutableBuilder[Self <: org.scalajs.dom.raw.EventListenerOptions] (val x: Self) extends AnyVal {
+  implicit class EventListenerOptionsMutableBuilder[Self <: EventListenerOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCapture(value: scala.Boolean): Self = StObject.set(x, "capture", value.asInstanceOf[js.Any])

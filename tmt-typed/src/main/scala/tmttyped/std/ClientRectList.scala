@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ClientRectList
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.ClientRect] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.ClientRect] {
   
   def item(index: Double): org.scalajs.dom.raw.ClientRect = js.native
   

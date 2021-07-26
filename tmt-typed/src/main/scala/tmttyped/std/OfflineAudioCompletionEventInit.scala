@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait OfflineAudioCompletionEventInit extends EventInit {
+trait OfflineAudioCompletionEventInit
+  extends StObject
+     with EventInit {
   
   var renderedBuffer: org.scalajs.dom.raw.AudioBuffer
 }

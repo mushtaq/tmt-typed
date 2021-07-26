@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CharacterData")
 @js.native
 class CharacterData ()
-  extends tmttyped.std.CharacterData {
+  extends StObject
+     with tmttyped.std.CharacterData {
   
   /**
     * Returns the first following sibling that is an element, and null otherwise.

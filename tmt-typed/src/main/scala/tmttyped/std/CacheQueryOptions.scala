@@ -16,13 +16,13 @@ trait CacheQueryOptions extends StObject {
 object CacheQueryOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions = {
+  def apply(): CacheQueryOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions]
+    __obj.asInstanceOf[CacheQueryOptions]
   }
   
   @scala.inline
-  implicit class CacheQueryOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions] (val x: Self) extends AnyVal {
+  implicit class CacheQueryOptionsMutableBuilder[Self <: CacheQueryOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setIgnoreMethod(value: scala.Boolean): Self = StObject.set(x, "ignoreMethod", value.asInstanceOf[js.Any])

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A generic interface for representing an audio processing module. Examples include: */
 @js.native
-trait AudioNode extends EventTarget {
+trait AudioNode
+  extends StObject
+     with EventTarget {
   
   var channelCount: Double = js.native
   
@@ -16,9 +18,9 @@ trait AudioNode extends EventTarget {
   var channelInterpretation: ChannelInterpretation = js.native
   
   def connect(destinationNode: org.scalajs.dom.raw.AudioNode): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: js.UndefOr[scala.Nothing], input: Double): org.scalajs.dom.raw.AudioNode = js.native
   def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double): org.scalajs.dom.raw.AudioNode = js.native
   def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double, input: Double): org.scalajs.dom.raw.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Unit, input: Double): org.scalajs.dom.raw.AudioNode = js.native
   def connect(destinationParam: org.scalajs.dom.raw.AudioParam): Unit = js.native
   def connect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
   

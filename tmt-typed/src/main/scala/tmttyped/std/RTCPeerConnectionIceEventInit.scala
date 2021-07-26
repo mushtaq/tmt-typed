@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCPeerConnectionIceEventInit extends EventInit {
+trait RTCPeerConnectionIceEventInit
+  extends StObject
+     with EventInit {
   
   var candidate: js.UndefOr[org.scalajs.dom.experimental.webrtc.RTCIceCandidate | Null] = js.undefined
   
@@ -14,13 +16,13 @@ trait RTCPeerConnectionIceEventInit extends EventInit {
 object RTCPeerConnectionIceEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit = {
+  def apply(): RTCPeerConnectionIceEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit]
+    __obj.asInstanceOf[RTCPeerConnectionIceEventInit]
   }
   
   @scala.inline
-  implicit class RTCPeerConnectionIceEventInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit] (val x: Self) extends AnyVal {
+  implicit class RTCPeerConnectionIceEventInitMutableBuilder[Self <: RTCPeerConnectionIceEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCandidate(value: org.scalajs.dom.experimental.webrtc.RTCIceCandidate): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])

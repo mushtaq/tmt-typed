@@ -13,8 +13,8 @@ trait ReadableStreamDefaultReadResult[T] extends StObject
 object ReadableStreamDefaultReadResult {
   
   @scala.inline
-  def ReadableStreamDefaultReadDoneResult(): tmttyped.std.ReadableStreamDefaultReadDoneResult = {
-    val __obj = js.Dynamic.literal(done = true)
+  def ReadableStreamDefaultReadDoneResult(value: Unit): tmttyped.std.ReadableStreamDefaultReadDoneResult = {
+    val __obj = js.Dynamic.literal(done = true, value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[tmttyped.std.ReadableStreamDefaultReadDoneResult]
   }
   

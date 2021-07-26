@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait KeyboardEventInit extends EventModifierInit {
+trait KeyboardEventInit
+  extends StObject
+     with EventModifierInit {
   
   /** @deprecated */
   var charCode: js.UndefOr[Double] = js.undefined
@@ -26,13 +28,13 @@ trait KeyboardEventInit extends EventModifierInit {
 object KeyboardEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.KeyboardEventInit = {
+  def apply(): KeyboardEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.KeyboardEventInit]
+    __obj.asInstanceOf[KeyboardEventInit]
   }
   
   @scala.inline
-  implicit class KeyboardEventInitMutableBuilder[Self <: org.scalajs.dom.raw.KeyboardEventInit] (val x: Self) extends AnyVal {
+  implicit class KeyboardEventInitMutableBuilder[Self <: KeyboardEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCharCode(value: Double): Self = StObject.set(x, "charCode", value.asInstanceOf[js.Any])

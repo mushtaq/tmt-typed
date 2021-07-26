@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCDTMFToneChangeEvent")
 @js.native
 class RTCDTMFToneChangeEvent protected ()
-  extends tmttyped.std.RTCDTMFToneChangeEvent {
+  extends StObject
+     with tmttyped.std.RTCDTMFToneChangeEvent {
+  def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: RTCDTMFToneChangeEventInit) = this()
 }

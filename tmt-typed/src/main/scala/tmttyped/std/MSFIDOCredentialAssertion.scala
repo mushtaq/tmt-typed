@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MSFIDOCredentialAssertion extends MSAssertion {
+trait MSFIDOCredentialAssertion
+  extends StObject
+     with MSAssertion {
   
   val algorithm: java.lang.String | org.scalajs.dom.crypto.Algorithm
   
@@ -36,9 +38,6 @@ object MSFIDOCredentialAssertion {
     
     @scala.inline
     def setAlgorithm(value: java.lang.String | org.scalajs.dom.crypto.Algorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAlgorithmAlgorithm(value: org.scalajs.dom.crypto.Algorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAttestation(value: js.Any): Self = StObject.set(x, "attestation", value.asInstanceOf[js.Any])

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGElementInstanceList")
 @js.native
 class SVGElementInstanceList ()
-  extends tmttyped.std.SVGElementInstanceList {
+  extends StObject
+     with tmttyped.std.SVGElementInstanceList {
   
   /** @deprecated */
   /* CompleteClass */

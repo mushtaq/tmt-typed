@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
+trait SpeechSynthesisErrorEvent
+  extends StObject
+     with SpeechSynthesisEvent {
   
   val error: SpeechSynthesisErrorCode = js.native
 }

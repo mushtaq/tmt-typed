@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A fragment of a document that can contain nodes and parts of text nodes. */
 @js.native
-trait Range extends AbstractRange {
+trait Range
+  extends StObject
+     with AbstractRange {
   
   val END_TO_END: Double = js.native
   

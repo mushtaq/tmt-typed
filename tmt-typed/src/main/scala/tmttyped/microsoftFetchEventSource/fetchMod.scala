@@ -13,21 +13,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object fetchMod {
   
-  @JSImport("@microsoft/fetch-event-source/lib/fetch", JSImport.Namespace)
+  @JSImport("@microsoft/fetch-event-source/lib/cjs/fetch", JSImport.Namespace)
   @js.native
   val ^ : js.Any = js.native
   
-  @JSImport("@microsoft/fetch-event-source/lib/fetch", "EventStreamContentType")
+  @JSImport("@microsoft/fetch-event-source/lib/cjs/fetch", "EventStreamContentType")
   @js.native
   val EventStreamContentType: /* "text/event-stream" */ String = js.native
   
   @scala.inline
   def fetchEventSource(
     input: RequestInfo,
-    hasSignalHeadersOnopenOnmessageOncloseOnerrorOpenWhenHiddenFetchRest: FetchEventSourceInit
-  ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasSignalHeadersOnopenOnmessageOncloseOnerrorOpenWhenHiddenFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest: FetchEventSourceInit
+  ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
   
-  trait FetchEventSourceInit extends RequestInit {
+  trait FetchEventSourceInit
+    extends StObject
+       with RequestInit {
     
     var fetch: js.UndefOr[FnCall] = js.undefined
     

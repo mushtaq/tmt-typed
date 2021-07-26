@@ -9,11 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TimeRanges")
 @js.native
 class TimeRanges ()
-  extends tmttyped.std.TimeRanges {
+  extends StObject
+     with tmttyped.std.TimeRanges {
   
   /**
     * Returns the time for the end of the range with the given index.
-    * 
+    *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
   /* CompleteClass */
@@ -27,7 +28,7 @@ class TimeRanges ()
   
   /**
     * Returns the time for the start of the range with the given index.
-    * 
+    *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
   /* CompleteClass */

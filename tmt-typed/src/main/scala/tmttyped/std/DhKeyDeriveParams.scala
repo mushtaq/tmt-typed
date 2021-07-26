@@ -5,20 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DhKeyDeriveParams extends Algorithm {
+trait DhKeyDeriveParams
+  extends StObject
+     with Algorithm {
   
   var public: org.scalajs.dom.crypto.CryptoKey
 }
 object DhKeyDeriveParams {
   
   @scala.inline
-  def apply(name: java.lang.String, public: org.scalajs.dom.crypto.CryptoKey): org.scalajs.dom.crypto.DhKeyDeriveParams = {
+  def apply(name: java.lang.String, public: org.scalajs.dom.crypto.CryptoKey): DhKeyDeriveParams = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.DhKeyDeriveParams]
+    __obj.asInstanceOf[DhKeyDeriveParams]
   }
   
   @scala.inline
-  implicit class DhKeyDeriveParamsMutableBuilder[Self <: org.scalajs.dom.crypto.DhKeyDeriveParams] (val x: Self) extends AnyVal {
+  implicit class DhKeyDeriveParamsMutableBuilder[Self <: DhKeyDeriveParams] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setPublic(value: org.scalajs.dom.crypto.CryptoKey): Self = StObject.set(x, "public", value.asInstanceOf[js.Any])

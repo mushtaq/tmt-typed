@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RadioNodeList")
 @js.native
 class RadioNodeList ()
-  extends tmttyped.std.RadioNodeList
+  extends StObject
+     with tmttyped.std.RadioNodeList

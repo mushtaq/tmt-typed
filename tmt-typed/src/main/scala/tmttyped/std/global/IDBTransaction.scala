@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBTransaction")
 @js.native
 class IDBTransaction ()
-  extends tmttyped.std.IDBTransaction
+  extends StObject
+     with tmttyped.std.IDBTransaction

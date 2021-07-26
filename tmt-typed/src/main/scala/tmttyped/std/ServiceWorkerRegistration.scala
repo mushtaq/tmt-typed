@@ -8,25 +8,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This ServiceWorker API interface represents the service worker registration. You register a service worker to control one or more pages that share the same origin. */
 @js.native
-trait ServiceWorkerRegistration extends EventTarget {
+trait ServiceWorkerRegistration
+  extends StObject
+     with EventTarget {
   
   val active: org.scalajs.dom.experimental.serviceworkers.ServiceWorker | Null = js.native
   
   @JSName("addEventListener")
   def addEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
@@ -37,25 +39,25 @@ trait ServiceWorkerRegistration extends EventTarget {
   
   val navigationPreload: NavigationPreloadManager = js.native
   
-  var onupdatefound: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onupdatefound: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
   val pushManager: org.scalajs.dom.experimental.push.PushManager = js.native
   
   @JSName("removeEventListener")
   def removeEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_updatefound(
     `type`: updatefound,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   

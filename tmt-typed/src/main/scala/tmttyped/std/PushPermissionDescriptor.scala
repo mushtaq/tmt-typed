@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PushPermissionDescriptor extends PermissionDescriptor {
+trait PushPermissionDescriptor
+  extends StObject
+     with PermissionDescriptor {
   
   @JSName("name")
   var name_PushPermissionDescriptor: push

@@ -72,9 +72,6 @@ object CommonConnectionOptions {
     def setALPNProtocols(value: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array): Self = StObject.set(x, "ALPNProtocols", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setALPNProtocolsUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "ALPNProtocols", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setALPNProtocolsUndefined: Self = StObject.set(x, "ALPNProtocols", js.undefined)
     
     @scala.inline

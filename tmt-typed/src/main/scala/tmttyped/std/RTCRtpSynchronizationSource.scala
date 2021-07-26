@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCRtpSynchronizationSource extends RTCRtpContributingSource {
+trait RTCRtpSynchronizationSource
+  extends StObject
+     with RTCRtpContributingSource {
   
   var voiceActivityFlag: js.UndefOr[scala.Boolean] = js.undefined
 }

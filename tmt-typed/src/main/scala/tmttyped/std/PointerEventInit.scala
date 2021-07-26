@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PointerEventInit extends MouseEventInit {
+trait PointerEventInit
+  extends StObject
+     with MouseEventInit {
   
   var coalescedEvents: js.UndefOr[js.Array[org.scalajs.dom.raw.PointerEvent]] = js.undefined
   
@@ -34,13 +36,13 @@ trait PointerEventInit extends MouseEventInit {
 object PointerEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.PointerEventInit = {
+  def apply(): PointerEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.PointerEventInit]
+    __obj.asInstanceOf[PointerEventInit]
   }
   
   @scala.inline
-  implicit class PointerEventInitMutableBuilder[Self <: org.scalajs.dom.raw.PointerEventInit] (val x: Self) extends AnyVal {
+  implicit class PointerEventInitMutableBuilder[Self <: PointerEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCoalescedEvents(value: js.Array[org.scalajs.dom.raw.PointerEvent]): Self = StObject.set(x, "coalescedEvents", value.asInstanceOf[js.Any])

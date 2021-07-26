@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 trait ResolvedRelativeTimeFormatOptions extends StObject {
   
-  var locale: BCP47LanguageTag
+  var locale: UnicodeBCP47LocaleIdentifier
   
   var numberingSystem: String
   
@@ -28,7 +28,7 @@ object ResolvedRelativeTimeFormatOptions {
   
   @scala.inline
   def apply(
-    locale: BCP47LanguageTag,
+    locale: UnicodeBCP47LocaleIdentifier,
     numberingSystem: String,
     numeric: RelativeTimeFormatNumeric,
     style: RelativeTimeFormatStyle
@@ -41,7 +41,7 @@ object ResolvedRelativeTimeFormatOptions {
   implicit class ResolvedRelativeTimeFormatOptionsMutableBuilder[Self <: ResolvedRelativeTimeFormatOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setLocale(value: BCP47LanguageTag): Self = StObject.set(x, "locale", value.asInstanceOf[js.Any])
+    def setLocale(value: UnicodeBCP47LocaleIdentifier): Self = StObject.set(x, "locale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNumberingSystem(value: String): Self = StObject.set(x, "numberingSystem", value.asInstanceOf[js.Any])

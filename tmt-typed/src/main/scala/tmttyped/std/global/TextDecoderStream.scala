@@ -11,10 +11,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextDecoderStream")
 @js.native
 class TextDecoderStream ()
-  extends tmttyped.std.TextDecoderStream {
+  extends StObject
+     with tmttyped.std.TextDecoderStream {
   def this(label: java.lang.String) = this()
-  def this(label: js.UndefOr[scala.Nothing], options: TextDecoderOptions) = this()
   def this(label: java.lang.String, options: TextDecoderOptions) = this()
+  def this(label: Unit, options: TextDecoderOptions) = this()
   
   /**
     * Returns encoding's name, lowercased.
@@ -35,13 +36,13 @@ class TextDecoderStream ()
   override val ignoreBOM: scala.Boolean = js.native
   
   /* CompleteClass */
-  override val readable: org.scalajs.dom.experimental.ReadableStream[_] = js.native
+  override val readable: org.scalajs.dom.experimental.ReadableStream[js.Any] = js.native
   /* CompleteClass */
   @JSName("readable")
   override val readable_TextDecoderStream: org.scalajs.dom.experimental.ReadableStream[java.lang.String] = js.native
   
   /* CompleteClass */
-  override val writable: tmttyped.std.WritableStream[_] = js.native
+  override val writable: tmttyped.std.WritableStream[js.Any] = js.native
   /* CompleteClass */
   @JSName("writable")
   override val writable_TextDecoderStream: tmttyped.std.WritableStream[BufferSource] = js.native

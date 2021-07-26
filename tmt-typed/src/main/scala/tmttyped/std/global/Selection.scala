@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Selection")
 @js.native
 class Selection ()
-  extends tmttyped.std.Selection
+  extends StObject
+     with tmttyped.std.Selection
 object Selection {
   
   @JSGlobal("Selection")

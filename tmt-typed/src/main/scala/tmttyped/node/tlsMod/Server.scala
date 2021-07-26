@@ -1,6 +1,6 @@
 package tmttyped.node.tlsMod
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.OCSPRequest
 import tmttyped.node.nodeStrings.keylog
 import tmttyped.node.nodeStrings.newSession
@@ -12,21 +12,41 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * * Extends: `<net.Server>`
+  *
+  * Accepts encrypted connections using TLS or SSL.
+  * @since v0.3.2
+  */
 @JSImport("tls", "Server")
 @js.native
-class Server ()
-  extends tmttyped.node.nodeNetMod.Server {
+class Server () extends StObject {
   def this(options: TlsOptions) = this()
   def this(secureConnectionListener: js.Function1[/* socket */ TLSSocket, Unit]) = this()
   def this(options: TlsOptions, secureConnectionListener: js.Function1[/* socket */ TLSSocket, Unit]) = this()
   
   /**
-    * The server.addContext() method adds a secure context that will be
-    * used if the client request's SNI name matches the supplied hostname
-    * (or wildcard).
+    * The `server.addContext()` method adds a secure context that will be used if
+    * the client request's SNI name matches the supplied `hostname` (or wildcard).
+    *
+    * When there are multiple matching contexts, the most recently added one is
+    * used.
+    * @since v0.5.3
+    * @param hostname A SNI host name or wildcard (e.g. `'*'`)
+    * @param context An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc).
     */
   def addContext(hostName: String, credentials: SecureContextOptions): Unit = js.native
   
+  /**
+    * events.EventEmitter
+    * 1. tlsClientError
+    * 2. newSession
+    * 3. OCSPRequest
+    * 4. resumeSession
+    * 5. secureConnection
+    * 6. keylog
+    */
+  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_OCSPRequest(
     event: OCSPRequest,
@@ -63,6 +83,8 @@ class Server ()
   @JSName("addListener")
   def addListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_OCSPRequest(
     event: OCSPRequest,
@@ -92,9 +114,14 @@ class Server ()
   
   /**
     * Returns the session ticket keys.
+    *
+    * See `Session Resumption` for more information.
+    * @since v3.0.0
+    * @return A 48-byte buffer containing the session ticket keys.
     */
   def getTicketKeys(): Buffer = js.native
   
+  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_OCSPRequest(
     event: OCSPRequest,
@@ -131,6 +158,7 @@ class Server ()
   @JSName("on")
   def on_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
+  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_OCSPRequest(
     event: OCSPRequest,
@@ -167,6 +195,7 @@ class Server ()
   @JSName("once")
   def once_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
+  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_OCSPRequest(
     event: OCSPRequest,
@@ -203,6 +232,7 @@ class Server ()
   @JSName("prependListener")
   def prependListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_OCSPRequest(
     event: OCSPRequest,
@@ -240,17 +270,22 @@ class Server ()
   def prependOnceListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
   /**
-    *
-    * The server.setSecureContext() method replaces the
-    * secure context of an existing server. Existing connections to the
-    * server are not interrupted.
+    * The `server.setSecureContext()` method replaces the secure context of an
+    * existing server. Existing connections to the server are not interrupted.
+    * @since v11.0.0
+    * @param options An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc).
     */
   def setSecureContext(details: SecureContextOptions): Unit = js.native
   
   /**
-    * The server.setSecureContext() method replaces the secure context of
-    * an existing server. Existing connections to the server are not
-    * interrupted.
+    * Sets the session ticket keys.
+    *
+    * Changes to the ticket keys are effective only for future server connections.
+    * Existing or currently pending server connections will use the previous keys.
+    *
+    * See `Session Resumption` for more information.
+    * @since v3.0.0
+    * @param keys A 48-byte buffer containing the session ticket keys.
     */
   def setTicketKeys(keys: Buffer): Unit = js.native
 }

@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ExecSyncOptionsWithBufferEncoding extends ExecSyncOptions {
+trait ExecSyncOptionsWithBufferEncoding
+  extends StObject
+     with ExecSyncOptions {
   
   @JSName("encoding")
   var encoding_ExecSyncOptionsWithBufferEncoding: js.UndefOr[buffer_ | Null] = js.undefined

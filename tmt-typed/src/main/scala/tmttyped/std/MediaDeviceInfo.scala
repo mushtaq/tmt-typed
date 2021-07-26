@@ -27,13 +27,13 @@ object MediaDeviceInfo {
     kind: org.scalajs.dom.experimental.mediastream.MediaDeviceKind,
     label: java.lang.String,
     toJSON: () => js.Any
-  ): org.scalajs.dom.experimental.mediastream.MediaDeviceInfo = {
+  ): MediaDeviceInfo = {
     val __obj = js.Dynamic.literal(deviceId = deviceId.asInstanceOf[js.Any], groupId = groupId.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
-    __obj.asInstanceOf[org.scalajs.dom.experimental.mediastream.MediaDeviceInfo]
+    __obj.asInstanceOf[MediaDeviceInfo]
   }
   
   @scala.inline
-  implicit class MediaDeviceInfoMutableBuilder[Self <: org.scalajs.dom.experimental.mediastream.MediaDeviceInfo] (val x: Self) extends AnyVal {
+  implicit class MediaDeviceInfoMutableBuilder[Self <: MediaDeviceInfo] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setDeviceId(value: java.lang.String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])

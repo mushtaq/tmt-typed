@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IIRFilterNode")
 @js.native
 class IIRFilterNode protected ()
-  extends tmttyped.std.IIRFilterNode {
+  extends StObject
+     with tmttyped.std.IIRFilterNode {
   def this(context: tmttyped.std.BaseAudioContext, options: IIRFilterOptions) = this()
 }

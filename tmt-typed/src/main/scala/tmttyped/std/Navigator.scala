@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. */
 @js.native
 trait Navigator
-  extends MSFileSaver
+  extends StObject
+     with MSFileSaver
      with MSNavigatorDoNotTrack
      with NavigatorAutomationInformation
      with NavigatorBeacon
@@ -46,11 +47,7 @@ trait Navigator
   val mediaDevices: org.scalajs.dom.experimental.mediastream.MediaDevices = js.native
   
   def msLaunchUri(uri: java.lang.String): Unit = js.native
-  def msLaunchUri(
-    uri: java.lang.String,
-    successCallback: js.UndefOr[scala.Nothing],
-    noHandlerCallback: MSLaunchUriCallback
-  ): Unit = js.native
+  def msLaunchUri(uri: java.lang.String, successCallback: Unit, noHandlerCallback: MSLaunchUriCallback): Unit = js.native
   def msLaunchUri(uri: java.lang.String, successCallback: MSLaunchUriCallback): Unit = js.native
   def msLaunchUri(
     uri: java.lang.String,

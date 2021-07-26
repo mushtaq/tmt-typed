@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSInputMethodContext")
 @js.native
 class MSInputMethodContext ()
-  extends tmttyped.std.MSInputMethodContext
+  extends StObject
+     with tmttyped.std.MSInputMethodContext

@@ -13,13 +13,13 @@ trait NodeFilter extends StObject {
 object NodeFilter {
   
   @scala.inline
-  def apply(acceptNode: org.scalajs.dom.raw.Node => Double): org.scalajs.dom.raw.NodeFilter = {
+  def apply(acceptNode: org.scalajs.dom.raw.Node => Double): NodeFilter = {
     val __obj = js.Dynamic.literal(acceptNode = js.Any.fromFunction1(acceptNode))
-    __obj.asInstanceOf[org.scalajs.dom.raw.NodeFilter]
+    __obj.asInstanceOf[NodeFilter]
   }
   
   @scala.inline
-  implicit class NodeFilterMutableBuilder[Self <: org.scalajs.dom.raw.NodeFilter] (val x: Self) extends AnyVal {
+  implicit class NodeFilterMutableBuilder[Self <: NodeFilter] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAcceptNode(value: org.scalajs.dom.raw.Node => Double): Self = StObject.set(x, "acceptNode", js.Any.fromFunction1(value))

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WritableStreamDefaultWriter")
 @js.native
 class WritableStreamDefaultWriter[W] protected ()
-  extends tmttyped.std.WritableStreamDefaultWriter[W] {
+  extends StObject
+     with tmttyped.std.WritableStreamDefaultWriter[W] {
   def this(stream: tmttyped.std.WritableStream[W]) = this()
 }

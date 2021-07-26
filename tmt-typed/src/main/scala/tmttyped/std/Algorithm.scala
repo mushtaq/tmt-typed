@@ -12,13 +12,13 @@ trait Algorithm extends StObject {
 object Algorithm {
   
   @scala.inline
-  def apply(name: java.lang.String): org.scalajs.dom.crypto.Algorithm = {
+  def apply(name: java.lang.String): Algorithm = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.Algorithm]
+    __obj.asInstanceOf[Algorithm]
   }
   
   @scala.inline
-  implicit class AlgorithmMutableBuilder[Self <: org.scalajs.dom.crypto.Algorithm] (val x: Self) extends AnyVal {
+  implicit class AlgorithmMutableBuilder[Self <: Algorithm] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** An event sent when the state of contacts with a touch-sensitive surface changes. This surface can be a touch screen or trackpad, for example. The event can describe one or more points of contact with the screen and includes support for detecting movement, addition and removal of contact points, and so forth. */
 @js.native
-trait TouchEvent extends UIEvent {
+trait TouchEvent
+  extends StObject
+     with UIEvent {
   
   val altKey: scala.Boolean = js.native
   

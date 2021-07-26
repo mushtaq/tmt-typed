@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaQueryListEvent")
 @js.native
 class MediaQueryListEvent protected ()
-  extends tmttyped.std.MediaQueryListEvent {
+  extends StObject
+     with tmttyped.std.MediaQueryListEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: MediaQueryListEventInit) = this()
 }

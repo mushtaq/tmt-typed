@@ -17,7 +17,7 @@ trait Body extends StObject {
   
   def formData(): js.Promise[org.scalajs.dom.raw.FormData]
   
-  def json(): js.Promise[_]
+  def json(): js.Promise[js.Any]
   
   def text(): js.Promise[java.lang.String]
 }
@@ -29,15 +29,15 @@ object Body {
     blob: () => js.Promise[org.scalajs.dom.raw.Blob],
     bodyUsed: scala.Boolean,
     formData: () => js.Promise[org.scalajs.dom.raw.FormData],
-    json: () => js.Promise[_],
+    json: () => js.Promise[js.Any],
     text: () => js.Promise[java.lang.String]
-  ): org.scalajs.dom.experimental.Body = {
+  ): Body = {
     val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), json = js.Any.fromFunction0(json), text = js.Any.fromFunction0(text), body = null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.Body]
+    __obj.asInstanceOf[Body]
   }
   
   @scala.inline
-  implicit class BodyMutableBuilder[Self <: org.scalajs.dom.experimental.Body] (val x: Self) extends AnyVal {
+  implicit class BodyMutableBuilder[Self <: Body] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setArrayBuffer(value: () => js.Promise[js.typedarray.ArrayBuffer]): Self = StObject.set(x, "arrayBuffer", js.Any.fromFunction0(value))
@@ -58,7 +58,7 @@ object Body {
     def setFormData(value: () => js.Promise[org.scalajs.dom.raw.FormData]): Self = StObject.set(x, "formData", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setJson(value: () => js.Promise[_]): Self = StObject.set(x, "json", js.Any.fromFunction0(value))
+    def setJson(value: () => js.Promise[js.Any]): Self = StObject.set(x, "json", js.Any.fromFunction0(value))
     
     @scala.inline
     def setText(value: () => js.Promise[java.lang.String]): Self = StObject.set(x, "text", js.Any.fromFunction0(value))

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Path2D")
 @js.native
 class Path2D ()
-  extends tmttyped.std.Path2D {
+  extends StObject
+     with tmttyped.std.Path2D {
   def this(path: java.lang.String) = this()
   def this(path: tmttyped.std.Path2D) = this()
 }

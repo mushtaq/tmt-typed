@@ -30,13 +30,13 @@ object MediaError {
     MEDIA_ERR_SRC_NOT_SUPPORTED: Double,
     code: Double,
     message: java.lang.String
-  ): org.scalajs.dom.raw.MediaError = {
+  ): MediaError = {
     val __obj = js.Dynamic.literal(MEDIA_ERR_ABORTED = MEDIA_ERR_ABORTED.asInstanceOf[js.Any], MEDIA_ERR_DECODE = MEDIA_ERR_DECODE.asInstanceOf[js.Any], MEDIA_ERR_NETWORK = MEDIA_ERR_NETWORK.asInstanceOf[js.Any], MEDIA_ERR_SRC_NOT_SUPPORTED = MEDIA_ERR_SRC_NOT_SUPPORTED.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.MediaError]
+    __obj.asInstanceOf[MediaError]
   }
   
   @scala.inline
-  implicit class MediaErrorMutableBuilder[Self <: org.scalajs.dom.raw.MediaError] (val x: Self) extends AnyVal {
+  implicit class MediaErrorMutableBuilder[Self <: MediaError] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCode(value: Double): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])

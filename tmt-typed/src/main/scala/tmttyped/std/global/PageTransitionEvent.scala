@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PageTransitionEvent")
 @js.native
 class PageTransitionEvent protected ()
-  extends tmttyped.std.PageTransitionEvent {
+  extends StObject
+     with tmttyped.std.PageTransitionEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: PageTransitionEventInit) = this()
 }

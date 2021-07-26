@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaStreamTrackAudioSourceNode")
 @js.native
 class MediaStreamTrackAudioSourceNode protected ()
-  extends tmttyped.std.AudioNode {
+  extends StObject
+     with tmttyped.std.AudioNode {
   def this(context: org.scalajs.dom.raw.AudioContext, options: MediaStreamTrackAudioSourceOptions) = this()
 }

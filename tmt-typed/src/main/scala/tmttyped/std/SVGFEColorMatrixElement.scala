@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <feColorMatrix> element. */
 @js.native
 trait SVGFEColorMatrixElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
   val SVG_FECOLORMATRIX_TYPE_HUEROTATE: Double = js.native

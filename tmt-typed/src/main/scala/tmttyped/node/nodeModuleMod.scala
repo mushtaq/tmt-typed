@@ -22,7 +22,7 @@ object nodeModuleMod extends Shortcut {
   }
   @JSImport("node:module", JSImport.Namespace)
   @js.native
-  val ^ : Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module] = js.native
+  val ^ : js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = js.native
   
   /* static member */
   @JSImport("node:module", "Module")
@@ -37,7 +37,8 @@ object nodeModuleMod extends Shortcut {
   @JSImport("node:module", "Module")
   @js.native
   class ModuleCls protected ()
-    extends tmttyped.node.NodeJS.Module {
+    extends StObject
+       with tmttyped.node.NodeJS.Module {
     def this(id: java.lang.String) = this()
     def this(id: java.lang.String, parent: Module) = this()
     
@@ -52,6 +53,12 @@ object nodeModuleMod extends Shortcut {
     
     /* CompleteClass */
     override var id: java.lang.String = js.native
+    
+    /**
+      * `true` if the module is running during the Node.js preload
+      */
+    /* CompleteClass */
+    override var isPreloading: Boolean = js.native
     
     /* CompleteClass */
     override var loaded: Boolean = js.native
@@ -77,6 +84,9 @@ object nodeModuleMod extends Shortcut {
   @scala.inline
   def Module_=(x: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
   
+  /**
+    * @since v13.7.0, v12.17.0
+    */
   @JSImport("node:module", "SourceMap")
   @js.native
   class SourceMap protected ()
@@ -98,12 +108,10 @@ object nodeModuleMod extends Shortcut {
   def createRequire(path: URL): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
   /**
-    * @deprecated Deprecated since: v12.2.0. Please use createRequire() instead.
+    * `path` is the resolved path for the file for which a corresponding source map
+    * should be fetched.
+    * @since v13.7.0, v12.17.0
     */
-  /* static member */
-  @scala.inline
-  def createRequireFromPath(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequireFromPath")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
-  
   @scala.inline
   def findSourceMap(path: java.lang.String): tmttyped.node.moduleMod.SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.moduleMod.SourceMap]
   @scala.inline
@@ -114,8 +122,39 @@ object nodeModuleMod extends Shortcut {
   def runMain(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("runMain")().asInstanceOf[Unit]
   
   /**
-    * Updates all the live bindings for builtin ES Modules to match the properties of the CommonJS exports.
-    * It does not add or remove exported names from the ES Modules.
+    * The `module.syncBuiltinESMExports()` method updates all the live bindings for
+    * builtin `ES Modules` to match the properties of the `CommonJS` exports. It
+    * does not add or remove exported names from the `ES Modules`.
+    *
+    * ```js
+    * const fs = require('fs');
+    * const assert = require('assert');
+    * const { syncBuiltinESMExports } = require('module');
+    *
+    * fs.readFile = newAPI;
+    *
+    * delete fs.readFileSync;
+    *
+    * function newAPI() {
+    *   // ...
+    * }
+    *
+    * fs.newAPI = newAPI;
+    *
+    * syncBuiltinESMExports();
+    *
+    * import('fs').then((esmFS) => {
+    *   // It syncs the existing readFile property with the new value
+    *   assert.strictEqual(esmFS.readFile, newAPI);
+    *   // readFileSync has been deleted from the required fs
+    *   assert.strictEqual('readFileSync' in fs, false);
+    *   // syncBuiltinESMExports() does not remove readFileSync from esmFS
+    *   assert.strictEqual('readFileSync' in esmFS, true);
+    *   // syncBuiltinESMExports() does not add names
+    *   assert.strictEqual(esmFS.newAPI, undefined);
+    * });
+    * ```
+    * @since v12.12.0
     */
   @scala.inline
   def syncBuiltinESMExports(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("syncBuiltinESMExports")().asInstanceOf[Unit]
@@ -124,8 +163,8 @@ object nodeModuleMod extends Shortcut {
   @scala.inline
   def wrap(code: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
   
-  type _To = Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]
+  type _To = js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module])
   
   /* This means you don't have to write `^`, but can instead just say `nodeModuleMod.foo` */
-  override def _to: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module] = ^
+  override def _to: js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = ^
 }

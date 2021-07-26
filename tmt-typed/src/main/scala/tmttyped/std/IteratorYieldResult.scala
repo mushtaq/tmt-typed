@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IteratorYieldResult[TYield]
-  extends IteratorResult[TYield, js.Any] {
+  extends StObject
+     with IteratorResult[TYield, js.Any] {
   
   var done: js.UndefOr[`false`] = js.undefined
   

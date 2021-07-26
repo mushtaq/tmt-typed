@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PannerOptions extends AudioNodeOptions {
+trait PannerOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var coneInnerAngle: js.UndefOr[Double] = js.undefined
   

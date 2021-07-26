@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DhImportKeyParams extends Algorithm {
+trait DhImportKeyParams
+  extends StObject
+     with Algorithm {
   
   var generator: js.typedarray.Uint8Array
   
@@ -14,13 +16,13 @@ trait DhImportKeyParams extends Algorithm {
 object DhImportKeyParams {
   
   @scala.inline
-  def apply(generator: js.typedarray.Uint8Array, name: java.lang.String, prime: js.typedarray.Uint8Array): org.scalajs.dom.crypto.DhImportKeyParams = {
+  def apply(generator: js.typedarray.Uint8Array, name: java.lang.String, prime: js.typedarray.Uint8Array): DhImportKeyParams = {
     val __obj = js.Dynamic.literal(generator = generator.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], prime = prime.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.DhImportKeyParams]
+    __obj.asInstanceOf[DhImportKeyParams]
   }
   
   @scala.inline
-  implicit class DhImportKeyParamsMutableBuilder[Self <: org.scalajs.dom.crypto.DhImportKeyParams] (val x: Self) extends AnyVal {
+  implicit class DhImportKeyParamsMutableBuilder[Self <: DhImportKeyParams] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setGenerator(value: js.typedarray.Uint8Array): Self = StObject.set(x, "generator", value.asInstanceOf[js.Any])

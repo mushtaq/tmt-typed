@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
+trait XMLHttpRequestEventMap
+  extends StObject
+     with XMLHttpRequestEventTargetEventMap {
   
   var readystatechange: org.scalajs.dom.raw.Event
 }

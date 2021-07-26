@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AuthenticatorResponse")
 @js.native
 class AuthenticatorResponse ()
-  extends tmttyped.std.AuthenticatorResponse {
+  extends StObject
+     with tmttyped.std.AuthenticatorResponse {
   
   /* CompleteClass */
   override val clientDataJSON: js.typedarray.ArrayBuffer = js.native

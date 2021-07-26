@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("NavigationPreloadManager")
 @js.native
 class NavigationPreloadManager ()
-  extends tmttyped.std.NavigationPreloadManager {
+  extends StObject
+     with tmttyped.std.NavigationPreloadManager {
   
   /* CompleteClass */
   override def disable(): js.Promise[Unit] = js.native

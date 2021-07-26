@@ -17,13 +17,13 @@ trait WebGLShaderPrecisionFormat extends StObject {
 object WebGLShaderPrecisionFormat {
   
   @scala.inline
-  def apply(precision: GLint, rangeMax: GLint, rangeMin: GLint): org.scalajs.dom.raw.WebGLShaderPrecisionFormat = {
+  def apply(precision: GLint, rangeMax: GLint, rangeMin: GLint): WebGLShaderPrecisionFormat = {
     val __obj = js.Dynamic.literal(precision = precision.asInstanceOf[js.Any], rangeMax = rangeMax.asInstanceOf[js.Any], rangeMin = rangeMin.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.WebGLShaderPrecisionFormat]
+    __obj.asInstanceOf[WebGLShaderPrecisionFormat]
   }
   
   @scala.inline
-  implicit class WebGLShaderPrecisionFormatMutableBuilder[Self <: org.scalajs.dom.raw.WebGLShaderPrecisionFormat] (val x: Self) extends AnyVal {
+  implicit class WebGLShaderPrecisionFormatMutableBuilder[Self <: WebGLShaderPrecisionFormat] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setPrecision(value: GLint): Self = StObject.set(x, "precision", value.asInstanceOf[js.Any])

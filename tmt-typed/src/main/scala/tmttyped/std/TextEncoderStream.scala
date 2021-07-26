@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TextEncoderStream
-  extends GenericTransformStream
+  extends StObject
+     with GenericTransformStream
      with TextEncoderCommon {
   
   @JSName("readable")

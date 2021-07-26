@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VideoPlaybackQuality")
 @js.native
 class VideoPlaybackQuality ()
-  extends tmttyped.std.VideoPlaybackQuality {
+  extends StObject
+     with tmttyped.std.VideoPlaybackQuality {
   
   /* CompleteClass */
   override val creationTime: Double = js.native

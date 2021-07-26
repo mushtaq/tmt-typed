@@ -1,6 +1,6 @@
 package tmttyped.node.fsMod
 
-import tmttyped.node.BufferEncoding
+import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

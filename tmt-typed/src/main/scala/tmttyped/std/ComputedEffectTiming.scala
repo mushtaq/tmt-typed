@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ComputedEffectTiming extends EffectTiming {
+trait ComputedEffectTiming
+  extends StObject
+     with EffectTiming {
   
   var activeDuration: js.UndefOr[Double] = js.undefined
   

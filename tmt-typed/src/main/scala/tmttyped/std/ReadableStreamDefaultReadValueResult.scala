@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ReadableStreamDefaultReadValueResult[T] extends ReadableStreamDefaultReadResult[T] {
+trait ReadableStreamDefaultReadValueResult[T]
+  extends StObject
+     with ReadableStreamDefaultReadResult[T] {
   
   var done: `false`
   

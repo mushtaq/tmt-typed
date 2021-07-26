@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait LookupAllOptions extends LookupOptions {
+trait LookupAllOptions
+  extends StObject
+     with LookupOptions {
   
   @JSName("all")
   var all_LookupAllOptions: `true`

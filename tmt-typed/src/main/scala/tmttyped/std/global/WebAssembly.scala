@@ -31,12 +31,16 @@ object WebAssembly {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.CompileError")
   @js.native
-  class CompileErrorCls () extends CompileError
+  class CompileErrorCls ()
+    extends StObject
+       with CompileError
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.Global")
   @js.native
-  class GlobalCls protected () extends Global {
+  class GlobalCls protected ()
+    extends StObject
+       with Global {
     def this(descriptor: GlobalDescriptor) = this()
     def this(descriptor: GlobalDescriptor, v: js.Any) = this()
     
@@ -47,7 +51,9 @@ object WebAssembly {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.Instance")
   @js.native
-  class InstanceCls protected () extends Instance {
+  class InstanceCls protected ()
+    extends StObject
+       with Instance {
     def this(module: Module) = this()
     def this(module: Module, importObject: Imports) = this()
     
@@ -58,12 +64,16 @@ object WebAssembly {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.LinkError")
   @js.native
-  class LinkErrorCls () extends LinkError
+  class LinkErrorCls ()
+    extends StObject
+       with LinkError
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.Memory")
   @js.native
-  class MemoryCls protected () extends Memory {
+  class MemoryCls protected ()
+    extends StObject
+       with Memory {
     def this(descriptor: MemoryDescriptor) = this()
     
     /* CompleteClass */
@@ -92,19 +102,25 @@ object WebAssembly {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.Module")
   @js.native
-  class ModuleCls protected () extends Module {
+  class ModuleCls protected ()
+    extends StObject
+       with Module {
     def this(bytes: BufferSource) = this()
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.RuntimeError")
   @js.native
-  class RuntimeErrorCls () extends RuntimeError
+  class RuntimeErrorCls ()
+    extends StObject
+       with RuntimeError
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("WebAssembly.Table")
   @js.native
-  class TableCls protected () extends Table {
+  class TableCls protected ()
+    extends StObject
+       with Table {
     def this(descriptor: TableDescriptor) = this()
   }
   

@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ShadowRoot
-  extends DocumentFragment
+  extends StObject
+     with DocumentFragment
      with DocumentOrShadowRoot
      with InnerHTML {
   

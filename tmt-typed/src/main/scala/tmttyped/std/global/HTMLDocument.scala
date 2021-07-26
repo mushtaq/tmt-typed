@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLDocument")
 @js.native
 class HTMLDocument ()
-  extends tmttyped.std.HTMLDocument {
+  extends StObject
+     with tmttyped.std.HTMLDocument {
   
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.raw.Element | Null = js.native

@@ -6,42 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WindowEventMap
-  extends GlobalEventHandlersEventMap
+  extends StObject
+     with GlobalEventHandlersEventMap
      with WindowEventHandlersEventMap {
   
-  var MSGestureChange: org.scalajs.dom.raw.Event
-  
-  var MSGestureDoubleTap: org.scalajs.dom.raw.Event
-  
-  var MSGestureEnd: org.scalajs.dom.raw.Event
-  
-  var MSGestureHold: org.scalajs.dom.raw.Event
-  
-  var MSGestureStart: org.scalajs.dom.raw.Event
-  
-  var MSGestureTap: org.scalajs.dom.raw.Event
-  
-  var MSInertiaStart: org.scalajs.dom.raw.Event
-  
-  var MSPointerCancel: org.scalajs.dom.raw.Event
-  
-  var MSPointerDown: org.scalajs.dom.raw.Event
-  
-  var MSPointerEnter: org.scalajs.dom.raw.Event
-  
-  var MSPointerLeave: org.scalajs.dom.raw.Event
-  
-  var MSPointerMove: org.scalajs.dom.raw.Event
-  
-  var MSPointerOut: org.scalajs.dom.raw.Event
-  
-  var MSPointerOver: org.scalajs.dom.raw.Event
-  
-  var MSPointerUp: org.scalajs.dom.raw.Event
-  
   var compassneedscalibration: org.scalajs.dom.raw.Event
-  
-  var devicelight: DeviceLightEvent
   
   var devicemotion: org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent
   
@@ -57,9 +26,6 @@ trait WindowEventMap
   
   var orientationchange: org.scalajs.dom.raw.Event
   
-  @JSName("progress")
-  var progress_WindowEventMap: org.scalajs.dom.raw.ProgressEvent
-  
   var readystatechange: org.scalajs.dom.raw.ProgressEvent
   
   var vrdisplayactivate: org.scalajs.dom.raw.Event
@@ -72,33 +38,12 @@ trait WindowEventMap
   
   var vrdisplaydisconnect: org.scalajs.dom.raw.Event
   
-  var vrdisplayfocus: org.scalajs.dom.raw.Event
-  
-  var vrdisplaypointerrestricted: org.scalajs.dom.raw.Event
-  
-  var vrdisplaypointerunrestricted: org.scalajs.dom.raw.Event
-  
   var vrdisplaypresentchange: org.scalajs.dom.raw.Event
 }
 object WindowEventMap {
   
   @scala.inline
   def apply(
-    MSGestureChange: org.scalajs.dom.raw.Event,
-    MSGestureDoubleTap: org.scalajs.dom.raw.Event,
-    MSGestureEnd: org.scalajs.dom.raw.Event,
-    MSGestureHold: org.scalajs.dom.raw.Event,
-    MSGestureStart: org.scalajs.dom.raw.Event,
-    MSGestureTap: org.scalajs.dom.raw.Event,
-    MSInertiaStart: org.scalajs.dom.raw.Event,
-    MSPointerCancel: org.scalajs.dom.raw.Event,
-    MSPointerDown: org.scalajs.dom.raw.Event,
-    MSPointerEnter: org.scalajs.dom.raw.Event,
-    MSPointerLeave: org.scalajs.dom.raw.Event,
-    MSPointerMove: org.scalajs.dom.raw.Event,
-    MSPointerOut: org.scalajs.dom.raw.Event,
-    MSPointerOver: org.scalajs.dom.raw.Event,
-    MSPointerUp: org.scalajs.dom.raw.Event,
     abort: org.scalajs.dom.raw.UIEvent,
     afterprint: org.scalajs.dom.raw.Event,
     animationcancel: org.scalajs.dom.raw.AnimationEvent,
@@ -123,7 +68,6 @@ object WindowEventMap {
     contextmenu: org.scalajs.dom.raw.MouseEvent,
     cuechange: org.scalajs.dom.raw.Event,
     dblclick: org.scalajs.dom.raw.MouseEvent,
-    devicelight: DeviceLightEvent,
     devicemotion: org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent,
     deviceorientation: org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent,
     deviceorientationabsolute: org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent,
@@ -219,14 +163,11 @@ object WindowEventMap {
     vrdisplayconnect: org.scalajs.dom.raw.Event,
     vrdisplaydeactivate: org.scalajs.dom.raw.Event,
     vrdisplaydisconnect: org.scalajs.dom.raw.Event,
-    vrdisplayfocus: org.scalajs.dom.raw.Event,
-    vrdisplaypointerrestricted: org.scalajs.dom.raw.Event,
-    vrdisplaypointerunrestricted: org.scalajs.dom.raw.Event,
     vrdisplaypresentchange: org.scalajs.dom.raw.Event,
     waiting: org.scalajs.dom.raw.Event,
     wheel: org.scalajs.dom.raw.WheelEvent
   ): WindowEventMap = {
-    val __obj = js.Dynamic.literal(MSGestureChange = MSGestureChange.asInstanceOf[js.Any], MSGestureDoubleTap = MSGestureDoubleTap.asInstanceOf[js.Any], MSGestureEnd = MSGestureEnd.asInstanceOf[js.Any], MSGestureHold = MSGestureHold.asInstanceOf[js.Any], MSGestureStart = MSGestureStart.asInstanceOf[js.Any], MSGestureTap = MSGestureTap.asInstanceOf[js.Any], MSInertiaStart = MSInertiaStart.asInstanceOf[js.Any], MSPointerCancel = MSPointerCancel.asInstanceOf[js.Any], MSPointerDown = MSPointerDown.asInstanceOf[js.Any], MSPointerEnter = MSPointerEnter.asInstanceOf[js.Any], MSPointerLeave = MSPointerLeave.asInstanceOf[js.Any], MSPointerMove = MSPointerMove.asInstanceOf[js.Any], MSPointerOut = MSPointerOut.asInstanceOf[js.Any], MSPointerOver = MSPointerOver.asInstanceOf[js.Any], MSPointerUp = MSPointerUp.asInstanceOf[js.Any], abort = abort.asInstanceOf[js.Any], afterprint = afterprint.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], beforeinput = beforeinput.asInstanceOf[js.Any], beforeprint = beforeprint.asInstanceOf[js.Any], beforeunload = beforeunload.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], compassneedscalibration = compassneedscalibration.asInstanceOf[js.Any], compositionend = compositionend.asInstanceOf[js.Any], compositionstart = compositionstart.asInstanceOf[js.Any], compositionupdate = compositionupdate.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], devicelight = devicelight.asInstanceOf[js.Any], devicemotion = devicemotion.asInstanceOf[js.Any], deviceorientation = deviceorientation.asInstanceOf[js.Any], deviceorientationabsolute = deviceorientationabsolute.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], gamepadconnected = gamepadconnected.asInstanceOf[js.Any], gamepaddisconnected = gamepaddisconnected.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], hashchange = hashchange.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], languagechange = languagechange.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], messageerror = messageerror.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], mousewheel = mousewheel.asInstanceOf[js.Any], offline = offline.asInstanceOf[js.Any], online = online.asInstanceOf[js.Any], orientationchange = orientationchange.asInstanceOf[js.Any], pagehide = pagehide.asInstanceOf[js.Any], pageshow = pageshow.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], popstate = popstate.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], readystatechange = readystatechange.asInstanceOf[js.Any], rejectionhandled = rejectionhandled.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], unhandledrejection = unhandledrejection.asInstanceOf[js.Any], unload = unload.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], vrdisplayactivate = vrdisplayactivate.asInstanceOf[js.Any], vrdisplayblur = vrdisplayblur.asInstanceOf[js.Any], vrdisplayconnect = vrdisplayconnect.asInstanceOf[js.Any], vrdisplaydeactivate = vrdisplaydeactivate.asInstanceOf[js.Any], vrdisplaydisconnect = vrdisplaydisconnect.asInstanceOf[js.Any], vrdisplayfocus = vrdisplayfocus.asInstanceOf[js.Any], vrdisplaypointerrestricted = vrdisplaypointerrestricted.asInstanceOf[js.Any], vrdisplaypointerunrestricted = vrdisplaypointerunrestricted.asInstanceOf[js.Any], vrdisplaypresentchange = vrdisplaypresentchange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], afterprint = afterprint.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], beforeinput = beforeinput.asInstanceOf[js.Any], beforeprint = beforeprint.asInstanceOf[js.Any], beforeunload = beforeunload.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], compassneedscalibration = compassneedscalibration.asInstanceOf[js.Any], compositionend = compositionend.asInstanceOf[js.Any], compositionstart = compositionstart.asInstanceOf[js.Any], compositionupdate = compositionupdate.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], devicemotion = devicemotion.asInstanceOf[js.Any], deviceorientation = deviceorientation.asInstanceOf[js.Any], deviceorientationabsolute = deviceorientationabsolute.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], gamepadconnected = gamepadconnected.asInstanceOf[js.Any], gamepaddisconnected = gamepaddisconnected.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], hashchange = hashchange.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], languagechange = languagechange.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], messageerror = messageerror.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], mousewheel = mousewheel.asInstanceOf[js.Any], offline = offline.asInstanceOf[js.Any], online = online.asInstanceOf[js.Any], orientationchange = orientationchange.asInstanceOf[js.Any], pagehide = pagehide.asInstanceOf[js.Any], pageshow = pageshow.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], popstate = popstate.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], readystatechange = readystatechange.asInstanceOf[js.Any], rejectionhandled = rejectionhandled.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], storage = storage.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], unhandledrejection = unhandledrejection.asInstanceOf[js.Any], unload = unload.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], vrdisplayactivate = vrdisplayactivate.asInstanceOf[js.Any], vrdisplayblur = vrdisplayblur.asInstanceOf[js.Any], vrdisplayconnect = vrdisplayconnect.asInstanceOf[js.Any], vrdisplaydeactivate = vrdisplaydeactivate.asInstanceOf[js.Any], vrdisplaydisconnect = vrdisplaydisconnect.asInstanceOf[js.Any], vrdisplaypresentchange = vrdisplaypresentchange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowEventMap]
   }
   
@@ -235,9 +176,6 @@ object WindowEventMap {
     
     @scala.inline
     def setCompassneedscalibration(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "compassneedscalibration", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDevicelight(value: DeviceLightEvent): Self = StObject.set(x, "devicelight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDevicemotion(value: org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent): Self = StObject.set(x, "devicemotion", value.asInstanceOf[js.Any])
@@ -255,58 +193,10 @@ object WindowEventMap {
     def setGamepaddisconnected(value: org.scalajs.dom.experimental.gamepad.GamepadEvent): Self = StObject.set(x, "gamepaddisconnected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMSGestureChange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureChange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSGestureDoubleTap(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureDoubleTap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSGestureEnd(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureEnd", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSGestureHold(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureHold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSGestureStart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureStart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSGestureTap(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSGestureTap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSInertiaStart(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSInertiaStart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerCancel(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerCancel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerDown(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerDown", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerEnter(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerEnter", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerLeave(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerLeave", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerMove(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerMove", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerOut(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerOut", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerOver(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerOver", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMSPointerUp(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "MSPointerUp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setMousewheel(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "mousewheel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrientationchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "orientationchange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProgress(value: org.scalajs.dom.raw.ProgressEvent): Self = StObject.set(x, "progress", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReadystatechange(value: org.scalajs.dom.raw.ProgressEvent): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
@@ -325,15 +215,6 @@ object WindowEventMap {
     
     @scala.inline
     def setVrdisplaydisconnect(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "vrdisplaydisconnect", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVrdisplayfocus(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "vrdisplayfocus", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVrdisplaypointerrestricted(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "vrdisplaypointerrestricted", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVrdisplaypointerunrestricted(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "vrdisplaypointerunrestricted", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVrdisplaypresentchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "vrdisplaypresentchange", value.asInstanceOf[js.Any])

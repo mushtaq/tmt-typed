@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AbortController")
 @js.native
 class AbortController ()
-  extends tmttyped.std.AbortController {
+  extends StObject
+     with tmttyped.std.AbortController {
   
   /**
     * Invoking this method will set this object's AbortSignal's aborted flag and signal to any observers that the associated activity is to be aborted.

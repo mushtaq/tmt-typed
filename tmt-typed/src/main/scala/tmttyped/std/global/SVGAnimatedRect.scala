@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAnimatedRect")
 @js.native
 class SVGAnimatedRect ()
-  extends tmttyped.std.SVGAnimatedRect {
+  extends StObject
+     with tmttyped.std.SVGAnimatedRect {
   
   /* CompleteClass */
   override val animVal: tmttyped.std.DOMRectReadOnly = js.native

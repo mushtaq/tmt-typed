@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait FocusNavigationEventInit extends EventInit {
+trait FocusNavigationEventInit
+  extends StObject
+     with EventInit {
   
   var navigationReason: js.UndefOr[java.lang.String | Null] = js.undefined
   

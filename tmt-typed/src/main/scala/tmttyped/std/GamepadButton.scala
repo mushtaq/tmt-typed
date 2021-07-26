@@ -17,13 +17,13 @@ trait GamepadButton extends StObject {
 object GamepadButton {
   
   @scala.inline
-  def apply(pressed: scala.Boolean, touched: scala.Boolean, value: Double): org.scalajs.dom.experimental.gamepad.GamepadButton = {
+  def apply(pressed: scala.Boolean, touched: scala.Boolean, value: Double): GamepadButton = {
     val __obj = js.Dynamic.literal(pressed = pressed.asInstanceOf[js.Any], touched = touched.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.experimental.gamepad.GamepadButton]
+    __obj.asInstanceOf[GamepadButton]
   }
   
   @scala.inline
-  implicit class GamepadButtonMutableBuilder[Self <: org.scalajs.dom.experimental.gamepad.GamepadButton] (val x: Self) extends AnyVal {
+  implicit class GamepadButtonMutableBuilder[Self <: GamepadButton] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setPressed(value: scala.Boolean): Self = StObject.set(x, "pressed", value.asInstanceOf[js.Any])

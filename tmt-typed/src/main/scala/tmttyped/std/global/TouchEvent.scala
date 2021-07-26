@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TouchEvent")
 @js.native
 class TouchEvent protected ()
-  extends tmttyped.std.TouchEvent {
+  extends StObject
+     with tmttyped.std.TouchEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: TouchEventInit) = this()
 }

@@ -9,7 +9,9 @@ object flowableRequestOperatorMod {
   
   @JSImport("rsocket-flowable/FlowableRequestOperator", JSImport.Default)
   @js.native
-  class default[T] protected () extends FlowableRequestOperator[T] {
+  class default[T] protected ()
+    extends StObject
+       with FlowableRequestOperator[T] {
     def this(
       subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ js.Any,
       toRequest: Double

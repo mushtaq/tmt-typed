@@ -18,13 +18,13 @@ object SVGAnimatedPreserveAspectRatio {
   def apply(
     animVal: org.scalajs.dom.raw.SVGPreserveAspectRatio,
     baseVal: org.scalajs.dom.raw.SVGPreserveAspectRatio
-  ): org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio = {
+  ): SVGAnimatedPreserveAspectRatio = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio]
+    __obj.asInstanceOf[SVGAnimatedPreserveAspectRatio]
   }
   
   @scala.inline
-  implicit class SVGAnimatedPreserveAspectRatioMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedPreserveAspectRatioMutableBuilder[Self <: SVGAnimatedPreserveAspectRatio] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: org.scalajs.dom.raw.SVGPreserveAspectRatio): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

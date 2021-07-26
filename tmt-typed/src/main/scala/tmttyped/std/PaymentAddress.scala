@@ -16,8 +16,6 @@ trait PaymentAddress extends StObject {
   
   val dependentLocality: java.lang.String
   
-  val languageCode: java.lang.String
-  
   val organization: java.lang.String
   
   val phone: java.lang.String
@@ -40,7 +38,6 @@ object PaymentAddress {
     city: java.lang.String,
     country: java.lang.String,
     dependentLocality: java.lang.String,
-    languageCode: java.lang.String,
     organization: java.lang.String,
     phone: java.lang.String,
     postalCode: java.lang.String,
@@ -49,7 +46,7 @@ object PaymentAddress {
     sortingCode: java.lang.String,
     toJSON: () => js.Any
   ): PaymentAddress = {
-    val __obj = js.Dynamic.literal(addressLine = addressLine.asInstanceOf[js.Any], city = city.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], dependentLocality = dependentLocality.asInstanceOf[js.Any], languageCode = languageCode.asInstanceOf[js.Any], organization = organization.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], postalCode = postalCode.asInstanceOf[js.Any], recipient = recipient.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any], sortingCode = sortingCode.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    val __obj = js.Dynamic.literal(addressLine = addressLine.asInstanceOf[js.Any], city = city.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], dependentLocality = dependentLocality.asInstanceOf[js.Any], organization = organization.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], postalCode = postalCode.asInstanceOf[js.Any], recipient = recipient.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any], sortingCode = sortingCode.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[PaymentAddress]
   }
   
@@ -70,9 +67,6 @@ object PaymentAddress {
     
     @scala.inline
     def setDependentLocality(value: java.lang.String): Self = StObject.set(x, "dependentLocality", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLanguageCode(value: java.lang.String): Self = StObject.set(x, "languageCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrganization(value: java.lang.String): Self = StObject.set(x, "organization", value.asInstanceOf[js.Any])

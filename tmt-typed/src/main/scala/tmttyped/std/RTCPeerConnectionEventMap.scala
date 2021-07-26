@@ -23,8 +23,6 @@ trait RTCPeerConnectionEventMap extends StObject {
   
   var signalingstatechange: org.scalajs.dom.raw.Event
   
-  var statsended: RTCStatsEvent
-  
   var track: RTCTrackEvent
 }
 object RTCPeerConnectionEventMap {
@@ -39,10 +37,9 @@ object RTCPeerConnectionEventMap {
     icegatheringstatechange: org.scalajs.dom.raw.Event,
     negotiationneeded: org.scalajs.dom.raw.Event,
     signalingstatechange: org.scalajs.dom.raw.Event,
-    statsended: RTCStatsEvent,
     track: RTCTrackEvent
   ): RTCPeerConnectionEventMap = {
-    val __obj = js.Dynamic.literal(connectionstatechange = connectionstatechange.asInstanceOf[js.Any], datachannel = datachannel.asInstanceOf[js.Any], icecandidate = icecandidate.asInstanceOf[js.Any], icecandidateerror = icecandidateerror.asInstanceOf[js.Any], iceconnectionstatechange = iceconnectionstatechange.asInstanceOf[js.Any], icegatheringstatechange = icegatheringstatechange.asInstanceOf[js.Any], negotiationneeded = negotiationneeded.asInstanceOf[js.Any], signalingstatechange = signalingstatechange.asInstanceOf[js.Any], statsended = statsended.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(connectionstatechange = connectionstatechange.asInstanceOf[js.Any], datachannel = datachannel.asInstanceOf[js.Any], icecandidate = icecandidate.asInstanceOf[js.Any], icecandidateerror = icecandidateerror.asInstanceOf[js.Any], iceconnectionstatechange = iceconnectionstatechange.asInstanceOf[js.Any], icegatheringstatechange = icegatheringstatechange.asInstanceOf[js.Any], negotiationneeded = negotiationneeded.asInstanceOf[js.Any], signalingstatechange = signalingstatechange.asInstanceOf[js.Any], track = track.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCPeerConnectionEventMap]
   }
   
@@ -72,9 +69,6 @@ object RTCPeerConnectionEventMap {
     
     @scala.inline
     def setSignalingstatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "signalingstatechange", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStatsended(value: RTCStatsEvent): Self = StObject.set(x, "statsended", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTrack(value: RTCTrackEvent): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])

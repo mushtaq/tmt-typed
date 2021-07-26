@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("InputEvent")
 @js.native
 class InputEvent protected ()
-  extends tmttyped.std.InputEvent {
+  extends StObject
+     with tmttyped.std.InputEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: InputEventInit) = this()
 }

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AnalyserNode")
 @js.native
 class AnalyserNode protected ()
-  extends tmttyped.std.AnalyserNode {
+  extends StObject
+     with tmttyped.std.AnalyserNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: AnalyserOptions) = this()
 }

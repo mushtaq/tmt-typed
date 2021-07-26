@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PublicKeyCredential extends Credential {
+trait PublicKeyCredential
+  extends StObject
+     with Credential {
   
   def getClientExtensionResults(): AuthenticationExtensionsClientOutputs
   

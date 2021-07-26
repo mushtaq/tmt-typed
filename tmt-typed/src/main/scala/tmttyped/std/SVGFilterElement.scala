@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Provides access to the properties of <filter> elements, as well as methods to manipulate them. */
 @js.native
 trait SVGFilterElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGURIReference {
   
   /* InferMemberOverrides */

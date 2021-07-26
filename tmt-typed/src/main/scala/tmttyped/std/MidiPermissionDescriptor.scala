@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MidiPermissionDescriptor extends PermissionDescriptor {
+trait MidiPermissionDescriptor
+  extends StObject
+     with PermissionDescriptor {
   
   @JSName("name")
   var name_MidiPermissionDescriptor: midi

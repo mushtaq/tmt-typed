@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SpeechRecognitionEventInit extends EventInit {
+trait SpeechRecognitionEventInit
+  extends StObject
+     with EventInit {
   
   var resultIndex: js.UndefOr[Double] = js.undefined
   

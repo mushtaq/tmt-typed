@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSMediaKeyError")
 @js.native
 class MSMediaKeyError ()
-  extends tmttyped.std.MSMediaKeyError {
+  extends StObject
+     with tmttyped.std.MSMediaKeyError {
   
   /* CompleteClass */
   override val MS_MEDIA_KEYERR_CLIENT: Double = js.native

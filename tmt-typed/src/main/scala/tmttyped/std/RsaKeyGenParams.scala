@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RsaKeyGenParams extends Algorithm {
+trait RsaKeyGenParams
+  extends StObject
+     with Algorithm {
   
   var modulusLength: Double
   
@@ -14,13 +16,13 @@ trait RsaKeyGenParams extends Algorithm {
 object RsaKeyGenParams {
   
   @scala.inline
-  def apply(modulusLength: Double, name: java.lang.String, publicExponent: js.typedarray.Uint8Array): org.scalajs.dom.crypto.RsaKeyGenParams = {
+  def apply(modulusLength: Double, name: java.lang.String, publicExponent: js.typedarray.Uint8Array): RsaKeyGenParams = {
     val __obj = js.Dynamic.literal(modulusLength = modulusLength.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publicExponent = publicExponent.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.RsaKeyGenParams]
+    __obj.asInstanceOf[RsaKeyGenParams]
   }
   
   @scala.inline
-  implicit class RsaKeyGenParamsMutableBuilder[Self <: org.scalajs.dom.crypto.RsaKeyGenParams] (val x: Self) extends AnyVal {
+  implicit class RsaKeyGenParamsMutableBuilder[Self <: RsaKeyGenParams] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setModulusLength(value: Double): Self = StObject.set(x, "modulusLength", value.asInstanceOf[js.Any])

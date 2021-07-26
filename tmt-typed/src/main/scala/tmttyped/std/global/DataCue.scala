@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DataCue")
 @js.native
 class DataCue ()
-  extends tmttyped.std.DataCue
+  extends StObject
+     with tmttyped.std.DataCue

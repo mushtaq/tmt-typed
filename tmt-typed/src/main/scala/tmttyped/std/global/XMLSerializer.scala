@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XMLSerializer")
 @js.native
 class XMLSerializer ()
-  extends tmttyped.std.XMLSerializer {
+  extends StObject
+     with tmttyped.std.XMLSerializer {
   
   /* CompleteClass */
   override def serializeToString(root: org.scalajs.dom.raw.Node): java.lang.String = js.native

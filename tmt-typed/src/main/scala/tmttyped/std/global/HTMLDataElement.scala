@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLDataElement")
 @js.native
 class HTMLDataElement ()
-  extends tmttyped.std.HTMLDataElement {
+  extends StObject
+     with tmttyped.std.HTMLDataElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

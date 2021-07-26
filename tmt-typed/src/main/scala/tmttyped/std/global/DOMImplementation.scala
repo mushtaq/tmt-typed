@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMImplementation")
 @js.native
 class DOMImplementation ()
-  extends tmttyped.std.DOMImplementation
+  extends StObject
+     with tmttyped.std.DOMImplementation

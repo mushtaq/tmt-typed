@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GeolocationPositionError")
 @js.native
 class GeolocationPositionError ()
-  extends tmttyped.std.GeolocationPositionError {
+  extends StObject
+     with tmttyped.std.GeolocationPositionError {
   
   /* CompleteClass */
   override val PERMISSION_DENIED: Double = js.native

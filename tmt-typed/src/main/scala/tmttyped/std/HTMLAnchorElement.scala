@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. */
 @js.native
 trait HTMLAnchorElement
-  extends HTMLElement
+  extends StObject
+     with HTMLElement
      with HTMLHyperlinkElementUtils {
   
   /* InferMemberOverrides */

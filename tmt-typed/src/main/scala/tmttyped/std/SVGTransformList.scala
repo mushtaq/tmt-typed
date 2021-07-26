@@ -42,13 +42,13 @@ object SVGTransformList {
     numberOfItems: Double,
     removeItem: Double => org.scalajs.dom.raw.SVGTransform,
     replaceItem: (org.scalajs.dom.raw.SVGTransform, Double) => org.scalajs.dom.raw.SVGTransform
-  ): org.scalajs.dom.raw.SVGTransformList = {
+  ): SVGTransformList = {
     val __obj = js.Dynamic.literal(appendItem = js.Any.fromFunction1(appendItem), clear = js.Any.fromFunction0(clear), consolidate = js.Any.fromFunction0(consolidate), createSVGTransformFromMatrix = js.Any.fromFunction1(createSVGTransformFromMatrix), getItem = js.Any.fromFunction1(getItem), initialize = js.Any.fromFunction1(initialize), insertItemBefore = js.Any.fromFunction2(insertItemBefore), numberOfItems = numberOfItems.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), replaceItem = js.Any.fromFunction2(replaceItem))
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGTransformList]
+    __obj.asInstanceOf[SVGTransformList]
   }
   
   @scala.inline
-  implicit class SVGTransformListMutableBuilder[Self <: org.scalajs.dom.raw.SVGTransformList] (val x: Self) extends AnyVal {
+  implicit class SVGTransformListMutableBuilder[Self <: SVGTransformList] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAppendItem(value: org.scalajs.dom.raw.SVGTransform => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "appendItem", js.Any.fromFunction1(value))

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIceGatherer")
 @js.native
 class RTCIceGatherer protected ()
-  extends tmttyped.std.RTCIceGatherer {
+  extends StObject
+     with tmttyped.std.RTCIceGatherer {
   def this(options: RTCIceGatherOptions) = this()
 }

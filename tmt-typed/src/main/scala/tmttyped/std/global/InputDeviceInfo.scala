@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("InputDeviceInfo")
 @js.native
 class InputDeviceInfo ()
-  extends tmttyped.std.InputDeviceInfo {
+  extends StObject
+     with tmttyped.std.InputDeviceInfo {
   
   /* CompleteClass */
   override val deviceId: java.lang.String = js.native

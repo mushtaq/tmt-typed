@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This EncryptedMediaExtensions API interface contains the content and related data when the content decryption module generates a message for the session. */
 @js.native
-trait MediaKeyMessageEvent extends Event {
+trait MediaKeyMessageEvent
+  extends StObject
+     with Event {
   
   val message: js.typedarray.ArrayBuffer = js.native
   

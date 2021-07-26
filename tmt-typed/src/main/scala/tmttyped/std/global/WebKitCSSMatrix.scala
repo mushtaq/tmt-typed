@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebKitCSSMatrix")
 @js.native
 class WebKitCSSMatrix ()
-  extends tmttyped.std.DOMMatrix {
+  extends StObject
+     with tmttyped.std.DOMMatrix {
   def this(init: java.lang.String) = this()
   def this(init: js.Array[Double]) = this()
 }

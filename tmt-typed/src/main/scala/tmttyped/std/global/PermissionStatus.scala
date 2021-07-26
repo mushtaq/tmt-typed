@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PermissionStatus")
 @js.native
 class PermissionStatus ()
-  extends tmttyped.std.PermissionStatus
+  extends StObject
+     with tmttyped.std.PermissionStatus

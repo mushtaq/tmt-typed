@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** SVG elements whose primary purpose is to directly render graphics into a group. */
 @js.native
 trait SVGGraphicsElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGTests {
   
   /* InferMemberOverrides */

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VTTCue")
 @js.native
 class VTTCue protected ()
-  extends tmttyped.std.VTTCue {
+  extends StObject
+     with tmttyped.std.VTTCue {
   def this(startTime: Double, endTime: Double, text: java.lang.String) = this()
 }

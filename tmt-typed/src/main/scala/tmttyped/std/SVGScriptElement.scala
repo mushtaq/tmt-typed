@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the SVG <script> element. */
 @js.native
 trait SVGScriptElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGURIReference {
   
   /* InferMemberOverrides */

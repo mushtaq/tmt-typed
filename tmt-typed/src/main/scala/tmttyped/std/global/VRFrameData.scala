@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VRFrameData")
 @js.native
 class VRFrameData ()
-  extends tmttyped.std.VRFrameData {
+  extends StObject
+     with tmttyped.std.VRFrameData {
   
   /* CompleteClass */
   override val leftProjectionMatrix: js.typedarray.Float32Array = js.native

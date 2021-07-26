@@ -14,13 +14,13 @@ trait ClientQueryOptions extends StObject {
 object ClientQueryOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.serviceworkers.ClientQueryOptions = {
+  def apply(): ClientQueryOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.serviceworkers.ClientQueryOptions]
+    __obj.asInstanceOf[ClientQueryOptions]
   }
   
   @scala.inline
-  implicit class ClientQueryOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.serviceworkers.ClientQueryOptions] (val x: Self) extends AnyVal {
+  implicit class ClientQueryOptionsMutableBuilder[Self <: ClientQueryOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setIncludeUncontrolled(value: scala.Boolean): Self = StObject.set(x, "includeUncontrolled", value.asInstanceOf[js.Any])

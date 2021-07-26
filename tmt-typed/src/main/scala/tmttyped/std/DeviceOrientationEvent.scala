@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** The DeviceOrientationEvent provides web developers with information from the physical orientation of the device running the web page. */
 @js.native
-trait DeviceOrientationEvent extends Event {
+trait DeviceOrientationEvent
+  extends StObject
+     with Event {
   
   val absolute: scala.Boolean = js.native
   

@@ -17,7 +17,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Request")
 @js.native
 class Request protected ()
-  extends tmttyped.std.Request {
+  extends StObject
+     with tmttyped.std.Request {
   def this(input: RequestInfo) = this()
   def this(input: RequestInfo, init: RequestInit) = this()
   
@@ -79,7 +80,7 @@ class Request protected ()
   override val isReloadNavigation: scala.Boolean = js.native
   
   /* CompleteClass */
-  override def json(): js.Promise[_] = js.native
+  override def json(): js.Promise[js.Any] = js.native
   
   /**
     * Returns a boolean indicating whether or not request can outlive the global in which it was created.

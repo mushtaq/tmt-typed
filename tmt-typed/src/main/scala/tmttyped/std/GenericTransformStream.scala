@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait GenericTransformStream extends StObject {
   
-  val readable: org.scalajs.dom.experimental.ReadableStream[_]
+  val readable: org.scalajs.dom.experimental.ReadableStream[js.Any]
   
-  val writable: WritableStream[_]
+  val writable: WritableStream[js.Any]
 }
 object GenericTransformStream {
   
   @scala.inline
-  def apply(readable: org.scalajs.dom.experimental.ReadableStream[_], writable: WritableStream[_]): GenericTransformStream = {
+  def apply(readable: org.scalajs.dom.experimental.ReadableStream[js.Any], writable: WritableStream[js.Any]): GenericTransformStream = {
     val __obj = js.Dynamic.literal(readable = readable.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenericTransformStream]
   }
@@ -23,9 +23,9 @@ object GenericTransformStream {
   implicit class GenericTransformStreamMutableBuilder[Self <: GenericTransformStream] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setReadable(value: org.scalajs.dom.experimental.ReadableStream[_]): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
+    def setReadable(value: org.scalajs.dom.experimental.ReadableStream[js.Any]): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWritable(value: WritableStream[_]): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])
+    def setWritable(value: WritableStream[js.Any]): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])
   }
 }

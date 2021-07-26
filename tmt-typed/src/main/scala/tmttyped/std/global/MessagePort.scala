@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MessagePort")
 @js.native
 class MessagePort ()
-  extends tmttyped.std.MessagePort
+  extends StObject
+     with tmttyped.std.MessagePort

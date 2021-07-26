@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCDtlsTransport")
 @js.native
 class RTCDtlsTransport ()
-  extends tmttyped.std.RTCDtlsTransport
+  extends StObject
+     with tmttyped.std.RTCDtlsTransport

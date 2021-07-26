@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DynamicsCompressorOptions extends AudioNodeOptions {
+trait DynamicsCompressorOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var attack: js.UndefOr[Double] = js.undefined
   

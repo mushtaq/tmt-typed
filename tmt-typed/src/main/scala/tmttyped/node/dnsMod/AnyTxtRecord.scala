@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AnyTxtRecord extends AnyRecord {
+trait AnyTxtRecord
+  extends StObject
+     with AnyRecord {
   
   var entries: js.Array[String]
   

@@ -10,7 +10,7 @@ trait TimeRanges extends StObject {
   
   /**
     * Returns the time for the end of the range with the given index.
-    * 
+    *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
   def end(index: Double): Double
@@ -22,7 +22,7 @@ trait TimeRanges extends StObject {
   
   /**
     * Returns the time for the start of the range with the given index.
-    * 
+    *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
   def start(index: Double): Double
@@ -30,13 +30,13 @@ trait TimeRanges extends StObject {
 object TimeRanges {
   
   @scala.inline
-  def apply(end: Double => Double, length: Double, start: Double => Double): org.scalajs.dom.raw.TimeRanges = {
+  def apply(end: Double => Double, length: Double, start: Double => Double): TimeRanges = {
     val __obj = js.Dynamic.literal(end = js.Any.fromFunction1(end), length = length.asInstanceOf[js.Any], start = js.Any.fromFunction1(start))
-    __obj.asInstanceOf[org.scalajs.dom.raw.TimeRanges]
+    __obj.asInstanceOf[TimeRanges]
   }
   
   @scala.inline
-  implicit class TimeRangesMutableBuilder[Self <: org.scalajs.dom.raw.TimeRanges] (val x: Self) extends AnyVal {
+  implicit class TimeRangesMutableBuilder[Self <: TimeRanges] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setEnd(value: Double => Double): Self = StObject.set(x, "end", js.Any.fromFunction1(value))

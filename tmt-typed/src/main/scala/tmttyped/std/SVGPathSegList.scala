@@ -35,13 +35,13 @@ object SVGPathSegList {
     numberOfItems: Double,
     removeItem: Double => org.scalajs.dom.raw.SVGPathSeg,
     replaceItem: (org.scalajs.dom.raw.SVGPathSeg, Double) => org.scalajs.dom.raw.SVGPathSeg
-  ): org.scalajs.dom.raw.SVGPathSegList = {
+  ): SVGPathSegList = {
     val __obj = js.Dynamic.literal(appendItem = js.Any.fromFunction1(appendItem), clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), initialize = js.Any.fromFunction1(initialize), insertItemBefore = js.Any.fromFunction2(insertItemBefore), numberOfItems = numberOfItems.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), replaceItem = js.Any.fromFunction2(replaceItem))
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGPathSegList]
+    __obj.asInstanceOf[SVGPathSegList]
   }
   
   @scala.inline
-  implicit class SVGPathSegListMutableBuilder[Self <: org.scalajs.dom.raw.SVGPathSegList] (val x: Self) extends AnyVal {
+  implicit class SVGPathSegListMutableBuilder[Self <: SVGPathSegList] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAppendItem(value: org.scalajs.dom.raw.SVGPathSeg => org.scalajs.dom.raw.SVGPathSeg): Self = StObject.set(x, "appendItem", js.Any.fromFunction1(value))

@@ -3,18 +3,24 @@ package tmttyped.node
 import org.scalablytyped.runtime.Instantiable1
 import tmttyped.node.NodeJS.Dict
 import tmttyped.node.NodeJS.ReadOnlyDict
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeNetMod.Socket
 import tmttyped.node.nodeStreamMod.Readable
-import tmttyped.node.nodeStreamMod.Writable
 import tmttyped.node.nodeStrings.abort
+import tmttyped.node.nodeStrings.close
 import tmttyped.node.nodeStrings.connect
 import tmttyped.node.nodeStrings.continue
+import tmttyped.node.nodeStrings.drain
+import tmttyped.node.nodeStrings.error
 import tmttyped.node.nodeStrings.fifo
+import tmttyped.node.nodeStrings.finish
 import tmttyped.node.nodeStrings.information
 import tmttyped.node.nodeStrings.lifo
+import tmttyped.node.nodeStrings.pipe
 import tmttyped.node.nodeStrings.response
 import tmttyped.node.nodeStrings.socket
 import tmttyped.node.nodeStrings.timeout
+import tmttyped.node.nodeStrings.unpipe
 import tmttyped.node.nodeStrings.upgrade
 import tmttyped.node.nodeUrlMod.URL
 import org.scalablytyped.runtime.StObject
@@ -28,6 +34,61 @@ object httpMod {
   @js.native
   val ^ : js.Any = js.native
   
+  /**
+    * An `Agent` is responsible for managing connection persistence
+    * and reuse for HTTP clients. It maintains a queue of pending requests
+    * for a given host and port, reusing a single socket connection for each
+    * until the queue is empty, at which time the socket is either destroyed
+    * or put into a pool where it is kept to be used again for requests to the
+    * same host and port. Whether it is destroyed or pooled depends on the`keepAlive` `option`.
+    *
+    * Pooled connections have TCP Keep-Alive enabled for them, but servers may
+    * still close idle connections, in which case they will be removed from the
+    * pool and a new connection will be made when a new HTTP request is made for
+    * that host and port. Servers may also refuse to allow multiple requests
+    * over the same connection, in which case the connection will have to be
+    * remade for every request and cannot be pooled. The `Agent` will still make
+    * the requests to that server, but each one will occur over a new connection.
+    *
+    * When a connection is closed by the client or the server, it is removed
+    * from the pool. Any unused sockets in the pool will be unrefed so as not
+    * to keep the Node.js process running when there are no outstanding requests.
+    * (see `socket.unref()`).
+    *
+    * It is good practice, to `destroy()` an `Agent` instance when it is no
+    * longer in use, because unused sockets consume OS resources.
+    *
+    * Sockets are removed from an agent when the socket emits either
+    * a `'close'` event or an `'agentRemove'` event. When intending to keep one
+    * HTTP request open for a long time without keeping it in the agent, something
+    * like the following may be done:
+    *
+    * ```js
+    * http.get(options, (res) => {
+    *   // Do stuff
+    * }).on('socket', (socket) => {
+    *   socket.emit('agentRemove');
+    * });
+    * ```
+    *
+    * An agent may also be used for an individual request. By providing`{agent: false}` as an option to the `http.get()` or `http.request()`functions, a one-time use `Agent` with default options
+    * will be used
+    * for the client connection.
+    *
+    * `agent:false`:
+    *
+    * ```js
+    * http.get({
+    *   hostname: 'localhost',
+    *   port: 80,
+    *   path: '/',
+    *   agent: false  // Create a new agent just for this one request
+    * }, (res) => {
+    *   // Do stuff with response
+    * });
+    * ```
+    * @since v0.3.4
+    */
   @JSImport("http", "Agent")
   @js.native
   class Agent () extends StObject {
@@ -35,29 +96,94 @@ object httpMod {
     
     /**
       * Destroy any sockets that are currently in use by the agent.
-      * It is usually not necessary to do this. However, if you are using an agent with KeepAlive enabled,
-      * then it is best to explicitly shut down the agent when you know that it will no longer be used. Otherwise,
-      * sockets may hang open for quite a long time before the server terminates them.
+      *
+      * It is usually not necessary to do this. However, if using an
+      * agent with `keepAlive` enabled, then it is best to explicitly shut down
+      * the agent when it is no longer needed. Otherwise,
+      * sockets might stay open for quite a long time before the server
+      * terminates them.
+      * @since v0.11.4
       */
     def destroy(): Unit = js.native
     
+    /**
+      * An object which contains arrays of sockets currently awaiting use by
+      * the agent when `keepAlive` is enabled. Do not modify.
+      *
+      * Sockets in the `freeSockets` list will be automatically destroyed and
+      * removed from the array on `'timeout'`.
+      * @since v0.11.4
+      */
     val freeSockets: ReadOnlyDict[js.Array[Socket]] = js.native
     
+    /**
+      * By default set to 256\. For agents with `keepAlive` enabled, this
+      * sets the maximum number of sockets that will be left open in the free
+      * state.
+      * @since v0.11.7
+      */
     var maxFreeSockets: Double = js.native
     
+    /**
+      * By default set to `Infinity`. Determines how many concurrent sockets the agent
+      * can have open per origin. Origin is the returned value of `agent.getName()`.
+      * @since v0.3.6
+      */
     var maxSockets: Double = js.native
     
+    /**
+      * By default set to `Infinity`. Determines how many concurrent sockets the agent
+      * can have open. Unlike `maxSockets`, this parameter applies across all origins.
+      * @since v14.5.0, v12.19.0
+      */
     var maxTotalSockets: Double = js.native
     
+    /**
+      * An object which contains queues of requests that have not yet been assigned to
+      * sockets. Do not modify.
+      * @since v0.5.9
+      */
     val requests: ReadOnlyDict[js.Array[IncomingMessage]] = js.native
     
+    /**
+      * An object which contains arrays of sockets currently in use by the
+      * agent. Do not modify.
+      * @since v0.3.6
+      */
     val sockets: ReadOnlyDict[js.Array[Socket]] = js.native
   }
   
-  // https://github.com/nodejs/node/blob/master/lib/_http_client.js#L77
+  /**
+    * This object is created internally and returned from {@link request}. It
+    * represents an _in-progress_ request whose header has already been queued. The
+    * header is still mutable using the `setHeader(name, value)`,`getHeader(name)`, `removeHeader(name)` API. The actual header will
+    * be sent along with the first data chunk or when calling `request.end()`.
+    *
+    * To get the response, add a listener for `'response'` to the request object.`'response'` will be emitted from the request object when the response
+    * headers have been received. The `'response'` event is executed with one
+    * argument which is an instance of {@link IncomingMessage}.
+    *
+    * During the `'response'` event, one can add listeners to the
+    * response object; particularly to listen for the `'data'` event.
+    *
+    * If no `'response'` handler is added, then the response will be
+    * entirely discarded. However, if a `'response'` event handler is added,
+    * then the data from the response object **must** be consumed, either by
+    * calling `response.read()` whenever there is a `'readable'` event, or
+    * by adding a `'data'` handler, or by calling the `.resume()` method.
+    * Until the data is consumed, the `'end'` event will not fire. Also, until
+    * the data is read it will consume memory that can eventually lead to a
+    * 'process out of memory' error.
+    *
+    * For backward compatibility, `res` will only emit `'error'` if there is an`'error'` listener registered.
+    *
+    * Node.js does not check whether Content-Length and the length of the
+    * body which has been transmitted are equal or not.
+    * @since v0.1.17
+    */
   @JSImport("http", "ClientRequest")
   @js.native
-  class ClientRequest protected () extends OutgoingMessage {
+  class ClientRequest protected () extends StObject {
     def this(url: java.lang.String) = this()
     def this(url: ClientRequestArgs) = this()
     def this(url: URL) = this()
@@ -65,13 +191,27 @@ object httpMod {
     def this(url: ClientRequestArgs, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
     def this(url: URL, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
     
-    /** @deprecated since v14.1.0 Use `request.destroy()` instead. */
+    /**
+      * Marks the request as aborting. Calling this will cause remaining data
+      * in the response to be dropped and the socket to be destroyed.
+      * @since v0.3.8
+      * @deprecated Since v14.1.0,v13.14.0 - Use `destroy` instead.
+      */
     def abort(): Unit = js.native
     
+    /**
+      * The `request.aborted` property will be `true` if the request has
+      * been aborted.
+      * @since v0.11.14
+      */
     var aborted: Boolean = js.native
     
+    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_connect(
       event: connect,
@@ -80,7 +220,15 @@ object httpMod {
     @JSName("addListener")
     def addListener_continue(event: continue, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
+    def addListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
     def addListener_information(event: information, listener: js.Function1[/* info */ InformationEvent, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
     @JSName("addListener")
@@ -88,19 +236,49 @@ object httpMod {
     @JSName("addListener")
     def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
+    def addListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    @JSName("addListener")
     def addListener_upgrade(
       event: upgrade,
       listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
     ): this.type = js.native
     
+    /**
+      * Returns an array containing the unique names of the current outgoing raw
+      * headers. Header names are returned with their exact casing being set.
+      *
+      * ```js
+      * request.setHeader('Foo', 'bar');
+      * request.setHeader('Set-Cookie', ['foo=bar', 'bar=baz']);
+      *
+      * const headerNames = request.getRawHeaderNames();
+      * // headerNames === ['Foo', 'Set-Cookie']
+      * ```
+      * @since v15.13.0
+      */
+    def getRawHeaderNames(): js.Array[java.lang.String] = js.native
+    
+    /**
+      * The request host.
+      * @since v14.5.0, v12.19.0
+      */
     var host: java.lang.String = js.native
     
+    /**
+      * The request method.
+      * @since v0.1.97
+      */
     var method: java.lang.String = js.native
+    
+    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
     
     def onSocket(socket: Socket): Unit = js.native
     
     @JSName("on")
     def on_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
     def on_connect(
       event: connect,
@@ -109,7 +287,15 @@ object httpMod {
     @JSName("on")
     def on_continue(event: continue, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
+    def on_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("on")
+    def on_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
     def on_information(event: information, listener: js.Function1[/* info */ InformationEvent, Unit]): this.type = js.native
+    @JSName("on")
+    def on_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("on")
     def on_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
     @JSName("on")
@@ -117,13 +303,19 @@ object httpMod {
     @JSName("on")
     def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
+    def on_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    @JSName("on")
     def on_upgrade(
       event: upgrade,
       listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
     ): this.type = js.native
     
+    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
     @JSName("once")
     def once_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
     def once_connect(
       event: connect,
@@ -132,7 +324,15 @@ object httpMod {
     @JSName("once")
     def once_continue(event: continue, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
+    def once_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("once")
+    def once_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
     def once_information(event: information, listener: js.Function1[/* info */ InformationEvent, Unit]): this.type = js.native
+    @JSName("once")
+    def once_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("once")
     def once_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
     @JSName("once")
@@ -140,15 +340,25 @@ object httpMod {
     @JSName("once")
     def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
+    def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    @JSName("once")
     def once_upgrade(
       event: upgrade,
       listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
     ): this.type = js.native
     
+    /**
+      * The request path.
+      * @since v0.4.0
+      */
     var path: java.lang.String = js.native
     
+    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_connect(
       event: connect,
@@ -157,7 +367,15 @@ object httpMod {
     @JSName("prependListener")
     def prependListener_continue(event: continue, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
+    def prependListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
     def prependListener_information(event: information, listener: js.Function1[/* info */ InformationEvent, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
     @JSName("prependListener")
@@ -165,13 +383,19 @@ object httpMod {
     @JSName("prependListener")
     def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
+    def prependListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    @JSName("prependListener")
     def prependListener_upgrade(
       event: upgrade,
       listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
     ): this.type = js.native
     
+    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_connect(
       event: connect,
@@ -180,7 +404,15 @@ object httpMod {
     @JSName("prependOnceListener")
     def prependOnceListener_continue(event: continue, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
+    def prependOnceListener_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_finish(event: finish, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
     def prependOnceListener_information(event: information, listener: js.Function1[/* info */ InformationEvent, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_response(event: response, listener: js.Function1[/* response */ IncomingMessage, Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -188,38 +420,143 @@ object httpMod {
     @JSName("prependOnceListener")
     def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
+    def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
     def prependOnceListener_upgrade(
       event: upgrade,
       listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
     ): this.type = js.native
     
+    /**
+      * The request protocol.
+      * @since v14.5.0, v12.19.0
+      */
     var protocol: java.lang.String = js.native
     
+    /**
+      * Once a socket is assigned to this request and is connected `socket.setNoDelay()` will be called.
+      * @since v0.5.9
+      */
     def setNoDelay(): Unit = js.native
     def setNoDelay(noDelay: Boolean): Unit = js.native
     
+    /**
+      * Once a socket is assigned to this request and is connected `socket.setKeepAlive()` will be called.
+      * @since v0.5.9
+      */
     def setSocketKeepAlive(): Unit = js.native
-    def setSocketKeepAlive(enable: js.UndefOr[scala.Nothing], initialDelay: Double): Unit = js.native
     def setSocketKeepAlive(enable: Boolean): Unit = js.native
     def setSocketKeepAlive(enable: Boolean, initialDelay: Double): Unit = js.native
+    def setSocketKeepAlive(enable: Unit, initialDelay: Double): Unit = js.native
+    
+    /**
+      * Once a socket is assigned to this request and is connected `socket.setTimeout()` will be called.
+      * @since v0.5.9
+      * @param timeout Milliseconds before a request times out.
+      * @param callback Optional function to be called when a timeout occurs. Same as binding to the `'timeout'` event.
+      */
+    def setTimeout(timeout: Double): this.type = js.native
+    def setTimeout(timeout: Double, callback: js.Function0[Unit]): this.type = js.native
   }
   
+  /**
+    * * Extends: `<stream.Readable>`
+    *
+    * An `IncomingMessage` object is created by {@link Server} or {@link ClientRequest} and passed as the first argument to the `'request'` and `'response'` event respectively. It may be used to
+    * access response
+    * status, headers and data.
+    *
+    * Different from its `socket` value which is a subclass of `<stream.Duplex>`, the`IncomingMessage` itself extends `<stream.Readable>` and is created separately to
+    * parse and emit the incoming HTTP headers and payload, as the underlying socket
+    * may be reused multiple times in case of keep-alive.
+    * @since v0.1.17
+    */
   @JSImport("http", "IncomingMessage")
   @js.native
-  class IncomingMessage protected () extends Readable {
+  class IncomingMessage protected () extends StObject {
     def this(socket: Socket) = this()
     
+    /**
+      * The `message.aborted` property will be `true` if the request has
+      * been aborted.
+      * @since v10.1.0
+      */
     var aborted: Boolean = js.native
     
+    /**
+      * The `message.complete` property will be `true` if a complete HTTP message has
+      * been received and successfully parsed.
+      *
+      * This property is particularly useful as a means of determining if a client or
+      * server fully transmitted a message before a connection was terminated:
+      *
+      * ```js
+      * const req = http.request({
+      *   host: '127.0.0.1',
+      *   port: 8080,
+      *   method: 'POST'
+      * }, (res) => {
+      *   res.resume();
+      *   res.on('end', () => {
+      *     if (!res.complete)
+      *       console.error(
+      *         'The connection was terminated while the message was still being sent');
+      *   });
+      * });
+      * ```
+      * @since v0.3.0
+      */
     var complete: Boolean = js.native
     
     /**
-      * @deprecated since v13.0.0 - Use `socket` instead.
+      * Alias for `message.socket`.
+      * @since v0.1.90
+      * @deprecated Since v16.0.0 - Deprecated. Use `socket`.
       */
     var connection: Socket = js.native
     
+    /**
+      * Calls `destroy()` on the socket that received the `IncomingMessage`. If `error`is provided, an `'error'` event is emitted on the socket and `error` is passed
+      * as an argument to any listeners on the event.
+      * @since v0.3.0
+      */
+    def destroy(): Unit = js.native
+    def destroy(error: js.Error): Unit = js.native
+    
+    /**
+      * The request/response headers object.
+      *
+      * Key-value pairs of header names and values. Header names are lower-cased.
+      *
+      * ```js
+      * // Prints something like:
+      * //
+      * // { 'user-agent': 'curl/7.22.0',
+      * //   host: '127.0.0.1:8000',
+      * //   accept: '*' }
+      * console.log(request.headers);
+      * ```
+      *
+      * Duplicates in raw headers are handled in the following ways, depending on the
+      * header name:
+      *
+      * * Duplicates of `age`, `authorization`, `content-length`, `content-type`,`etag`, `expires`, `from`, `host`, `if-modified-since`, `if-unmodified-since`,`last-modified`, `location`,
+      * `max-forwards`, `proxy-authorization`, `referer`,`retry-after`, `server`, or `user-agent` are discarded.
+      * * `set-cookie` is always an array. Duplicates are added to the array.
+      * * For duplicate `cookie` headers, the values are joined together with '; '.
+      * * For all other headers, the values are joined together with ', '.
+      * @since v0.1.5
+      */
     var headers: IncomingHttpHeaders = js.native
     
+    /**
+      * In case of server request, the HTTP version sent by the client. In the case of
+      * client response, the HTTP version of the connected-to server.
+      * Probably either `'1.1'` or `'1.0'`.
+      *
+      * Also `message.httpVersionMajor` is the first integer and`message.httpVersionMinor` is the second.
+      * @since v0.1.1
+      */
     var httpVersion: java.lang.String = js.native
     
     var httpVersionMajor: Double = js.native
@@ -227,33 +564,126 @@ object httpMod {
     var httpVersionMinor: Double = js.native
     
     /**
-      * Only valid for request obtained from http.Server.
+      * **Only valid for request obtained from {@link Server}.**
+      *
+      * The request method as a string. Read only. Examples: `'GET'`, `'DELETE'`.
+      * @since v0.1.1
       */
     var method: js.UndefOr[java.lang.String] = js.native
     
+    /**
+      * The raw request/response headers list exactly as they were received.
+      *
+      * The keys and values are in the same list. It is _not_ a
+      * list of tuples. So, the even-numbered offsets are key values, and the
+      * odd-numbered offsets are the associated values.
+      *
+      * Header names are not lowercased, and duplicates are not merged.
+      *
+      * ```js
+      * // Prints something like:
+      * //
+      * // [ 'user-agent',
+      * //   'this is invalid because there can be only one',
+      * //   'User-Agent',
+      * //   'curl/7.22.0',
+      * //   'Host',
+      * //   '127.0.0.1:8000',
+      * //   'ACCEPT',
+      * //   '*' ]
+      * console.log(request.rawHeaders);
+      * ```
+      * @since v0.11.6
+      */
     var rawHeaders: js.Array[java.lang.String] = js.native
     
+    /**
+      * The raw request/response trailer keys and values exactly as they were
+      * received. Only populated at the `'end'` event.
+      * @since v0.11.6
+      */
     var rawTrailers: js.Array[java.lang.String] = js.native
     
+    /**
+      * Calls `message.socket.setTimeout(msecs, callback)`.
+      * @since v0.5.9
+      */
     def setTimeout(msecs: Double): this.type = js.native
     def setTimeout(msecs: Double, callback: js.Function0[Unit]): this.type = js.native
     
+    /**
+      * The `net.Socket` object associated with the connection.
+      *
+      * With HTTPS support, use `request.socket.getPeerCertificate()` to obtain the
+      * client's authentication details.
+      *
+      * This property is guaranteed to be an instance of the `<net.Socket>` class,
+      * a subclass of `<stream.Duplex>`, unless the user specified a socket
+      * type other than `<net.Socket>`.
+      * @since v0.3.0
+      */
     var socket: Socket = js.native
     
     /**
-      * Only valid for response obtained from http.ClientRequest.
+      * **Only valid for response obtained from {@link ClientRequest}.**
+      *
+      * The 3-digit HTTP response status code. E.G. `404`.
+      * @since v0.1.1
       */
     var statusCode: js.UndefOr[Double] = js.native
     
     /**
-      * Only valid for response obtained from http.ClientRequest.
+      * **Only valid for response obtained from {@link ClientRequest}.**
+      *
+      * The HTTP response status message (reason phrase). E.G. `OK` or `Internal Server Error`.
+      * @since v0.11.10
       */
     var statusMessage: js.UndefOr[java.lang.String] = js.native
     
+    /**
+      * The request/response trailers object. Only populated at the `'end'` event.
+      * @since v0.3.0
+      */
     var trailers: Dict[java.lang.String] = js.native
     
     /**
-      * Only valid for request obtained from http.Server.
+      * **Only valid for request obtained from {@link Server}.**
+      *
+      * Request URL string. This contains only the URL that is present in the actual
+      * HTTP request. Take the following request:
+      *
+      * ```http
+      * GET /status?name=ryan HTTP/1.1
+      * Accept: text/plain
+      * ```
+      *
+      * To parse the URL into its parts:
+      *
+      * ```js
+      * new URL(request.url, `http://${request.headers.host}`);
+      * ```
+      *
+      * When `request.url` is `'/status?name=ryan'` and`request.headers.host` is `'localhost:3000'`:
+      *
+      * ```console
+      * $ node
+      * > new URL(request.url, `http://${request.headers.host}`)
+      * URL {
+      *   href: 'http://localhost:3000/status?name=ryan',
+      *   origin: 'http://localhost:3000',
+      *   protocol: 'http:',
+      *   username: '',
+      *   password: '',
+      *   host: 'localhost:3000',
+      *   hostname: 'localhost',
+      *   port: '3000',
+      *   pathname: '/status',
+      *   search: '?name=ryan',
+      *   searchParams: URLSearchParams { 'name' => 'ryan' },
+      *   hash: ''
+      * }
+      * ```
+      * @since v0.1.90
       */
     var url: js.UndefOr[java.lang.String] = js.native
   }
@@ -262,99 +692,318 @@ object httpMod {
   @js.native
   val METHODS: js.Array[java.lang.String] = js.native
   
-  // https://github.com/nodejs/node/blob/master/lib/_http_outgoing.js
+  /**
+    * This class serves as the parent class of {@link ClientRequest} and {@link ServerResponse}. It is an abstract of outgoing message from
+    * the perspective of the participants of HTTP transaction.
+    * @since v0.1.17
+    */
   @JSImport("http", "OutgoingMessage")
   @js.native
-  class OutgoingMessage () extends Writable {
+  class OutgoingMessage () extends StObject {
     
     def addTrailers(headers: js.Array[js.Tuple2[java.lang.String, java.lang.String]]): Unit = js.native
+    /**
+      * Adds HTTP trailers (headers but at the end of the message) to the message.
+      *
+      * Trailers are **only** be emitted if the message is chunked encoded. If not,
+      * the trailer will be silently discarded.
+      *
+      * HTTP requires the `Trailer` header to be sent to emit trailers,
+      * with a list of header fields in its value, e.g.
+      *
+      * ```js
+      * message.writeHead(200, { 'Content-Type': 'text/plain',
+      *                          'Trailer': 'Content-MD5' });
+      * message.write(fileData);
+      * message.addTrailers({ 'Content-MD5': '7895bf4b8828b55ceaf47747b4bca667' });
+      * message.end();
+      * ```
+      *
+      * Attempting to set a header field name or value that contains invalid characters
+      * will result in a `TypeError` being thrown.
+      * @since v0.3.0
+      */
     def addTrailers(headers: OutgoingHttpHeaders): Unit = js.native
     
     var chunkedEncoding: Boolean = js.native
     
     /**
-      * @deprecate Use `socket` instead.
+      * Aliases of `outgoingMessage.socket`
+      * @since v0.3.0
+      * @deprecated Since v15.12.0 - Use `socket` instead.
       */
-    var connection: Socket | Null = js.native
+    val connection: Socket | Null = js.native
     
     /**
       * @deprecated Use `writableEnded` instead.
       */
     var finished: Boolean = js.native
     
+    /**
+      * Compulsorily flushes the message headers
+      *
+      * For efficiency reason, Node.js normally buffers the message headers
+      * until `outgoingMessage.end()` is called or the first chunk of message data
+      * is written. It then tries to pack the headers and data into a single TCP
+      * packet.
+      *
+      * It is usually desired (it saves a TCP round-trip), but not when the first
+      * data is not sent until possibly much later. `outgoingMessage.flushHeaders()`bypasses the optimization and kickstarts the request.
+      * @since v1.6.0
+      */
     def flushHeaders(): Unit = js.native
     
+    /**
+      * Gets the value of HTTP header with the given name. If such a name doesn't
+      * exist in message, it will be `undefined`.
+      * @since v0.4.0
+      * @param name Name of header
+      */
     def getHeader(name: java.lang.String): js.UndefOr[Double | java.lang.String | js.Array[java.lang.String]] = js.native
     
+    /**
+      * Returns an array of names of headers of the outgoing outgoingMessage. All
+      * names are lowercase.
+      * @since v8.0.0
+      */
     def getHeaderNames(): js.Array[java.lang.String] = js.native
     
+    /**
+      * Returns a shallow copy of the current outgoing headers. Since a shallow
+      * copy is used, array values may be mutated without additional calls to
+      * various header-related HTTP module methods. The keys of the returned
+      * object are the header names and the values are the respective header
+      * values. All header names are lowercase.
+      *
+      * The object returned by the `outgoingMessage.getHeaders()` method does
+      * not prototypically inherit from the JavaScript Object. This means that
+      * typical Object methods such as `obj.toString()`, `obj.hasOwnProperty()`,
+      * and others are not defined and will not work.
+      *
+      * ```js
+      * outgoingMessage.setHeader('Foo', 'bar');
+      * outgoingMessage.setHeader('Set-Cookie', ['foo=bar', 'bar=baz']);
+      *
+      * const headers = outgoingMessage.getHeaders();
+      * // headers === { foo: 'bar', 'set-cookie': ['foo=bar', 'bar=baz'] }
+      * ```
+      * @since v8.0.0
+      */
     def getHeaders(): OutgoingHttpHeaders = js.native
     
+    /**
+      * Returns `true` if the header identified by `name` is currently set in the
+      * outgoing headers. The header name is case-insensitive.
+      *
+      * ```js
+      * const hasContentType = outgoingMessage.hasHeader('content-type');
+      * ```
+      * @since v8.0.0
+      */
     def hasHeader(name: java.lang.String): Boolean = js.native
     
-    var headersSent: Boolean = js.native
+    /**
+      * Read-only. `true` if the headers were sent, otherwise `false`.
+      * @since v0.9.3
+      */
+    val headersSent: Boolean = js.native
     
+    /**
+      * Removes a header that is queued for implicit sending.
+      *
+      * ```js
+      * outgoingMessage.removeHeader('Content-Encoding');
+      * ```
+      * @since v0.4.0
+      */
     def removeHeader(name: java.lang.String): Unit = js.native
+    
+    val req: IncomingMessage = js.native
     
     var sendDate: Boolean = js.native
     
-    def setHeader(name: java.lang.String, value: java.lang.String): Unit = js.native
-    def setHeader(name: java.lang.String, value: js.Array[java.lang.String]): Unit = js.native
-    def setHeader(name: java.lang.String, value: Double): Unit = js.native
+    def setHeader(name: java.lang.String, value: java.lang.String): this.type = js.native
+    def setHeader(name: java.lang.String, value: js.Array[java.lang.String]): this.type = js.native
+    /**
+      * Sets a single header value for the header object.
+      * @since v0.4.0
+      * @param name Header name
+      * @param value Header value
+      */
+    def setHeader(name: java.lang.String, value: Double): this.type = js.native
     
+    /**
+      * occurs, Same as binding to the `timeout` event.
+      *
+      * Once a socket is associated with the message and is connected,`socket.setTimeout()` will be called with `msecs` as the first parameter.
+      * @since v0.9.12
+      * @param callback Optional function to be called when a timeout
+      */
     def setTimeout(msecs: Double): this.type = js.native
     def setTimeout(msecs: Double, callback: js.Function0[Unit]): this.type = js.native
     
     var shouldKeepAlive: Boolean = js.native
     
-    var socket: Socket | Null = js.native
-    
-    var upgrading: Boolean = js.native
+    /**
+      * Reference to the underlying socket. Usually, users will not want to access
+      * this property.
+      *
+      * After calling `outgoingMessage.end()`, this property will be nulled.
+      * @since v0.3.0
+      */
+    val socket: Socket | Null = js.native
     
     var useChunkedEncodingByDefault: Boolean = js.native
   }
   
+  /**
+    * * Extends: `<net.Server>`
+    * @since v0.1.17
+    */
   @JSImport("http", "Server")
   @js.native
   class Server ()
-    extends tmttyped.node.nodeNetMod.Server
+    extends StObject
        with HttpBase {
     def this(options: ServerOptions) = this()
     def this(requestListener: RequestListener) = this()
     def this(options: ServerOptions, requestListener: RequestListener) = this()
   }
   
-  // https://github.com/nodejs/node/blob/master/lib/_http_server.js#L108-L256
+  /**
+    * This object is created internally by an HTTP server, not by the user. It is
+    * passed as the second parameter to the `'request'` event.
+    * @since v0.1.17
+    */
   @JSImport("http", "ServerResponse")
   @js.native
-  class ServerResponse protected () extends OutgoingMessage {
+  class ServerResponse protected () extends StObject {
     def this(req: IncomingMessage) = this()
     
     def assignSocket(socket: Socket): Unit = js.native
     
     def detachSocket(socket: Socket): Unit = js.native
     
+    /**
+      * When using implicit headers (not calling `response.writeHead()` explicitly),
+      * this property controls the status code that will be sent to the client when
+      * the headers get flushed.
+      *
+      * ```js
+      * response.statusCode = 404;
+      * ```
+      *
+      * After response header was sent to the client, this property indicates the
+      * status code which was sent out.
+      * @since v0.4.0
+      */
     var statusCode: Double = js.native
     
+    /**
+      * When using implicit headers (not calling `response.writeHead()` explicitly),
+      * this property controls the status message that will be sent to the client when
+      * the headers get flushed. If this is left as `undefined` then the standard
+      * message for the status code will be used.
+      *
+      * ```js
+      * response.statusMessage = 'Not found';
+      * ```
+      *
+      * After response header was sent to the client, this property indicates the
+      * status message which was sent out.
+      * @since v0.11.8
+      */
     var statusMessage: java.lang.String = js.native
     
-    // https://github.com/nodejs/node/blob/master/test/parallel/test-http-write-callbacks.js#L53
-    // no args in writeContinue callback
+    /**
+      * Sends a HTTP/1.1 100 Continue message to the client, indicating that
+      * the request body should be sent. See the `'checkContinue'` event on`Server`.
+      * @since v0.3.0
+      */
     def writeContinue(): Unit = js.native
     def writeContinue(callback: js.Function0[Unit]): Unit = js.native
     
+    /**
+      * Sends a response header to the request. The status code is a 3-digit HTTP
+      * status code, like `404`. The last argument, `headers`, are the response headers.
+      * Optionally one can give a human-readable `statusMessage` as the second
+      * argument.
+      *
+      * `headers` may be an `Array` where the keys and values are in the same list.
+      * It is _not_ a list of tuples. So, the even-numbered offsets are key values,
+      * and the odd-numbered offsets are the associated values. The array is in the same
+      * format as `request.rawHeaders`.
+      *
+      * Returns a reference to the `ServerResponse`, so that calls can be chained.
+      *
+      * ```js
+      * const body = 'hello world';
+      * response
+      *   .writeHead(200, {
+      *     'Content-Length': Buffer.byteLength(body),
+      *     'Content-Type': 'text/plain'
+      *   })
+      *   .end(body);
+      * ```
+      *
+      * This method must only be called once on a message and it must
+      * be called before `response.end()` is called.
+      *
+      * If `response.write()` or `response.end()` are called before calling
+      * this, the implicit/mutable headers will be calculated and call this function.
+      *
+      * When headers have been set with `response.setHeader()`, they will be merged
+      * with any headers passed to `response.writeHead()`, with the headers passed
+      * to `response.writeHead()` given precedence.
+      *
+      * If this method is called and `response.setHeader()` has not been called,
+      * it will directly write the supplied header values onto the network channel
+      * without caching internally, and the `response.getHeader()` on the header
+      * will not yield the expected result. If progressive population of headers is
+      * desired with potential future retrieval and modification, use `response.setHeader()` instead.
+      *
+      * ```js
+      * // Returns content-type = text/plain
+      * const server = http.createServer((req, res) => {
+      *   res.setHeader('Content-Type', 'text/html');
+      *   res.setHeader('X-Foo', 'bar');
+      *   res.writeHead(200, { 'Content-Type': 'text/plain' });
+      *   res.end('ok');
+      * });
+      * ```
+      *
+      * `Content-Length` is given in bytes, not characters. Use `Buffer.byteLength()` to determine the length of the body in bytes. Node.js
+      * does not check whether `Content-Length` and the length of the body which has
+      * been transmitted are equal or not.
+      *
+      * Attempting to set a header field name or value that contains invalid characters
+      * will result in a `TypeError` being thrown.
+      * @since v0.1.30
+      */
     def writeHead(statusCode: Double): this.type = js.native
     def writeHead(statusCode: Double, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
     def writeHead(statusCode: Double, headers: OutgoingHttpHeaders): this.type = js.native
-    def writeHead(statusCode: Double, reasonPhrase: js.UndefOr[scala.Nothing], headers: js.Array[OutgoingHttpHeader]): this.type = js.native
-    def writeHead(statusCode: Double, reasonPhrase: js.UndefOr[scala.Nothing], headers: OutgoingHttpHeaders): this.type = js.native
-    def writeHead(statusCode: Double, reasonPhrase: java.lang.String): this.type = js.native
-    def writeHead(statusCode: Double, reasonPhrase: java.lang.String, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
-    def writeHead(statusCode: Double, reasonPhrase: java.lang.String, headers: OutgoingHttpHeaders): this.type = js.native
+    def writeHead(statusCode: Double, statusMessage: java.lang.String): this.type = js.native
+    def writeHead(statusCode: Double, statusMessage: java.lang.String, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
+    def writeHead(statusCode: Double, statusMessage: java.lang.String, headers: OutgoingHttpHeaders): this.type = js.native
+    def writeHead(statusCode: Double, statusMessage: Unit, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
+    def writeHead(statusCode: Double, statusMessage: Unit, headers: OutgoingHttpHeaders): this.type = js.native
     
+    /**
+      * Sends a HTTP/1.1 102 Processing message to the client, indicating that
+      * the request body should be sent.
+      * @since v10.0.0
+      */
     def writeProcessing(): Unit = js.native
   }
   
+  /**
+    * Returns a new instance of {@link Server}.
+    *
+    * The `requestListener` is a function which is automatically
+    * added to the `'request'` event.
+    * @since v0.1.13
+    */
   @scala.inline
   def createServer(): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Server]
   @scala.inline
@@ -368,6 +1017,66 @@ object httpMod {
   def get(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
   def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  /**
+    * Since most requests are GET requests without bodies, Node.js provides this
+    * convenience method. The only difference between this method and {@link request} is that it sets the method to GET and calls `req.end()`automatically. The callback must take care to consume the
+    * response
+    * data for reasons stated in {@link ClientRequest} section.
+    *
+    * The `callback` is invoked with a single argument that is an instance of {@link IncomingMessage}.
+    *
+    * JSON fetching example:
+    *
+    * ```js
+    * http.get('http://localhost:8000/', (res) => {
+    *   const { statusCode } = res;
+    *   const contentType = res.headers['content-type'];
+    *
+    *   let error;
+    *   // Any 2xx status code signals a successful response but
+    *   // here we're only checking for 200.
+    *   if (statusCode !== 200) {
+    *     error = new Error('Request Failed.\n' +
+    *                       `Status Code: ${statusCode}`);
+    *   } else if (!/^application\/json/.test(contentType)) {
+    *     error = new Error('Invalid content-type.\n' +
+    *                       `Expected application/json but received ${contentType}`);
+    *   }
+    *   if (error) {
+    *     console.error(error.message);
+    *     // Consume response data to free up memory
+    *     res.resume();
+    *     return;
+    *   }
+    *
+    *   res.setEncoding('utf8');
+    *   let rawData = '';
+    *   res.on('data', (chunk) => { rawData += chunk; });
+    *   res.on('end', () => {
+    *     try {
+    *       const parsedData = JSON.parse(rawData);
+    *       console.log(parsedData);
+    *     } catch (e) {
+    *       console.error(e.message);
+    *     }
+    *   });
+    * }).on('error', (e) => {
+    *   console.error(`Got error: ${e.message}`);
+    * });
+    *
+    * // Create a local server to receive data from
+    * const server = http.createServer((req, res) => {
+    *   res.writeHead(200, { 'Content-Type': 'application/json' });
+    *   res.end(JSON.stringify({
+    *     data: 'Hello World!'
+    *   }));
+    * });
+    *
+    * server.listen(8000);
+    * ```
+    * @since v0.3.6
+    * @param options Accepts the same `options` as {@link request}, with the `method` always set to `GET`. Properties that are inherited from the prototype are ignored.
+    */
   @scala.inline
   def get(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
@@ -397,7 +1106,7 @@ object httpMod {
   
   /**
     * Read-only property specifying the maximum allowed size of HTTP headers in bytes.
-    * Defaults to 16KB. Configurable using the [`--max-http-header-size`][] CLI option.
+    * Defaults to 16KB. Configurable using the `--max-http-header-size` CLI option.
     */
   @JSImport("http", "maxHeaderSize")
   @js.native
@@ -407,6 +1116,190 @@ object httpMod {
   def request(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
   def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  /**
+    * Node.js maintains several connections per server to make HTTP requests.
+    * This function allows one to transparently issue requests.
+    *
+    * `url` can be a string or a `URL` object. If `url` is a
+    * string, it is automatically parsed with `new URL()`. If it is a `URL` object, it will be automatically converted to an ordinary `options` object.
+    *
+    * If both `url` and `options` are specified, the objects are merged, with the`options` properties taking precedence.
+    *
+    * The optional `callback` parameter will be added as a one-time listener for
+    * the `'response'` event.
+    *
+    * `http.request()` returns an instance of the {@link ClientRequest} class. The `ClientRequest` instance is a writable stream. If one needs to
+    * upload a file with a POST request, then write to the `ClientRequest` object.
+    *
+    * ```js
+    * const http = require('http');
+    *
+    * const postData = JSON.stringify({
+    *   'msg': 'Hello World!'
+    * });
+    *
+    * const options = {
+    *   hostname: 'www.google.com',
+    *   port: 80,
+    *   path: '/upload',
+    *   method: 'POST',
+    *   headers: {
+    *     'Content-Type': 'application/json',
+    *     'Content-Length': Buffer.byteLength(postData)
+    *   }
+    * };
+    *
+    * const req = http.request(options, (res) => {
+    *   console.log(`STATUS: ${res.statusCode}`);
+    *   console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+    *   res.setEncoding('utf8');
+    *   res.on('data', (chunk) => {
+    *     console.log(`BODY: ${chunk}`);
+    *   });
+    *   res.on('end', () => {
+    *     console.log('No more data in response.');
+    *   });
+    * });
+    *
+    * req.on('error', (e) => {
+    *   console.error(`problem with request: ${e.message}`);
+    * });
+    *
+    * // Write data to request body
+    * req.write(postData);
+    * req.end();
+    * ```
+    *
+    * In the example `req.end()` was called. With `http.request()` one
+    * must always call `req.end()` to signify the end of the request -
+    * even if there is no data being written to the request body.
+    *
+    * If any error is encountered during the request (be that with DNS resolution,
+    * TCP level errors, or actual HTTP parse errors) an `'error'` event is emitted
+    * on the returned request object. As with all `'error'` events, if no listeners
+    * are registered the error will be thrown.
+    *
+    * There are a few special headers that should be noted.
+    *
+    * * Sending a 'Connection: keep-alive' will notify Node.js that the connection to
+    * the server should be persisted until the next request.
+    * * Sending a 'Content-Length' header will disable the default chunked encoding.
+    * * Sending an 'Expect' header will immediately send the request headers.
+    * Usually, when sending 'Expect: 100-continue', both a timeout and a listener
+    * for the `'continue'` event should be set. See RFC 2616 Section 8.2.3 for more
+    * information.
+    * * Sending an Authorization header will override using the `auth` option
+    * to compute basic authentication.
+    *
+    * Example using a `URL` as `options`:
+    *
+    * ```js
+    * const options = new URL('http://abc:xyz@example.com');
+    *
+    * const req = http.request(options, (res) => {
+    *   // ...
+    * });
+    * ```
+    *
+    * In a successful request, the following events will be emitted in the following
+    * order:
+    *
+    * * `'socket'`
+    * * `'response'`
+    *    * `'data'` any number of times, on the `res` object
+    *    (`'data'` will not be emitted at all if the response body is empty, for
+    *    instance, in most redirects)
+    *    * `'end'` on the `res` object
+    * * `'close'`
+    *
+    * In the case of a connection error, the following events will be emitted:
+    *
+    * * `'socket'`
+    * * `'error'`
+    * * `'close'`
+    *
+    * In the case of a premature connection close before the response is received,
+    * the following events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * `'error'` with an error with message `'Error: socket hang up'` and code`'ECONNRESET'`
+    * * `'close'`
+    *
+    * In the case of a premature connection close after the response is received,
+    * the following events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * `'response'`
+    *    * `'data'` any number of times, on the `res` object
+    * * (connection closed here)
+    * * `'aborted'` on the `res` object
+    * * `'error'` on the `res` object with an error with message`'Error: aborted'` and code `'ECONNRESET'`.
+    * * `'close'`
+    * * `'close'` on the `res` object
+    *
+    * If `req.destroy()` is called before a socket is assigned, the following
+    * events will be emitted in the following order:
+    *
+    * * (`req.destroy()` called here)
+    * * `'error'` with an error with message `'Error: socket hang up'` and code`'ECONNRESET'`
+    * * `'close'`
+    *
+    * If `req.destroy()` is called before the connection succeeds, the following
+    * events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * (`req.destroy()` called here)
+    * * `'error'` with an error with message `'Error: socket hang up'` and code`'ECONNRESET'`
+    * * `'close'`
+    *
+    * If `req.destroy()` is called after the response is received, the following
+    * events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * `'response'`
+    *    * `'data'` any number of times, on the `res` object
+    * * (`req.destroy()` called here)
+    * * `'aborted'` on the `res` object
+    * * `'error'` on the `res` object with an error with message`'Error: aborted'` and code `'ECONNRESET'`.
+    * * `'close'`
+    * * `'close'` on the `res` object
+    *
+    * If `req.abort()` is called before a socket is assigned, the following
+    * events will be emitted in the following order:
+    *
+    * * (`req.abort()` called here)
+    * * `'abort'`
+    * * `'close'`
+    *
+    * If `req.abort()` is called before the connection succeeds, the following
+    * events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * (`req.abort()` called here)
+    * * `'abort'`
+    * * `'error'` with an error with message `'Error: socket hang up'` and code`'ECONNRESET'`
+    * * `'close'`
+    *
+    * If `req.abort()` is called after the response is received, the following
+    * events will be emitted in the following order:
+    *
+    * * `'socket'`
+    * * `'response'`
+    *    * `'data'` any number of times, on the `res` object
+    * * (`req.abort()` called here)
+    * * `'abort'`
+    * * `'aborted'` on the `res` object
+    * * `'error'` on the `res` object with an error with message`'Error: aborted'` and code `'ECONNRESET'`.
+    * * `'close'`
+    * * `'close'` on the `res` object
+    *
+    * Setting the `timeout` option or using the `setTimeout()` function will
+    * not abort the request or do anything besides add a `'timeout'` event.
+    *
+    * Passing an `AbortSignal` and then calling `abort` on the corresponding`AbortController` will behave the same way as calling `.destroy()` on the
+    * request itself.
+    * @since v0.3.6
+    */
   @scala.inline
   def request(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
@@ -457,7 +1350,8 @@ object httpMod {
     var maxTotalSockets: js.UndefOr[Double] = js.undefined
     
     /**
-      * Scheduling strategy to apply when picking the next free socket to use. Default: 'fifo'.
+      * Scheduling strategy to apply when picking the next free socket to use.
+      * @default `lifo`
       */
     var scheduling: js.UndefOr[fifo | lifo] = js.undefined
     
@@ -525,6 +1419,8 @@ object httpMod {
     
     var _defaultAgent: js.UndefOr[Agent] = js.undefined
     
+    var abort: js.UndefOr[AbortSignal] = js.undefined
+    
     var agent: js.UndefOr[Agent | Boolean] = js.undefined
     
     var auth: js.UndefOr[java.lang.String | Null] = js.undefined
@@ -579,6 +1475,12 @@ object httpMod {
     
     @scala.inline
     implicit class ClientRequestArgsMutableBuilder[Self <: ClientRequestArgs] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setAbort(value: AbortSignal): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setAbortUndefined: Self = StObject.set(x, "abort", js.undefined)
       
       @scala.inline
       def setAgent(value: Agent | Boolean): Self = StObject.set(x, "agent", value.asInstanceOf[js.Any])
@@ -738,16 +1640,17 @@ object httpMod {
     
     def setTimeout(): this.type = js.native
     def setTimeout(callback: js.Function0[Unit]): this.type = js.native
-    def setTimeout(msecs: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): this.type = js.native
     def setTimeout(msecs: Double): this.type = js.native
     def setTimeout(msecs: Double, callback: js.Function0[Unit]): this.type = js.native
+    def setTimeout(msecs: Unit, callback: js.Function0[Unit]): this.type = js.native
     
     var timeout: Double = js.native
   }
   
   // incoming headers will never contain number
   trait IncomingHttpHeaders
-    extends Dict[java.lang.String | js.Array[java.lang.String]] {
+    extends StObject
+       with Dict[java.lang.String | js.Array[java.lang.String]] {
     
     var accept: js.UndefOr[java.lang.String] = js.undefined
     
@@ -802,6 +1705,8 @@ object httpMod {
     var cookie: js.UndefOr[java.lang.String] = js.undefined
     
     var date: js.UndefOr[java.lang.String] = js.undefined
+    
+    var etag: js.UndefOr[java.lang.String] = js.undefined
     
     var expect: js.UndefOr[java.lang.String] = js.undefined
     
@@ -1045,6 +1950,12 @@ object httpMod {
       
       @scala.inline
       def setDateUndefined: Self = StObject.set(x, "date", js.undefined)
+      
+      @scala.inline
+      def setEtag(value: java.lang.String): Self = StObject.set(x, "etag", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setEtagUndefined: Self = StObject.set(x, "etag", js.undefined)
       
       @scala.inline
       def setExpect(value: java.lang.String): Self = StObject.set(x, "expect", value.asInstanceOf[js.Any])
@@ -1349,7 +2260,7 @@ object httpMod {
     
     /**
       * Optionally overrides the value of
-      * [`--max-http-header-size`][] for requests received by this server, i.e.
+      * `--max-http-header-size` for requests received by this server, i.e.
       * the maximum length of request headers in bytes.
       * @default 8192
       */

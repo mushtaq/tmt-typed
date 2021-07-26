@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MSFIDOSignatureAssertion extends MSAssertion {
+trait MSFIDOSignatureAssertion
+  extends StObject
+     with MSAssertion {
   
   val signature: MSFIDOSignature
 }

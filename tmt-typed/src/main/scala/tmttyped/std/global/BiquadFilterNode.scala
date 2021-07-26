@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BiquadFilterNode")
 @js.native
 class BiquadFilterNode protected ()
-  extends tmttyped.std.BiquadFilterNode {
+  extends StObject
+     with tmttyped.std.BiquadFilterNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: BiquadFilterOptions) = this()
 }

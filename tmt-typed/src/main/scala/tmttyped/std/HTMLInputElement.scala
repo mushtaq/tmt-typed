@@ -10,12 +10,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Provides special properties and methods for manipulating the options, layout, and presentation of <input> elements. */
 @js.native
-trait HTMLInputElement extends HTMLElement {
+trait HTMLInputElement
+  extends StObject
+     with HTMLElement {
   
   /**
     * Sets or retrieves a comma-separated list of content types.
     */
   var accept: java.lang.String = js.native
+  
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: AddEventListenerOptions
+  ): Unit = js.native
   
   /**
     * Sets or retrieves how the object is aligned with adjacent text.
@@ -144,6 +157,17 @@ trait HTMLInputElement extends HTMLElement {
   var placeholder: java.lang.String = js.native
   
   var readOnly: scala.Boolean = js.native
+  
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: org.scalajs.dom.raw.EventListenerOptions
+  ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   def reportValidity(): scala.Boolean = js.native
   

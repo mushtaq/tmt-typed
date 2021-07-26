@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGStringList")
 @js.native
 class SVGStringList ()
-  extends tmttyped.std.SVGStringList
+  extends StObject
+     with tmttyped.std.SVGStringList

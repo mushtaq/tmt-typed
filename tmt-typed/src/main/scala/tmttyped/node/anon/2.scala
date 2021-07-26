@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait `2` extends BufferEncodingOption {
+trait `2`
+  extends StObject
+     with BufferEncodingOption {
   
   var encoding: buffer_
 }

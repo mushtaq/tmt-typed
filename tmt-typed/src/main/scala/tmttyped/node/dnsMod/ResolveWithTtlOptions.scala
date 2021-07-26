@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ResolveWithTtlOptions extends ResolveOptions {
+trait ResolveWithTtlOptions
+  extends StObject
+     with ResolveOptions {
   
   @JSName("ttl")
   var ttl_ResolveWithTtlOptions: `true`

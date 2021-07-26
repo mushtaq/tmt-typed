@@ -20,7 +20,7 @@ trait ReadSyncOptions extends StObject {
   /**
     * @default null
     */
-  var position: js.UndefOr[Double | Null] = js.undefined
+  var position: js.UndefOr[ReadPosition | Null] = js.undefined
 }
 object ReadSyncOptions {
   
@@ -46,7 +46,7 @@ object ReadSyncOptions {
     def setOffsetUndefined: Self = StObject.set(x, "offset", js.undefined)
     
     @scala.inline
-    def setPosition(value: Double): Self = StObject.set(x, "position", value.asInstanceOf[js.Any])
+    def setPosition(value: ReadPosition): Self = StObject.set(x, "position", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPositionNull: Self = StObject.set(x, "position", null)

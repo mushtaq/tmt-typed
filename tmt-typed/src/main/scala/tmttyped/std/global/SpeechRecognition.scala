@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechRecognition")
 @js.native
 class SpeechRecognition ()
-  extends tmttyped.std.SpeechRecognition
+  extends StObject
+     with tmttyped.std.SpeechRecognition

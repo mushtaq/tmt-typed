@@ -1,7 +1,5 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Immediate
-import tmttyped.node.NodeJS.Timeout
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,25 +11,51 @@ object nodeTimersMod {
   @js.native
   val ^ : js.Any = js.native
   
+  @JSImport("node:timers", "clearImmediate")
+  @js.native
+  def clearImmediate: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearImmediate */ js.Any = js.native
   @scala.inline
-  def clearImmediate(immediateId: Immediate): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearImmediate")(immediateId.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def clearImmediate_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearImmediate */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("clearImmediate")(x.asInstanceOf[js.Any])
   
+  @JSImport("node:timers", "clearInterval")
+  @js.native
+  def clearInterval: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearInterval */ js.Any = js.native
   @scala.inline
-  def clearInterval(intervalId: Timeout): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearInterval")(intervalId.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def clearInterval_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearInterval */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("clearInterval")(x.asInstanceOf[js.Any])
   
+  @JSImport("node:timers", "clearTimeout")
+  @js.native
+  def clearTimeout: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearTimeout */ js.Any = js.native
   @scala.inline
-  def clearTimeout(timeoutId: Timeout): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("clearTimeout")(timeoutId.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def clearTimeout_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.clearTimeout */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("clearTimeout")(x.asInstanceOf[js.Any])
   
+  @JSImport("node:timers", "setImmediate")
+  @js.native
+  def setImmediate: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setImmediate */ js.Any = js.native
   @scala.inline
-  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(callback.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Immediate]
+  def setImmediate_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setImmediate */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("setImmediate")(x.asInstanceOf[js.Any])
   
+  @JSImport("node:timers", "setInterval")
+  @js.native
+  def setInterval: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setInterval */ js.Any = js.native
   @scala.inline
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
-  @scala.inline
-  def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  def setInterval_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setInterval */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("setInterval")(x.asInstanceOf[js.Any])
   
+  @JSImport("node:timers", "setTimeout")
+  @js.native
+  def setTimeout: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setTimeout */ js.Any = js.native
   @scala.inline
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
-  @scala.inline
-  def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(callback.asInstanceOf[js.Any], ms.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Timeout]
+  def setTimeout_=(
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof global.setTimeout */ js.Any
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("setTimeout")(x.asInstanceOf[js.Any])
 }

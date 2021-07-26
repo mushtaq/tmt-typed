@@ -39,14 +39,14 @@ trait RTCIceCandidate extends StObject {
 object RTCIceCandidate {
   
   @scala.inline
-  def apply(candidate: java.lang.String, toJSON: () => org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): org.scalajs.dom.experimental.webrtc.RTCIceCandidate = {
+  def apply(candidate: java.lang.String, toJSON: () => org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): RTCIceCandidate = {
     val __obj = js.Dynamic.literal(candidate = candidate.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), component = null, foundation = null, port = null, priority = null, protocol = null, relatedAddress = null, relatedPort = null, sdpMLineIndex = null, sdpMid = null, tcpType = null, usernameFragment = null)
     __obj.updateDynamic("type")(null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCIceCandidate]
+    __obj.asInstanceOf[RTCIceCandidate]
   }
   
   @scala.inline
-  implicit class RTCIceCandidateMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCIceCandidate] (val x: Self) extends AnyVal {
+  implicit class RTCIceCandidateMutableBuilder[Self <: RTCIceCandidate] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCandidate(value: java.lang.String): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])

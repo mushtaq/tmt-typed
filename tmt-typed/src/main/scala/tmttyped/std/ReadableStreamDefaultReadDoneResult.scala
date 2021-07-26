@@ -7,17 +7,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ReadableStreamDefaultReadDoneResult
-  extends ReadableStreamDefaultReadResult[js.Any] {
+  extends StObject
+     with ReadableStreamDefaultReadResult[js.Any] {
   
   var done: `true`
   
-  var value: js.UndefOr[scala.Nothing] = js.undefined
+  var value: Unit
 }
 object ReadableStreamDefaultReadDoneResult {
   
   @scala.inline
-  def apply(): ReadableStreamDefaultReadDoneResult = {
-    val __obj = js.Dynamic.literal(done = true)
+  def apply(value: Unit): ReadableStreamDefaultReadDoneResult = {
+    val __obj = js.Dynamic.literal(done = true, value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadableStreamDefaultReadDoneResult]
   }
   
@@ -26,5 +27,8 @@ object ReadableStreamDefaultReadDoneResult {
     
     @scala.inline
     def setDone(value: `true`): Self = StObject.set(x, "done", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setValue(value: Unit): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

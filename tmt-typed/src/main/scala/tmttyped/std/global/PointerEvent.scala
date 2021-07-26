@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PointerEvent")
 @js.native
 class PointerEvent protected ()
-  extends tmttyped.std.PointerEvent {
+  extends StObject
+     with tmttyped.std.PointerEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: PointerEventInit) = this()
 }

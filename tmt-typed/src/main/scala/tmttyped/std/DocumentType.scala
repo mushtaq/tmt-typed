@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A Node containing a doctype. */
 @js.native
-trait DocumentType extends ChildNode {
+trait DocumentType
+  extends StObject
+     with ChildNode {
   
   val name: java.lang.String = js.native
   

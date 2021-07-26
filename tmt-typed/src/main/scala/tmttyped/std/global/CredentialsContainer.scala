@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CredentialsContainer")
 @js.native
 class CredentialsContainer ()
-  extends tmttyped.std.CredentialsContainer
+  extends StObject
+     with tmttyped.std.CredentialsContainer

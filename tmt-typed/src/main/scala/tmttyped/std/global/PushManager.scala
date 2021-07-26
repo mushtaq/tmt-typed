@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PushManager")
 @js.native
 class PushManager ()
-  extends tmttyped.std.PushManager
+  extends StObject
+     with tmttyped.std.PushManager
 object PushManager {
   
   @JSGlobal("PushManager.supportedContentEncodings")

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSGesture")
 @js.native
 class MSGesture ()
-  extends tmttyped.std.MSGesture {
+  extends StObject
+     with tmttyped.std.MSGesture {
   
   /* CompleteClass */
   override def addPointer(pointerId: Double): Unit = js.native

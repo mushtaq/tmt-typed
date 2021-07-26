@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSStyleRule")
 @js.native
 class CSSStyleRule ()
-  extends tmttyped.std.CSSStyleRule {
+  extends StObject
+     with tmttyped.std.CSSStyleRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

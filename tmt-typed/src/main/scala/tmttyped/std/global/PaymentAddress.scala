@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PaymentAddress")
 @js.native
 class PaymentAddress ()
-  extends tmttyped.std.PaymentAddress {
+  extends StObject
+     with tmttyped.std.PaymentAddress {
   
   /* CompleteClass */
   override val addressLine: js.Array[java.lang.String] = js.native
@@ -22,9 +23,6 @@ class PaymentAddress ()
   
   /* CompleteClass */
   override val dependentLocality: java.lang.String = js.native
-  
-  /* CompleteClass */
-  override val languageCode: java.lang.String = js.native
   
   /* CompleteClass */
   override val organization: java.lang.String = js.native

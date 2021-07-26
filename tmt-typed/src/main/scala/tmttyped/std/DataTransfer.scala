@@ -26,18 +26,18 @@ trait DataTransfer extends StObject {
   
   /**
     * Returns the kind of operation that is currently selected. If the kind of operation isn't one of those that is allowed by the effectAllowed attribute, then the operation will fail.
-    * 
+    *
     * Can be set, to change the selected operation.
-    * 
+    *
     * The possible values are "none", "copy", "link", and "move".
     */
   var dropEffect: none | copy | link | move = js.native
   
   /**
     * Returns the kinds of operations that are to be allowed.
-    * 
+    *
     * Can be set (during the dragstart event), to change the allowed operations.
-    * 
+    *
     * The possible values are "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all", and "uninitialized",
     */
   var effectAllowed: none | copy | copyLink | copyMove | link | linkMove | move | all | uninitialized = js.native

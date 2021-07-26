@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechSynthesisVoice")
 @js.native
 class SpeechSynthesisVoice ()
-  extends tmttyped.std.SpeechSynthesisVoice {
+  extends StObject
+     with tmttyped.std.SpeechSynthesisVoice {
   
   /* CompleteClass */
   override val default: scala.Boolean = js.native

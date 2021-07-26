@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A CSSRuleList is an (indirect-modify only) array-like object containing an ordered collection of CSSRule objects. */
 @js.native
 trait CSSRuleList
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.CSSRule] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.CSSRule] {
   
   def item(index: Double): org.scalajs.dom.raw.CSSRule | Null = js.native
   

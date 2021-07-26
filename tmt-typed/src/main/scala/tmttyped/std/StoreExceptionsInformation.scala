@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait StoreExceptionsInformation extends ExceptionInformation {
+trait StoreExceptionsInformation
+  extends StObject
+     with ExceptionInformation {
   
   var detailURI: js.UndefOr[java.lang.String | Null] = js.undefined
   

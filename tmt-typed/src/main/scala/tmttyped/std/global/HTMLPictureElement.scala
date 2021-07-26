@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLPictureElement")
 @js.native
 class HTMLPictureElement ()
-  extends tmttyped.std.HTMLPictureElement {
+  extends StObject
+     with tmttyped.std.HTMLPictureElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

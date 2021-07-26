@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. */
 @js.native
 trait HTMLElement
-  extends Element
+  extends StObject
+     with Element
      with DocumentAndElementEventHandlers
      with ElementCSSInlineStyle
      with ElementContentEditable

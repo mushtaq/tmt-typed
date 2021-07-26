@@ -11,5 +11,5 @@ trait ReadableStreamGenericReader extends StObject {
   def cancel(): js.Promise[Unit] = js.native
   def cancel(reason: js.Any): js.Promise[Unit] = js.native
   
-  val closed: js.Promise[js.UndefOr[scala.Nothing]] = js.native
+  val closed: js.Promise[Unit] = js.native
 }

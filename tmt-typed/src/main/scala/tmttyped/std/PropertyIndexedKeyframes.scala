@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PropertyIndexedKeyframes
-  extends /* property */ StringDictionary[
+  extends StObject
+     with /* property */ StringDictionary[
       js.UndefOr[java.lang.String | (js.Array[Double | Null | java.lang.String]) | Double | Null]
     ] {
   

@@ -4,9 +4,15 @@ import tmttyped.node.NodeJS.ReadOnlyDict
 import tmttyped.node.NodeJS.ReadableStream
 import tmttyped.node.NodeJS.WritableStream
 import tmttyped.node.anon.Options
-import tmttyped.node.nodeReadlineMod.Interface
+import tmttyped.node.nodeStrings.SIGCONT
+import tmttyped.node.nodeStrings.SIGINT
+import tmttyped.node.nodeStrings.SIGTSTP
+import tmttyped.node.nodeStrings.close
 import tmttyped.node.nodeStrings.exit
+import tmttyped.node.nodeStrings.line
+import tmttyped.node.nodeStrings.pause
 import tmttyped.node.nodeStrings.reset
+import tmttyped.node.nodeStrings.resume
 import tmttyped.node.readlineMod.AsyncCompleter
 import tmttyped.node.readlineMod.Completer
 import tmttyped.node.readlineMod.CompleterResult
@@ -24,20 +30,18 @@ object replMod {
   val ^ : js.Any = js.native
   
   /**
-    * Provides a customizable Read-Eval-Print-Loop (REPL).
+    * Instances of `repl.REPLServer` are created using the {@link start} method
+    * or directly using the JavaScript `new` keyword.
     *
-    * Instances of `repl.REPLServer` will accept individual lines of user input, evaluate those
-    * according to a user-defined evaluation function, then output the result. Input and output
-    * may be from `stdin` and `stdout`, respectively, or may be connected to any Node.js `stream`.
+    * ```js
+    * const repl = require('repl');
     *
-    * Instances of `repl.REPLServer` support automatic completion of inputs, simplistic Emacs-style
-    * line editing, multi-line inputs, ANSI-styled output, saving and restoring current REPL session
-    * state, error recovery, and customizable evaluation functions.
+    * const options = { useColors: true };
     *
-    * Instances of `repl.REPLServer` are created using the `repl.start()` method and _should not_
-    * be created directly using the JavaScript `new` keyword.
-    *
-    * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_repl
+    * const firstInstance = repl.start(options);
+    * const secondInstance = new repl.REPLServer(options);
+    * ```
+    * @since v0.1.91
     */
   @JSImport("repl", "REPLServer")
   @js.native
@@ -51,19 +55,44 @@ object replMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  class REPLServer protected () extends Interface {
+  class REPLServer protected () extends StObject {
     
+    /**
+      * events.EventEmitter
+      * 1. close - inherited from `readline.Interface`
+      * 2. line - inherited from `readline.Interface`
+      * 3. pause - inherited from `readline.Interface`
+      * 4. resume - inherited from `readline.Interface`
+      * 5. SIGCONT - inherited from `readline.Interface`
+      * 6. SIGINT - inherited from `readline.Interface`
+      * 7. SIGTSTP - inherited from `readline.Interface`
+      * 8. exit
+      * 9. reset
+      */
+    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_SIGINT(event: SIGINT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_SIGTSTP(event: SIGTSTP, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
+    def addListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
     def addListener_reset(event: reset, listener: js.Function1[/* context */ Context, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
     /**
-      * Clears any command that has been buffered but not yet executed.
-      *
-      * This method is primarily intended to be called from within the action function for
-      * commands registered using the `replServer.defineCommand()` method.
-      *
+      * The `replServer.clearBufferedCommand()` method clears any command that has been
+      * buffered but not yet executed. This method is primarily intended to be
+      * called from within the action function for commands registered using the`replServer.defineCommand()` method.
       * @since v9.0.0
       */
     def clearBufferedCommand(): Unit = js.native
@@ -86,26 +115,56 @@ object replMod {
     
     def defineCommand(keyword: java.lang.String, cmd: REPLCommand): Unit = js.native
     /**
-      * Used to add new `.`-prefixed commands to the REPL instance. Such commands are invoked
-      * by typing a `.` followed by the `keyword`.
+      * The `replServer.defineCommand()` method is used to add new `.`\-prefixed commands
+      * to the REPL instance. Such commands are invoked by typing a `.` followed by the`keyword`. The `cmd` is either a `Function` or an `Object` with the following
+      * properties:
       *
-      * @param keyword The command keyword (_without_ a leading `.` character).
+      * The following example shows two new commands added to the REPL instance:
+      *
+      * ```js
+      * const repl = require('repl');
+      *
+      * const replServer = repl.start({ prompt: '> ' });
+      * replServer.defineCommand('sayhello', {
+      *   help: 'Say hello',
+      *   action(name) {
+      *     this.clearBufferedCommand();
+      *     console.log(`Hello, ${name}!`);
+      *     this.displayPrompt();
+      *   }
+      * });
+      * replServer.defineCommand('saybye', function saybye() {
+      *   console.log('Goodbye!');
+      *   this.close();
+      * });
+      * ```
+      *
+      * The new commands can then be used from within the REPL instance:
+      *
+      * ```console
+      * > .sayhello Node.js User
+      * Hello, Node.js User!
+      * > .saybye
+      * Goodbye!
+      * ```
+      * @since v0.3.0
+      * @param keyword The command keyword (*without* a leading `.` character).
       * @param cmd The function to invoke when the command is processed.
-      *
-      * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_replserver_definecommand_keyword_cmd
       */
     def defineCommand(keyword: java.lang.String, cmd: REPLCommandAction): Unit = js.native
     
     /**
-      * Readies the REPL instance for input from the user, printing the configured `prompt` to a
-      * new line in the `output` and resuming the `input` to accept new input.
+      * The `replServer.displayPrompt()` method readies the REPL instance for input
+      * from the user, printing the configured `prompt` to a new line in the `output`and resuming the `input` to accept new input.
       *
-      * When multi-line input is being entered, an ellipsis is printed rather than the 'prompt'.
+      * When multi-line input is being entered, an ellipsis is printed rather than the
+      * 'prompt'.
       *
-      * This method is primarily intended to be called from within the action function for
-      * commands registered using the `replServer.defineCommand()` method.
+      * When `preserveCursor` is `true`, the cursor placement will not be reset to `0`.
       *
-      * @param preserveCursor When `true`, the cursor placement will not be reset to `0`.
+      * The `replServer.displayPrompt` method is primarily intended to be called from
+      * within the action function for commands registered using the`replServer.defineCommand()` method.
+      * @since v0.1.91
       */
     def displayPrompt(): Unit = js.native
     def displayPrompt(preserveCursor: Boolean): Unit = js.native
@@ -117,10 +176,26 @@ object replMod {
       */
     val editorMode: Boolean = js.native
     
+    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    @JSName("emit")
+    def emit_SIGCONT(event: SIGCONT): Boolean = js.native
+    @JSName("emit")
+    def emit_SIGINT(event: SIGINT): Boolean = js.native
+    @JSName("emit")
+    def emit_SIGTSTP(event: SIGTSTP): Boolean = js.native
+    @JSName("emit")
+    def emit_close(event: close): Boolean = js.native
     @JSName("emit")
     def emit_exit(event: exit): Boolean = js.native
     @JSName("emit")
+    def emit_line(event: line, input: java.lang.String): Boolean = js.native
+    @JSName("emit")
+    def emit_pause(event: pause): Boolean = js.native
+    @JSName("emit")
     def emit_reset(event: reset, context: Context): Boolean = js.native
+    @JSName("emit")
+    def emit_resume(event: resume): Boolean = js.native
     
     /**
       * Specified in the REPL options, this is the function to be used when evaluating each
@@ -165,15 +240,45 @@ object replMod {
       */
     val lastError: js.Any = js.native
     
+    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    @JSName("on")
+    def on_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_SIGINT(event: SIGINT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_SIGTSTP(event: SIGTSTP, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
     def on_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
+    def on_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    @JSName("on")
+    def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
     def on_reset(event: reset, listener: js.Function1[/* context */ Context, Unit]): this.type = js.native
+    @JSName("on")
+    def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
+    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    @JSName("once")
+    def once_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_SIGINT(event: SIGINT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_SIGTSTP(event: SIGTSTP, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
     def once_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
+    def once_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    @JSName("once")
+    def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
     def once_reset(event: reset, listener: js.Function1[/* context */ Context, Unit]): this.type = js.native
+    @JSName("once")
+    def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
     /**
       * The `Writable` stream to which REPL output will be written.
@@ -185,15 +290,45 @@ object replMod {
       */
     val outputStream: WritableStream = js.native
     
+    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_SIGINT(event: SIGINT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_SIGTSTP(event: SIGTSTP, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
+    def prependListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
     def prependListener_reset(event: reset, listener: js.Function1[/* context */ Context, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
+    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_SIGINT(event: SIGINT, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_SIGTSTP(event: SIGTSTP, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
+    def prependOnceListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
     def prependOnceListener_reset(event: reset, listener: js.Function1[/* context */ Context, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
     /**
       * Specified in the REPL options, this is a flag that specifies whether the default `eval`
@@ -207,11 +342,13 @@ object replMod {
     
     /**
       * Initializes a history log file for the REPL instance. When executing the
-      * Node.js binary and using the command line REPL, a history file is initialized
+      * Node.js binary and using the command-line REPL, a history file is initialized
       * by default. However, this is not the case when creating a REPL
       * programmatically. Use this method to initialize a history log file when working
       * with REPL instances programmatically.
-      * @param path The path to the history file
+      * @since v11.10.0
+      * @param historyPath the path to the history file
+      * @param callback called when history writes are ready or upon error
       */
     def setupHistory(path: java.lang.String, cb: js.Function2[/* err */ js.Error | Null, /* repl */ this.type, Unit]): Unit = js.native
     
@@ -273,7 +410,9 @@ object replMod {
     */
   @JSImport("repl", "Recoverable")
   @js.native
-  class Recoverable protected () extends Error {
+  class Recoverable protected ()
+    extends StObject
+       with Error {
     def this(err: js.Error) = this()
     
     var err: js.Error = js.native
@@ -286,10 +425,17 @@ object replMod {
   }
   
   /**
-    * Creates and starts a `repl.REPLServer` instance.
+    * The `repl.start()` method creates and starts a {@link REPLServer} instance.
     *
-    * @param options The options for the `REPLServer`. If `options` is a string, then it specifies
-    * the input prompt.
+    * If `options` is a string, then it specifies the input prompt:
+    *
+    * ```js
+    * const repl = require('repl');
+    *
+    * // a Unix style prompt
+    * repl.start('$ ');
+    * ```
+    * @since v0.1.91
     */
   @scala.inline
   def start(): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[REPLServer]
@@ -394,13 +540,13 @@ object replMod {
     
     /**
       * The `Readable` stream from which REPL input will be read.
-      * Default: `process.stdin`
+      * @default process.stdin
       */
     var input: js.UndefOr[ReadableStream] = js.undefined
     
     /**
       * The `Writable` stream to which REPL output will be written.
-      * Default: `process.stdout`
+      * @default process.stdout
       */
     var output: js.UndefOr[WritableStream] = js.undefined
     
@@ -412,7 +558,7 @@ object replMod {
     
     /**
       * The input prompt to display.
-      * Default: `"> "`
+      * @default "> "
       */
     var prompt: js.UndefOr[java.lang.String] = js.undefined
     
@@ -487,7 +633,7 @@ object replMod {
               /* err */ js.UndefOr[Null | js.Error], 
               /* result */ js.UndefOr[CompleterResult], 
               Unit
-            ]) => js.Any
+            ]) => Unit
       ): Self = StObject.set(x, "completer", js.Any.fromFunction2(value))
       
       @scala.inline

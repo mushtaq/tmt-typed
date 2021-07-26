@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XSLTProcessor")
 @js.native
 class XSLTProcessor ()
-  extends tmttyped.std.XSLTProcessor {
+  extends StObject
+     with tmttyped.std.XSLTProcessor {
   
   /* CompleteClass */
   override def clearParameters(): Unit = js.native

@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate. */
 @js.native
-trait RTCPeerConnectionIceEvent extends Event {
+trait RTCPeerConnectionIceEvent
+  extends StObject
+     with Event {
   
   val candidate: org.scalajs.dom.experimental.webrtc.RTCIceCandidate | Null = js.native
-  
-  val url: java.lang.String | Null = js.native
 }

@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Worklet")
 @js.native
 class Worklet ()
-  extends tmttyped.std.Worklet
+  extends StObject
+     with tmttyped.std.Worklet

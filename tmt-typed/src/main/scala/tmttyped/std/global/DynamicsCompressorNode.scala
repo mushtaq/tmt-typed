@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DynamicsCompressorNode")
 @js.native
 class DynamicsCompressorNode protected ()
-  extends tmttyped.std.DynamicsCompressorNode {
+  extends StObject
+     with tmttyped.std.DynamicsCompressorNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: DynamicsCompressorOptions) = this()
 }

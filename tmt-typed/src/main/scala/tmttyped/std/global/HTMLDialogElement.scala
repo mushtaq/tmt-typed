@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLDialogElement")
 @js.native
 class HTMLDialogElement ()
-  extends tmttyped.std.HTMLDialogElement {
+  extends StObject
+     with tmttyped.std.HTMLDialogElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

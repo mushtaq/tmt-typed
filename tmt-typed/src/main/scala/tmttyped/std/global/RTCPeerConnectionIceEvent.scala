@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCPeerConnectionIceEvent")
 @js.native
 class RTCPeerConnectionIceEvent protected ()
-  extends tmttyped.std.RTCPeerConnectionIceEvent {
+  extends StObject
+     with tmttyped.std.RTCPeerConnectionIceEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: RTCPeerConnectionIceEventInit) = this()
 }

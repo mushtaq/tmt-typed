@@ -13,7 +13,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object anon {
   
-  trait `0` extends ConnectionStatus {
+  trait `0`
+    extends StObject
+       with ConnectionStatus {
     
     var kind: CONNECTING
   }
@@ -33,7 +35,9 @@ object anon {
     }
   }
   
-  trait `1` extends ConnectionStatus {
+  trait `1`
+    extends StObject
+       with ConnectionStatus {
     
     var kind: CONNECTED
   }
@@ -53,7 +57,9 @@ object anon {
     }
   }
   
-  trait `2` extends ConnectionStatus {
+  trait `2`
+    extends StObject
+       with ConnectionStatus {
     
     var kind: CLOSED
   }
@@ -73,7 +79,9 @@ object anon {
     }
   }
   
-  trait Error extends ConnectionStatus {
+  trait Error
+    extends StObject
+       with ConnectionStatus {
     
     var error: js.Error
     
@@ -98,7 +106,9 @@ object anon {
     }
   }
   
-  trait Kind extends ConnectionStatus {
+  trait Kind
+    extends StObject
+       with ConnectionStatus {
     
     var kind: NOT_CONNECTED
   }

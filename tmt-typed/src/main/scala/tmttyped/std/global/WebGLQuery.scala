@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLQuery")
 @js.native
 class WebGLQuery ()
-  extends tmttyped.std.WebGLObject
+  extends StObject
+     with tmttyped.std.WebGLQuery

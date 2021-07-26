@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list. */
 @js.native
 trait HTMLCollectionBase
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.Element] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.Element] {
   
   /**
     * Retrieves an object from various collections.

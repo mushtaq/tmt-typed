@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Touch")
 @js.native
 class Touch protected ()
-  extends tmttyped.std.Touch {
+  extends StObject
+     with tmttyped.std.Touch {
   def this(touchInitDict: TouchInit) = this()
   
   /* CompleteClass */

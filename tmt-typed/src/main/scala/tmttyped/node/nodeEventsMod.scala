@@ -3,6 +3,7 @@ package tmttyped.node
 import tmttyped.node.eventsMod.DOMEventTarget
 import tmttyped.node.eventsMod.EventEmitterOptions
 import tmttyped.node.eventsMod.NodeEventTarget
+import tmttyped.node.eventsMod.StaticEventEmitterOptions
 import tmttyped.node.eventsMod.global.NodeJS.EventEmitter
 import tmttyped.std.AsyncIterableIterator
 import org.scalablytyped.runtime.StObject
@@ -12,10 +13,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object nodeEventsMod {
   
+  /**
+    * The `EventEmitter` class is defined and exposed by the `events` module:
+    *
+    * ```js
+    * const EventEmitter = require('events');
+    * ```
+    *
+    * All `EventEmitter`s emit the event `'newListener'` when new listeners are
+    * added and `'removeListener'` when existing listeners are removed.
+    *
+    * It supports the following option:
+    * @since v0.1.26
+    */
   @JSImport("node:events", JSImport.Namespace)
   @js.native
-  class ^ ()
-    extends tmttyped.node.eventsMod.^ {
+  class ^ () extends StObject {
     def this(options: EventEmitterOptions) = this()
   }
   @JSImport("node:events", JSImport.Namespace)
@@ -59,6 +72,19 @@ object nodeEventsMod {
   @js.native
   val errorMonitor: js.Symbol = js.native
   
+  /**
+    * Returns a list listener for a specific emitter event name.
+    */
+  /* static member */
+  @scala.inline
+  def getEventListener(emitter: DOMEventTarget, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  @scala.inline
+  def getEventListener(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  @scala.inline
+  def getEventListener(emitter: EventEmitter, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  @scala.inline
+  def getEventListener(emitter: EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  
   /** @deprecated since v4.0.0 */
   /* static member */
   @scala.inline
@@ -68,14 +94,22 @@ object nodeEventsMod {
   
   /* static member */
   @scala.inline
-  def on(emitter: EventEmitter, event: java.lang.String): AsyncIterableIterator[_] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[_]]
+  def on(emitter: EventEmitter, event: java.lang.String): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
+  @scala.inline
+  def on(emitter: EventEmitter, event: java.lang.String, options: StaticEventEmitterOptions): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
   
   /* static member */
   @scala.inline
-  def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
+  def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  @scala.inline
+  def once(emitter: DOMEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
   /* static member */
   @scala.inline
-  def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
+  def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
   @scala.inline
-  def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[_]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[_]]]
+  def once(emitter: NodeEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  @scala.inline
+  def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  @scala.inline
+  def once(emitter: NodeEventTarget, event: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
 }

@@ -9,18 +9,19 @@ trait RTCSessionDescriptionInit extends StObject {
   
   var sdp: js.UndefOr[java.lang.String] = js.undefined
   
-  var `type`: js.UndefOr[org.scalajs.dom.experimental.webrtc.RTCSdpType] = js.undefined
+  var `type`: org.scalajs.dom.experimental.webrtc.RTCSdpType
 }
 object RTCSessionDescriptionInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit = {
+  def apply(`type`: org.scalajs.dom.experimental.webrtc.RTCSdpType): RTCSessionDescriptionInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit]
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RTCSessionDescriptionInit]
   }
   
   @scala.inline
-  implicit class RTCSessionDescriptionInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit] (val x: Self) extends AnyVal {
+  implicit class RTCSessionDescriptionInitMutableBuilder[Self <: RTCSessionDescriptionInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setSdp(value: java.lang.String): Self = StObject.set(x, "sdp", value.asInstanceOf[js.Any])
@@ -30,8 +31,5 @@ object RTCSessionDescriptionInit {
     
     @scala.inline
     def setType(value: org.scalajs.dom.experimental.webrtc.RTCSdpType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
   }
 }

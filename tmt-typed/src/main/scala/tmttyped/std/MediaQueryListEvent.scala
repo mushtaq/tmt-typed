@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MediaQueryListEvent extends Event {
+trait MediaQueryListEvent
+  extends StObject
+     with Event {
   
   val matches: scala.Boolean = js.native
   

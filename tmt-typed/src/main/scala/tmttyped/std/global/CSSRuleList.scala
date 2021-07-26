@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSRuleList")
 @js.native
 class CSSRuleList ()
-  extends tmttyped.std.CSSRuleList
+  extends StObject
+     with tmttyped.std.CSSRuleList

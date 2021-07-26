@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PerfWidgetExternal")
 @js.native
 class PerfWidgetExternal ()
-  extends tmttyped.std.PerfWidgetExternal
+  extends StObject
+     with tmttyped.std.PerfWidgetExternal

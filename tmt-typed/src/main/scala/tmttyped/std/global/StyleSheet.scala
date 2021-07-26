@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StyleSheet")
 @js.native
 class StyleSheet ()
-  extends tmttyped.std.StyleSheet {
+  extends StObject
+     with tmttyped.std.StyleSheet {
   
   /* CompleteClass */
   override var disabled: scala.Boolean = js.native

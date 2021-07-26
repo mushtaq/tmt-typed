@@ -60,14 +60,14 @@ object SVGTransform {
     setSkewY: Double => Unit,
     setTranslate: (Double, Double) => Unit,
     `type`: Double
-  ): org.scalajs.dom.raw.SVGTransform = {
+  ): SVGTransform = {
     val __obj = js.Dynamic.literal(SVG_TRANSFORM_MATRIX = SVG_TRANSFORM_MATRIX.asInstanceOf[js.Any], SVG_TRANSFORM_ROTATE = SVG_TRANSFORM_ROTATE.asInstanceOf[js.Any], SVG_TRANSFORM_SCALE = SVG_TRANSFORM_SCALE.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWX = SVG_TRANSFORM_SKEWX.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWY = SVG_TRANSFORM_SKEWY.asInstanceOf[js.Any], SVG_TRANSFORM_TRANSLATE = SVG_TRANSFORM_TRANSLATE.asInstanceOf[js.Any], SVG_TRANSFORM_UNKNOWN = SVG_TRANSFORM_UNKNOWN.asInstanceOf[js.Any], angle = angle.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any], setMatrix = js.Any.fromFunction1(setMatrix), setRotate = js.Any.fromFunction3(setRotate), setScale = js.Any.fromFunction2(setScale), setSkewX = js.Any.fromFunction1(setSkewX), setSkewY = js.Any.fromFunction1(setSkewY), setTranslate = js.Any.fromFunction2(setTranslate))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGTransform]
+    __obj.asInstanceOf[SVGTransform]
   }
   
   @scala.inline
-  implicit class SVGTransformMutableBuilder[Self <: org.scalajs.dom.raw.SVGTransform] (val x: Self) extends AnyVal {
+  implicit class SVGTransformMutableBuilder[Self <: SVGTransform] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAngle(value: Double): Self = StObject.set(x, "angle", value.asInstanceOf[js.Any])

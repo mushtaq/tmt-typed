@@ -15,9 +15,11 @@ object rsocketwebsocketclientMod {
   
   @JSImport("rsocket-websocket-client/RSocketWebSocketClient", JSImport.Default)
   @js.native
-  class default protected () extends RSocketWebSocketClient {
+  class default protected ()
+    extends StObject
+       with RSocketWebSocketClient {
     def this(options: ClientOptions) = this()
-    def this(options: ClientOptions, encoders: Encoders[_]) = this()
+    def this(options: ClientOptions, encoders: Encoders[js.Any]) = this()
     
     /**
       * Close the underlying connection, emitting `onComplete` on the receive()
@@ -118,7 +120,9 @@ object rsocketwebsocketclientMod {
     }
   }
   
-  trait RSocketWebSocketClient extends DuplexConnection
+  trait RSocketWebSocketClient
+    extends StObject
+       with DuplexConnection
   object RSocketWebSocketClient {
     
     @scala.inline

@@ -45,33 +45,6 @@ object RsaPrivateKey {
     def setOaepLabel(value: TypedArray): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOaepLabelFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelFloat64Array(value: js.typedarray.Float64Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelInt16Array(value: js.typedarray.Int16Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelInt32Array(value: js.typedarray.Int32Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelInt8Array(value: js.typedarray.Int8Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelUint16Array(value: js.typedarray.Uint16Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelUint32Array(value: js.typedarray.Uint32Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOaepLabelUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = StObject.set(x, "oaepLabel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setOaepLabelUndefined: Self = StObject.set(x, "oaepLabel", js.undefined)
     
     @scala.inline

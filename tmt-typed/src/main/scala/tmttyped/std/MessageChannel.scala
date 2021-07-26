@@ -21,13 +21,13 @@ trait MessageChannel extends StObject {
 object MessageChannel {
   
   @scala.inline
-  def apply(port1: org.scalajs.dom.raw.MessagePort, port2: org.scalajs.dom.raw.MessagePort): org.scalajs.dom.raw.MessageChannel = {
+  def apply(port1: org.scalajs.dom.raw.MessagePort, port2: org.scalajs.dom.raw.MessagePort): MessageChannel = {
     val __obj = js.Dynamic.literal(port1 = port1.asInstanceOf[js.Any], port2 = port2.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.MessageChannel]
+    __obj.asInstanceOf[MessageChannel]
   }
   
   @scala.inline
-  implicit class MessageChannelMutableBuilder[Self <: org.scalajs.dom.raw.MessageChannel] (val x: Self) extends AnyVal {
+  implicit class MessageChannelMutableBuilder[Self <: MessageChannel] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setPort1(value: org.scalajs.dom.raw.MessagePort): Self = StObject.set(x, "port1", value.asInstanceOf[js.Any])

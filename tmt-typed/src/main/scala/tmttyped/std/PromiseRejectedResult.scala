@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PromiseRejectedResult
-  extends PromiseSettledResult[js.Any] {
+  extends StObject
+     with PromiseSettledResult[js.Any] {
   
   var reason: js.Any
   

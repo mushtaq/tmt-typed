@@ -21,14 +21,14 @@ object RTCSessionDescription {
     sdp: java.lang.String,
     toJSON: () => js.Any,
     `type`: org.scalajs.dom.experimental.webrtc.RTCSdpType
-  ): org.scalajs.dom.experimental.webrtc.RTCSessionDescription = {
+  ): RTCSessionDescription = {
     val __obj = js.Dynamic.literal(sdp = sdp.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCSessionDescription]
+    __obj.asInstanceOf[RTCSessionDescription]
   }
   
   @scala.inline
-  implicit class RTCSessionDescriptionMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCSessionDescription] (val x: Self) extends AnyVal {
+  implicit class RTCSessionDescriptionMutableBuilder[Self <: RTCSessionDescription] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setSdp(value: java.lang.String): Self = StObject.set(x, "sdp", value.asInstanceOf[js.Any])

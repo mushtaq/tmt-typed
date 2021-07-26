@@ -14,13 +14,13 @@ trait SVGAnimatedPoints extends StObject {
 object SVGAnimatedPoints {
   
   @scala.inline
-  def apply(animatedPoints: org.scalajs.dom.raw.SVGPointList, points: org.scalajs.dom.raw.SVGPointList): org.scalajs.dom.raw.SVGAnimatedPoints = {
+  def apply(animatedPoints: org.scalajs.dom.raw.SVGPointList, points: org.scalajs.dom.raw.SVGPointList): SVGAnimatedPoints = {
     val __obj = js.Dynamic.literal(animatedPoints = animatedPoints.asInstanceOf[js.Any], points = points.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedPoints]
+    __obj.asInstanceOf[SVGAnimatedPoints]
   }
   
   @scala.inline
-  implicit class SVGAnimatedPointsMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedPoints] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedPointsMutableBuilder[Self <: SVGAnimatedPoints] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimatedPoints(value: org.scalajs.dom.raw.SVGPointList): Self = StObject.set(x, "animatedPoints", value.asInstanceOf[js.Any])

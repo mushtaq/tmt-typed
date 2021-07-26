@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBOpenDBRequest")
 @js.native
 class IDBOpenDBRequest ()
-  extends tmttyped.std.IDBOpenDBRequest
+  extends StObject
+     with tmttyped.std.IDBOpenDBRequest

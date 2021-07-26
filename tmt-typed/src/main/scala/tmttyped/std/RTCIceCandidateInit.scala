@@ -18,13 +18,13 @@ trait RTCIceCandidateInit extends StObject {
 object RTCIceCandidateInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit = {
+  def apply(): RTCIceCandidateInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit]
+    __obj.asInstanceOf[RTCIceCandidateInit]
   }
   
   @scala.inline
-  implicit class RTCIceCandidateInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit] (val x: Self) extends AnyVal {
+  implicit class RTCIceCandidateInitMutableBuilder[Self <: RTCIceCandidateInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCandidate(value: java.lang.String): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])

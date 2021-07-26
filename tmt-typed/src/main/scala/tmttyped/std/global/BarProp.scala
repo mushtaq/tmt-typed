@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BarProp")
 @js.native
 class BarProp ()
-  extends tmttyped.std.BarProp {
+  extends StObject
+     with tmttyped.std.BarProp {
   
   /* CompleteClass */
   override val visible: scala.Boolean = js.native

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MessageChannel")
 @js.native
 class MessageChannel ()
-  extends tmttyped.std.MessageChannel {
+  extends StObject
+     with tmttyped.std.MessageChannel {
   
   /**
     * Returns the first MessagePort object.

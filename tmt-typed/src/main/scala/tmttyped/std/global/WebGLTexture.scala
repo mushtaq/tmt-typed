@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLTexture")
 @js.native
 class WebGLTexture ()
-  extends tmttyped.std.WebGLObject
+  extends StObject
+     with tmttyped.std.WebGLTexture

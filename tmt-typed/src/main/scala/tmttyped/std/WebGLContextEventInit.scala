@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait WebGLContextEventInit extends EventInit {
+trait WebGLContextEventInit
+  extends StObject
+     with EventInit {
   
   var statusMessage: js.UndefOr[java.lang.String] = js.undefined
 }

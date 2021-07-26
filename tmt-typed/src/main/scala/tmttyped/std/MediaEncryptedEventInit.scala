@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MediaEncryptedEventInit extends EventInit {
+trait MediaEncryptedEventInit
+  extends StObject
+     with EventInit {
   
   var initData: js.UndefOr[js.typedarray.ArrayBuffer | Null] = js.undefined
   

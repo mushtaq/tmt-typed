@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCRtpTransceiver")
 @js.native
 class RTCRtpTransceiver ()
-  extends tmttyped.std.RTCRtpTransceiver
+  extends StObject
+     with tmttyped.std.RTCRtpTransceiver

@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AnyAaaaRecord
-  extends RecordWithTtl
+  extends StObject
+     with RecordWithTtl
      with AnyRecord
      with AnyRecordWithTtl {
   

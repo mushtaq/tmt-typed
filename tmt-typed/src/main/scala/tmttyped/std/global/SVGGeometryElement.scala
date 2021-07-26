@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGGeometryElement")
 @js.native
 class SVGGeometryElement ()
-  extends tmttyped.std.SVGGeometryElement {
+  extends StObject
+     with tmttyped.std.SVGGeometryElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

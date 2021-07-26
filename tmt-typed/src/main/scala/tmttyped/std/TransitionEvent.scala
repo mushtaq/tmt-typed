@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events providing information related to transitions. */
 @js.native
-trait TransitionEvent extends Event {
+trait TransitionEvent
+  extends StObject
+     with Event {
   
   val elapsedTime: Double = js.native
   

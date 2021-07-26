@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAnimatedInteger")
 @js.native
 class SVGAnimatedInteger ()
-  extends tmttyped.std.SVGAnimatedInteger {
+  extends StObject
+     with tmttyped.std.SVGAnimatedInteger {
   
   /* CompleteClass */
   override val animVal: Double = js.native

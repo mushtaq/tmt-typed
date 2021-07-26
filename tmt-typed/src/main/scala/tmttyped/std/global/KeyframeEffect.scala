@@ -12,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("KeyframeEffect")
 @js.native
 class KeyframeEffect ()
-  extends tmttyped.std.KeyframeEffect {
+  extends StObject
+     with tmttyped.std.KeyframeEffect {
   def this(source: tmttyped.std.KeyframeEffect) = this()
   def this(target: org.scalajs.dom.raw.Element) = this()
   def this(target: org.scalajs.dom.raw.Element, keyframes: js.Array[Keyframe]) = this()

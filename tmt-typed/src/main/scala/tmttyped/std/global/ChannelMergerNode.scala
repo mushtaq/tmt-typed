@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ChannelMergerNode")
 @js.native
 class ChannelMergerNode protected ()
-  extends tmttyped.std.AudioNode {
+  extends StObject
+     with tmttyped.std.AudioNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: ChannelMergerOptions) = this()
 }

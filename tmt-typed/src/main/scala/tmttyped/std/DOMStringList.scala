@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A type returned by some APIs which contains a list of DOMString (strings). */
 @js.native
 trait DOMStringList
-  extends /* index */ NumberDictionary[java.lang.String] {
+  extends StObject
+     with /* index */ NumberDictionary[java.lang.String] {
   
   /**
     * Returns true if strings contains string, and false otherwise.

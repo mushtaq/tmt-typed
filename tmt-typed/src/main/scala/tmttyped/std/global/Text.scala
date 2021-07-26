@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Text")
 @js.native
 class Text ()
-  extends tmttyped.std.Text {
+  extends StObject
+     with tmttyped.std.Text {
   def this(data: java.lang.String) = this()
   
   /* CompleteClass */

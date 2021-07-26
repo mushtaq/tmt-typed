@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Node")
 @js.native
 class Node ()
-  extends tmttyped.std.Node
+  extends StObject
+     with tmttyped.std.Node
 object Node {
   
   @JSGlobal("Node.ATTRIBUTE_NODE")

@@ -9,8 +9,6 @@ trait RTCErrorInit extends StObject {
   
   var errorDetail: RTCErrorDetailType
   
-  var httpRequestStatusCode: js.UndefOr[Double] = js.undefined
-  
   var receivedAlert: js.UndefOr[Double] = js.undefined
   
   var sctpCauseCode: js.UndefOr[Double] = js.undefined
@@ -32,12 +30,6 @@ object RTCErrorInit {
     
     @scala.inline
     def setErrorDetail(value: RTCErrorDetailType): Self = StObject.set(x, "errorDetail", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHttpRequestStatusCode(value: Double): Self = StObject.set(x, "httpRequestStatusCode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHttpRequestStatusCodeUndefined: Self = StObject.set(x, "httpRequestStatusCode", js.undefined)
     
     @scala.inline
     def setReceivedAlert(value: Double): Self = StObject.set(x, "receivedAlert", value.asInstanceOf[js.Any])

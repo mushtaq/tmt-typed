@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ArrayLike[T] extends /* n */ NumberDictionary[T] {
+trait ArrayLike[T]
+  extends StObject
+     with /* n */ NumberDictionary[T] {
   
   val length: Double
 }

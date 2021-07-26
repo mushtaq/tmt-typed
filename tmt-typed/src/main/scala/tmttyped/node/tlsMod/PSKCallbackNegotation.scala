@@ -28,35 +28,5 @@ object PSKCallbackNegotation {
     
     @scala.inline
     def setPsk(value: js.typedarray.DataView | TypedArray): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskDataView(value: js.typedarray.DataView): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskFloat64Array(value: js.typedarray.Float64Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskInt16Array(value: js.typedarray.Int16Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskInt32Array(value: js.typedarray.Int32Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskInt8Array(value: js.typedarray.Int8Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskUint16Array(value: js.typedarray.Uint16Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskUint32Array(value: js.typedarray.Uint32Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPskUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = StObject.set(x, "psk", value.asInstanceOf[js.Any])
   }
 }

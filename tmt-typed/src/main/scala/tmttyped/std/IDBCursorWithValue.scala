@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This IndexedDB API interface represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property. */
 @js.native
-trait IDBCursorWithValue extends IDBCursor {
+trait IDBCursorWithValue
+  extends StObject
+     with IDBCursor {
   
   /**
     * Returns the cursor's current value.

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAnimateTransformElement")
 @js.native
 class SVGAnimateTransformElement ()
-  extends tmttyped.std.SVGAnimateTransformElement {
+  extends StObject
+     with tmttyped.std.SVGAnimateTransformElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

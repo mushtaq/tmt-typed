@@ -52,14 +52,14 @@ object CSSRule {
     SUPPORTS_RULE: Double,
     cssText: java.lang.String,
     `type`: Double
-  ): org.scalajs.dom.raw.CSSRule = {
+  ): CSSRule = {
     val __obj = js.Dynamic.literal(CHARSET_RULE = CHARSET_RULE.asInstanceOf[js.Any], FONT_FACE_RULE = FONT_FACE_RULE.asInstanceOf[js.Any], IMPORT_RULE = IMPORT_RULE.asInstanceOf[js.Any], KEYFRAMES_RULE = KEYFRAMES_RULE.asInstanceOf[js.Any], KEYFRAME_RULE = KEYFRAME_RULE.asInstanceOf[js.Any], MEDIA_RULE = MEDIA_RULE.asInstanceOf[js.Any], NAMESPACE_RULE = NAMESPACE_RULE.asInstanceOf[js.Any], PAGE_RULE = PAGE_RULE.asInstanceOf[js.Any], STYLE_RULE = STYLE_RULE.asInstanceOf[js.Any], SUPPORTS_RULE = SUPPORTS_RULE.asInstanceOf[js.Any], cssText = cssText.asInstanceOf[js.Any], parentRule = null, parentStyleSheet = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.CSSRule]
+    __obj.asInstanceOf[CSSRule]
   }
   
   @scala.inline
-  implicit class CSSRuleMutableBuilder[Self <: org.scalajs.dom.raw.CSSRule] (val x: Self) extends AnyVal {
+  implicit class CSSRuleMutableBuilder[Self <: CSSRule] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCHARSET_RULE(value: Double): Self = StObject.set(x, "CHARSET_RULE", value.asInstanceOf[js.Any])

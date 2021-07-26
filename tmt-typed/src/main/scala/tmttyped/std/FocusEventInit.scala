@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait FocusEventInit extends UIEventInit {
+trait FocusEventInit
+  extends StObject
+     with UIEventInit {
   
   var relatedTarget: js.UndefOr[org.scalajs.dom.raw.EventTarget | Null] = js.undefined
 }

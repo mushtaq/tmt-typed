@@ -14,13 +14,13 @@ trait BlobPropertyBag extends StObject {
 object BlobPropertyBag {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.BlobPropertyBag = {
+  def apply(): BlobPropertyBag = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.BlobPropertyBag]
+    __obj.asInstanceOf[BlobPropertyBag]
   }
   
   @scala.inline
-  implicit class BlobPropertyBagMutableBuilder[Self <: org.scalajs.dom.raw.BlobPropertyBag] (val x: Self) extends AnyVal {
+  implicit class BlobPropertyBagMutableBuilder[Self <: BlobPropertyBag] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setEndings(value: EndingType): Self = StObject.set(x, "endings", value.asInstanceOf[js.Any])

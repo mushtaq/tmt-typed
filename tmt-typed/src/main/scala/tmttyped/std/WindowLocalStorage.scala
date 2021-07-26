@@ -12,13 +12,13 @@ trait WindowLocalStorage extends StObject {
 object WindowLocalStorage {
   
   @scala.inline
-  def apply(localStorage: org.scalajs.dom.raw.Storage): org.scalajs.dom.raw.WindowLocalStorage = {
+  def apply(localStorage: org.scalajs.dom.raw.Storage): WindowLocalStorage = {
     val __obj = js.Dynamic.literal(localStorage = localStorage.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.WindowLocalStorage]
+    __obj.asInstanceOf[WindowLocalStorage]
   }
   
   @scala.inline
-  implicit class WindowLocalStorageMutableBuilder[Self <: org.scalajs.dom.raw.WindowLocalStorage] (val x: Self) extends AnyVal {
+  implicit class WindowLocalStorageMutableBuilder[Self <: WindowLocalStorage] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setLocalStorage(value: org.scalajs.dom.raw.Storage): Self = StObject.set(x, "localStorage", value.asInstanceOf[js.Any])

@@ -57,13 +57,13 @@ object Touch {
     screenY: Double,
     target: org.scalajs.dom.raw.EventTarget,
     touchType: TouchType
-  ): org.scalajs.dom.raw.Touch = {
+  ): Touch = {
     val __obj = js.Dynamic.literal(altitudeAngle = altitudeAngle.asInstanceOf[js.Any], azimuthAngle = azimuthAngle.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], force = force.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], radiusX = radiusX.asInstanceOf[js.Any], radiusY = radiusY.asInstanceOf[js.Any], rotationAngle = rotationAngle.asInstanceOf[js.Any], screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], touchType = touchType.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.Touch]
+    __obj.asInstanceOf[Touch]
   }
   
   @scala.inline
-  implicit class TouchMutableBuilder[Self <: org.scalajs.dom.raw.Touch] (val x: Self) extends AnyVal {
+  implicit class TouchMutableBuilder[Self <: Touch] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAltitudeAngle(value: Double): Self = StObject.set(x, "altitudeAngle", value.asInstanceOf[js.Any])

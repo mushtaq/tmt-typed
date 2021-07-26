@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSPageRule")
 @js.native
 class CSSPageRule ()
-  extends tmttyped.std.CSSPageRule {
+  extends StObject
+     with tmttyped.std.CSSPageRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

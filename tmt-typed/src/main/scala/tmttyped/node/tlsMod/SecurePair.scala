@@ -5,6 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * @deprecated since v0.11.3 Use `tls.TLSSocket` instead.
+  */
 trait SecurePair extends StObject {
   
   var cleartext: TLSSocket

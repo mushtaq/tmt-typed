@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGMaskElement")
 @js.native
 class SVGMaskElement ()
-  extends tmttyped.std.SVGMaskElement {
+  extends StObject
+     with tmttyped.std.SVGMaskElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

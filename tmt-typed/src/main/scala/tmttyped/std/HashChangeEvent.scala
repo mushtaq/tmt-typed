@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events that fire when the fragment identifier of the URL has changed. */
 @js.native
-trait HashChangeEvent extends Event {
+trait HashChangeEvent
+  extends StObject
+     with Event {
   
   /**
     * Returns the URL of the session history entry that is now current.

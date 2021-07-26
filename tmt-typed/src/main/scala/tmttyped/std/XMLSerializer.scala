@@ -13,13 +13,13 @@ trait XMLSerializer extends StObject {
 object XMLSerializer {
   
   @scala.inline
-  def apply(serializeToString: org.scalajs.dom.raw.Node => java.lang.String): org.scalajs.dom.raw.XMLSerializer = {
+  def apply(serializeToString: org.scalajs.dom.raw.Node => java.lang.String): XMLSerializer = {
     val __obj = js.Dynamic.literal(serializeToString = js.Any.fromFunction1(serializeToString))
-    __obj.asInstanceOf[org.scalajs.dom.raw.XMLSerializer]
+    __obj.asInstanceOf[XMLSerializer]
   }
   
   @scala.inline
-  implicit class XMLSerializerMutableBuilder[Self <: org.scalajs.dom.raw.XMLSerializer] (val x: Self) extends AnyVal {
+  implicit class XMLSerializerMutableBuilder[Self <: XMLSerializer] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setSerializeToString(value: org.scalajs.dom.raw.Node => java.lang.String): Self = StObject.set(x, "serializeToString", js.Any.fromFunction1(value))

@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Gamepad")
 @js.native
 class Gamepad ()
-  extends tmttyped.std.Gamepad {
+  extends StObject
+     with tmttyped.std.Gamepad {
   
   /* CompleteClass */
   override val axes: js.Array[Double] = js.native

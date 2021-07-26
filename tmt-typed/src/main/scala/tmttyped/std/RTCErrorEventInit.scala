@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCErrorEventInit extends EventInit {
+trait RTCErrorEventInit
+  extends StObject
+     with EventInit {
   
   var error: RTCError
 }

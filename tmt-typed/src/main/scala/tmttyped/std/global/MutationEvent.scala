@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MutationEvent")
 @js.native
 class MutationEvent ()
-  extends tmttyped.std.MutationEvent
+  extends StObject
+     with tmttyped.std.MutationEvent
 object MutationEvent {
   
   @JSGlobal("MutationEvent.ADDITION")

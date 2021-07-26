@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.ArrayConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Array")
 @js.native
 class Array[T] protected ()
-  extends tmttyped.std.Array[T] {
+  extends StObject
+     with tmttyped.std.Array[T] {
   def this(arrayLength: Double) = this()
   def this(items: T*) = this()
+}
+object Array {
+  
+  @scala.inline
+  def apply: ArrayConstructor = js.Dynamic.global.selectDynamic("Array").asInstanceOf[ArrayConstructor]
 }

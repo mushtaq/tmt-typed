@@ -47,9 +47,9 @@ trait WindowOrWorkerGlobalScope extends StObject {
   
   def queueMicrotask(callback: VoidFunction): Unit = js.native
   
-  def setInterval(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setInterval(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
+  def setInterval(handler: TimerHandler, timeout: Unit, arguments: js.Any*): Double = js.native
   
-  def setTimeout(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setTimeout(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
+  def setTimeout(handler: TimerHandler, timeout: Unit, arguments: js.Any*): Double = js.native
 }

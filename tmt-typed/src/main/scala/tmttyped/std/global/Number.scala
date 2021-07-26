@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.NumberConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Number")
 @js.native
 class Number ()
-  extends tmttyped.std.Number {
+  extends StObject
+     with tmttyped.std.Number {
   def this(value: js.Any) = this()
+}
+object Number {
+  
+  /** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
+  @scala.inline
+  def apply: NumberConstructor = js.Dynamic.global.selectDynamic("Number").asInstanceOf[NumberConstructor]
 }

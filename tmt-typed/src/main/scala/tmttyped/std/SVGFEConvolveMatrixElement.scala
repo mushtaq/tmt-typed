@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <feConvolveMatrix> element. */
 @js.native
 trait SVGFEConvolveMatrixElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
   val SVG_EDGEMODE_DUPLICATE: Double = js.native

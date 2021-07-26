@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CipherCCMOptions extends TransformOptions {
+trait CipherCCMOptions
+  extends StObject
+     with TransformOptions {
   
   var authTagLength: Double
 }

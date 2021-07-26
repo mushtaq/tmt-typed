@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ErrorFrame extends Frame {
+trait ErrorFrame
+  extends StObject
+     with Frame {
   
   var code: Double
   

@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IncomingHttpHeaders
-  extends tmttyped.node.httpMod.IncomingHttpHeaders {
+  extends StObject
+     with tmttyped.node.httpMod.IncomingHttpHeaders {
   
   @JSName(":authority")
   var Colonauthority: js.UndefOr[String] = js.undefined

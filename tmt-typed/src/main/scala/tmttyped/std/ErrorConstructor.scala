@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ErrorConstructor
-  extends Instantiable0[js.Error]
+  extends StObject
+     with Instantiable0[js.Error]
      with Instantiable1[/* message */ java.lang.String, js.Error] {
   
   def apply(): js.Error = js.native

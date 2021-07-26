@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A message received by a target object. */
 @js.native
-trait MessageEvent[T] extends Event {
+trait MessageEvent[T]
+  extends StObject
+     with Event {
   
   /**
     * Returns the data of the message.

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSNamespaceRule")
 @js.native
 class CSSNamespaceRule ()
-  extends tmttyped.std.CSSNamespaceRule {
+  extends StObject
+     with tmttyped.std.CSSNamespaceRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

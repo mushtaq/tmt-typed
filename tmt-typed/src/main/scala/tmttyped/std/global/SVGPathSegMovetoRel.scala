@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGPathSegMovetoRel")
 @js.native
 class SVGPathSegMovetoRel ()
-  extends tmttyped.std.SVGPathSegMovetoRel {
+  extends StObject
+     with tmttyped.std.SVGPathSegMovetoRel {
   
   /* CompleteClass */
   override val PATHSEG_ARC_ABS: Double = js.native

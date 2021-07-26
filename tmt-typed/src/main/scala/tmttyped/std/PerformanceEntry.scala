@@ -27,13 +27,13 @@ object PerformanceEntry {
     name: java.lang.String,
     startTime: Double,
     toJSON: () => js.Any
-  ): org.scalajs.dom.raw.PerformanceEntry = {
+  ): PerformanceEntry = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], entryType = entryType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
-    __obj.asInstanceOf[org.scalajs.dom.raw.PerformanceEntry]
+    __obj.asInstanceOf[PerformanceEntry]
   }
   
   @scala.inline
-  implicit class PerformanceEntryMutableBuilder[Self <: org.scalajs.dom.raw.PerformanceEntry] (val x: Self) extends AnyVal {
+  implicit class PerformanceEntryMutableBuilder[Self <: PerformanceEntry] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setDuration(value: Double): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])

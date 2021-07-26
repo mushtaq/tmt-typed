@@ -9,11 +9,16 @@ trait ProxyHandler[T /* <: js.Object */] extends StObject {
   
   @JSName("apply")
   var apply: js.UndefOr[
-    js.Function3[/* target */ T, /* thisArg */ js.Any, /* argArray */ js.Array[_], _]
+    js.Function3[/* target */ T, /* thisArg */ js.Any, /* argArray */ js.Array[js.Any], js.Any]
   ] = js.undefined
   
   var construct: js.UndefOr[
-    js.Function3[/* target */ T, /* argArray */ js.Array[_], /* newTarget */ js.Function, js.Object]
+    js.Function3[
+      /* target */ T, 
+      /* argArray */ js.Array[js.Any], 
+      /* newTarget */ js.Function, 
+      js.Object
+    ]
   ] = js.undefined
   
   var defineProperty: js.UndefOr[
@@ -30,7 +35,7 @@ trait ProxyHandler[T /* <: js.Object */] extends StObject {
   ] = js.undefined
   
   var get: js.UndefOr[
-    js.Function3[/* target */ T, /* p */ java.lang.String | js.Symbol, /* receiver */ js.Any, _]
+    js.Function3[/* target */ T, /* p */ java.lang.String | js.Symbol, /* receiver */ js.Any, js.Any]
   ] = js.undefined
   
   var getOwnPropertyDescriptor: js.UndefOr[
@@ -77,13 +82,13 @@ object ProxyHandler {
   implicit class ProxyHandlerMutableBuilder[Self <: ProxyHandler[_], T /* <: js.Object */] (val x: Self with ProxyHandler[T]) extends AnyVal {
     
     @scala.inline
-    def setApply(value: (/* target */ T, /* thisArg */ js.Any, /* argArray */ js.Array[_]) => _): Self = StObject.set(x, "apply", js.Any.fromFunction3(value))
+    def setApply(value: (/* target */ T, /* thisArg */ js.Any, /* argArray */ js.Array[js.Any]) => js.Any): Self = StObject.set(x, "apply", js.Any.fromFunction3(value))
     
     @scala.inline
     def setApplyUndefined: Self = StObject.set(x, "apply", js.undefined)
     
     @scala.inline
-    def setConstruct(value: (/* target */ T, /* argArray */ js.Array[_], /* newTarget */ js.Function) => js.Object): Self = StObject.set(x, "construct", js.Any.fromFunction3(value))
+    def setConstruct(value: (/* target */ T, /* argArray */ js.Array[js.Any], /* newTarget */ js.Function) => js.Object): Self = StObject.set(x, "construct", js.Any.fromFunction3(value))
     
     @scala.inline
     def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
@@ -103,7 +108,7 @@ object ProxyHandler {
     def setDeletePropertyUndefined: Self = StObject.set(x, "deleteProperty", js.undefined)
     
     @scala.inline
-    def setGet(value: (/* target */ T, /* p */ java.lang.String | js.Symbol, /* receiver */ js.Any) => _): Self = StObject.set(x, "get", js.Any.fromFunction3(value))
+    def setGet(value: (/* target */ T, /* p */ java.lang.String | js.Symbol, /* receiver */ js.Any) => js.Any): Self = StObject.set(x, "get", js.Any.fromFunction3(value))
     
     @scala.inline
     def setGetOwnPropertyDescriptor(value: (/* target */ T, /* p */ java.lang.String | js.Symbol) => js.UndefOr[js.PropertyDescriptor]): Self = StObject.set(x, "getOwnPropertyDescriptor", js.Any.fromFunction2(value))

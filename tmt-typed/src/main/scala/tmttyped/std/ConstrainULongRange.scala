@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ConstrainULongRange extends ULongRange {
+trait ConstrainULongRange
+  extends StObject
+     with ULongRange {
   
   var exact: js.UndefOr[Double] = js.undefined
   

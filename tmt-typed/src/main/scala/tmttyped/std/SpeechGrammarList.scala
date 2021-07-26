@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpeechGrammarList extends /* index */ NumberDictionary[SpeechGrammar] {
+trait SpeechGrammarList
+  extends StObject
+     with /* index */ NumberDictionary[SpeechGrammar] {
   
   def addFromString(string: java.lang.String): Unit = js.native
   def addFromString(string: java.lang.String, weight: Double): Unit = js.native

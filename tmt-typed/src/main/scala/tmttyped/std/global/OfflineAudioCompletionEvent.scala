@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OfflineAudioCompletionEvent")
 @js.native
 class OfflineAudioCompletionEvent protected ()
-  extends tmttyped.std.OfflineAudioCompletionEvent {
+  extends StObject
+     with tmttyped.std.OfflineAudioCompletionEvent {
   def this(`type`: java.lang.String, eventInitDict: OfflineAudioCompletionEventInit) = this()
 }

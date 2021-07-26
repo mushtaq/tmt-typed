@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CanvasPattern")
 @js.native
 class CanvasPattern ()
-  extends tmttyped.std.CanvasPattern
+  extends StObject
+     with tmttyped.std.CanvasPattern

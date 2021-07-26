@@ -7,8 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SecureClientSessionOptions
-  extends ConnectionOptions
+  extends StObject
      with ClientSessionOptions
+     with ConnectionOptions
 object SecureClientSessionOptions {
   
   @scala.inline

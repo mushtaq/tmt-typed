@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Attr")
 @js.native
 class Attr ()
-  extends tmttyped.std.Attr
+  extends StObject
+     with tmttyped.std.Attr

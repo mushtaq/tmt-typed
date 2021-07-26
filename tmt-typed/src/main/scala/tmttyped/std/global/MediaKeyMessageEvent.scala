@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaKeyMessageEvent")
 @js.native
 class MediaKeyMessageEvent protected ()
-  extends tmttyped.std.MediaKeyMessageEvent {
+  extends StObject
+     with tmttyped.std.MediaKeyMessageEvent {
   def this(`type`: java.lang.String, eventInitDict: MediaKeyMessageEventInit) = this()
 }

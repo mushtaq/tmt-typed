@@ -1,53 +1,20 @@
 package tmttyped.node
 
-import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
 import tmttyped.node.anon.End
-import tmttyped.node.anon.FnCallSRadix
-import tmttyped.node.anon.FnCallUriComponent
 import tmttyped.node.anon.Paths
-import tmttyped.node.anon.TypeofBuffer
+import tmttyped.node.bufferMod.global.Buffer
+import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.eventsMod.global.NodeJS.EventEmitter
-import tmttyped.node.nodeStrings.get
-import tmttyped.node.nodeStrings.set
-import tmttyped.std.ArrayBufferConstructor
-import tmttyped.std.ArrayConstructor
 import tmttyped.std.BigInt64Array
 import tmttyped.std.BigUint64Array
-import tmttyped.std.BooleanConstructor
-import tmttyped.std.DataViewConstructor
-import tmttyped.std.DateConstructor
 import tmttyped.std.Error
-import tmttyped.std.EvalErrorConstructor
-import tmttyped.std.Float32ArrayConstructor
-import tmttyped.std.Float64ArrayConstructor
-import tmttyped.std.FunctionConstructor
-import tmttyped.std.Int16ArrayConstructor
-import tmttyped.std.Int32ArrayConstructor
-import tmttyped.std.Int8ArrayConstructor
-import tmttyped.std.MapConstructor
-import tmttyped.std.NumberConstructor
-import tmttyped.std.ObjectConstructor
-import tmttyped.std.PromiseConstructor
-import tmttyped.std.RangeErrorConstructor
-import tmttyped.std.ReferenceErrorConstructor
-import tmttyped.std.RegExpConstructor
-import tmttyped.std.SetConstructor
-import tmttyped.std.StringConstructor
-import tmttyped.std.SyntaxErrorConstructor
-import tmttyped.std.TypeErrorConstructor
-import tmttyped.std.URIErrorConstructor
-import tmttyped.std.Uint16ArrayConstructor
-import tmttyped.std.Uint32ArrayConstructor
-import tmttyped.std.Uint8ArrayConstructor
-import tmttyped.std.Uint8ClampedArrayConstructor
-import tmttyped.std.WeakMapConstructor
-import tmttyped.std.WeakSetConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+//#endregion borrowed
 /*----------------------------------------------*
 *                                               *
 *               GLOBAL INTERFACES               *
@@ -199,7 +166,9 @@ object NodeJS {
   
   type Dict[T] = StringDictionary[js.UndefOr[T]]
   
-  trait ErrnoException extends Error {
+  trait ErrnoException
+    extends StObject
+       with Error {
     
     var code: js.UndefOr[java.lang.String] = js.undefined
     
@@ -246,403 +215,6 @@ object NodeJS {
     }
   }
   
-  @js.native
-  trait Global extends StObject {
-    
-    def Array(): js.Array[_] = js.native
-    def Array(arrayLength: Double): js.Array[_] = js.native
-    def Array[T](items: T*): js.Array[T] = js.native
-    
-    var ArrayBuffer: ArrayBufferConstructor = js.native
-    
-    @JSName("Array")
-    var Array_Original: ArrayConstructor = js.native
-    @JSName("Array")
-    def Array_T[T](arrayLength: Double): js.Array[T] = js.native
-    
-    def Boolean[T](): scala.Boolean = js.native
-    def Boolean[T](value: T): scala.Boolean = js.native
-    @JSName("Boolean")
-    var Boolean_Original: BooleanConstructor = js.native
-    
-    var Buffer: TypeofBuffer with (Instantiable2[
-        /* str */ java.lang.String, 
-        /* encoding */ js.UndefOr[BufferEncoding], 
-        tmttyped.node.Buffer
-      ]) = js.native
-    
-    var DataView: DataViewConstructor = js.native
-    
-    def Date(): java.lang.String = js.native
-    @JSName("Date")
-    var Date_Original: DateConstructor = js.native
-    
-    def Error(): js.Error = js.native
-    def Error(message: java.lang.String): js.Error = js.native
-    @JSName("Error")
-    var Error_Original: tmttyped.std.ErrorConstructor = js.native
-    
-    def EvalError(): js.EvalError = js.native
-    def EvalError(message: java.lang.String): js.EvalError = js.native
-    @JSName("EvalError")
-    def EvalError_Error(): js.Error = js.native
-    @JSName("EvalError")
-    def EvalError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("EvalError")
-    var EvalError_Original: EvalErrorConstructor = js.native
-    
-    var Float32Array: Float32ArrayConstructor = js.native
-    
-    var Float64Array: Float64ArrayConstructor = js.native
-    
-    def Function(args: java.lang.String*): js.Function = js.native
-    @JSName("Function")
-    var Function_Original: FunctionConstructor = js.native
-    
-    var Infinity: Double = js.native
-    
-    var Int16Array: Int16ArrayConstructor = js.native
-    
-    var Int32Array: Int32ArrayConstructor = js.native
-    
-    var Int8Array: Int8ArrayConstructor = js.native
-    
-    var Intl: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Intl */ js.Any = js.native
-    
-    var JSON: tmttyped.std.JSON = js.native
-    
-    var Map: MapConstructor = js.native
-    
-    var Math: tmttyped.std.Math = js.native
-    
-    var NaN: Double = js.native
-    
-    def Number(): Double = js.native
-    def Number(value: js.Any): Double = js.native
-    @JSName("Number")
-    var Number_Original: NumberConstructor = js.native
-    
-    def Object(): js.Any = js.native
-    def Object(value: js.Any): js.Any = js.native
-    @JSName("Object")
-    var Object_Original: ObjectConstructor = js.native
-    
-    var Promise: PromiseConstructor = js.native
-    
-    def RangeError(): js.RangeError = js.native
-    def RangeError(message: java.lang.String): js.RangeError = js.native
-    @JSName("RangeError")
-    def RangeError_Error(): js.Error = js.native
-    @JSName("RangeError")
-    def RangeError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("RangeError")
-    var RangeError_Original: RangeErrorConstructor = js.native
-    
-    def ReferenceError(): js.ReferenceError = js.native
-    def ReferenceError(message: java.lang.String): js.ReferenceError = js.native
-    @JSName("ReferenceError")
-    def ReferenceError_Error(): js.Error = js.native
-    @JSName("ReferenceError")
-    def ReferenceError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("ReferenceError")
-    var ReferenceError_Original: ReferenceErrorConstructor = js.native
-    
-    def RegExp(pattern: java.lang.String): js.RegExp = js.native
-    def RegExp(pattern: java.lang.String, flags: java.lang.String): js.RegExp = js.native
-    def RegExp(pattern: js.RegExp): js.RegExp = js.native
-    def RegExp(pattern: js.RegExp, flags: java.lang.String): js.RegExp = js.native
-    @JSName("RegExp")
-    var RegExp_Original: RegExpConstructor = js.native
-    
-    var Set: SetConstructor = js.native
-    
-    def String(): java.lang.String = js.native
-    def String(value: js.Any): java.lang.String = js.native
-    @JSName("String")
-    var String_Original: StringConstructor = js.native
-    
-    var Symbol: js.Function = js.native
-    
-    def SyntaxError(): js.SyntaxError = js.native
-    def SyntaxError(message: java.lang.String): js.SyntaxError = js.native
-    @JSName("SyntaxError")
-    def SyntaxError_Error(): js.Error = js.native
-    @JSName("SyntaxError")
-    def SyntaxError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("SyntaxError")
-    var SyntaxError_Original: SyntaxErrorConstructor = js.native
-    
-    def TypeError(): js.TypeError = js.native
-    def TypeError(message: java.lang.String): js.TypeError = js.native
-    @JSName("TypeError")
-    def TypeError_Error(): js.Error = js.native
-    @JSName("TypeError")
-    def TypeError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("TypeError")
-    var TypeError_Original: TypeErrorConstructor = js.native
-    
-    def URIError(): js.URIError = js.native
-    def URIError(message: java.lang.String): js.URIError = js.native
-    @JSName("URIError")
-    def URIError_Error(): js.Error = js.native
-    @JSName("URIError")
-    def URIError_Error(message: java.lang.String): js.Error = js.native
-    @JSName("URIError")
-    var URIError_Original: URIErrorConstructor = js.native
-    
-    var Uint16Array: Uint16ArrayConstructor = js.native
-    
-    var Uint32Array: Uint32ArrayConstructor = js.native
-    
-    var Uint8Array: Uint8ArrayConstructor = js.native
-    
-    var Uint8ClampedArray: Uint8ClampedArrayConstructor = js.native
-    
-    var WeakMap: WeakMapConstructor = js.native
-    
-    var WeakSet: WeakSetConstructor = js.native
-    
-    def clearImmediate(immediateId: Immediate): Unit = js.native
-    
-    def clearInterval(intervalId: Timeout): Unit = js.native
-    
-    def clearTimeout(timeoutId: Timeout): Unit = js.native
-    
-    def decodeURI(encodedURI: java.lang.String): java.lang.String = js.native
-    
-    def decodeURIComponent(encodedURIComponent: java.lang.String): java.lang.String = js.native
-    @JSName("decodeURIComponent")
-    var decodeURIComponent_Original: js.Function1[/* encodedURIComponent */ java.lang.String, java.lang.String] = js.native
-    
-    @JSName("decodeURI")
-    var decodeURI_Original: js.Function1[/* encodedURI */ java.lang.String, java.lang.String] = js.native
-    
-    def encodeURI(uri: java.lang.String): java.lang.String = js.native
-    
-    def encodeURIComponent(uriComponent: java.lang.String): java.lang.String = js.native
-    def encodeURIComponent(uriComponent: Boolean): java.lang.String = js.native
-    def encodeURIComponent(uriComponent: Double): java.lang.String = js.native
-    @JSName("encodeURIComponent")
-    var encodeURIComponent_Original: FnCallUriComponent = js.native
-    
-    @JSName("encodeURI")
-    var encodeURI_Original: js.Function1[/* uri */ java.lang.String, java.lang.String] = js.native
-    
-    def escape(str: java.lang.String): java.lang.String = js.native
-    
-    def eval(x: java.lang.String): js.Any = js.native
-    @JSName("eval")
-    var eval_Original: js.Function1[/* x */ java.lang.String, _] = js.native
-    
-    def gc(): Unit = js.native
-    
-    var global: Global = js.native
-    
-    def isFinite(number: Double): Boolean = js.native
-    @JSName("isFinite")
-    var isFinite_Original: js.Function1[/* number */ Double, Boolean] = js.native
-    
-    def isNaN(number: Double): Boolean = js.native
-    @JSName("isNaN")
-    var isNaN_Original: js.Function1[/* number */ Double, Boolean] = js.native
-    
-    def parseFloat(string: java.lang.String): Double = js.native
-    @JSName("parseFloat")
-    var parseFloat_Original: js.Function1[/* string */ java.lang.String, Double] = js.native
-    
-    def parseInt(s: java.lang.String): Double = js.native
-    def parseInt(s: java.lang.String, radix: Double): Double = js.native
-    @JSName("parseInt")
-    var parseInt_Original: FnCallSRadix = js.native
-    
-    def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
-    @JSName("queueMicrotask")
-    var queueMicrotask_Original: js.Function1[/* callback */ js.Function0[Unit], Unit] = js.native
-    
-    def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Immediate = js.native
-    
-    def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-    def setInterval(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
-    
-    def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: js.UndefOr[scala.Nothing], args: js.Any*): Timeout = js.native
-    def setTimeout(callback: js.Function1[/* repeated */ js.Any, Unit], ms: Double, args: js.Any*): Timeout = js.native
-    
-    var undefined: js.UndefOr[scala.Nothing] = js.native
-    
-    def unescape(str: java.lang.String): java.lang.String = js.native
-    
-    var v8debug: js.UndefOr[js.Any] = js.native
-  }
-  
-  trait Immediate extends RefCounted {
-    
-    var _onImmediate: js.Function
-    
-    def hasRef(): Boolean
-  }
-  object Immediate {
-    
-    @scala.inline
-    def apply(_onImmediate: js.Function, hasRef: () => Boolean, ref: () => Immediate, unref: () => Immediate): Immediate = {
-      val __obj = js.Dynamic.literal(_onImmediate = _onImmediate.asInstanceOf[js.Any], hasRef = js.Any.fromFunction0(hasRef), ref = js.Any.fromFunction0(ref), unref = js.Any.fromFunction0(unref))
-      __obj.asInstanceOf[Immediate]
-    }
-    
-    @scala.inline
-    implicit class ImmediateMutableBuilder[Self <: Immediate] (val x: Self) extends AnyVal {
-      
-      @scala.inline
-      def setHasRef(value: () => Boolean): Self = StObject.set(x, "hasRef", js.Any.fromFunction0(value))
-      
-      @scala.inline
-      def set_onImmediate(value: js.Function): Self = StObject.set(x, "_onImmediate", value.asInstanceOf[js.Any])
-    }
-  }
-  
-  trait InspectOptions extends StObject {
-    
-    var breakLength: js.UndefOr[Double] = js.undefined
-    
-    var colors: js.UndefOr[Boolean] = js.undefined
-    
-    /**
-      * Setting this to `false` causes each object key
-      * to be displayed on a new line. It will also add new lines to text that is
-      * longer than `breakLength`. If set to a number, the most `n` inner elements
-      * are united on a single line as long as all properties fit into
-      * `breakLength`. Short array elements are also grouped together. Note that no
-      * text will be reduced below 16 characters, no matter the `breakLength` size.
-      * For more information, see the example below.
-      * @default `true`
-      */
-    var compact: js.UndefOr[Boolean | Double] = js.undefined
-    
-    var customInspect: js.UndefOr[Boolean] = js.undefined
-    
-    /**
-      * @default 2
-      */
-    var depth: js.UndefOr[Double | Null] = js.undefined
-    
-    /**
-      * If set to `true`, getters are going to be
-      * inspected as well. If set to `'get'` only getters without setter are going
-      * to be inspected. If set to `'set'` only getters having a corresponding
-      * setter are going to be inspected. This might cause side effects depending on
-      * the getter function.
-      * @default `false`
-      */
-    var getters: js.UndefOr[get | set | Boolean] = js.undefined
-    
-    var maxArrayLength: js.UndefOr[Double | Null] = js.undefined
-    
-    /**
-      * Specifies the maximum number of characters to
-      * include when formatting. Set to `null` or `Infinity` to show all elements.
-      * Set to `0` or negative to show no characters.
-      * @default Infinity
-      */
-    var maxStringLength: js.UndefOr[Double | Null] = js.undefined
-    
-    var showHidden: js.UndefOr[Boolean] = js.undefined
-    
-    var showProxy: js.UndefOr[Boolean] = js.undefined
-    
-    var sorted: js.UndefOr[
-        Boolean | (js.Function2[/* a */ java.lang.String, /* b */ java.lang.String, Double])
-      ] = js.undefined
-  }
-  object InspectOptions {
-    
-    @scala.inline
-    def apply(): InspectOptions = {
-      val __obj = js.Dynamic.literal()
-      __obj.asInstanceOf[InspectOptions]
-    }
-    
-    @scala.inline
-    implicit class InspectOptionsMutableBuilder[Self <: InspectOptions] (val x: Self) extends AnyVal {
-      
-      @scala.inline
-      def setBreakLength(value: Double): Self = StObject.set(x, "breakLength", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setBreakLengthUndefined: Self = StObject.set(x, "breakLength", js.undefined)
-      
-      @scala.inline
-      def setColors(value: Boolean): Self = StObject.set(x, "colors", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setColorsUndefined: Self = StObject.set(x, "colors", js.undefined)
-      
-      @scala.inline
-      def setCompact(value: Boolean | Double): Self = StObject.set(x, "compact", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setCompactUndefined: Self = StObject.set(x, "compact", js.undefined)
-      
-      @scala.inline
-      def setCustomInspect(value: Boolean): Self = StObject.set(x, "customInspect", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setCustomInspectUndefined: Self = StObject.set(x, "customInspect", js.undefined)
-      
-      @scala.inline
-      def setDepth(value: Double): Self = StObject.set(x, "depth", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setDepthNull: Self = StObject.set(x, "depth", null)
-      
-      @scala.inline
-      def setDepthUndefined: Self = StObject.set(x, "depth", js.undefined)
-      
-      @scala.inline
-      def setGetters(value: get | set | Boolean): Self = StObject.set(x, "getters", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setGettersUndefined: Self = StObject.set(x, "getters", js.undefined)
-      
-      @scala.inline
-      def setMaxArrayLength(value: Double): Self = StObject.set(x, "maxArrayLength", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setMaxArrayLengthNull: Self = StObject.set(x, "maxArrayLength", null)
-      
-      @scala.inline
-      def setMaxArrayLengthUndefined: Self = StObject.set(x, "maxArrayLength", js.undefined)
-      
-      @scala.inline
-      def setMaxStringLength(value: Double): Self = StObject.set(x, "maxStringLength", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setMaxStringLengthNull: Self = StObject.set(x, "maxStringLength", null)
-      
-      @scala.inline
-      def setMaxStringLengthUndefined: Self = StObject.set(x, "maxStringLength", js.undefined)
-      
-      @scala.inline
-      def setShowHidden(value: Boolean): Self = StObject.set(x, "showHidden", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setShowHiddenUndefined: Self = StObject.set(x, "showHidden", js.undefined)
-      
-      @scala.inline
-      def setShowProxy(value: Boolean): Self = StObject.set(x, "showProxy", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setShowProxyUndefined: Self = StObject.set(x, "showProxy", js.undefined)
-      
-      @scala.inline
-      def setSorted(value: Boolean | (js.Function2[/* a */ java.lang.String, /* b */ java.lang.String, Double])): Self = StObject.set(x, "sorted", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setSortedFunction2(value: (/* a */ java.lang.String, /* b */ java.lang.String) => Double): Self = StObject.set(x, "sorted", js.Any.fromFunction2(value))
-      
-      @scala.inline
-      def setSortedUndefined: Self = StObject.set(x, "sorted", js.undefined)
-    }
-  }
-  
   trait Module extends StObject {
     
     var children: js.Array[Module]
@@ -652,6 +224,11 @@ object NodeJS {
     var filename: java.lang.String
     
     var id: java.lang.String
+    
+    /**
+      * `true` if the module is running during the Node.js preload
+      */
+    var isPreloading: Boolean
     
     var loaded: Boolean
     
@@ -679,12 +256,13 @@ object NodeJS {
       exports: js.Any,
       filename: java.lang.String,
       id: java.lang.String,
+      isPreloading: Boolean,
       loaded: Boolean,
       path: java.lang.String,
       paths: js.Array[java.lang.String],
       require: Require
     ): Module = {
-      val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loaded = loaded.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], require = require.asInstanceOf[js.Any])
+      val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isPreloading = isPreloading.asInstanceOf[js.Any], loaded = loaded.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], require = require.asInstanceOf[js.Any])
       __obj.asInstanceOf[Module]
     }
     
@@ -705,6 +283,9 @@ object NodeJS {
       
       @scala.inline
       def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setIsPreloading(value: Boolean): Self = StObject.set(x, "isPreloading", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setLoaded(value: Boolean): Self = StObject.set(x, "loaded", value.asInstanceOf[js.Any])
@@ -736,11 +317,14 @@ object NodeJS {
   
   @js.native
   trait ReadWriteStream
-    extends ReadableStream
+    extends StObject
+       with ReadableStream
        with WritableStream
   
   @js.native
-  trait ReadableStream extends EventEmitter {
+  trait ReadableStream
+    extends StObject
+       with EventEmitter {
     
     def isPaused(): Boolean = js.native
     
@@ -815,7 +399,8 @@ object NodeJS {
   }
   
   trait RequireExtensions
-    extends Dict[js.Function2[/* m */ Module, /* filename */ java.lang.String, js.Any]] {
+    extends StObject
+       with Dict[js.Function2[/* m */ Module, /* filename */ java.lang.String, js.Any]] {
     
     @JSName(".js")
     def Dotjs(m: Module, filename: java.lang.String): js.Any
@@ -864,25 +449,12 @@ object NodeJS {
     def paths(request: java.lang.String): js.Array[java.lang.String] | Null = js.native
   }
   
-  @js.native
-  trait Timeout extends Timer
-  
-  // compatibility with older typings
-  @js.native
-  trait Timer extends RefCounted {
-    
-    def hasRef(): Boolean = js.native
-    
-    def refresh(): this.type = js.native
-    
-    @JSName(js.Symbol.toPrimitive)
-    var toPrimitive: js.Function0[Double] = js.native
-  }
-  
   type TypedArray = js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | BigUint64Array | BigInt64Array | js.typedarray.Float32Array | js.typedarray.Float64Array
   
   @js.native
-  trait WritableStream extends EventEmitter {
+  trait WritableStream
+    extends StObject
+       with EventEmitter {
     
     def end(): Unit = js.native
     def end(cb: js.Function0[Unit]): Unit = js.native
@@ -890,7 +462,7 @@ object NodeJS {
     def end(data: java.lang.String, cb: js.Function0[Unit]): Unit = js.native
     def end(data: js.typedarray.Uint8Array): Unit = js.native
     def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-    def end(str: java.lang.String, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
+    def end(str: java.lang.String, encoding: Unit, cb: js.Function0[Unit]): Unit = js.native
     def end(str: java.lang.String, encoding: BufferEncoding): Unit = js.native
     def end(str: java.lang.String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
     
@@ -902,7 +474,7 @@ object NodeJS {
     def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
     def write(
       str: java.lang.String,
-      encoding: js.UndefOr[scala.Nothing],
+      encoding: Unit,
       cb: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
     ): Boolean = js.native
     def write(str: java.lang.String, encoding: BufferEncoding): Boolean = js.native

@@ -11,8 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Blob")
 @js.native
 class Blob ()
-  extends tmttyped.std.Blob {
+  extends StObject
+     with tmttyped.std.Blob {
   def this(blobParts: js.Array[BlobPart]) = this()
-  def this(blobParts: js.UndefOr[scala.Nothing], options: BlobPropertyBag) = this()
   def this(blobParts: js.Array[BlobPart], options: BlobPropertyBag) = this()
+  def this(blobParts: Unit, options: BlobPropertyBag) = this()
 }

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A PannerNode always has exactly one input and one output: the input can be mono or stereo but the output is always stereo (2 channels); you can't have panning effects without at least two audio channels! */
 @js.native
-trait PannerNode extends AudioNode {
+trait PannerNode
+  extends StObject
+     with AudioNode {
   
   var coneInnerAngle: Double = js.native
   

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ImageBitmap")
 @js.native
 class ImageBitmap ()
-  extends tmttyped.std.ImageBitmap {
+  extends StObject
+     with tmttyped.std.ImageBitmap {
   
   /**
     * Releases imageBitmap's underlying bitmap data.

@@ -17,13 +17,13 @@ trait DeviceRotationRate extends StObject {
 object DeviceRotationRate {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.deviceorientation.DeviceRotationRate = {
+  def apply(): DeviceRotationRate = {
     val __obj = js.Dynamic.literal(alpha = null, beta = null, gamma = null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.deviceorientation.DeviceRotationRate]
+    __obj.asInstanceOf[DeviceRotationRate]
   }
   
   @scala.inline
-  implicit class DeviceRotationRateMutableBuilder[Self <: org.scalajs.dom.experimental.deviceorientation.DeviceRotationRate] (val x: Self) extends AnyVal {
+  implicit class DeviceRotationRateMutableBuilder[Self <: DeviceRotationRate] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlpha(value: Double): Self = StObject.set(x, "alpha", value.asInstanceOf[js.Any])

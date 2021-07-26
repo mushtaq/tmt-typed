@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("URLSearchParams")
 @js.native
 class URLSearchParams ()
-  extends tmttyped.std.URLSearchParams {
+  extends StObject
+     with tmttyped.std.URLSearchParams {
   def this(init: java.lang.String) = this()
   def this(init: js.Array[js.Array[java.lang.String]]) = this()
   def this(init: Record[java.lang.String, java.lang.String]) = this()

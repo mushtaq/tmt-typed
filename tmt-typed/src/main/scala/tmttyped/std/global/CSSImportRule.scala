@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSImportRule")
 @js.native
 class CSSImportRule ()
-  extends tmttyped.std.CSSImportRule {
+  extends StObject
+     with tmttyped.std.CSSImportRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

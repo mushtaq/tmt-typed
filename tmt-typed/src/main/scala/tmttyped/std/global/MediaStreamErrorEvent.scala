@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaStreamErrorEvent")
 @js.native
 class MediaStreamErrorEvent protected ()
-  extends tmttyped.std.MediaStreamErrorEvent {
+  extends StObject
+     with tmttyped.std.MediaStreamErrorEvent {
   def this(typeArg: java.lang.String) = this()
   def this(typeArg: java.lang.String, eventInitDict: MediaStreamErrorEventInit) = this()
 }

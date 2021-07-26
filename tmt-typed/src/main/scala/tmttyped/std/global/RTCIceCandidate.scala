@@ -14,7 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIceCandidate")
 @js.native
 class RTCIceCandidate ()
-  extends tmttyped.std.RTCIceCandidate {
+  extends StObject
+     with tmttyped.std.RTCIceCandidate {
   def this(candidateInitDict: RTCIceCandidateInit) = this()
   
   /* CompleteClass */

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VRDisplayCapabilities")
 @js.native
 class VRDisplayCapabilities ()
-  extends tmttyped.std.VRDisplayCapabilities {
+  extends StObject
+     with tmttyped.std.VRDisplayCapabilities {
   
   /* CompleteClass */
   override val canPresent: scala.Boolean = js.native

@@ -40,13 +40,13 @@ trait MediaTrackSupportedConstraints extends StObject {
 object MediaTrackSupportedConstraints {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.mediastream.MediaTrackSupportedConstraints = {
+  def apply(): MediaTrackSupportedConstraints = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.mediastream.MediaTrackSupportedConstraints]
+    __obj.asInstanceOf[MediaTrackSupportedConstraints]
   }
   
   @scala.inline
-  implicit class MediaTrackSupportedConstraintsMutableBuilder[Self <: org.scalajs.dom.experimental.mediastream.MediaTrackSupportedConstraints] (val x: Self) extends AnyVal {
+  implicit class MediaTrackSupportedConstraintsMutableBuilder[Self <: MediaTrackSupportedConstraints] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAspectRatio(value: scala.Boolean): Self = StObject.set(x, "aspectRatio", value.asInstanceOf[js.Any])

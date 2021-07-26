@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PerformanceTiming")
 @js.native
 class PerformanceTiming ()
-  extends tmttyped.std.PerformanceTiming {
+  extends StObject
+     with tmttyped.std.PerformanceTiming {
   
   /* CompleteClass */
   override val connectEnd: Double = js.native

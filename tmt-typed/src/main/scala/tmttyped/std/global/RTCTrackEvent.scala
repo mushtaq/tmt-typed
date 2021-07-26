@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCTrackEvent")
 @js.native
 class RTCTrackEvent protected ()
-  extends tmttyped.std.RTCTrackEvent {
+  extends StObject
+     with tmttyped.std.RTCTrackEvent {
   def this(`type`: java.lang.String, eventInitDict: RTCTrackEventInit) = this()
 }

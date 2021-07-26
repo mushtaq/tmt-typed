@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RegExpExecArray
-  extends Array[java.lang.String] {
+  extends StObject
+     with Array[java.lang.String] {
   
   var groups: js.UndefOr[StringDictionary[java.lang.String]] = js.native
   

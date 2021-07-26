@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLTableCellElement")
 @js.native
 class HTMLTableCellElement ()
-  extends tmttyped.std.HTMLTableCellElement {
+  extends StObject
+     with tmttyped.std.HTMLTableCellElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

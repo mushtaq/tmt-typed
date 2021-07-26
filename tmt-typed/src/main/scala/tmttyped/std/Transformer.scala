@@ -9,19 +9,19 @@ trait Transformer[I, O] extends StObject {
   
   var flush: js.UndefOr[TransformerFlushCallback[O]] = js.undefined
   
-  var readableType: js.UndefOr[scala.Nothing] = js.undefined
+  var readableType: Unit
   
   var start: js.UndefOr[TransformerStartCallback[O]] = js.undefined
   
   var transform: js.UndefOr[TransformerTransformCallback[I, O]] = js.undefined
   
-  var writableType: js.UndefOr[scala.Nothing] = js.undefined
+  var writableType: Unit
 }
 object Transformer {
   
   @scala.inline
-  def apply[I, O](): Transformer[I, O] = {
-    val __obj = js.Dynamic.literal()
+  def apply[I, O](readableType: Unit, writableType: Unit): Transformer[I, O] = {
+    val __obj = js.Dynamic.literal(readableType = readableType.asInstanceOf[js.Any], writableType = writableType.asInstanceOf[js.Any])
     __obj.asInstanceOf[Transformer[I, O]]
   }
   
@@ -35,6 +35,9 @@ object Transformer {
     def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
     
     @scala.inline
+    def setReadableType(value: Unit): Self = StObject.set(x, "readableType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setStart(value: /* controller */ TransformStreamDefaultController[O] => Unit | js.Thenable[Unit]): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -45,5 +48,8 @@ object Transformer {
     
     @scala.inline
     def setTransformUndefined: Self = StObject.set(x, "transform", js.undefined)
+    
+    @scala.inline
+    def setWritableType(value: Unit): Self = StObject.set(x, "writableType", value.asInstanceOf[js.Any])
   }
 }

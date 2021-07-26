@@ -16,13 +16,13 @@ trait PushSubscriptionJSON extends StObject {
 object PushSubscriptionJSON {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.push.PushSubscriptionJSON = {
+  def apply(): PushSubscriptionJSON = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscriptionJSON]
+    __obj.asInstanceOf[PushSubscriptionJSON]
   }
   
   @scala.inline
-  implicit class PushSubscriptionJSONMutableBuilder[Self <: org.scalajs.dom.experimental.push.PushSubscriptionJSON] (val x: Self) extends AnyVal {
+  implicit class PushSubscriptionJSONMutableBuilder[Self <: PushSubscriptionJSON] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setEndpoint(value: java.lang.String): Self = StObject.set(x, "endpoint", value.asInstanceOf[js.Any])

@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This Streams API interface provides a built-in byte length queuing strategy that can be used when constructing streams. */
 trait CountQueuingStrategy
-  extends QueuingStrategy[js.Any] {
+  extends StObject
+     with QueuingStrategy[js.Any] {
   
   @JSName("highWaterMark")
   val highWaterMark_CountQueuingStrategy: Double

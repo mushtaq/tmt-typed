@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SVGSVGElementEventMap extends SVGElementEventMap {
+trait SVGSVGElementEventMap
+  extends StObject
+     with SVGElementEventMap {
   
   var SVGUnload: org.scalajs.dom.raw.Event
   

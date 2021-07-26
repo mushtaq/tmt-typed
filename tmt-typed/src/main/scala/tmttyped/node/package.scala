@@ -18,6 +18,4 @@ package object node {
   type NodeRequire = tmttyped.node.NodeJS.Require
   
   type RequireResolve = tmttyped.node.NodeJS.RequireResolve
-  
-  type WithImplicitCoercion[T] = T | tmttyped.node.anon.ValueOf[T]
 }

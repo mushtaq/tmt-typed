@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CipherGCMOptions extends TransformOptions {
+trait CipherGCMOptions
+  extends StObject
+     with TransformOptions {
   
   var authTagLength: js.UndefOr[Double] = js.undefined
 }

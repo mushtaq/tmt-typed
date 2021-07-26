@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Cache")
 @js.native
 class Cache ()
-  extends tmttyped.std.Cache
+  extends StObject
+     with tmttyped.std.Cache

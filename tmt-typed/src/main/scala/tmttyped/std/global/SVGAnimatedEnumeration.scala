@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGAnimatedEnumeration")
 @js.native
 class SVGAnimatedEnumeration ()
-  extends tmttyped.std.SVGAnimatedEnumeration {
+  extends StObject
+     with tmttyped.std.SVGAnimatedEnumeration {
   
   /* CompleteClass */
   override val animVal: Double = js.native

@@ -26,13 +26,13 @@ object SVGFilterPrimitiveStandardAttributes {
     width: org.scalajs.dom.raw.SVGAnimatedLength,
     x: org.scalajs.dom.raw.SVGAnimatedLength,
     y: org.scalajs.dom.raw.SVGAnimatedLength
-  ): org.scalajs.dom.raw.SVGFilterPrimitiveStandardAttributes = {
+  ): SVGFilterPrimitiveStandardAttributes = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGFilterPrimitiveStandardAttributes]
+    __obj.asInstanceOf[SVGFilterPrimitiveStandardAttributes]
   }
   
   @scala.inline
-  implicit class SVGFilterPrimitiveStandardAttributesMutableBuilder[Self <: org.scalajs.dom.raw.SVGFilterPrimitiveStandardAttributes] (val x: Self) extends AnyVal {
+  implicit class SVGFilterPrimitiveStandardAttributesMutableBuilder[Self <: SVGFilterPrimitiveStandardAttributes] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setHeight(value: org.scalajs.dom.raw.SVGAnimatedLength): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])

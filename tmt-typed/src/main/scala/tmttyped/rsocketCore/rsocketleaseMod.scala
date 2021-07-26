@@ -45,7 +45,8 @@ object rsocketleaseMod {
   @JSImport("rsocket-core/RSocketLease", "RequesterLeaseHandler")
   @js.native
   class RequesterLeaseHandler protected ()
-    extends LeaseHandler
+    extends StObject
+       with LeaseHandler
        with Disposable {
     def this(leaseReceiver: js.Function1[/* flowable */ Flowable[Lease], Unit]) = this()
     
@@ -68,7 +69,9 @@ object rsocketleaseMod {
   
   @JSImport("rsocket-core/RSocketLease", "ResponderLeaseHandler")
   @js.native
-  class ResponderLeaseHandler protected () extends LeaseHandler {
+  class ResponderLeaseHandler protected ()
+    extends StObject
+       with LeaseHandler {
     def this(leaseSender: js.Function1[/* leaseStats */ js.UndefOr[LeaseStats], Flowable[Lease]]) = this()
     def this(
       leaseSender: js.Function1[/* leaseStats */ js.UndefOr[LeaseStats], Flowable[Lease]],
@@ -76,7 +79,7 @@ object rsocketleaseMod {
     ) = this()
     def this(
       leaseSender: js.Function1[/* leaseStats */ js.UndefOr[LeaseStats], Flowable[Lease]],
-      stats: js.UndefOr[scala.Nothing],
+      stats: Unit,
       errorConsumer: js.Function1[/* e */ js.Error, Unit]
     ) = this()
     def this(

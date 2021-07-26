@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AudioWorkletNodeOptions extends AudioNodeOptions {
+trait AudioWorkletNodeOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var numberOfInputs: js.UndefOr[Double] = js.undefined
   

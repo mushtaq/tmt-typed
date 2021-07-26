@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ProgressEvent")
 @js.native
 class ProgressEvent protected ()
-  extends tmttyped.std.ProgressEvent[org.scalajs.dom.raw.EventTarget] {
+  extends StObject
+     with tmttyped.std.ProgressEvent[org.scalajs.dom.raw.EventTarget] {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: ProgressEventInit) = this()
 }

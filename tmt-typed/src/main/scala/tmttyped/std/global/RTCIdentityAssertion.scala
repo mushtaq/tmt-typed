@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIdentityAssertion")
 @js.native
 class RTCIdentityAssertion protected ()
-  extends tmttyped.std.RTCIdentityAssertion {
+  extends StObject
+     with tmttyped.std.RTCIdentityAssertion {
   def this(idp: java.lang.String, name: java.lang.String) = this()
   
   /* CompleteClass */

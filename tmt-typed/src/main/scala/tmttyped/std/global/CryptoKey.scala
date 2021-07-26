@@ -12,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CryptoKey")
 @js.native
 class CryptoKey ()
-  extends tmttyped.std.CryptoKey {
+  extends StObject
+     with tmttyped.std.CryptoKey {
   
   /* CompleteClass */
   override val algorithm: KeyAlgorithm = js.native

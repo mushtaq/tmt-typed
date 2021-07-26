@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BhxBrowser")
 @js.native
 class BhxBrowser ()
-  extends tmttyped.std.BhxBrowser
+  extends StObject
+     with tmttyped.std.BhxBrowser

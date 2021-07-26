@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLBuffer")
 @js.native
 class WebGLBuffer ()
-  extends tmttyped.std.WebGLObject
+  extends StObject
+     with tmttyped.std.WebGLBuffer

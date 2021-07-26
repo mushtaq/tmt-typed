@@ -5,20 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MediaTrackConstraints extends MediaTrackConstraintSet {
+trait MediaTrackConstraints
+  extends StObject
+     with MediaTrackConstraintSet {
   
   var advanced: js.UndefOr[js.Array[org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet]] = js.undefined
 }
 object MediaTrackConstraints {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.mediastream.MediaTrackConstraints = {
+  def apply(): MediaTrackConstraints = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.mediastream.MediaTrackConstraints]
+    __obj.asInstanceOf[MediaTrackConstraints]
   }
   
   @scala.inline
-  implicit class MediaTrackConstraintsMutableBuilder[Self <: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints] (val x: Self) extends AnyVal {
+  implicit class MediaTrackConstraintsMutableBuilder[Self <: MediaTrackConstraints] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAdvanced(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet]): Self = StObject.set(x, "advanced", value.asInstanceOf[js.Any])

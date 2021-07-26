@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an <img>, <audio>, <video>, <style> or <link>). */
 @js.native
-trait ProgressEvent[T /* <: org.scalajs.dom.raw.EventTarget */] extends Event {
+trait ProgressEvent[T /* <: org.scalajs.dom.raw.EventTarget */]
+  extends StObject
+     with Event {
   
   val lengthComputable: scala.Boolean = js.native
   

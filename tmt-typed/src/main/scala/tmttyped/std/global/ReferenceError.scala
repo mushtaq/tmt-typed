@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.ReferenceErrorConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ReferenceError")
 @js.native
 class ReferenceError ()
-  extends tmttyped.std.Error {
+  extends StObject
+     with tmttyped.std.Error {
   def this(message: java.lang.String) = this()
   
   /* CompleteClass */
@@ -17,4 +19,9 @@ class ReferenceError ()
   
   /* CompleteClass */
   override var name: java.lang.String = js.native
+}
+object ReferenceError {
+  
+  @scala.inline
+  def apply: ReferenceErrorConstructor = js.Dynamic.global.selectDynamic("ReferenceError").asInstanceOf[ReferenceErrorConstructor]
 }

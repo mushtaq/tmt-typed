@@ -8,40 +8,66 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the IDBRequest instance. */
 @js.native
-trait IDBRequest[T] extends EventTarget {
+trait IDBRequest[T]
+  extends StObject
+     with EventTarget {
   
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: AddEventListenerOptions
   ): Unit = js.native
   
@@ -50,9 +76,17 @@ trait IDBRequest[T] extends EventTarget {
     */
   val error: org.scalajs.dom.raw.DOMException | Null = js.native
   
-  var onerror: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onerror: (js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.IDBRequest, 
+    /* ev */ org.scalajs.dom.raw.Event, 
+    js.Any
+  ]) | Null = js.native
   
-  var onsuccess: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onsuccess: (js.ThisFunction1[
+    /* this */ org.scalajs.dom.raw.IDBRequest, 
+    /* ev */ org.scalajs.dom.raw.Event, 
+    js.Any
+  ]) | Null = js.native
   
   /**
     * Returns "pending" until a request is complete, then returns "done".
@@ -62,35 +96,59 @@ trait IDBRequest[T] extends EventTarget {
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.IDBRequest, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.IDBRequest, 
+      /* ev */ org.scalajs.dom.raw.Event, 
+      js.Any
+    ],
     options: scala.Boolean
   ): Unit = js.native
   

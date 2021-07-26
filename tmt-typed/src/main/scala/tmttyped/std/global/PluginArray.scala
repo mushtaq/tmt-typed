@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PluginArray")
 @js.native
 class PluginArray ()
-  extends tmttyped.std.PluginArray
+  extends StObject
+     with tmttyped.std.PluginArray

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait HTMLMediaElementEventMap extends HTMLElementEventMap {
+trait HTMLMediaElementEventMap
+  extends StObject
+     with HTMLElementEventMap {
   
   var encrypted: MediaEncryptedEvent
   

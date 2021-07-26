@@ -5,20 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ClipboardEventInit extends EventInit {
+trait ClipboardEventInit
+  extends StObject
+     with EventInit {
   
   var clipboardData: js.UndefOr[org.scalajs.dom.raw.DataTransfer | Null] = js.undefined
 }
 object ClipboardEventInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.ClipboardEventInit = {
+  def apply(): ClipboardEventInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.ClipboardEventInit]
+    __obj.asInstanceOf[ClipboardEventInit]
   }
   
   @scala.inline
-  implicit class ClipboardEventInitMutableBuilder[Self <: org.scalajs.dom.raw.ClipboardEventInit] (val x: Self) extends AnyVal {
+  implicit class ClipboardEventInitMutableBuilder[Self <: ClipboardEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setClipboardData(value: org.scalajs.dom.raw.DataTransfer): Self = StObject.set(x, "clipboardData", value.asInstanceOf[js.Any])

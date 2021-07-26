@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLIFrameElement")
 @js.native
 class HTMLIFrameElement ()
-  extends tmttyped.std.HTMLIFrameElement {
+  extends StObject
+     with tmttyped.std.HTMLIFrameElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

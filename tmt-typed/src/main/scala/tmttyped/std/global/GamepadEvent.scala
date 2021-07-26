@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GamepadEvent")
 @js.native
 class GamepadEvent protected ()
-  extends tmttyped.std.GamepadEvent {
+  extends StObject
+     with tmttyped.std.GamepadEvent {
   def this(`type`: java.lang.String, eventInitDict: GamepadEventInit) = this()
 }

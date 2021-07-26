@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechSynthesisUtterance")
 @js.native
 class SpeechSynthesisUtterance ()
-  extends tmttyped.std.SpeechSynthesisUtterance {
+  extends StObject
+     with tmttyped.std.SpeechSynthesisUtterance {
   def this(text: java.lang.String) = this()
 }

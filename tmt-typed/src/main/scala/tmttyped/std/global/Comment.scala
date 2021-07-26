@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Comment")
 @js.native
 class Comment ()
-  extends tmttyped.std.CharacterData {
+  extends StObject
+     with tmttyped.std.CharacterData {
   def this(data: java.lang.String) = this()
   
   /**

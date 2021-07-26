@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ProcessingInstruction")
 @js.native
 class ProcessingInstruction ()
-  extends tmttyped.std.ProcessingInstruction {
+  extends StObject
+     with tmttyped.std.ProcessingInstruction {
   
   /**
     * Returns the first following sibling that is an element, and null otherwise.

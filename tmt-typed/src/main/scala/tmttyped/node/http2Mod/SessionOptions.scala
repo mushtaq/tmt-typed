@@ -28,6 +28,14 @@ trait SessionOptions extends StObject {
   var selectPadding: js.UndefOr[js.Function2[/* frameLen */ Double, /* maxFrameLen */ Double, Double]] = js.undefined
   
   var settings: js.UndefOr[Settings] = js.undefined
+  
+  /**
+    * Specifies a timeout in milliseconds that
+    * a server should wait when an [`'unknownProtocol'`][] is emitted. If the
+    * socket has not been destroyed by that time the server will destroy it.
+    * @default 100000
+    */
+  var unknownProtocolTimeout: js.UndefOr[Double] = js.undefined
 }
 object SessionOptions {
   
@@ -99,5 +107,11 @@ object SessionOptions {
     
     @scala.inline
     def setSettingsUndefined: Self = StObject.set(x, "settings", js.undefined)
+    
+    @scala.inline
+    def setUnknownProtocolTimeout(value: Double): Self = StObject.set(x, "unknownProtocolTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUnknownProtocolTimeoutUndefined: Self = StObject.set(x, "unknownProtocolTimeout", js.undefined)
   }
 }

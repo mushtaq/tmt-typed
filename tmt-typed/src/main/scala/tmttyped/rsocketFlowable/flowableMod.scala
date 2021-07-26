@@ -10,7 +10,9 @@ object flowableMod {
   
   @JSImport("rsocket-flowable/Flowable", JSImport.Default)
   @js.native
-  class default[T] protected () extends Flowable[T] {
+  class default[T] protected ()
+    extends StObject
+       with Flowable[T] {
     def this(source: Source[T]) = this()
     def this(source: Source[T], max: Double) = this()
   }
@@ -38,7 +40,7 @@ object flowableMod {
     def lift[R](
       onSubscribeLift: js.Function1[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<R> */ /* subscriber */ js.Any, 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ js.Any
         ]
     ): Flowable[R] = js.native
     
@@ -48,7 +50,7 @@ object flowableMod {
     def subscribe(subscriberOrCallback: js.Function1[/* a */ T, Unit]): Unit = js.native
     def subscribe(
       subscriberOrCallback: Partial[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ js.Any
         ]
     ): Unit = js.native
     

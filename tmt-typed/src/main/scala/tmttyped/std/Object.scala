@@ -29,13 +29,13 @@ object Object {
     constructor: js.Function,
     hasOwnProperty: PropertyKey => scala.Boolean,
     propertyIsEnumerable: PropertyKey => scala.Boolean
-  ): js.Object = {
+  ): Object = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
-    __obj.asInstanceOf[js.Object]
+    __obj.asInstanceOf[Object]
   }
   
   @scala.inline
-  implicit class ObjectMutableBuilder[Self <: js.Object] (val x: Self) extends AnyVal {
+  implicit class ObjectMutableBuilder[Self <: Object] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setConstructor(value: js.Function): Self = StObject.set(x, "constructor", value.asInstanceOf[js.Any])

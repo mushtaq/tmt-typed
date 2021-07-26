@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait TextStreamReader extends TextStreamBase {
+trait TextStreamReader
+  extends StObject
+     with TextStreamBase {
   
   /**
     * Indicates whether the stream pointer position is at the end of a line.

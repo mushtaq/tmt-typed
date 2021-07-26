@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PromiseRejectionEvent")
 @js.native
 class PromiseRejectionEvent protected ()
-  extends tmttyped.std.PromiseRejectionEvent {
+  extends StObject
+     with tmttyped.std.PromiseRejectionEvent {
   def this(`type`: java.lang.String, eventInitDict: PromiseRejectionEventInit) = this()
 }

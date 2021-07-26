@@ -1,13 +1,14 @@
 package tmttyped.node.tlsMod
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TLSSocketOptions
-  extends SecureContextOptions
+  extends StObject
+     with SecureContextOptions
      with CommonConnectionOptions {
   
   /**

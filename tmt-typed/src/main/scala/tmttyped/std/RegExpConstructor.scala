@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RegExpConstructor
-  extends Instantiable1[(/* pattern */ js.RegExp) | (/* pattern */ java.lang.String), js.RegExp]
+  extends StObject
+     with Instantiable1[(/* pattern */ js.RegExp) | (/* pattern */ java.lang.String), js.RegExp]
      with Instantiable2[
       (/* pattern */ js.RegExp) | (/* pattern */ java.lang.String), 
       /* flags */ java.lang.String, 

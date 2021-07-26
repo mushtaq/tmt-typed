@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Headers")
 @js.native
 class Headers ()
-  extends tmttyped.std.Headers {
+  extends StObject
+     with tmttyped.std.Headers {
   def this(init: HeadersInit) = this()
 }

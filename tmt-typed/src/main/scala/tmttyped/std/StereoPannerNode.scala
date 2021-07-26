@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode. */
 @js.native
-trait StereoPannerNode extends AudioNode {
+trait StereoPannerNode
+  extends StObject
+     with AudioNode {
   
   val pan: org.scalajs.dom.raw.AudioParam = js.native
 }

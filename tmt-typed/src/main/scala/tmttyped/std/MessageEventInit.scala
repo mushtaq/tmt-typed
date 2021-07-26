@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MessageEventInit[T] extends EventInit {
+trait MessageEventInit[T]
+  extends StObject
+     with EventInit {
   
   var data: js.UndefOr[T] = js.undefined
   
@@ -59,18 +61,9 @@ object MessageEventInit {
     def setSource(value: MessageEventSource): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceMessagePort(value: org.scalajs.dom.raw.MessagePort): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setSourceNull: Self = StObject.set(x, "source", null)
     
     @scala.inline
-    def setSourceServiceWorker(value: org.scalajs.dom.experimental.serviceworkers.ServiceWorker): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setSourceUndefined: Self = StObject.set(x, "source", js.undefined)
-    
-    @scala.inline
-    def setSourceWindow(value: org.scalajs.dom.raw.Window): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
   }
 }

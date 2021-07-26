@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PermissionRequest extends DeferredPermissionRequest {
+trait PermissionRequest
+  extends StObject
+     with DeferredPermissionRequest {
   
   def defer(): Unit
   

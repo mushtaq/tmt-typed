@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HashChangeEvent")
 @js.native
 class HashChangeEvent protected ()
-  extends tmttyped.std.HashChangeEvent {
+  extends StObject
+     with tmttyped.std.HashChangeEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: HashChangeEventInit) = this()
 }

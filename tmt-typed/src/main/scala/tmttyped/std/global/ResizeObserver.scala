@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ResizeObserver")
 @js.native
 class ResizeObserver protected ()
-  extends tmttyped.std.ResizeObserver {
+  extends StObject
+     with tmttyped.std.ResizeObserver {
   def this(callback: ResizeObserverCallback) = this()
 }

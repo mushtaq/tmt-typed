@@ -5,20 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AesKeyAlgorithm extends KeyAlgorithm {
+trait AesKeyAlgorithm
+  extends StObject
+     with KeyAlgorithm {
   
   var length: Double
 }
 object AesKeyAlgorithm {
   
   @scala.inline
-  def apply(length: Double, name: java.lang.String): org.scalajs.dom.crypto.AesKeyAlgorithm = {
+  def apply(length: Double, name: java.lang.String): AesKeyAlgorithm = {
     val __obj = js.Dynamic.literal(length = length.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.AesKeyAlgorithm]
+    __obj.asInstanceOf[AesKeyAlgorithm]
   }
   
   @scala.inline
-  implicit class AesKeyAlgorithmMutableBuilder[Self <: org.scalajs.dom.crypto.AesKeyAlgorithm] (val x: Self) extends AnyVal {
+  implicit class AesKeyAlgorithmMutableBuilder[Self <: AesKeyAlgorithm] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])

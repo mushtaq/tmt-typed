@@ -9,8 +9,6 @@ trait PaymentCurrencyAmount extends StObject {
   
   var currency: java.lang.String
   
-  var currencySystem: js.UndefOr[java.lang.String] = js.undefined
-  
   var value: java.lang.String
 }
 object PaymentCurrencyAmount {
@@ -26,12 +24,6 @@ object PaymentCurrencyAmount {
     
     @scala.inline
     def setCurrency(value: java.lang.String): Self = StObject.set(x, "currency", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCurrencySystem(value: java.lang.String): Self = StObject.set(x, "currencySystem", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCurrencySystemUndefined: Self = StObject.set(x, "currencySystem", js.undefined)
     
     @scala.inline
     def setValue(value: java.lang.String): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])

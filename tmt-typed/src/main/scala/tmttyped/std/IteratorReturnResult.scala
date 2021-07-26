@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IteratorReturnResult[TReturn]
-  extends IteratorResult[js.Any, TReturn] {
+  extends StObject
+     with IteratorResult[js.Any, TReturn] {
   
   var done: `true`
   

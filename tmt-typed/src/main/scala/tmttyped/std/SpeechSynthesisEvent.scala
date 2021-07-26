@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This Web Speech API interface contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service. */
 @js.native
-trait SpeechSynthesisEvent extends Event {
+trait SpeechSynthesisEvent
+  extends StObject
+     with Event {
   
   val charIndex: Double = js.native
   

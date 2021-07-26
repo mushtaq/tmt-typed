@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AsyncGenerator[T, TReturn, TNext] extends AsyncIterator[T, TReturn, TNext] {
+trait AsyncGenerator[T, TReturn, TNext]
+  extends StObject
+     with AsyncIterator[T, TReturn, TNext] {
   
   @JSName("return")
   def return_MAsyncGenerator(value: TReturn): js.Promise[IteratorResult[T, TReturn]] = js.native

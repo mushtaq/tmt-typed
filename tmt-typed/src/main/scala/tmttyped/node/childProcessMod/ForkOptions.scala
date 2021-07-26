@@ -1,17 +1,15 @@
 package tmttyped.node.childProcessMod
 
 import tmttyped.node.nodeStreamMod.Stream
-import tmttyped.node.nodeStrings.ignore
-import tmttyped.node.nodeStrings.inherit
 import tmttyped.node.nodeStrings.ipc
-import tmttyped.node.nodeStrings.pipe
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ForkOptions
-  extends ProcessEnvOptions
+  extends StObject
+     with ProcessEnvOptions
      with MessagingOptions {
   
   var detached: js.UndefOr[Boolean] = js.undefined
@@ -71,7 +69,7 @@ object ForkOptions {
     def setStdioUndefined: Self = StObject.set(x, "stdio", js.undefined)
     
     @scala.inline
-    def setStdioVarargs(value: (js.UndefOr[pipe | ipc | ignore | inherit | Stream | Double | Null])*): Self = StObject.set(x, "stdio", js.Array(value :_*))
+    def setStdioVarargs(value: (js.UndefOr[IOType | ipc | Stream | Double | Null])*): Self = StObject.set(x, "stdio", js.Array(value :_*))
     
     @scala.inline
     def setWindowsVerbatimArguments(value: Boolean): Self = StObject.set(x, "windowsVerbatimArguments", value.asInstanceOf[js.Any])

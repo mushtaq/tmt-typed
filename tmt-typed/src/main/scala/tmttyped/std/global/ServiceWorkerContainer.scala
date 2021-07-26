@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ServiceWorkerContainer")
 @js.native
 class ServiceWorkerContainer ()
-  extends tmttyped.std.ServiceWorkerContainer
+  extends StObject
+     with tmttyped.std.ServiceWorkerContainer

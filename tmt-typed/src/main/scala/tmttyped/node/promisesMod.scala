@@ -1,33 +1,34 @@
 package tmttyped.node
 
-import tmttyped.node.anon.BaseEncodingOptionsflagOp
-import tmttyped.node.anon.BaseEncodingOptionsmodeMo
-import tmttyped.node.anon.BaseEncodingOptionswithFi
-import tmttyped.node.anon.BaseEncodingOptionswithFiEncoding
-import tmttyped.node.anon.BufferBytesWritten
-import tmttyped.node.anon.BytesWritten
-import tmttyped.node.anon.Encoding
-import tmttyped.node.anon.EncodingFlag
-import tmttyped.node.anon.Flag
-import tmttyped.node.anon.MakeDirectoryOptionsrecur
-import tmttyped.node.anon.MakeDirectoryOptionsrecurMode
-import tmttyped.node.anon.StatOptionsbigintfalseund
-import tmttyped.node.anon.StatOptionsbiginttrue
-import tmttyped.node.fsMod.BaseEncodingOptions
-import tmttyped.node.fsMod.BufferEncodingOption
-import tmttyped.node.fsMod.MakeDirectoryOptions
-import tmttyped.node.fsMod.Mode
-import tmttyped.node.fsMod.OpenDirOptions
-import tmttyped.node.fsMod.PathLike
-import tmttyped.node.fsMod.RmDirOptions
-import tmttyped.node.fsMod.RmOptions
-import tmttyped.node.fsMod.StatOptions
-import tmttyped.node.nodeColonfsMod.FileHandle
-import tmttyped.node.nodeFsMod.BigIntStats
-import tmttyped.node.nodeFsMod.Dir
-import tmttyped.node.nodeFsMod.Dirent
-import tmttyped.node.nodeFsMod.Stats
-import tmttyped.node.nodeStrings.buffer_
+import tmttyped.node.anon.FnCallHostnameOptions
+import tmttyped.node.anon.FnCallHostnameRrtype
+import tmttyped.node.anon.Hostname
+import tmttyped.node.dnsMod.AnyRecord
+import tmttyped.node.dnsMod.CaaRecord
+import tmttyped.node.dnsMod.LookupAddress
+import tmttyped.node.dnsMod.LookupAllOptions
+import tmttyped.node.dnsMod.LookupOneOptions
+import tmttyped.node.dnsMod.LookupOptions
+import tmttyped.node.dnsMod.MxRecord
+import tmttyped.node.dnsMod.NaptrRecord
+import tmttyped.node.dnsMod.RecordWithTtl
+import tmttyped.node.dnsMod.ResolveOptions
+import tmttyped.node.dnsMod.ResolveWithTtlOptions
+import tmttyped.node.dnsMod.ResolverOptions
+import tmttyped.node.dnsMod.SoaRecord
+import tmttyped.node.dnsMod.SrvRecord
+import tmttyped.node.nodeStrings.A
+import tmttyped.node.nodeStrings.AAAA
+import tmttyped.node.nodeStrings.ANY
+import tmttyped.node.nodeStrings.CAA
+import tmttyped.node.nodeStrings.CNAME
+import tmttyped.node.nodeStrings.MX
+import tmttyped.node.nodeStrings.NAPTR
+import tmttyped.node.nodeStrings.NS
+import tmttyped.node.nodeStrings.PTR
+import tmttyped.node.nodeStrings.SOA
+import tmttyped.node.nodeStrings.SRV
+import tmttyped.node.nodeStrings.TXT
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,671 +36,495 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object promisesMod {
   
-  @JSImport("fs/promises", JSImport.Namespace)
+  @JSImport("dns/promises", JSImport.Namespace)
   @js.native
   val ^ : js.Any = js.native
   
-  /**
-    * Asynchronously tests a user's permissions for the file specified by path.
-    * @param path A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    */
-  @scala.inline
-  def access(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def access(path: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  @JSImport("dns/promises", "Resolver")
+  @js.native
+  class Resolver () extends StObject {
+    def this(options: ResolverOptions) = this()
+    
+    def cancel(): Unit = js.native
+    
+    def getServers(): js.Array[java.lang.String] = js.native
+    @JSName("getServers")
+    var getServers_Original: js.Function0[js.Array[java.lang.String]] = js.native
+    
+    def resolve(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    def resolve(hostname: java.lang.String, rrtype: java.lang.String): js.Promise[
+        (js.Array[
+          AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
+        ]) | SoaRecord
+      ] = js.native
+    
+    def resolve4(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    def resolve4(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = js.native
+    def resolve4(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = js.native
+    @JSName("resolve4")
+    var resolve4_Original: FnCallHostnameOptions = js.native
+    
+    def resolve6(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    def resolve6(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = js.native
+    def resolve6(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = js.native
+    @JSName("resolve6")
+    var resolve6_Original: FnCallHostnameOptions = js.native
+    
+    def resolveAny(hostname: java.lang.String): js.Promise[js.Array[AnyRecord]] = js.native
+    @JSName("resolveAny")
+    var resolveAny_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[AnyRecord]]] = js.native
+    
+    def resolveCname(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolveCname")
+    var resolveCname_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[java.lang.String]]] = js.native
+    
+    def resolveMx(hostname: java.lang.String): js.Promise[js.Array[MxRecord]] = js.native
+    @JSName("resolveMx")
+    var resolveMx_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[MxRecord]]] = js.native
+    
+    def resolveNaptr(hostname: java.lang.String): js.Promise[js.Array[NaptrRecord]] = js.native
+    @JSName("resolveNaptr")
+    var resolveNaptr_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[NaptrRecord]]] = js.native
+    
+    def resolveNs(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolveNs")
+    var resolveNs_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[java.lang.String]]] = js.native
+    
+    def resolvePtr(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolvePtr")
+    var resolvePtr_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[java.lang.String]]] = js.native
+    
+    def resolveSoa(hostname: java.lang.String): js.Promise[SoaRecord] = js.native
+    @JSName("resolveSoa")
+    var resolveSoa_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[SoaRecord]] = js.native
+    
+    def resolveSrv(hostname: java.lang.String): js.Promise[js.Array[SrvRecord]] = js.native
+    @JSName("resolveSrv")
+    var resolveSrv_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[SrvRecord]]] = js.native
+    
+    def resolveTxt(hostname: java.lang.String): js.Promise[js.Array[js.Array[java.lang.String]]] = js.native
+    @JSName("resolveTxt")
+    var resolveTxt_Original: js.Function1[/* hostname */ java.lang.String, js.Promise[js.Array[js.Array[java.lang.String]]]] = js.native
+    
+    @JSName("resolve")
+    def resolve_A(hostname: java.lang.String, rrtype: A): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolve")
+    def resolve_AAAA(hostname: java.lang.String, rrtype: AAAA): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolve")
+    def resolve_ANY(hostname: java.lang.String, rrtype: ANY): js.Promise[js.Array[AnyRecord]] = js.native
+    @JSName("resolve")
+    def resolve_CAA(hostname: java.lang.String, rrtype: CAA): js.Promise[js.Array[CaaRecord]] = js.native
+    @JSName("resolve")
+    def resolve_CNAME(hostname: java.lang.String, rrtype: CNAME): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolve")
+    def resolve_MX(hostname: java.lang.String, rrtype: MX): js.Promise[js.Array[MxRecord]] = js.native
+    @JSName("resolve")
+    def resolve_NAPTR(hostname: java.lang.String, rrtype: NAPTR): js.Promise[js.Array[NaptrRecord]] = js.native
+    @JSName("resolve")
+    def resolve_NS(hostname: java.lang.String, rrtype: NS): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolve")
+    var resolve_Original: FnCallHostnameRrtype = js.native
+    @JSName("resolve")
+    def resolve_PTR(hostname: java.lang.String, rrtype: PTR): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("resolve")
+    def resolve_SOA(hostname: java.lang.String, rrtype: SOA): js.Promise[SoaRecord] = js.native
+    @JSName("resolve")
+    def resolve_SRV(hostname: java.lang.String, rrtype: SRV): js.Promise[js.Array[SrvRecord]] = js.native
+    @JSName("resolve")
+    def resolve_TXT(hostname: java.lang.String, rrtype: TXT): js.Promise[js.Array[js.Array[java.lang.String]]] = js.native
+    
+    def reverse(ip: java.lang.String): js.Promise[js.Array[java.lang.String]] = js.native
+    @JSName("reverse")
+    var reverse_Original: js.Function1[/* ip */ java.lang.String, js.Promise[js.Array[java.lang.String]]] = js.native
+    
+    def setLocalAddress(): Unit = js.native
+    def setLocalAddress(ipv4: java.lang.String): Unit = js.native
+    def setLocalAddress(ipv4: java.lang.String, ipv6: java.lang.String): Unit = js.native
+    def setLocalAddress(ipv4: Unit, ipv6: java.lang.String): Unit = js.native
+    
+    def setServers(servers: js.Array[java.lang.String]): Unit = js.native
+    @JSName("setServers")
+    var setServers_Original: js.Function1[/* servers */ js.Array[java.lang.String], Unit] = js.native
+  }
   
   /**
-    * Asynchronously append data to a file, creating the file if it does not exist.
-    * @param file A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * If a `FileHandle` is provided, the underlying file will _not_ be closed automatically.
-    * @param data The data to write. If something other than a `Buffer` or `Uint8Array` is provided, the value is coerced to a string.
-    * @param options Either the encoding for the file, or an object optionally specifying the encoding, file mode, and flag.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `mode` is not supplied, the default of `0o666` is used.
-    * If `mode` is a string, it is parsed as an octal integer.
-    * If `flag` is not supplied, the default of `'a'` is used.
+    * Returns an array of IP address strings, formatted according to [RFC 5952](https://tools.ietf.org/html/rfc5952#section-6),
+    * that are currently configured for DNS resolution. A string will include a port
+    * section if a custom port is used.
+    *
+    * ```js
+    * [
+    *   '4.4.4.4',
+    *   '2001:4860:4860::8888',
+    *   '4.4.4.4:1053',
+    *   '[2001:4860:4860::8888]:1053',
+    * ]
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def appendFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous chmod(2) - Change permissions of a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
-    */
-  @scala.inline
-  def chmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous chown(2) - Change ownership of a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
-  @scala.inline
-  def chown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronously copies `src` to `dest`. By default, `dest` is overwritten if it already exists.
-    * Node.js makes no guarantees about the atomicity of the copy operation.
-    * If an error occurs after the destination file has been opened for writing, Node.js will attempt
-    * to remove the destination.
-    * @param src A path to the source file.
-    * @param dest A path to the destination file.
-    * @param flags An optional integer that specifies the behavior of the copy operation. The only
-    * supported flag is `fs.constants.COPYFILE_EXCL`, which causes the copy operation to fail if
-    * `dest` already exists.
-    */
-  @scala.inline
-  def copyFile(src: PathLike, dest: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def copyFile(src: PathLike, dest: PathLike, flags: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous fchmod(2) - Change permissions of a file.
-    * @param handle A `FileHandle`.
-    * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
-    */
-  @scala.inline
-  def fchmod(handle: FileHandle, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmod")(handle.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous fchown(2) - Change ownership of a file.
-    * @param handle A `FileHandle`.
-    */
-  @scala.inline
-  def fchown(handle: FileHandle, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fchown")(handle.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous fdatasync(2) - synchronize a file's in-core state with storage device.
-    * @param handle A `FileHandle`.
-    */
-  @scala.inline
-  def fdatasync(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("fdatasync")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous fsync(2) - synchronize a file's in-core state with the underlying storage device.
-    * @param handle A `FileHandle`.
-    */
-  @scala.inline
-  def fsync(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous ftruncate(2) - Truncate a file to a specified length.
-    * @param handle A `FileHandle`.
-    * @param len If not specified, defaults to `0`.
-    */
-  @scala.inline
-  def ftruncate(handle: FileHandle): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(handle.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def ftruncate(handle: FileHandle, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(handle.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronously change file timestamps of the file referenced by the supplied `FileHandle`.
-    * @param handle A `FileHandle`.
-    * @param atime The last access time. If a string is provided, it will be coerced to number.
-    * @param mtime The last modified time. If a string is provided, it will be coerced to number.
-    */
-  @scala.inline
-  def futimes(handle: FileHandle, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def futimes(handle: FileHandle, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(handle.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous lchmod(2) - Change permissions of a file. Does not dereference symbolic links.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param mode A file mode. If a string is passed, it is parsed as an octal integer.
-    */
-  @scala.inline
-  def lchmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous lchown(2) - Change ownership of a file. Does not dereference symbolic links.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
-  @scala.inline
-  def lchown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous link(2) - Create a new link (also known as a hard link) to an existing file.
-    * @param existingPath A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param newPath A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
-  @scala.inline
-  def link(existingPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous lstat(2) - Get file status. Does not dereference symbolic links.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    */
-  @scala.inline
-  def lstat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
-  @scala.inline
-  def lstat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
-  @scala.inline
-  def lstat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
-  @scala.inline
-  def lstat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
-  
-  /**
-    * Changes the access and modification times of a file in the same way as `fsPromises.utimes()`,
-    * with the difference that if the path refers to a symbolic link, then the link is not
-    * dereferenced: instead, the timestamps of the symbolic link itself are changed.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param atime The last access time. If a string is provided, it will be coerced to number.
-    * @param mtime The last modified time. If a string is provided, it will be coerced to number.
-    */
-  @scala.inline
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronous mkdir(2) - create a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
-    * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
-    */
-  @scala.inline
-  def mkdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  /**
-    * Asynchronous mkdir(2) - create a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
-    * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
-    */
-  @scala.inline
-  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[js.UndefOr[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[java.lang.String]]]
-  @scala.inline
-  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[java.lang.String]]]
-  @scala.inline
-  def mkdir(path: PathLike, options: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  
-  /**
-    * Asynchronously creates a unique temporary directory.
-    * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-    */
-  @scala.inline
-  def mkdtemp(prefix: java.lang.String): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def mkdtemp(prefix: java.lang.String, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def mkdtemp(prefix: java.lang.String, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  /**
-    * Asynchronously creates a unique temporary directory.
-    * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-    */
-  @scala.inline
-  def mkdtemp(prefix: java.lang.String, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-  
-  /**
-    * Asynchronous open(2) - open and possibly create a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param mode A file mode. If a string is passed, it is parsed as an octal integer. If not
-    * supplied, defaults to `0o666`.
-    */
-  @scala.inline
-  def open(path: PathLike, flags: java.lang.String): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-  @scala.inline
-  def open(path: PathLike, flags: java.lang.String, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-  @scala.inline
-  def open(path: PathLike, flags: Double): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-  @scala.inline
-  def open(path: PathLike, flags: Double, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+  def getServers(): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[java.lang.String]]
   
   @scala.inline
-  def opendir(path: java.lang.String): js.Promise[Dir] = ^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Dir]]
+  def lookup(hostname: java.lang.String): js.Promise[LookupAddress] = ^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[LookupAddress]]
+  /**
+    * Resolves a host name (e.g. `'nodejs.org'`) into the first found A (IPv4) or
+    * AAAA (IPv6) record. All `option` properties are optional. If `options` is an
+    * integer, then it must be `4` or `6` – if `options` is not provided, then IPv4
+    * and IPv6 addresses are both returned if found.
+    *
+    * With the `all` option set to `true`, the `Promise` is resolved with `addresses`being an array of objects with the properties `address` and `family`.
+    *
+    * On error, the `Promise` is rejected with an `Error` object, where `err.code`is the error code.
+    * Keep in mind that `err.code` will be set to `'ENOTFOUND'` not only when
+    * the host name does not exist but also when the lookup fails in other ways
+    * such as no available file descriptors.
+    *
+    * `dnsPromises.lookup()` does not necessarily have anything to do with the DNS
+    * protocol. The implementation uses an operating system facility that can
+    * associate names with addresses, and vice versa. This implementation can have
+    * subtle but important consequences on the behavior of any Node.js program. Please
+    * take some time to consult the `Implementation considerations section` before
+    * using `dnsPromises.lookup()`.
+    *
+    * Example usage:
+    *
+    * ```js
+    * const dns = require('dns');
+    * const dnsPromises = dns.promises;
+    * const options = {
+    *   family: 6,
+    *   hints: dns.ADDRCONFIG | dns.V4MAPPED,
+    * };
+    *
+    * dnsPromises.lookup('example.com', options).then((result) => {
+    *   console.log('address: %j family: IPv%s', result.address, result.family);
+    *   // address: "2606:2800:220:1:248:1893:25c8:1946" family: IPv6
+    * });
+    *
+    * // When options.all is true, the result will be an Array.
+    * options.all = true;
+    * dnsPromises.lookup('example.com', options).then((result) => {
+    *   console.log('addresses: %j', result);
+    *   // addresses: [{"address":"2606:2800:220:1:248:1893:25c8:1946","family":6}]
+    * });
+    * ```
+    * @since v10.6.0
+    */
   @scala.inline
-  def opendir(path: java.lang.String, options: OpenDirOptions): js.Promise[Dir] = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Dir]]
+  def lookup(hostname: java.lang.String, family: Double): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
+  @scala.inline
+  def lookup(hostname: java.lang.String, options: LookupAllOptions): js.Promise[js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[LookupAddress]]]
+  @scala.inline
+  def lookup(hostname: java.lang.String, options: LookupOneOptions): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
+  @scala.inline
+  def lookup(hostname: java.lang.String, options: LookupOptions): js.Promise[LookupAddress | js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress | js.Array[LookupAddress]]]
   
   /**
-    * Asynchronously reads data from the file referenced by the supplied `FileHandle`.
-    * @param handle A `FileHandle`.
-    * @param buffer The buffer that the data will be written to.
-    * @param offset The offset in the buffer at which to start writing.
-    * @param length The number of bytes to read.
-    * @param position The offset from the beginning of the file from which data should be read. If
-    * `null`, data will be read from the current position.
+    * Resolves the given `address` and `port` into a host name and service using
+    * the operating system's underlying `getnameinfo` implementation.
+    *
+    * If `address` is not a valid IP address, a `TypeError` will be thrown.
+    * The `port` will be coerced to a number. If it is not a legal port, a `TypeError`will be thrown.
+    *
+    * On error, the `Promise` is rejected with an `Error` object, where `err.code`is the error code.
+    *
+    * ```js
+    * const dnsPromises = require('dns').promises;
+    * dnsPromises.lookupService('127.0.0.1', 22).then((result) => {
+    *   console.log(result.hostname, result.service);
+    *   // Prints: localhost ssh
+    * });
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    position: Double
-  ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    position: Double
-  ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
-  @scala.inline
-  def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[tmttyped.node.anon.Buffer[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[tmttyped.node.anon.Buffer[TBuffer]]]
+  def lookupService(address: java.lang.String, port: Double): js.Promise[Hostname] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Hostname]]
   
   /**
-    * Asynchronously reads the entire contents of a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * If a `FileHandle` is provided, the underlying file will _not_ be closed automatically.
-    * @param options An object that may contain an optional flag.
-    * If a flag is not provided, it defaults to `'r'`.
+    * Uses the DNS protocol to resolve a host name (e.g. `'nodejs.org'`) into an array
+    * of the resource records. When successful, the `Promise` is resolved with an
+    * array of resource records. The type and structure of individual results vary
+    * based on `rrtype`:
+    *
+    * <omitted>
+    *
+    * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the `DNS error codes`.
+    * @since v10.6.0
+    * @param hostname Host name to resolve.
+    * @param rrtype Resource record type.
     */
   @scala.inline
-  def readFile(path: PathLike): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+  def resolve(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   @scala.inline
-  def readFile(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def readFile(path: PathLike, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
-  /**
-    * Asynchronously reads the entire contents of a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * If a `FileHandle` is provided, the underlying file will _not_ be closed automatically.
-    * @param options An object that may contain an optional flag.
-    * If a flag is not provided, it defaults to `'r'`.
-    */
-  @scala.inline
-  def readFile(path: PathLike, options: EncodingFlag): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def readFile(path: PathLike, options: Flag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-  @scala.inline
-  def readFile(path: FileHandle): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
-  @scala.inline
-  def readFile(path: FileHandle, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def readFile(path: FileHandle, options: BaseEncodingOptionsflagOp): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
-  @scala.inline
-  def readFile(path: FileHandle, options: EncodingFlag): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def readFile(path: FileHandle, options: Flag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+  def resolve(hostname: java.lang.String, rrtype: java.lang.String): js.Promise[
+    (js.Array[
+      AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
+    ]) | SoaRecord
+  ] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[
+    (js.Array[
+      AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
+    ]) | SoaRecord
+  ]]
   
   /**
-    * Asynchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
+    * Uses the DNS protocol to resolve IPv4 addresses (`A` records) for the`hostname`. On success, the `Promise` is resolved with an array of IPv4
+    * addresses (e.g. `['74.125.79.104', '74.125.79.105', '74.125.79.106']`).
+    * @since v10.6.0
+    * @param hostname Host name to resolve.
     */
   @scala.inline
-  def readdir(path: PathLike): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  def resolve4(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   @scala.inline
-  def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  def resolve4(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | java.lang.String]]]
   @scala.inline
-  def readdir(path: PathLike, options: BaseEncodingOptionswithFi): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
-  /**
-    * Asynchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-    */
-  @scala.inline
-  def readdir(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Promise[js.Array[Dirent]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Dirent]]]
-  /**
-    * Asynchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-    */
-  @scala.inline
-  def readdir(path: PathLike, options: Encoding): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
-  
-  @scala.inline
-  def readdir_buffer(path: PathLike, options: buffer_): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
+  def resolve4(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
   
   /**
-    * Asynchronous readlink(2) - read value of a symbolic link.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
+    * Uses the DNS protocol to resolve IPv6 addresses (`AAAA` records) for the`hostname`. On success, the `Promise` is resolved with an array of IPv6
+    * addresses.
+    * @since v10.6.0
+    * @param hostname Host name to resolve.
     */
   @scala.inline
-  def readlink(path: PathLike): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
+  def resolve6(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   @scala.inline
-  def readlink(path: PathLike, options: java.lang.String): js.Promise[java.lang.String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String | Buffer]]
+  def resolve6(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | java.lang.String]]]
   @scala.inline
-  def readlink(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def readlink(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  /**
-    * Asynchronous readlink(2) - read value of a symbolic link.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-    */
-  @scala.inline
-  def readlink(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+  def resolve6(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
   
   /**
-    * Asynchronous realpath(3) - return the canonicalized absolute pathname.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
+    * Uses the DNS protocol to resolve all records (also known as `ANY` or `*` query).
+    * On success, the `Promise` is resolved with an array containing various types of
+    * records. Each object has a property `type` that indicates the type of the
+    * current record. And depending on the `type`, additional properties will be
+    * present on the object:
+    *
+    * <omitted>
+    *
+    * Here is an example of the result object:
+    *
+    * ```js
+    * [ { type: 'A', address: '127.0.0.1', ttl: 299 },
+    *   { type: 'CNAME', value: 'example.com' },
+    *   { type: 'MX', exchange: 'alt4.aspmx.l.example.com', priority: 50 },
+    *   { type: 'NS', value: 'ns1.example.com' },
+    *   { type: 'TXT', entries: [ 'v=spf1 include:_spf.example.com ~all' ] },
+    *   { type: 'SOA',
+    *     nsname: 'ns1.example.com',
+    *     hostmaster: 'admin.example.com',
+    *     serial: 156696742,
+    *     refresh: 900,
+    *     retry: 900,
+    *     expire: 1800,
+    *     minttl: 60 } ]
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def realpath(path: PathLike): js.Promise[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def realpath(path: PathLike, options: BufferEncoding): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  @scala.inline
-  def realpath(path: PathLike, options: BaseEncodingOptions): js.Promise[java.lang.String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[java.lang.String]]
-  /**
-    * Asynchronous realpath(3) - return the canonicalized absolute pathname.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-    */
-  @scala.inline
-  def realpath(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+  def resolveAny(hostname: java.lang.String): js.Promise[js.Array[AnyRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
   
   /**
-    * Asynchronous rename(2) - Change the name or location of a file or directory.
-    * @param oldPath A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param newPath A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
+    * Uses the DNS protocol to resolve `CAA` records for the `hostname`. On success,
+    * the `Promise` is resolved with an array of objects containing available
+    * certification authority authorization records available for the `hostname`(e.g. `[{critical: 0, iodef: 'mailto:pki@example.com'},{critical: 128, issue: 'pki.example.com'}]`).
+    * @since v15.0.0
     */
   @scala.inline
-  def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolveCaa(hostname: java.lang.String): js.Promise[js.Array[CaaRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
   
   /**
-    * Asynchronously removes files and directories (modeled on the standard POSIX `rm` utility).
+    * Uses the DNS protocol to resolve `CNAME` records for the `hostname`. On success,
+    * the `Promise` is resolved with an array of canonical name records available for
+    * the `hostname` (e.g. `['bar.example.com']`).
+    * @since v10.6.0
     */
   @scala.inline
-  def rm(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolveCname(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   
   /**
-    * Asynchronous rmdir(2) - delete a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * Uses the DNS protocol to resolve mail exchange records (`MX` records) for the`hostname`. On success, the `Promise` is resolved with an array of objects
+    * containing both a `priority` and `exchange` property (e.g.`[{priority: 10, exchange: 'mx.example.com'}, ...]`).
+    * @since v10.6.0
     */
   @scala.inline
-  def rmdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolveMx(hostname: java.lang.String): js.Promise[js.Array[MxRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[MxRecord]]]
   
   /**
-    * Asynchronous stat(2) - Get file status.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * Uses the DNS protocol to resolve regular expression based records (`NAPTR`records) for the `hostname`. On success, the `Promise` is resolved with an array
+    * of objects with the following properties:
+    *
+    * * `flags`
+    * * `service`
+    * * `regexp`
+    * * `replacement`
+    * * `order`
+    * * `preference`
+    *
+    * ```js
+    * {
+    *   flags: 's',
+    *   service: 'SIP+D2U',
+    *   regexp: '',
+    *   replacement: '_sip._udp.example.com',
+    *   order: 30,
+    *   preference: 100
+    * }
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def stat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
-  @scala.inline
-  def stat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
-  @scala.inline
-  def stat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
-  @scala.inline
-  def stat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
+  def resolveNaptr(hostname: java.lang.String): js.Promise[js.Array[NaptrRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
   
   /**
-    * Asynchronous symlink(2) - Create a new symbolic link to an existing file.
-    * @param target A path to an existing file. If a URL is provided, it must use the `file:` protocol.
-    * @param path A path to the new symlink. If a URL is provided, it must use the `file:` protocol.
-    * @param type May be set to `'dir'`, `'file'`, or `'junction'` (default is `'file'`) and is only available on Windows (ignored on other platforms).
-    * When using `'junction'`, the `target` argument will automatically be normalized to an absolute path.
+    * Uses the DNS protocol to resolve name server records (`NS` records) for the`hostname`. On success, the `Promise` is resolved with an array of name server
+    * records available for `hostname` (e.g.`['ns1.example.com', 'ns2.example.com']`).
+    * @since v10.6.0
     */
   @scala.inline
-  def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def symlink(target: PathLike, path: PathLike, `type`: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolveNs(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   
   /**
-    * Asynchronous truncate(2) - Truncate a file to a specified length.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param len If not specified, defaults to `0`.
+    * Uses the DNS protocol to resolve pointer records (`PTR` records) for the`hostname`. On success, the `Promise` is resolved with an array of strings
+    * containing the reply records.
+    * @since v10.6.0
     */
   @scala.inline
-  def truncate(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def truncate(path: PathLike, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolvePtr(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
   
   /**
-    * Asynchronous unlink(2) - delete a name and possibly the file it refers to.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * Uses the DNS protocol to resolve a start of authority record (`SOA` record) for
+    * the `hostname`. On success, the `Promise` is resolved with an object with the
+    * following properties:
+    *
+    * * `nsname`
+    * * `hostmaster`
+    * * `serial`
+    * * `refresh`
+    * * `retry`
+    * * `expire`
+    * * `minttl`
+    *
+    * ```js
+    * {
+    *   nsname: 'ns.example.com',
+    *   hostmaster: 'root.example.com',
+    *   serial: 2013101809,
+    *   refresh: 10000,
+    *   retry: 2400,
+    *   expire: 604800,
+    *   minttl: 3600
+    * }
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def unlink(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+  def resolveSoa(hostname: java.lang.String): js.Promise[SoaRecord] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[SoaRecord]]
   
   /**
-    * Asynchronously change file timestamps of the file referenced by the supplied path.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param atime The last access time. If a string is provided, it will be coerced to number.
-    * @param mtime The last modified time. If a string is provided, it will be coerced to number.
+    * Uses the DNS protocol to resolve service records (`SRV` records) for the`hostname`. On success, the `Promise` is resolved with an array of objects with
+    * the following properties:
+    *
+    * * `priority`
+    * * `weight`
+    * * `port`
+    * * `name`
+    *
+    * ```js
+    * {
+    *   priority: 10,
+    *   weight: 5,
+    *   port: 21223,
+    *   name: 'service.example.com'
+    * }
+    * ```
+    * @since v10.6.0
     */
   @scala.inline
-  def utimes(path: PathLike, atime: java.lang.String, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: java.lang.String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: java.lang.String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: js.Date, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: Double, mtime: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def resolveSrv(hostname: java.lang.String): js.Promise[js.Array[SrvRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
   
   /**
-    * Asynchronously writes `string` to the file referenced by the supplied `FileHandle`.
-    * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
-    * to be resolved (or rejected). For this scenario, `fs.createWriteStream` is strongly recommended.
-    * @param handle A `FileHandle`.
-    * @param string A string to write.
-    * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
-    * @param encoding The expected string encoding.
+    * Uses the DNS protocol to resolve text queries (`TXT` records) for the`hostname`. On success, the `Promise` is resolved with a two-dimensional array
+    * of the text records available for `hostname` (e.g.`[ ['v=spf1 ip4:0.0.0.0 ', '~all' ] ]`). Each sub-array contains TXT chunks of
+    * one record. Depending on the use case, these could be either joined together or
+    * treated separately.
+    * @since v10.6.0
     */
   @scala.inline
-  def write(handle: FileHandle, string: java.lang.String): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+  def resolveTxt(hostname: java.lang.String): js.Promise[js.Array[js.Array[java.lang.String]]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[js.Array[java.lang.String]]]]
+  
   @scala.inline
-  def write(
-    handle: FileHandle,
-    string: java.lang.String,
-    position: js.UndefOr[scala.Nothing],
-    encoding: BufferEncoding
-  ): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+  def resolve_A(hostname: java.lang.String, rrtype: A): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
   @scala.inline
-  def write(handle: FileHandle, string: java.lang.String, position: Double): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+  def resolve_AAAA(hostname: java.lang.String, rrtype: AAAA): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
   @scala.inline
-  def write(handle: FileHandle, string: java.lang.String, position: Double, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
+  def resolve_ANY(hostname: java.lang.String, rrtype: ANY): js.Promise[js.Array[AnyRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
+  
   @scala.inline
-  def write(handle: FileHandle, string: java.lang.String, position: Null, encoding: BufferEncoding): js.Promise[BufferBytesWritten] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BufferBytesWritten]]
-  /**
-    * Asynchronously writes `buffer` to the file referenced by the supplied `FileHandle`.
-    * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
-    * to be resolved (or rejected). For this scenario, `fs.createWriteStream` is strongly recommended.
-    * @param handle A `FileHandle`.
-    * @param buffer The buffer that the data will be written to.
-    * @param offset The part of the buffer to be written. If not supplied, defaults to `0`.
-    * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
-    * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
-    */
+  def resolve_CAA(hostname: java.lang.String, rrtype: CAA): js.Promise[js.Array[CaaRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_CNAME(hostname: java.lang.String, rrtype: CNAME): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_MX(hostname: java.lang.String, rrtype: MX): js.Promise[js.Array[MxRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[MxRecord]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_NAPTR(hostname: java.lang.String, rrtype: NAPTR): js.Promise[js.Array[NaptrRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    position: Double
-  ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_NS(hostname: java.lang.String, rrtype: NS): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    position: Double
-  ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_PTR(hostname: java.lang.String, rrtype: PTR): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_SOA(hostname: java.lang.String, rrtype: SOA): js.Promise[SoaRecord] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[SoaRecord]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_SRV(hostname: java.lang.String, rrtype: SRV): js.Promise[js.Array[SrvRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
+  
   @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](
-    handle: FileHandle,
-    buffer: TBuffer,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
-  @scala.inline
-  def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BytesWritten[TBuffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(handle.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BytesWritten[TBuffer]]]
+  def resolve_TXT(hostname: java.lang.String, rrtype: TXT): js.Promise[js.Array[js.Array[java.lang.String]]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Array[java.lang.String]]]]
   
   /**
-    * Asynchronously writes data to a file, replacing the file if it already exists.
-    * It is unsafe to call `fsPromises.writeFile()` multiple times on the same file without waiting for the `Promise` to be resolved (or rejected).
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * If a `FileHandle` is provided, the underlying file will _not_ be closed automatically.
-    * @param data The data to write. If something other than a `Buffer` or `Uint8Array` is provided, the value is coerced to a string.
-    * @param options Either the encoding for the file, or an object optionally specifying the encoding, file mode, and flag.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `mode` is not supplied, the default of `0o666` is used.
-    * If `mode` is a string, it is parsed as an octal integer.
-    * If `flag` is not supplied, the default of `'w'` is used.
+    * Performs a reverse DNS query that resolves an IPv4 or IPv6 address to an
+    * array of host names.
+    *
+    * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the `DNS error codes`.
+    * @since v10.6.0
     */
   @scala.inline
-  def writeFile(path: PathLike, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def reverse(ip: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+  
+  /**
+    * Sets the IP address and port of servers to be used when performing DNS
+    * resolution. The `servers` argument is an array of [RFC 5952](https://tools.ietf.org/html/rfc5952#section-6) formatted
+    * addresses. If the port is the IANA default DNS port (53) it can be omitted.
+    *
+    * ```js
+    * dnsPromises.setServers([
+    *   '4.4.4.4',
+    *   '[2001:4860:4860::8888]',
+    *   '4.4.4.4:1053',
+    *   '[2001:4860:4860::8888]:1053',
+    * ]);
+    * ```
+    *
+    * An error will be thrown if an invalid address is provided.
+    *
+    * The `dnsPromises.setServers()` method must not be called while a DNS query is in
+    * progress.
+    *
+    * This method works much like[resolve.conf](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
+    * That is, if attempting to resolve with the first server provided results in a`NOTFOUND` error, the `resolve()` method will _not_ attempt to resolve with
+    * subsequent servers provided. Fallback DNS servers will only be used if the
+    * earlier ones time out or result in some other error.
+    * @since v10.6.0
+    * @param servers array of `RFC 5952` formatted addresses
+    */
   @scala.inline
-  def writeFile(path: PathLike, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: PathLike, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: PathLike, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: java.lang.String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: java.lang.String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: java.lang.String, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-  @scala.inline
-  def writeFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BaseEncodingOptionsmodeMo): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+  def setServers(servers: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]
 }

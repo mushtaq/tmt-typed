@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AnyNaptrRecord
-  extends NaptrRecord
+  extends StObject
+     with NaptrRecord
      with AnyRecord {
   
   var `type`: NAPTR

@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait GeneratorFunction
-  extends /**
+  extends StObject
+     with /**
   * Creates a new Generator object.
   * @param args A list of arguments the function accepts.
   */
@@ -18,7 +19,7 @@ Instantiable1[/* args (repeated) */ js.Any, Generator[js.Any, js.Any, js.Any]] {
     * Creates a new Generator object.
     * @param args A list of arguments the function accepts.
     */
-  def apply(args: js.Any*): Generator[_, _, _] = js.native
+  def apply(args: js.Any*): Generator[js.Any, js.Any, js.Any] = js.native
   
   /**
     * The length of the arguments.

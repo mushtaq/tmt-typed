@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AnySoaRecord
-  extends SoaRecord
+  extends StObject
+     with SoaRecord
      with AnyRecord {
   
   var `type`: SOA

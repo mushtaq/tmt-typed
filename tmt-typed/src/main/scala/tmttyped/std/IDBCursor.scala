@@ -27,7 +27,7 @@ trait IDBCursor extends StObject {
   
   /**
     * Delete the record pointed at by the cursor with a new value.
-    * 
+    *
     * If successful, request's result will be undefined.
     */
   def delete(): org.scalajs.dom.raw.IDBRequest = js.native
@@ -54,9 +54,9 @@ trait IDBCursor extends StObject {
   
   /**
     * Updated the record pointed at by the cursor with a new value.
-    * 
+    *
     * Throws a "DataError" DOMException if the effective object store uses in-line keys and the key would have changed.
-    * 
+    *
     * If successful, request's result will be the record's key.
     */
   def update(value: js.Any): org.scalajs.dom.raw.IDBRequest = js.native

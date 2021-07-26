@@ -12,13 +12,13 @@ trait GetNotificationOptions extends StObject {
 object GetNotificationOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.serviceworkers.GetNotificationOptions = {
+  def apply(): GetNotificationOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.serviceworkers.GetNotificationOptions]
+    __obj.asInstanceOf[GetNotificationOptions]
   }
   
   @scala.inline
-  implicit class GetNotificationOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.serviceworkers.GetNotificationOptions] (val x: Self) extends AnyVal {
+  implicit class GetNotificationOptionsMutableBuilder[Self <: GetNotificationOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setTag(value: java.lang.String): Self = StObject.set(x, "tag", value.asInstanceOf[js.Any])

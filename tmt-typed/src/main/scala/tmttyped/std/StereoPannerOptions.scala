@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait StereoPannerOptions extends AudioNodeOptions {
+trait StereoPannerOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var pan: js.UndefOr[Double] = js.undefined
 }

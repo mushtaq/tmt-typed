@@ -10,7 +10,9 @@ object wellKnownAuthTypeMod {
   
   @JSImport("rsocket-core/WellKnownAuthType", JSImport.Default)
   @js.native
-  class default protected () extends WellKnownAuthType {
+  class default protected ()
+    extends StObject
+       with WellKnownAuthType {
     def this(str: String, identifier: Double) = this()
     
     /** @return the byte identifier of the auth type, guaranteed to be positive or zero. */

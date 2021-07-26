@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("FocusEvent")
 @js.native
 class FocusEvent protected ()
-  extends tmttyped.std.FocusEvent {
+  extends StObject
+     with tmttyped.std.FocusEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: FocusEventInit) = this()
 }

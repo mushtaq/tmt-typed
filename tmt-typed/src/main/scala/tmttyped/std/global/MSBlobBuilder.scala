@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSBlobBuilder")
 @js.native
 class MSBlobBuilder ()
-  extends tmttyped.std.MSBlobBuilder
+  extends StObject
+     with tmttyped.std.MSBlobBuilder

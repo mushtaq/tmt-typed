@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Focus-related events like focus, blur, focusin, or focusout. */
 @js.native
-trait FocusEvent extends UIEvent {
+trait FocusEvent
+  extends StObject
+     with UIEvent {
   
   val relatedTarget: org.scalajs.dom.raw.EventTarget | Null = js.native
 }

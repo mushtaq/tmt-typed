@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DelayNode")
 @js.native
 class DelayNode protected ()
-  extends tmttyped.std.DelayNode {
+  extends StObject
+     with tmttyped.std.DelayNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: DelayOptions) = this()
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PostMessageOptions extends StObject {
   
-  var transfer: js.UndefOr[js.Array[_]] = js.undefined
+  var transfer: js.UndefOr[js.Array[js.Any]] = js.undefined
 }
 object PostMessageOptions {
   
@@ -21,7 +21,7 @@ object PostMessageOptions {
   implicit class PostMessageOptionsMutableBuilder[Self <: PostMessageOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setTransfer(value: js.Array[_]): Self = StObject.set(x, "transfer", value.asInstanceOf[js.Any])
+    def setTransfer(value: js.Array[js.Any]): Self = StObject.set(x, "transfer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTransferUndefined: Self = StObject.set(x, "transfer", js.undefined)

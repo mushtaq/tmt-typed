@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextEncoder")
 @js.native
 class TextEncoder ()
-  extends tmttyped.std.TextEncoder {
+  extends StObject
+     with tmttyped.std.TextEncoder {
   
   /**
     * Returns "utf-8".

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DOMMatrixInit extends DOMMatrix2DInit {
+trait DOMMatrixInit
+  extends StObject
+     with DOMMatrix2DInit {
   
   var is2D: js.UndefOr[scala.Boolean] = js.undefined
   

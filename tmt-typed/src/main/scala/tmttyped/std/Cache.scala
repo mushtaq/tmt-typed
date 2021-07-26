@@ -18,21 +18,17 @@ trait Cache extends StObject {
   def delete(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[scala.Boolean] = js.native
   
   def keys(): js.Promise[js.Array[org.scalajs.dom.experimental.Request]] = js.native
-  def keys(
-    request: js.UndefOr[RequestInfo],
-    options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions
-  ): js.Promise[js.Array[org.scalajs.dom.experimental.Request]] = js.native
+  def keys(request: Unit, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Request]] = js.native
   def keys(request: RequestInfo): js.Promise[js.Array[org.scalajs.dom.experimental.Request]] = js.native
+  def keys(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Request]] = js.native
   
   def `match`(request: RequestInfo): js.Promise[js.UndefOr[org.scalajs.dom.experimental.Response]] = js.native
   def `match`(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.UndefOr[org.scalajs.dom.experimental.Response]] = js.native
   
   def matchAll(): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
-  def matchAll(
-    request: js.UndefOr[RequestInfo],
-    options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions
-  ): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
+  def matchAll(request: Unit, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
   def matchAll(request: RequestInfo): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
+  def matchAll(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
   
   def put(request: RequestInfo, response: org.scalajs.dom.experimental.Response): js.Promise[Unit] = js.native
 }

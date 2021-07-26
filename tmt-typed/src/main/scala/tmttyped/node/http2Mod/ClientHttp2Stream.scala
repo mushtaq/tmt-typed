@@ -10,8 +10,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientHttp2Stream extends Http2Stream {
+trait ClientHttp2Stream extends StObject {
   
+  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_continue(event: continue, listener: js.Function0[js.Object]): this.type = js.native
   @JSName("addListener")
@@ -35,6 +37,8 @@ trait ClientHttp2Stream extends Http2Stream {
     ]
   ): this.type = js.native
   
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_continue(event: continue): Boolean = js.native
   @JSName("emit")
@@ -44,6 +48,8 @@ trait ClientHttp2Stream extends Http2Stream {
   @JSName("emit")
   def emit_response(event: response, headers: IncomingHttpHeaders with IncomingHttpStatusHeader, flags: Double): Boolean = js.native
   
+  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_continue(event: continue, listener: js.Function0[js.Object]): this.type = js.native
   @JSName("on")
@@ -67,6 +73,8 @@ trait ClientHttp2Stream extends Http2Stream {
     ]
   ): this.type = js.native
   
+  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_continue(event: continue, listener: js.Function0[js.Object]): this.type = js.native
   @JSName("once")
@@ -90,6 +98,8 @@ trait ClientHttp2Stream extends Http2Stream {
     ]
   ): this.type = js.native
   
+  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_continue(event: continue, listener: js.Function0[js.Object]): this.type = js.native
   @JSName("prependListener")
@@ -113,6 +123,8 @@ trait ClientHttp2Stream extends Http2Stream {
     ]
   ): this.type = js.native
   
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_continue(event: continue, listener: js.Function0[js.Object]): this.type = js.native
   @JSName("prependOnceListener")

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SpeechGrammar")
 @js.native
 class SpeechGrammar ()
-  extends tmttyped.std.SpeechGrammar {
+  extends StObject
+     with tmttyped.std.SpeechGrammar {
   
   /* CompleteClass */
   override var src: java.lang.String = js.native

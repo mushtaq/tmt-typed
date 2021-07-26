@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ResizeObserverEntry")
 @js.native
 class ResizeObserverEntry ()
-  extends tmttyped.std.ResizeObserverEntry {
+  extends StObject
+     with tmttyped.std.ResizeObserverEntry {
   
   /* CompleteClass */
   override val borderBoxSize: js.Array[tmttyped.std.ResizeObserverSize] = js.native

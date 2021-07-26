@@ -19,14 +19,12 @@ trait VRPose extends StObject {
   val orientation: js.typedarray.Float32Array | Null
   
   val position: js.typedarray.Float32Array | Null
-  
-  val timestamp: Double
 }
 object VRPose {
   
   @scala.inline
-  def apply(timestamp: Double): VRPose = {
-    val __obj = js.Dynamic.literal(timestamp = timestamp.asInstanceOf[js.Any], angularAcceleration = null, angularVelocity = null, linearAcceleration = null, linearVelocity = null, orientation = null, position = null)
+  def apply(): VRPose = {
+    val __obj = js.Dynamic.literal(angularAcceleration = null, angularVelocity = null, linearAcceleration = null, linearVelocity = null, orientation = null, position = null)
     __obj.asInstanceOf[VRPose]
   }
   
@@ -68,8 +66,5 @@ object VRPose {
     
     @scala.inline
     def setPositionNull: Self = StObject.set(x, "position", null)
-    
-    @scala.inline
-    def setTimestamp(value: Double): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
   }
 }

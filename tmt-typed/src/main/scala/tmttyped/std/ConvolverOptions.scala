@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ConvolverOptions extends AudioNodeOptions {
+trait ConvolverOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var buffer: js.UndefOr[org.scalajs.dom.raw.AudioBuffer | Null] = js.undefined
   

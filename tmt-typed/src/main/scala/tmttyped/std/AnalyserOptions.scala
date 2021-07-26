@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AnalyserOptions extends AudioNodeOptions {
+trait AnalyserOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var fftSize: js.UndefOr[Double] = js.undefined
   

@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ScreenOrientation")
 @js.native
 class ScreenOrientation ()
-  extends tmttyped.std.ScreenOrientation
+  extends StObject
+     with tmttyped.std.ScreenOrientation

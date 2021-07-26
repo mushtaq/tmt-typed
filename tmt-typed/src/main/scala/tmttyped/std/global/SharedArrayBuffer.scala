@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.SharedArrayBufferConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SharedArrayBuffer")
 @js.native
 class SharedArrayBuffer protected ()
-  extends tmttyped.std.SharedArrayBuffer {
+  extends StObject
+     with tmttyped.std.SharedArrayBuffer {
   def this(byteLength: Double) = this()
+}
+object SharedArrayBuffer {
+  
+  @scala.inline
+  def apply: SharedArrayBufferConstructor = js.Dynamic.global.selectDynamic("SharedArrayBuffer").asInstanceOf[SharedArrayBufferConstructor]
 }

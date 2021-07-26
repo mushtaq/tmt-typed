@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VRDisplay")
 @js.native
 class VRDisplay ()
-  extends tmttyped.std.VRDisplay
+  extends StObject
+     with tmttyped.std.VRDisplay

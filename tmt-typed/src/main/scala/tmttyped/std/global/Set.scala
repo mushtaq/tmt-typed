@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.SetConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Set")
 @js.native
 class Set[T] ()
-  extends tmttyped.std.Set[T] {
+  extends StObject
+     with tmttyped.std.Set[T] {
   def this(values: js.Array[T]) = this()
+}
+object Set {
+  
+  @scala.inline
+  def apply: SetConstructor = js.Dynamic.global.selectDynamic("Set").asInstanceOf[SetConstructor]
 }

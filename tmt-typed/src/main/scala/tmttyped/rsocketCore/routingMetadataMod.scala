@@ -1,6 +1,6 @@
 package tmttyped.rsocketCore
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.std.Iterable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -15,7 +15,9 @@ object routingMetadataMod {
   
   @JSImport("rsocket-core/RoutingMetadata", "RoutingMetadata")
   @js.native
-  class RoutingMetadata protected () extends Iterable[String] {
+  class RoutingMetadata protected ()
+    extends StObject
+       with Iterable[String] {
     def this(buffer: Buffer) = this()
   }
   

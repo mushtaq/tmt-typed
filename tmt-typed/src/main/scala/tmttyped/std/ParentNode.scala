@@ -12,7 +12,6 @@ import tmttyped.std.stdStrings.aside
 import tmttyped.std.stdStrings.audio
 import tmttyped.std.stdStrings.b
 import tmttyped.std.stdStrings.base
-import tmttyped.std.stdStrings.basefont
 import tmttyped.std.stdStrings.bdi
 import tmttyped.std.stdStrings.bdo
 import tmttyped.std.stdStrings.blockquote
@@ -182,7 +181,7 @@ trait ParentNode extends StObject {
   
   /**
     * Inserts nodes after the last child of node, while replacing strings in nodes with equivalent Text nodes.
-    * 
+    *
     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
     */
   def append(nodes: (org.scalajs.dom.raw.Node | java.lang.String)*): Unit = js.native
@@ -206,7 +205,7 @@ trait ParentNode extends StObject {
   
   /**
     * Inserts nodes before the first child of node, while replacing strings in nodes with equivalent Text nodes.
-    * 
+    *
     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
     */
   def prepend(nodes: (org.scalajs.dom.raw.Node | java.lang.String)*): Unit = js.native
@@ -237,8 +236,6 @@ trait ParentNode extends StObject {
   def querySelectorAll_b(selectors: b): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_base(selectors: base): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLBaseElement with org.scalajs.dom.raw.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_basefont(selectors: basefont): org.scalajs.dom.raw.NodeListOf[HTMLBaseFontElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_bdi(selectors: bdi): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -585,8 +582,6 @@ trait ParentNode extends StObject {
   def querySelector_b(selectors: b): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")
   def querySelector_base(selectors: base): org.scalajs.dom.raw.HTMLBaseElement | Null = js.native
-  @JSName("querySelector")
-  def querySelector_basefont(selectors: basefont): HTMLBaseFontElement | Null = js.native
   @JSName("querySelector")
   def querySelector_bdi(selectors: bdi): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")

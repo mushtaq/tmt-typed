@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait EnumeratorConstructor
-  extends Instantiable1[
+  extends StObject
+     with Instantiable1[
       (/* collection */ js.Any) | (/* collection */ Item[js.Object]) | (/* safearray */ SafeArray[js.Object]), 
       Enumerator[js.Object]
     ]

@@ -60,13 +60,13 @@ object SVGPreserveAspectRatio {
     SVG_PRESERVEASPECTRATIO_XMINYMIN: Double,
     align: Double,
     meetOrSlice: Double
-  ): org.scalajs.dom.raw.SVGPreserveAspectRatio = {
+  ): SVGPreserveAspectRatio = {
     val __obj = js.Dynamic.literal(SVG_MEETORSLICE_MEET = SVG_MEETORSLICE_MEET.asInstanceOf[js.Any], SVG_MEETORSLICE_SLICE = SVG_MEETORSLICE_SLICE.asInstanceOf[js.Any], SVG_MEETORSLICE_UNKNOWN = SVG_MEETORSLICE_UNKNOWN.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_NONE = SVG_PRESERVEASPECTRATIO_NONE.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_UNKNOWN = SVG_PRESERVEASPECTRATIO_UNKNOWN.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMAXYMAX = SVG_PRESERVEASPECTRATIO_XMAXYMAX.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMAXYMID = SVG_PRESERVEASPECTRATIO_XMAXYMID.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMAXYMIN = SVG_PRESERVEASPECTRATIO_XMAXYMIN.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMIDYMAX = SVG_PRESERVEASPECTRATIO_XMIDYMAX.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMIDYMID = SVG_PRESERVEASPECTRATIO_XMIDYMID.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMIDYMIN = SVG_PRESERVEASPECTRATIO_XMIDYMIN.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMINYMAX = SVG_PRESERVEASPECTRATIO_XMINYMAX.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMINYMID = SVG_PRESERVEASPECTRATIO_XMINYMID.asInstanceOf[js.Any], SVG_PRESERVEASPECTRATIO_XMINYMIN = SVG_PRESERVEASPECTRATIO_XMINYMIN.asInstanceOf[js.Any], align = align.asInstanceOf[js.Any], meetOrSlice = meetOrSlice.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGPreserveAspectRatio]
+    __obj.asInstanceOf[SVGPreserveAspectRatio]
   }
   
   @scala.inline
-  implicit class SVGPreserveAspectRatioMutableBuilder[Self <: org.scalajs.dom.raw.SVGPreserveAspectRatio] (val x: Self) extends AnyVal {
+  implicit class SVGPreserveAspectRatioMutableBuilder[Self <: SVGPreserveAspectRatio] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlign(value: Double): Self = StObject.set(x, "align", value.asInstanceOf[js.Any])

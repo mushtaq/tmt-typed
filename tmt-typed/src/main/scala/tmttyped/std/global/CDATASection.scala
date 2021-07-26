@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CDATASection")
 @js.native
 class CDATASection ()
-  extends tmttyped.std.Text {
+  extends StObject
+     with tmttyped.std.Text {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

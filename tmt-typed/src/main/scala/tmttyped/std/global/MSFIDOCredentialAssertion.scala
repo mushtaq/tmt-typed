@@ -12,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSFIDOCredentialAssertion")
 @js.native
 class MSFIDOCredentialAssertion ()
-  extends tmttyped.std.MSFIDOCredentialAssertion {
+  extends StObject
+     with tmttyped.std.MSFIDOCredentialAssertion {
   
   /* CompleteClass */
   override val algorithm: java.lang.String | Algorithm = js.native

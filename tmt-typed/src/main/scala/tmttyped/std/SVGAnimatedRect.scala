@@ -15,13 +15,13 @@ trait SVGAnimatedRect extends StObject {
 object SVGAnimatedRect {
   
   @scala.inline
-  def apply(animVal: DOMRectReadOnly, baseVal: DOMRect): org.scalajs.dom.raw.SVGAnimatedRect = {
+  def apply(animVal: DOMRectReadOnly, baseVal: DOMRect): SVGAnimatedRect = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedRect]
+    __obj.asInstanceOf[SVGAnimatedRect]
   }
   
   @scala.inline
-  implicit class SVGAnimatedRectMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedRect] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedRectMutableBuilder[Self <: SVGAnimatedRect] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: DOMRectReadOnly): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

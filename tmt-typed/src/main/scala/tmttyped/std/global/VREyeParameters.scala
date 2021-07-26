@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VREyeParameters")
 @js.native
 class VREyeParameters ()
-  extends tmttyped.std.VREyeParameters {
+  extends StObject
+     with tmttyped.std.VREyeParameters {
   
   /** @deprecated */
   /* CompleteClass */

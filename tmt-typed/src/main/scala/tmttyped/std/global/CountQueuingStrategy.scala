@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CountQueuingStrategy")
 @js.native
 class CountQueuingStrategy protected ()
-  extends tmttyped.std.CountQueuingStrategy {
+  extends StObject
+     with tmttyped.std.CountQueuingStrategy {
   def this(init: QueuingStrategyInit) = this()
   
   /* CompleteClass */

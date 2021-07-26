@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ReactiveSocket[D, M] extends Responder[D, M] {
+trait ReactiveSocket[D, M]
+  extends StObject
+     with Responder[D, M] {
   
   /**
     * Returns positive number representing the availability of RSocket requester. Higher is better, 0.0

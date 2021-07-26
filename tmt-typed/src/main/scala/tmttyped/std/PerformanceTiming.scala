@@ -80,13 +80,13 @@ object PerformanceTiming {
     toJSON: () => js.Any,
     unloadEventEnd: Double,
     unloadEventStart: Double
-  ): org.scalajs.dom.raw.PerformanceTiming = {
+  ): PerformanceTiming = {
     val __obj = js.Dynamic.literal(connectEnd = connectEnd.asInstanceOf[js.Any], connectStart = connectStart.asInstanceOf[js.Any], domComplete = domComplete.asInstanceOf[js.Any], domContentLoadedEventEnd = domContentLoadedEventEnd.asInstanceOf[js.Any], domContentLoadedEventStart = domContentLoadedEventStart.asInstanceOf[js.Any], domInteractive = domInteractive.asInstanceOf[js.Any], domLoading = domLoading.asInstanceOf[js.Any], domainLookupEnd = domainLookupEnd.asInstanceOf[js.Any], domainLookupStart = domainLookupStart.asInstanceOf[js.Any], fetchStart = fetchStart.asInstanceOf[js.Any], loadEventEnd = loadEventEnd.asInstanceOf[js.Any], loadEventStart = loadEventStart.asInstanceOf[js.Any], navigationStart = navigationStart.asInstanceOf[js.Any], redirectEnd = redirectEnd.asInstanceOf[js.Any], redirectStart = redirectStart.asInstanceOf[js.Any], requestStart = requestStart.asInstanceOf[js.Any], responseEnd = responseEnd.asInstanceOf[js.Any], responseStart = responseStart.asInstanceOf[js.Any], secureConnectionStart = secureConnectionStart.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), unloadEventEnd = unloadEventEnd.asInstanceOf[js.Any], unloadEventStart = unloadEventStart.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.PerformanceTiming]
+    __obj.asInstanceOf[PerformanceTiming]
   }
   
   @scala.inline
-  implicit class PerformanceTimingMutableBuilder[Self <: org.scalajs.dom.raw.PerformanceTiming] (val x: Self) extends AnyVal {
+  implicit class PerformanceTimingMutableBuilder[Self <: PerformanceTiming] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setConnectEnd(value: Double): Self = StObject.set(x, "connectEnd", value.asInstanceOf[js.Any])

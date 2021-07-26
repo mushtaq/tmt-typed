@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CustomEvent")
 @js.native
 class CustomEvent[T] protected ()
-  extends tmttyped.std.CustomEvent[T] {
+  extends StObject
+     with tmttyped.std.CustomEvent[T] {
   def this(typeArg: java.lang.String) = this()
   def this(typeArg: java.lang.String, eventInitDict: CustomEventInit[T]) = this()
 }

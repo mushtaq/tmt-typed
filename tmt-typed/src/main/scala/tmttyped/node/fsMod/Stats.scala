@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("fs", "Stats")
 @js.native
-class Stats () extends StatsBase[Double] {
+class Stats ()
+  extends StObject
+     with StatsBase[Double] {
   
   /* CompleteClass */
   override var atime: js.Date = js.native

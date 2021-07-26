@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLRenderbuffer")
 @js.native
 class WebGLRenderbuffer ()
-  extends tmttyped.std.WebGLObject
+  extends StObject
+     with tmttyped.std.WebGLRenderbuffer

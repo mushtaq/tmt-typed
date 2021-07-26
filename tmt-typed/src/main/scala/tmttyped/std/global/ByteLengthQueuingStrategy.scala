@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ByteLengthQueuingStrategy")
 @js.native
 class ByteLengthQueuingStrategy protected ()
-  extends tmttyped.std.ByteLengthQueuingStrategy {
+  extends StObject
+     with tmttyped.std.ByteLengthQueuingStrategy {
   def this(init: QueuingStrategyInit) = this()
   
   /* CompleteClass */

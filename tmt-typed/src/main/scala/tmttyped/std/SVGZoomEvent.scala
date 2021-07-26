@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SVGZoomEvent extends UIEvent {
+trait SVGZoomEvent
+  extends StObject
+     with UIEvent {
   
   val newScale: Double = js.native
   

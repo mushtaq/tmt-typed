@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGCircleElement")
 @js.native
 class SVGCircleElement ()
-  extends tmttyped.std.SVGCircleElement {
+  extends StObject
+     with tmttyped.std.SVGCircleElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

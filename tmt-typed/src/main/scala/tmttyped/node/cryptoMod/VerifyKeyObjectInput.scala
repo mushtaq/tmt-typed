@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait VerifyKeyObjectInput extends SigningOptions {
+trait VerifyKeyObjectInput
+  extends StObject
+     with SigningOptions {
   
   var key: KeyObject
 }

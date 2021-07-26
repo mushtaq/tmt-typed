@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WritableStreamDefaultController")
 @js.native
 class WritableStreamDefaultController ()
-  extends tmttyped.std.WritableStreamDefaultController
+  extends StObject
+     with tmttyped.std.WritableStreamDefaultController

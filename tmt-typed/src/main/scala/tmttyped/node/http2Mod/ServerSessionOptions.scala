@@ -11,7 +11,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ServerSessionOptions extends SessionOptions {
+trait ServerSessionOptions
+  extends StObject
+     with SessionOptions {
   
   var Http1IncomingMessage: js.UndefOr[Instantiable1[/* socket */ Socket, IncomingMessage]] = js.undefined
   

@@ -1,6 +1,7 @@
 package tmttyped.node.anon
 
 import tmttyped.node.dnsMod.AnyRecord
+import tmttyped.node.dnsMod.CaaRecord
 import tmttyped.node.dnsMod.MxRecord
 import tmttyped.node.dnsMod.NaptrRecord
 import tmttyped.node.dnsMod.SoaRecord
@@ -8,6 +9,7 @@ import tmttyped.node.dnsMod.SrvRecord
 import tmttyped.node.nodeStrings.A
 import tmttyped.node.nodeStrings.AAAA
 import tmttyped.node.nodeStrings.ANY
+import tmttyped.node.nodeStrings.CAA
 import tmttyped.node.nodeStrings.CNAME
 import tmttyped.node.nodeStrings.MX
 import tmttyped.node.nodeStrings.NAPTR
@@ -31,6 +33,7 @@ trait FnCallHostnameRrtype extends StObject {
   def apply(hostname: String, rrtype: A): js.Promise[js.Array[String]] = js.native
   def apply(hostname: String, rrtype: AAAA): js.Promise[js.Array[String]] = js.native
   def apply(hostname: String, rrtype: ANY): js.Promise[js.Array[AnyRecord]] = js.native
+  def apply(hostname: String, rrtype: CAA): js.Promise[js.Array[CaaRecord]] = js.native
   def apply(hostname: String, rrtype: CNAME): js.Promise[js.Array[String]] = js.native
   def apply(hostname: String, rrtype: MX): js.Promise[js.Array[MxRecord]] = js.native
   def apply(hostname: String, rrtype: NAPTR): js.Promise[js.Array[NaptrRecord]] = js.native

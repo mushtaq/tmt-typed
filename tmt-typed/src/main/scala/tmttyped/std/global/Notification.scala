@@ -12,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Notification")
 @js.native
 class Notification protected ()
-  extends tmttyped.std.Notification {
+  extends StObject
+     with tmttyped.std.Notification {
   def this(title: java.lang.String) = this()
   def this(title: java.lang.String, options: NotificationOptions) = this()
 }

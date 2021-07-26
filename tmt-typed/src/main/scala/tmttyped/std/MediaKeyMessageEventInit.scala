@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MediaKeyMessageEventInit extends EventInit {
+trait MediaKeyMessageEventInit
+  extends StObject
+     with EventInit {
   
   var message: js.typedarray.ArrayBuffer
   

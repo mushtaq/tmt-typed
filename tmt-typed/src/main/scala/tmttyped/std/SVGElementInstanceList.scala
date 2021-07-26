@@ -16,13 +16,13 @@ trait SVGElementInstanceList extends StObject {
 object SVGElementInstanceList {
   
   @scala.inline
-  def apply(item: Double => org.scalajs.dom.raw.SVGElementInstance, length: Double): org.scalajs.dom.raw.SVGElementInstanceList = {
+  def apply(item: Double => org.scalajs.dom.raw.SVGElementInstance, length: Double): SVGElementInstanceList = {
     val __obj = js.Dynamic.literal(item = js.Any.fromFunction1(item), length = length.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGElementInstanceList]
+    __obj.asInstanceOf[SVGElementInstanceList]
   }
   
   @scala.inline
-  implicit class SVGElementInstanceListMutableBuilder[Self <: org.scalajs.dom.raw.SVGElementInstanceList] (val x: Self) extends AnyVal {
+  implicit class SVGElementInstanceListMutableBuilder[Self <: SVGElementInstanceList] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setItem(value: Double => org.scalajs.dom.raw.SVGElementInstance): Self = StObject.set(x, "item", js.Any.fromFunction1(value))

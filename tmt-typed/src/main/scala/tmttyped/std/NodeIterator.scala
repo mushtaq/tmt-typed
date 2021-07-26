@@ -35,13 +35,13 @@ object NodeIterator {
     referenceNode: org.scalajs.dom.raw.Node,
     root: org.scalajs.dom.raw.Node,
     whatToShow: Double
-  ): org.scalajs.dom.raw.NodeIterator = {
+  ): NodeIterator = {
     val __obj = js.Dynamic.literal(detach = js.Any.fromFunction0(detach), nextNode = js.Any.fromFunction0(nextNode), pointerBeforeReferenceNode = pointerBeforeReferenceNode.asInstanceOf[js.Any], previousNode = js.Any.fromFunction0(previousNode), referenceNode = referenceNode.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], whatToShow = whatToShow.asInstanceOf[js.Any], filter = null)
-    __obj.asInstanceOf[org.scalajs.dom.raw.NodeIterator]
+    __obj.asInstanceOf[NodeIterator]
   }
   
   @scala.inline
-  implicit class NodeIteratorMutableBuilder[Self <: org.scalajs.dom.raw.NodeIterator] (val x: Self) extends AnyVal {
+  implicit class NodeIteratorMutableBuilder[Self <: NodeIterator] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setDetach(value: () => Unit): Self = StObject.set(x, "detach", js.Any.fromFunction0(value))

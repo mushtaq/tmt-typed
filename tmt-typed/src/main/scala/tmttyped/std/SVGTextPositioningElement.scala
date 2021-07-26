@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement. */
 @js.native
-trait SVGTextPositioningElement extends SVGTextContentElement {
+trait SVGTextPositioningElement
+  extends StObject
+     with SVGTextContentElement {
   
   val dx: org.scalajs.dom.raw.SVGAnimatedLengthList = js.native
   

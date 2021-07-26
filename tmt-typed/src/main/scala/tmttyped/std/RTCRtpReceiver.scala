@@ -16,8 +16,6 @@ trait RTCRtpReceiver extends StObject {
   
   def getSynchronizationSources(): js.Array[RTCRtpSynchronizationSource]
   
-  val rtcpTransport: RTCDtlsTransport | Null
-  
   val track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack
   
   val transport: RTCDtlsTransport | Null
@@ -32,7 +30,7 @@ object RTCRtpReceiver {
     getSynchronizationSources: () => js.Array[RTCRtpSynchronizationSource],
     track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack
   ): RTCRtpReceiver = {
-    val __obj = js.Dynamic.literal(getContributingSources = js.Any.fromFunction0(getContributingSources), getParameters = js.Any.fromFunction0(getParameters), getStats = js.Any.fromFunction0(getStats), getSynchronizationSources = js.Any.fromFunction0(getSynchronizationSources), track = track.asInstanceOf[js.Any], rtcpTransport = null, transport = null)
+    val __obj = js.Dynamic.literal(getContributingSources = js.Any.fromFunction0(getContributingSources), getParameters = js.Any.fromFunction0(getParameters), getStats = js.Any.fromFunction0(getStats), getSynchronizationSources = js.Any.fromFunction0(getSynchronizationSources), track = track.asInstanceOf[js.Any], transport = null)
     __obj.asInstanceOf[RTCRtpReceiver]
   }
   
@@ -50,12 +48,6 @@ object RTCRtpReceiver {
     
     @scala.inline
     def setGetSynchronizationSources(value: () => js.Array[RTCRtpSynchronizationSource]): Self = StObject.set(x, "getSynchronizationSources", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setRtcpTransport(value: RTCDtlsTransport): Self = StObject.set(x, "rtcpTransport", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRtcpTransportNull: Self = StObject.set(x, "rtcpTransport", null)
     
     @scala.inline
     def setTrack(value: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])

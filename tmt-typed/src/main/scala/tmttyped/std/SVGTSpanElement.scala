@@ -7,4 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A <tspan> element. */
 @js.native
-trait SVGTSpanElement extends SVGTextPositioningElement
+trait SVGTSpanElement
+  extends StObject
+     with SVGTextPositioningElement

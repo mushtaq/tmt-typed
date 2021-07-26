@@ -45,13 +45,13 @@ object ValidityState {
     typeMismatch: scala.Boolean,
     valid: scala.Boolean,
     valueMissing: scala.Boolean
-  ): org.scalajs.dom.raw.ValidityState = {
+  ): ValidityState = {
     val __obj = js.Dynamic.literal(badInput = badInput.asInstanceOf[js.Any], customError = customError.asInstanceOf[js.Any], patternMismatch = patternMismatch.asInstanceOf[js.Any], rangeOverflow = rangeOverflow.asInstanceOf[js.Any], rangeUnderflow = rangeUnderflow.asInstanceOf[js.Any], stepMismatch = stepMismatch.asInstanceOf[js.Any], tooLong = tooLong.asInstanceOf[js.Any], tooShort = tooShort.asInstanceOf[js.Any], typeMismatch = typeMismatch.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any], valueMissing = valueMissing.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.ValidityState]
+    __obj.asInstanceOf[ValidityState]
   }
   
   @scala.inline
-  implicit class ValidityStateMutableBuilder[Self <: org.scalajs.dom.raw.ValidityState] (val x: Self) extends AnyVal {
+  implicit class ValidityStateMutableBuilder[Self <: ValidityState] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setBadInput(value: scala.Boolean): Self = StObject.set(x, "badInput", value.asInstanceOf[js.Any])

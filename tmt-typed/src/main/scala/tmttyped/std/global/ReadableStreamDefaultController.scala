@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ReadableStreamDefaultController")
 @js.native
 class ReadableStreamDefaultController ()
-  extends tmttyped.std.ReadableStreamDefaultController[js.Any]
+  extends StObject
+     with tmttyped.std.ReadableStreamDefaultController[js.Any]

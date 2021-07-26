@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GamepadPose")
 @js.native
 class GamepadPose ()
-  extends tmttyped.std.GamepadPose {
+  extends StObject
+     with tmttyped.std.GamepadPose {
   
   /* CompleteClass */
   override val angularAcceleration: js.typedarray.Float32Array | Null = js.native

@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait HTMLBodyElementEventMap
-  extends HTMLElementEventMap
+  extends StObject
+     with HTMLElementEventMap
      with WindowEventHandlersEventMap {
   
   var orientationchange: org.scalajs.dom.raw.Event

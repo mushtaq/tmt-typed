@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ConcatParams extends Algorithm {
+trait ConcatParams
+  extends StObject
+     with Algorithm {
   
   var algorithmId: js.typedarray.Uint8Array
   
@@ -27,22 +29,19 @@ object ConcatParams {
     name: java.lang.String,
     partyUInfo: js.typedarray.Uint8Array,
     partyVInfo: js.typedarray.Uint8Array
-  ): org.scalajs.dom.crypto.ConcatParams = {
+  ): ConcatParams = {
     val __obj = js.Dynamic.literal(algorithmId = algorithmId.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partyUInfo = partyUInfo.asInstanceOf[js.Any], partyVInfo = partyVInfo.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.ConcatParams]
+    __obj.asInstanceOf[ConcatParams]
   }
   
   @scala.inline
-  implicit class ConcatParamsMutableBuilder[Self <: org.scalajs.dom.crypto.ConcatParams] (val x: Self) extends AnyVal {
+  implicit class ConcatParamsMutableBuilder[Self <: ConcatParams] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlgorithmId(value: js.typedarray.Uint8Array): Self = StObject.set(x, "algorithmId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHash(value: java.lang.String | org.scalajs.dom.crypto.Algorithm): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHashAlgorithm(value: org.scalajs.dom.crypto.Algorithm): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHashUndefined: Self = StObject.set(x, "hash", js.undefined)

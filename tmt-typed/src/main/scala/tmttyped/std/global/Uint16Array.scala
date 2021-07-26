@@ -2,6 +2,7 @@ package tmttyped.std.global
 
 import tmttyped.std.ArrayBufferLike
 import tmttyped.std.ArrayLike
+import tmttyped.std.Uint16ArrayConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,12 +12,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Uint16Array")
 @js.native
 class Uint16Array ()
-  extends tmttyped.std.Uint16Array {
+  extends StObject
+     with tmttyped.std.Uint16Array {
   def this(array: ArrayBufferLike) = this()
   def this(array: ArrayLike[Double]) = this()
   def this(elements: js.Iterable[Double]) = this()
   def this(length: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double) = this()
-  def this(buffer: ArrayBufferLike, byteOffset: js.UndefOr[scala.Nothing], length: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double, length: Double) = this()
+  def this(buffer: ArrayBufferLike, byteOffset: Unit, length: Double) = this()
+}
+object Uint16Array {
+  
+  @scala.inline
+  def apply: Uint16ArrayConstructor = js.Dynamic.global.selectDynamic("Uint16Array").asInstanceOf[Uint16ArrayConstructor]
 }

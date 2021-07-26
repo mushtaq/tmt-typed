@@ -7,4 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Corresponds to the <feFuncA> element. */
 @js.native
-trait SVGFEFuncAElement extends SVGComponentTransferFunctionElement
+trait SVGFEFuncAElement
+  extends StObject
+     with SVGComponentTransferFunctionElement

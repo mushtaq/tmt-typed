@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSKeyframesRule")
 @js.native
 class CSSKeyframesRule ()
-  extends tmttyped.std.CSSKeyframesRule {
+  extends StObject
+     with tmttyped.std.CSSKeyframesRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

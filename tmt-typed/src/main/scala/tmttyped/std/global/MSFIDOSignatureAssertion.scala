@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSFIDOSignatureAssertion")
 @js.native
 class MSFIDOSignatureAssertion ()
-  extends tmttyped.std.MSFIDOSignatureAssertion {
+  extends StObject
+     with tmttyped.std.MSFIDOSignatureAssertion {
   
   /* CompleteClass */
   override val id: java.lang.String = js.native

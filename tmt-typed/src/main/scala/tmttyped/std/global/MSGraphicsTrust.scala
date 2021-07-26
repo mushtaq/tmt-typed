@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSGraphicsTrust")
 @js.native
 class MSGraphicsTrust ()
-  extends tmttyped.std.MSGraphicsTrust {
+  extends StObject
+     with tmttyped.std.MSGraphicsTrust {
   
   /* CompleteClass */
   override val constrictionActive: scala.Boolean = js.native

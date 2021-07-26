@@ -1,6 +1,6 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.pkcs1
 import tmttyped.node.nodeStrings.pkcs8
 import tmttyped.node.nodeStrings.sec1

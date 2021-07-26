@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaError")
 @js.native
 class MediaError ()
-  extends tmttyped.std.MediaError {
+  extends StObject
+     with tmttyped.std.MediaError {
   
   /* CompleteClass */
   override val MEDIA_ERR_ABORTED: Double = js.native

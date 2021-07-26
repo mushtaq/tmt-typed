@@ -10,10 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextDecoder")
 @js.native
 class TextDecoder ()
-  extends tmttyped.std.TextDecoder {
+  extends StObject
+     with tmttyped.std.TextDecoder {
   def this(label: java.lang.String) = this()
-  def this(label: js.UndefOr[scala.Nothing], options: TextDecoderOptions) = this()
   def this(label: java.lang.String, options: TextDecoderOptions) = this()
+  def this(label: Unit, options: TextDecoderOptions) = this()
   
   /**
     * Returns encoding's name, lowercased.

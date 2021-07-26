@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.FunctionConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,4 +16,9 @@ class Function protected ()
     * @param args A list of arguments the function accepts.
     */
   def this(args: java.lang.String*) = this()
+}
+object Function {
+  
+  @scala.inline
+  def apply: FunctionConstructor = js.Dynamic.global.selectDynamic("Function").asInstanceOf[FunctionConstructor]
 }

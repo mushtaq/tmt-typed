@@ -14,13 +14,13 @@ trait PushSubscriptionOptions extends StObject {
 object PushSubscriptionOptions {
   
   @scala.inline
-  def apply(userVisibleOnly: scala.Boolean): org.scalajs.dom.experimental.push.PushSubscriptionOptions = {
+  def apply(userVisibleOnly: scala.Boolean): PushSubscriptionOptions = {
     val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any], applicationServerKey = null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.push.PushSubscriptionOptions]
+    __obj.asInstanceOf[PushSubscriptionOptions]
   }
   
   @scala.inline
-  implicit class PushSubscriptionOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.push.PushSubscriptionOptions] (val x: Self) extends AnyVal {
+  implicit class PushSubscriptionOptionsMutableBuilder[Self <: PushSubscriptionOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setApplicationServerKey(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "applicationServerKey", value.asInstanceOf[js.Any])

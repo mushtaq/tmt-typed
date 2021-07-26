@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GamepadButton")
 @js.native
 class GamepadButton ()
-  extends tmttyped.std.GamepadButton {
+  extends StObject
+     with tmttyped.std.GamepadButton {
   
   /* CompleteClass */
   override val pressed: scala.Boolean = js.native

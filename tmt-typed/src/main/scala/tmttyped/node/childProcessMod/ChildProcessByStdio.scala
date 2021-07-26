@@ -9,16 +9,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 // return this object when stdio option is a tuple of 3
 @js.native
-trait ChildProcessByStdio[I /* <: Null | Writable */, O /* <: Null | Readable */, E /* <: Null | Readable */] extends ChildProcess {
+trait ChildProcessByStdio[I /* <: Null | Writable */, O /* <: Null | Readable */, E /* <: Null | Readable */] extends StObject {
   
-  @JSName("stderr")
-  var stderr_ChildProcessByStdio: E = js.native
+  var stderr: E = js.native
   
-  @JSName("stdin")
-  var stdin_ChildProcessByStdio: I = js.native
+  var stdin: I = js.native
   
-  @JSName("stdio")
-  val stdio_ChildProcessByStdio: js.Tuple5[
+  val stdio: js.Tuple5[
     I, 
     O, 
     E, 
@@ -27,6 +24,5 @@ trait ChildProcessByStdio[I /* <: Null | Writable */, O /* <: Null | Readable */
   Readable) | Writable | Null]
   ] = js.native
   
-  @JSName("stdout")
-  var stdout_ChildProcessByStdio: O = js.native
+  var stdout: O = js.native
 }

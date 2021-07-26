@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCRTPStreamStats extends RTCStats {
+trait RTCRTPStreamStats
+  extends StObject
+     with RTCStats {
   
   var associateStatsId: js.UndefOr[java.lang.String] = js.undefined
   

@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HTMLCollectionOf[T /* <: org.scalajs.dom.raw.Element */] extends /* n */ NumberDictionary[T] {
+trait HTMLCollectionOf[T /* <: org.scalajs.dom.raw.Element */]
+  extends StObject
+     with /* n */ NumberDictionary[T] {
   
   def item(index: Double): T | Null = js.native
   

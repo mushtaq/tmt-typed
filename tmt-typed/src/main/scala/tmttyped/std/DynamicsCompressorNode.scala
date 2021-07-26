@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Inherits properties from its parent, AudioNode. */
 @js.native
-trait DynamicsCompressorNode extends AudioNode {
+trait DynamicsCompressorNode
+  extends StObject
+     with AudioNode {
   
   val attack: org.scalajs.dom.raw.AudioParam = js.native
   

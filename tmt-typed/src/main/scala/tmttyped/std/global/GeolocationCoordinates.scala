@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GeolocationCoordinates")
 @js.native
 class GeolocationCoordinates ()
-  extends tmttyped.std.GeolocationCoordinates {
+  extends StObject
+     with tmttyped.std.GeolocationCoordinates {
   
   /* CompleteClass */
   override val accuracy: Double = js.native

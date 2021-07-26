@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OffscreenCanvas")
 @js.native
 class OffscreenCanvas protected ()
-  extends tmttyped.std.OffscreenCanvas {
+  extends StObject
+     with tmttyped.std.OffscreenCanvas {
   def this(width: Double, height: Double) = this()
 }

@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("webkitRTCPeerConnection")
 @js.native
 class webkitRTCPeerConnection protected ()
-  extends tmttyped.std.webkitRTCPeerConnection {
+  extends StObject
+     with tmttyped.std.webkitRTCPeerConnection {
   def this(configuration: RTCConfiguration) = this()
 }

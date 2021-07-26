@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGTransformList")
 @js.native
 class SVGTransformList ()
-  extends tmttyped.std.SVGTransformList {
+  extends StObject
+     with tmttyped.std.SVGTransformList {
   
   /* CompleteClass */
   override def appendItem(newItem: org.scalajs.dom.raw.SVGTransform): org.scalajs.dom.raw.SVGTransform = js.native

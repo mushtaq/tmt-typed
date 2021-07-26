@@ -15,13 +15,13 @@ trait SVGAnimatedEnumeration extends StObject {
 object SVGAnimatedEnumeration {
   
   @scala.inline
-  def apply(animVal: Double, baseVal: Double): org.scalajs.dom.raw.SVGAnimatedEnumeration = {
+  def apply(animVal: Double, baseVal: Double): SVGAnimatedEnumeration = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedEnumeration]
+    __obj.asInstanceOf[SVGAnimatedEnumeration]
   }
   
   @scala.inline
-  implicit class SVGAnimatedEnumerationMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedEnumeration] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedEnumerationMutableBuilder[Self <: SVGAnimatedEnumeration] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: Double): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

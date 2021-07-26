@@ -12,10 +12,15 @@ object nodeDomainMod {
   @js.native
   val ^ : js.Any = js.native
   
+  /**
+    * The `Domain` class encapsulates the functionality of routing errors and
+    * uncaught exceptions to the active `Domain` object.
+    *
+    * To handle the errors that it catches, listen to its `'error'` event.
+    */
   @JSImport("node:domain", "Domain")
   @js.native
-  class Domain ()
-    extends tmttyped.node.domainMod.Domain {
+  class Domain () extends StObject {
     def this(options: EventEmitterOptions) = this()
   }
   

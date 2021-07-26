@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PerformanceObserverEntryList")
 @js.native
 class PerformanceObserverEntryList ()
-  extends tmttyped.std.PerformanceObserverEntryList
+  extends StObject
+     with tmttyped.std.PerformanceObserverEntryList

@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <feComposite> element. */
 @js.native
 trait SVGFECompositeElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
   val SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: Double = js.native

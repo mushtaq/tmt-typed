@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCMediaStreamTrackStats extends RTCStats {
+trait RTCMediaStreamTrackStats
+  extends StObject
+     with RTCStats {
   
   var audioLevel: js.UndefOr[Double] = js.undefined
   

@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AudioParamMap")
 @js.native
 class AudioParamMap ()
-  extends tmttyped.std.AudioParamMap
+  extends StObject
+     with tmttyped.std.AudioParamMap

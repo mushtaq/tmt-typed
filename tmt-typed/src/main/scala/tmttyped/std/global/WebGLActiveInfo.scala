@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLActiveInfo")
 @js.native
 class WebGLActiveInfo ()
-  extends tmttyped.std.WebGLActiveInfo {
+  extends StObject
+     with tmttyped.std.WebGLActiveInfo {
   
   /* CompleteClass */
   override val name: java.lang.String = js.native

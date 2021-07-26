@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLShaderPrecisionFormat")
 @js.native
 class WebGLShaderPrecisionFormat ()
-  extends tmttyped.std.WebGLShaderPrecisionFormat {
+  extends StObject
+     with tmttyped.std.WebGLShaderPrecisionFormat {
   
   /* CompleteClass */
   override val precision: GLint = js.native

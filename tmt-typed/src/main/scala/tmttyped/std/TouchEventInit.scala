@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait TouchEventInit extends EventModifierInit {
+trait TouchEventInit
+  extends StObject
+     with EventModifierInit {
   
   var changedTouches: js.UndefOr[js.Array[org.scalajs.dom.raw.Touch]] = js.undefined
   

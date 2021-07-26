@@ -5,4 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RTCIceCandidateComplete extends RTCIceGatherCandidate
+trait RTCIceCandidateComplete
+  extends StObject
+     with RTCIceGatherCandidate

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ConvolverNode")
 @js.native
 class ConvolverNode protected ()
-  extends tmttyped.std.ConvolverNode {
+  extends StObject
+     with tmttyped.std.ConvolverNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: ConvolverOptions) = this()
 }

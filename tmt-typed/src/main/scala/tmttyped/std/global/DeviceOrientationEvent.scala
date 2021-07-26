@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DeviceOrientationEvent")
 @js.native
 class DeviceOrientationEvent protected ()
-  extends tmttyped.std.DeviceOrientationEvent {
+  extends StObject
+     with tmttyped.std.DeviceOrientationEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: DeviceOrientationEventInit) = this()
 }

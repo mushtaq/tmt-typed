@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ImageBitmapRenderingContext
-  extends _OffscreenRenderingContext
+  extends StObject
+     with _OffscreenRenderingContext
      with _RenderingContext {
   
   /**

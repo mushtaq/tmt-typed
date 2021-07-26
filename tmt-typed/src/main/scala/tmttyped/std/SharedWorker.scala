@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait SharedWorker
-  extends EventTarget
+  extends StObject
+     with EventTarget
      with AbstractWorker {
   
   /* InferMemberOverrides */

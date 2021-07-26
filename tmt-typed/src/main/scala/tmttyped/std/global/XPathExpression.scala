@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XPathExpression")
 @js.native
 class XPathExpression ()
-  extends tmttyped.std.XPathExpression
+  extends StObject
+     with tmttyped.std.XPathExpression

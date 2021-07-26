@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait KeyframeEffectOptions extends EffectTiming {
+trait KeyframeEffectOptions
+  extends StObject
+     with EffectTiming {
   
   var composite: js.UndefOr[CompositeOperation] = js.undefined
   

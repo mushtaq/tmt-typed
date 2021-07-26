@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMError")
 @js.native
 class DOMError ()
-  extends tmttyped.std.DOMError {
+  extends StObject
+     with tmttyped.std.DOMError {
   
   /* CompleteClass */
   override val name: java.lang.String = js.native

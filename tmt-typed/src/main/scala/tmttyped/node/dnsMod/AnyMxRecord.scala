@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AnyMxRecord
-  extends MxRecord
+  extends StObject
+     with MxRecord
      with AnyRecord {
   
   var `type`: MX

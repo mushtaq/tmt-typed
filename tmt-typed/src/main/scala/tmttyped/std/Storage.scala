@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** This Web Storage API interface provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items. */
 trait Storage
-  extends /* name */ StringDictionary[js.Any] {
+  extends StObject
+     with /* name */ StringDictionary[js.Any] {
   
   /**
     * Empties the list associated with the object of all key/value pairs, if there are any.
@@ -37,7 +38,7 @@ trait Storage
   
   /**
     * Sets the value of the pair identified by key to value, creating a new key/value pair if none existed for key previously.
-    * 
+    *
     * Throws a "QuotaExceededError" DOMException exception if the new value couldn't be set. (Setting could fail if, e.g., the user has disabled storage for the site, or if the quota has been exceeded.)
     */
   def setItem(key: java.lang.String, value: java.lang.String): Unit
@@ -52,13 +53,13 @@ object Storage {
     length: Double,
     removeItem: java.lang.String => Unit,
     setItem: (java.lang.String, java.lang.String) => Unit
-  ): org.scalajs.dom.raw.Storage = {
+  ): Storage = {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), key = js.Any.fromFunction1(key), length = length.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), setItem = js.Any.fromFunction2(setItem))
-    __obj.asInstanceOf[org.scalajs.dom.raw.Storage]
+    __obj.asInstanceOf[Storage]
   }
   
   @scala.inline
-  implicit class StorageMutableBuilder[Self <: org.scalajs.dom.raw.Storage] (val x: Self) extends AnyVal {
+  implicit class StorageMutableBuilder[Self <: Storage] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setClear(value: () => Unit): Self = StObject.set(x, "clear", js.Any.fromFunction0(value))

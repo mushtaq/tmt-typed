@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PromiseFulfilledResult[T] extends PromiseSettledResult[T] {
+trait PromiseFulfilledResult[T]
+  extends StObject
+     with PromiseSettledResult[T] {
   
   var status: fulfilled
   

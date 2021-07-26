@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AnimationPlaybackEvent")
 @js.native
 class AnimationPlaybackEvent protected ()
-  extends tmttyped.std.AnimationPlaybackEvent {
+  extends StObject
+     with tmttyped.std.AnimationPlaybackEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: AnimationPlaybackEventInit) = this()
 }

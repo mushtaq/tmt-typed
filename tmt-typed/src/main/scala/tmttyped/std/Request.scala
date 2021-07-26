@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Fetch API interface represents a resource request. */
-trait Request extends Body {
+trait Request
+  extends StObject
+     with Body {
   
   /**
     * Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching.
@@ -98,7 +100,7 @@ object Request {
     integrity: java.lang.String,
     isHistoryNavigation: scala.Boolean,
     isReloadNavigation: scala.Boolean,
-    json: () => js.Promise[_],
+    json: () => js.Promise[js.Any],
     keepalive: scala.Boolean,
     method: java.lang.String,
     mode: org.scalajs.dom.experimental.RequestMode,
@@ -108,13 +110,13 @@ object Request {
     signal: org.scalajs.dom.experimental.AbortSignal,
     text: () => js.Promise[java.lang.String],
     url: java.lang.String
-  ): org.scalajs.dom.experimental.Request = {
+  ): Request = {
     val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], integrity = integrity.asInstanceOf[js.Any], isHistoryNavigation = isHistoryNavigation.asInstanceOf[js.Any], isReloadNavigation = isReloadNavigation.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), keepalive = keepalive.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], referrerPolicy = referrerPolicy.asInstanceOf[js.Any], signal = signal.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any], body = null)
-    __obj.asInstanceOf[org.scalajs.dom.experimental.Request]
+    __obj.asInstanceOf[Request]
   }
   
   @scala.inline
-  implicit class RequestMutableBuilder[Self <: org.scalajs.dom.experimental.Request] (val x: Self) extends AnyVal {
+  implicit class RequestMutableBuilder[Self <: Request] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = StObject.set(x, "cache", value.asInstanceOf[js.Any])

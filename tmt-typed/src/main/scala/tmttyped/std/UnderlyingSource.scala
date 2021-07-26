@@ -13,13 +13,14 @@ trait UnderlyingSource[R] extends StObject {
   
   var start: js.UndefOr[UnderlyingSourceStartCallback[R]] = js.undefined
   
-  var `type`: js.UndefOr[scala.Nothing] = js.undefined
+  var `type`: Unit
 }
 object UnderlyingSource {
   
   @scala.inline
-  def apply[R](): UnderlyingSource[R] = {
+  def apply[R](`type`: Unit): UnderlyingSource[R] = {
     val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnderlyingSource[R]]
   }
   
@@ -43,5 +44,8 @@ object UnderlyingSource {
     
     @scala.inline
     def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
+    
+    @scala.inline
+    def setType(value: Unit): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

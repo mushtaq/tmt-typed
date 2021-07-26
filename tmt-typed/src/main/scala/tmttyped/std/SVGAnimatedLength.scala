@@ -15,13 +15,13 @@ trait SVGAnimatedLength extends StObject {
 object SVGAnimatedLength {
   
   @scala.inline
-  def apply(animVal: org.scalajs.dom.raw.SVGLength, baseVal: org.scalajs.dom.raw.SVGLength): org.scalajs.dom.raw.SVGAnimatedLength = {
+  def apply(animVal: org.scalajs.dom.raw.SVGLength, baseVal: org.scalajs.dom.raw.SVGLength): SVGAnimatedLength = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedLength]
+    __obj.asInstanceOf[SVGAnimatedLength]
   }
   
   @scala.inline
-  implicit class SVGAnimatedLengthMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedLength] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedLengthMutableBuilder[Self <: SVGAnimatedLength] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: org.scalajs.dom.raw.SVGLength): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

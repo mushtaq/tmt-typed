@@ -25,19 +25,16 @@ trait ArrayBufferView extends StObject {
 object ArrayBufferView {
   
   @scala.inline
-  def apply(buffer: ArrayBufferLike, byteLength: Double, byteOffset: Double): js.typedarray.ArrayBufferView = {
+  def apply(buffer: ArrayBufferLike, byteLength: Double, byteOffset: Double): ArrayBufferView = {
     val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], byteLength = byteLength.asInstanceOf[js.Any], byteOffset = byteOffset.asInstanceOf[js.Any])
-    __obj.asInstanceOf[js.typedarray.ArrayBufferView]
+    __obj.asInstanceOf[ArrayBufferView]
   }
   
   @scala.inline
-  implicit class ArrayBufferViewMutableBuilder[Self <: js.typedarray.ArrayBufferView] (val x: Self) extends AnyVal {
+  implicit class ArrayBufferViewMutableBuilder[Self <: ArrayBufferView] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setBuffer(value: ArrayBufferLike): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBufferArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setByteLength(value: Double): Self = StObject.set(x, "byteLength", value.asInstanceOf[js.Any])

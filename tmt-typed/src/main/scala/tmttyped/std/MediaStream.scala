@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack. */
 @js.native
-trait MediaStream extends EventTarget {
+trait MediaStream
+  extends StObject
+     with EventTarget {
   
   val active: scala.Boolean = js.native
   
@@ -19,7 +21,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ]
   ): Unit = js.native
   @JSName("addEventListener")
@@ -28,7 +30,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): Unit = js.native
@@ -38,7 +40,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: AddEventListenerOptions
   ): Unit = js.native
@@ -48,7 +50,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ]
   ): Unit = js.native
   @JSName("addEventListener")
@@ -57,7 +59,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): Unit = js.native
@@ -67,7 +69,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: AddEventListenerOptions
   ): Unit = js.native
@@ -87,13 +89,13 @@ trait MediaStream extends EventTarget {
   var onaddtrack: (js.ThisFunction1[
     /* this */ this.type, 
     /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-    _
+    js.Any
   ]) | Null = js.native
   
   var onremovetrack: (js.ThisFunction1[
     /* this */ this.type, 
     /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-    _
+    js.Any
   ]) | Null = js.native
   
   @JSName("removeEventListener")
@@ -102,7 +104,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ]
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -111,7 +113,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
@@ -121,7 +123,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): Unit = js.native
@@ -131,7 +133,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ]
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -140,7 +142,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
@@ -150,7 +152,7 @@ trait MediaStream extends EventTarget {
     listener: js.ThisFunction1[
       /* this */ this.type, 
       /* ev */ org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): Unit = js.native

@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @deprecated As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by AudioWorklet.
   */
 @js.native
-trait AudioProcessingEvent extends Event {
+trait AudioProcessingEvent
+  extends StObject
+     with Event {
   
   val inputBuffer: org.scalajs.dom.raw.AudioBuffer = js.native
   

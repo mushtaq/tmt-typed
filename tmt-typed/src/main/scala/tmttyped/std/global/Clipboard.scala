@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Clipboard")
 @js.native
 class Clipboard ()
-  extends tmttyped.std.Clipboard
+  extends StObject
+     with tmttyped.std.Clipboard

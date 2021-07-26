@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StorageManager")
 @js.native
 class StorageManager ()
-  extends tmttyped.std.StorageManager {
+  extends StObject
+     with tmttyped.std.StorageManager {
   
   /* CompleteClass */
   override def estimate(): js.Promise[StorageEstimate] = js.native

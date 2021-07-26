@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaSource")
 @js.native
 class MediaSource ()
-  extends tmttyped.std.MediaSource
+  extends StObject
+     with tmttyped.std.MediaSource
 object MediaSource {
   
   @JSGlobal("MediaSource")

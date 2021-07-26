@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSConditionRule")
 @js.native
 class CSSConditionRule ()
-  extends tmttyped.std.CSSConditionRule {
+  extends StObject
+     with tmttyped.std.CSSConditionRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

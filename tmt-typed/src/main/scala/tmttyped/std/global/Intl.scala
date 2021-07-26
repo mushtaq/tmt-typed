@@ -1,6 +1,5 @@
 package tmttyped.std.global
 
-import tmttyped.std.Intl.BCP47LanguageTag
 import tmttyped.std.Intl.Collator
 import tmttyped.std.Intl.CollatorOptions
 import tmttyped.std.Intl.DateTimeFormat
@@ -17,6 +16,7 @@ import tmttyped.std.Intl.RelativeTimeFormatUnit
 import tmttyped.std.Intl.ResolvedCollatorOptions
 import tmttyped.std.Intl.ResolvedPluralRulesOptions
 import tmttyped.std.Intl.ResolvedRelativeTimeFormatOptions
+import tmttyped.std.Intl.UnicodeBCP47LocaleIdentifier
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,8 +32,6 @@ object Intl {
     @scala.inline
     def apply(): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.Collator]
     @scala.inline
-    def apply(locales: js.UndefOr[scala.Nothing], options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
-    @scala.inline
     def apply(locales: java.lang.String): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.Collator]
     @scala.inline
     def apply(locales: java.lang.String, options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
@@ -41,6 +39,8 @@ object Intl {
     def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.Collator = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.Collator]
     @scala.inline
     def apply(locales: js.Array[java.lang.String], options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
+    @scala.inline
+    def apply(locales: Unit, options: CollatorOptions): tmttyped.std.Intl.Collator = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.Collator]
     
     @JSGlobal("Intl.Collator")
     @js.native
@@ -59,12 +59,14 @@ object Intl {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("Intl.Collator")
   @js.native
-  class CollatorCls () extends Collator {
+  class CollatorCls ()
+    extends StObject
+       with Collator {
     def this(locales: java.lang.String) = this()
     def this(locales: js.Array[java.lang.String]) = this()
-    def this(locales: js.UndefOr[scala.Nothing], options: CollatorOptions) = this()
     def this(locales: java.lang.String, options: CollatorOptions) = this()
     def this(locales: js.Array[java.lang.String], options: CollatorOptions) = this()
+    def this(locales: Unit, options: CollatorOptions) = this()
     
     /* CompleteClass */
     override def compare(x: java.lang.String, y: java.lang.String): Double = js.native
@@ -78,8 +80,6 @@ object Intl {
     @scala.inline
     def apply(): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
     @scala.inline
-    def apply(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
-    @scala.inline
     def apply(locales: java.lang.String): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
     @scala.inline
     def apply(locales: java.lang.String, options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
@@ -87,6 +87,8 @@ object Intl {
     def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.DateTimeFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
     @scala.inline
     def apply(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
+    @scala.inline
+    def apply(locales: Unit, options: DateTimeFormatOptions): tmttyped.std.Intl.DateTimeFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.DateTimeFormat]
     
     @JSGlobal("Intl.DateTimeFormat")
     @js.native
@@ -105,20 +107,20 @@ object Intl {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("Intl.DateTimeFormat")
   @js.native
-  class DateTimeFormatCls () extends DateTimeFormat {
+  class DateTimeFormatCls ()
+    extends StObject
+       with DateTimeFormat {
     def this(locales: java.lang.String) = this()
     def this(locales: js.Array[java.lang.String]) = this()
-    def this(locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions) = this()
     def this(locales: java.lang.String, options: DateTimeFormatOptions) = this()
     def this(locales: js.Array[java.lang.String], options: DateTimeFormatOptions) = this()
+    def this(locales: Unit, options: DateTimeFormatOptions) = this()
   }
   
   object NumberFormat {
     
     @scala.inline
     def apply(): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.NumberFormat]
-    @scala.inline
-    def apply(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
     @scala.inline
     def apply(locales: java.lang.String): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.NumberFormat]
     @scala.inline
@@ -127,6 +129,8 @@ object Intl {
     def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.NumberFormat = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.NumberFormat]
     @scala.inline
     def apply(locales: js.Array[java.lang.String], options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
+    @scala.inline
+    def apply(locales: Unit, options: NumberFormatOptions): tmttyped.std.Intl.NumberFormat = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.NumberFormat]
     
     @JSGlobal("Intl.NumberFormat")
     @js.native
@@ -145,20 +149,20 @@ object Intl {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("Intl.NumberFormat")
   @js.native
-  class NumberFormatCls () extends NumberFormat {
+  class NumberFormatCls ()
+    extends StObject
+       with NumberFormat {
     def this(locales: java.lang.String) = this()
     def this(locales: js.Array[java.lang.String]) = this()
-    def this(locales: js.UndefOr[scala.Nothing], options: NumberFormatOptions) = this()
     def this(locales: java.lang.String, options: NumberFormatOptions) = this()
     def this(locales: js.Array[java.lang.String], options: NumberFormatOptions) = this()
+    def this(locales: Unit, options: NumberFormatOptions) = this()
   }
   
   object PluralRules {
     
     @scala.inline
     def apply(): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply().asInstanceOf[tmttyped.std.Intl.PluralRules]
-    @scala.inline
-    def apply(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
     @scala.inline
     def apply(locales: java.lang.String): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.PluralRules]
     @scala.inline
@@ -167,6 +171,8 @@ object Intl {
     def apply(locales: js.Array[java.lang.String]): tmttyped.std.Intl.PluralRules = ^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.Intl.PluralRules]
     @scala.inline
     def apply(locales: js.Array[java.lang.String], options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
+    @scala.inline
+    def apply(locales: Unit, options: PluralRulesOptions): tmttyped.std.Intl.PluralRules = (^.asInstanceOf[js.Dynamic].apply(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.std.Intl.PluralRules]
     
     @JSGlobal("Intl.PluralRules")
     @js.native
@@ -185,12 +191,14 @@ object Intl {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSGlobal("Intl.PluralRules")
   @js.native
-  class PluralRulesCls () extends PluralRules {
+  class PluralRulesCls ()
+    extends StObject
+       with PluralRules {
     def this(locales: java.lang.String) = this()
     def this(locales: js.Array[java.lang.String]) = this()
-    def this(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions) = this()
     def this(locales: java.lang.String, options: PluralRulesOptions) = this()
     def this(locales: js.Array[java.lang.String], options: PluralRulesOptions) = this()
+    def this(locales: Unit, options: PluralRulesOptions) = this()
     
     /* CompleteClass */
     override def resolvedOptions(): ResolvedPluralRulesOptions = js.native
@@ -216,10 +224,6 @@ object Intl {
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag]): js.Array[BCP47LanguageTag] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[BCP47LanguageTag]]
-    @scala.inline
-    def supportedLocalesOf(locales: js.Array[BCP47LanguageTag], options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[BCP47LanguageTag]]
     /**
       * Returns an array containing those of the provided locales
       * that are supported in date and time formatting
@@ -252,9 +256,17 @@ object Intl {
       * [Specification](https://tc39.es/ecma402/#sec-Intl.RelativeTimeFormat.supportedLocalesOf).
       */
     @scala.inline
-    def supportedLocalesOf(locales: BCP47LanguageTag): js.Array[BCP47LanguageTag] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[BCP47LanguageTag]]
+    def supportedLocalesOf(): js.Array[UnicodeBCP47LocaleIdentifier] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")().asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
     @scala.inline
-    def supportedLocalesOf(locales: BCP47LanguageTag, options: RelativeTimeFormatOptions): js.Array[BCP47LanguageTag] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[BCP47LanguageTag]]
+    def supportedLocalesOf(locales: js.Array[UnicodeBCP47LocaleIdentifier]): js.Array[UnicodeBCP47LocaleIdentifier] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
+    @scala.inline
+    def supportedLocalesOf(locales: js.Array[UnicodeBCP47LocaleIdentifier], options: RelativeTimeFormatOptions): js.Array[UnicodeBCP47LocaleIdentifier] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
+    @scala.inline
+    def supportedLocalesOf(locales: Unit, options: RelativeTimeFormatOptions): js.Array[UnicodeBCP47LocaleIdentifier] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
+    @scala.inline
+    def supportedLocalesOf(locales: UnicodeBCP47LocaleIdentifier): js.Array[UnicodeBCP47LocaleIdentifier] = ^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any]).asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
+    @scala.inline
+    def supportedLocalesOf(locales: UnicodeBCP47LocaleIdentifier, options: RelativeTimeFormatOptions): js.Array[UnicodeBCP47LocaleIdentifier] = (^.asInstanceOf[js.Dynamic].applyDynamic("supportedLocalesOf")(locales.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[UnicodeBCP47LocaleIdentifier]]
   }
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -288,12 +300,14 @@ object Intl {
     *
     * [Specification](https://tc39.es/ecma402/#sec-intl-relativetimeformat-constructor).
     */
-  class RelativeTimeFormatCls () extends RelativeTimeFormat {
-    def this(locales: js.Array[BCP47LanguageTag]) = this()
-    def this(locales: BCP47LanguageTag) = this()
-    def this(locales: js.UndefOr[scala.Nothing], options: RelativeTimeFormatOptions) = this()
-    def this(locales: js.Array[BCP47LanguageTag], options: RelativeTimeFormatOptions) = this()
-    def this(locales: BCP47LanguageTag, options: RelativeTimeFormatOptions) = this()
+  class RelativeTimeFormatCls ()
+    extends StObject
+       with RelativeTimeFormat {
+    def this(locales: js.Array[UnicodeBCP47LocaleIdentifier]) = this()
+    def this(locales: UnicodeBCP47LocaleIdentifier) = this()
+    def this(locales: js.Array[UnicodeBCP47LocaleIdentifier], options: RelativeTimeFormatOptions) = this()
+    def this(locales: Unit, options: RelativeTimeFormatOptions) = this()
+    def this(locales: UnicodeBCP47LocaleIdentifier, options: RelativeTimeFormatOptions) = this()
     
     /**
       * Formats a value and a unit according to the locale

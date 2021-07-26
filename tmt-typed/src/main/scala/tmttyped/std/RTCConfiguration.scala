@@ -17,20 +17,18 @@ trait RTCConfiguration extends StObject {
   
   var iceTransportPolicy: js.UndefOr[org.scalajs.dom.experimental.webrtc.RTCIceTransportPolicy] = js.undefined
   
-  var peerIdentity: js.UndefOr[java.lang.String] = js.undefined
-  
   var rtcpMuxPolicy: js.UndefOr[RTCRtcpMuxPolicy] = js.undefined
 }
 object RTCConfiguration {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCConfiguration = {
+  def apply(): RTCConfiguration = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCConfiguration]
+    __obj.asInstanceOf[RTCConfiguration]
   }
   
   @scala.inline
-  implicit class RTCConfigurationMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCConfiguration] (val x: Self) extends AnyVal {
+  implicit class RTCConfigurationMutableBuilder[Self <: RTCConfiguration] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setBundlePolicy(value: org.scalajs.dom.experimental.webrtc.RTCBundlePolicy): Self = StObject.set(x, "bundlePolicy", value.asInstanceOf[js.Any])
@@ -67,12 +65,6 @@ object RTCConfiguration {
     
     @scala.inline
     def setIceTransportPolicyUndefined: Self = StObject.set(x, "iceTransportPolicy", js.undefined)
-    
-    @scala.inline
-    def setPeerIdentity(value: java.lang.String): Self = StObject.set(x, "peerIdentity", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPeerIdentityUndefined: Self = StObject.set(x, "peerIdentity", js.undefined)
     
     @scala.inline
     def setRtcpMuxPolicy(value: RTCRtcpMuxPolicy): Self = StObject.set(x, "rtcpMuxPolicy", value.asInstanceOf[js.Any])

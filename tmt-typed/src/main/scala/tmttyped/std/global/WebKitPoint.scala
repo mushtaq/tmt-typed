@@ -9,10 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebKitPoint")
 @js.native
 class WebKitPoint ()
-  extends tmttyped.std.WebKitPoint {
+  extends StObject
+     with tmttyped.std.WebKitPoint {
   def this(x: Double) = this()
-  def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
   def this(x: Double, y: Double) = this()
+  def this(x: Unit, y: Double) = this()
   
   /* CompleteClass */
   override var x: Double = js.native

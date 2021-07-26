@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <textPath> element. */
 @js.native
 trait SVGTextPathElement
-  extends SVGTextContentElement
+  extends StObject
+     with SVGTextContentElement
      with SVGURIReference {
   
   val TEXTPATH_METHODTYPE_ALIGN: Double = js.native

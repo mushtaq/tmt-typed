@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait IDBVersionChangeEventInit extends EventInit {
+trait IDBVersionChangeEventInit
+  extends StObject
+     with EventInit {
   
   var newVersion: js.UndefOr[Double | Null] = js.undefined
   

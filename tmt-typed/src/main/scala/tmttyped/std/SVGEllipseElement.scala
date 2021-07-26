@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Provides access to the properties of <ellipse> elements. */
 @js.native
-trait SVGEllipseElement extends SVGGeometryElement {
+trait SVGEllipseElement
+  extends StObject
+     with SVGGeometryElement {
   
   val cx: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   

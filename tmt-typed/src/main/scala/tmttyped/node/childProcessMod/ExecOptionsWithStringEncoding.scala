@@ -1,12 +1,14 @@
 package tmttyped.node.childProcessMod
 
-import tmttyped.node.BufferEncoding
+import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ExecOptionsWithStringEncoding extends ExecOptions {
+trait ExecOptionsWithStringEncoding
+  extends StObject
+     with ExecOptions {
   
   var encoding: BufferEncoding
 }

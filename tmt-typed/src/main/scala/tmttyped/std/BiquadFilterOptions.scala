@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait BiquadFilterOptions extends AudioNodeOptions {
+trait BiquadFilterOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var Q: js.UndefOr[Double] = js.undefined
   

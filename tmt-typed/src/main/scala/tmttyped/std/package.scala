@@ -35,8 +35,8 @@ package object std {
   
   /* Rewritten from type alias, can be one of: 
     - tmttyped.std.HTMLOrSVGImageElement
-    - tmttyped.std.HTMLVideoElement
-    - tmttyped.std.HTMLCanvasElement
+    - org.scalajs.dom.raw.HTMLVideoElement
+    - org.scalajs.dom.raw.HTMLCanvasElement
     - tmttyped.std.ImageBitmap
     - tmttyped.std.OffscreenCanvas
   */
@@ -89,7 +89,7 @@ package object std {
     tmttyped.std.SVGElementTagNameMap, 
     tmttyped.std.Exclude[
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 57 */ js.Any, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 119 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 118 */ js.Any
     ]
   ])
   
@@ -229,7 +229,7 @@ package object std {
   /* Rewritten from type alias, can be one of: 
     - tmttyped.std.OffscreenCanvasRenderingContext2D
     - tmttyped.std.ImageBitmapRenderingContext
-    - tmttyped.std.WebGLRenderingContext
+    - org.scalajs.dom.raw.WebGLRenderingContext
     - tmttyped.std.WebGL2RenderingContext
   */
   type OffscreenRenderingContext = tmttyped.std._OffscreenRenderingContext | org.scalajs.dom.raw.WebGLRenderingContext
@@ -269,7 +269,7 @@ package object std {
   /**
     * Obtain the parameters of a function type in a tuple
     */
-  type Parameters[T /* <: js.Function1[/* args */ js.Any, _] */] = js.Any
+  type Parameters[T /* <: js.Function1[/* args */ js.Any, js.Any] */] = js.Any
   
   /**
     * Make all properties in T optional
@@ -326,9 +326,13 @@ package object std {
   
   type RTCAnswerOptions = tmttyped.std.RTCOfferAnswerOptions
   
+  type RTCIceCredentialType = tmttyped.std.stdStrings.password
+  
   type RTCPeerConnectionErrorCallback = js.Function1[/* error */ org.scalajs.dom.raw.DOMException, scala.Unit]
   
-  type RTCRtpDecodingParameters = tmttyped.std.RTCRtpCodingParameters
+  type RTCRtcpMuxPolicy = tmttyped.std.stdStrings.require
+  
+  type RTCRtpReceiveParameters = tmttyped.std.RTCRtpParameters
   
   type RTCSessionDescriptionCallback = js.Function1[
     /* description */ org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit, 
@@ -358,9 +362,9 @@ package object std {
   type ReferenceError = js.Error
   
   /* Rewritten from type alias, can be one of: 
-    - tmttyped.std.CanvasRenderingContext2D
+    - org.scalajs.dom.raw.CanvasRenderingContext2D
     - tmttyped.std.ImageBitmapRenderingContext
-    - tmttyped.std.WebGLRenderingContext
+    - org.scalajs.dom.raw.WebGLRenderingContext
     - tmttyped.std.WebGL2RenderingContext
   */
   type RenderingContext = tmttyped.std._RenderingContext | org.scalajs.dom.raw.CanvasRenderingContext2D | org.scalajs.dom.raw.WebGLRenderingContext
@@ -383,7 +387,7 @@ package object std {
   /**
     * Obtain the return type of a function type
     */
-  type ReturnType[T /* <: js.Function1[/* args */ js.Any, _] */] = js.Any
+  type ReturnType[T /* <: js.Function1[/* args */ js.Any, js.Any] */] = js.Any
   
   type SVGMatrix = tmttyped.std.DOMMatrix
   
@@ -393,18 +397,16 @@ package object std {
   
   type SVGRect = tmttyped.std.DOMRect
   
-  type ScopedCredentialType = tmttyped.std.stdStrings.ScopedCred
-  
   type StaticRange = tmttyped.std.AbstractRange
   
   type SyntaxError = js.Error
   
   /* Rewritten from type alias, can be one of: 
     - tmttyped.std.ImageBitmap
-    - tmttyped.std.ImageData
-    - tmttyped.std.HTMLImageElement
-    - tmttyped.std.HTMLCanvasElement
-    - tmttyped.std.HTMLVideoElement
+    - org.scalajs.dom.raw.ImageData
+    - org.scalajs.dom.raw.HTMLImageElement
+    - org.scalajs.dom.raw.HTMLCanvasElement
+    - org.scalajs.dom.raw.HTMLVideoElement
     - tmttyped.std.OffscreenCanvas
   */
   type TexImageSource = tmttyped.std._TexImageSource | org.scalajs.dom.raw.ImageData | org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.HTMLCanvasElement | org.scalajs.dom.raw.HTMLVideoElement
@@ -417,8 +419,8 @@ package object std {
   type TimerHandler = java.lang.String | js.Function
   
   /* Rewritten from type alias, can be one of: 
-    - tmttyped.std.ArrayBuffer
-    - tmttyped.std.MessagePort
+    - js.typedarray.ArrayBuffer
+    - org.scalajs.dom.raw.MessagePort
     - tmttyped.std.ImageBitmap
     - tmttyped.std.OffscreenCanvas
   */
@@ -490,36 +492,6 @@ package object std {
   type VibratePattern = scala.Double | js.Array[scala.Double]
   
   type VoidFunction = js.Function0[scala.Unit]
-  
-  /** Part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors. */
-  type WebGLBuffer = tmttyped.std.WebGLObject
-  
-  /** Part of the WebGL API and represents a collection of buffers that serve as a rendering destination. */
-  type WebGLFramebuffer = tmttyped.std.WebGLObject
-  
-  /** The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). */
-  type WebGLProgram = tmttyped.std.WebGLObject
-  
-  type WebGLQuery = tmttyped.std.WebGLObject
-  
-  /** Part of the WebGL API and represents a buffer that can contain an image, or can be source or target of an rendering operation. */
-  type WebGLRenderbuffer = tmttyped.std.WebGLObject
-  
-  type WebGLSampler = tmttyped.std.WebGLObject
-  
-  /** The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders. */
-  type WebGLShader = tmttyped.std.WebGLObject
-  
-  type WebGLSync = tmttyped.std.WebGLObject
-  
-  /** Part of the WebGL API and represents an opaque texture object providing storage and state for texturing operations. */
-  type WebGLTexture = tmttyped.std.WebGLObject
-  
-  type WebGLTransformFeedback = tmttyped.std.WebGLObject
-  
-  type WebGLVertexArrayObject = tmttyped.std.WebGLObject
-  
-  type WebGLVertexArrayObjectOES = tmttyped.std.WebGLObject
   
   type WebKitCSSMatrix = tmttyped.std.DOMMatrix
   

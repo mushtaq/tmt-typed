@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentOptions extends StObject {
   
+  var requestBillingAddress: js.UndefOr[scala.Boolean] = js.undefined
+  
   var requestPayerEmail: js.UndefOr[scala.Boolean] = js.undefined
   
   var requestPayerName: js.UndefOr[scala.Boolean] = js.undefined
@@ -15,7 +17,7 @@ trait PaymentOptions extends StObject {
   
   var requestShipping: js.UndefOr[scala.Boolean] = js.undefined
   
-  var shippingType: js.UndefOr[java.lang.String] = js.undefined
+  var shippingType: js.UndefOr[PaymentShippingType] = js.undefined
 }
 object PaymentOptions {
   
@@ -27,6 +29,12 @@ object PaymentOptions {
   
   @scala.inline
   implicit class PaymentOptionsMutableBuilder[Self <: PaymentOptions] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setRequestBillingAddress(value: scala.Boolean): Self = StObject.set(x, "requestBillingAddress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRequestBillingAddressUndefined: Self = StObject.set(x, "requestBillingAddress", js.undefined)
     
     @scala.inline
     def setRequestPayerEmail(value: scala.Boolean): Self = StObject.set(x, "requestPayerEmail", value.asInstanceOf[js.Any])
@@ -53,7 +61,7 @@ object PaymentOptions {
     def setRequestShippingUndefined: Self = StObject.set(x, "requestShipping", js.undefined)
     
     @scala.inline
-    def setShippingType(value: java.lang.String): Self = StObject.set(x, "shippingType", value.asInstanceOf[js.Any])
+    def setShippingType(value: PaymentShippingType): Self = StObject.set(x, "shippingType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setShippingTypeUndefined: Self = StObject.set(x, "shippingType", js.undefined)

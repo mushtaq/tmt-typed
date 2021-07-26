@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Provides access to the properties of <svg> elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices. */
 @js.native
 trait SVGSVGElement
-  extends SVGGraphicsElement
+  extends StObject
+     with SVGGraphicsElement
      with DocumentEvent
      with SVGFitToViewBox
      with SVGZoomAndPan {
@@ -28,32 +29,32 @@ trait SVGSVGElement
   @JSName("addEventListener")
   def addEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]): Unit = js.native
+  def addEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
@@ -62,12 +63,6 @@ trait SVGSVGElement
   def checkEnclosure(element: org.scalajs.dom.raw.SVGElement, rect: org.scalajs.dom.raw.SVGRect): scala.Boolean = js.native
   
   def checkIntersection(element: org.scalajs.dom.raw.SVGElement, rect: org.scalajs.dom.raw.SVGRect): scala.Boolean = js.native
-  
-  /** @deprecated */
-  var contentScriptType: java.lang.String = js.native
-  
-  /** @deprecated */
-  var contentStyleType: java.lang.String = js.native
   
   def createSVGAngle(): org.scalajs.dom.raw.SVGAngle = js.native
   
@@ -117,17 +112,11 @@ trait SVGSVGElement
   
   val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   
-  var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
-  var onzoom: (js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]) | Null = js.native
+  var onzoom: (js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]) | Null = js.native
   
   def pauseAnimations(): Unit = js.native
-  
-  /** @deprecated */
-  val pixelUnitToMillimeterX: Double = js.native
-  
-  /** @deprecated */
-  val pixelUnitToMillimeterY: Double = js.native
   
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
@@ -142,40 +131,34 @@ trait SVGSVGElement
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGUnload(
     `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _]): Unit = js.native
+  def removeEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_SVGZoom(
     `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
     options: scala.Boolean
   ): Unit = js.native
-  
-  /** @deprecated */
-  val screenPixelToMillimeterX: Double = js.native
-  
-  /** @deprecated */
-  val screenPixelToMillimeterY: Double = js.native
   
   def setCurrentTime(seconds: Double): Unit = js.native
   
@@ -189,9 +172,6 @@ trait SVGSVGElement
   
   /** @deprecated */
   def unsuspendRedrawAll(): Unit = js.native
-  
-  /** @deprecated */
-  val viewport: org.scalajs.dom.raw.SVGRect = js.native
   
   val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   

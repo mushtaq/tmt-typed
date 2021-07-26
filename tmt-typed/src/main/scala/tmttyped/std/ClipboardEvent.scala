@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events providing information related to modification of the clipboard, that is cut, copy, and paste events. */
 @js.native
-trait ClipboardEvent extends Event {
+trait ClipboardEvent
+  extends StObject
+     with Event {
   
   val clipboardData: org.scalajs.dom.raw.DataTransfer | Null = js.native
 }

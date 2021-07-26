@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextMetrics")
 @js.native
 class TextMetrics ()
-  extends tmttyped.std.TextMetrics {
+  extends StObject
+     with tmttyped.std.TextMetrics {
   
   /**
     * Returns the measurement described below.
@@ -34,48 +35,6 @@ class TextMetrics ()
     */
   /* CompleteClass */
   override val actualBoundingBoxRight: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val alphabeticBaseline: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val emHeightAscent: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val emHeightDescent: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val fontBoundingBoxAscent: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val fontBoundingBoxDescent: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val hangingBaseline: Double = js.native
-  
-  /**
-    * Returns the measurement described below.
-    */
-  /* CompleteClass */
-  override val ideographicBaseline: Double = js.native
   
   /**
     * Returns the measurement described below.

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WheelEvent")
 @js.native
 class WheelEvent protected ()
-  extends tmttyped.std.WheelEvent {
+  extends StObject
+     with tmttyped.std.WheelEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: WheelEventInit) = this()
 }

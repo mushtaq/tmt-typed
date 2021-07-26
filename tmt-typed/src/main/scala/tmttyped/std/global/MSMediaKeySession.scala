@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSMediaKeySession")
 @js.native
 class MSMediaKeySession ()
-  extends tmttyped.std.MSMediaKeySession
+  extends StObject
+     with tmttyped.std.MSMediaKeySession

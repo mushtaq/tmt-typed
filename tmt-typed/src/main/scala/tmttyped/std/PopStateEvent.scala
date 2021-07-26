@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** PopStateEvent is an event handler for the popstate event on the window. */
 @js.native
-trait PopStateEvent extends Event {
+trait PopStateEvent
+  extends StObject
+     with Event {
   
   /**
     * Returns a copy of the information that was provided to pushState() or replaceState().

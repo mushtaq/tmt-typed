@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ExecOptions extends CommonOptions {
+trait ExecOptions
+  extends StObject
+     with CommonOptions {
   
   var killSignal: js.UndefOr[Signals | Double] = js.undefined
   

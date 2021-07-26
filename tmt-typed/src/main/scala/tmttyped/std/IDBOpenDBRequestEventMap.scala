@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait IDBOpenDBRequestEventMap extends IDBRequestEventMap {
+trait IDBOpenDBRequestEventMap
+  extends StObject
+     with IDBRequestEventMap {
   
   var blocked: org.scalajs.dom.raw.Event
   

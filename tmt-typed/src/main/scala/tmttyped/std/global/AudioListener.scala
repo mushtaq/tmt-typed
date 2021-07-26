@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AudioListener")
 @js.native
 class AudioListener ()
-  extends tmttyped.std.AudioListener {
+  extends StObject
+     with tmttyped.std.AudioListener {
   
   /* CompleteClass */
   override val forwardX: org.scalajs.dom.raw.AudioParam = js.native

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait WaveShaperOptions extends AudioNodeOptions {
+trait WaveShaperOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var curve: js.UndefOr[js.Array[Double] | js.typedarray.Float32Array] = js.undefined
   
@@ -24,9 +26,6 @@ object WaveShaperOptions {
     
     @scala.inline
     def setCurve(value: js.Array[Double] | js.typedarray.Float32Array): Self = StObject.set(x, "curve", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCurveFloat32Array(value: js.typedarray.Float32Array): Self = StObject.set(x, "curve", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCurveUndefined: Self = StObject.set(x, "curve", js.undefined)

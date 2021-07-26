@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CommonOptions extends ProcessEnvOptions {
+trait CommonOptions
+  extends StObject
+     with ProcessEnvOptions {
   
   /**
     * @default 0

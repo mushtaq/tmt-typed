@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ExecException extends Error {
+trait ExecException
+  extends StObject
+     with Error {
   
   var cmd: js.UndefOr[String] = js.undefined
   

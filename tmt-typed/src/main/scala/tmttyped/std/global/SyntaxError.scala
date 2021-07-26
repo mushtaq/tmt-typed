@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.SyntaxErrorConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SyntaxError")
 @js.native
 class SyntaxError ()
-  extends tmttyped.std.Error {
+  extends StObject
+     with tmttyped.std.Error {
   def this(message: java.lang.String) = this()
   
   /* CompleteClass */
@@ -17,4 +19,9 @@ class SyntaxError ()
   
   /* CompleteClass */
   override var name: java.lang.String = js.native
+}
+object SyntaxError {
+  
+  @scala.inline
+  def apply: SyntaxErrorConstructor = js.Dynamic.global.selectDynamic("SyntaxError").asInstanceOf[SyntaxErrorConstructor]
 }

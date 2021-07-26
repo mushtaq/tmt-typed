@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MutationObserver")
 @js.native
 class MutationObserver protected ()
-  extends tmttyped.std.MutationObserver {
+  extends StObject
+     with tmttyped.std.MutationObserver {
   def this(callback: MutationCallback) = this()
 }

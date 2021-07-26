@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AnyCnameRecord extends AnyRecord {
+trait AnyCnameRecord
+  extends StObject
+     with AnyRecord {
   
   var `type`: CNAME
   

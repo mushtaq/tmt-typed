@@ -17,20 +17,18 @@ trait RTCDataChannelInit extends StObject {
   
   var ordered: js.UndefOr[scala.Boolean] = js.undefined
   
-  var priority: js.UndefOr[RTCPriorityType] = js.undefined
-  
   var protocol: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCDataChannelInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCDataChannelInit = {
+  def apply(): RTCDataChannelInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCDataChannelInit]
+    __obj.asInstanceOf[RTCDataChannelInit]
   }
   
   @scala.inline
-  implicit class RTCDataChannelInitMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCDataChannelInit] (val x: Self) extends AnyVal {
+  implicit class RTCDataChannelInitMutableBuilder[Self <: RTCDataChannelInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setId(value: Double): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
@@ -61,12 +59,6 @@ object RTCDataChannelInit {
     
     @scala.inline
     def setOrderedUndefined: Self = StObject.set(x, "ordered", js.undefined)
-    
-    @scala.inline
-    def setPriority(value: RTCPriorityType): Self = StObject.set(x, "priority", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPriorityUndefined: Self = StObject.set(x, "priority", js.undefined)
     
     @scala.inline
     def setProtocol(value: java.lang.String): Self = StObject.set(x, "protocol", value.asInstanceOf[js.Any])

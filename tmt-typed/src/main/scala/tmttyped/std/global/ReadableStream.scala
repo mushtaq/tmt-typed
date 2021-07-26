@@ -11,8 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ReadableStream")
 @js.native
 class ReadableStream[R] ()
-  extends tmttyped.std.ReadableStream[R] {
+  extends StObject
+     with tmttyped.std.ReadableStream[R] {
   def this(underlyingSource: UnderlyingSource[R]) = this()
-  def this(underlyingSource: js.UndefOr[scala.Nothing], strategy: QueuingStrategy[R]) = this()
+  def this(underlyingSource: Unit, strategy: QueuingStrategy[R]) = this()
   def this(underlyingSource: UnderlyingSource[R], strategy: QueuingStrategy[R]) = this()
 }

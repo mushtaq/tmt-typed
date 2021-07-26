@@ -46,13 +46,13 @@ trait JsonWebKey extends StObject {
 object JsonWebKey {
   
   @scala.inline
-  def apply(): org.scalajs.dom.crypto.JsonWebKey = {
+  def apply(): JsonWebKey = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.crypto.JsonWebKey]
+    __obj.asInstanceOf[JsonWebKey]
   }
   
   @scala.inline
-  implicit class JsonWebKeyMutableBuilder[Self <: org.scalajs.dom.crypto.JsonWebKey] (val x: Self) extends AnyVal {
+  implicit class JsonWebKeyMutableBuilder[Self <: JsonWebKey] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAlg(value: java.lang.String): Self = StObject.set(x, "alg", value.asInstanceOf[js.Any])

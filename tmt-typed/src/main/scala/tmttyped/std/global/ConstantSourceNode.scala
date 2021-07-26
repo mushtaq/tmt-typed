@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ConstantSourceNode")
 @js.native
 class ConstantSourceNode protected ()
-  extends tmttyped.std.ConstantSourceNode {
+  extends StObject
+     with tmttyped.std.ConstantSourceNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: ConstantSourceOptions) = this()
 }

@@ -20,13 +20,13 @@ trait NonDocumentTypeChildNode extends StObject {
 object NonDocumentTypeChildNode {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.NonDocumentTypeChildNode = {
+  def apply(): NonDocumentTypeChildNode = {
     val __obj = js.Dynamic.literal(nextElementSibling = null, previousElementSibling = null)
-    __obj.asInstanceOf[org.scalajs.dom.raw.NonDocumentTypeChildNode]
+    __obj.asInstanceOf[NonDocumentTypeChildNode]
   }
   
   @scala.inline
-  implicit class NonDocumentTypeChildNodeMutableBuilder[Self <: org.scalajs.dom.raw.NonDocumentTypeChildNode] (val x: Self) extends AnyVal {
+  implicit class NonDocumentTypeChildNodeMutableBuilder[Self <: NonDocumentTypeChildNode] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setNextElementSibling(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "nextElementSibling", value.asInstanceOf[js.Any])

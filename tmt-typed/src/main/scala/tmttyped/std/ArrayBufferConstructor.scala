@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ArrayBufferConstructor
-  extends Instantiable1[/* byteLength */ Double, js.typedarray.ArrayBuffer] {
+  extends StObject
+     with Instantiable1[/* byteLength */ Double, js.typedarray.ArrayBuffer] {
   
   def isView(arg: js.Any): /* is std.ArrayBufferView */ scala.Boolean = js.native
   

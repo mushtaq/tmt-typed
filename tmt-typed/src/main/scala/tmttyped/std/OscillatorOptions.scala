@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait OscillatorOptions extends AudioNodeOptions {
+trait OscillatorOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var detune: js.UndefOr[Double] = js.undefined
   

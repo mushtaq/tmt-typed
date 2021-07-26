@@ -17,14 +17,14 @@ trait WebGLActiveInfo extends StObject {
 object WebGLActiveInfo {
   
   @scala.inline
-  def apply(name: java.lang.String, size: GLint, `type`: GLenum): org.scalajs.dom.raw.WebGLActiveInfo = {
+  def apply(name: java.lang.String, size: GLint, `type`: GLenum): WebGLActiveInfo = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.WebGLActiveInfo]
+    __obj.asInstanceOf[WebGLActiveInfo]
   }
   
   @scala.inline
-  implicit class WebGLActiveInfoMutableBuilder[Self <: org.scalajs.dom.raw.WebGLActiveInfo] (val x: Self) extends AnyVal {
+  implicit class WebGLActiveInfoMutableBuilder[Self <: WebGLActiveInfo] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])

@@ -1,5 +1,8 @@
 package tmttyped.std.global
 
+import org.scalajs.dom.raw.EventListenerOptions
+import tmttyped.std.AddEventListenerOptions
+import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGPolygonElement")
 @js.native
 class SVGPolygonElement ()
-  extends tmttyped.std.SVGPolygonElement {
+  extends StObject
+     with tmttyped.std.SVGPolygonElement {
+  
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def addEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: AddEventListenerOptions
+  ): Unit = js.native
   
   /* CompleteClass */
   override val animatedPoints: org.scalajs.dom.raw.SVGPointList = js.native
@@ -34,6 +49,17 @@ class SVGPolygonElement ()
     */
   /* CompleteClass */
   override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(
+    `type`: java.lang.String,
+    listener: EventListenerOrEventListenerObject,
+    options: EventListenerOptions
+  ): Unit = js.native
+  /* InferMemberOverrides */
+  override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   /* CompleteClass */
   override val requiredExtensions: org.scalajs.dom.raw.SVGStringList = js.native

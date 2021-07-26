@@ -8,11 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait FinalizationRegistryConstructor
-  extends /**
+  extends StObject
+     with /**
   * Creates a finalization registry with an associated cleanup callback
   * @param cleanupCallback The callback to call after an object in the registry has been reclaimed.
   */
 Instantiable1[
-      /* cleanupCallback */ js.Function1[/* heldValue */ js.Any, Unit], 
-      FinalizationRegistry
+      /* cleanupCallback */ js.Function1[/* heldValue */ js.Object, Unit], 
+      FinalizationRegistry[js.Object]
     ]

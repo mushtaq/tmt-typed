@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RequestStreamFrame extends Frame {
+trait RequestStreamFrame
+  extends StObject
+     with Frame {
   
   var data: Encodable
   
@@ -38,9 +40,6 @@ object RequestStreamFrame {
     def setData(value: Encodable): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setFlags(value: Double): Self = StObject.set(x, "flags", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -51,9 +50,6 @@ object RequestStreamFrame {
     
     @scala.inline
     def setMetadata(value: Encodable): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRequestN(value: Double): Self = StObject.set(x, "requestN", value.asInstanceOf[js.Any])

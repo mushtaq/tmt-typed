@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CancelFrame extends Frame {
+trait CancelFrame
+  extends StObject
+     with Frame {
   
   var flags: Double
   

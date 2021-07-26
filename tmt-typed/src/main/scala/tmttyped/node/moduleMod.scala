@@ -14,7 +14,8 @@ object moduleMod extends Shortcut {
   @JSImport("module", JSImport.Namespace)
   @js.native
   class ^ protected ()
-    extends tmttyped.node.NodeJS.Module {
+    extends StObject
+       with tmttyped.node.NodeJS.Module {
     def this(id: java.lang.String) = this()
     def this(id: java.lang.String, parent: Module) = this()
     
@@ -29,6 +30,12 @@ object moduleMod extends Shortcut {
     
     /* CompleteClass */
     override var id: java.lang.String = js.native
+    
+    /**
+      * `true` if the module is running during the Node.js preload
+      */
+    /* CompleteClass */
+    override var isPreloading: Boolean = js.native
     
     /* CompleteClass */
     override var loaded: Boolean = js.native
@@ -52,7 +59,7 @@ object moduleMod extends Shortcut {
   }
   @JSImport("module", JSImport.Namespace)
   @js.native
-  val ^ : Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module] = js.native
+  val ^ : js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = js.native
   
   /* static member */
   @JSImport("module", "Module")
@@ -64,7 +71,8 @@ object moduleMod extends Shortcut {
   @JSImport("module", "Module")
   @js.native
   class ModuleCls protected ()
-    extends tmttyped.node.NodeJS.Module {
+    extends StObject
+       with tmttyped.node.NodeJS.Module {
     def this(id: java.lang.String) = this()
     def this(id: java.lang.String, parent: Module) = this()
     
@@ -79,6 +87,12 @@ object moduleMod extends Shortcut {
     
     /* CompleteClass */
     override var id: java.lang.String = js.native
+    
+    /**
+      * `true` if the module is running during the Node.js preload
+      */
+    /* CompleteClass */
+    override var isPreloading: Boolean = js.native
     
     /* CompleteClass */
     override var loaded: Boolean = js.native
@@ -104,11 +118,19 @@ object moduleMod extends Shortcut {
   @scala.inline
   def Module_=(x: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
   
+  /**
+    * @since v13.7.0, v12.17.0
+    */
   @JSImport("module", "SourceMap")
   @js.native
   class SourceMap protected () extends StObject {
     def this(payload: SourceMapPayload) = this()
     
+    /**
+      * Given a line number and column number in the generated source file, returns
+      * an object representing the position in the original file. The object returned
+      * consists of the following keys:
+      */
     def findEntry(line: Double, column: Double): SourceMapping = js.native
     
     val payload: SourceMapPayload = js.native
@@ -128,12 +150,10 @@ object moduleMod extends Shortcut {
   def createRequire(path: URL): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
   /**
-    * @deprecated Deprecated since: v12.2.0. Please use createRequire() instead.
+    * `path` is the resolved path for the file for which a corresponding source map
+    * should be fetched.
+    * @since v13.7.0, v12.17.0
     */
-  /* static member */
-  @scala.inline
-  def createRequireFromPath(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequireFromPath")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
-  
   @scala.inline
   def findSourceMap(path: java.lang.String): SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[SourceMap]
   @scala.inline
@@ -144,8 +164,39 @@ object moduleMod extends Shortcut {
   def runMain(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("runMain")().asInstanceOf[Unit]
   
   /**
-    * Updates all the live bindings for builtin ES Modules to match the properties of the CommonJS exports.
-    * It does not add or remove exported names from the ES Modules.
+    * The `module.syncBuiltinESMExports()` method updates all the live bindings for
+    * builtin `ES Modules` to match the properties of the `CommonJS` exports. It
+    * does not add or remove exported names from the `ES Modules`.
+    *
+    * ```js
+    * const fs = require('fs');
+    * const assert = require('assert');
+    * const { syncBuiltinESMExports } = require('module');
+    *
+    * fs.readFile = newAPI;
+    *
+    * delete fs.readFileSync;
+    *
+    * function newAPI() {
+    *   // ...
+    * }
+    *
+    * fs.newAPI = newAPI;
+    *
+    * syncBuiltinESMExports();
+    *
+    * import('fs').then((esmFS) => {
+    *   // It syncs the existing readFile property with the new value
+    *   assert.strictEqual(esmFS.readFile, newAPI);
+    *   // readFileSync has been deleted from the required fs
+    *   assert.strictEqual('readFileSync' in fs, false);
+    *   // syncBuiltinESMExports() does not remove readFileSync from esmFS
+    *   assert.strictEqual('readFileSync' in esmFS, true);
+    *   // syncBuiltinESMExports() does not add names
+    *   assert.strictEqual(esmFS.newAPI, undefined);
+    * });
+    * ```
+    * @since v12.12.0
     */
   @scala.inline
   def syncBuiltinESMExports(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("syncBuiltinESMExports")().asInstanceOf[Unit]
@@ -267,8 +318,59 @@ object moduleMod extends Shortcut {
     }
   }
   
-  type _To = Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]
+  type _To = js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module])
   
   /* This means you don't have to write `^`, but can instead just say `moduleMod.foo` */
-  override def _to: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module] = ^
+  override def _to: js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = ^
+  
+  object global {
+    
+    trait ImportMeta extends StObject {
+      
+      /**
+        * @experimental
+        * This feature is only available with the `--experimental-import-meta-resolve`
+        * command flag enabled.
+        *
+        * Provides a module-relative resolution function scoped to each module, returning
+        * the URL string.
+        *
+        * @param specified The module specifier to resolve relative to `parent`.
+        * @param parent The absolute parent module URL to resolve from. If none
+        * is specified, the value of `import.meta.url` is used as the default.
+        */
+      var resolve: js.UndefOr[
+            js.Function2[
+              /* specified */ java.lang.String, 
+              /* parent */ js.UndefOr[java.lang.String | org.scalajs.dom.experimental.URL], 
+              js.Promise[java.lang.String]
+            ]
+          ] = js.undefined
+      
+      var url: java.lang.String
+    }
+    object ImportMeta {
+      
+      @scala.inline
+      def apply(url: java.lang.String): ImportMeta = {
+        val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
+        __obj.asInstanceOf[ImportMeta]
+      }
+      
+      @scala.inline
+      implicit class ImportMetaMutableBuilder[Self <: ImportMeta] (val x: Self) extends AnyVal {
+        
+        @scala.inline
+        def setResolve(
+          value: (/* specified */ java.lang.String, /* parent */ js.UndefOr[java.lang.String | org.scalajs.dom.experimental.URL]) => js.Promise[java.lang.String]
+        ): Self = StObject.set(x, "resolve", js.Any.fromFunction2(value))
+        
+        @scala.inline
+        def setResolveUndefined: Self = StObject.set(x, "resolve", js.undefined)
+        
+        @scala.inline
+        def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
+      }
+    }
+  }
 }

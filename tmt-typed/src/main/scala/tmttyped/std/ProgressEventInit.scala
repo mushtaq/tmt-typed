@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ProgressEventInit extends EventInit {
+trait ProgressEventInit
+  extends StObject
+     with EventInit {
   
   var lengthComputable: js.UndefOr[scala.Boolean] = js.undefined
   

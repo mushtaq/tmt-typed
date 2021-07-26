@@ -21,7 +21,7 @@ object Reflect {
     * @param argumentsList An array of argument values to be passed to the function.
     */
   @scala.inline
-  def apply(target: js.Function, thisArgument: js.Any, argumentsList: ArrayLike[_]): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("apply")(target.asInstanceOf[js.Any], thisArgument.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def apply(target: js.Function, thisArgument: js.Any, argumentsList: ArrayLike[js.Any]): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("apply")(target.asInstanceOf[js.Any], thisArgument.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any])).asInstanceOf[js.Any]
   
   /**
     * Constructs the target with the elements of specified array as the arguments
@@ -31,9 +31,9 @@ object Reflect {
     * @param newTarget The constructor to be used as the `new.target` object.
     */
   @scala.inline
-  def construct(target: js.Function, argumentsList: ArrayLike[_]): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("construct")(target.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def construct(target: js.Function, argumentsList: ArrayLike[js.Any]): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("construct")(target.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any])).asInstanceOf[js.Any]
   @scala.inline
-  def construct(target: js.Function, argumentsList: ArrayLike[_], newTarget: js.Function): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("construct")(target.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any], newTarget.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def construct(target: js.Function, argumentsList: ArrayLike[js.Any], newTarget: js.Function): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("construct")(target.asInstanceOf[js.Any], argumentsList.asInstanceOf[js.Any], newTarget.asInstanceOf[js.Any])).asInstanceOf[js.Any]
   
   /**
     * Adds a property to an object, or modifies attributes of an existing property.

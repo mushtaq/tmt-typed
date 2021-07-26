@@ -1,13 +1,14 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SignPrivateKeyInput
-  extends PrivateKeyInput
+  extends StObject
+     with PrivateKeyInput
      with SigningOptions
 object SignPrivateKeyInput {
   

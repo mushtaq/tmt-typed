@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SetupFrame extends Frame {
+trait SetupFrame
+  extends StObject
+     with Frame {
   
   var data: js.UndefOr[Encodable] = js.undefined
   
@@ -62,9 +64,6 @@ object SetupFrame {
     def setDataMimeType(value: String): Self = StObject.set(x, "dataMimeType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
     @scala.inline
@@ -92,9 +91,6 @@ object SetupFrame {
     def setMetadataMimeType(value: String): Self = StObject.set(x, "metadataMimeType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setMetadataUndefined: Self = StObject.set(x, "metadata", js.undefined)
     
     @scala.inline
@@ -102,9 +98,6 @@ object SetupFrame {
     
     @scala.inline
     def setResumeToken(value: Encodable): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResumeTokenUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setResumeTokenUndefined: Self = StObject.set(x, "resumeToken", js.undefined)

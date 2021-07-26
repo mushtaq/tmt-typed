@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ScrollToOptions extends ScrollOptions {
+trait ScrollToOptions
+  extends StObject
+     with ScrollOptions {
   
   var left: js.UndefOr[Double] = js.undefined
   

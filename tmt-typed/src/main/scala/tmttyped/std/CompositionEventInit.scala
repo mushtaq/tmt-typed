@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CompositionEventInit extends UIEventInit {
+trait CompositionEventInit
+  extends StObject
+     with UIEventInit {
   
   var data: js.UndefOr[java.lang.String] = js.undefined
 }

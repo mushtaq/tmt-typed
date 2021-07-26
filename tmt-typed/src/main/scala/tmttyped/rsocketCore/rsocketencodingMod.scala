@@ -1,6 +1,6 @@
 package tmttyped.rsocketCore
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.rsocketTypes.reactiveSocketTypesMod.Encodable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js

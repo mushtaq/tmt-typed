@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AudioWorkletNode")
 @js.native
 class AudioWorkletNode protected ()
-  extends tmttyped.std.AudioWorkletNode {
+  extends StObject
+     with tmttyped.std.AudioWorkletNode {
   def this(context: tmttyped.std.BaseAudioContext, name: java.lang.String) = this()
   def this(context: tmttyped.std.BaseAudioContext, name: java.lang.String, options: AudioWorkletNodeOptions) = this()
 }

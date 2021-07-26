@@ -38,13 +38,13 @@ trait NotificationOptions extends StObject {
 object NotificationOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.NotificationOptions = {
+  def apply(): NotificationOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.NotificationOptions]
+    __obj.asInstanceOf[NotificationOptions]
   }
   
   @scala.inline
-  implicit class NotificationOptionsMutableBuilder[Self <: org.scalajs.dom.experimental.NotificationOptions] (val x: Self) extends AnyVal {
+  implicit class NotificationOptionsMutableBuilder[Self <: NotificationOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setActions(value: js.Array[NotificationAction]): Self = StObject.set(x, "actions", value.asInstanceOf[js.Any])

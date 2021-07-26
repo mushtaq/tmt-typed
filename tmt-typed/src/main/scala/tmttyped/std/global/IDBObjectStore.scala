@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBObjectStore")
 @js.native
 class IDBObjectStore ()
-  extends tmttyped.std.IDBObjectStore
+  extends StObject
+     with tmttyped.std.IDBObjectStore

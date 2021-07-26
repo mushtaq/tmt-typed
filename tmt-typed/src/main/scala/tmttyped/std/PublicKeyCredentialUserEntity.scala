@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PublicKeyCredentialUserEntity extends PublicKeyCredentialEntity {
+trait PublicKeyCredentialUserEntity
+  extends StObject
+     with PublicKeyCredentialEntity {
   
   var displayName: java.lang.String
   
@@ -27,11 +29,5 @@ object PublicKeyCredentialUserEntity {
     
     @scala.inline
     def setId(value: BufferSource): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIdArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIdArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
   }
 }

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLRenderingContext")
 @js.native
 class WebGLRenderingContext ()
-  extends tmttyped.std.WebGLRenderingContext
+  extends StObject
+     with tmttyped.std.WebGLRenderingContext
 object WebGLRenderingContext {
   
   @JSGlobal("WebGLRenderingContext.ACTIVE_ATTRIBUTES")

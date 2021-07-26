@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSMediaKeys")
 @js.native
 class MSMediaKeys protected ()
-  extends tmttyped.std.MSMediaKeys {
+  extends StObject
+     with tmttyped.std.MSMediaKeys {
   def this(keySystem: java.lang.String) = this()
 }
 object MSMediaKeys {

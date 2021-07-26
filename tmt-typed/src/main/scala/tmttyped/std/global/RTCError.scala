@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCError")
 @js.native
 class RTCError protected ()
-  extends tmttyped.std.RTCError {
+  extends StObject
+     with tmttyped.std.RTCError {
   def this(init: RTCErrorInit) = this()
   def this(init: RTCErrorInit, message: java.lang.String) = this()
   
@@ -95,9 +96,6 @@ class RTCError protected ()
   
   /* CompleteClass */
   override val errorDetail: RTCErrorDetailType = js.native
-  
-  /* CompleteClass */
-  override val httpRequestStatusCode: Double | Null = js.native
   
   /* CompleteClass */
   override val message: java.lang.String = js.native

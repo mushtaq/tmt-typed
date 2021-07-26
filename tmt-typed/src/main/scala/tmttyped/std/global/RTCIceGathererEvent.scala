@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIceGathererEvent")
 @js.native
 class RTCIceGathererEvent ()
-  extends tmttyped.std.RTCIceGathererEvent
+  extends StObject
+     with tmttyped.std.RTCIceGathererEvent

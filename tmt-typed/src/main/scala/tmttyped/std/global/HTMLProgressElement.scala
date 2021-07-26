@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLProgressElement")
 @js.native
 class HTMLProgressElement ()
-  extends tmttyped.std.HTMLProgressElement {
+  extends StObject
+     with tmttyped.std.HTMLProgressElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

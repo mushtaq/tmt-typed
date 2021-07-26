@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ClientRectList")
 @js.native
 class ClientRectList ()
-  extends tmttyped.std.ClientRectList
+  extends StObject
+     with tmttyped.std.ClientRectList

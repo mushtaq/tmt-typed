@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait MapConstructor
-  extends Instantiable0[Map[js.Any | js.Object, js.Any | js.Object]]
+  extends StObject
+     with Instantiable0[Map[js.Any | js.Object, js.Any | js.Object]]
      with Instantiable1[
       (/* entries */ js.Array[js.Tuple2[js.Object, js.Object]]) | (/* iterable */ js.Iterable[js.Tuple2[js.Object, js.Object]]), 
       Map[js.Object, js.Object]

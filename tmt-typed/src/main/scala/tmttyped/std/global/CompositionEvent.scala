@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CompositionEvent")
 @js.native
 class CompositionEvent protected ()
-  extends tmttyped.std.CompositionEvent {
+  extends StObject
+     with tmttyped.std.CompositionEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: CompositionEventInit) = this()
 }

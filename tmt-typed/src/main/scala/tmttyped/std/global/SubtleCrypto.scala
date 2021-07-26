@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SubtleCrypto")
 @js.native
 class SubtleCrypto ()
-  extends tmttyped.std.SubtleCrypto
+  extends StObject
+     with tmttyped.std.SubtleCrypto

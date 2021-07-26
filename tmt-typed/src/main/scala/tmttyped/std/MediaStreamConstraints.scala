@@ -16,19 +16,16 @@ trait MediaStreamConstraints extends StObject {
 object MediaStreamConstraints {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.mediastream.MediaStreamConstraints = {
+  def apply(): MediaStreamConstraints = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.mediastream.MediaStreamConstraints]
+    __obj.asInstanceOf[MediaStreamConstraints]
   }
   
   @scala.inline
-  implicit class MediaStreamConstraintsMutableBuilder[Self <: org.scalajs.dom.experimental.mediastream.MediaStreamConstraints] (val x: Self) extends AnyVal {
+  implicit class MediaStreamConstraintsMutableBuilder[Self <: MediaStreamConstraints] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAudio(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "audio", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAudioMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "audio", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAudioUndefined: Self = StObject.set(x, "audio", js.undefined)
@@ -41,9 +38,6 @@ object MediaStreamConstraints {
     
     @scala.inline
     def setVideo(value: scala.Boolean | org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "video", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVideoMediaTrackConstraints(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraints): Self = StObject.set(x, "video", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVideoUndefined: Self = StObject.set(x, "video", js.undefined)

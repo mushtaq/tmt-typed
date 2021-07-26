@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("EventTarget")
 @js.native
 class EventTarget ()
-  extends tmttyped.std.EventTarget
+  extends StObject
+     with tmttyped.std.EventTarget

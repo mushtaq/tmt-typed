@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TreeWalker")
 @js.native
 class TreeWalker ()
-  extends tmttyped.std.TreeWalker {
+  extends StObject
+     with tmttyped.std.TreeWalker {
   
   /* CompleteClass */
   override var currentNode: org.scalajs.dom.raw.Node = js.native

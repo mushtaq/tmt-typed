@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Geolocation")
 @js.native
 class Geolocation ()
-  extends tmttyped.std.Geolocation
+  extends StObject
+     with tmttyped.std.Geolocation

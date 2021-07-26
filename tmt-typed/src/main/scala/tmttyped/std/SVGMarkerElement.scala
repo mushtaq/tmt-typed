@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait SVGMarkerElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFitToViewBox {
   
   val SVG_MARKERUNITS_STROKEWIDTH: Double = js.native

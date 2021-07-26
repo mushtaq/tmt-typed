@@ -1,6 +1,5 @@
 package tmttyped.std.global
 
-import tmttyped.std.AlgorithmIdentifier
 import tmttyped.std.RTCDtlsFingerprint
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -11,20 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCCertificate")
 @js.native
 class RTCCertificate ()
-  extends tmttyped.std.RTCCertificate {
+  extends StObject
+     with tmttyped.std.RTCCertificate {
   
   /* CompleteClass */
   override val expires: Double = js.native
   
   /* CompleteClass */
   override def getFingerprints(): js.Array[RTCDtlsFingerprint] = js.native
-}
-object RTCCertificate {
-  
-  @JSGlobal("RTCCertificate")
-  @js.native
-  val ^ : js.Any = js.native
-  
-  @scala.inline
-  def getSupportedAlgorithms(): js.Array[AlgorithmIdentifier] = ^.asInstanceOf[js.Dynamic].applyDynamic("getSupportedAlgorithms")().asInstanceOf[js.Array[AlgorithmIdentifier]]
 }

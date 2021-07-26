@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait DocumentEventMap
-  extends GlobalEventHandlersEventMap
+  extends StObject
+     with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap {
   
   var fullscreenchange: org.scalajs.dom.raw.Event

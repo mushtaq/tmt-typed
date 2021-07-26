@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Keyframe
-  extends /* property */ StringDictionary[js.UndefOr[java.lang.String | Double | Null]] {
+  extends StObject
+     with /* property */ StringDictionary[js.UndefOr[java.lang.String | Double | Null]] {
   
   var composite: js.UndefOr[CompositeOperationOrAuto] = js.undefined
   

@@ -10,7 +10,9 @@ object flowableProcessorMod {
   
   @JSImport("rsocket-flowable/FlowableProcessor", JSImport.Default)
   @js.native
-  class default[T, R] protected () extends FlowableProcessor[T, R] {
+  class default[T, R] protected ()
+    extends StObject
+       with FlowableProcessor[T, R] {
     def this(source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ js.Any) = this()
     def this(
       source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ js.Any,
@@ -43,7 +45,7 @@ object flowableProcessorMod {
     def subscribe(): Unit = js.native
     def subscribe(
       subscriber: Partial[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<R> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<R> */ js.Any
         ]
     ): Unit = js.native
   }

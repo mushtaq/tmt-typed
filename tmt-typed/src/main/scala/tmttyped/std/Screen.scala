@@ -33,13 +33,13 @@ object Screen {
     orientation: ScreenOrientation,
     pixelDepth: Double,
     width: Double
-  ): org.scalajs.dom.raw.Screen = {
+  ): Screen = {
     val __obj = js.Dynamic.literal(availHeight = availHeight.asInstanceOf[js.Any], availWidth = availWidth.asInstanceOf[js.Any], colorDepth = colorDepth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], pixelDepth = pixelDepth.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.Screen]
+    __obj.asInstanceOf[Screen]
   }
   
   @scala.inline
-  implicit class ScreenMutableBuilder[Self <: org.scalajs.dom.raw.Screen] (val x: Self) extends AnyVal {
+  implicit class ScreenMutableBuilder[Self <: Screen] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAvailHeight(value: Double): Self = StObject.set(x, "availHeight", value.asInstanceOf[js.Any])

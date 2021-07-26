@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PageTransitionEventInit extends EventInit {
+trait PageTransitionEventInit
+  extends StObject
+     with EventInit {
   
   var persisted: js.UndefOr[scala.Boolean] = js.undefined
 }

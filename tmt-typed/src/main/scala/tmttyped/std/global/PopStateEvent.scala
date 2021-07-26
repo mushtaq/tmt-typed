@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PopStateEvent")
 @js.native
 class PopStateEvent protected ()
-  extends tmttyped.std.PopStateEvent {
+  extends StObject
+     with tmttyped.std.PopStateEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: PopStateEventInit) = this()
 }

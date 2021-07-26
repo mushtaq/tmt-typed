@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** The DOM CompositionEvent represents events that occur due to the user indirectly entering text. */
 @js.native
-trait CompositionEvent extends UIEvent {
+trait CompositionEvent
+  extends StObject
+     with UIEvent {
   
   val data: java.lang.String = js.native
 }

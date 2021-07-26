@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TransformStreamDefaultController")
 @js.native
 class TransformStreamDefaultController ()
-  extends tmttyped.std.TransformStreamDefaultController[js.Any]
+  extends StObject
+     with tmttyped.std.TransformStreamDefaultController[js.Any]

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMMatrixReadOnly")
 @js.native
 class DOMMatrixReadOnly ()
-  extends tmttyped.std.DOMMatrixReadOnly {
+  extends StObject
+     with tmttyped.std.DOMMatrixReadOnly {
   def this(init: java.lang.String) = this()
   def this(init: js.Array[Double]) = this()
 }

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MediaStreamErrorEventInit extends EventInit {
+trait MediaStreamErrorEventInit
+  extends StObject
+     with EventInit {
   
   var error: js.UndefOr[MediaStreamError | Null] = js.undefined
 }

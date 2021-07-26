@@ -1,6 +1,5 @@
 package tmttyped.node.anon
 
-import tmttyped.node.fsMod.OpenMode
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +9,7 @@ trait Flag extends StObject {
   
   var encoding: js.UndefOr[Null] = js.undefined
   
-  var flag: js.UndefOr[OpenMode] = js.undefined
+  var flag: js.UndefOr[String] = js.undefined
 }
 object Flag {
   
@@ -24,7 +23,7 @@ object Flag {
   implicit class FlagMutableBuilder[Self <: Flag] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setFlag(value: OpenMode): Self = StObject.set(x, "flag", value.asInstanceOf[js.Any])
+    def setFlag(value: String): Self = StObject.set(x, "flag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFlagUndefined: Self = StObject.set(x, "flag", js.undefined)

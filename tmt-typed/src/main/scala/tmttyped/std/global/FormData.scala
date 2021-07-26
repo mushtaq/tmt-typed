@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("FormData")
 @js.native
 class FormData ()
-  extends tmttyped.std.FormData {
+  extends StObject
+     with tmttyped.std.FormData {
   def this(form: org.scalajs.dom.raw.HTMLFormElement) = this()
 }

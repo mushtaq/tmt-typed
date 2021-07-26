@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaList")
 @js.native
 class MediaList ()
-  extends tmttyped.std.MediaList
+  extends StObject
+     with tmttyped.std.MediaList

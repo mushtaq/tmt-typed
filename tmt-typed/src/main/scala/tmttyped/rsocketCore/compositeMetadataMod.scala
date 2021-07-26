@@ -1,6 +1,6 @@
 package tmttyped.rsocketCore
 
-import tmttyped.node.Buffer
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.rsocketCore.wellKnownMimeTypeMod.default
 import tmttyped.std.Iterable
 import tmttyped.std.Map
@@ -17,13 +17,17 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "CompositeMetadata")
   @js.native
-  class CompositeMetadata protected () extends Iterable[Entry] {
+  class CompositeMetadata protected ()
+    extends StObject
+       with Iterable[Entry] {
     def this(buffer: Buffer) = this()
   }
   
   @JSImport("rsocket-core/CompositeMetadata", "ExplicitMimeTimeEntry")
   @js.native
-  class ExplicitMimeTimeEntry protected () extends Entry {
+  class ExplicitMimeTimeEntry protected ()
+    extends StObject
+       with Entry {
     def this(content: Buffer, `type`: String) = this()
     
     /**
@@ -40,7 +44,9 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "ReservedMimeTypeEntry")
   @js.native
-  class ReservedMimeTypeEntry protected () extends Entry {
+  class ReservedMimeTypeEntry protected ()
+    extends StObject
+       with Entry {
     def this(content: Buffer, `type`: Double) = this()
     
     /**
@@ -56,7 +62,7 @@ object compositeMetadataMod {
       * always {@code null}.
       */
     @JSName("mimeType")
-    val mimeType_ReservedMimeTypeEntry: js.UndefOr[scala.Nothing] = js.native
+    val mimeType_ReservedMimeTypeEntry: Unit = js.native
     
     /**
       * Returns the reserved, but unknown {@link WellKnownMimeType} for this entry. Range is 0-127
@@ -69,7 +75,9 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "WellKnownMimeTypeEntry")
   @js.native
-  class WellKnownMimeTypeEntry protected () extends Entry {
+  class WellKnownMimeTypeEntry protected ()
+    extends StObject
+       with Entry {
     def this(content: Buffer, `type`: default) = this()
     
     /**

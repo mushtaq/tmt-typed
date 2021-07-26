@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ClientRect")
 @js.native
 class ClientRect ()
-  extends tmttyped.std.ClientRect {
+  extends StObject
+     with tmttyped.std.ClientRect {
   
   /* CompleteClass */
   override var bottom: Double = js.native

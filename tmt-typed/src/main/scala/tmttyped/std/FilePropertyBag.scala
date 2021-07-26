@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait FilePropertyBag extends BlobPropertyBag {
+trait FilePropertyBag
+  extends StObject
+     with BlobPropertyBag {
   
   var lastModified: js.UndefOr[Double] = js.undefined
 }

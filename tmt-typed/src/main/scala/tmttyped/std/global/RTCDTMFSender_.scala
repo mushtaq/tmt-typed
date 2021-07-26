@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCDTMFSender")
 @js.native
 class RTCDTMFSender_ ()
-  extends tmttyped.std.RTCDTMFSender_
+  extends StObject
+     with tmttyped.std.RTCDTMFSender_

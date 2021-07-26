@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PaymentDetailsInit extends PaymentDetailsBase {
+trait PaymentDetailsInit
+  extends StObject
+     with PaymentDetailsBase {
   
   var id: js.UndefOr[java.lang.String] = js.undefined
   

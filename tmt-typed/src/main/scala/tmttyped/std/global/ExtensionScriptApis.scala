@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ExtensionScriptApis")
 @js.native
 class ExtensionScriptApis ()
-  extends tmttyped.std.ExtensionScriptApis
+  extends StObject
+     with tmttyped.std.ExtensionScriptApis

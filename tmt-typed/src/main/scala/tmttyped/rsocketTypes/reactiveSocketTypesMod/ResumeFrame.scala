@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ResumeFrame extends Frame {
+trait ResumeFrame
+  extends StObject
+     with Frame {
   
   var clientPosition: Double
   
@@ -66,9 +68,6 @@ object ResumeFrame {
     
     @scala.inline
     def setResumeToken(value: Encodable): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResumeTokenUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setServerPosition(value: Double): Self = StObject.set(x, "serverPosition", value.asInstanceOf[js.Any])

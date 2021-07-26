@@ -9,9 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Animation")
 @js.native
 class Animation ()
-  extends tmttyped.std.Animation {
+  extends StObject
+     with tmttyped.std.Animation {
   def this(effect: tmttyped.std.AnimationEffect) = this()
-  def this(effect: js.UndefOr[scala.Nothing], timeline: tmttyped.std.AnimationTimeline) = this()
   def this(effect: Null, timeline: tmttyped.std.AnimationTimeline) = this()
+  def this(effect: Unit, timeline: tmttyped.std.AnimationTimeline) = this()
   def this(effect: tmttyped.std.AnimationEffect, timeline: tmttyped.std.AnimationTimeline) = this()
 }

@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Uint32ArrayConstructor
-  extends Instantiable0[js.typedarray.Uint32Array]
+  extends StObject
+     with Instantiable0[js.typedarray.Uint32Array]
      with Instantiable1[
       (/* array */ ArrayBufferLike) | (/* array */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
       js.typedarray.Uint32Array
@@ -19,7 +20,7 @@ trait Uint32ArrayConstructor
      with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, js.typedarray.Uint32Array]
      with Instantiable3[
       /* buffer */ ArrayBufferLike, 
-      js.UndefOr[/* byteOffset */ Double], 
+      (/* byteOffset */ Double) | (/* byteOffset */ Unit), 
       /* length */ Double, 
       js.typedarray.Uint32Array
     ] {
@@ -36,13 +37,13 @@ trait Uint32ArrayConstructor
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
   def from(arrayLike: js.Iterable[Double]): js.typedarray.Uint32Array = js.native
-  def from(arrayLike: js.Iterable[Double], mapfn: js.UndefOr[scala.Nothing], thisArg: js.Any): js.typedarray.Uint32Array = js.native
   def from(arrayLike: js.Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): js.typedarray.Uint32Array = js.native
   def from(
     arrayLike: js.Iterable[Double],
     mapfn: js.Function2[/* v */ Double, /* k */ Double, Double],
     thisArg: js.Any
   ): js.typedarray.Uint32Array = js.native
+  def from(arrayLike: js.Iterable[Double], mapfn: Unit, thisArg: js.Any): js.typedarray.Uint32Array = js.native
   /**
     * Creates an array from an array-like or iterable object.
     * @param arrayLike An array-like or iterable object to convert to an array.

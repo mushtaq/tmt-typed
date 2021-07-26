@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <symbol> element. */
 @js.native
 trait SVGSymbolElement
-  extends SVGElement
+  extends StObject
+     with SVGElement
      with SVGFitToViewBox {
   
   /* InferMemberOverrides */

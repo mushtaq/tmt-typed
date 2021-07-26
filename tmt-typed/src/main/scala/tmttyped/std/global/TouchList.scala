@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TouchList")
 @js.native
 class TouchList ()
-  extends tmttyped.std.TouchList
+  extends StObject
+     with tmttyped.std.TouchList

@@ -7,8 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SecureServerSessionOptions
-  extends TlsOptions
+  extends StObject
      with ServerSessionOptions
+     with TlsOptions
 object SecureServerSessionOptions {
   
   @scala.inline

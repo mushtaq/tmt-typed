@@ -22,13 +22,13 @@ trait ClientRect extends StObject {
 object ClientRect {
   
   @scala.inline
-  def apply(bottom: Double, height: Double, left: Double, right: Double, top: Double, width: Double): org.scalajs.dom.raw.ClientRect = {
+  def apply(bottom: Double, height: Double, left: Double, right: Double, top: Double, width: Double): ClientRect = {
     val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.ClientRect]
+    __obj.asInstanceOf[ClientRect]
   }
   
   @scala.inline
-  implicit class ClientRectMutableBuilder[Self <: org.scalajs.dom.raw.ClientRect] (val x: Self) extends AnyVal {
+  implicit class ClientRectMutableBuilder[Self <: ClientRect] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setBottom(value: Double): Self = StObject.set(x, "bottom", value.asInstanceOf[js.Any])

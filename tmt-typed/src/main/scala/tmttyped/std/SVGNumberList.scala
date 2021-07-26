@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The SVGNumberList defines a list of SVGNumber objects. */
 @js.native
 trait SVGNumberList
-  extends /* index */ NumberDictionary[org.scalajs.dom.raw.SVGNumber] {
+  extends StObject
+     with /* index */ NumberDictionary[org.scalajs.dom.raw.SVGNumber] {
   
   def appendItem(newItem: org.scalajs.dom.raw.SVGNumber): org.scalajs.dom.raw.SVGNumber = js.native
   

@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("File")
 @js.native
 class File protected ()
-  extends tmttyped.std.File {
+  extends StObject
+     with tmttyped.std.File {
   def this(fileBits: js.Array[BlobPart], fileName: java.lang.String) = this()
   def this(fileBits: js.Array[BlobPart], fileName: java.lang.String, options: FilePropertyBag) = this()
 }

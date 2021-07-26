@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ScrollIntoViewOptions extends ScrollOptions {
+trait ScrollIntoViewOptions
+  extends StObject
+     with ScrollOptions {
   
   var block: js.UndefOr[ScrollLogicalPosition] = js.undefined
   

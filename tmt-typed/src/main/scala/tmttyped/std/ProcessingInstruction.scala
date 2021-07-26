@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A processing instruction embeds application-specific instructions in XML which can be ignored by other applications that don't recognize them. */
 @js.native
 trait ProcessingInstruction
-  extends CharacterData
+  extends StObject
+     with CharacterData
      with LinkStyle {
   
   val target: java.lang.String = js.native

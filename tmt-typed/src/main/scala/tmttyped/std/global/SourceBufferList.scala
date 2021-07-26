@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SourceBufferList")
 @js.native
 class SourceBufferList ()
-  extends tmttyped.std.SourceBufferList
+  extends StObject
+     with tmttyped.std.SourceBufferList

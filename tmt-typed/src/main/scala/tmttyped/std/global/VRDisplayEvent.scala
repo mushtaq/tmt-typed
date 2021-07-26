@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VRDisplayEvent")
 @js.native
 class VRDisplayEvent protected ()
-  extends tmttyped.std.VRDisplayEvent {
+  extends StObject
+     with tmttyped.std.VRDisplayEvent {
   def this(`type`: java.lang.String, eventInitDict: VRDisplayEventInit) = this()
 }

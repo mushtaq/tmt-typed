@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait InputDeviceInfo extends MediaDeviceInfo {
+trait InputDeviceInfo
+  extends StObject
+     with MediaDeviceInfo {
   
   def getCapabilities(): MediaTrackCapabilities
 }

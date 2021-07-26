@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.EnumeratorConstructor
 import tmttyped.std.anon.Item
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -10,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Enumerator")
 @js.native
 class Enumerator[T] protected ()
-  extends tmttyped.std.Enumerator[T] {
+  extends StObject
+     with tmttyped.std.Enumerator[T] {
   def this(collection: js.Any) = this()
   def this(collection: Item[T]) = this()
   def this(safearray: tmttyped.std.SafeArray[T]) = this()
@@ -41,4 +43,9 @@ class Enumerator[T] protected ()
     */
   /* CompleteClass */
   override def moveNext(): Unit = js.native
+}
+object Enumerator {
+  
+  @scala.inline
+  def apply: EnumeratorConstructor = js.Dynamic.global.selectDynamic("Enumerator").asInstanceOf[EnumeratorConstructor]
 }

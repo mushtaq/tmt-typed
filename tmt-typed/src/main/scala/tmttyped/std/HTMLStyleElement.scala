@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle. */
 @js.native
 trait HTMLStyleElement
-  extends HTMLElement
+  extends StObject
+     with HTMLElement
      with LinkStyle {
   
   /* InferMemberOverrides */

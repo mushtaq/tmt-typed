@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebSocket")
 @js.native
 class WebSocket protected ()
-  extends tmttyped.std.WebSocket {
+  extends StObject
+     with tmttyped.std.WebSocket {
   def this(url: java.lang.String) = this()
   def this(url: java.lang.String, protocols: java.lang.String) = this()
   def this(url: java.lang.String, protocols: js.Array[java.lang.String]) = this()

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ClipboardEvent")
 @js.native
 class ClipboardEvent protected ()
-  extends tmttyped.std.ClipboardEvent {
+  extends StObject
+     with tmttyped.std.ClipboardEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: ClipboardEventInit) = this()
 }

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ServiceWorkerEventMap extends AbstractWorkerEventMap {
+trait ServiceWorkerEventMap
+  extends StObject
+     with AbstractWorkerEventMap {
   
   var statechange: org.scalajs.dom.raw.Event
 }

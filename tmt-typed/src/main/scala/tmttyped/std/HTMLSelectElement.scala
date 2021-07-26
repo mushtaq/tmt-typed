@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A <select> HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface. */
 @js.native
 trait HTMLSelectElement
-  extends HTMLElement
+  extends StObject
+     with HTMLElement
      with /* name */ NumberDictionary[org.scalajs.dom.raw.HTMLOptionElement | org.scalajs.dom.raw.HTMLOptGroupElement] {
   
   def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native

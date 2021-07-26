@@ -1,5 +1,6 @@
 package tmttyped.node.childProcessMod
 
+import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.processMod.global.NodeJS.ProcessEnv
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ProcessEnvOptions extends StObject {
   
-  var cwd: js.UndefOr[String] = js.undefined
+  var cwd: js.UndefOr[String | URL] = js.undefined
   
   var env: js.UndefOr[ProcessEnv] = js.undefined
   
@@ -28,7 +29,7 @@ object ProcessEnvOptions {
   implicit class ProcessEnvOptionsMutableBuilder[Self <: ProcessEnvOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCwd(value: String): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
+    def setCwd(value: String | URL): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCwdUndefined: Self = StObject.set(x, "cwd", js.undefined)

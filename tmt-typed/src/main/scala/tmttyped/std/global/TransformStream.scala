@@ -11,25 +11,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TransformStream")
 @js.native
 class TransformStream[I, O] ()
-  extends tmttyped.std.TransformStream[I, O] {
+  extends StObject
+     with tmttyped.std.TransformStream[I, O] {
   def this(transformer: Transformer[I, O]) = this()
-  def this(transformer: js.UndefOr[scala.Nothing], writableStrategy: QueuingStrategy[I]) = this()
+  def this(transformer: Unit, writableStrategy: QueuingStrategy[I]) = this()
   def this(transformer: Transformer[I, O], writableStrategy: QueuingStrategy[I]) = this()
-  def this(
-    transformer: js.UndefOr[scala.Nothing],
-    writableStrategy: js.UndefOr[scala.Nothing],
-    readableStrategy: QueuingStrategy[O]
-  ) = this()
-  def this(
-    transformer: js.UndefOr[scala.Nothing],
-    writableStrategy: QueuingStrategy[I],
-    readableStrategy: QueuingStrategy[O]
-  ) = this()
-  def this(
-    transformer: Transformer[I, O],
-    writableStrategy: js.UndefOr[scala.Nothing],
-    readableStrategy: QueuingStrategy[O]
-  ) = this()
+  def this(transformer: Unit, writableStrategy: Unit, readableStrategy: QueuingStrategy[O]) = this()
+  def this(transformer: Unit, writableStrategy: QueuingStrategy[I], readableStrategy: QueuingStrategy[O]) = this()
+  def this(transformer: Transformer[I, O], writableStrategy: Unit, readableStrategy: QueuingStrategy[O]) = this()
   def this(
     transformer: Transformer[I, O],
     writableStrategy: QueuingStrategy[I],

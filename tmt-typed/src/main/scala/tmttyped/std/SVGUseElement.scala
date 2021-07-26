@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <use> element. */
 @js.native
 trait SVGUseElement
-  extends SVGGraphicsElement
+  extends StObject
+     with SVGGraphicsElement
      with SVGURIReference {
   
   /* InferMemberOverrides */
@@ -22,11 +23,7 @@ trait SVGUseElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val animatedInstanceRoot: org.scalajs.dom.raw.SVGElementInstance | Null = js.native
-  
   val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  
-  val instanceRoot: org.scalajs.dom.raw.SVGElementInstance | Null = js.native
   
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native

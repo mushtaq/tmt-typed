@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("FileReader")
 @js.native
 class FileReader ()
-  extends tmttyped.std.FileReader
+  extends StObject
+     with tmttyped.std.FileReader
 object FileReader {
   
   @JSGlobal("FileReader.DONE")

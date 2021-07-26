@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaDevices")
 @js.native
 class MediaDevices ()
-  extends tmttyped.std.MediaDevices
+  extends StObject
+     with tmttyped.std.MediaDevices

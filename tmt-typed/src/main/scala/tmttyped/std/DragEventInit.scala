@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait DragEventInit extends MouseEventInit {
+trait DragEventInit
+  extends StObject
+     with MouseEventInit {
   
   var dataTransfer: js.UndefOr[org.scalajs.dom.raw.DataTransfer | Null] = js.undefined
 }

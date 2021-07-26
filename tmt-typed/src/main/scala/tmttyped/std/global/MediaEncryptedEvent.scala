@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaEncryptedEvent")
 @js.native
 class MediaEncryptedEvent protected ()
-  extends tmttyped.std.MediaEncryptedEvent {
+  extends StObject
+     with tmttyped.std.MediaEncryptedEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: MediaEncryptedEventInit) = this()
 }

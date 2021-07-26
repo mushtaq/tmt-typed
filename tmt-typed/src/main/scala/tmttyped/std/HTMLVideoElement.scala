@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement. */
 @js.native
-trait HTMLVideoElement extends HTMLMediaElement {
+trait HTMLVideoElement
+  extends StObject
+     with HTMLMediaElement {
   
   def getVideoPlaybackQuality(): VideoPlaybackQuality = js.native
   

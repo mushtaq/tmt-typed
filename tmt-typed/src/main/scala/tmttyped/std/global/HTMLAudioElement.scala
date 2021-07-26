@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLAudioElement")
 @js.native
 class HTMLAudioElement ()
-  extends tmttyped.std.HTMLAudioElement {
+  extends StObject
+     with tmttyped.std.HTMLAudioElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

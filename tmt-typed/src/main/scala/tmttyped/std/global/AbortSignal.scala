@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AbortSignal")
 @js.native
 class AbortSignal ()
-  extends tmttyped.std.AbortSignal
+  extends StObject
+     with tmttyped.std.AbortSignal

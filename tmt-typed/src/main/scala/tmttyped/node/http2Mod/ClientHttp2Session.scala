@@ -12,8 +12,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClientHttp2Session extends Http2Session {
+trait ClientHttp2Session extends StObject {
   
+  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_altsvc(
     event: altsvc,
@@ -37,6 +39,8 @@ trait ClientHttp2Session extends Http2Session {
     ]
   ): this.type = js.native
   
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_altsvc(event: altsvc, alt: String, origin: String, stream: Double): Boolean = js.native
   @JSName("emit")
@@ -53,6 +57,8 @@ trait ClientHttp2Session extends Http2Session {
     flags: Double
   ): Boolean = js.native
   
+  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
   def on_altsvc(
     event: altsvc,
@@ -76,6 +82,8 @@ trait ClientHttp2Session extends Http2Session {
     ]
   ): this.type = js.native
   
+  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")
   def once_altsvc(
     event: altsvc,
@@ -99,6 +107,8 @@ trait ClientHttp2Session extends Http2Session {
     ]
   ): this.type = js.native
   
+  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_altsvc(
     event: altsvc,
@@ -122,6 +132,8 @@ trait ClientHttp2Session extends Http2Session {
     ]
   ): this.type = js.native
   
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_altsvc(
     event: altsvc,
@@ -145,8 +157,48 @@ trait ClientHttp2Session extends Http2Session {
     ]
   ): this.type = js.native
   
+  /**
+    * For HTTP/2 Client `Http2Session` instances only, the `http2session.request()`creates and returns an `Http2Stream` instance that can be used to send an
+    * HTTP/2 request to the connected server.
+    *
+    * This method is only available if `http2session.type` is equal to`http2.constants.NGHTTP2_SESSION_CLIENT`.
+    *
+    * ```js
+    * const http2 = require('http2');
+    * const clientSession = http2.connect('https://localhost:1234');
+    * const {
+    *   HTTP2_HEADER_PATH,
+    *   HTTP2_HEADER_STATUS
+    * } = http2.constants;
+    *
+    * const req = clientSession.request({ [HTTP2_HEADER_PATH]: '/' });
+    * req.on('response', (headers) => {
+    *   console.log(headers[HTTP2_HEADER_STATUS]);
+    *   req.on('data', (chunk) => { // ..  });
+    *   req.on('end', () => { // ..  });
+    * });
+    * ```
+    *
+    * When the `options.waitForTrailers` option is set, the `'wantTrailers'` event
+    * is emitted immediately after queuing the last chunk of payload data to be sent.
+    * The `http2stream.sendTrailers()` method can then be called to send trailing
+    * headers to the peer.
+    *
+    * When `options.waitForTrailers` is set, the `Http2Stream` will not automatically
+    * close when the final `DATA` frame is transmitted. User code must call either`http2stream.sendTrailers()` or `http2stream.close()` to close the`Http2Stream`.
+    *
+    * When `options.signal` is set with an `AbortSignal` and then `abort` on the
+    * corresponding `AbortController` is called, the request will emit an `'error'`event with an `AbortError` error.
+    *
+    * The `:method` and `:path` pseudo-headers are not specified within `headers`,
+    * they respectively default to:
+    *
+    * * `:method` \= `'GET'`
+    * * `:path` \= `/`
+    * @since v8.4.0
+    */
   def request(): ClientHttp2Stream = js.native
-  def request(headers: js.UndefOr[scala.Nothing], options: ClientSessionRequestOptions): ClientHttp2Stream = js.native
+  def request(headers: Unit, options: ClientSessionRequestOptions): ClientHttp2Stream = js.native
   def request(headers: OutgoingHttpHeaders): ClientHttp2Stream = js.native
   def request(headers: OutgoingHttpHeaders, options: ClientSessionRequestOptions): ClientHttp2Stream = js.native
 }

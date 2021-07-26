@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCDataChannelEvent")
 @js.native
 class RTCDataChannelEvent protected ()
-  extends tmttyped.std.RTCDataChannelEvent {
+  extends StObject
+     with tmttyped.std.RTCDataChannelEvent {
   def this(`type`: java.lang.String, eventInitDict: RTCDataChannelEventInit) = this()
 }

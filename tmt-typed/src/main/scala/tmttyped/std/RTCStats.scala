@@ -16,13 +16,13 @@ trait RTCStats extends StObject {
 object RTCStats {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.webrtc.RTCStats = {
+  def apply(): RTCStats = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCStats]
+    __obj.asInstanceOf[RTCStats]
   }
   
   @scala.inline
-  implicit class RTCStatsMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCStats] (val x: Self) extends AnyVal {
+  implicit class RTCStatsMutableBuilder[Self <: RTCStats] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])

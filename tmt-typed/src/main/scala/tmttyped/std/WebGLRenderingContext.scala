@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML <canvas> element. */
 @js.native
 trait WebGLRenderingContext
-  extends WebGLRenderingContextBase
+  extends StObject
+     with WebGLRenderingContextBase
      with WebGLRenderingContextOverloads

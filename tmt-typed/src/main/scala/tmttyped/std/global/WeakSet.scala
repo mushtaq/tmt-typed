@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.WeakSetConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WeakSet")
 @js.native
 class WeakSet[T /* <: js.Object */] ()
-  extends tmttyped.std.WeakSet[T] {
+  extends StObject
+     with tmttyped.std.WeakSet[T] {
   def this(iterable: js.Iterable[T]) = this()
   def this(values: js.Array[T]) = this()
+}
+object WeakSet {
+  
+  @scala.inline
+  def apply: WeakSetConstructor = js.Dynamic.global.selectDynamic("WeakSet").asInstanceOf[WeakSetConstructor]
 }

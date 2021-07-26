@@ -18,7 +18,6 @@ import tmttyped.std.stdStrings.aside
 import tmttyped.std.stdStrings.audio
 import tmttyped.std.stdStrings.b
 import tmttyped.std.stdStrings.base
-import tmttyped.std.stdStrings.basefont
 import tmttyped.std.stdStrings.bdi
 import tmttyped.std.stdStrings.bdo
 import tmttyped.std.stdStrings.blockquote
@@ -195,7 +194,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. */
 @js.native
 trait Document
-  extends Node
+  extends StObject
+     with Node
      with DocumentAndElementEventHandlers
      with DocumentOrShadowRoot
      with GlobalEventHandlers
@@ -221,109 +221,109 @@ trait Document
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
   /**
     * Moves node from another document and returns it.
-    * 
+    *
     * If node is a document, throws a "NotSupportedError" DOMException or, if node is a shadow root, throws a "HierarchyRequestError" DOMException.
     */
   def adoptNode[T /* <: org.scalajs.dom.raw.Node */](source: T): T = js.native
@@ -396,9 +396,9 @@ trait Document
   
   /**
     * Returns the HTTP cookies that apply to the Document. If there are no cookies or cookies can't be applied to this resource, the empty string will be returned.
-    * 
+    *
     * Can be set, to add a new cookie to the element's set of HTTP cookies.
-    * 
+    *
     * If the contents are sandboxed into a unique origin (e.g. in an iframe with the sandbox attribute), a "SecurityError" DOMException will be thrown on getting and setting.
     */
   var cookie: java.lang.String = js.native
@@ -502,17 +502,17 @@ trait Document
   def createElementNS(namespace: Null, qualifiedName: java.lang.String, options: java.lang.String): org.scalajs.dom.raw.Element = js.native
   /**
     * Returns an element with namespace namespace. Its namespace prefix will be everything before ":" (U+003E) in qualifiedName or null. Its local name will be everything after ":" (U+003E) in qualifiedName or qualifiedName.
-    * 
+    *
     * If localName does not match the Name production an "InvalidCharacterError" DOMException will be thrown.
-    * 
+    *
     * If one of the following conditions is true a "NamespaceError" DOMException will be thrown:
-    * 
+    *
     * localName does not match the QName production.
     * Namespace prefix is not null and namespace is the empty string.
     * Namespace prefix is "xml" and namespace is not the XML namespace.
     * qualifiedName or namespace prefix is "xmlns" and namespace is not the XMLNS namespace.
     * namespace is the XMLNS namespace and neither qualifiedName nor namespace prefix is "xmlns".
-    * 
+    *
     * When supplied, options's is can be used to create a customized built-in element.
     */
   @JSName("createElementNS")
@@ -567,10 +567,6 @@ trait Document
   def createElement_base(tagName: base): org.scalajs.dom.raw.HTMLBaseElement = js.native
   @JSName("createElement")
   def createElement_base(tagName: base, options: ElementCreationOptions): org.scalajs.dom.raw.HTMLBaseElement = js.native
-  @JSName("createElement")
-  def createElement_basefont(tagName: basefont): HTMLBaseFontElement = js.native
-  @JSName("createElement")
-  def createElement_basefont(tagName: basefont, options: ElementCreationOptions): HTMLBaseFontElement = js.native
   @JSName("createElement")
   def createElement_bdi(tagName: bdi): org.scalajs.dom.raw.HTMLElement = js.native
   @JSName("createElement")
@@ -1031,8 +1027,6 @@ trait Document
   @JSName("createEvent")
   def createEvent_CustomEvent(eventInterface: tmttyped.std.stdStrings.CustomEvent): org.scalajs.dom.raw.CustomEvent = js.native
   @JSName("createEvent")
-  def createEvent_DeviceLightEvent(eventInterface: tmttyped.std.stdStrings.DeviceLightEvent): DeviceLightEvent = js.native
-  @JSName("createEvent")
   def createEvent_DeviceMotionEvent(eventInterface: tmttyped.std.stdStrings.DeviceMotionEvent): org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent = js.native
   @JSName("createEvent")
   def createEvent_DeviceOrientationEvent(eventInterface: tmttyped.std.stdStrings.DeviceOrientationEvent): org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent = js.native
@@ -1061,14 +1055,6 @@ trait Document
   @JSName("createEvent")
   def createEvent_ListeningStateChangedEvent(eventInterface: tmttyped.std.stdStrings.ListeningStateChangedEvent): ListeningStateChangedEvent = js.native
   @JSName("createEvent")
-  def createEvent_MSGestureEvent(eventInterface: tmttyped.std.stdStrings.MSGestureEvent): MSGestureEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSMediaKeyMessageEvent(eventInterface: tmttyped.std.stdStrings.MSMediaKeyMessageEvent): MSMediaKeyMessageEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSMediaKeyNeededEvent(eventInterface: tmttyped.std.stdStrings.MSMediaKeyNeededEvent): MSMediaKeyNeededEvent = js.native
-  @JSName("createEvent")
-  def createEvent_MSPointerEvent(eventInterface: tmttyped.std.stdStrings.MSPointerEvent): MSPointerEvent = js.native
-  @JSName("createEvent")
   def createEvent_MediaEncryptedEvent(eventInterface: tmttyped.std.stdStrings.MediaEncryptedEvent): MediaEncryptedEvent = js.native
   @JSName("createEvent")
   def createEvent_MediaKeyMessageEvent(eventInterface: tmttyped.std.stdStrings.MediaKeyMessageEvent): MediaKeyMessageEvent = js.native
@@ -1096,6 +1082,8 @@ trait Document
   def createEvent_OverflowEvent(eventInterface: tmttyped.std.stdStrings.OverflowEvent): OverflowEvent = js.native
   @JSName("createEvent")
   def createEvent_PageTransitionEvent(eventInterface: tmttyped.std.stdStrings.PageTransitionEvent): PageTransitionEvent = js.native
+  @JSName("createEvent")
+  def createEvent_PaymentMethodChangeEvent(eventInterface: tmttyped.std.stdStrings.PaymentMethodChangeEvent): PaymentMethodChangeEvent = js.native
   @JSName("createEvent")
   def createEvent_PaymentRequestUpdateEvent(eventInterface: tmttyped.std.stdStrings.PaymentRequestUpdateEvent): PaymentRequestUpdateEvent = js.native
   @JSName("createEvent")
@@ -1129,8 +1117,6 @@ trait Document
   @JSName("createEvent")
   def createEvent_RTCSsrcConflictEvent(eventInterface: tmttyped.std.stdStrings.RTCSsrcConflictEvent): RTCSsrcConflictEvent = js.native
   @JSName("createEvent")
-  def createEvent_RTCStatsEvent(eventInterface: tmttyped.std.stdStrings.RTCStatsEvent): RTCStatsEvent = js.native
-  @JSName("createEvent")
   def createEvent_RTCTrackEvent(eventInterface: tmttyped.std.stdStrings.RTCTrackEvent): RTCTrackEvent = js.native
   @JSName("createEvent")
   def createEvent_SVGZoomEvent(eventInterface: tmttyped.std.stdStrings.SVGZoomEvent): SVGZoomEvent = js.native
@@ -1138,8 +1124,6 @@ trait Document
   def createEvent_SVGZoomEvents(eventInterface: SVGZoomEvents): SVGZoomEvent = js.native
   @JSName("createEvent")
   def createEvent_SecurityPolicyViolationEvent(eventInterface: tmttyped.std.stdStrings.SecurityPolicyViolationEvent): SecurityPolicyViolationEvent = js.native
-  @JSName("createEvent")
-  def createEvent_ServiceWorkerMessageEvent(eventInterface: tmttyped.std.stdStrings.ServiceWorkerMessageEvent): ServiceWorkerMessageEvent = js.native
   @JSName("createEvent")
   def createEvent_SpeechRecognitionErrorEvent(eventInterface: tmttyped.std.stdStrings.SpeechRecognitionErrorEvent): SpeechRecognitionErrorEvent = js.native
   @JSName("createEvent")
@@ -1179,13 +1163,9 @@ trait Document
     * @param entityReferenceExpansion A flag that specifies whether entity reference nodes are expanded.
     */
   def createNodeIterator(root: org.scalajs.dom.raw.Node): org.scalajs.dom.raw.NodeIterator = js.native
-  def createNodeIterator(
-    root: org.scalajs.dom.raw.Node,
-    whatToShow: js.UndefOr[scala.Nothing],
-    filter: org.scalajs.dom.raw.NodeFilter
-  ): org.scalajs.dom.raw.NodeIterator = js.native
   def createNodeIterator(root: org.scalajs.dom.raw.Node, whatToShow: Double): org.scalajs.dom.raw.NodeIterator = js.native
   def createNodeIterator(root: org.scalajs.dom.raw.Node, whatToShow: Double, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.NodeIterator = js.native
+  def createNodeIterator(root: org.scalajs.dom.raw.Node, whatToShow: Unit, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.NodeIterator = js.native
   
   /**
     * Returns a ProcessingInstruction node whose target is target and data is data. If target does not match the Name production an "InvalidCharacterError" DOMException will be thrown. If data contains "?>" an "InvalidCharacterError" DOMException will be thrown.
@@ -1211,11 +1191,6 @@ trait Document
     * @param entityReferenceExpansion A flag that specifies whether entity reference nodes are expanded.
     */
   def createTreeWalker(root: org.scalajs.dom.raw.Node): org.scalajs.dom.raw.TreeWalker = js.native
-  def createTreeWalker(
-    root: org.scalajs.dom.raw.Node,
-    whatToShow: js.UndefOr[scala.Nothing],
-    filter: org.scalajs.dom.raw.NodeFilter
-  ): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Double, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.TreeWalker = js.native
   def createTreeWalker(
@@ -1230,10 +1205,11 @@ trait Document
     filter: Null,
     entityReferenceExpansion: scala.Boolean
   ): org.scalajs.dom.raw.TreeWalker = js.native
+  def createTreeWalker(root: org.scalajs.dom.raw.Node, whatToShow: Unit, filter: org.scalajs.dom.raw.NodeFilter): org.scalajs.dom.raw.TreeWalker = js.native
   
   /**
     * Returns the script element, or the SVG script element, that is currently executing, as long as the element represents a classic script. In the case of reentrant script execution, returns the one that most recently started executing amongst those that have not yet finished executing.
-    * 
+    *
     * Returns null if the Document is not currently executing a script or SVG script element (e.g., because the running script is an event handler, or a timeout), or if the currently executing script or SVG script element represents a module script.
     */
   val currentScript: HTMLOrSVGScriptElement | Null = js.native
@@ -1282,9 +1258,9 @@ trait Document
     * @param value Value to assign.
     */
   def execCommand(commandId: java.lang.String): scala.Boolean = js.native
-  def execCommand(commandId: java.lang.String, showUI: js.UndefOr[scala.Nothing], value: java.lang.String): scala.Boolean = js.native
   def execCommand(commandId: java.lang.String, showUI: scala.Boolean): scala.Boolean = js.native
   def execCommand(commandId: java.lang.String, showUI: scala.Boolean, value: java.lang.String): scala.Boolean = js.native
+  def execCommand(commandId: java.lang.String, showUI: Unit, value: java.lang.String): scala.Boolean = js.native
   
   /**
     * Stops document's fullscreen element from being displayed fullscreen and resolves promise when done.
@@ -1330,11 +1306,11 @@ trait Document
   def getElementsByTagNameNS(namespaceURI: java.lang.String, localName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.raw.Element] = js.native
   /**
     * If namespace and localName are "*" returns a HTMLCollection of all descendant elements.
-    * 
+    *
     * If only namespace is "*" returns a HTMLCollection of all descendant elements whose local name is localName.
-    * 
+    *
     * If only localName is "*" returns a HTMLCollection of all descendant elements whose namespace is namespace.
-    * 
+    *
     * Otherwise, returns a HTMLCollection of all descendant elements whose namespace is namespace and local name is localName.
     */
   @JSName("getElementsByTagNameNS")
@@ -1366,8 +1342,6 @@ trait Document
   def getElementsByTagName_b(qualifiedName: b): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_base(qualifiedName: base): HTMLCollectionOf[org.scalajs.dom.raw.HTMLBaseElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_basefont(qualifiedName: basefont): HTMLCollectionOf[HTMLBaseFontElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_bdi(qualifiedName: bdi): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
@@ -1715,7 +1689,7 @@ trait Document
   
   /**
     * Returns a copy of node. If deep is true, the copy also includes the node's descendants.
-    * 
+    *
     * If node is a document or a shadow root, throws a "NotSupportedError" DOMException.
     */
   def importNode[T /* <: org.scalajs.dom.raw.Node */](importedNode: T, deep: scala.Boolean): T = js.native
@@ -1746,21 +1720,21 @@ trait Document
     */
   var location: org.scalajs.dom.raw.Location = js.native
   
-  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
-  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
-  var onpointerlockchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onpointerlockchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
-  var onpointerlockerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onpointerlockerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
   /**
     * Fires when the state of the object has changed.
     * @param ev The event
     */
-  var onreadystatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onreadystatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
-  var onvisibilitychange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onvisibilitychange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
   
   /**
     * Opens a new window and loads a document specified by a given URL. Also, opens a new window that uses the url parameter and the name parameter to collect the output of the write method and the writeln method.
@@ -1770,56 +1744,21 @@ trait Document
     * @param replace Specifies whether the existing entry for the document is replaced in the history list.
     */
   def open(): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    name: js.UndefOr[scala.Nothing],
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
-  def open(url: js.UndefOr[scala.Nothing], name: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    name: js.UndefOr[scala.Nothing],
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
-  def open(url: js.UndefOr[scala.Nothing], name: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    name: java.lang.String,
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
-  def open(url: js.UndefOr[scala.Nothing], name: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    name: java.lang.String,
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
   def open(url: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: java.lang.String,
-    name: js.UndefOr[scala.Nothing],
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
-  def open(url: java.lang.String, name: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: java.lang.String,
-    name: js.UndefOr[scala.Nothing],
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
   def open(url: java.lang.String, name: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def open(
-    url: java.lang.String,
-    name: java.lang.String,
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Document = js.native
   def open(url: java.lang.String, name: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
   def open(url: java.lang.String, name: java.lang.String, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: java.lang.String, name: java.lang.String, features: Unit, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: java.lang.String, name: Unit, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  def open(url: java.lang.String, name: Unit, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: java.lang.String, name: Unit, features: Unit, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: java.lang.String, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: java.lang.String, features: Unit, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: Unit, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: Unit, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
+  def open(url: Unit, name: Unit, features: Unit, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
   
   @JSName("ownerDocument")
   val ownerDocument_Document: Null = js.native
@@ -1885,103 +1824,103 @@ trait Document
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockchange(
     `type`: pointerlockchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pointerlockerror(
     `type`: pointerlockerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_visibilitychange(
     `type`: visibilitychange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): Unit = js.native
   

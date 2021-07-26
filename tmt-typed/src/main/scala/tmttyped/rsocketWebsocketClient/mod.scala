@@ -14,6 +14,6 @@ object mod {
   class default protected ()
     extends tmttyped.rsocketWebsocketClient.rsocketwebsocketclientMod.default {
     def this(options: ClientOptions) = this()
-    def this(options: ClientOptions, encoders: Encoders[_]) = this()
+    def this(options: ClientOptions, encoders: Encoders[js.Any]) = this()
   }
 }

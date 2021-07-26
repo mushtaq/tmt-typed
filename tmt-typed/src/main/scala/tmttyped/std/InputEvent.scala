@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InputEvent extends UIEvent {
+trait InputEvent
+  extends StObject
+     with UIEvent {
   
   val data: java.lang.String | Null = js.native
   

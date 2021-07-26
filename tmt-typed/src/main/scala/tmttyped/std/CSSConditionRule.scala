@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A single condition CSS at-rule, which consists of a condition and a statement block. It is a child of CSSGroupingRule. */
 @js.native
-trait CSSConditionRule extends CSSGroupingRule {
+trait CSSConditionRule
+  extends StObject
+     with CSSGroupingRule {
   
   var conditionText: java.lang.String = js.native
 }

@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.PromiseConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Promise")
 @js.native
 class Promise[T] protected ()
-  extends tmttyped.std.Promise[T] {
+  extends StObject
+     with tmttyped.std.Promise[T] {
   /**
     * Creates a new Promise.
     * @param executor A callback used to initialize the promise. This callback is passed two arguments:
@@ -21,4 +23,9 @@ class Promise[T] protected ()
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
         Unit
       ]) = this()
+}
+object Promise {
+  
+  @scala.inline
+  def apply: PromiseConstructor = js.Dynamic.global.selectDynamic("Promise").asInstanceOf[PromiseConstructor]
 }

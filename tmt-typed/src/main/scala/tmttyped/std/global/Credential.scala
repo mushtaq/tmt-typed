@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Credential")
 @js.native
 class Credential ()
-  extends tmttyped.std.Credential {
+  extends StObject
+     with tmttyped.std.Credential {
   
   /* CompleteClass */
   override val id: java.lang.String = js.native

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SyncManager")
 @js.native
 class SyncManager ()
-  extends tmttyped.std.SyncManager {
+  extends StObject
+     with tmttyped.std.SyncManager {
   
   /* CompleteClass */
   override def getTags(): js.Promise[js.Array[java.lang.String]] = js.native

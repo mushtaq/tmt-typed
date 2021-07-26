@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("NodeList")
 @js.native
 class NodeList ()
-  extends tmttyped.std.NodeList
+  extends StObject
+     with tmttyped.std.NodeList

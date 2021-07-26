@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <image> element. */
 @js.native
 trait SVGImageElement
-  extends SVGGraphicsElement
+  extends StObject
+     with SVGGraphicsElement
      with SVGURIReference {
   
   /* InferMemberOverrides */

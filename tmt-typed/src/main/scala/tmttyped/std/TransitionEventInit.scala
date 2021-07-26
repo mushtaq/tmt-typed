@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait TransitionEventInit extends EventInit {
+trait TransitionEventInit
+  extends StObject
+     with EventInit {
   
   var elapsedTime: js.UndefOr[Double] = js.undefined
   

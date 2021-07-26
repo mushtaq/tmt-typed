@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait CloseEventInit extends EventInit {
+trait CloseEventInit
+  extends StObject
+     with EventInit {
   
   var code: js.UndefOr[Double] = js.undefined
   

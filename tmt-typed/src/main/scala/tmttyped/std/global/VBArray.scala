@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.VBArrayConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VBArray")
 @js.native
 class VBArray[T] protected ()
-  extends tmttyped.std.VBArray[T] {
+  extends StObject
+     with tmttyped.std.VBArray[T] {
   def this(safeArray: tmttyped.std.SafeArray[T]) = this()
+}
+object VBArray {
+  
+  @scala.inline
+  def apply: VBArrayConstructor = js.Dynamic.global.selectDynamic("VBArray").asInstanceOf[VBArrayConstructor]
 }

@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SVGElementEventMap
-  extends ElementEventMap
+  extends StObject
+     with ElementEventMap
      with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap
 object SVGElementEventMap {

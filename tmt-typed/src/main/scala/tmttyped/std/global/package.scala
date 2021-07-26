@@ -13,15 +13,8 @@ package object global {
   def ActiveXObject_=(x: tmttyped.std.ActiveXObject): scala.Unit = js.Dynamic.global.updateDynamic("ActiveXObject")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def AggregateError: tmttyped.std.AggregateErrorConstructor = js.Dynamic.global.selectDynamic("AggregateError").asInstanceOf[tmttyped.std.AggregateErrorConstructor]
-  @scala.inline
   def AggregateError_=(x: tmttyped.std.AggregateErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("AggregateError")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Array: tmttyped.std.ArrayConstructor = js.Dynamic.global.selectDynamic("Array").asInstanceOf[tmttyped.std.ArrayConstructor]
-  
-  @scala.inline
-  def ArrayBuffer: tmttyped.std.ArrayBufferConstructor = js.Dynamic.global.selectDynamic("ArrayBuffer").asInstanceOf[tmttyped.std.ArrayBufferConstructor]
   @scala.inline
   def ArrayBuffer_=(x: tmttyped.std.ArrayBufferConstructor): scala.Unit = js.Dynamic.global.updateDynamic("ArrayBuffer")(x.asInstanceOf[js.Any])
   
@@ -37,65 +30,41 @@ package object global {
   def BigInt: tmttyped.std.BigIntConstructor = js.Dynamic.global.selectDynamic("BigInt").asInstanceOf[tmttyped.std.BigIntConstructor]
   
   @scala.inline
-  def BigInt64Array: tmttyped.std.BigInt64ArrayConstructor = js.Dynamic.global.selectDynamic("BigInt64Array").asInstanceOf[tmttyped.std.BigInt64ArrayConstructor]
-  @scala.inline
   def BigInt64Array_=(x: tmttyped.std.BigInt64ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigInt64Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def BigInt_=(x: tmttyped.std.BigIntConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigInt")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def BigUint64Array: tmttyped.std.BigUint64ArrayConstructor = js.Dynamic.global.selectDynamic("BigUint64Array").asInstanceOf[tmttyped.std.BigUint64ArrayConstructor]
-  @scala.inline
   def BigUint64Array_=(x: tmttyped.std.BigUint64ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("BigUint64Array")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Boolean: tmttyped.std.BooleanConstructor = js.Dynamic.global.selectDynamic("Boolean").asInstanceOf[tmttyped.std.BooleanConstructor]
   @scala.inline
   def Boolean_=(x: tmttyped.std.BooleanConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Boolean")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def DataView: tmttyped.std.DataViewConstructor = js.Dynamic.global.selectDynamic("DataView").asInstanceOf[tmttyped.std.DataViewConstructor]
-  @scala.inline
   def DataView_=(x: tmttyped.std.DataViewConstructor): scala.Unit = js.Dynamic.global.updateDynamic("DataView")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Date: tmttyped.std.DateConstructor = js.Dynamic.global.selectDynamic("Date").asInstanceOf[tmttyped.std.DateConstructor]
   @scala.inline
   def Date_=(x: tmttyped.std.DateConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Date")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Enumerator: tmttyped.std.EnumeratorConstructor = js.Dynamic.global.selectDynamic("Enumerator").asInstanceOf[tmttyped.std.EnumeratorConstructor]
-  @scala.inline
   def Enumerator_=(x: tmttyped.std.EnumeratorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Enumerator")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Error: tmttyped.std.ErrorConstructor = js.Dynamic.global.selectDynamic("Error").asInstanceOf[tmttyped.std.ErrorConstructor]
   @scala.inline
   def Error_=(x: tmttyped.std.ErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Error")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def EvalError: tmttyped.std.EvalErrorConstructor = js.Dynamic.global.selectDynamic("EvalError").asInstanceOf[tmttyped.std.EvalErrorConstructor]
-  @scala.inline
   def EvalError_=(x: tmttyped.std.EvalErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("EvalError")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def FinalizationRegistry: tmttyped.std.FinalizationRegistryConstructor = js.Dynamic.global.selectDynamic("FinalizationRegistry").asInstanceOf[tmttyped.std.FinalizationRegistryConstructor]
   @scala.inline
   def FinalizationRegistry_=(x: tmttyped.std.FinalizationRegistryConstructor): scala.Unit = js.Dynamic.global.updateDynamic("FinalizationRegistry")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Float32Array: tmttyped.std.Float32ArrayConstructor = js.Dynamic.global.selectDynamic("Float32Array").asInstanceOf[tmttyped.std.Float32ArrayConstructor]
-  @scala.inline
   def Float32Array_=(x: tmttyped.std.Float32ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Float32Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Float64Array: tmttyped.std.Float64ArrayConstructor = js.Dynamic.global.selectDynamic("Float64Array").asInstanceOf[tmttyped.std.Float64ArrayConstructor]
-  @scala.inline
   def Float64Array_=(x: tmttyped.std.Float64ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Float64Array")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Function: tmttyped.std.FunctionConstructor = js.Dynamic.global.selectDynamic("Function").asInstanceOf[tmttyped.std.FunctionConstructor]
   @scala.inline
   def Function_=(x: tmttyped.std.FunctionConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Function")(x.asInstanceOf[js.Any])
   
@@ -105,17 +74,11 @@ package object global {
   def Infinity_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("Infinity")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Int16Array: tmttyped.std.Int16ArrayConstructor = js.Dynamic.global.selectDynamic("Int16Array").asInstanceOf[tmttyped.std.Int16ArrayConstructor]
-  @scala.inline
   def Int16Array_=(x: tmttyped.std.Int16ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Int16Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Int32Array: tmttyped.std.Int32ArrayConstructor = js.Dynamic.global.selectDynamic("Int32Array").asInstanceOf[tmttyped.std.Int32ArrayConstructor]
-  @scala.inline
   def Int32Array_=(x: tmttyped.std.Int32ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Int32Array")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Int8Array: tmttyped.std.Int8ArrayConstructor = js.Dynamic.global.selectDynamic("Int8Array").asInstanceOf[tmttyped.std.Int8ArrayConstructor]
   @scala.inline
   def Int8Array_=(x: tmttyped.std.Int8ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Int8Array")(x.asInstanceOf[js.Any])
   
@@ -127,8 +90,6 @@ package object global {
   @scala.inline
   def JSON_=(x: tmttyped.std.JSON): scala.Unit = js.Dynamic.global.updateDynamic("JSON")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Map: tmttyped.std.MapConstructor = js.Dynamic.global.selectDynamic("Map").asInstanceOf[tmttyped.std.MapConstructor]
   @scala.inline
   def Map_=(x: tmttyped.std.MapConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Map")(x.asInstanceOf[js.Any])
   
@@ -146,22 +107,12 @@ package object global {
   @scala.inline
   def NaN_=(x: scala.Double): scala.Unit = js.Dynamic.global.updateDynamic("NaN")(x.asInstanceOf[js.Any])
   
-  /** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
-  @scala.inline
-  def Number: tmttyped.std.NumberConstructor = js.Dynamic.global.selectDynamic("Number").asInstanceOf[tmttyped.std.NumberConstructor]
   @scala.inline
   def Number_=(x: tmttyped.std.NumberConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Number")(x.asInstanceOf[js.Any])
   
-  /**
-    * Provides functionality common to all JavaScript objects.
-    */
-  @scala.inline
-  def Object: tmttyped.std.ObjectConstructor = js.Dynamic.global.selectDynamic("Object").asInstanceOf[tmttyped.std.ObjectConstructor]
   @scala.inline
   def Object_=(x: tmttyped.std.ObjectConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Object")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Promise: tmttyped.std.PromiseConstructor = js.Dynamic.global.selectDynamic("Promise").asInstanceOf[tmttyped.std.PromiseConstructor]
   @scala.inline
   def Promise_=(x: tmttyped.std.PromiseConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Promise")(x.asInstanceOf[js.Any])
   
@@ -171,17 +122,11 @@ package object global {
   def Proxy_=(x: tmttyped.std.ProxyConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Proxy")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def RangeError: tmttyped.std.RangeErrorConstructor = js.Dynamic.global.selectDynamic("RangeError").asInstanceOf[tmttyped.std.RangeErrorConstructor]
-  @scala.inline
   def RangeError_=(x: tmttyped.std.RangeErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("RangeError")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def ReferenceError: tmttyped.std.ReferenceErrorConstructor = js.Dynamic.global.selectDynamic("ReferenceError").asInstanceOf[tmttyped.std.ReferenceErrorConstructor]
-  @scala.inline
   def ReferenceError_=(x: tmttyped.std.ReferenceErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("ReferenceError")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def RegExp: tmttyped.std.RegExpConstructor = js.Dynamic.global.selectDynamic("RegExp").asInstanceOf[tmttyped.std.RegExpConstructor]
   @scala.inline
   def RegExp_=(x: tmttyped.std.RegExpConstructor): scala.Unit = js.Dynamic.global.updateDynamic("RegExp")(x.asInstanceOf[js.Any])
   
@@ -191,20 +136,11 @@ package object global {
   def ServiceUIFrameContext_=(x: tmttyped.std.ServiceUIFrameContext): scala.Unit = js.Dynamic.global.updateDynamic("ServiceUIFrameContext")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Set: tmttyped.std.SetConstructor = js.Dynamic.global.selectDynamic("Set").asInstanceOf[tmttyped.std.SetConstructor]
-  @scala.inline
   def Set_=(x: tmttyped.std.SetConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Set")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def SharedArrayBuffer: tmttyped.std.SharedArrayBufferConstructor = js.Dynamic.global.selectDynamic("SharedArrayBuffer").asInstanceOf[tmttyped.std.SharedArrayBufferConstructor]
-  @scala.inline
   def SharedArrayBuffer_=(x: tmttyped.std.SharedArrayBufferConstructor): scala.Unit = js.Dynamic.global.updateDynamic("SharedArrayBuffer")(x.asInstanceOf[js.Any])
   
-  /**
-    * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
-    */
-  @scala.inline
-  def String: tmttyped.std.StringConstructor = js.Dynamic.global.selectDynamic("String").asInstanceOf[tmttyped.std.StringConstructor]
   @scala.inline
   def String_=(x: tmttyped.std.StringConstructor): scala.Unit = js.Dynamic.global.updateDynamic("String")(x.asInstanceOf[js.Any])
   
@@ -212,57 +148,35 @@ package object global {
   def Symbol: tmttyped.std.SymbolConstructor = js.Dynamic.global.selectDynamic("Symbol").asInstanceOf[tmttyped.std.SymbolConstructor]
   
   @scala.inline
-  def SyntaxError: tmttyped.std.SyntaxErrorConstructor = js.Dynamic.global.selectDynamic("SyntaxError").asInstanceOf[tmttyped.std.SyntaxErrorConstructor]
-  @scala.inline
   def SyntaxError_=(x: tmttyped.std.SyntaxErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("SyntaxError")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def TypeError: tmttyped.std.TypeErrorConstructor = js.Dynamic.global.selectDynamic("TypeError").asInstanceOf[tmttyped.std.TypeErrorConstructor]
   @scala.inline
   def TypeError_=(x: tmttyped.std.TypeErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("TypeError")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def URIError: tmttyped.std.URIErrorConstructor = js.Dynamic.global.selectDynamic("URIError").asInstanceOf[tmttyped.std.URIErrorConstructor]
-  @scala.inline
   def URIError_=(x: tmttyped.std.URIErrorConstructor): scala.Unit = js.Dynamic.global.updateDynamic("URIError")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Uint16Array: tmttyped.std.Uint16ArrayConstructor = js.Dynamic.global.selectDynamic("Uint16Array").asInstanceOf[tmttyped.std.Uint16ArrayConstructor]
   @scala.inline
   def Uint16Array_=(x: tmttyped.std.Uint16ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Uint16Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Uint32Array: tmttyped.std.Uint32ArrayConstructor = js.Dynamic.global.selectDynamic("Uint32Array").asInstanceOf[tmttyped.std.Uint32ArrayConstructor]
-  @scala.inline
   def Uint32Array_=(x: tmttyped.std.Uint32ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Uint32Array")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def Uint8Array: tmttyped.std.Uint8ArrayConstructor = js.Dynamic.global.selectDynamic("Uint8Array").asInstanceOf[tmttyped.std.Uint8ArrayConstructor]
   @scala.inline
   def Uint8Array_=(x: tmttyped.std.Uint8ArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Uint8Array")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def Uint8ClampedArray: tmttyped.std.Uint8ClampedArrayConstructor = js.Dynamic.global.selectDynamic("Uint8ClampedArray").asInstanceOf[tmttyped.std.Uint8ClampedArrayConstructor]
-  @scala.inline
   def Uint8ClampedArray_=(x: tmttyped.std.Uint8ClampedArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("Uint8ClampedArray")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def VBArray: tmttyped.std.VBArrayConstructor = js.Dynamic.global.selectDynamic("VBArray").asInstanceOf[tmttyped.std.VBArrayConstructor]
   @scala.inline
   def VBArray_=(x: tmttyped.std.VBArrayConstructor): scala.Unit = js.Dynamic.global.updateDynamic("VBArray")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def WeakMap: tmttyped.std.WeakMapConstructor = js.Dynamic.global.selectDynamic("WeakMap").asInstanceOf[tmttyped.std.WeakMapConstructor]
-  @scala.inline
   def WeakMap_=(x: tmttyped.std.WeakMapConstructor): scala.Unit = js.Dynamic.global.updateDynamic("WeakMap")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def WeakRef: tmttyped.std.WeakRefConstructor = js.Dynamic.global.selectDynamic("WeakRef").asInstanceOf[tmttyped.std.WeakRefConstructor]
-  @scala.inline
   def WeakRef_=(x: tmttyped.std.WeakRefConstructor): scala.Unit = js.Dynamic.global.updateDynamic("WeakRef")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def WeakSet: tmttyped.std.WeakSetConstructor = js.Dynamic.global.selectDynamic("WeakSet").asInstanceOf[tmttyped.std.WeakSetConstructor]
   @scala.inline
   def WeakSet_=(x: tmttyped.std.WeakSetConstructor): scala.Unit = js.Dynamic.global.updateDynamic("WeakSet")(x.asInstanceOf[js.Any])
   
@@ -282,308 +196,38 @@ package object global {
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def addEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
   def addEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -593,7 +237,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -602,7 +246,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -612,7 +256,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -623,7 +267,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -632,7 +276,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -642,7 +286,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -653,7 +297,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -662,7 +306,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -672,7 +316,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -683,7 +327,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -692,7 +336,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -702,7 +346,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -710,54 +354,66 @@ package object global {
   @scala.inline
   def addEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -767,7 +423,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -776,7 +432,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -786,7 +442,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -794,144 +450,168 @@ package object global {
   @scala.inline
   def addEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -941,7 +621,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -950,7 +630,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -960,7 +640,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -971,7 +651,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -980,7 +660,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -990,7 +670,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1001,7 +681,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1010,7 +690,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1020,7 +700,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1028,72 +708,78 @@ package object global {
   @scala.inline
   def addEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -1103,7 +789,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1112,7 +798,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1122,7 +808,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1133,7 +819,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1142,7 +828,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1152,7 +838,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1163,7 +849,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1172,7 +858,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1182,7 +868,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1190,270 +876,402 @@ package object global {
   @scala.inline
   def addEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -1463,7 +1281,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1472,7 +1290,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1482,7 +1300,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1493,7 +1311,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1502,7 +1320,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1512,7 +1330,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1520,18 +1338,30 @@ package object global {
   @scala.inline
   def addEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -1541,7 +1371,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -1550,7 +1380,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1560,7 +1390,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1568,738 +1398,1050 @@ package object global {
   @scala.inline
   def addEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -2309,7 +2451,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2318,7 +2460,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2328,7 +2470,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2336,54 +2478,54 @@ package object global {
   @scala.inline
   def addEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -2393,7 +2535,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2402,7 +2544,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2412,7 +2554,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2420,270 +2562,330 @@ package object global {
   @scala.inline
   def addEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -2693,7 +2895,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2702,7 +2904,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2712,7 +2914,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2723,7 +2925,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2732,7 +2934,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2742,7 +2944,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2753,7 +2955,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2762,7 +2964,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2772,7 +2974,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2783,7 +2985,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2792,7 +2994,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2802,7 +3004,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2813,7 +3015,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -2822,7 +3024,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2832,7 +3034,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -2840,234 +3042,192 @@ package object global {
   @scala.inline
   def addEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: tmttyped.std.AddEventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def addEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def addEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def addEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def addEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ],
     options: tmttyped.std.AddEventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("addEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -3667,25 +3827,6 @@ package object global {
       js.Any
     ]) | scala.Null
   ): scala.Unit = js.Dynamic.global.updateDynamic("ondblclick")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def ondevicelight: (js.ThisFunction1[
-    /* this */ org.scalajs.dom.raw.Window, 
-    /* ev */ tmttyped.std.DeviceLightEvent, 
-    js.Any
-  ]) | scala.Null = js.Dynamic.global.selectDynamic("ondevicelight").asInstanceOf[(js.ThisFunction1[
-    /* this */ org.scalajs.dom.raw.Window, 
-    /* ev */ tmttyped.std.DeviceLightEvent, 
-    js.Any
-  ]) | scala.Null]
-  @scala.inline
-  def ondevicelight_=(
-    x: (js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
-      /* ev */ tmttyped.std.DeviceLightEvent, 
-      js.Any
-    ]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("ondevicelight")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def ondevicemotion: (js.ThisFunction1[
@@ -4399,111 +4540,6 @@ package object global {
   def onmousewheel_=(
     x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
   ): scala.Unit = js.Dynamic.global.updateDynamic("onmousewheel")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgesturechange: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgesturechange").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgesturechange_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgesturechange")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgesturedoubletap: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgesturedoubletap").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgesturedoubletap_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgesturedoubletap")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgestureend: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgestureend").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgestureend_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgestureend")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgesturehold: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgesturehold").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgesturehold_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgesturehold")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgesturestart: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgesturestart").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgesturestart_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgesturestart")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsgesturetap: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsgesturetap").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsgesturetap_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsgesturetap")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmsinertiastart: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmsinertiastart").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmsinertiastart_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmsinertiastart")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointercancel: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointercancel").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointercancel_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointercancel")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerdown: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerdown").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerdown_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerdown")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerenter: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerenter").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerenter_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerenter")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerleave: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerleave").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerleave_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerleave")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointermove: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointermove").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointermove_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointermove")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerout: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerout").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerout_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerout")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerover: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerover").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerover_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerover")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onmspointerup: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onmspointerup").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onmspointerup_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onmspointerup")(x.asInstanceOf[js.Any])
   
   @scala.inline
   def onoffline: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onoffline").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
@@ -5251,27 +5287,6 @@ package object global {
   ): scala.Unit = js.Dynamic.global.updateDynamic("onvrdisplaydisconnect")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def onvrdisplayfocus: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onvrdisplayfocus").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onvrdisplayfocus_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onvrdisplayfocus")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onvrdisplaypointerrestricted: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onvrdisplaypointerrestricted").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onvrdisplaypointerrestricted_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onvrdisplaypointerrestricted")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def onvrdisplaypointerunrestricted: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onvrdisplaypointerunrestricted").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
-  @scala.inline
-  def onvrdisplaypointerunrestricted_=(
-    x: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null
-  ): scala.Unit = js.Dynamic.global.updateDynamic("onvrdisplaypointerunrestricted")(x.asInstanceOf[js.Any])
-  
-  @scala.inline
   def onvrdisplaypresentchange: (js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null = js.Dynamic.global.selectDynamic("onvrdisplaypresentchange").asInstanceOf[(js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | scala.Null]
   @scala.inline
   def onvrdisplaypresentchange_=(
@@ -5311,66 +5326,9 @@ package object global {
   @scala.inline
   def open(): org.scalajs.dom.raw.Window | scala.Null = js.Dynamic.global.applyDynamic("open")().asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   @scala.inline
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    target: js.UndefOr[scala.Nothing],
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(url: js.UndefOr[scala.Nothing], target: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    target: js.UndefOr[scala.Nothing],
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(url: js.UndefOr[scala.Nothing], target: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    target: java.lang.String,
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(url: js.UndefOr[scala.Nothing], target: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(
-    url: js.UndefOr[scala.Nothing],
-    target: java.lang.String,
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
   def open(url: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   @scala.inline
-  def open(
-    url: java.lang.String,
-    target: js.UndefOr[scala.Nothing],
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(url: java.lang.String, target: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(
-    url: java.lang.String,
-    target: js.UndefOr[scala.Nothing],
-    features: java.lang.String,
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
   def open(url: java.lang.String, target: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
-  @scala.inline
-  def open(
-    url: java.lang.String,
-    target: java.lang.String,
-    features: js.UndefOr[scala.Nothing],
-    replace: scala.Boolean
-  ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   @scala.inline
   def open(url: java.lang.String, target: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   @scala.inline
@@ -5380,11 +5338,33 @@ package object global {
     features: java.lang.String,
     replace: scala.Boolean
   ): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: java.lang.String, target: java.lang.String, features: scala.Unit, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: java.lang.String, target: scala.Unit, features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: java.lang.String, target: scala.Unit, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: java.lang.String, target: scala.Unit, features: scala.Unit, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: java.lang.String, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: java.lang.String, features: scala.Unit, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: scala.Unit, features: java.lang.String): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: scala.Unit, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
+  @scala.inline
+  def open(url: scala.Unit, target: scala.Unit, features: scala.Unit, replace: scala.Boolean): org.scalajs.dom.raw.Window | scala.Null = (js.Dynamic.global.applyDynamic("open")(url.asInstanceOf[js.Any], target.asInstanceOf[js.Any], features.asInstanceOf[js.Any], replace.asInstanceOf[js.Any])).asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   
   @scala.inline
-  def opener: js.Any = js.Dynamic.global.selectDynamic("opener").asInstanceOf[js.Any]
+  def opener: org.scalajs.dom.raw.Window | scala.Null = js.Dynamic.global.selectDynamic("opener").asInstanceOf[org.scalajs.dom.raw.Window | scala.Null]
   @scala.inline
-  def opener_=(x: js.Any): scala.Unit = js.Dynamic.global.updateDynamic("opener")(x.asInstanceOf[js.Any])
+  def opener_=(x: org.scalajs.dom.raw.Window | scala.Null): scala.Unit = js.Dynamic.global.updateDynamic("opener")(x.asInstanceOf[js.Any])
   
   /** @deprecated */
   @scala.inline
@@ -5431,15 +5411,15 @@ package object global {
   
   /**
     * Converts a string to an integer.
-    * @param s A string to convert into a number.
-    * @param radix A value between 2 and 36 that specifies the base of the number in numString.
+    * @param string A string to convert into a number.
+    * @param radix A value between 2 and 36 that specifies the base of the number in `string`.
     * If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
     * All other strings are considered decimal.
     */
   @scala.inline
-  def parseInt(s: java.lang.String): scala.Double = js.Dynamic.global.applyDynamic("parseInt")(s.asInstanceOf[js.Any]).asInstanceOf[scala.Double]
+  def parseInt(string: java.lang.String): scala.Double = js.Dynamic.global.applyDynamic("parseInt")(string.asInstanceOf[js.Any]).asInstanceOf[scala.Double]
   @scala.inline
-  def parseInt(s: java.lang.String, radix: scala.Double): scala.Double = (js.Dynamic.global.applyDynamic("parseInt")(s.asInstanceOf[js.Any], radix.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
+  def parseInt(string: java.lang.String, radix: scala.Double): scala.Double = (js.Dynamic.global.applyDynamic("parseInt")(string.asInstanceOf[js.Any], radix.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
   
   @scala.inline
   def performance: org.scalajs.dom.raw.Performance = js.Dynamic.global.selectDynamic("performance").asInstanceOf[org.scalajs.dom.raw.Performance]
@@ -5462,11 +5442,11 @@ package object global {
   @scala.inline
   def prompt(): java.lang.String | scala.Null = js.Dynamic.global.applyDynamic("prompt")().asInstanceOf[java.lang.String | scala.Null]
   @scala.inline
-  def prompt(message: js.UndefOr[scala.Nothing], _default: java.lang.String): java.lang.String | scala.Null = (js.Dynamic.global.applyDynamic("prompt")(message.asInstanceOf[js.Any], _default.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | scala.Null]
-  @scala.inline
   def prompt(message: java.lang.String): java.lang.String | scala.Null = js.Dynamic.global.applyDynamic("prompt")(message.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | scala.Null]
   @scala.inline
   def prompt(message: java.lang.String, _default: java.lang.String): java.lang.String | scala.Null = (js.Dynamic.global.applyDynamic("prompt")(message.asInstanceOf[js.Any], _default.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | scala.Null]
+  @scala.inline
+  def prompt(message: scala.Unit, _default: java.lang.String): java.lang.String | scala.Null = (js.Dynamic.global.applyDynamic("prompt")(message.asInstanceOf[js.Any], _default.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | scala.Null]
   
   @scala.inline
   def queueMicrotask(callback: tmttyped.std.VoidFunction): scala.Unit = js.Dynamic.global.applyDynamic("queueMicrotask")(callback.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
@@ -5491,308 +5471,38 @@ package object global {
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def removeEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureChange(
-    `type`: tmttyped.std.stdStrings.MSGestureChange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureDoubleTap(
-    `type`: tmttyped.std.stdStrings.MSGestureDoubleTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureEnd(
-    `type`: tmttyped.std.stdStrings.MSGestureEnd,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureHold(
-    `type`: tmttyped.std.stdStrings.MSGestureHold,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureStart(
-    `type`: tmttyped.std.stdStrings.MSGestureStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSGestureTap(
-    `type`: tmttyped.std.stdStrings.MSGestureTap,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSInertiaStart(
-    `type`: tmttyped.std.stdStrings.MSInertiaStart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerCancel(
-    `type`: tmttyped.std.stdStrings.MSPointerCancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerDown(
-    `type`: tmttyped.std.stdStrings.MSPointerDown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerEnter(
-    `type`: tmttyped.std.stdStrings.MSPointerEnter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerLeave(
-    `type`: tmttyped.std.stdStrings.MSPointerLeave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerMove(
-    `type`: tmttyped.std.stdStrings.MSPointerMove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerOut(
-    `type`: tmttyped.std.stdStrings.MSPointerOut,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerOver(
-    `type`: tmttyped.std.stdStrings.MSPointerOver,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_MSPointerUp(
-    `type`: tmttyped.std.stdStrings.MSPointerUp,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
   def removeEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_abort(
     `type`: tmttyped.std.stdStrings.abort,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_afterprint(
     `type`: tmttyped.std.stdStrings.afterprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -5802,7 +5512,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -5811,7 +5521,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5821,7 +5531,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5832,7 +5542,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -5841,7 +5551,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5851,7 +5561,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5862,7 +5572,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -5871,7 +5581,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5881,7 +5591,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5892,7 +5602,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -5901,7 +5611,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5911,7 +5621,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.AnimationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5919,54 +5629,66 @@ package object global {
   @scala.inline
   def removeEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_auxclick(
     `type`: tmttyped.std.stdStrings.auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_beforeinput(
     `type`: tmttyped.std.stdStrings.beforeinput,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.InputEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_beforeprint(
     `type`: tmttyped.std.stdStrings.beforeprint,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -5976,7 +5698,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -5985,7 +5707,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -5995,7 +5717,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.BeforeUnloadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6003,144 +5725,168 @@ package object global {
   @scala.inline
   def removeEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_blur(
     `type`: tmttyped.std.stdStrings.blur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_cancel(
     `type`: tmttyped.std.stdStrings.cancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_canplay(
     `type`: tmttyped.std.stdStrings.canplay,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_canplaythrough(
     `type`: tmttyped.std.stdStrings.canplaythrough,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_change(
     `type`: tmttyped.std.stdStrings.change,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_click(
     `type`: tmttyped.std.stdStrings.click,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_close(
     `type`: tmttyped.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_compassneedscalibration(
     `type`: tmttyped.std.stdStrings.compassneedscalibration,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -6150,7 +5896,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6159,7 +5905,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6169,7 +5915,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6180,7 +5926,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6189,7 +5935,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6199,7 +5945,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6210,7 +5956,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6219,7 +5965,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6229,7 +5975,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.CompositionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6237,72 +5983,78 @@ package object global {
   @scala.inline
   def removeEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_contextmenu(
     `type`: tmttyped.std.stdStrings.contextmenu,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_cuechange(
     `type`: tmttyped.std.stdStrings.cuechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dblclick(
     `type`: tmttyped.std.stdStrings.dblclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_devicelight(
-    `type`: tmttyped.std.stdStrings.devicelight,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.DeviceLightEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -6312,7 +6064,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6321,7 +6073,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6331,7 +6083,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6342,7 +6094,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6351,7 +6103,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6361,7 +6113,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6372,7 +6124,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6381,7 +6133,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6391,7 +6143,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6399,270 +6151,402 @@ package object global {
   @scala.inline
   def removeEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_drag(
     `type`: tmttyped.std.stdStrings.drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragend(
     `type`: tmttyped.std.stdStrings.dragend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragenter(
     `type`: tmttyped.std.stdStrings.dragenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragexit(
     `type`: tmttyped.std.stdStrings.dragexit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragleave(
     `type`: tmttyped.std.stdStrings.dragleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragover(
     `type`: tmttyped.std.stdStrings.dragover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_dragstart(
     `type`: tmttyped.std.stdStrings.dragstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_drop(
     `type`: tmttyped.std.stdStrings.drop,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.DragEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_durationchange(
     `type`: tmttyped.std.stdStrings.durationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_emptied(
     `type`: tmttyped.std.stdStrings.emptied,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_ended(
     `type`: tmttyped.std.stdStrings.ended,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ErrorEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ErrorEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focus(
     `type`: tmttyped.std.stdStrings.focus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focusin(
     `type`: tmttyped.std.stdStrings.focusin,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_focusout(
     `type`: tmttyped.std.stdStrings.focusout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.FocusEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.FocusEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -6672,7 +6556,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6681,7 +6565,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6691,7 +6575,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6702,7 +6586,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6711,7 +6595,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6721,7 +6605,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.experimental.gamepad.GamepadEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6729,18 +6613,30 @@ package object global {
   @scala.inline
   def removeEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_gotpointercapture(
     `type`: tmttyped.std.stdStrings.gotpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -6750,7 +6646,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -6759,7 +6655,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6769,7 +6665,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.HashChangeEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -6777,738 +6673,1050 @@ package object global {
   @scala.inline
   def removeEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_input(
     `type`: tmttyped.std.stdStrings.input,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_invalid(
     `type`: tmttyped.std.stdStrings.invalid,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keydown(
     `type`: tmttyped.std.stdStrings.keydown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keypress(
     `type`: tmttyped.std.stdStrings.keypress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_keyup(
     `type`: tmttyped.std.stdStrings.keyup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.KeyboardEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.KeyboardEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_languagechange(
     `type`: tmttyped.std.stdStrings.languagechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_load(
     `type`: tmttyped.std.stdStrings.load,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadeddata(
     `type`: tmttyped.std.stdStrings.loadeddata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadedmetadata(
     `type`: tmttyped.std.stdStrings.loadedmetadata,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_loadstart(
     `type`: tmttyped.std.stdStrings.loadstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_lostpointercapture(
     `type`: tmttyped.std.stdStrings.lostpointercapture,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_message(
     `type`: tmttyped.std.stdStrings.message,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_messageerror(
     `type`: tmttyped.std.stdStrings.messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MessageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousedown(
     `type`: tmttyped.std.stdStrings.mousedown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseenter(
     `type`: tmttyped.std.stdStrings.mouseenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseleave(
     `type`: tmttyped.std.stdStrings.mouseleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousemove(
     `type`: tmttyped.std.stdStrings.mousemove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseout(
     `type`: tmttyped.std.stdStrings.mouseout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseover(
     `type`: tmttyped.std.stdStrings.mouseover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mouseup(
     `type`: tmttyped.std.stdStrings.mouseup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.MouseEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_mousewheel(
     `type`: tmttyped.std.stdStrings.mousewheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_offline(
     `type`: tmttyped.std.stdStrings.offline,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_online(
     `type`: tmttyped.std.stdStrings.online,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_orientationchange(
     `type`: tmttyped.std.stdStrings.orientationchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pagehide(
     `type`: tmttyped.std.stdStrings.pagehide,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pageshow(
     `type`: tmttyped.std.stdStrings.pageshow,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ tmttyped.std.PageTransitionEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ tmttyped.std.PageTransitionEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pause(
     `type`: tmttyped.std.stdStrings.pause,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_play(
     `type`: tmttyped.std.stdStrings.play,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_playing(
     `type`: tmttyped.std.stdStrings.playing,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointercancel(
     `type`: tmttyped.std.stdStrings.pointercancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerdown(
     `type`: tmttyped.std.stdStrings.pointerdown,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerenter(
     `type`: tmttyped.std.stdStrings.pointerenter,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerleave(
     `type`: tmttyped.std.stdStrings.pointerleave,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointermove(
     `type`: tmttyped.std.stdStrings.pointermove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerout(
     `type`: tmttyped.std.stdStrings.pointerout,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerover(
     `type`: tmttyped.std.stdStrings.pointerover,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_pointerup(
     `type`: tmttyped.std.stdStrings.pointerup,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PointerEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PointerEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_popstate(
     `type`: tmttyped.std.stdStrings.popstate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.PopStateEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.PopStateEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_progress(
     `type`: tmttyped.std.stdStrings.progress,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_ratechange(
     `type`: tmttyped.std.stdStrings.ratechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_readystatechange(
     `type`: tmttyped.std.stdStrings.readystatechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.ProgressEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -7518,7 +7726,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -7527,7 +7735,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7537,7 +7745,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7545,54 +7753,54 @@ package object global {
   @scala.inline
   def removeEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_reset(
     `type`: tmttyped.std.stdStrings.reset,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_resize(
     `type`: tmttyped.std.stdStrings.resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_scroll(
     `type`: tmttyped.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -7602,7 +7810,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -7611,7 +7819,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7621,7 +7829,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.SecurityPolicyViolationEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7629,270 +7837,330 @@ package object global {
   @scala.inline
   def removeEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_seeked(
     `type`: tmttyped.std.stdStrings.seeked,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_seeking(
     `type`: tmttyped.std.stdStrings.seeking,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_select(
     `type`: tmttyped.std.stdStrings.select,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_selectionchange(
     `type`: tmttyped.std.stdStrings.selectionchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_selectstart(
     `type`: tmttyped.std.stdStrings.selectstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_stalled(
     `type`: tmttyped.std.stdStrings.stalled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_storage(
     `type`: tmttyped.std.stdStrings.storage,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.StorageEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.StorageEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_submit(
     `type`: tmttyped.std.stdStrings.submit,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_suspend(
     `type`: tmttyped.std.stdStrings.suspend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_timeupdate(
     `type`: tmttyped.std.stdStrings.timeupdate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_toggle(
     `type`: tmttyped.std.stdStrings.toggle,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchcancel(
     `type`: tmttyped.std.stdStrings.touchcancel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchend(
     `type`: tmttyped.std.stdStrings.touchend,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchmove(
     `type`: tmttyped.std.stdStrings.touchmove,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_touchstart(
     `type`: tmttyped.std.stdStrings.touchstart,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.TouchEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.TouchEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -7902,7 +8170,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -7911,7 +8179,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7921,7 +8189,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7932,7 +8200,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -7941,7 +8209,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7951,7 +8219,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7962,7 +8230,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -7971,7 +8239,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7981,7 +8249,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -7992,7 +8260,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -8001,7 +8269,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -8011,7 +8279,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ org.scalajs.dom.raw.TransitionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -8022,7 +8290,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
@@ -8031,7 +8299,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -8041,7 +8309,7 @@ package object global {
     listener: js.ThisFunction1[
       /* this */ org.scalajs.dom.raw.Window, 
       /* ev */ tmttyped.std.PromiseRejectionEvent, 
-      _
+      js.Any
     ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -8049,234 +8317,192 @@ package object global {
   @scala.inline
   def removeEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_unload(
     `type`: tmttyped.std.stdStrings.unload,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_volumechange(
     `type`: tmttyped.std.stdStrings.volumechange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayactivate(
     `type`: tmttyped.std.stdStrings.vrdisplayactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayblur(
     `type`: tmttyped.std.stdStrings.vrdisplayblur,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplayconnect(
     `type`: tmttyped.std.stdStrings.vrdisplayconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaydeactivate(
     `type`: tmttyped.std.stdStrings.vrdisplaydeactivate,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaydisconnect(
     `type`: tmttyped.std.stdStrings.vrdisplaydisconnect,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplayfocus(
-    `type`: tmttyped.std.stdStrings.vrdisplayfocus,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplaypointerrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: scala.Boolean
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def removeEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def removeEventListener_vrdisplaypointerunrestricted(
-    `type`: tmttyped.std.stdStrings.vrdisplaypointerunrestricted,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_vrdisplaypresentchange(
     `type`: tmttyped.std.stdStrings.vrdisplaypresentchange,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_waiting(
     `type`: tmttyped.std.stdStrings.waiting,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, js.Any],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def removeEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _]
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ]
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def removeEventListener_wheel(
     `type`: tmttyped.std.stdStrings.wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[
+      /* this */ org.scalajs.dom.raw.Window, 
+      /* ev */ org.scalajs.dom.raw.WheelEvent, 
+      js.Any
+    ],
     options: scala.Boolean
   ): scala.Unit = (js.Dynamic.global.applyDynamic("removeEventListener")(`type`.asInstanceOf[js.Any], listener.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
@@ -8362,14 +8588,14 @@ package object global {
   def sessionStorage_=(x: org.scalajs.dom.raw.Storage): scala.Unit = js.Dynamic.global.updateDynamic("sessionStorage")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def setInterval(handler: tmttyped.std.TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setInterval")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
-  @scala.inline
   def setInterval(handler: tmttyped.std.TimerHandler, timeout: scala.Double, arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setInterval")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
+  @scala.inline
+  def setInterval(handler: tmttyped.std.TimerHandler, timeout: scala.Unit, arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setInterval")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
   
   @scala.inline
-  def setTimeout(handler: tmttyped.std.TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setTimeout")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
-  @scala.inline
   def setTimeout(handler: tmttyped.std.TimerHandler, timeout: scala.Double, arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setTimeout")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
+  @scala.inline
+  def setTimeout(handler: tmttyped.std.TimerHandler, timeout: scala.Unit, arguments: js.Any*): scala.Double = (js.Dynamic.global.applyDynamic("setTimeout")(handler.asInstanceOf[js.Any], timeout.asInstanceOf[js.Any], arguments.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
   
   @scala.inline
   def speechSynthesis: tmttyped.std.SpeechSynthesis = js.Dynamic.global.selectDynamic("speechSynthesis").asInstanceOf[tmttyped.std.SpeechSynthesis]

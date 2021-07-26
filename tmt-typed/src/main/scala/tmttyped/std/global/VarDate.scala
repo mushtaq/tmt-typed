@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("VarDate")
 @js.native
 class VarDate protected ()
-  extends tmttyped.std.VarDate {
+  extends StObject
+     with tmttyped.std.VarDate {
   
   /* CompleteClass */
   override var VarDate_typekey: tmttyped.std.VarDate = js.native

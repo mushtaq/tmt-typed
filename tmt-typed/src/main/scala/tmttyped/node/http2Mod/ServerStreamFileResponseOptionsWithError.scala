@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ServerStreamFileResponseOptionsWithError extends ServerStreamFileResponseOptions {
+trait ServerStreamFileResponseOptionsWithError
+  extends StObject
+     with ServerStreamFileResponseOptions {
   
   var onError: js.UndefOr[js.Function1[/* err */ ErrnoException, Unit]] = js.undefined
 }

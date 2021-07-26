@@ -16,13 +16,13 @@ trait PositionOptions extends StObject {
 object PositionOptions {
   
   @scala.inline
-  def apply(): org.scalajs.dom.raw.PositionOptions = {
+  def apply(): PositionOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.raw.PositionOptions]
+    __obj.asInstanceOf[PositionOptions]
   }
   
   @scala.inline
-  implicit class PositionOptionsMutableBuilder[Self <: org.scalajs.dom.raw.PositionOptions] (val x: Self) extends AnyVal {
+  implicit class PositionOptionsMutableBuilder[Self <: PositionOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setEnableHighAccuracy(value: scala.Boolean): Self = StObject.set(x, "enableHighAccuracy", value.asInstanceOf[js.Any])

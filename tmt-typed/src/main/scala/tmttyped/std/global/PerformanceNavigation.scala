@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PerformanceNavigation")
 @js.native
 class PerformanceNavigation ()
-  extends tmttyped.std.PerformanceNavigation {
+  extends StObject
+     with tmttyped.std.PerformanceNavigation {
   
   /* CompleteClass */
   override val TYPE_BACK_FORWARD: Double = js.native

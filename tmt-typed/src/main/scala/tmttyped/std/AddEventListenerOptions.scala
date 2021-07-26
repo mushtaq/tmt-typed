@@ -5,7 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait AddEventListenerOptions extends EventListenerOptions {
+/////////////////////////////
+/// DOM APIs
+/////////////////////////////
+trait AddEventListenerOptions
+  extends StObject
+     with EventListenerOptions {
   
   var once: js.UndefOr[scala.Boolean] = js.undefined
   

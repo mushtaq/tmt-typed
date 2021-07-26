@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MessageEvent")
 @js.native
 class MessageEvent[T] protected ()
-  extends tmttyped.std.MessageEvent[T] {
+  extends StObject
+     with tmttyped.std.MessageEvent[T] {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: MessageEventInit[T]) = this()
 }

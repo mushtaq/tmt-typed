@@ -21,7 +21,7 @@ package object http2Mod {
   @scala.inline
   def connect(
     authority: java.lang.String,
-    options: js.UndefOr[scala.Nothing],
+    options: scala.Unit,
     listener: js.Function2[
       /* session */ tmttyped.node.http2Mod.ClientHttp2Session, 
       /* socket */ tmttyped.node.nodeNetMod.Socket | tmttyped.node.nodeTlsMod.TLSSocket, 
@@ -66,7 +66,7 @@ package object http2Mod {
   @scala.inline
   def connect(
     authority: tmttyped.node.nodeUrlMod.URL,
-    options: js.UndefOr[scala.Nothing],
+    options: scala.Unit,
     listener: js.Function2[
       /* session */ tmttyped.node.http2Mod.ClientHttp2Session, 
       /* socket */ tmttyped.node.nodeNetMod.Socket | tmttyped.node.nodeTlsMod.TLSSocket, 
@@ -149,10 +149,13 @@ package object http2Mod {
   def getDefaultSettings(): tmttyped.node.http2Mod.Settings = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("getDefaultSettings")().asInstanceOf[tmttyped.node.http2Mod.Settings]
   
   @scala.inline
-  def getPackedSettings(settings: tmttyped.node.http2Mod.Settings): tmttyped.node.Buffer = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("getPackedSettings")(settings.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.Buffer]
+  def getPackedSettings(settings: tmttyped.node.http2Mod.Settings): tmttyped.node.bufferMod.global.Buffer = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("getPackedSettings")(settings.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   
   @scala.inline
   def getUnpackedSettings(buf: js.typedarray.Uint8Array): tmttyped.node.http2Mod.Settings = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].applyDynamic("getUnpackedSettings")(buf.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.http2Mod.Settings]
+  
+  @scala.inline
+  def sensitiveHeaders: js.Symbol = tmttyped.node.http2Mod.^.asInstanceOf[js.Dynamic].selectDynamic("sensitiveHeaders").asInstanceOf[js.Symbol]
   
   type ServerOptions = tmttyped.node.http2Mod.ServerSessionOptions
 }

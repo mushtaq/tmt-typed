@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SpeechRecognitionResult extends /* index */ NumberDictionary[SpeechRecognitionAlternative] {
+trait SpeechRecognitionResult
+  extends StObject
+     with /* index */ NumberDictionary[SpeechRecognitionAlternative] {
   
   val isFinal: scala.Boolean = js.native
   

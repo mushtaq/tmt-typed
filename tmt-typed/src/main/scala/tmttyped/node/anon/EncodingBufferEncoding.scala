@@ -1,6 +1,7 @@
 package tmttyped.node.anon
 
-import tmttyped.node.BufferEncoding
+import tmttyped.node.bufferMod.global.BufferEncoding
+import tmttyped.node.fsMod.OpenMode
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ trait EncodingBufferEncoding extends StObject {
   
   var encoding: BufferEncoding
   
-  var flag: js.UndefOr[String] = js.undefined
+  var flag: js.UndefOr[OpenMode] = js.undefined
 }
 object EncodingBufferEncoding {
   
@@ -27,7 +28,7 @@ object EncodingBufferEncoding {
     def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFlag(value: String): Self = StObject.set(x, "flag", value.asInstanceOf[js.Any])
+    def setFlag(value: OpenMode): Self = StObject.set(x, "flag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFlagUndefined: Self = StObject.set(x, "flag", js.undefined)

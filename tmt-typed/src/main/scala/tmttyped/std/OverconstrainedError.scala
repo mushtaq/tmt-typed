@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait OverconstrainedError extends Error {
+trait OverconstrainedError
+  extends StObject
+     with Error {
   
   var constraint: java.lang.String
 }

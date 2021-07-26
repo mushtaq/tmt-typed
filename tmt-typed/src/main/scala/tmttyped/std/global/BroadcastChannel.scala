@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BroadcastChannel")
 @js.native
 class BroadcastChannel protected ()
-  extends tmttyped.std.BroadcastChannel {
+  extends StObject
+     with tmttyped.std.BroadcastChannel {
   def this(name: java.lang.String) = this()
 }

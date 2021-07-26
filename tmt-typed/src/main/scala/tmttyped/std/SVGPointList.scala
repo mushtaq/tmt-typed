@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SVGPointList extends /* index */ NumberDictionary[DOMPoint] {
+trait SVGPointList
+  extends StObject
+     with /* index */ NumberDictionary[DOMPoint] {
   
   def appendItem(newItem: DOMPoint): DOMPoint = js.native
   

@@ -28,12 +28,6 @@ object IntersectionObserverInit {
     def setRoot(value: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRootDocument(value: org.scalajs.dom.raw.Document): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRootElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setRootMargin(value: java.lang.String): Self = StObject.set(x, "rootMargin", value.asInstanceOf[js.Any])
     
     @scala.inline

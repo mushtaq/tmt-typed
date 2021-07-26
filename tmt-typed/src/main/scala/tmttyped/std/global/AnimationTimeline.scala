@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AnimationTimeline")
 @js.native
 class AnimationTimeline ()
-  extends tmttyped.std.AnimationTimeline {
+  extends StObject
+     with tmttyped.std.AnimationTimeline {
   
   /* CompleteClass */
   override val currentTime: Double | Null = js.native

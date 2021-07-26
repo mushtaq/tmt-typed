@@ -17,13 +17,13 @@ object NavigatorContentUtils {
   def apply(
     registerProtocolHandler: (java.lang.String, java.lang.String, java.lang.String) => Unit,
     unregisterProtocolHandler: (java.lang.String, java.lang.String) => Unit
-  ): org.scalajs.dom.raw.NavigatorContentUtils = {
+  ): NavigatorContentUtils = {
     val __obj = js.Dynamic.literal(registerProtocolHandler = js.Any.fromFunction3(registerProtocolHandler), unregisterProtocolHandler = js.Any.fromFunction2(unregisterProtocolHandler))
-    __obj.asInstanceOf[org.scalajs.dom.raw.NavigatorContentUtils]
+    __obj.asInstanceOf[NavigatorContentUtils]
   }
   
   @scala.inline
-  implicit class NavigatorContentUtilsMutableBuilder[Self <: org.scalajs.dom.raw.NavigatorContentUtils] (val x: Self) extends AnyVal {
+  implicit class NavigatorContentUtilsMutableBuilder[Self <: NavigatorContentUtils] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setRegisterProtocolHandler(value: (java.lang.String, java.lang.String, java.lang.String) => Unit): Self = StObject.set(x, "registerProtocolHandler", js.Any.fromFunction3(value))

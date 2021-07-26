@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("GamepadHapticActuator")
 @js.native
 class GamepadHapticActuator ()
-  extends tmttyped.std.GamepadHapticActuator {
+  extends StObject
+     with tmttyped.std.GamepadHapticActuator {
   
   /* CompleteClass */
   override def pulse(value: Double, duration: Double): js.Promise[scala.Boolean] = js.native

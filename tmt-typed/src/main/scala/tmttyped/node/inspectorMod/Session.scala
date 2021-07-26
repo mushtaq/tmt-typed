@@ -207,7 +207,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * The inspector.Session is used for dispatching messages to the V8 inspector back-end and receiving message responses and notifications.
+  * The `inspector.Session` is used for dispatching messages to the V8 inspector
+  * back-end and receiving message responses and notifications.
   */
 @JSImport("inspector", "Session")
 @js.native
@@ -215,9 +216,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Create a new instance of the inspector.Session class.
   * The inspector session needs to be connected through session.connect() before the messages can be dispatched to the inspector backend.
   */
-class Session ()
-  extends tmttyped.node.nodeEventsMod.^ {
+class Session () extends StObject {
   
+  // Events
+  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -415,18 +417,21 @@ class Session ()
   
   /**
     * Connects a session to the inspector back-end.
-    * An exception will be thrown if there is already a connected session established either
-    * through the API or by a front-end connected to the Inspector WebSocket port.
+    * @since v8.0.0
     */
   def connect(): Unit = js.native
   
   /**
-    * Immediately close the session. All pending message callbacks will be called with an error.
-    * session.connect() will need to be called to be able to send messages again.
-    * Reconnected session will lose all inspector state, such as enabled agents or configured breakpoints.
+    * Immediately close the session. All pending message callbacks will be called
+    * with an error. `session.connect()` will need to be called to be able to send
+    * messages again. Reconnected session will lose all inspector state, such as
+    * enabled agents or configured breakpoints.
+    * @since v8.0.0
     */
   def disconnect(): Unit = js.native
   
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
   @JSName("emit")
   def emit_ConsolemessageAdded(event: ConsoleDotmessageAdded, message: InspectorNotification[MessageAddedEventDataType]): Boolean = js.native
   @JSName("emit")
@@ -521,6 +526,7 @@ class Session ()
   @JSName("emit")
   def emit_inspectorNotification(event: inspectorNotification, message: InspectorNotification[js.Object]): Boolean = js.native
   
+  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -716,6 +722,7 @@ class Session ()
     listener: js.Function1[/* message */ InspectorNotification[js.Object], Unit]
   ): this.type = js.native
   
+  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -912,23 +919,43 @@ class Session ()
   ): this.type = js.native
   
   /**
-    * Posts a message to the inspector back-end. callback will be notified when a response is received.
-    * callback is a function that accepts two optional arguments - error and message-specific result.
+    * Posts a message to the inspector back-end. `callback` will be notified when
+    * a response is received. `callback` is a function that accepts two optional
+    * arguments: error and message-specific result.
+    *
+    * ```js
+    * session.post('Runtime.evaluate', { expression: '2 + 2' },
+    *              (error, { result }) => console.log(result));
+    * // Output: { type: 'number', value: 4, description: '4' }
+    * ```
+    *
+    * The latest version of the V8 inspector protocol is published on the[Chrome DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/v8/).
+    *
+    * Node.js inspector supports all the Chrome DevTools Protocol domains declared
+    * by V8\. Chrome DevTools Protocol domain provides an interface for interacting
+    * with one of the runtime agents used to inspect the application state and listen
+    * to the run-time events.
+    *
+    * ## Example usage
+    *
+    * Apart from the debugger, various V8 Profilers are available through the DevTools
+    * protocol.
+    * @since v8.0.0
     */
   def post(method: String): Unit = js.native
   def post(
     method: String,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ js.UndefOr[js.Object], Unit]
   ): Unit = js.native
-  def post(
-    method: String,
-    params: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* err */ js.Error | Null, /* params */ js.UndefOr[js.Object], Unit]
-  ): Unit = js.native
   def post(method: String, params: js.Object): Unit = js.native
   def post(
     method: String,
     params: js.Object,
+    callback: js.Function2[/* err */ js.Error | Null, /* params */ js.UndefOr[js.Object], Unit]
+  ): Unit = js.native
+  def post(
+    method: String,
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ js.UndefOr[js.Object], Unit]
   ): Unit = js.native
   /**
@@ -962,7 +989,7 @@ class Session ()
   @JSName("post")
   def post_DebuggercontinueToLocation(
     method: DebuggerDotcontinueToLocation,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1003,7 +1030,7 @@ class Session ()
   @JSName("post")
   def post_DebuggerevaluateOnCallFrame(
     method: DebuggerDotevaluateOnCallFrame,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ EvaluateOnCallFrameReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1027,7 +1054,7 @@ class Session ()
   @JSName("post")
   def post_DebuggergetPossibleBreakpoints(
     method: DebuggerDotgetPossibleBreakpoints,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetPossibleBreakpointsReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1051,7 +1078,7 @@ class Session ()
   @JSName("post")
   def post_DebuggergetScriptSource(
     method: DebuggerDotgetScriptSource,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetScriptSourceReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1076,7 +1103,7 @@ class Session ()
   @JSName("post")
   def post_DebuggergetStackTrace(
     method: DebuggerDotgetStackTrace,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetStackTraceReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1104,7 +1131,7 @@ class Session ()
   @JSName("post")
   def post_DebuggerpauseOnAsyncCall(
     method: DebuggerDotpauseOnAsyncCall,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1125,7 +1152,7 @@ class Session ()
   @JSName("post")
   def post_DebuggerremoveBreakpoint(
     method: DebuggerDotremoveBreakpoint,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1149,7 +1176,7 @@ class Session ()
   @JSName("post")
   def post_DebuggerrestartFrame(
     method: DebuggerDotrestartFrame,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ RestartFrameReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1188,7 +1215,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersearchInContent(
     method: DebuggerDotsearchInContent,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ SearchInContentReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1209,7 +1236,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetAsyncCallStackDepth(
     method: DebuggerDotsetAsyncCallStackDepth,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1231,7 +1258,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetBlackboxPatterns(
     method: DebuggerDotsetBlackboxPatterns,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1253,7 +1280,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetBlackboxedRanges(
     method: DebuggerDotsetBlackboxedRanges,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1277,7 +1304,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetBreakpoint(
     method: DebuggerDotsetBreakpoint,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ SetBreakpointReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1301,7 +1328,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetBreakpointByUrl(
     method: DebuggerDotsetBreakpointByUrl,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ SetBreakpointByUrlReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1322,7 +1349,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetBreakpointsActive(
     method: DebuggerDotsetBreakpointsActive,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1343,7 +1370,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetPauseOnExceptions(
     method: DebuggerDotsetPauseOnExceptions,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1365,7 +1392,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetReturnValue(
     method: DebuggerDotsetReturnValue,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1389,7 +1416,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetScriptSource(
     method: DebuggerDotsetScriptSource,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ SetScriptSourceReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1410,7 +1437,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetSkipAllPauses(
     method: DebuggerDotsetSkipAllPauses,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1431,7 +1458,7 @@ class Session ()
   @JSName("post")
   def post_DebuggersetVariableValue(
     method: DebuggerDotsetVariableValue,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1450,11 +1477,7 @@ class Session ()
   @JSName("post")
   def post_DebuggerstepInto(method: DebuggerDotstepInto, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
-  def post_DebuggerstepInto(
-    method: DebuggerDotstepInto,
-    params: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* err */ js.Error | Null, Unit]
-  ): Unit = js.native
+  def post_DebuggerstepInto(method: DebuggerDotstepInto, params: Unit, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
   def post_DebuggerstepInto(method: DebuggerDotstepInto, params: StepIntoParameterType): Unit = js.native
   @JSName("post")
@@ -1490,7 +1513,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfileraddInspectedHeapObject(
     method: HeapProfilerDotaddInspectedHeapObject,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1523,7 +1546,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilergetHeapObjectId(
     method: HeapProfilerDotgetHeapObjectId,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetHeapObjectIdReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1544,7 +1567,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilergetObjectByHeapObjectId(
     method: HeapProfilerDotgetObjectByHeapObjectId,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetObjectByHeapObjectIdReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1569,7 +1592,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilerstartSampling(
     method: HeapProfilerDotstartSampling,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1590,7 +1613,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilerstartTrackingHeapObjects(
     method: HeapProfilerDotstartTrackingHeapObjects,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1618,7 +1641,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilerstopTrackingHeapObjects(
     method: HeapProfilerDotstopTrackingHeapObjects,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1636,7 +1659,7 @@ class Session ()
   @JSName("post")
   def post_HeapProfilertakeHeapSnapshot(
     method: HeapProfilerDottakeHeapSnapshot,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1660,7 +1683,7 @@ class Session ()
   @JSName("post")
   def post_NodeRuntimenotifyWhenWaitingForDisconnect(
     method: NodeRuntimeDotnotifyWhenWaitingForDisconnect,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1692,11 +1715,7 @@ class Session ()
   @JSName("post")
   def post_NodeTracingstart(method: NodeTracingDotstart, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
-  def post_NodeTracingstart(
-    method: NodeTracingDotstart,
-    params: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* err */ js.Error | Null, Unit]
-  ): Unit = js.native
+  def post_NodeTracingstart(method: NodeTracingDotstart, params: Unit, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
   def post_NodeTracingstart(method: NodeTracingDotstart, params: StartParameterType): Unit = js.native
   @JSName("post")
@@ -1721,11 +1740,7 @@ class Session ()
   @JSName("post")
   def post_NodeWorkerdetach(method: NodeWorkerDotdetach, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
-  def post_NodeWorkerdetach(
-    method: NodeWorkerDotdetach,
-    params: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* err */ js.Error | Null, Unit]
-  ): Unit = js.native
+  def post_NodeWorkerdetach(method: NodeWorkerDotdetach, params: Unit, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
   def post_NodeWorkerdetach(method: NodeWorkerDotdetach, params: DetachParameterType): Unit = js.native
   @JSName("post")
@@ -1750,11 +1765,7 @@ class Session ()
   @JSName("post")
   def post_NodeWorkerenable(method: NodeWorkerDotenable, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
-  def post_NodeWorkerenable(
-    method: NodeWorkerDotenable,
-    params: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* err */ js.Error | Null, Unit]
-  ): Unit = js.native
+  def post_NodeWorkerenable(method: NodeWorkerDotenable, params: Unit, callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
   @JSName("post")
   def post_NodeWorkerenable(method: NodeWorkerDotenable, params: EnableParameterType): Unit = js.native
   @JSName("post")
@@ -1773,7 +1784,7 @@ class Session ()
   @JSName("post")
   def post_NodeWorkersendMessageToWorker(
     method: NodeWorkerDotsendMessageToWorker,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1812,7 +1823,7 @@ class Session ()
   @JSName("post")
   def post_ProfilersetSamplingInterval(
     method: ProfilerDotsetSamplingInterval,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1837,7 +1848,7 @@ class Session ()
   @JSName("post")
   def post_ProfilerstartPreciseCoverage(
     method: ProfilerDotstartPreciseCoverage,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1912,7 +1923,7 @@ class Session ()
   @JSName("post")
   def post_RuntimeawaitPromise(
     method: RuntimeDotawaitPromise,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ AwaitPromiseReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1936,7 +1947,7 @@ class Session ()
   @JSName("post")
   def post_RuntimecallFunctionOn(
     method: RuntimeDotcallFunctionOn,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ CallFunctionOnReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -1960,7 +1971,7 @@ class Session ()
   @JSName("post")
   def post_RuntimecompileScript(
     method: RuntimeDotcompileScript,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ CompileScriptReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2005,7 +2016,7 @@ class Session ()
   @JSName("post")
   def post_Runtimeevaluate(
     method: RuntimeDotevaluate,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ EvaluateReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2029,7 +2040,7 @@ class Session ()
   @JSName("post")
   def post_RuntimegetProperties(
     method: RuntimeDotgetProperties,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetPropertiesReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2053,7 +2064,7 @@ class Session ()
   @JSName("post")
   def post_RuntimeglobalLexicalScopeNames(
     method: RuntimeDotglobalLexicalScopeNames,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GlobalLexicalScopeNamesReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2074,7 +2085,7 @@ class Session ()
   @JSName("post")
   def post_RuntimequeryObjects(
     method: RuntimeDotqueryObjects,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ QueryObjectsReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2095,7 +2106,7 @@ class Session ()
   @JSName("post")
   def post_RuntimereleaseObject(
     method: RuntimeDotreleaseObject,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2116,7 +2127,7 @@ class Session ()
   @JSName("post")
   def post_RuntimereleaseObjectGroup(
     method: RuntimeDotreleaseObjectGroup,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2147,7 +2158,7 @@ class Session ()
   @JSName("post")
   def post_RuntimerunScript(
     method: RuntimeDotrunScript,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function2[/* err */ js.Error | Null, /* params */ RunScriptReturnType, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2171,7 +2182,7 @@ class Session ()
   @JSName("post")
   def post_RuntimesetCustomObjectFormatterEnabled(
     method: RuntimeDotsetCustomObjectFormatterEnabled,
-    params: js.UndefOr[scala.Nothing],
+    params: Unit,
     callback: js.Function1[/* err */ js.Error | Null, Unit]
   ): Unit = js.native
   @JSName("post")
@@ -2196,6 +2207,7 @@ class Session ()
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetDomainsReturnType, Unit]
   ): Unit = js.native
   
+  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -2391,6 +2403,7 @@ class Session ()
     listener: js.Function1[/* message */ InspectorNotification[js.Object], Unit]
   ): this.type = js.native
   
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CloseEvent")
 @js.native
 class CloseEvent protected ()
-  extends tmttyped.std.CloseEvent {
+  extends StObject
+     with tmttyped.std.CloseEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: CloseEventInit) = this()
 }

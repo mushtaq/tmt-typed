@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait VRDisplayEventInit extends EventInit {
+trait VRDisplayEventInit
+  extends StObject
+     with EventInit {
   
   var display: VRDisplay
   

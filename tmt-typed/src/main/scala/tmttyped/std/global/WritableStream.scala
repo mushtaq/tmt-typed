@@ -11,8 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WritableStream")
 @js.native
 class WritableStream[W] ()
-  extends tmttyped.std.WritableStream[W] {
+  extends StObject
+     with tmttyped.std.WritableStream[W] {
   def this(underlyingSink: UnderlyingSink[W]) = this()
-  def this(underlyingSink: js.UndefOr[scala.Nothing], strategy: QueuingStrategy[W]) = this()
+  def this(underlyingSink: Unit, strategy: QueuingStrategy[W]) = this()
   def this(underlyingSink: UnderlyingSink[W], strategy: QueuingStrategy[W]) = this()
 }

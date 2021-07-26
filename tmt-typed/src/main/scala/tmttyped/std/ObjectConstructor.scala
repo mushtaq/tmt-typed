@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ObjectConstructor
-  extends Instantiable0[js.Object]
+  extends StObject
+     with Instantiable0[js.Object]
      with Instantiable1[/* value */ js.Any, js.Object] {
   
   def apply(): js.Any = js.native
@@ -60,15 +61,15 @@ trait ObjectConstructor
     * @param o Object to use as a prototype. May be null
     * @param properties JavaScript object that contains one or more property descriptors.
     */
-  def create(o: js.Object, properties: PropertyDescriptorMap with ThisType[_]): js.Any = js.native
-  def create(o: Null, properties: PropertyDescriptorMap with ThisType[_]): js.Any = js.native
+  def create(o: js.Object, properties: PropertyDescriptorMap with ThisType[js.Any]): js.Any = js.native
+  def create(o: Null, properties: PropertyDescriptorMap with ThisType[js.Any]): js.Any = js.native
   
   /**
     * Adds one or more properties to an object, and/or modifies attributes of existing properties.
     * @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
     * @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
     */
-  def defineProperties(o: js.Any, properties: PropertyDescriptorMap with ThisType[_]): js.Any = js.native
+  def defineProperties[T](o: T, properties: PropertyDescriptorMap with ThisType[js.Any]): T = js.native
   
   /**
     * Adds a property to an object, or modifies attributes of an existing property.
@@ -76,13 +77,13 @@ trait ObjectConstructor
     * @param p The property name.
     * @param attributes Descriptor for the property. It can be for a data property or an accessor property.
     */
-  def defineProperty(o: js.Any, p: PropertyKey, attributes: js.PropertyDescriptor with ThisType[_]): js.Any = js.native
+  def defineProperty[T](o: T, p: PropertyKey, attributes: js.PropertyDescriptor with ThisType[js.Any]): T = js.native
   
   /**
     * Returns an array of key/values of the enumerable properties of an object
     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
     */
-  def entries(o: js.Object): js.Array[js.Tuple2[java.lang.String, _]] = js.native
+  def entries(o: js.Object): js.Array[js.Tuple2[java.lang.String, js.Any]] = js.native
   /**
     * Returns an array of key/values of the enumerable properties of an object
     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
@@ -111,7 +112,7 @@ trait ObjectConstructor
     * Returns an object created by key-value entries for properties and methods
     * @param entries An iterable object that contains key-value entries for properties and methods.
     */
-  def fromEntries(entries: js.Iterable[js.Array[_]]): js.Any = js.native
+  def fromEntries(entries: js.Iterable[js.Array[js.Any]]): js.Any = js.native
   /**
     * Returns an object created by key-value entries for properties and methods
     * @param entries An iterable object that contains key-value entries for properties and methods.
@@ -207,7 +208,7 @@ trait ObjectConstructor
     * Returns an array of values of the enumerable properties of an object
     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
     */
-  def values(o: js.Object): js.Array[_] = js.native
+  def values(o: js.Object): js.Array[js.Any] = js.native
   /**
     * Returns an array of values of the enumerable properties of an object
     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.

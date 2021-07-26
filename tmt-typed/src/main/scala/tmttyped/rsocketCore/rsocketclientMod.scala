@@ -17,7 +17,9 @@ object rsocketclientMod {
   
   @JSImport("rsocket-core/RSocketClient", JSImport.Default)
   @js.native
-  class default[D, M] protected () extends RSocketClient[D, M] {
+  class default[D, M] protected ()
+    extends StObject
+       with RSocketClient[D, M] {
     def this(config: ClientConfig[D, M]) = this()
     
     /* CompleteClass */
@@ -31,7 +33,7 @@ object rsocketclientMod {
     
     var errorHandler: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.undefined
     
-    var leases: js.UndefOr[js.Function0[Leases[_]]] = js.undefined
+    var leases: js.UndefOr[js.Function0[Leases[js.Any]]] = js.undefined
     
     var responder: js.UndefOr[Partial[Responder[D, M]]] = js.undefined
     
@@ -59,7 +61,7 @@ object rsocketclientMod {
       def setErrorHandlerUndefined: Self = StObject.set(x, "errorHandler", js.undefined)
       
       @scala.inline
-      def setLeases(value: () => Leases[_]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
+      def setLeases(value: () => Leases[js.Any]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
       
       @scala.inline
       def setLeasesUndefined: Self = StObject.set(x, "leases", js.undefined)

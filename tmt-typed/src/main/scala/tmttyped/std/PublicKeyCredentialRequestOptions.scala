@@ -43,12 +43,6 @@ object PublicKeyCredentialRequestOptions {
     def setChallenge(value: BufferSource): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChallengeArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChallengeArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "challenge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setExtensions(value: AuthenticationExtensionsClientInputs): Self = StObject.set(x, "extensions", value.asInstanceOf[js.Any])
     
     @scala.inline

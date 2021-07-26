@@ -35,14 +35,14 @@ object PerformanceNavigation {
     redirectCount: Double,
     toJSON: () => js.Any,
     `type`: Double
-  ): org.scalajs.dom.raw.PerformanceNavigation = {
+  ): PerformanceNavigation = {
     val __obj = js.Dynamic.literal(TYPE_BACK_FORWARD = TYPE_BACK_FORWARD.asInstanceOf[js.Any], TYPE_NAVIGATE = TYPE_NAVIGATE.asInstanceOf[js.Any], TYPE_RELOAD = TYPE_RELOAD.asInstanceOf[js.Any], TYPE_RESERVED = TYPE_RESERVED.asInstanceOf[js.Any], redirectCount = redirectCount.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.PerformanceNavigation]
+    __obj.asInstanceOf[PerformanceNavigation]
   }
   
   @scala.inline
-  implicit class PerformanceNavigationMutableBuilder[Self <: org.scalajs.dom.raw.PerformanceNavigation] (val x: Self) extends AnyVal {
+  implicit class PerformanceNavigationMutableBuilder[Self <: PerformanceNavigation] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setRedirectCount(value: Double): Self = StObject.set(x, "redirectCount", value.asInstanceOf[js.Any])

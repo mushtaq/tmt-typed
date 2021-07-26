@@ -26,13 +26,13 @@ trait ImageData extends StObject {
 object ImageData {
   
   @scala.inline
-  def apply(data: js.typedarray.Uint8ClampedArray, height: Double, width: Double): org.scalajs.dom.raw.ImageData = {
+  def apply(data: js.typedarray.Uint8ClampedArray, height: Double, width: Double): ImageData = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.ImageData]
+    __obj.asInstanceOf[ImageData]
   }
   
   @scala.inline
-  implicit class ImageDataMutableBuilder[Self <: org.scalajs.dom.raw.ImageData] (val x: Self) extends AnyVal {
+  implicit class ImageDataMutableBuilder[Self <: ImageData] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setData(value: js.typedarray.Uint8ClampedArray): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])

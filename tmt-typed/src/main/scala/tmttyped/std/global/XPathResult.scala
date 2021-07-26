@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("XPathResult")
 @js.native
 class XPathResult ()
-  extends tmttyped.std.XPathResult {
+  extends StObject
+     with tmttyped.std.XPathResult {
   
   /* CompleteClass */
   override val ANY_TYPE: Double = js.native

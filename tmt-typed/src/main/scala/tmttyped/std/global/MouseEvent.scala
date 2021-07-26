@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MouseEvent")
 @js.native
 class MouseEvent protected ()
-  extends tmttyped.std.MouseEvent {
+  extends StObject
+     with tmttyped.std.MouseEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: MouseEventInit) = this()
 }

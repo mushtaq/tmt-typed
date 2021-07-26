@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList. */
 @js.native
-trait DataTransferItemList extends /* name */ NumberDictionary[DataTransferItem] {
+trait DataTransferItemList
+  extends StObject
+     with /* name */ NumberDictionary[DataTransferItem] {
   
   /**
     * Adds a new entry for the given data to the drag data store. If the data is plain text then a type string has to be provided also.

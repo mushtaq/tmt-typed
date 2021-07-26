@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MediaStreamTrack")
 @js.native
 class MediaStreamTrack ()
-  extends tmttyped.std.MediaStreamTrack
+  extends StObject
+     with tmttyped.std.MediaStreamTrack

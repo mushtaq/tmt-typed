@@ -11,7 +11,7 @@ trait PropertyDescriptor extends StObject {
   
   var enumerable: js.UndefOr[scala.Boolean] = js.undefined
   
-  var get: js.UndefOr[js.Function0[_]] = js.undefined
+  var get: js.UndefOr[js.Function0[js.Any]] = js.undefined
   
   var set: js.UndefOr[js.Function1[/* v */ js.Any, Unit]] = js.undefined
   
@@ -22,13 +22,13 @@ trait PropertyDescriptor extends StObject {
 object PropertyDescriptor {
   
   @scala.inline
-  def apply(): js.PropertyDescriptor = {
+  def apply(): PropertyDescriptor = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[js.PropertyDescriptor]
+    __obj.asInstanceOf[PropertyDescriptor]
   }
   
   @scala.inline
-  implicit class PropertyDescriptorMutableBuilder[Self <: js.PropertyDescriptor] (val x: Self) extends AnyVal {
+  implicit class PropertyDescriptorMutableBuilder[Self <: PropertyDescriptor] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setConfigurable(value: scala.Boolean): Self = StObject.set(x, "configurable", value.asInstanceOf[js.Any])
@@ -43,7 +43,7 @@ object PropertyDescriptor {
     def setEnumerableUndefined: Self = StObject.set(x, "enumerable", js.undefined)
     
     @scala.inline
-    def setGet(value: () => _): Self = StObject.set(x, "get", js.Any.fromFunction0(value))
+    def setGet(value: () => js.Any): Self = StObject.set(x, "get", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetUndefined: Self = StObject.set(x, "get", js.undefined)

@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait HTMLMarqueeElementEventMap extends HTMLElementEventMap {
+trait HTMLMarqueeElementEventMap
+  extends StObject
+     with HTMLElementEventMap {
   
   var bounce: org.scalajs.dom.raw.Event
   

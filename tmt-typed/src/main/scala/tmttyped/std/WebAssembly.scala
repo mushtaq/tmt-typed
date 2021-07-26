@@ -20,7 +20,9 @@ object WebAssembly {
   
   type Exports = Record[java.lang.String, ExportValue]
   
-  trait Global extends _ExportValue {
+  trait Global
+    extends StObject
+       with _ExportValue {
     
     var value: js.Any
   }
@@ -116,7 +118,9 @@ object WebAssembly {
   
   trait LinkError extends StObject
   
-  trait Memory extends _ExportValue {
+  trait Memory
+    extends StObject
+       with _ExportValue {
     
     val buffer: js.typedarray.ArrayBuffer
     
@@ -146,6 +150,8 @@ object WebAssembly {
     var initial: Double
     
     var maximum: js.UndefOr[Double] = js.undefined
+    
+    var shared: js.UndefOr[scala.Boolean] = js.undefined
   }
   object MemoryDescriptor {
     
@@ -166,6 +172,12 @@ object WebAssembly {
       
       @scala.inline
       def setMaximumUndefined: Self = StObject.set(x, "maximum", js.undefined)
+      
+      @scala.inline
+      def setShared(value: scala.Boolean): Self = StObject.set(x, "shared", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setSharedUndefined: Self = StObject.set(x, "shared", js.undefined)
     }
   }
   
@@ -231,7 +243,9 @@ object WebAssembly {
   trait RuntimeError extends StObject
   
   @js.native
-  trait Table extends _ExportValue {
+  trait Table
+    extends StObject
+       with _ExportValue {
     
     def get(index: Double): js.Function | Null = js.native
     

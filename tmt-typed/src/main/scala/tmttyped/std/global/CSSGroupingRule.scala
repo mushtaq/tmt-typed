@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CSSGroupingRule")
 @js.native
 class CSSGroupingRule ()
-  extends tmttyped.std.CSSGroupingRule {
+  extends StObject
+     with tmttyped.std.CSSGroupingRule {
   
   /* CompleteClass */
   override val CHARSET_RULE: Double = js.native

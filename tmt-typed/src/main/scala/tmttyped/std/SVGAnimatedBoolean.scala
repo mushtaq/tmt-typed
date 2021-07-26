@@ -15,13 +15,13 @@ trait SVGAnimatedBoolean extends StObject {
 object SVGAnimatedBoolean {
   
   @scala.inline
-  def apply(animVal: scala.Boolean, baseVal: scala.Boolean): org.scalajs.dom.raw.SVGAnimatedBoolean = {
+  def apply(animVal: scala.Boolean, baseVal: scala.Boolean): SVGAnimatedBoolean = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedBoolean]
+    __obj.asInstanceOf[SVGAnimatedBoolean]
   }
   
   @scala.inline
-  implicit class SVGAnimatedBooleanMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedBoolean] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedBooleanMutableBuilder[Self <: SVGAnimatedBoolean] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: scala.Boolean): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

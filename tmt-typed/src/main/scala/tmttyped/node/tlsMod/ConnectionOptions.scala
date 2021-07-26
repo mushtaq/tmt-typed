@@ -1,7 +1,7 @@
 package tmttyped.node.tlsMod
 
-import tmttyped.node.Buffer
 import tmttyped.node.NodeJS.ErrnoException
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.netMod.LookupFunction
 import tmttyped.node.nodeNetMod.Socket
@@ -11,7 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ConnectionOptions
-  extends SecureContextOptions
+  extends StObject
+     with SecureContextOptions
      with CommonConnectionOptions {
   
   // Establish secure connection on a given socket rather than creating a new socket

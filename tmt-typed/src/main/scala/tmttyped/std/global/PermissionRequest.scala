@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PermissionRequest")
 @js.native
 class PermissionRequest ()
-  extends tmttyped.std.PermissionRequest {
+  extends StObject
+     with tmttyped.std.PermissionRequest {
   
   /* CompleteClass */
   override def allow(): Unit = js.native

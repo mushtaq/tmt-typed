@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DocumentTimeline")
 @js.native
 class DocumentTimeline ()
-  extends tmttyped.std.AnimationTimeline {
+  extends StObject
+     with tmttyped.std.AnimationTimeline {
   def this(options: DocumentTimelineOptions) = this()
   
   /* CompleteClass */

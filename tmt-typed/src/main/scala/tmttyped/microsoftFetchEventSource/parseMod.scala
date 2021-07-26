@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object parseMod {
   
-  @JSImport("@microsoft/fetch-event-source/lib/parse", JSImport.Namespace)
+  @JSImport("@microsoft/fetch-event-source/lib/cjs/parse", JSImport.Namespace)
   @js.native
   val ^ : js.Any = js.native
   

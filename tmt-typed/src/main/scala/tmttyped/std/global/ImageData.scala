@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ImageData")
 @js.native
 class ImageData protected ()
-  extends tmttyped.std.ImageData {
+  extends StObject
+     with tmttyped.std.ImageData {
   def this(data: js.typedarray.Uint8ClampedArray, sw: Double) = this()
   def this(sw: Double, sh: Double) = this()
   def this(data: js.typedarray.Uint8ClampedArray, sw: Double, sh: Double) = this()

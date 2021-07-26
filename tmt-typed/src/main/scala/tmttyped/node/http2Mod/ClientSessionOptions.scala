@@ -9,7 +9,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ClientSessionOptions extends SessionOptions {
+trait ClientSessionOptions
+  extends StObject
+     with SessionOptions {
   
   @JSName("createConnection")
   var createConnection_ClientSessionOptions: js.UndefOr[js.Function2[/* authority */ URL, /* option */ SessionOptions, Duplex]] = js.undefined

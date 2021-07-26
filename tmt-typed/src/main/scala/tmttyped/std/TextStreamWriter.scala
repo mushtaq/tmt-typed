@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait TextStreamWriter extends TextStreamBase {
+trait TextStreamWriter
+  extends StObject
+     with TextStreamBase {
   
   /**
     * Sends a string to an output stream.

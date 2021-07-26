@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DocumentType")
 @js.native
 class DocumentType ()
-  extends tmttyped.std.DocumentType
+  extends StObject
+     with tmttyped.std.DocumentType

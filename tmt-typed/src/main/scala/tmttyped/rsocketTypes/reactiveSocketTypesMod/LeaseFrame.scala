@@ -7,7 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait LeaseFrame extends Frame {
+trait LeaseFrame
+  extends StObject
+     with Frame {
   
   var flags: Double
   
@@ -46,9 +48,6 @@ object LeaseFrame {
     
     @scala.inline
     def setMetadata(value: Encodable): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMetadataUndefined: Self = StObject.set(x, "metadata", js.undefined)

@@ -12,7 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IntersectionObserver")
 @js.native
 class IntersectionObserver protected ()
-  extends tmttyped.std.IntersectionObserver {
+  extends StObject
+     with tmttyped.std.IntersectionObserver {
   def this(callback: IntersectionObserverCallback) = this()
   def this(callback: IntersectionObserverCallback, options: IntersectionObserverInit) = this()
   

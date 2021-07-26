@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.EvalErrorConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("EvalError")
 @js.native
 class EvalError ()
-  extends tmttyped.std.Error {
+  extends StObject
+     with tmttyped.std.Error {
   def this(message: java.lang.String) = this()
   
   /* CompleteClass */
@@ -17,4 +19,9 @@ class EvalError ()
   
   /* CompleteClass */
   override var name: java.lang.String = js.native
+}
+object EvalError {
+  
+  @scala.inline
+  def apply: EvalErrorConstructor = js.Dynamic.global.selectDynamic("EvalError").asInstanceOf[EvalErrorConstructor]
 }

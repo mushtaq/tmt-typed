@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events providing information related to errors in scripts or in files. */
 @js.native
-trait ErrorEvent extends Event {
+trait ErrorEvent
+  extends StObject
+     with Event {
   
   val colno: Double = js.native
   

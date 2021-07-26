@@ -11,14 +11,16 @@ object nodeNumbers {
   
   @js.native
   sealed trait `-1`
-    extends Direction
+    extends StObject
+       with Direction
        with tmttyped.node.ttyMod.Direction
   @scala.inline
   def `-1`: `-1` = -1.asInstanceOf[`-1`]
   
   @js.native
   sealed trait `0`
-    extends Direction
+    extends StObject
+       with Direction
        with tmttyped.node.ttyMod.Direction
        with DoesZapCodeSpaceFlag
   @scala.inline
@@ -26,7 +28,8 @@ object nodeNumbers {
   
   @js.native
   sealed trait `1`
-    extends Direction
+    extends StObject
+       with Direction
        with tmttyped.node.ttyMod.Direction
        with DoesZapCodeSpaceFlag
   @scala.inline

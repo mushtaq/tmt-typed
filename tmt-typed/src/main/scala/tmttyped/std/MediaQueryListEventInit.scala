@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait MediaQueryListEventInit extends EventInit {
+trait MediaQueryListEventInit
+  extends StObject
+     with EventInit {
   
   var matches: js.UndefOr[scala.Boolean] = js.undefined
   

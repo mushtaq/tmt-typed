@@ -26,12 +26,6 @@ object PushSubscriptionOptionsInit {
     def setApplicationServerKey(value: BufferSource | java.lang.String): Self = StObject.set(x, "applicationServerKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setApplicationServerKeyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "applicationServerKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setApplicationServerKeyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "applicationServerKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setApplicationServerKeyNull: Self = StObject.set(x, "applicationServerKey", null)
     
     @scala.inline

@@ -75,34 +75,19 @@ trait RequestInit extends StObject {
 object RequestInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.RequestInit = {
+  def apply(): RequestInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.RequestInit]
+    __obj.asInstanceOf[RequestInit]
   }
   
   @scala.inline
-  implicit class RequestInitMutableBuilder[Self <: org.scalajs.dom.experimental.RequestInit] (val x: Self) extends AnyVal {
+  implicit class RequestInitMutableBuilder[Self <: RequestInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setBody(value: BodyInit): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBodyBlob(value: org.scalajs.dom.raw.Blob): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBodyFormData(value: org.scalajs.dom.raw.FormData): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setBodyNull: Self = StObject.set(x, "body", null)
-    
-    @scala.inline
-    def setBodyReadableStream(value: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array]): Self = StObject.set(x, "body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBodyUndefined: Self = StObject.set(x, "body", js.undefined)
@@ -121,9 +106,6 @@ object RequestInit {
     
     @scala.inline
     def setHeaders(value: HeadersInit): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)

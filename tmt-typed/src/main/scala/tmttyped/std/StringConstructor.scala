@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait StringConstructor
-  extends Instantiable0[java.lang.String]
+  extends StObject
+     with Instantiable0[java.lang.String]
      with Instantiable1[/* value */ js.Any, java.lang.String] {
   
   def apply(): java.lang.String = js.native

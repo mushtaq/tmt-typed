@@ -14,14 +14,14 @@ trait StyleMedia extends StObject {
 object StyleMedia {
   
   @scala.inline
-  def apply(matchMedium: java.lang.String => scala.Boolean, `type`: java.lang.String): org.scalajs.dom.raw.StyleMedia = {
+  def apply(matchMedium: java.lang.String => scala.Boolean, `type`: java.lang.String): StyleMedia = {
     val __obj = js.Dynamic.literal(matchMedium = js.Any.fromFunction1(matchMedium))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.StyleMedia]
+    __obj.asInstanceOf[StyleMedia]
   }
   
   @scala.inline
-  implicit class StyleMediaMutableBuilder[Self <: org.scalajs.dom.raw.StyleMedia] (val x: Self) extends AnyVal {
+  implicit class StyleMediaMutableBuilder[Self <: StyleMedia] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setMatchMedium(value: java.lang.String => scala.Boolean): Self = StObject.set(x, "matchMedium", js.Any.fromFunction1(value))

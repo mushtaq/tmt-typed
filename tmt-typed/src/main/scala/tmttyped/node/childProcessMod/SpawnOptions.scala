@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SpawnOptions extends CommonSpawnOptions {
+trait SpawnOptions
+  extends StObject
+     with CommonSpawnOptions {
   
   var detached: js.UndefOr[Boolean] = js.undefined
 }

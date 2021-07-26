@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MimeType")
 @js.native
 class MimeType ()
-  extends tmttyped.std.MimeType {
+  extends StObject
+     with tmttyped.std.MimeType {
   
   /**
     * Returns the MIME type's description.

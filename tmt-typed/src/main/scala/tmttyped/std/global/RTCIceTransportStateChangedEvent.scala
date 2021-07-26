@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCIceTransportStateChangedEvent")
 @js.native
 class RTCIceTransportStateChangedEvent ()
-  extends tmttyped.std.RTCIceTransportStateChangedEvent
+  extends StObject
+     with tmttyped.std.RTCIceTransportStateChangedEvent

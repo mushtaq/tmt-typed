@@ -42,13 +42,13 @@ object IDBKeyRange {
     lowerOpen: scala.Boolean,
     upper: js.Any,
     upperOpen: scala.Boolean
-  ): org.scalajs.dom.raw.IDBKeyRange = {
+  ): IDBKeyRange = {
     val __obj = js.Dynamic.literal(includes = js.Any.fromFunction1(includes), lower = lower.asInstanceOf[js.Any], lowerOpen = lowerOpen.asInstanceOf[js.Any], upper = upper.asInstanceOf[js.Any], upperOpen = upperOpen.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.IDBKeyRange]
+    __obj.asInstanceOf[IDBKeyRange]
   }
   
   @scala.inline
-  implicit class IDBKeyRangeMutableBuilder[Self <: org.scalajs.dom.raw.IDBKeyRange] (val x: Self) extends AnyVal {
+  implicit class IDBKeyRangeMutableBuilder[Self <: IDBKeyRange] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setIncludes(value: js.Any => scala.Boolean): Self = StObject.set(x, "includes", js.Any.fromFunction1(value))

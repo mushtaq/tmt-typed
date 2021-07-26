@@ -20,6 +20,6 @@ object mod {
   @scala.inline
   def fetchEventSource(
     input: RequestInfo,
-    hasSignalHeadersOnopenOnmessageOncloseOnerrorOpenWhenHiddenFetchRest: FetchEventSourceInit
-  ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasSignalHeadersOnopenOnmessageOncloseOnerrorOpenWhenHiddenFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest: FetchEventSourceInit
+  ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
 }

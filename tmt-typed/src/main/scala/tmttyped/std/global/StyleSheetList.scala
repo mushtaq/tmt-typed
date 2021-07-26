@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StyleSheetList")
 @js.native
 class StyleSheetList ()
-  extends tmttyped.std.StyleSheetList
+  extends StObject
+     with tmttyped.std.StyleSheetList

@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SVGElementInstance extends EventTarget {
+trait SVGElementInstance
+  extends StObject
+     with EventTarget {
   
   val correspondingElement: org.scalajs.dom.raw.SVGElement = js.native
   

@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BeforeUnloadEvent")
 @js.native
 class BeforeUnloadEvent ()
-  extends tmttyped.std.BeforeUnloadEvent
+  extends StObject
+     with tmttyped.std.BeforeUnloadEvent

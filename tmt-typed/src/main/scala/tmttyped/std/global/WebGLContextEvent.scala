@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("WebGLContextEvent")
 @js.native
 class WebGLContextEvent protected ()
-  extends tmttyped.std.WebGLContextEvent {
+  extends StObject
+     with tmttyped.std.WebGLContextEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInit: WebGLContextEventInit) = this()
 }

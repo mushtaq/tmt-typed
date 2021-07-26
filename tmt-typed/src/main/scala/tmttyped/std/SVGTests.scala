@@ -17,13 +17,13 @@ object SVGTests {
   def apply(
     requiredExtensions: org.scalajs.dom.raw.SVGStringList,
     systemLanguage: org.scalajs.dom.raw.SVGStringList
-  ): org.scalajs.dom.raw.SVGTests = {
+  ): SVGTests = {
     val __obj = js.Dynamic.literal(requiredExtensions = requiredExtensions.asInstanceOf[js.Any], systemLanguage = systemLanguage.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGTests]
+    __obj.asInstanceOf[SVGTests]
   }
   
   @scala.inline
-  implicit class SVGTestsMutableBuilder[Self <: org.scalajs.dom.raw.SVGTests] (val x: Self) extends AnyVal {
+  implicit class SVGTestsMutableBuilder[Self <: SVGTests] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setRequiredExtensions(value: org.scalajs.dom.raw.SVGStringList): Self = StObject.set(x, "requiredExtensions", value.asInstanceOf[js.Any])

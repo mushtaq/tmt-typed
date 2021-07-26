@@ -13,7 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OffscreenCanvasRenderingContext2D")
 @js.native
 class OffscreenCanvasRenderingContext2D ()
-  extends tmttyped.std.OffscreenCanvasRenderingContext2D {
+  extends StObject
+     with tmttyped.std.OffscreenCanvasRenderingContext2D {
   
   /* CompleteClass */
   override def clearRect(x: Double, y: Double, w: Double, h: Double): Unit = js.native

@@ -8,7 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Array[T] extends /* n */ NumberDictionary[T] {
+trait Array[T]
+  extends StObject
+     with /* n */ NumberDictionary[T] {
   
   /**
     * Combines two or more arrays.
@@ -42,9 +44,9 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def every(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _]): scala.Boolean = js.native
+  def every(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any]): scala.Boolean = js.native
   def every(
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _],
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any],
     thisArg: js.Any
   ): scala.Boolean = js.native
   /**
@@ -74,18 +76,18 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * length+end.
     */
   def fill(value: T): this.type = js.native
-  def fill(value: T, start: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
   def fill(value: T, start: Double): this.type = js.native
   def fill(value: T, start: Double, end: Double): this.type = js.native
+  def fill(value: T, start: Unit, end: Double): this.type = js.native
   
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
     * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
     * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     */
-  def filter(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _]): js.Array[T] = js.native
+  def filter(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any]): js.Array[T] = js.native
   def filter(
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _],
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any],
     thisArg: js.Any
   ): js.Array[T] = js.native
   /**
@@ -103,9 +105,9 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     thisArg: js.Any
   ): js.Array[S] = js.native
   
-  def find(predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], _]): js.UndefOr[T] = js.native
+  def find(predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], js.Any]): js.UndefOr[T] = js.native
   def find(
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], _],
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], js.Any],
     thisArg: js.Any
   ): js.UndefOr[T] = js.native
   /**
@@ -146,9 +148,9 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * @param thisArg If provided, it will be used as the this value for each invocation of
     * predicate. If it is not provided, undefined is used instead.
     */
-  def findIndex(predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], _]): Double = js.native
+  def findIndex(predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], js.Any]): Double = js.native
   def findIndex(
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], _],
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* obj */ js.Array[T], js.Any],
     thisArg: js.Any
   ): Double = js.native
   
@@ -375,9 +377,9 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * If end is undefined, then the slice extends to the end of the array.
     */
   def slice(): js.Array[T] = js.native
-  def slice(start: js.UndefOr[scala.Nothing], end: Double): js.Array[T] = js.native
   def slice(start: Double): js.Array[T] = js.native
   def slice(start: Double, end: Double): js.Array[T] = js.native
+  def slice(start: Unit, end: Double): js.Array[T] = js.native
   
   /**
     * Determines whether the specified callback function returns true for any element of an array.
@@ -387,9 +389,9 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def some(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _]): scala.Boolean = js.native
+  def some(predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any]): scala.Boolean = js.native
   def some(
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], _],
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* array */ js.Array[T], js.Any],
     thisArg: js.Any
   ): scala.Boolean = js.native
   

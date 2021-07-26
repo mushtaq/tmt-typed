@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("IDBFactory")
 @js.native
 class IDBFactory ()
-  extends tmttyped.std.IDBFactory
+  extends StObject
+     with tmttyped.std.IDBFactory

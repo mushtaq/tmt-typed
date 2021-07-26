@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait IIRFilterOptions extends AudioNodeOptions {
+trait IIRFilterOptions
+  extends StObject
+     with AudioNodeOptions {
   
   var feedback: js.Array[Double]
   

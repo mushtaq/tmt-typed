@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGLinearGradientElement")
 @js.native
 class SVGLinearGradientElement ()
-  extends tmttyped.std.SVGLinearGradientElement {
+  extends StObject
+     with tmttyped.std.SVGLinearGradientElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

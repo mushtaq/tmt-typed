@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OverconstrainedError")
 @js.native
 class OverconstrainedError ()
-  extends tmttyped.std.OverconstrainedError {
+  extends StObject
+     with tmttyped.std.OverconstrainedError {
   
   /* CompleteClass */
   override var constraint: java.lang.String = js.native

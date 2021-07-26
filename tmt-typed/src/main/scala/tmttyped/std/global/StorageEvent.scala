@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("StorageEvent")
 @js.native
 class StorageEvent protected ()
-  extends tmttyped.std.StorageEvent {
+  extends StObject
+     with tmttyped.std.StorageEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: StorageEventInit) = this()
 }

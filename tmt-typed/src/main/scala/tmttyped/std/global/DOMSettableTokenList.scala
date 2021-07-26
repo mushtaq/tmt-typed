@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DOMSettableTokenList")
 @js.native
 class DOMSettableTokenList ()
-  extends tmttyped.std.DOMSettableTokenList
+  extends StObject
+     with tmttyped.std.DOMSettableTokenList

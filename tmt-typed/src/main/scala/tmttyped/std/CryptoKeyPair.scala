@@ -15,13 +15,13 @@ trait CryptoKeyPair extends StObject {
 object CryptoKeyPair {
   
   @scala.inline
-  def apply(privateKey: org.scalajs.dom.crypto.CryptoKey, publicKey: org.scalajs.dom.crypto.CryptoKey): org.scalajs.dom.crypto.CryptoKeyPair = {
+  def apply(privateKey: org.scalajs.dom.crypto.CryptoKey, publicKey: org.scalajs.dom.crypto.CryptoKey): CryptoKeyPair = {
     val __obj = js.Dynamic.literal(privateKey = privateKey.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.crypto.CryptoKeyPair]
+    __obj.asInstanceOf[CryptoKeyPair]
   }
   
   @scala.inline
-  implicit class CryptoKeyPairMutableBuilder[Self <: org.scalajs.dom.crypto.CryptoKeyPair] (val x: Self) extends AnyVal {
+  implicit class CryptoKeyPairMutableBuilder[Self <: CryptoKeyPair] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setPrivateKey(value: org.scalajs.dom.crypto.CryptoKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLBRElement")
 @js.native
 class HTMLBRElement ()
-  extends tmttyped.std.HTMLBRElement {
+  extends StObject
+     with tmttyped.std.HTMLBRElement {
   
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native

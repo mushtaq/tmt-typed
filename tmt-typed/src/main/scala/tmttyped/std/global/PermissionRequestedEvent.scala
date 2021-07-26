@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("PermissionRequestedEvent")
 @js.native
 class PermissionRequestedEvent ()
-  extends tmttyped.std.PermissionRequestedEvent
+  extends StObject
+     with tmttyped.std.PermissionRequestedEvent

@@ -6,7 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait RequestResponseFrame extends Frame {
+trait RequestResponseFrame
+  extends StObject
+     with Frame {
   
   var data: js.UndefOr[Encodable] = js.undefined
   
@@ -36,9 +38,6 @@ object RequestResponseFrame {
     def setData(value: Encodable): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
     @scala.inline
@@ -52,9 +51,6 @@ object RequestResponseFrame {
     
     @scala.inline
     def setMetadata(value: Encodable): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMetadataUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMetadataUndefined: Self = StObject.set(x, "metadata", js.undefined)

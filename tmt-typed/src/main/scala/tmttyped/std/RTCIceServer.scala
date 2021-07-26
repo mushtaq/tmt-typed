@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCIceServer extends StObject {
   
-  var credential: js.UndefOr[java.lang.String | RTCOAuthCredential] = js.undefined
+  var credential: js.UndefOr[java.lang.String] = js.undefined
   
   var credentialType: js.UndefOr[RTCIceCredentialType] = js.undefined
   
@@ -18,16 +18,16 @@ trait RTCIceServer extends StObject {
 object RTCIceServer {
   
   @scala.inline
-  def apply(urls: java.lang.String | js.Array[java.lang.String]): org.scalajs.dom.experimental.webrtc.RTCIceServer = {
+  def apply(urls: java.lang.String | js.Array[java.lang.String]): RTCIceServer = {
     val __obj = js.Dynamic.literal(urls = urls.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.experimental.webrtc.RTCIceServer]
+    __obj.asInstanceOf[RTCIceServer]
   }
   
   @scala.inline
-  implicit class RTCIceServerMutableBuilder[Self <: org.scalajs.dom.experimental.webrtc.RTCIceServer] (val x: Self) extends AnyVal {
+  implicit class RTCIceServerMutableBuilder[Self <: RTCIceServer] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCredential(value: java.lang.String | RTCOAuthCredential): Self = StObject.set(x, "credential", value.asInstanceOf[js.Any])
+    def setCredential(value: java.lang.String): Self = StObject.set(x, "credential", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCredentialType(value: RTCIceCredentialType): Self = StObject.set(x, "credentialType", value.asInstanceOf[js.Any])

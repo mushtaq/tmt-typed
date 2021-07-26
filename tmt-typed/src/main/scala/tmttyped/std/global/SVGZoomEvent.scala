@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("SVGZoomEvent")
 @js.native
 class SVGZoomEvent ()
-  extends tmttyped.std.SVGZoomEvent
+  extends StObject
+     with tmttyped.std.SVGZoomEvent

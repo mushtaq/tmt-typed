@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSAssertion")
 @js.native
 class MSAssertion ()
-  extends tmttyped.std.MSAssertion {
+  extends StObject
+     with tmttyped.std.MSAssertion {
   
   /* CompleteClass */
   override val id: java.lang.String = js.native

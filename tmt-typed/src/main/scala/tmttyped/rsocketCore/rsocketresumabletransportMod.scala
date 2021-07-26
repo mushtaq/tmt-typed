@@ -15,9 +15,11 @@ object rsocketresumabletransportMod {
   
   @JSImport("rsocket-core/RSocketResumableTransport", JSImport.Default)
   @js.native
-  class default protected () extends RSocketResumableTransport {
+  class default protected ()
+    extends StObject
+       with RSocketResumableTransport {
     def this(source: js.Function0[DuplexConnection], options: Options) = this()
-    def this(source: js.Function0[DuplexConnection], options: Options, encoders: Encoders[_]) = this()
+    def this(source: js.Function0[DuplexConnection], options: Options, encoders: Encoders[js.Any]) = this()
     
     /**
       * Close the underlying connection, emitting `onComplete` on the receive()
@@ -100,14 +102,13 @@ object rsocketresumabletransportMod {
       def setResumeToken(value: Encodable): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setResumeTokenUint8Array(value: js.typedarray.Uint8Array): Self = StObject.set(x, "resumeToken", value.asInstanceOf[js.Any])
-      
-      @scala.inline
       def setSessionDurationSeconds(value: Double): Self = StObject.set(x, "sessionDurationSeconds", value.asInstanceOf[js.Any])
     }
   }
   
-  trait RSocketResumableTransport extends DuplexConnection
+  trait RSocketResumableTransport
+    extends StObject
+       with DuplexConnection
   object RSocketResumableTransport {
     
     @scala.inline

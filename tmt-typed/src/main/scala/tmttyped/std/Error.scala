@@ -16,13 +16,13 @@ trait Error extends StObject {
 object Error {
   
   @scala.inline
-  def apply(message: java.lang.String, name: java.lang.String): js.Error = {
+  def apply(message: java.lang.String, name: java.lang.String): Error = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[js.Error]
+    __obj.asInstanceOf[Error]
   }
   
   @scala.inline
-  implicit class ErrorMutableBuilder[Self <: js.Error] (val x: Self) extends AnyVal {
+  implicit class ErrorMutableBuilder[Self <: Error] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setMessage(value: java.lang.String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])

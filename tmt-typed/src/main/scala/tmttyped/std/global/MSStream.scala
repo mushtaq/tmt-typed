@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("MSStream")
 @js.native
 class MSStream ()
-  extends tmttyped.std.MSStream {
+  extends StObject
+     with tmttyped.std.MSStream {
   
   /* CompleteClass */
   override def msClose(): Unit = js.native

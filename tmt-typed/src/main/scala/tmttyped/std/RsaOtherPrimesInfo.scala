@@ -16,13 +16,13 @@ trait RsaOtherPrimesInfo extends StObject {
 object RsaOtherPrimesInfo {
   
   @scala.inline
-  def apply(): org.scalajs.dom.crypto.RsaOtherPrimesInfo = {
+  def apply(): RsaOtherPrimesInfo = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.crypto.RsaOtherPrimesInfo]
+    __obj.asInstanceOf[RsaOtherPrimesInfo]
   }
   
   @scala.inline
-  implicit class RsaOtherPrimesInfoMutableBuilder[Self <: org.scalajs.dom.crypto.RsaOtherPrimesInfo] (val x: Self) extends AnyVal {
+  implicit class RsaOtherPrimesInfoMutableBuilder[Self <: RsaOtherPrimesInfo] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setD(value: java.lang.String): Self = StObject.set(x, "d", value.asInstanceOf[js.Any])

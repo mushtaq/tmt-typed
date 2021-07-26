@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCStatsProvider")
 @js.native
 class RTCStatsProvider ()
-  extends tmttyped.std.RTCStatsProvider
+  extends StObject
+     with tmttyped.std.RTCStatsProvider

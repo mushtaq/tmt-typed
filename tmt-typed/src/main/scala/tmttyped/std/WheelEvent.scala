@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** Events that occur due to the user moving a mouse wheel or similar input device. */
 @js.native
-trait WheelEvent extends MouseEvent {
+trait WheelEvent
+  extends StObject
+     with MouseEvent {
   
   val DOM_DELTA_LINE: Double = js.native
   

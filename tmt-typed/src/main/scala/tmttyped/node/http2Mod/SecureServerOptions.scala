@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait SecureServerOptions extends SecureServerSessionOptions {
+trait SecureServerOptions
+  extends StObject
+     with SecureServerSessionOptions {
   
   var allowHTTP1: js.UndefOr[Boolean] = js.undefined
   

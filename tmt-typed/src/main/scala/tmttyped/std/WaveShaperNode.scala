@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A WaveShaperNode always has exactly one input and one output. */
 @js.native
-trait WaveShaperNode extends AudioNode {
+trait WaveShaperNode
+  extends StObject
+     with AudioNode {
   
   var curve: js.typedarray.Float32Array | Null = js.native
   

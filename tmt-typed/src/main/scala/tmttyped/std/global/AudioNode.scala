@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("AudioNode")
 @js.native
 class AudioNode ()
-  extends tmttyped.std.AudioNode
+  extends StObject
+     with tmttyped.std.AudioNode

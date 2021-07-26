@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RTCStatsReport
-  extends ReadonlyMap[java.lang.String, js.Any]
+  extends StObject
+     with ReadonlyMap[java.lang.String, js.Any]

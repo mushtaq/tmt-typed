@@ -16,19 +16,16 @@ trait ResponseInit extends StObject {
 object ResponseInit {
   
   @scala.inline
-  def apply(): org.scalajs.dom.experimental.ResponseInit = {
+  def apply(): ResponseInit = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[org.scalajs.dom.experimental.ResponseInit]
+    __obj.asInstanceOf[ResponseInit]
   }
   
   @scala.inline
-  implicit class ResponseInitMutableBuilder[Self <: org.scalajs.dom.experimental.ResponseInit] (val x: Self) extends AnyVal {
+  implicit class ResponseInitMutableBuilder[Self <: ResponseInit] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setHeaders(value: HeadersInit): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHeadersHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)

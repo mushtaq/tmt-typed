@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("webkitURL")
 @js.native
 class webkitURL protected ()
-  extends tmttyped.std.URL {
+  extends StObject
+     with tmttyped.std.URL {
   def this(url: java.lang.String) = this()
   def this(url: java.lang.String, base: java.lang.String) = this()
   def this(url: java.lang.String, base: org.scalajs.dom.experimental.URL) = this()

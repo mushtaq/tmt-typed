@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("ListeningStateChangedEvent")
 @js.native
 class ListeningStateChangedEvent ()
-  extends tmttyped.std.ListeningStateChangedEvent
+  extends StObject
+     with tmttyped.std.ListeningStateChangedEvent

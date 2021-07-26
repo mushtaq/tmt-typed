@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TextEvent")
 @js.native
 class TextEvent ()
-  extends tmttyped.std.TextEvent
+  extends StObject
+     with tmttyped.std.TextEvent
 object TextEvent {
   
   @JSGlobal("TextEvent.DOM_INPUT_METHOD_DROP")

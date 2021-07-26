@@ -15,13 +15,13 @@ trait SVGAnimatedNumber extends StObject {
 object SVGAnimatedNumber {
   
   @scala.inline
-  def apply(animVal: Double, baseVal: Double): org.scalajs.dom.raw.SVGAnimatedNumber = {
+  def apply(animVal: Double, baseVal: Double): SVGAnimatedNumber = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.raw.SVGAnimatedNumber]
+    __obj.asInstanceOf[SVGAnimatedNumber]
   }
   
   @scala.inline
-  implicit class SVGAnimatedNumberMutableBuilder[Self <: org.scalajs.dom.raw.SVGAnimatedNumber] (val x: Self) extends AnyVal {
+  implicit class SVGAnimatedNumberMutableBuilder[Self <: SVGAnimatedNumber] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setAnimVal(value: Double): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])

@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OscillatorNode")
 @js.native
 class OscillatorNode protected ()
-  extends tmttyped.std.OscillatorNode {
+  extends StObject
+     with tmttyped.std.OscillatorNode {
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: OscillatorOptions) = this()
 }

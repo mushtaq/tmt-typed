@@ -5,7 +5,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait PublicKeyCredentialRpEntity extends PublicKeyCredentialEntity {
+trait PublicKeyCredentialRpEntity
+  extends StObject
+     with PublicKeyCredentialEntity {
   
   var id: js.UndefOr[java.lang.String] = js.undefined
 }

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("OverflowEvent")
 @js.native
 class OverflowEvent ()
-  extends tmttyped.std.OverflowEvent
+  extends StObject
+     with tmttyped.std.OverflowEvent
 object OverflowEvent {
   
   @JSGlobal("OverflowEvent.BOTH")

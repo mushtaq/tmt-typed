@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("HTMLOptionsCollection")
 @js.native
 class HTMLOptionsCollection ()
-  extends tmttyped.std.HTMLOptionsCollection
+  extends StObject
+     with tmttyped.std.HTMLOptionsCollection

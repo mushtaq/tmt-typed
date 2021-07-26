@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("RTCSsrcConflictEvent")
 @js.native
 class RTCSsrcConflictEvent ()
-  extends tmttyped.std.RTCSsrcConflictEvent
+  extends StObject
+     with tmttyped.std.RTCSsrcConflictEvent

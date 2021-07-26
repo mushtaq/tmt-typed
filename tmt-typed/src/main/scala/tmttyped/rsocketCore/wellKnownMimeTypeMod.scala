@@ -10,7 +10,9 @@ object wellKnownMimeTypeMod {
   
   @JSImport("rsocket-core/WellKnownMimeType", JSImport.Default)
   @js.native
-  class default protected () extends WellKnownMimeType {
+  class default protected ()
+    extends StObject
+       with WellKnownMimeType {
     def this(str: String, identifier: Double) = this()
     
     /** @return the byte identifier of the mime type, guaranteed to be positive or zero. */

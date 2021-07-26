@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("TransitionEvent")
 @js.native
 class TransitionEvent protected ()
-  extends tmttyped.std.TransitionEvent {
+  extends StObject
+     with tmttyped.std.TransitionEvent {
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, transitionEventInitDict: TransitionEventInit) = this()
 }

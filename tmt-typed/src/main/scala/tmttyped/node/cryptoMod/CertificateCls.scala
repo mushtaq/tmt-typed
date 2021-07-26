@@ -9,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("crypto", "Certificate")
 @js.native
 /** @deprecated since v14.9.0 - Use static methods of `crypto.Certificate` instead. */
-class CertificateCls () extends Certificate
+class CertificateCls ()
+  extends StObject
+     with Certificate

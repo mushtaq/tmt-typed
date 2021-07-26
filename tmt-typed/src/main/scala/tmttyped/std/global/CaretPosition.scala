@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("CaretPosition")
 @js.native
 class CaretPosition ()
-  extends tmttyped.std.CaretPosition {
+  extends StObject
+     with tmttyped.std.CaretPosition {
   
   /* CompleteClass */
   override def getClientRect(): tmttyped.std.DOMRect | Null = js.native

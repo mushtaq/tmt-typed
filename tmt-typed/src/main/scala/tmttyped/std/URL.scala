@@ -51,13 +51,13 @@ object URL {
     searchParams: URLSearchParams,
     toJSON: () => java.lang.String,
     username: java.lang.String
-  ): org.scalajs.dom.experimental.URL = {
+  ): URL = {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], hostname = hostname.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], searchParams = searchParams.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), username = username.asInstanceOf[js.Any])
-    __obj.asInstanceOf[org.scalajs.dom.experimental.URL]
+    __obj.asInstanceOf[URL]
   }
   
   @scala.inline
-  implicit class URLMutableBuilder[Self <: org.scalajs.dom.experimental.URL] (val x: Self) extends AnyVal {
+  implicit class URLMutableBuilder[Self <: URL] (val x: Self) extends AnyVal {
     
     @scala.inline
     def setHash(value: java.lang.String): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])

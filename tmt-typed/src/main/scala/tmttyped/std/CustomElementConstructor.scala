@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CustomElementConstructor
-  extends Instantiable1[/* params (repeated) */ js.Any, org.scalajs.dom.raw.HTMLElement]
+  extends StObject
+     with Instantiable1[/* params (repeated) */ js.Any, org.scalajs.dom.raw.HTMLElement]

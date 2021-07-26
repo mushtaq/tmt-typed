@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DataTransferItemList")
 @js.native
 class DataTransferItemList ()
-  extends tmttyped.std.DataTransferItemList
+  extends StObject
+     with tmttyped.std.DataTransferItemList

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DeviceRotationRate")
 @js.native
 class DeviceRotationRate ()
-  extends tmttyped.std.DeviceRotationRate {
+  extends StObject
+     with tmttyped.std.DeviceRotationRate {
   
   /* CompleteClass */
   override val alpha: Double | Null = js.native

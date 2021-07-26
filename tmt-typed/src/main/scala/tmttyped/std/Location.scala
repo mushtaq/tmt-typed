@@ -21,28 +21,28 @@ trait Location extends StObject {
   
   /**
     * Returns the Location object's URL's fragment (includes leading "#" if non-empty).
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed fragment (ignores leading "#").
     */
   var hash: java.lang.String = js.native
   
   /**
     * Returns the Location object's URL's host and port (if different from the default port for the scheme).
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed host and port.
     */
   var host: java.lang.String = js.native
   
   /**
     * Returns the Location object's URL's host.
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed host.
     */
   var hostname: java.lang.String = js.native
   
   /**
     * Returns the Location object's URL.
-    * 
+    *
     * Can be set, to navigate to the given URL.
     */
   var href: java.lang.String = js.native
@@ -54,21 +54,21 @@ trait Location extends StObject {
   
   /**
     * Returns the Location object's URL's path.
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed path.
     */
   var pathname: java.lang.String = js.native
   
   /**
     * Returns the Location object's URL's port.
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed port.
     */
   var port: java.lang.String = js.native
   
   /**
     * Returns the Location object's URL's scheme.
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed scheme.
     */
   var protocol: java.lang.String = js.native
@@ -87,7 +87,7 @@ trait Location extends StObject {
   
   /**
     * Returns the Location object's URL's query (includes leading "?" if non-empty).
-    * 
+    *
     * Can be set, to navigate to the same URL with a changed query (ignores leading "?").
     */
   var search: java.lang.String = js.native
