@@ -1,6 +1,7 @@
 inThisBuild(
   Seq(
-    scalaVersion := "2.12.10",
+    scalaVersion := "2.13.6",
+    crossScalaVersions := List("2.12.10", "2.13.6"),
     version := "0.1.0-SNAPSHOT",
     organization := "com.github.mushtaq.tmt-typed",
     organizationName := "ThoughtWorks",
@@ -10,8 +11,8 @@ inThisBuild(
       "-feature",
       "-unchecked",
       "-deprecation",
-      //"-Wconf:any:warning-verbose",
-      //"-Wdead-code",
+      "-Wconf:any:warning-verbose",
+      "-Wdead-code",
       "-Xlint:_,-missing-interpolator",
       "-Xsource:3",
       "-Xcheckinit"
