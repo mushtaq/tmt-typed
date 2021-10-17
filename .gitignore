@@ -3,6 +3,9 @@ ts
 *.log
 project/project/target
 project/target
+project/.boot/
+project/.ivy/
+project/.sbtboot/
 target
 .idea
 .metals
