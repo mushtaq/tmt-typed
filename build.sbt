@@ -32,7 +32,7 @@ lazy val `tmt-typed` = project
     Compile / npmDependencies ++= Seq(
       "@microsoft/fetch-event-source"   -> "^2.0.1",
       "@types/rsocket-websocket-client" -> "^0.0.4",
-      "typescript"                      -> "^4.2.2"
+      "typescript"                      -> "^4.5.5"
     ),
     stEnableScalaJsDefined := Selection.All,
     stStdlib := List("ESNext", "DOM", "DOM.Iterable", "ScriptHost"),
