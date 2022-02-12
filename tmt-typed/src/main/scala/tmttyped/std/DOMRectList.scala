@@ -9,12 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMRectList
   extends StObject
-     with /* index */ NumberDictionary[DOMRect] {
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.DOMRect] {
   
-  def item(index: Double): DOMRect | Null = js.native
+  /* standard DOM */
+  def item(index: Double): org.scalajs.dom.DOMRect | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[DOMRect]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.DOMRect]] = js.native
   
+  /* standard DOM */
   val length: Double = js.native
 }

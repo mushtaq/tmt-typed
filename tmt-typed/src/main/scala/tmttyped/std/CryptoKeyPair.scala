@@ -5,18 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm. */
 trait CryptoKeyPair extends StObject {
   
-  var privateKey: org.scalajs.dom.crypto.CryptoKey
+  /* standard DOM */
+  var privateKey: js.UndefOr[org.scalajs.dom.CryptoKey] = js.undefined
   
-  var publicKey: org.scalajs.dom.crypto.CryptoKey
+  /* standard DOM */
+  var publicKey: js.UndefOr[org.scalajs.dom.CryptoKey] = js.undefined
 }
 object CryptoKeyPair {
   
   @scala.inline
-  def apply(privateKey: org.scalajs.dom.crypto.CryptoKey, publicKey: org.scalajs.dom.crypto.CryptoKey): CryptoKeyPair = {
-    val __obj = js.Dynamic.literal(privateKey = privateKey.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
+  def apply(): CryptoKeyPair = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CryptoKeyPair]
   }
   
@@ -24,9 +25,15 @@ object CryptoKeyPair {
   implicit class CryptoKeyPairMutableBuilder[Self <: CryptoKeyPair] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setPrivateKey(value: org.scalajs.dom.crypto.CryptoKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
+    def setPrivateKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPublicKey(value: org.scalajs.dom.crypto.CryptoKey): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
+    def setPrivateKeyUndefined: Self = StObject.set(x, "privateKey", js.undefined)
+    
+    @scala.inline
+    def setPublicKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPublicKeyUndefined: Self = StObject.set(x, "publicKey", js.undefined)
   }
 }

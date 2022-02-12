@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("TimeRanges")
 @js.native
+/* standard DOM */
 class TimeRanges ()
   extends StObject
      with tmttyped.std.TimeRanges {
@@ -17,12 +18,12 @@ class TimeRanges ()
     *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
+  /* standard DOM */
   /* CompleteClass */
   override def end(index: Double): Double = js.native
   
-  /**
-    * Returns the number of ranges in the object.
-    */
+  /** Returns the number of ranges in the object. */
+  /* standard DOM */
   /* CompleteClass */
   override val length: Double = js.native
   
@@ -31,6 +32,7 @@ class TimeRanges ()
     *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
+  /* standard DOM */
   /* CompleteClass */
   override def start(index: Double): Double = js.native
 }

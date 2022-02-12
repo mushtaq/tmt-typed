@@ -18,7 +18,7 @@ trait ErrorConstructor extends StObject {
     *
     * @see https://v8.dev/docs/stack-trace-api#customizing-stack-traces
     */
-  var prepareStackTrace: js.UndefOr[js.Function2[/* err */ js.Error, /* stackTraces */ js.Array[CallSite], js.Any]] = js.native
+  var prepareStackTrace: js.UndefOr[js.Function2[/* err */ js.Error, /* stackTraces */ js.Array[CallSite], Any]] = js.native
   
   var stackTraceLimit: Double = js.native
 }

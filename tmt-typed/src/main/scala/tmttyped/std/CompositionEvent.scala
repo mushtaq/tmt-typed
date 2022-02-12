@@ -11,5 +11,116 @@ trait CompositionEvent
   extends StObject
      with UIEvent {
   
+  /* standard DOM */
   val data: java.lang.String = js.native
+  
+  /** @deprecated */
+  /* standard DOM */
+  def initCompositionEvent(typeArg: java.lang.String): Unit = js.native
+  def initCompositionEvent(typeArg: java.lang.String, bubblesArg: scala.Boolean): Unit = js.native
+  def initCompositionEvent(typeArg: java.lang.String, bubblesArg: scala.Boolean, cancelableArg: scala.Boolean): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: Null,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: Unit,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: Null,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: Unit,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: scala.Boolean): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: Null,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: Unit,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: Unit, viewArg: org.scalajs.dom.Window): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: Unit,
+    viewArg: Null,
+    dataArg: java.lang.String
+  ): Unit = js.native
+  def initCompositionEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: Unit,
+    viewArg: Unit,
+    dataArg: java.lang.String
+  ): Unit = js.native
 }

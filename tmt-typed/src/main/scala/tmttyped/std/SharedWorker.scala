@@ -12,20 +12,19 @@ trait SharedWorker
      with AbstractWorker {
   
   /* InferMemberOverrides */
-  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  override def addEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  override def addEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   /* InferMemberOverrides */
   override def addEventListener(
     `type`: java.lang.String,
-    listener: EventListenerOrEventListenerObject,
+    callback: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Returns sharedWorker's MessagePort object which can be used to communicate with the global environment.
-    */
-  val port: org.scalajs.dom.raw.MessagePort = js.native
+  /** Returns sharedWorker's MessagePort object which can be used to communicate with the global environment. */
+  /* standard DOM */
+  val port: org.scalajs.dom.MessagePort = js.native
   
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
@@ -33,7 +32,7 @@ trait SharedWorker
   override def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

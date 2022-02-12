@@ -6,63 +6,87 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** An abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API. */
-trait DOMException extends StObject {
+trait DOMException
+  extends StObject
+     with Error {
   
+  /* standard DOM */
   val ABORT_ERR: Double
   
+  /* standard DOM */
   val DATA_CLONE_ERR: Double
   
+  /* standard DOM */
   val DOMSTRING_SIZE_ERR: Double
   
+  /* standard DOM */
   val HIERARCHY_REQUEST_ERR: Double
   
+  /* standard DOM */
   val INDEX_SIZE_ERR: Double
   
+  /* standard DOM */
   val INUSE_ATTRIBUTE_ERR: Double
   
+  /* standard DOM */
   val INVALID_ACCESS_ERR: Double
   
+  /* standard DOM */
   val INVALID_CHARACTER_ERR: Double
   
+  /* standard DOM */
   val INVALID_MODIFICATION_ERR: Double
   
+  /* standard DOM */
   val INVALID_NODE_TYPE_ERR: Double
   
+  /* standard DOM */
   val INVALID_STATE_ERR: Double
   
+  /* standard DOM */
   val NAMESPACE_ERR: Double
   
+  /* standard DOM */
   val NETWORK_ERR: Double
   
+  /* standard DOM */
   val NOT_FOUND_ERR: Double
   
+  /* standard DOM */
   val NOT_SUPPORTED_ERR: Double
   
+  /* standard DOM */
   val NO_DATA_ALLOWED_ERR: Double
   
+  /* standard DOM */
   val NO_MODIFICATION_ALLOWED_ERR: Double
   
+  /* standard DOM */
   val QUOTA_EXCEEDED_ERR: Double
   
+  /* standard DOM */
   val SECURITY_ERR: Double
   
+  /* standard DOM */
   val SYNTAX_ERR: Double
   
+  /* standard DOM */
   val TIMEOUT_ERR: Double
   
+  /* standard DOM */
   val TYPE_MISMATCH_ERR: Double
   
+  /* standard DOM */
   val URL_MISMATCH_ERR: Double
   
+  /* standard DOM */
   val VALIDATION_ERR: Double
   
+  /* standard DOM */
   val WRONG_DOCUMENT_ERR: Double
   
+  /* standard DOM */
   val code: Double
-  
-  val message: java.lang.String
-  
-  val name: java.lang.String
 }
 object DOMException {
   
@@ -141,9 +165,6 @@ object DOMException {
     def setINVALID_STATE_ERR(value: Double): Self = StObject.set(x, "INVALID_STATE_ERR", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessage(value: java.lang.String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setNAMESPACE_ERR(value: Double): Self = StObject.set(x, "NAMESPACE_ERR", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -160,9 +181,6 @@ object DOMException {
     
     @scala.inline
     def setNO_MODIFICATION_ALLOWED_ERR(value: Double): Self = StObject.set(x, "NO_MODIFICATION_ALLOWED_ERR", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQUOTA_EXCEEDED_ERR(value: Double): Self = StObject.set(x, "QUOTA_EXCEEDED_ERR", value.asInstanceOf[js.Any])

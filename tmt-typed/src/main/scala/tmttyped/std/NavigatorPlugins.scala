@@ -7,10 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NavigatorPlugins extends StObject {
   
+  /** @deprecated */
+  /* standard DOM */
   def javaEnabled(): scala.Boolean
   
+  /** @deprecated */
+  /* standard DOM */
   val mimeTypes: MimeTypeArray
   
+  /** @deprecated */
+  /* standard DOM */
   val plugins: PluginArray
 }
 object NavigatorPlugins {

@@ -7,8 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Writable>`
-  *
   * The `Sign` class is a utility for generating signatures. It can be used in one
   * of two ways:
   *
@@ -26,31 +24,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * const {
   *   generateKeyPairSync,
   *   createSign,
-  *   createVerify,
+  *   createVerify
   * } = await import('crypto');
-  *
-  * const { privateKey, publicKey } = generateKeyPairSync('ec', {
-  *   namedCurve: 'sect239k1'
-  * });
-  *
-  * const sign = createSign('SHA256');
-  * sign.write('some data to sign');
-  * sign.end();
-  * const signature = sign.sign(privateKey, 'hex');
-  *
-  * const verify = createVerify('SHA256');
-  * verify.write('some data to sign');
-  * verify.end();
-  * console.log(verify.verify(publicKey, signature, 'hex'));
-  * // Prints: true
-  * ```
-  *
-  * ```js
-  * const {
-  *   generateKeyPairSync,
-  *   createSign,
-  *   createVerify,
-  * } = require('crypto');
   *
   * const { privateKey, publicKey } = generateKeyPairSync('ec', {
   *   namedCurve: 'sect239k1'
@@ -74,31 +49,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * const {
   *   generateKeyPairSync,
   *   createSign,
-  *   createVerify,
+  *   createVerify
   * } = await import('crypto');
-  *
-  * const { privateKey, publicKey } = generateKeyPairSync('rsa', {
-  *   modulusLength: 2048,
-  * });
-  *
-  * const sign = createSign('SHA256');
-  * sign.update('some data to sign');
-  * sign.end();
-  * const signature = sign.sign(privateKey);
-  *
-  * const verify = createVerify('SHA256');
-  * verify.update('some data to sign');
-  * verify.end();
-  * console.log(verify.verify(publicKey, signature));
-  * // Prints: true
-  * ```
-  *
-  * ```js
-  * const {
-  *   generateKeyPairSync,
-  *   createSign,
-  *   createVerify,
-  * } = require('crypto');
   *
   * const { privateKey, publicKey } = generateKeyPairSync('rsa', {
   *   modulusLength: 2048,
@@ -119,7 +71,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Sign")
 @js.native
-class Sign_ protected () extends StObject {
+/* private */ class Sign_ () extends StObject {
   
   /**
     * Calculates the signature on all the data passed through using either `sign.update()` or `sign.write()`.
@@ -133,14 +85,14 @@ class Sign_ protected () extends StObject {
     * called. Multiple calls to `sign.sign()` will result in an error being thrown.
     * @since v0.1.92
     */
-  def sign(private_key: KeyLike): Buffer = js.native
-  def sign(private_key: KeyLike, output_format: BinaryToTextEncoding): String = js.native
-  def sign(private_key: SignKeyObjectInput): Buffer = js.native
-  def sign(private_key: SignKeyObjectInput, output_format: BinaryToTextEncoding): String = js.native
-  def sign(private_key: SignPrivateKeyInput): Buffer = js.native
-  def sign(private_key: SignPrivateKeyInput, output_format: BinaryToTextEncoding): String = js.native
+  def sign(privateKey: KeyLike): Buffer = js.native
+  def sign(privateKey: KeyLike, outputFormat: BinaryToTextEncoding): String = js.native
+  def sign(privateKey: SignKeyObjectInput): Buffer = js.native
+  def sign(privateKey: SignKeyObjectInput, outputFormat: BinaryToTextEncoding): String = js.native
+  def sign(privateKey: SignPrivateKeyInput): Buffer = js.native
+  def sign(privateKey: SignPrivateKeyInput, outputFormat: BinaryToTextEncoding): String = js.native
   
-  def update(data: String, input_encoding: Encoding): this.type = js.native
+  def update(data: String, inputEncoding: Encoding): this.type = js.native
   /**
     * Updates the `Sign` content with the given `data`, the encoding of which
     * is given in `inputEncoding`.

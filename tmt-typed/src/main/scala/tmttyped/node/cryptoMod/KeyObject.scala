@@ -1,6 +1,7 @@
 package tmttyped.node.cryptoMod
 
 import tmttyped.node.bufferMod.global.Buffer
+import tmttyped.node.cryptoMod.webcrypto.CryptoKey
 import tmttyped.node.nodeStrings.der
 import tmttyped.node.nodeStrings.pem
 import org.scalablytyped.runtime.StObject
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "KeyObject")
 @js.native
-class KeyObject protected ()
+/* private */ class KeyObject ()
   extends StObject
      with _KeyLike {
   
@@ -33,8 +34,11 @@ class KeyObject protected ()
     * through this property can be used to uniquely identify a key or to compromise
     * the security of the key.
     *
-    * RSA-PSS parameters, DH, or any future key type details might be exposed via this
-    * API using additional attributes.
+    * For RSA-PSS keys, if the key material contains a `RSASSA-PSS-params` sequence,
+    * the `hashAlgorithm`, `mgf1HashAlgorithm`, and `saltLength` properties will be
+    * set.
+    *
+    * Other key details might be exposed via this API using additional attributes.
     * @since v15.7.0
     */
   var asymmetricKeyDetails: js.UndefOr[AsymmetricKeyDetails] = js.native
@@ -110,4 +114,33 @@ class KeyObject protected ()
     * @since v11.6.0
     */
   var `type`: KeyObjectType = js.native
+}
+object KeyObject {
+  
+  @JSImport("crypto", "KeyObject")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  /**
+    * Example: Converting a `CryptoKey` instance to a `KeyObject`:
+    *
+    * ```js
+    * const { webcrypto, KeyObject } = await import('crypto');
+    * const { subtle } = webcrypto;
+    *
+    * const key = await subtle.generateKey({
+    *   name: 'HMAC',
+    *   hash: 'SHA-256',
+    *   length: 256
+    * }, true, ['sign', 'verify']);
+    *
+    * const keyObject = KeyObject.from(key);
+    * console.log(keyObject.symmetricKeySize);
+    * // Prints: 32 (symmetric key size in bytes)
+    * ```
+    * @since v15.0.0
+    */
+  /* static member */
+  @scala.inline
+  def from(key: CryptoKey): KeyObject = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(key.asInstanceOf[js.Any]).asInstanceOf[KeyObject]
 }

@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait WorkerOptions extends StObject {
   
-  var credentials: js.UndefOr[org.scalajs.dom.experimental.RequestCredentials] = js.undefined
+  /* standard DOM */
+  var credentials: js.UndefOr[org.scalajs.dom.RequestCredentials] = js.undefined
   
+  /* standard DOM */
   var name: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var `type`: js.UndefOr[WorkerType] = js.undefined
 }
 object WorkerOptions {
@@ -25,7 +28,7 @@ object WorkerOptions {
   implicit class WorkerOptionsMutableBuilder[Self <: WorkerOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
+    def setCredentials(value: org.scalajs.dom.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCredentialsUndefined: Self = StObject.set(x, "credentials", js.undefined)

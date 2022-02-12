@@ -8,10 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Part of the WebGL API and represents the information returned by calling the WebGLRenderingContext.getActiveAttrib() and WebGLRenderingContext.getActiveUniform() methods. */
 trait WebGLActiveInfo extends StObject {
   
+  /* standard DOM */
   val name: java.lang.String
   
+  /* standard DOM */
   val size: GLint
   
+  /* standard DOM */
   val `type`: GLenum
 }
 object WebGLActiveInfo {

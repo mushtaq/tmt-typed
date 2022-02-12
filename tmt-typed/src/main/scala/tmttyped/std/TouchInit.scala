@@ -7,40 +7,55 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TouchInit extends StObject {
   
+  /* standard DOM */
   var altitudeAngle: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var azimuthAngle: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var clientX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var clientY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var force: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var identifier: Double
   
+  /* standard DOM */
   var pageX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var pageY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var radiusX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var radiusY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var rotationAngle: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var screenX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var screenY: js.UndefOr[Double] = js.undefined
   
-  var target: org.scalajs.dom.raw.EventTarget
+  /* standard DOM */
+  var target: org.scalajs.dom.EventTarget
   
+  /* standard DOM */
   var touchType: js.UndefOr[TouchType] = js.undefined
 }
 object TouchInit {
   
   @scala.inline
-  def apply(identifier: Double, target: org.scalajs.dom.raw.EventTarget): TouchInit = {
+  def apply(identifier: Double, target: org.scalajs.dom.EventTarget): TouchInit = {
     val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchInit]
   }
@@ -124,7 +139,7 @@ object TouchInit {
     def setScreenYUndefined: Self = StObject.set(x, "screenY", js.undefined)
     
     @scala.inline
-    def setTarget(value: org.scalajs.dom.raw.EventTarget): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
+    def setTarget(value: org.scalajs.dom.EventTarget): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTouchType(value: TouchType): Self = StObject.set(x, "touchType", value.asInstanceOf[js.Any])

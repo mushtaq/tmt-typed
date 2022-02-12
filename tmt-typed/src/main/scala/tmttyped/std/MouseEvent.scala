@@ -11,25 +11,34 @@ trait MouseEvent
   extends StObject
      with UIEvent {
   
+  /* standard DOM */
   val altKey: scala.Boolean = js.native
   
+  /* standard DOM */
   val button: Double = js.native
   
+  /* standard DOM */
   val buttons: Double = js.native
   
+  /* standard DOM */
   val clientX: Double = js.native
   
+  /* standard DOM */
   val clientY: Double = js.native
   
+  /* standard DOM */
   val ctrlKey: scala.Boolean = js.native
   
+  /* standard DOM */
   def getModifierState(keyArg: java.lang.String): scala.Boolean = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   def initMouseEvent(
     typeArg: java.lang.String,
     canBubbleArg: scala.Boolean,
     cancelableArg: scala.Boolean,
-    viewArg: org.scalajs.dom.raw.Window,
+    viewArg: org.scalajs.dom.Window,
     detailArg: Double,
     screenXArg: Double,
     screenYArg: Double,
@@ -45,7 +54,7 @@ trait MouseEvent
     typeArg: java.lang.String,
     canBubbleArg: scala.Boolean,
     cancelableArg: scala.Boolean,
-    viewArg: org.scalajs.dom.raw.Window,
+    viewArg: org.scalajs.dom.Window,
     detailArg: Double,
     screenXArg: Double,
     screenYArg: Double,
@@ -56,32 +65,45 @@ trait MouseEvent
     shiftKeyArg: scala.Boolean,
     metaKeyArg: scala.Boolean,
     buttonArg: Double,
-    relatedTargetArg: org.scalajs.dom.raw.EventTarget
+    relatedTargetArg: org.scalajs.dom.EventTarget
   ): Unit = js.native
   
+  /* standard DOM */
   val metaKey: scala.Boolean = js.native
   
+  /* standard DOM */
   val movementX: Double = js.native
   
+  /* standard DOM */
   val movementY: Double = js.native
   
+  /* standard DOM */
   val offsetX: Double = js.native
   
+  /* standard DOM */
   val offsetY: Double = js.native
   
+  /* standard DOM */
   val pageX: Double = js.native
   
+  /* standard DOM */
   val pageY: Double = js.native
   
-  val relatedTarget: org.scalajs.dom.raw.EventTarget | Null = js.native
+  /* standard DOM */
+  val relatedTarget: org.scalajs.dom.EventTarget | Null = js.native
   
+  /* standard DOM */
   val screenX: Double = js.native
   
+  /* standard DOM */
   val screenY: Double = js.native
   
+  /* standard DOM */
   val shiftKey: scala.Boolean = js.native
   
+  /* standard DOM */
   val x: Double = js.native
   
+  /* standard DOM */
   val y: Double = js.native
 }

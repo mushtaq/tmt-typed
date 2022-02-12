@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.ClipboardEventInit
+import org.scalajs.dom.ClipboardEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ClipboardEvent protected ()
   extends StObject
      with tmttyped.std.ClipboardEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: ClipboardEventInit) = this()
 }

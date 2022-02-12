@@ -17,14 +17,17 @@ trait ArrayBuffer extends StObject {
   /**
     * Read-only. The length of the ArrayBuffer (in bytes).
     */
+  /* standard es5 */
   val byteLength: Double = js.native
   
   /**
     * Returns a section of an ArrayBuffer.
     */
+  /* standard es5 */
   def slice(begin: Double): js.typedarray.ArrayBuffer = js.native
   def slice(begin: Double, end: Double): js.typedarray.ArrayBuffer = js.native
   
+  /* standard es2015.symbol.wellknown */
   @JSName(js.Symbol.toStringTag)
   val toStringTag: java.lang.String = js.native
 }

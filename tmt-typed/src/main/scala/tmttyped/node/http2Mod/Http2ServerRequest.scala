@@ -31,8 +31,8 @@ class Http2ServerRequest protected () extends StObject {
     */
   val aborted: Boolean = js.native
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_aborted(
     event: tmttyped.node.nodeStrings.aborted,
@@ -66,12 +66,12 @@ class Http2ServerRequest protected () extends StObject {
   /**
     * See `request.socket`.
     * @since v8.4.0
-    * @deprecated Since v13.0.0 - Deprecated. Use `socket`.
+    * @deprecated Since v13.0.0 - Use `socket`.
     */
   val connection: Socket | TLSSocket = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_aborted(event: tmttyped.node.nodeStrings.aborted, hadError: Boolean, code: Double): Boolean = js.native
   @JSName("emit")
@@ -136,8 +136,8 @@ class Http2ServerRequest protected () extends StObject {
     */
   val method: String = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_aborted(
     event: tmttyped.node.nodeStrings.aborted,
@@ -154,8 +154,8 @@ class Http2ServerRequest protected () extends StObject {
   @JSName("on")
   def on_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_aborted(
     event: tmttyped.node.nodeStrings.aborted,
@@ -172,8 +172,8 @@ class Http2ServerRequest protected () extends StObject {
   @JSName("once")
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_aborted(
     event: tmttyped.node.nodeStrings.aborted,
@@ -190,8 +190,8 @@ class Http2ServerRequest protected () extends StObject {
   @JSName("prependListener")
   def prependListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_aborted(
     event: tmttyped.node.nodeStrings.aborted,
@@ -334,5 +334,5 @@ class Http2ServerRequest protected () extends StObject {
     * ```
     * @since v8.4.0
     */
-  val url: String = js.native
+  var url: String = js.native
 }

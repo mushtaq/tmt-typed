@@ -16,6 +16,7 @@ class WeakRef[T /* <: js.Object */] protected ()
     * Creates a WeakRef instance for the given target object.
     * @param target The target object for the WeakRef instance.
     */
+  /* standard es2021.weakref */
   def this(target: T) = this()
 }
 object WeakRef {

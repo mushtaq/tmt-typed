@@ -1,83 +1,23 @@
 package tmttyped.std
 
-import tmttyped.std.stdStrings.nfc_
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - tmttyped.std.stdStrings.accelerometer
-  - tmttyped.std.stdStrings.`ambient-light-sensor`
-  - tmttyped.std.stdStrings.`background-fetch`
-  - tmttyped.std.stdStrings.`background-sync`
-  - tmttyped.std.stdStrings.bluetooth
-  - tmttyped.std.stdStrings.camera
-  - tmttyped.std.stdStrings.`clipboard-read`
-  - tmttyped.std.stdStrings.`clipboard-write`
-  - tmttyped.std.stdStrings.`device-info`
-  - tmttyped.std.stdStrings.`display-capture`
   - tmttyped.std.stdStrings.geolocation
-  - tmttyped.std.stdStrings.gyroscope
-  - tmttyped.std.stdStrings.magnetometer
-  - tmttyped.std.stdStrings.microphone
-  - tmttyped.std.stdStrings.midi
-  - tmttyped.std.stdStrings.nfc_
   - tmttyped.std.stdStrings.notifications
   - tmttyped.std.stdStrings.`persistent-storage`
   - tmttyped.std.stdStrings.push
-  - tmttyped.std.stdStrings.speaker
+  - tmttyped.std.stdStrings.`screen-wake-lock`
+  - tmttyped.std.stdStrings.`xr-spatial-tracking`
 */
 trait PermissionName extends StObject
 object PermissionName {
   
   @scala.inline
-  def accelerometer: tmttyped.std.stdStrings.accelerometer = "accelerometer".asInstanceOf[tmttyped.std.stdStrings.accelerometer]
-  
-  @scala.inline
-  def `ambient-light-sensor`: tmttyped.std.stdStrings.`ambient-light-sensor` = "ambient-light-sensor".asInstanceOf[tmttyped.std.stdStrings.`ambient-light-sensor`]
-  
-  @scala.inline
-  def `background-fetch`: tmttyped.std.stdStrings.`background-fetch` = "background-fetch".asInstanceOf[tmttyped.std.stdStrings.`background-fetch`]
-  
-  @scala.inline
-  def `background-sync`: tmttyped.std.stdStrings.`background-sync` = "background-sync".asInstanceOf[tmttyped.std.stdStrings.`background-sync`]
-  
-  @scala.inline
-  def bluetooth: tmttyped.std.stdStrings.bluetooth = "bluetooth".asInstanceOf[tmttyped.std.stdStrings.bluetooth]
-  
-  @scala.inline
-  def camera: tmttyped.std.stdStrings.camera = "camera".asInstanceOf[tmttyped.std.stdStrings.camera]
-  
-  @scala.inline
-  def `clipboard-read`: tmttyped.std.stdStrings.`clipboard-read` = "clipboard-read".asInstanceOf[tmttyped.std.stdStrings.`clipboard-read`]
-  
-  @scala.inline
-  def `clipboard-write`: tmttyped.std.stdStrings.`clipboard-write` = "clipboard-write".asInstanceOf[tmttyped.std.stdStrings.`clipboard-write`]
-  
-  @scala.inline
-  def `device-info`: tmttyped.std.stdStrings.`device-info` = "device-info".asInstanceOf[tmttyped.std.stdStrings.`device-info`]
-  
-  @scala.inline
-  def `display-capture`: tmttyped.std.stdStrings.`display-capture` = "display-capture".asInstanceOf[tmttyped.std.stdStrings.`display-capture`]
-  
-  @scala.inline
   def geolocation: tmttyped.std.stdStrings.geolocation = "geolocation".asInstanceOf[tmttyped.std.stdStrings.geolocation]
-  
-  @scala.inline
-  def gyroscope: tmttyped.std.stdStrings.gyroscope = "gyroscope".asInstanceOf[tmttyped.std.stdStrings.gyroscope]
-  
-  @scala.inline
-  def magnetometer: tmttyped.std.stdStrings.magnetometer = "magnetometer".asInstanceOf[tmttyped.std.stdStrings.magnetometer]
-  
-  @scala.inline
-  def microphone: tmttyped.std.stdStrings.microphone = "microphone".asInstanceOf[tmttyped.std.stdStrings.microphone]
-  
-  @scala.inline
-  def midi: tmttyped.std.stdStrings.midi = "midi".asInstanceOf[tmttyped.std.stdStrings.midi]
-  
-  @scala.inline
-  def nfc: nfc_ = "nfc".asInstanceOf[nfc_]
   
   @scala.inline
   def notifications: tmttyped.std.stdStrings.notifications = "notifications".asInstanceOf[tmttyped.std.stdStrings.notifications]
@@ -89,5 +29,8 @@ object PermissionName {
   def push: tmttyped.std.stdStrings.push = "push".asInstanceOf[tmttyped.std.stdStrings.push]
   
   @scala.inline
-  def speaker: tmttyped.std.stdStrings.speaker = "speaker".asInstanceOf[tmttyped.std.stdStrings.speaker]
+  def `screen-wake-lock`: tmttyped.std.stdStrings.`screen-wake-lock` = "screen-wake-lock".asInstanceOf[tmttyped.std.stdStrings.`screen-wake-lock`]
+  
+  @scala.inline
+  def `xr-spatial-tracking`: tmttyped.std.stdStrings.`xr-spatial-tracking` = "xr-spatial-tracking".asInstanceOf[tmttyped.std.stdStrings.`xr-spatial-tracking`]
 }

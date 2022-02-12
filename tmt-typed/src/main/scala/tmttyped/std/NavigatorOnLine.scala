@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NavigatorOnLine extends StObject {
   
+  /* standard DOM */
   val onLine: scala.Boolean
 }
 object NavigatorOnLine {

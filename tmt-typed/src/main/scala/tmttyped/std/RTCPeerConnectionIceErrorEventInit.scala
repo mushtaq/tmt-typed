@@ -9,14 +9,19 @@ trait RTCPeerConnectionIceErrorEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var address: js.UndefOr[java.lang.String | Null] = js.undefined
   
+  /* standard DOM */
   var errorCode: Double
   
+  /* standard DOM */
+  var errorText: js.UndefOr[java.lang.String] = js.undefined
+  
+  /* standard DOM */
   var port: js.UndefOr[Double | Null] = js.undefined
   
-  var statusText: js.UndefOr[java.lang.String] = js.undefined
-  
+  /* standard DOM */
   var url: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCPeerConnectionIceErrorEventInit {
@@ -43,6 +48,12 @@ object RTCPeerConnectionIceErrorEventInit {
     def setErrorCode(value: Double): Self = StObject.set(x, "errorCode", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setErrorText(value: java.lang.String): Self = StObject.set(x, "errorText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setErrorTextUndefined: Self = StObject.set(x, "errorText", js.undefined)
+    
+    @scala.inline
     def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -50,12 +61,6 @@ object RTCPeerConnectionIceErrorEventInit {
     
     @scala.inline
     def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
-    
-    @scala.inline
-    def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStatusTextUndefined: Self = StObject.set(x, "statusText", js.undefined)
     
     @scala.inline
     def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])

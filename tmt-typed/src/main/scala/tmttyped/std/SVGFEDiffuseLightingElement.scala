@@ -12,6 +12,7 @@ trait SVGFEDiffuseLightingElement
      with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,24 +24,30 @@ trait SVGFEDiffuseLightingElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val diffuseConstant: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val diffuseConstant: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val in1: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val in1: org.scalajs.dom.SVGAnimatedString = js.native
   
-  val kernelUnitLengthX: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val kernelUnitLengthX: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val kernelUnitLengthY: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val kernelUnitLengthY: org.scalajs.dom.SVGAnimatedNumber = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val surfaceScale: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val surfaceScale: org.scalajs.dom.SVGAnimatedNumber = js.native
 }

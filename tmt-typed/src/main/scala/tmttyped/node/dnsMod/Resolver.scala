@@ -281,9 +281,9 @@ class Resolver () extends StObject {
     * The resolver will use the v4 local address when making requests to IPv4 DNS
     * servers, and the v6 local address when making requests to IPv6 DNS servers.
     * The `rrtype` of resolution requests has no impact on the local address used.
-    * @since v15.1.0
-    * @param ipv4 A string representation of an IPv4 address.
-    * @param ipv6 A string representation of an IPv6 address.
+    * @since v15.1.0, v14.17.0
+    * @param [ipv4='0.0.0.0'] A string representation of an IPv4 address.
+    * @param [ipv6='::0'] A string representation of an IPv6 address.
     */
   def setLocalAddress(): Unit = js.native
   def setLocalAddress(ipv4: String): Unit = js.native

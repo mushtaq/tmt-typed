@@ -8,14 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CanvasFillStrokeStyles extends StObject {
   
-  def createLinearGradient(x0: Double, y0: Double, x1: Double, y1: Double): org.scalajs.dom.raw.CanvasGradient = js.native
+  /* standard DOM */
+  def createLinearGradient(x0: Double, y0: Double, x1: Double, y1: Double): org.scalajs.dom.CanvasGradient = js.native
   
-  def createPattern(image: CanvasImageSource): org.scalajs.dom.raw.CanvasPattern | Null = js.native
-  def createPattern(image: CanvasImageSource, repetition: java.lang.String): org.scalajs.dom.raw.CanvasPattern | Null = js.native
+  /* standard DOM */
+  def createPattern(image: CanvasImageSource): org.scalajs.dom.CanvasPattern | Null = js.native
+  def createPattern(image: CanvasImageSource, repetition: java.lang.String): org.scalajs.dom.CanvasPattern | Null = js.native
   
-  def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): org.scalajs.dom.raw.CanvasGradient = js.native
+  /* standard DOM */
+  def createRadialGradient(x0: Double, y0: Double, r0: Double, x1: Double, y1: Double, r1: Double): org.scalajs.dom.CanvasGradient = js.native
   
-  var fillStyle: java.lang.String | org.scalajs.dom.raw.CanvasGradient | org.scalajs.dom.raw.CanvasPattern = js.native
+  /* standard DOM */
+  var fillStyle: java.lang.String | org.scalajs.dom.CanvasGradient | org.scalajs.dom.CanvasPattern = js.native
   
-  var strokeStyle: java.lang.String | org.scalajs.dom.raw.CanvasGradient | org.scalajs.dom.raw.CanvasPattern = js.native
+  /* standard DOM */
+  var strokeStyle: java.lang.String | org.scalajs.dom.CanvasGradient | org.scalajs.dom.CanvasPattern = js.native
 }

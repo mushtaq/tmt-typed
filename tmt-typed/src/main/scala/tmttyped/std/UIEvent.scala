@@ -11,10 +11,111 @@ trait UIEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val detail: Double = js.native
   
-  val view: org.scalajs.dom.raw.Window | Null = js.native
+  /** @deprecated */
+  /* standard DOM */
+  def initUIEvent(typeArg: java.lang.String): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: scala.Boolean): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: scala.Boolean, cancelableArg: scala.Boolean): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: Null,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: scala.Boolean,
+    viewArg: Unit,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: Null,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: scala.Boolean,
+    cancelableArg: Unit,
+    viewArg: Unit,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: scala.Boolean): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: org.scalajs.dom.Window,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: Null,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: scala.Boolean,
+    viewArg: Unit,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: Unit, viewArg: org.scalajs.dom.Window): Unit = js.native
+  def initUIEvent(
+    typeArg: java.lang.String,
+    bubblesArg: Unit,
+    cancelableArg: Unit,
+    viewArg: org.scalajs.dom.Window,
+    detailArg: Double
+  ): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: Unit, viewArg: Null, detailArg: Double): Unit = js.native
+  def initUIEvent(typeArg: java.lang.String, bubblesArg: Unit, cancelableArg: Unit, viewArg: Unit, detailArg: Double): Unit = js.native
+  
+  /* standard DOM */
+  val view: org.scalajs.dom.Window | Null = js.native
   
   /** @deprecated */
+  /* standard DOM */
   val which: Double = js.native
 }

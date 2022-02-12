@@ -10,9 +10,11 @@ trait TextDecoderStream
      with GenericTransformStream
      with TextDecoderCommon {
   
+  /* standard DOM */
   @JSName("readable")
-  val readable_TextDecoderStream: org.scalajs.dom.experimental.ReadableStream[java.lang.String]
+  val readable_TextDecoderStream: org.scalajs.dom.ReadableStream[java.lang.String]
   
+  /* standard DOM */
   @JSName("writable")
   val writable_TextDecoderStream: WritableStream[BufferSource]
 }
@@ -23,7 +25,7 @@ object TextDecoderStream {
     encoding: java.lang.String,
     fatal: scala.Boolean,
     ignoreBOM: scala.Boolean,
-    readable: org.scalajs.dom.experimental.ReadableStream[java.lang.String],
+    readable: org.scalajs.dom.ReadableStream[java.lang.String],
     writable: WritableStream[BufferSource]
   ): TextDecoderStream = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any], fatal = fatal.asInstanceOf[js.Any], ignoreBOM = ignoreBOM.asInstanceOf[js.Any], readable = readable.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
@@ -34,7 +36,7 @@ object TextDecoderStream {
   implicit class TextDecoderStreamMutableBuilder[Self <: TextDecoderStream] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setReadable(value: org.scalajs.dom.experimental.ReadableStream[java.lang.String]): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
+    def setReadable(value: org.scalajs.dom.ReadableStream[java.lang.String]): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWritable(value: WritableStream[BufferSource]): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])

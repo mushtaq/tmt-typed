@@ -73,24 +73,24 @@ object global {
   
   @JSGlobal("__dirname")
   @js.native
-  def dirname: java.lang.String = js.native
+  def dirname: String = js.native
   
   @scala.inline
-  def dirname_=(x: java.lang.String): Unit = js.Dynamic.global.updateDynamic("__dirname")(x.asInstanceOf[js.Any])
+  def dirname_=(x: String): Unit = js.Dynamic.global.updateDynamic("__dirname")(x.asInstanceOf[js.Any])
   
   // Same as module.exports
   @JSGlobal("exports")
   @js.native
-  def exports: js.Any = js.native
+  def exports: Any = js.native
   @scala.inline
-  def exports_=(x: js.Any): Unit = js.Dynamic.global.updateDynamic("exports")(x.asInstanceOf[js.Any])
+  def exports_=(x: Any): Unit = js.Dynamic.global.updateDynamic("exports")(x.asInstanceOf[js.Any])
   
   @JSGlobal("__filename")
   @js.native
-  def filename: java.lang.String = js.native
+  def filename: String = js.native
   
   @scala.inline
-  def filename_=(x: java.lang.String): Unit = js.Dynamic.global.updateDynamic("__filename")(x.asInstanceOf[js.Any])
+  def filename_=(x: String): Unit = js.Dynamic.global.updateDynamic("__filename")(x.asInstanceOf[js.Any])
   
   /**
     * Only available if `--expose-gc` is passed to the process.
@@ -103,10 +103,10 @@ object global {
   
   @JSGlobal("global")
   @js.native
-  def global: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof globalThis */ js.Any = js.native
+  def global: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof globalThis */ Any = js.native
   @scala.inline
   def global_=(
-    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof globalThis */ js.Any
+    x: /* import warning: ResolveTypeQueries.newMembers rewritten Couldn't resolve typeof globalThis */ Any
   ): Unit = js.Dynamic.global.updateDynamic("global")(x.asInstanceOf[js.Any])
   
   @JSGlobal("module")
@@ -126,12 +126,4 @@ object global {
   def require: NodeRequire = js.native
   @scala.inline
   def require_=(x: NodeRequire): Unit = js.Dynamic.global.updateDynamic("require")(x.asInstanceOf[js.Any])
-  
-  //#endregion borrowed
-  /*----------------------------------------------*
-  *                                               *
-  *               GLOBAL INTERFACES               *
-  *                                               *
-  *-----------------------------------------------*/
-  object NodeJS
 }

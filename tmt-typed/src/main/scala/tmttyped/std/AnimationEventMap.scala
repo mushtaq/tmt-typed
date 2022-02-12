@@ -7,15 +7,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AnimationEventMap extends StObject {
   
+  /* standard DOM */
   var cancel: AnimationPlaybackEvent
   
+  /* standard DOM */
   var finish: AnimationPlaybackEvent
+  
+  /* standard DOM */
+  var remove: org.scalajs.dom.Event
 }
 object AnimationEventMap {
   
   @scala.inline
-  def apply(cancel: AnimationPlaybackEvent, finish: AnimationPlaybackEvent): AnimationEventMap = {
-    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], finish = finish.asInstanceOf[js.Any])
+  def apply(cancel: AnimationPlaybackEvent, finish: AnimationPlaybackEvent, remove: org.scalajs.dom.Event): AnimationEventMap = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], finish = finish.asInstanceOf[js.Any], remove = remove.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimationEventMap]
   }
   
@@ -27,5 +32,8 @@ object AnimationEventMap {
     
     @scala.inline
     def setFinish(value: AnimationPlaybackEvent): Self = StObject.set(x, "finish", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRemove(value: org.scalajs.dom.Event): Self = StObject.set(x, "remove", value.asInstanceOf[js.Any])
   }
 }

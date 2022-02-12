@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AbortSignalEventMap extends StObject {
   
-  var abort: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var abort: org.scalajs.dom.Event
 }
 object AbortSignalEventMap {
   
   @scala.inline
-  def apply(abort: org.scalajs.dom.raw.Event): AbortSignalEventMap = {
+  def apply(abort: org.scalajs.dom.Event): AbortSignalEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbortSignalEventMap]
   }
@@ -21,6 +22,6 @@ object AbortSignalEventMap {
   implicit class AbortSignalEventMapMutableBuilder[Self <: AbortSignalEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setAbort(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
+    def setAbort(value: org.scalajs.dom.Event): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
   }
 }

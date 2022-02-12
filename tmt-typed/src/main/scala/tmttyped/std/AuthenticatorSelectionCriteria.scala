@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AuthenticatorSelectionCriteria extends StObject {
   
+  /* standard DOM */
   var authenticatorAttachment: js.UndefOr[AuthenticatorAttachment] = js.undefined
   
+  /* standard DOM */
   var requireResidentKey: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var residentKey: js.UndefOr[ResidentKeyRequirement] = js.undefined
   
+  /* standard DOM */
   var userVerification: js.UndefOr[UserVerificationRequirement] = js.undefined
 }
 object AuthenticatorSelectionCriteria {

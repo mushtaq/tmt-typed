@@ -9,8 +9,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Transform>`
-  *
   * Instances of the `Cipher` class are used to encrypt data. The class can be
   * used in one of two ways:
   *
@@ -58,39 +56,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * });
   * ```
   *
-  * ```js
-  * const {
-  *   scrypt,
-  *   randomFill,
-  *   createCipheriv
-  * } = require('crypto');
-  *
-  * const algorithm = 'aes-192-cbc';
-  * const password = 'Password used to generate key';
-  *
-  * // First, we'll generate the key. The key length is dependent on the algorithm.
-  * // In this case for aes192, it is 24 bytes (192 bits).
-  * scrypt(password, 'salt', 24, (err, key) => {
-  *   if (err) throw err;
-  *   // Then, we'll generate a random initialization vector
-  *   randomFill(new Uint8Array(16), (err, iv) => {
-  *     if (err) throw err;
-  *
-  *     // Once we have the key and iv, we can create and use the cipher...
-  *     const cipher = createCipheriv(algorithm, key, iv);
-  *
-  *     let encrypted = '';
-  *     cipher.setEncoding('hex');
-  *
-  *     cipher.on('data', (chunk) => encrypted += chunk);
-  *     cipher.on('end', () => console.log(encrypted));
-  *
-  *     cipher.write('some clear text data');
-  *     cipher.end();
-  *   });
-  * });
-  * ```
-  *
   * Example: Using `Cipher` and piped streams:
   *
   * ```js
@@ -106,47 +71,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * const {
   *   scrypt,
   *   randomFill,
-  *   createCipheriv,
+  *   createCipheriv
   * } = await import('crypto');
-  *
-  * const algorithm = 'aes-192-cbc';
-  * const password = 'Password used to generate key';
-  *
-  * // First, we'll generate the key. The key length is dependent on the algorithm.
-  * // In this case for aes192, it is 24 bytes (192 bits).
-  * scrypt(password, 'salt', 24, (err, key) => {
-  *   if (err) throw err;
-  *   // Then, we'll generate a random initialization vector
-  *   randomFill(new Uint8Array(16), (err, iv) => {
-  *     if (err) throw err;
-  *
-  *     const cipher = createCipheriv(algorithm, key, iv);
-  *
-  *     const input = createReadStream('test.js');
-  *     const output = createWriteStream('test.enc');
-  *
-  *     pipeline(input, cipher, output, (err) => {
-  *       if (err) throw err;
-  *     });
-  *   });
-  * });
-  * ```
-  *
-  * ```js
-  * const {
-  *   createReadStream,
-  *   createWriteStream,
-  * } = require('fs');
-  *
-  * const {
-  *   pipeline
-  * } = require('stream');
-  *
-  * const {
-  *   scrypt,
-  *   randomFill,
-  *   createCipheriv,
-  * } = require('crypto');
   *
   * const algorithm = 'aes-192-cbc';
   * const password = 'Password used to generate key';
@@ -177,35 +103,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * const {
   *   scrypt,
   *   randomFill,
-  *   createCipheriv,
+  *   createCipheriv
   * } = await import('crypto');
-  *
-  * const algorithm = 'aes-192-cbc';
-  * const password = 'Password used to generate key';
-  *
-  * // First, we'll generate the key. The key length is dependent on the algorithm.
-  * // In this case for aes192, it is 24 bytes (192 bits).
-  * scrypt(password, 'salt', 24, (err, key) => {
-  *   if (err) throw err;
-  *   // Then, we'll generate a random initialization vector
-  *   randomFill(new Uint8Array(16), (err, iv) => {
-  *     if (err) throw err;
-  *
-  *     const cipher = createCipheriv(algorithm, key, iv);
-  *
-  *     let encrypted = cipher.update('some clear text data', 'utf8', 'hex');
-  *     encrypted += cipher.final('hex');
-  *     console.log(encrypted);
-  *   });
-  * });
-  * ```
-  *
-  * ```js
-  * const {
-  *   scrypt,
-  *   randomFill,
-  *   createCipheriv,
-  * } = require('crypto');
   *
   * const algorithm = 'aes-192-cbc';
   * const password = 'Password used to generate key';
@@ -230,7 +129,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Cipher")
 @js.native
-class Cipher protected () extends StObject {
+/* private */ class Cipher () extends StObject {
   
   /**
     * Once the `cipher.final()` method has been called, the `Cipher` object can no
@@ -241,7 +140,7 @@ class Cipher protected () extends StObject {
     * @return Any remaining enciphered contents. If `outputEncoding` is specified, a string is returned. If an `outputEncoding` is not provided, a {@link Buffer} is returned.
     */
   def `final`(): Buffer = js.native
-  def `final`(output_encoding: BufferEncoding): String = js.native
+  def `final`(outputEncoding: BufferEncoding): String = js.native
   
   /**
     * When using block encryption algorithms, the `Cipher` class will automatically
@@ -255,15 +154,16 @@ class Cipher protected () extends StObject {
     *
     * The `cipher.setAutoPadding()` method must be called before `cipher.final()`.
     * @since v0.7.1
+    * @param [autoPadding=true]
     * @return for method chaining.
     */
   def setAutoPadding(): this.type = js.native
-  def setAutoPadding(auto_padding: Boolean): this.type = js.native
+  def setAutoPadding(autoPadding: Boolean): this.type = js.native
   
-  def update(data: String, input_encoding: Unit, output_encoding: Encoding): String = js.native
-  def update(data: String, input_encoding: Encoding): Buffer = js.native
-  def update(data: String, input_encoding: Encoding, output_encoding: Encoding): String = js.native
-  def update(data: ArrayBufferView, input_encoding: Unit, output_encoding: Encoding): String = js.native
+  def update(data: String, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
+  def update(data: String, inputEncoding: Encoding): Buffer = js.native
+  def update(data: String, inputEncoding: Encoding, outputEncoding: Encoding): String = js.native
+  def update(data: ArrayBufferView, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
   /**
     * Updates the cipher with `data`. If the `inputEncoding` argument is given,
     * the `data`argument is a string using the specified encoding. If the `inputEncoding`argument is not given, `data` must be a `Buffer`, `TypedArray`, or`DataView`. If `data` is a `Buffer`,

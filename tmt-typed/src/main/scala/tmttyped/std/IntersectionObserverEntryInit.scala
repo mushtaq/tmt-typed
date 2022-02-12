@@ -7,19 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait IntersectionObserverEntryInit extends StObject {
   
+  /* standard DOM */
   var boundingClientRect: DOMRectInit
   
+  /* standard DOM */
   var intersectionRatio: Double
   
+  /* standard DOM */
   var intersectionRect: DOMRectInit
   
+  /* standard DOM */
   var isIntersecting: scala.Boolean
   
+  /* standard DOM */
   var rootBounds: DOMRectInit | Null
   
-  var target: org.scalajs.dom.raw.Element
+  /* standard DOM */
+  var target: org.scalajs.dom.Element
   
-  var time: Double
+  /* standard DOM */
+  var time: DOMHighResTimeStamp
 }
 object IntersectionObserverEntryInit {
   
@@ -29,8 +36,8 @@ object IntersectionObserverEntryInit {
     intersectionRatio: Double,
     intersectionRect: DOMRectInit,
     isIntersecting: scala.Boolean,
-    target: org.scalajs.dom.raw.Element,
-    time: Double
+    target: org.scalajs.dom.Element,
+    time: DOMHighResTimeStamp
   ): IntersectionObserverEntryInit = {
     val __obj = js.Dynamic.literal(boundingClientRect = boundingClientRect.asInstanceOf[js.Any], intersectionRatio = intersectionRatio.asInstanceOf[js.Any], intersectionRect = intersectionRect.asInstanceOf[js.Any], isIntersecting = isIntersecting.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], rootBounds = null)
     __obj.asInstanceOf[IntersectionObserverEntryInit]
@@ -58,9 +65,9 @@ object IntersectionObserverEntryInit {
     def setRootBoundsNull: Self = StObject.set(x, "rootBounds", null)
     
     @scala.inline
-    def setTarget(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
+    def setTarget(value: org.scalajs.dom.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTime(value: Double): Self = StObject.set(x, "time", value.asInstanceOf[js.Any])
+    def setTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "time", value.asInstanceOf[js.Any])
   }
 }

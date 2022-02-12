@@ -7,21 +7,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EffectTiming extends StObject {
   
+  /* standard DOM */
   var delay: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var direction: js.UndefOr[PlaybackDirection] = js.undefined
   
+  /* standard DOM */
   var duration: js.UndefOr[Double | java.lang.String] = js.undefined
   
+  /* standard DOM */
   var easing: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var endDelay: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var fill: js.UndefOr[FillMode] = js.undefined
   
+  /* standard DOM */
   var iterationStart: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var iterations: js.UndefOr[Double] = js.undefined
+  
+  /* standard DOM */
+  var playbackRate: js.UndefOr[Double] = js.undefined
 }
 object EffectTiming {
   
@@ -81,5 +92,11 @@ object EffectTiming {
     
     @scala.inline
     def setIterationsUndefined: Self = StObject.set(x, "iterations", js.undefined)
+    
+    @scala.inline
+    def setPlaybackRate(value: Double): Self = StObject.set(x, "playbackRate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPlaybackRateUndefined: Self = StObject.set(x, "playbackRate", js.undefined)
   }
 }

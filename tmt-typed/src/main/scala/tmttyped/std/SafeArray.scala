@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 trait SafeArray[T] extends StObject {
   
-  var SafeArray_typekey: SafeArray[T]
+  /* standard ScriptHost */
+  /* private */ var SafeArray_typekey: SafeArray[T]
 }
 object SafeArray {
   

@@ -972,7 +972,7 @@ object zlibMod {
        with Zlib
        with ZlibReset
   
-  type InputType = java.lang.String | js.typedarray.ArrayBuffer | ArrayBufferView
+  type InputType = String | js.typedarray.ArrayBuffer | ArrayBufferView
   
   @js.native
   trait Unzip_
@@ -996,7 +996,7 @@ object zlibMod {
     def flush(kind: Double, callback: js.Function0[Unit]): Unit = js.native
     def flush(kind: Unit, callback: js.Function0[Unit]): Unit = js.native
     
-    var shell: js.UndefOr[Boolean | java.lang.String] = js.native
+    var shell: js.UndefOr[Boolean | String] = js.native
   }
   
   trait ZlibOptions extends StObject {

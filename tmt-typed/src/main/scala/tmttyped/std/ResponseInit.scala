@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResponseInit extends StObject {
   
+  /* standard DOM */
   var headers: js.UndefOr[HeadersInit] = js.undefined
   
+  /* standard DOM */
   var status: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var statusText: js.UndefOr[java.lang.String] = js.undefined
 }
 object ResponseInit {

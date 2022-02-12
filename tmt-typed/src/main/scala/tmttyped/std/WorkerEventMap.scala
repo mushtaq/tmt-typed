@@ -9,17 +9,19 @@ trait WorkerEventMap
   extends StObject
      with AbstractWorkerEventMap {
   
-  var message: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var message: org.scalajs.dom.MessageEvent
   
-  var messageerror: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var messageerror: org.scalajs.dom.MessageEvent
 }
 object WorkerEventMap {
   
   @scala.inline
   def apply(
-    error: org.scalajs.dom.raw.ErrorEvent,
-    message: org.scalajs.dom.raw.MessageEvent,
-    messageerror: org.scalajs.dom.raw.MessageEvent
+    error: org.scalajs.dom.ErrorEvent,
+    message: org.scalajs.dom.MessageEvent,
+    messageerror: org.scalajs.dom.MessageEvent
   ): WorkerEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], messageerror = messageerror.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerEventMap]
@@ -29,9 +31,9 @@ object WorkerEventMap {
   implicit class WorkerEventMapMutableBuilder[Self <: WorkerEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessageerror(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

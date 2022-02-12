@@ -11,21 +11,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - tmttyped.std.stdStrings.codec
   - tmttyped.std.stdStrings.csrc
   - tmttyped.std.stdStrings.`data-channel`
-  - tmttyped.std.stdStrings.`ice-server`
   - tmttyped.std.stdStrings.`inbound-rtp`
   - tmttyped.std.stdStrings.`local-candidate`
   - tmttyped.std.stdStrings.`media-source`
   - tmttyped.std.stdStrings.`outbound-rtp`
   - tmttyped.std.stdStrings.`peer-connection`
-  - tmttyped.std.stdStrings.receiver
   - tmttyped.std.stdStrings.`remote-candidate`
   - tmttyped.std.stdStrings.`remote-inbound-rtp`
   - tmttyped.std.stdStrings.`remote-outbound-rtp`
-  - tmttyped.std.stdStrings.`sctp-transport`
-  - tmttyped.std.stdStrings.sender
-  - tmttyped.std.stdStrings.stream
   - tmttyped.std.stdStrings.track
-  - tmttyped.std.stdStrings.transceiver
   - tmttyped.std.stdStrings.transport
 */
 trait RTCStatsType extends StObject
@@ -47,9 +41,6 @@ object RTCStatsType {
   def `data-channel`: tmttyped.std.stdStrings.`data-channel` = "data-channel".asInstanceOf[tmttyped.std.stdStrings.`data-channel`]
   
   @scala.inline
-  def `ice-server`: tmttyped.std.stdStrings.`ice-server` = "ice-server".asInstanceOf[tmttyped.std.stdStrings.`ice-server`]
-  
-  @scala.inline
   def `inbound-rtp`: tmttyped.std.stdStrings.`inbound-rtp` = "inbound-rtp".asInstanceOf[tmttyped.std.stdStrings.`inbound-rtp`]
   
   @scala.inline
@@ -65,9 +56,6 @@ object RTCStatsType {
   def `peer-connection`: tmttyped.std.stdStrings.`peer-connection` = "peer-connection".asInstanceOf[tmttyped.std.stdStrings.`peer-connection`]
   
   @scala.inline
-  def receiver: tmttyped.std.stdStrings.receiver = "receiver".asInstanceOf[tmttyped.std.stdStrings.receiver]
-  
-  @scala.inline
   def `remote-candidate`: tmttyped.std.stdStrings.`remote-candidate` = "remote-candidate".asInstanceOf[tmttyped.std.stdStrings.`remote-candidate`]
   
   @scala.inline
@@ -77,19 +65,7 @@ object RTCStatsType {
   def `remote-outbound-rtp`: tmttyped.std.stdStrings.`remote-outbound-rtp` = "remote-outbound-rtp".asInstanceOf[tmttyped.std.stdStrings.`remote-outbound-rtp`]
   
   @scala.inline
-  def `sctp-transport`: tmttyped.std.stdStrings.`sctp-transport` = "sctp-transport".asInstanceOf[tmttyped.std.stdStrings.`sctp-transport`]
-  
-  @scala.inline
-  def sender: tmttyped.std.stdStrings.sender = "sender".asInstanceOf[tmttyped.std.stdStrings.sender]
-  
-  @scala.inline
-  def stream: tmttyped.std.stdStrings.stream = "stream".asInstanceOf[tmttyped.std.stdStrings.stream]
-  
-  @scala.inline
   def track: tmttyped.std.stdStrings.track = "track".asInstanceOf[tmttyped.std.stdStrings.track]
-  
-  @scala.inline
-  def transceiver: tmttyped.std.stdStrings.transceiver = "transceiver".asInstanceOf[tmttyped.std.stdStrings.transceiver]
   
   @scala.inline
   def transport: tmttyped.std.stdStrings.transport = "transport".asInstanceOf[tmttyped.std.stdStrings.transport]

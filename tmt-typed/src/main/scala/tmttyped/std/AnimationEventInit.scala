@@ -9,10 +9,13 @@ trait AnimationEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var animationName: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var elapsedTime: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var pseudoElement: js.UndefOr[java.lang.String] = js.undefined
 }
 object AnimationEventInit {

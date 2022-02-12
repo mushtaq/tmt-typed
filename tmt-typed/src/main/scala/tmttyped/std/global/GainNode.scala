@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class GainNode protected ()
   extends StObject
      with tmttyped.std.GainNode {
+  /* standard DOM */
   def this(context: tmttyped.std.BaseAudioContext) = this()
   def this(context: tmttyped.std.BaseAudioContext, options: GainOptions) = this()
 }

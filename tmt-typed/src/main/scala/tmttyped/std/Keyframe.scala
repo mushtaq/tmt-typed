@@ -8,12 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait Keyframe
   extends StObject
-     with /* property */ StringDictionary[js.UndefOr[java.lang.String | Double | Null]] {
+     with /* standard DOM */
+/* property */ StringDictionary[js.UndefOr[java.lang.String | Double | Null]] {
   
+  /* standard DOM */
   var composite: js.UndefOr[CompositeOperationOrAuto] = js.undefined
   
+  /* standard DOM */
   var easing: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var offset: js.UndefOr[Double | Null] = js.undefined
 }
 object Keyframe {

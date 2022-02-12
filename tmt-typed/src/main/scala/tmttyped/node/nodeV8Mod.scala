@@ -82,7 +82,7 @@ object nodeV8Mod {
     * @param buffer A buffer returned by {@link serialize}.
     */
   @scala.inline
-  def deserialize(data: TypedArray): js.Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(data.asInstanceOf[js.Any]).asInstanceOf[js.Any]
+  def deserialize(buffer: TypedArray): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(buffer.asInstanceOf[js.Any]).asInstanceOf[Any]
   
   /**
     * Returns an object with the following properties:
@@ -212,7 +212,7 @@ object nodeV8Mod {
     * @since v8.0.0
     */
   @scala.inline
-  def serialize(value: js.Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  def serialize(value: Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
   /**
     * The `v8.setFlagsFromString()` method can be used to programmatically set
@@ -233,13 +233,13 @@ object nodeV8Mod {
     * @since v1.0.0
     */
   @scala.inline
-  def setFlagsFromString(flags: java.lang.String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def setFlagsFromString(flags: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * The `v8.stopCoverage()` method allows the user to stop the coverage collection
     * started by `NODE_V8_COVERAGE`, so that V8 can release the execution count
     * records and optimize code. This can be used in conjunction with {@link takeCoverage} if the user wants to collect the coverage on demand.
-    * @since v15.1.0, v12.22.0
+    * @since v15.1.0, v14.18.0, v12.22.0
     */
   @scala.inline
   def stopCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("stopCoverage")().asInstanceOf[Unit]
@@ -252,7 +252,7 @@ object nodeV8Mod {
     *
     * When the process is about to exit, one last coverage will still be written to
     * disk unless {@link stopCoverage} is invoked before the process exits.
-    * @since v15.1.0, v12.22.0
+    * @since v15.1.0, v14.18.0, v12.22.0
     */
   @scala.inline
   def takeCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("takeCoverage")().asInstanceOf[Unit]
@@ -302,7 +302,7 @@ object nodeV8Mod {
     * @return The filename where the snapshot was saved.
     */
   @scala.inline
-  def writeHeapSnapshot(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[java.lang.String]
+  def writeHeapSnapshot(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[String]
   @scala.inline
-  def writeHeapSnapshot(fileName: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(fileName.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def writeHeapSnapshot(filename: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(filename.asInstanceOf[js.Any]).asInstanceOf[String]
 }

@@ -11,28 +11,35 @@ trait StorageEvent
   extends StObject
      with Event {
   
-  /**
-    * Returns the key of the storage item being changed.
-    */
+  /* standard DOM */
+  def initStorageEvent(
+    `type`: java.lang.String,
+    bubbles: js.UndefOr[scala.Boolean],
+    cancelable: js.UndefOr[scala.Boolean],
+    key: js.UndefOr[java.lang.String | Null],
+    oldValue: js.UndefOr[java.lang.String | Null],
+    newValue: js.UndefOr[java.lang.String | Null],
+    url: js.UndefOr[java.lang.String | org.scalajs.dom.URL],
+    storageArea: js.UndefOr[org.scalajs.dom.Storage | Null]
+  ): Unit = js.native
+  
+  /** Returns the key of the storage item being changed. */
+  /* standard DOM */
   val key: java.lang.String | Null = js.native
   
-  /**
-    * Returns the new value of the key of the storage item whose value is being changed.
-    */
+  /** Returns the new value of the key of the storage item whose value is being changed. */
+  /* standard DOM */
   val newValue: java.lang.String | Null = js.native
   
-  /**
-    * Returns the old value of the key of the storage item whose value is being changed.
-    */
+  /** Returns the old value of the key of the storage item whose value is being changed. */
+  /* standard DOM */
   val oldValue: java.lang.String | Null = js.native
   
-  /**
-    * Returns the Storage object that was affected.
-    */
-  val storageArea: org.scalajs.dom.raw.Storage | Null = js.native
+  /** Returns the Storage object that was affected. */
+  /* standard DOM */
+  val storageArea: org.scalajs.dom.Storage | Null = js.native
   
-  /**
-    * Returns the URL of the document whose storage item changed.
-    */
+  /** Returns the URL of the document whose storage item changed. */
+  /* standard DOM */
   val url: java.lang.String = js.native
 }

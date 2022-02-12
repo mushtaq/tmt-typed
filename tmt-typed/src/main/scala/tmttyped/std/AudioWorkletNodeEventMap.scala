@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AudioWorkletNodeEventMap extends StObject {
   
-  var processorerror: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var processorerror: org.scalajs.dom.Event
 }
 object AudioWorkletNodeEventMap {
   
   @scala.inline
-  def apply(processorerror: org.scalajs.dom.raw.Event): AudioWorkletNodeEventMap = {
+  def apply(processorerror: org.scalajs.dom.Event): AudioWorkletNodeEventMap = {
     val __obj = js.Dynamic.literal(processorerror = processorerror.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioWorkletNodeEventMap]
   }
@@ -21,6 +22,6 @@ object AudioWorkletNodeEventMap {
   implicit class AudioWorkletNodeEventMapMutableBuilder[Self <: AudioWorkletNodeEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setProcessorerror(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "processorerror", value.asInstanceOf[js.Any])
+    def setProcessorerror(value: org.scalajs.dom.Event): Self = StObject.set(x, "processorerror", value.asInstanceOf[js.Any])
   }
 }

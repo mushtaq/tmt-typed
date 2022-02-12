@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ScreenOrientationEventMap extends StObject {
   
-  var change: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var change: org.scalajs.dom.Event
 }
 object ScreenOrientationEventMap {
   
   @scala.inline
-  def apply(change: org.scalajs.dom.raw.Event): ScreenOrientationEventMap = {
+  def apply(change: org.scalajs.dom.Event): ScreenOrientationEventMap = {
     val __obj = js.Dynamic.literal(change = change.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScreenOrientationEventMap]
   }
@@ -21,6 +22,6 @@ object ScreenOrientationEventMap {
   implicit class ScreenOrientationEventMapMutableBuilder[Self <: ScreenOrientationEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setChange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "change", value.asInstanceOf[js.Any])
+    def setChange(value: org.scalajs.dom.Event): Self = StObject.set(x, "change", value.asInstanceOf[js.Any])
   }
 }

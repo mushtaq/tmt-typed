@@ -10,8 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 trait ArrayBufferTypes extends StObject {
   
+  /* standard es5 */
   var ArrayBuffer: js.typedarray.ArrayBuffer
   
+  /* standard es2017.sharedmemory */
   var SharedArrayBuffer: tmttyped.std.SharedArrayBuffer
 }
 object ArrayBufferTypes {

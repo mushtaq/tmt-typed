@@ -12,25 +12,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("RTCRtpReceiver")
 @js.native
+/* standard DOM */
 class RTCRtpReceiver ()
   extends StObject
      with tmttyped.std.RTCRtpReceiver {
   
+  /* standard DOM */
   /* CompleteClass */
   override def getContributingSources(): js.Array[RTCRtpContributingSource] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def getParameters(): RTCRtpReceiveParameters = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def getStats(): js.Promise[org.scalajs.dom.experimental.webrtc.RTCStatsReport] = js.native
+  override def getStats(): js.Promise[org.scalajs.dom.RTCStatsReport] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def getSynchronizationSources(): js.Array[RTCRtpSynchronizationSource] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack = js.native
+  override val track: org.scalajs.dom.MediaStreamTrack = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val transport: tmttyped.std.RTCDtlsTransport | Null = js.native
 }
@@ -40,6 +47,7 @@ object RTCRtpReceiver {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard DOM */
   @scala.inline
   def getCapabilities(kind: java.lang.String): RTCRtpCapabilities | Null = ^.asInstanceOf[js.Dynamic].applyDynamic("getCapabilities")(kind.asInstanceOf[js.Any]).asInstanceOf[RTCRtpCapabilities | Null]
 }

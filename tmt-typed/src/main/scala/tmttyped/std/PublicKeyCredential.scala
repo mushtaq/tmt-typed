@@ -5,14 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait PublicKeyCredential
   extends StObject
      with Credential {
   
+  /* standard DOM */
   def getClientExtensionResults(): AuthenticationExtensionsClientOutputs
   
+  /* standard DOM */
   val rawId: js.typedarray.ArrayBuffer
   
+  /* standard DOM */
   val response: AuthenticatorResponse
 }
 object PublicKeyCredential {

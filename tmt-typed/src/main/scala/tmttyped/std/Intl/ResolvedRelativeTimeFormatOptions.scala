@@ -8,20 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * An object with properties reflecting the locale
   * and formatting options computed during initialization
-  * of the `Intel.RelativeTimeFormat` object
+  * of the `Intl.RelativeTimeFormat` object
   *
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#Description).
-  *
-  * [Specification](https://tc39.es/ecma402/#table-relativetimeformat-resolvedoptions-properties)
   */
 trait ResolvedRelativeTimeFormatOptions extends StObject {
   
+  /* standard es2020.intl */
   var locale: UnicodeBCP47LocaleIdentifier
   
+  /* standard es2020.intl */
   var numberingSystem: String
   
+  /* standard es2020.intl */
   var numeric: RelativeTimeFormatNumeric
   
+  /* standard es2020.intl */
   var style: RelativeTimeFormatStyle
 }
 object ResolvedRelativeTimeFormatOptions {

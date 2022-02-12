@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait Message extends StObject {
   
-  var message: js.Any
+  var message: Any
 }
 object Message {
   
   @scala.inline
-  def apply(message: js.Any): Message = {
+  def apply(message: Any): Message = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[Message]
   }
@@ -21,6 +21,6 @@ object Message {
   implicit class MessageMutableBuilder[Self <: Message] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setMessage(value: js.Any): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: Any): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
   }
 }

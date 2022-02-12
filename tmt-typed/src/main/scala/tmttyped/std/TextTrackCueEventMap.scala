@@ -7,14 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextTrackCueEventMap extends StObject {
   
-  var enter: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var enter: org.scalajs.dom.Event
   
-  var exit: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var exit: org.scalajs.dom.Event
 }
 object TextTrackCueEventMap {
   
   @scala.inline
-  def apply(enter: org.scalajs.dom.raw.Event, exit: org.scalajs.dom.raw.Event): TextTrackCueEventMap = {
+  def apply(enter: org.scalajs.dom.Event, exit: org.scalajs.dom.Event): TextTrackCueEventMap = {
     val __obj = js.Dynamic.literal(enter = enter.asInstanceOf[js.Any], exit = exit.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextTrackCueEventMap]
   }
@@ -23,9 +25,9 @@ object TextTrackCueEventMap {
   implicit class TextTrackCueEventMapMutableBuilder[Self <: TextTrackCueEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setEnter(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "enter", value.asInstanceOf[js.Any])
+    def setEnter(value: org.scalajs.dom.Event): Self = StObject.set(x, "enter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExit(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "exit", value.asInstanceOf[js.Any])
+    def setExit(value: org.scalajs.dom.Event): Self = StObject.set(x, "exit", value.asInstanceOf[js.Any])
   }
 }

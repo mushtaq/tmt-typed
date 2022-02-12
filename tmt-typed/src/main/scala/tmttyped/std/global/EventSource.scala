@@ -12,19 +12,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class EventSource protected ()
   extends StObject
      with tmttyped.std.EventSource {
+  /* standard DOM */
   def this(url: java.lang.String) = this()
+  def this(url: org.scalajs.dom.URL) = this()
   def this(url: java.lang.String, eventSourceInitDict: EventSourceInit) = this()
+  def this(url: org.scalajs.dom.URL, eventSourceInitDict: EventSourceInit) = this()
 }
 object EventSource {
   
+  /* standard DOM */
   @JSGlobal("EventSource.CLOSED")
   @js.native
   val CLOSED: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("EventSource.CONNECTING")
   @js.native
   val CONNECTING: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("EventSource.OPEN")
   @js.native
   val OPEN: Double = js.native

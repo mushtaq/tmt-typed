@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * The locale matching algorithm to use.
   *
   * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
-  *
-  * [Specification](https://tc39.es/ecma402/#sec-InitializeRelativeTimeFormat).
   */
 /* Rewritten from type alias, can be one of: 
   - tmttyped.std.stdStrings.lookup

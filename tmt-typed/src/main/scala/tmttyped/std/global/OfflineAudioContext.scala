@@ -12,6 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class OfflineAudioContext protected ()
   extends StObject
      with tmttyped.std.OfflineAudioContext {
+  /* standard DOM */
   def this(contextOptions: OfflineAudioContextOptions) = this()
+  /* standard DOM */
   def this(numberOfChannels: Double, length: Double, sampleRate: Double) = this()
 }

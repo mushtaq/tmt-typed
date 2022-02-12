@@ -8,42 +8,46 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad. */
 trait Touch extends StObject {
   
-  val altitudeAngle: Double
-  
-  val azimuthAngle: Double
-  
+  /* standard DOM */
   val clientX: Double
   
+  /* standard DOM */
   val clientY: Double
   
+  /* standard DOM */
   val force: Double
   
+  /* standard DOM */
   val identifier: Double
   
+  /* standard DOM */
   val pageX: Double
   
+  /* standard DOM */
   val pageY: Double
   
+  /* standard DOM */
   val radiusX: Double
   
+  /* standard DOM */
   val radiusY: Double
   
+  /* standard DOM */
   val rotationAngle: Double
   
+  /* standard DOM */
   val screenX: Double
   
+  /* standard DOM */
   val screenY: Double
   
-  val target: org.scalajs.dom.raw.EventTarget
-  
-  val touchType: TouchType
+  /* standard DOM */
+  val target: org.scalajs.dom.EventTarget
 }
 object Touch {
   
   @scala.inline
   def apply(
-    altitudeAngle: Double,
-    azimuthAngle: Double,
     clientX: Double,
     clientY: Double,
     force: Double,
@@ -55,21 +59,14 @@ object Touch {
     rotationAngle: Double,
     screenX: Double,
     screenY: Double,
-    target: org.scalajs.dom.raw.EventTarget,
-    touchType: TouchType
+    target: org.scalajs.dom.EventTarget
   ): Touch = {
-    val __obj = js.Dynamic.literal(altitudeAngle = altitudeAngle.asInstanceOf[js.Any], azimuthAngle = azimuthAngle.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], force = force.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], radiusX = radiusX.asInstanceOf[js.Any], radiusY = radiusY.asInstanceOf[js.Any], rotationAngle = rotationAngle.asInstanceOf[js.Any], screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], touchType = touchType.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], force = force.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any], radiusX = radiusX.asInstanceOf[js.Any], radiusY = radiusY.asInstanceOf[js.Any], rotationAngle = rotationAngle.asInstanceOf[js.Any], screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[Touch]
   }
   
   @scala.inline
   implicit class TouchMutableBuilder[Self <: Touch] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def setAltitudeAngle(value: Double): Self = StObject.set(x, "altitudeAngle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAzimuthAngle(value: Double): Self = StObject.set(x, "azimuthAngle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClientX(value: Double): Self = StObject.set(x, "clientX", value.asInstanceOf[js.Any])
@@ -105,9 +102,6 @@ object Touch {
     def setScreenY(value: Double): Self = StObject.set(x, "screenY", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTarget(value: org.scalajs.dom.raw.EventTarget): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTouchType(value: TouchType): Self = StObject.set(x, "touchType", value.asInstanceOf[js.Any])
+    def setTarget(value: org.scalajs.dom.EventTarget): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
   }
 }

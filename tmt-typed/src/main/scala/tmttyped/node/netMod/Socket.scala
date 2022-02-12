@@ -8,6 +8,7 @@ import tmttyped.node.nodeStrings.drain
 import tmttyped.node.nodeStrings.end
 import tmttyped.node.nodeStrings.error
 import tmttyped.node.nodeStrings.lookup
+import tmttyped.node.nodeStrings.ready
 import tmttyped.node.nodeStrings.timeout
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -15,8 +16,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Duplex>`
-  *
   * This class is an abstraction of a TCP socket or a streaming `IPC` endpoint
   * (uses named pipes on Windows, and Unix domain sockets otherwise). It is also
   * an `EventEmitter`.
@@ -46,9 +45,9 @@ class Socket () extends StObject {
     *   7. lookup
     *   8. timeout
     */
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
+  def addListener_close(event: close, listener: js.Function1[/* hadError */ Boolean, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_connect(event: tmttyped.node.nodeStrings.connect, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -70,6 +69,8 @@ class Socket () extends StObject {
       Unit
     ]
   ): this.type = js.native
+  @JSName("addListener")
+  def addListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
@@ -119,7 +120,7 @@ class Socket () extends StObject {
     * * `socket.connect(options[, connectListener])`
     * * `socket.connect(path[, connectListener])` for `IPC` connections.
     * * `socket.connect(port[, host][, connectListener])` for TCP connections.
-    * * Returns: `<net.Socket>` The socket itself.
+    * * Returns: `net.Socket` The socket itself.
     *
     * This function is asynchronous. When the connection is established, the `'connect'` event will be emitted. If there is a problem connecting,
     * instead of a `'connect'` event, an `'error'` event will be emitted with
@@ -153,10 +154,10 @@ class Socket () extends StObject {
     */
   val destroyed: Boolean = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
-  def emit_close(event: close, had_error: Boolean): Boolean = js.native
+  def emit_close(event: close, hadError: Boolean): Boolean = js.native
   @JSName("emit")
   def emit_connect(event: tmttyped.node.nodeStrings.connect): Boolean = js.native
   @JSName("emit")
@@ -172,6 +173,8 @@ class Socket () extends StObject {
   @JSName("emit")
   def emit_lookup(event: lookup, err: js.Error, address: String, family: Double, host: String): Boolean = js.native
   @JSName("emit")
+  def emit_ready(event: ready): Boolean = js.native
+  @JSName("emit")
   def emit_timeout(event: timeout): Boolean = js.native
   
   /**
@@ -180,22 +183,22 @@ class Socket () extends StObject {
     *
     * See `writable.end()` for further details.
     * @since v0.1.90
-    * @param encoding Only used when data is `string`.
+    * @param [encoding='utf8'] Only used when data is `string`.
     * @param callback Optional callback for when the socket is finished.
     * @return The socket itself.
     */
-  def end(): Unit = js.native
-  def end(buffer: String): Unit = js.native
-  def end(buffer: String, cb: js.Function0[Unit]): Unit = js.native
-  def end(buffer: js.typedarray.Uint8Array): Unit = js.native
-  def end(buffer: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
-  def end(cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: Unit, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: String, encoding: BufferEncoding): Unit = js.native
-  def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: js.typedarray.Uint8Array, encoding: Unit, cb: js.Function0[Unit]): Unit = js.native
-  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
-  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
+  def end(): this.type = js.native
+  def end(buffer: String): this.type = js.native
+  def end(buffer: String, callback: js.Function0[Unit]): this.type = js.native
+  def end(buffer: js.typedarray.Uint8Array): this.type = js.native
+  def end(buffer: js.typedarray.Uint8Array, callback: js.Function0[Unit]): this.type = js.native
+  def end(callback: js.Function0[Unit]): this.type = js.native
+  def end(str: String, encoding: Unit, callback: js.Function0[Unit]): this.type = js.native
+  def end(str: String, encoding: BufferEncoding): this.type = js.native
+  def end(str: String, encoding: BufferEncoding, callback: js.Function0[Unit]): this.type = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: Unit, callback: js.Function0[Unit]): this.type = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding): this.type = js.native
+  def end(str: js.typedarray.Uint8Array, encoding: BufferEncoding, callback: js.Function0[Unit]): this.type = js.native
   
   /**
     * The string representation of the local IP address the remote client is
@@ -203,17 +206,17 @@ class Socket () extends StObject {
     * connects on `'192.168.1.1'`, the value of `socket.localAddress` would be`'192.168.1.1'`.
     * @since v0.9.6
     */
-  val localAddress: String = js.native
+  val localAddress: js.UndefOr[String] = js.native
   
   /**
     * The numeric representation of the local port. For example, `80` or `21`.
     * @since v0.9.6
     */
-  val localPort: Double = js.native
+  val localPort: js.UndefOr[Double] = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
-  def on_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
+  def on_close(event: close, listener: js.Function1[/* hadError */ Boolean, Unit]): this.type = js.native
   @JSName("on")
   def on_connect(event: tmttyped.node.nodeStrings.connect, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -236,11 +239,13 @@ class Socket () extends StObject {
     ]
   ): this.type = js.native
   @JSName("on")
+  def on_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("on")
   def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
-  def once_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
+  def once_close(event: close, listener: js.Function1[/* hadError */ Boolean, Unit]): this.type = js.native
   @JSName("once")
   def once_connect(event: tmttyped.node.nodeStrings.connect, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -263,6 +268,8 @@ class Socket () extends StObject {
     ]
   ): this.type = js.native
   @JSName("once")
+  def once_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("once")
   def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
   /**
@@ -272,9 +279,9 @@ class Socket () extends StObject {
     */
   def pause(): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
-  def prependListener_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
+  def prependListener_close(event: close, listener: js.Function1[/* hadError */ Boolean, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_connect(event: tmttyped.node.nodeStrings.connect, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -297,11 +304,13 @@ class Socket () extends StObject {
     ]
   ): this.type = js.native
   @JSName("prependListener")
+  def prependListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
+  def prependOnceListener_close(event: close, listener: js.Function1[/* hadError */ Boolean, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_connect(event: tmttyped.node.nodeStrings.connect, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -323,6 +332,8 @@ class Socket () extends StObject {
       Unit
     ]
   ): this.type = js.native
+  @JSName("prependOnceListener")
+  def prependOnceListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
@@ -382,6 +393,8 @@ class Socket () extends StObject {
     * * `TCP_KEEPCNT=10`
     * * `TCP_KEEPINTVL=1`
     * @since v0.1.92
+    * @param [enable=false]
+    * @param [initialDelay=0]
     * @return The socket itself.
     */
   def setKeepAlive(): this.type = js.native
@@ -401,6 +414,7 @@ class Socket () extends StObject {
     * algorithm for the socket. Passing `false` for `noDelay` will enable Nagle's
     * algorithm.
     * @since v0.1.90
+    * @param [noDelay=true]
     * @return The socket itself.
     */
   def setNoDelay(): this.type = js.native
@@ -453,7 +467,7 @@ class Socket () extends StObject {
     * See `Writable` stream `write()` method for more
     * information.
     * @since v0.1.90
-    * @param encoding Only used when data is `string`.
+    * @param [encoding='utf8'] Only used when data is `string`.
     */
   def write(buffer: js.typedarray.Uint8Array): Boolean = js.native
   def write(buffer: js.typedarray.Uint8Array, cb: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Boolean = js.native

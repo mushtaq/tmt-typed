@@ -18,8 +18,8 @@ trait Http2SecureServer
   extends StObject
      with HTTP2ServerCommon {
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_checkContinue(
     event: checkContinue,
@@ -49,8 +49,8 @@ trait Http2SecureServer
   @JSName("addListener")
   def addListener_unknownProtocol(event: unknownProtocol, listener: js.Function1[/* socket */ TLSSocket, Unit]): this.type = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_checkContinue(event: checkContinue, request: Http2ServerRequest, response: Http2ServerResponse): Boolean = js.native
   @JSName("emit")
@@ -66,8 +66,8 @@ trait Http2SecureServer
   @JSName("emit")
   def emit_unknownProtocol(event: unknownProtocol, socket: TLSSocket): Boolean = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_checkContinue(
     event: checkContinue,
@@ -97,8 +97,8 @@ trait Http2SecureServer
   @JSName("on")
   def on_unknownProtocol(event: unknownProtocol, listener: js.Function1[/* socket */ TLSSocket, Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_checkContinue(
     event: checkContinue,
@@ -128,8 +128,8 @@ trait Http2SecureServer
   @JSName("once")
   def once_unknownProtocol(event: unknownProtocol, listener: js.Function1[/* socket */ TLSSocket, Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_checkContinue(
     event: checkContinue,
@@ -159,8 +159,8 @@ trait Http2SecureServer
   @JSName("prependListener")
   def prependListener_unknownProtocol(event: unknownProtocol, listener: js.Function1[/* socket */ TLSSocket, Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_checkContinue(
     event: checkContinue,

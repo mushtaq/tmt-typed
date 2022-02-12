@@ -8,45 +8,68 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection. */
 trait RTCIceCandidate extends StObject {
   
+  /* standard DOM */
+  val address: java.lang.String | Null
+  
+  /* standard DOM */
   val candidate: java.lang.String
   
+  /* standard DOM */
   val component: RTCIceComponent | Null
   
+  /* standard DOM */
   val foundation: java.lang.String | Null
   
+  /* standard DOM */
   val port: Double | Null
   
+  /* standard DOM */
   val priority: Double | Null
   
+  /* standard DOM */
   val protocol: RTCIceProtocol | Null
   
+  /* standard DOM */
   val relatedAddress: java.lang.String | Null
   
+  /* standard DOM */
   val relatedPort: Double | Null
   
+  /* standard DOM */
   val sdpMLineIndex: Double | Null
   
+  /* standard DOM */
   val sdpMid: java.lang.String | Null
   
+  /* standard DOM */
   val tcpType: RTCIceTcpCandidateType | Null
   
-  def toJSON(): org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit
+  /* standard DOM */
+  def toJSON(): org.scalajs.dom.RTCIceCandidateInit
   
+  /* standard DOM */
   val `type`: RTCIceCandidateType | Null
   
+  /* standard DOM */
   val usernameFragment: java.lang.String | Null
 }
 object RTCIceCandidate {
   
   @scala.inline
-  def apply(candidate: java.lang.String, toJSON: () => org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): RTCIceCandidate = {
-    val __obj = js.Dynamic.literal(candidate = candidate.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), component = null, foundation = null, port = null, priority = null, protocol = null, relatedAddress = null, relatedPort = null, sdpMLineIndex = null, sdpMid = null, tcpType = null, usernameFragment = null)
+  def apply(candidate: java.lang.String, toJSON: () => org.scalajs.dom.RTCIceCandidateInit): RTCIceCandidate = {
+    val __obj = js.Dynamic.literal(candidate = candidate.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), address = null, component = null, foundation = null, port = null, priority = null, protocol = null, relatedAddress = null, relatedPort = null, sdpMLineIndex = null, sdpMid = null, tcpType = null, usernameFragment = null)
     __obj.updateDynamic("type")(null)
     __obj.asInstanceOf[RTCIceCandidate]
   }
   
   @scala.inline
   implicit class RTCIceCandidateMutableBuilder[Self <: RTCIceCandidate] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAddressNull: Self = StObject.set(x, "address", null)
     
     @scala.inline
     def setCandidate(value: java.lang.String): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])
@@ -112,7 +135,7 @@ object RTCIceCandidate {
     def setTcpTypeNull: Self = StObject.set(x, "tcpType", null)
     
     @scala.inline
-    def setToJSON(value: () => org.scalajs.dom.experimental.webrtc.RTCIceCandidateInit): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
+    def setToJSON(value: () => org.scalajs.dom.RTCIceCandidateInit): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
     
     @scala.inline
     def setType(value: RTCIceCandidateType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])

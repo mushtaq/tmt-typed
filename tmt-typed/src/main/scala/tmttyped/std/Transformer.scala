@@ -7,14 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait Transformer[I, O] extends StObject {
   
+  /* standard DOM */
   var flush: js.UndefOr[TransformerFlushCallback[O]] = js.undefined
   
+  /* standard DOM */
   var readableType: Unit
   
+  /* standard DOM */
   var start: js.UndefOr[TransformerStartCallback[O]] = js.undefined
   
+  /* standard DOM */
   var transform: js.UndefOr[TransformerTransformCallback[I, O]] = js.undefined
   
+  /* standard DOM */
   var writableType: Unit
 }
 object Transformer {
@@ -38,7 +43,7 @@ object Transformer {
     def setReadableType(value: Unit): Self = StObject.set(x, "readableType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStart(value: /* controller */ TransformStreamDefaultController[O] => Unit | js.Thenable[Unit]): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
+    def setStart(value: /* controller */ TransformStreamDefaultController[O] => Any): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
     
     @scala.inline
     def setStartUndefined: Self = StObject.set(x, "start", js.undefined)

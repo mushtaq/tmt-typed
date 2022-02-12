@@ -11,5 +11,6 @@ trait RTCDTMFToneChangeEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val tone: java.lang.String = js.native
 }

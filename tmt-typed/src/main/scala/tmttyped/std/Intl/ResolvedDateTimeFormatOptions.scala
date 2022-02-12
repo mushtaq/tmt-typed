@@ -1,5 +1,20 @@
 package tmttyped.std.Intl
 
+import tmttyped.std.stdNumbers.`0`
+import tmttyped.std.stdNumbers.`1`
+import tmttyped.std.stdNumbers.`2`
+import tmttyped.std.stdNumbers.`3`
+import tmttyped.std.stdStrings.`best fit`
+import tmttyped.std.stdStrings.basic
+import tmttyped.std.stdStrings.full
+import tmttyped.std.stdStrings.h11
+import tmttyped.std.stdStrings.h12
+import tmttyped.std.stdStrings.h23
+import tmttyped.std.stdStrings.h24
+import tmttyped.std.stdStrings.long
+import tmttyped.std.stdStrings.medium
+import tmttyped.std.stdStrings.narrow
+import tmttyped.std.stdStrings.short
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,32 +22,64 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResolvedDateTimeFormatOptions extends StObject {
   
+  /* standard es5 */
   var calendar: String
   
+  /* standard es2021.intl */
+  var dateStyle: js.UndefOr[full | long | medium | short] = js.undefined
+  
+  /* standard es5 */
   var day: js.UndefOr[String] = js.undefined
   
+  /* standard es2021.intl */
+  var dayPeriod: js.UndefOr[narrow | short | long] = js.undefined
+  
+  /* standard es5 */
   var era: js.UndefOr[String] = js.undefined
   
+  /* standard es2021.intl */
+  var formatMatcher: js.UndefOr[basic | (`best fit`)] = js.undefined
+  
+  /* standard es2021.intl */
+  var fractionalSecondDigits: js.UndefOr[`0` | `1` | `2` | `3`] = js.undefined
+  
+  /* standard es5 */
   var hour: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var hour12: js.UndefOr[Boolean] = js.undefined
   
+  /* standard es2021.intl */
+  var hourCycle: js.UndefOr[h11 | h12 | h23 | h24] = js.undefined
+  
+  /* standard es5 */
   var locale: String
   
+  /* standard es5 */
   var minute: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var month: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var numberingSystem: String
   
+  /* standard es5 */
   var second: js.UndefOr[String] = js.undefined
   
+  /* standard es2021.intl */
+  var timeStyle: js.UndefOr[full | long | medium | short] = js.undefined
+  
+  /* standard es5 */
   var timeZone: String
   
+  /* standard es5 */
   var timeZoneName: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var weekday: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var year: js.UndefOr[String] = js.undefined
 }
 object ResolvedDateTimeFormatOptions {
@@ -50,7 +97,19 @@ object ResolvedDateTimeFormatOptions {
     def setCalendar(value: String): Self = StObject.set(x, "calendar", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setDateStyle(value: full | long | medium | short): Self = StObject.set(x, "dateStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDateStyleUndefined: Self = StObject.set(x, "dateStyle", js.undefined)
+    
+    @scala.inline
     def setDay(value: String): Self = StObject.set(x, "day", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDayPeriod(value: narrow | short | long): Self = StObject.set(x, "dayPeriod", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDayPeriodUndefined: Self = StObject.set(x, "dayPeriod", js.undefined)
     
     @scala.inline
     def setDayUndefined: Self = StObject.set(x, "day", js.undefined)
@@ -62,6 +121,18 @@ object ResolvedDateTimeFormatOptions {
     def setEraUndefined: Self = StObject.set(x, "era", js.undefined)
     
     @scala.inline
+    def setFormatMatcher(value: basic | (`best fit`)): Self = StObject.set(x, "formatMatcher", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFormatMatcherUndefined: Self = StObject.set(x, "formatMatcher", js.undefined)
+    
+    @scala.inline
+    def setFractionalSecondDigits(value: `0` | `1` | `2` | `3`): Self = StObject.set(x, "fractionalSecondDigits", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFractionalSecondDigitsUndefined: Self = StObject.set(x, "fractionalSecondDigits", js.undefined)
+    
+    @scala.inline
     def setHour(value: String): Self = StObject.set(x, "hour", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -69,6 +140,12 @@ object ResolvedDateTimeFormatOptions {
     
     @scala.inline
     def setHour12Undefined: Self = StObject.set(x, "hour12", js.undefined)
+    
+    @scala.inline
+    def setHourCycle(value: h11 | h12 | h23 | h24): Self = StObject.set(x, "hourCycle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHourCycleUndefined: Self = StObject.set(x, "hourCycle", js.undefined)
     
     @scala.inline
     def setHourUndefined: Self = StObject.set(x, "hour", js.undefined)
@@ -96,6 +173,12 @@ object ResolvedDateTimeFormatOptions {
     
     @scala.inline
     def setSecondUndefined: Self = StObject.set(x, "second", js.undefined)
+    
+    @scala.inline
+    def setTimeStyle(value: full | long | medium | short): Self = StObject.set(x, "timeStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTimeStyleUndefined: Self = StObject.set(x, "timeStyle", js.undefined)
     
     @scala.inline
     def setTimeZone(value: String): Self = StObject.set(x, "timeZone", value.asInstanceOf[js.Any])

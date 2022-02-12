@@ -14,8 +14,6 @@ object ttyMod {
   val ^ : js.Any = js.native
   
   /**
-    * * Extends: `<net.Socket>`
-    *
     * Represents the readable side of a TTY. In normal circumstances `process.stdin` will be the only `tty.ReadStream` instance in a Node.js
     * process and there should be no reason to create additional instances.
     * @since v0.5.8
@@ -54,8 +52,6 @@ object ttyMod {
   }
   
   /**
-    * * Extends: `<net.Socket>`
-    *
     * Represents the writable side of a TTY. In normal circumstances,`process.stdout` and `process.stderr` will be the only`tty.WriteStream` instances created for a Node.js process and there
     * should be no reason to create additional instances.
     * @since v0.5.8
@@ -65,7 +61,7 @@ object ttyMod {
   class WriteStream protected () extends StObject {
     def this(fd: Double) = this()
     
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_resize(event: resize, listener: js.Function0[Unit]): this.type = js.native
     
@@ -109,8 +105,8 @@ object ttyMod {
     def cursorTo(x: Double, y: Double, callback: js.Function0[Unit]): Boolean = js.native
     def cursorTo(x: Double, y: Unit, callback: js.Function0[Unit]): Boolean = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_resize(event: resize): Boolean = js.native
     
@@ -120,9 +116,7 @@ object ttyMod {
       * * `1` for 2,
       * * `4` for 16,
       * * `8` for 256,
-      * * `24` for 16,777,216
-      *
-      * colors supported.
+      * * `24` for 16,777,216 colors supported.
       *
       * Use this to determine what colors the terminal supports. Due to the nature of
       * colors in terminals it is possible to either have false positives or false
@@ -140,15 +134,15 @@ object ttyMod {
       *
       * Disabling color support is also possible by using the `NO_COLOR` and`NODE_DISABLE_COLORS` environment variables.
       * @since v9.9.0
-      * @param env An object containing the environment variables to check. This enables simulating the usage of a specific terminal.
+      * @param [env=process.env] An object containing the environment variables to check. This enables simulating the usage of a specific terminal.
       */
     def getColorDepth(): Double = js.native
     def getColorDepth(env: js.Object): Double = js.native
     
     /**
-      * `writeStream.getWindowSize()` returns the size of the `TTY` corresponding to this `WriteStream`. The array is of the type`[numColumns, numRows]` where `numColumns` and `numRows` represent
-      * the number
-      * of columns and rows in the corresponding `TTY`.
+      * `writeStream.getWindowSize()` returns the size of the TTY
+      * corresponding to this `WriteStream`. The array is of the type`[numColumns, numRows]` where `numColumns` and `numRows` represent the number
+      * of columns and rows in the corresponding TTY.
       * @since v0.7.7
       */
     def getWindowSize(): js.Tuple2[Double, Double] = js.native
@@ -170,12 +164,12 @@ object ttyMod {
       * // Returns false (the environment setting pretends to support 2 ** 8 colors).
       * ```
       * @since v11.13.0, v10.16.0
-      * @param count The number of colors that are requested (minimum 2).
-      * @param env An object containing the environment variables to check. This enables simulating the usage of a specific terminal.
+      * @param [count=16] The number of colors that are requested (minimum 2).
+      * @param [env=process.env] An object containing the environment variables to check. This enables simulating the usage of a specific terminal.
       */
     def hasColors(): Boolean = js.native
-    def hasColors(depth: Double): Boolean = js.native
-    def hasColors(depth: Double, env: js.Object): Boolean = js.native
+    def hasColors(count: Double): Boolean = js.native
+    def hasColors(count: Double, env: js.Object): Boolean = js.native
     def hasColors(env: js.Object): Boolean = js.native
     
     /**
@@ -194,19 +188,19 @@ object ttyMod {
     def moveCursor(dx: Double, dy: Double): Boolean = js.native
     def moveCursor(dx: Double, dy: Double, callback: js.Function0[Unit]): Boolean = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_resize(event: resize, listener: js.Function0[Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_resize(event: resize, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_resize(event: resize, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_resize(event: resize, listener: js.Function0[Unit]): this.type = js.native
     

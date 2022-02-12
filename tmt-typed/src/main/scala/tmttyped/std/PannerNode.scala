@@ -11,37 +11,53 @@ trait PannerNode
   extends StObject
      with AudioNode {
   
+  /* standard DOM */
   var coneInnerAngle: Double = js.native
   
+  /* standard DOM */
   var coneOuterAngle: Double = js.native
   
+  /* standard DOM */
   var coneOuterGain: Double = js.native
   
+  /* standard DOM */
   var distanceModel: DistanceModelType = js.native
   
+  /* standard DOM */
   var maxDistance: Double = js.native
   
-  val orientationX: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val orientationX: org.scalajs.dom.AudioParam = js.native
   
-  val orientationY: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val orientationY: org.scalajs.dom.AudioParam = js.native
   
-  val orientationZ: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val orientationZ: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   var panningModel: PanningModelType = js.native
   
-  val positionX: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val positionX: org.scalajs.dom.AudioParam = js.native
   
-  val positionY: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val positionY: org.scalajs.dom.AudioParam = js.native
   
-  val positionZ: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val positionZ: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   var refDistance: Double = js.native
   
+  /* standard DOM */
   var rolloffFactor: Double = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def setOrientation(x: Double, y: Double, z: Double): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def setPosition(x: Double, y: Double, z: Double): Unit = js.native
 }

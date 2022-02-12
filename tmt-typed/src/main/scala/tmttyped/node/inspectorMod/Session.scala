@@ -219,7 +219,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Session () extends StObject {
   
   // Events
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -422,6 +422,13 @@ class Session () extends StObject {
   def connect(): Unit = js.native
   
   /**
+    * Connects a session to the main thread inspector back-end. An exception will
+    * be thrown if this API was not called on a Worker thread.
+    * @since v12.11.0
+    */
+  def connectToMainThread(): Unit = js.native
+  
+  /**
     * Immediately close the session. All pending message callbacks will be called
     * with an error. `session.connect()` will need to be called to be able to send
     * messages again. Reconnected session will lose all inspector state, such as
@@ -430,8 +437,8 @@ class Session () extends StObject {
     */
   def disconnect(): Unit = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_ConsolemessageAdded(event: ConsoleDotmessageAdded, message: InspectorNotification[MessageAddedEventDataType]): Boolean = js.native
   @JSName("emit")
@@ -526,7 +533,7 @@ class Session () extends StObject {
   @JSName("emit")
   def emit_inspectorNotification(event: inspectorNotification, message: InspectorNotification[js.Object]): Boolean = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -722,7 +729,7 @@ class Session () extends StObject {
     listener: js.Function1[/* message */ InspectorNotification[js.Object], Unit]
   ): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -929,7 +936,7 @@ class Session () extends StObject {
     * // Output: { type: 'number', value: 4, description: '4' }
     * ```
     *
-    * The latest version of the V8 inspector protocol is published on the[Chrome DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/v8/).
+    * The latest version of the V8 inspector protocol is published on the [Chrome DevTools Protocol Viewer](https://chromedevtools.github.io/devtools-protocol/v8/).
     *
     * Node.js inspector supports all the Chrome DevTools Protocol domains declared
     * by V8\. Chrome DevTools Protocol domain provides an interface for interacting
@@ -2207,7 +2214,7 @@ class Session () extends StObject {
     callback: js.Function2[/* err */ js.Error | Null, /* params */ GetDomainsReturnType, Unit]
   ): Unit = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */
@@ -2403,7 +2410,7 @@ class Session () extends StObject {
     listener: js.Function1[/* message */ InspectorNotification[js.Object], Unit]
   ): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * Issued when new console message is added.
     */

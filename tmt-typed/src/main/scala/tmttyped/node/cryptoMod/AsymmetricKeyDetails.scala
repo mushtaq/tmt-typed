@@ -13,6 +13,16 @@ trait AsymmetricKeyDetails extends StObject {
   var divisorLength: js.UndefOr[Double] = js.undefined
   
   /**
+    * Name of the message digest (RSA-PSS).
+    */
+  var hashAlgorithm: js.UndefOr[String] = js.undefined
+  
+  /**
+    * Name of the message digest used by MGF1 (RSA-PSS).
+    */
+  var mgf1HashAlgorithm: js.UndefOr[String] = js.undefined
+  
+  /**
     * Key size in bits (RSA, DSA).
     */
   var modulusLength: js.UndefOr[Double] = js.undefined
@@ -26,6 +36,11 @@ trait AsymmetricKeyDetails extends StObject {
     * Public exponent (RSA).
     */
   var publicExponent: js.UndefOr[js.BigInt] = js.undefined
+  
+  /**
+    * Minimal salt length in bytes (RSA-PSS).
+    */
+  var saltLength: js.UndefOr[Double] = js.undefined
 }
 object AsymmetricKeyDetails {
   
@@ -45,6 +60,18 @@ object AsymmetricKeyDetails {
     def setDivisorLengthUndefined: Self = StObject.set(x, "divisorLength", js.undefined)
     
     @scala.inline
+    def setHashAlgorithm(value: String): Self = StObject.set(x, "hashAlgorithm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHashAlgorithmUndefined: Self = StObject.set(x, "hashAlgorithm", js.undefined)
+    
+    @scala.inline
+    def setMgf1HashAlgorithm(value: String): Self = StObject.set(x, "mgf1HashAlgorithm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMgf1HashAlgorithmUndefined: Self = StObject.set(x, "mgf1HashAlgorithm", js.undefined)
+    
+    @scala.inline
     def setModulusLength(value: Double): Self = StObject.set(x, "modulusLength", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -61,5 +88,11 @@ object AsymmetricKeyDetails {
     
     @scala.inline
     def setPublicExponentUndefined: Self = StObject.set(x, "publicExponent", js.undefined)
+    
+    @scala.inline
+    def setSaltLength(value: Double): Self = StObject.set(x, "saltLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSaltLengthUndefined: Self = StObject.set(x, "saltLength", js.undefined)
   }
 }

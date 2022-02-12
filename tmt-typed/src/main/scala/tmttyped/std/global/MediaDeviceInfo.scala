@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.mediastream.MediaDeviceKind
+import org.scalajs.dom.MediaDeviceKind
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,22 +9,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("MediaDeviceInfo")
 @js.native
+/* standard DOM */
 class MediaDeviceInfo ()
   extends StObject
      with tmttyped.std.MediaDeviceInfo {
   
+  /* standard DOM */
   /* CompleteClass */
   override val deviceId: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val groupId: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val kind: MediaDeviceKind = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val label: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def toJSON(): js.Any = js.native
+  override def toJSON(): Any = js.native
 }

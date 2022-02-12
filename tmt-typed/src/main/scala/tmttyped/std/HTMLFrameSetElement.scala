@@ -5,13 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** Provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating <frameset> elements. */
+/**
+  * Provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating <frameset> elements.
+  * @deprecated
+  */
 @js.native
 trait HTMLFrameSetElement
   extends StObject
      with HTMLElement
      with WindowEventHandlers {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -25,24 +29,27 @@ trait HTMLFrameSetElement
   
   /**
     * Sets or retrieves the frame widths of the object.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var cols: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   /**
     * Sets or retrieves the frame heights of the object.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var rows: java.lang.String = js.native
 }

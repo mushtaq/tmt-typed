@@ -9,6 +9,7 @@ trait RsaHashedKeyGenParams
   extends StObject
      with RsaKeyGenParams {
   
+  /* standard DOM */
   var hash: HashAlgorithmIdentifier
 }
 object RsaHashedKeyGenParams {

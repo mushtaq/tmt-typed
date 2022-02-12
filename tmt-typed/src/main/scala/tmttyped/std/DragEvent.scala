@@ -11,8 +11,7 @@ trait DragEvent
   extends StObject
      with MouseEvent {
   
-  /**
-    * Returns the DataTransfer object for the event.
-    */
-  val dataTransfer: org.scalajs.dom.raw.DataTransfer | Null = js.native
+  /** Returns the DataTransfer object for the event. */
+  /* standard DOM */
+  val dataTransfer: org.scalajs.dom.DataTransfer | Null = js.native
 }

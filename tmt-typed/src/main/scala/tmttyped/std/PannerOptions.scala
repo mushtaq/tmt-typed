@@ -9,32 +9,46 @@ trait PannerOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var coneInnerAngle: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var coneOuterAngle: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var coneOuterGain: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var distanceModel: js.UndefOr[DistanceModelType] = js.undefined
   
+  /* standard DOM */
   var maxDistance: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var orientationX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var orientationY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var orientationZ: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var panningModel: js.UndefOr[PanningModelType] = js.undefined
   
+  /* standard DOM */
   var positionX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var positionY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var positionZ: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var refDistance: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var rolloffFactor: js.UndefOr[Double] = js.undefined
 }
 object PannerOptions {

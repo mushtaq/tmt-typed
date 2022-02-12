@@ -7,183 +7,264 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait SVGElementTagNameMap extends StObject {
   
-  var a: org.scalajs.dom.raw.SVGAElement
+  /* standard DOM */
+  var a: org.scalajs.dom.SVGAElement
   
-  var circle: org.scalajs.dom.raw.SVGCircleElement
+  /* standard DOM */
+  var animate: SVGAnimateElement
   
-  var clipPath: org.scalajs.dom.raw.SVGClipPathElement
+  /* standard DOM */
+  var animateMotion: SVGAnimateMotionElement
   
-  var defs: org.scalajs.dom.raw.SVGDefsElement
+  /* standard DOM */
+  var animateTransform: SVGAnimateTransformElement
   
-  var desc: org.scalajs.dom.raw.SVGDescElement
+  /* standard DOM */
+  var circle: org.scalajs.dom.SVGCircleElement
   
-  var ellipse: org.scalajs.dom.raw.SVGEllipseElement
+  /* standard DOM */
+  var clipPath: org.scalajs.dom.SVGClipPathElement
   
-  var feBlend: org.scalajs.dom.raw.SVGFEBlendElement
+  /* standard DOM */
+  var defs: org.scalajs.dom.SVGDefsElement
   
-  var feColorMatrix: org.scalajs.dom.raw.SVGFEColorMatrixElement
+  /* standard DOM */
+  var desc: org.scalajs.dom.SVGDescElement
   
-  var feComponentTransfer: org.scalajs.dom.raw.SVGFEComponentTransferElement
+  /* standard DOM */
+  var ellipse: org.scalajs.dom.SVGEllipseElement
   
-  var feComposite: org.scalajs.dom.raw.SVGFECompositeElement
+  /* standard DOM */
+  var feBlend: org.scalajs.dom.SVGFEBlendElement
   
-  var feConvolveMatrix: org.scalajs.dom.raw.SVGFEConvolveMatrixElement
+  /* standard DOM */
+  var feColorMatrix: org.scalajs.dom.SVGFEColorMatrixElement
   
-  var feDiffuseLighting: org.scalajs.dom.raw.SVGFEDiffuseLightingElement
+  /* standard DOM */
+  var feComponentTransfer: org.scalajs.dom.SVGFEComponentTransferElement
   
-  var feDisplacementMap: org.scalajs.dom.raw.SVGFEDisplacementMapElement
+  /* standard DOM */
+  var feComposite: org.scalajs.dom.SVGFECompositeElement
   
-  var feDistantLight: org.scalajs.dom.raw.SVGFEDistantLightElement
+  /* standard DOM */
+  var feConvolveMatrix: org.scalajs.dom.SVGFEConvolveMatrixElement
   
-  var feFlood: org.scalajs.dom.raw.SVGFEFloodElement
+  /* standard DOM */
+  var feDiffuseLighting: org.scalajs.dom.SVGFEDiffuseLightingElement
   
-  var feFuncA: org.scalajs.dom.raw.SVGFEFuncAElement
+  /* standard DOM */
+  var feDisplacementMap: org.scalajs.dom.SVGFEDisplacementMapElement
   
-  var feFuncB: org.scalajs.dom.raw.SVGFEFuncBElement
+  /* standard DOM */
+  var feDistantLight: org.scalajs.dom.SVGFEDistantLightElement
   
-  var feFuncG: org.scalajs.dom.raw.SVGFEFuncGElement
+  /* standard DOM */
+  var feDropShadow: SVGFEDropShadowElement
   
-  var feFuncR: org.scalajs.dom.raw.SVGFEFuncRElement
+  /* standard DOM */
+  var feFlood: org.scalajs.dom.SVGFEFloodElement
   
-  var feGaussianBlur: org.scalajs.dom.raw.SVGFEGaussianBlurElement
+  /* standard DOM */
+  var feFuncA: org.scalajs.dom.SVGFEFuncAElement
   
-  var feImage: org.scalajs.dom.raw.SVGFEImageElement
+  /* standard DOM */
+  var feFuncB: org.scalajs.dom.SVGFEFuncBElement
   
-  var feMerge: org.scalajs.dom.raw.SVGFEMergeElement
+  /* standard DOM */
+  var feFuncG: org.scalajs.dom.SVGFEFuncGElement
   
-  var feMergeNode: org.scalajs.dom.raw.SVGFEMergeNodeElement
+  /* standard DOM */
+  var feFuncR: org.scalajs.dom.SVGFEFuncRElement
   
-  var feMorphology: org.scalajs.dom.raw.SVGFEMorphologyElement
+  /* standard DOM */
+  var feGaussianBlur: org.scalajs.dom.SVGFEGaussianBlurElement
   
-  var feOffset: org.scalajs.dom.raw.SVGFEOffsetElement
+  /* standard DOM */
+  var feImage: org.scalajs.dom.SVGFEImageElement
   
-  var fePointLight: org.scalajs.dom.raw.SVGFEPointLightElement
+  /* standard DOM */
+  var feMerge: org.scalajs.dom.SVGFEMergeElement
   
-  var feSpecularLighting: org.scalajs.dom.raw.SVGFESpecularLightingElement
+  /* standard DOM */
+  var feMergeNode: org.scalajs.dom.SVGFEMergeNodeElement
   
-  var feSpotLight: org.scalajs.dom.raw.SVGFESpotLightElement
+  /* standard DOM */
+  var feMorphology: org.scalajs.dom.SVGFEMorphologyElement
   
-  var feTile: org.scalajs.dom.raw.SVGFETileElement
+  /* standard DOM */
+  var feOffset: org.scalajs.dom.SVGFEOffsetElement
   
-  var feTurbulence: org.scalajs.dom.raw.SVGFETurbulenceElement
+  /* standard DOM */
+  var fePointLight: org.scalajs.dom.SVGFEPointLightElement
   
-  var filter: org.scalajs.dom.raw.SVGFilterElement
+  /* standard DOM */
+  var feSpecularLighting: org.scalajs.dom.SVGFESpecularLightingElement
   
+  /* standard DOM */
+  var feSpotLight: org.scalajs.dom.SVGFESpotLightElement
+  
+  /* standard DOM */
+  var feTile: org.scalajs.dom.SVGFETileElement
+  
+  /* standard DOM */
+  var feTurbulence: org.scalajs.dom.SVGFETurbulenceElement
+  
+  /* standard DOM */
+  var filter: org.scalajs.dom.SVGFilterElement
+  
+  /* standard DOM */
   var foreignObject: SVGForeignObjectElement
   
-  var g: org.scalajs.dom.raw.SVGGElement
+  /* standard DOM */
+  var g: org.scalajs.dom.SVGGElement
   
-  var image: org.scalajs.dom.raw.SVGImageElement
+  /* standard DOM */
+  var image: org.scalajs.dom.SVGImageElement
   
-  var line: org.scalajs.dom.raw.SVGLineElement
+  /* standard DOM */
+  var line: org.scalajs.dom.SVGLineElement
   
-  var linearGradient: org.scalajs.dom.raw.SVGLinearGradientElement
+  /* standard DOM */
+  var linearGradient: org.scalajs.dom.SVGLinearGradientElement
   
-  var marker: org.scalajs.dom.raw.SVGMarkerElement
+  /* standard DOM */
+  var marker: org.scalajs.dom.SVGMarkerElement
   
-  var mask: org.scalajs.dom.raw.SVGMaskElement
+  /* standard DOM */
+  var mask: org.scalajs.dom.SVGMaskElement
   
-  var metadata: org.scalajs.dom.raw.SVGMetadataElement
+  /* standard DOM */
+  var metadata: org.scalajs.dom.SVGMetadataElement
   
-  var path: org.scalajs.dom.raw.SVGPathElement
+  /* standard DOM */
+  var mpath: SVGMPathElement
   
-  var pattern: org.scalajs.dom.raw.SVGPatternElement
+  /* standard DOM */
+  var path: org.scalajs.dom.SVGPathElement
   
-  var polygon: org.scalajs.dom.raw.SVGPolygonElement
+  /* standard DOM */
+  var pattern: org.scalajs.dom.SVGPatternElement
   
-  var polyline: org.scalajs.dom.raw.SVGPolylineElement
+  /* standard DOM */
+  var polygon: org.scalajs.dom.SVGPolygonElement
   
-  var radialGradient: org.scalajs.dom.raw.SVGRadialGradientElement
+  /* standard DOM */
+  var polyline: org.scalajs.dom.SVGPolylineElement
   
-  var rect: org.scalajs.dom.raw.SVGRectElement
+  /* standard DOM */
+  var radialGradient: org.scalajs.dom.SVGRadialGradientElement
   
-  var script: org.scalajs.dom.raw.SVGScriptElement
+  /* standard DOM */
+  var rect: org.scalajs.dom.SVGRectElement
   
-  var stop: org.scalajs.dom.raw.SVGStopElement
+  /* standard DOM */
+  var script: org.scalajs.dom.SVGScriptElement
   
-  var style: org.scalajs.dom.raw.SVGStyleElement
+  /* standard DOM */
+  var set: SVGSetElement
   
-  var svg: org.scalajs.dom.raw.SVGSVGElement
+  /* standard DOM */
+  var stop: org.scalajs.dom.SVGStopElement
   
-  var switch: org.scalajs.dom.raw.SVGSwitchElement
+  /* standard DOM */
+  var style: org.scalajs.dom.SVGStyleElement
   
-  var symbol: org.scalajs.dom.raw.SVGSymbolElement
+  /* standard DOM */
+  var svg: org.scalajs.dom.SVGSVGElement
   
-  var text: org.scalajs.dom.raw.SVGTextElement
+  /* standard DOM */
+  var switch: org.scalajs.dom.SVGSwitchElement
   
-  var textPath: org.scalajs.dom.raw.SVGTextPathElement
+  /* standard DOM */
+  var symbol: org.scalajs.dom.SVGSymbolElement
   
-  var title: org.scalajs.dom.raw.SVGTitleElement
+  /* standard DOM */
+  var text: org.scalajs.dom.SVGTextElement
   
-  var tspan: org.scalajs.dom.raw.SVGTSpanElement
+  /* standard DOM */
+  var textPath: org.scalajs.dom.SVGTextPathElement
   
-  var use: org.scalajs.dom.raw.SVGUseElement
+  /* standard DOM */
+  var title: org.scalajs.dom.SVGTitleElement
   
-  var view: org.scalajs.dom.raw.SVGViewElement
+  /* standard DOM */
+  var tspan: org.scalajs.dom.SVGTSpanElement
+  
+  /* standard DOM */
+  var use: org.scalajs.dom.SVGUseElement
+  
+  /* standard DOM */
+  var view: org.scalajs.dom.SVGViewElement
 }
 object SVGElementTagNameMap {
   
   @scala.inline
   def apply(
-    a: org.scalajs.dom.raw.SVGAElement,
-    circle: org.scalajs.dom.raw.SVGCircleElement,
-    clipPath: org.scalajs.dom.raw.SVGClipPathElement,
-    defs: org.scalajs.dom.raw.SVGDefsElement,
-    desc: org.scalajs.dom.raw.SVGDescElement,
-    ellipse: org.scalajs.dom.raw.SVGEllipseElement,
-    feBlend: org.scalajs.dom.raw.SVGFEBlendElement,
-    feColorMatrix: org.scalajs.dom.raw.SVGFEColorMatrixElement,
-    feComponentTransfer: org.scalajs.dom.raw.SVGFEComponentTransferElement,
-    feComposite: org.scalajs.dom.raw.SVGFECompositeElement,
-    feConvolveMatrix: org.scalajs.dom.raw.SVGFEConvolveMatrixElement,
-    feDiffuseLighting: org.scalajs.dom.raw.SVGFEDiffuseLightingElement,
-    feDisplacementMap: org.scalajs.dom.raw.SVGFEDisplacementMapElement,
-    feDistantLight: org.scalajs.dom.raw.SVGFEDistantLightElement,
-    feFlood: org.scalajs.dom.raw.SVGFEFloodElement,
-    feFuncA: org.scalajs.dom.raw.SVGFEFuncAElement,
-    feFuncB: org.scalajs.dom.raw.SVGFEFuncBElement,
-    feFuncG: org.scalajs.dom.raw.SVGFEFuncGElement,
-    feFuncR: org.scalajs.dom.raw.SVGFEFuncRElement,
-    feGaussianBlur: org.scalajs.dom.raw.SVGFEGaussianBlurElement,
-    feImage: org.scalajs.dom.raw.SVGFEImageElement,
-    feMerge: org.scalajs.dom.raw.SVGFEMergeElement,
-    feMergeNode: org.scalajs.dom.raw.SVGFEMergeNodeElement,
-    feMorphology: org.scalajs.dom.raw.SVGFEMorphologyElement,
-    feOffset: org.scalajs.dom.raw.SVGFEOffsetElement,
-    fePointLight: org.scalajs.dom.raw.SVGFEPointLightElement,
-    feSpecularLighting: org.scalajs.dom.raw.SVGFESpecularLightingElement,
-    feSpotLight: org.scalajs.dom.raw.SVGFESpotLightElement,
-    feTile: org.scalajs.dom.raw.SVGFETileElement,
-    feTurbulence: org.scalajs.dom.raw.SVGFETurbulenceElement,
-    filter: org.scalajs.dom.raw.SVGFilterElement,
+    a: org.scalajs.dom.SVGAElement,
+    animate: SVGAnimateElement,
+    animateMotion: SVGAnimateMotionElement,
+    animateTransform: SVGAnimateTransformElement,
+    circle: org.scalajs.dom.SVGCircleElement,
+    clipPath: org.scalajs.dom.SVGClipPathElement,
+    defs: org.scalajs.dom.SVGDefsElement,
+    desc: org.scalajs.dom.SVGDescElement,
+    ellipse: org.scalajs.dom.SVGEllipseElement,
+    feBlend: org.scalajs.dom.SVGFEBlendElement,
+    feColorMatrix: org.scalajs.dom.SVGFEColorMatrixElement,
+    feComponentTransfer: org.scalajs.dom.SVGFEComponentTransferElement,
+    feComposite: org.scalajs.dom.SVGFECompositeElement,
+    feConvolveMatrix: org.scalajs.dom.SVGFEConvolveMatrixElement,
+    feDiffuseLighting: org.scalajs.dom.SVGFEDiffuseLightingElement,
+    feDisplacementMap: org.scalajs.dom.SVGFEDisplacementMapElement,
+    feDistantLight: org.scalajs.dom.SVGFEDistantLightElement,
+    feDropShadow: SVGFEDropShadowElement,
+    feFlood: org.scalajs.dom.SVGFEFloodElement,
+    feFuncA: org.scalajs.dom.SVGFEFuncAElement,
+    feFuncB: org.scalajs.dom.SVGFEFuncBElement,
+    feFuncG: org.scalajs.dom.SVGFEFuncGElement,
+    feFuncR: org.scalajs.dom.SVGFEFuncRElement,
+    feGaussianBlur: org.scalajs.dom.SVGFEGaussianBlurElement,
+    feImage: org.scalajs.dom.SVGFEImageElement,
+    feMerge: org.scalajs.dom.SVGFEMergeElement,
+    feMergeNode: org.scalajs.dom.SVGFEMergeNodeElement,
+    feMorphology: org.scalajs.dom.SVGFEMorphologyElement,
+    feOffset: org.scalajs.dom.SVGFEOffsetElement,
+    fePointLight: org.scalajs.dom.SVGFEPointLightElement,
+    feSpecularLighting: org.scalajs.dom.SVGFESpecularLightingElement,
+    feSpotLight: org.scalajs.dom.SVGFESpotLightElement,
+    feTile: org.scalajs.dom.SVGFETileElement,
+    feTurbulence: org.scalajs.dom.SVGFETurbulenceElement,
+    filter: org.scalajs.dom.SVGFilterElement,
     foreignObject: SVGForeignObjectElement,
-    g: org.scalajs.dom.raw.SVGGElement,
-    image: org.scalajs.dom.raw.SVGImageElement,
-    line: org.scalajs.dom.raw.SVGLineElement,
-    linearGradient: org.scalajs.dom.raw.SVGLinearGradientElement,
-    marker: org.scalajs.dom.raw.SVGMarkerElement,
-    mask: org.scalajs.dom.raw.SVGMaskElement,
-    metadata: org.scalajs.dom.raw.SVGMetadataElement,
-    path: org.scalajs.dom.raw.SVGPathElement,
-    pattern: org.scalajs.dom.raw.SVGPatternElement,
-    polygon: org.scalajs.dom.raw.SVGPolygonElement,
-    polyline: org.scalajs.dom.raw.SVGPolylineElement,
-    radialGradient: org.scalajs.dom.raw.SVGRadialGradientElement,
-    rect: org.scalajs.dom.raw.SVGRectElement,
-    script: org.scalajs.dom.raw.SVGScriptElement,
-    stop: org.scalajs.dom.raw.SVGStopElement,
-    style: org.scalajs.dom.raw.SVGStyleElement,
-    svg: org.scalajs.dom.raw.SVGSVGElement,
-    switch: org.scalajs.dom.raw.SVGSwitchElement,
-    symbol: org.scalajs.dom.raw.SVGSymbolElement,
-    text: org.scalajs.dom.raw.SVGTextElement,
-    textPath: org.scalajs.dom.raw.SVGTextPathElement,
-    title: org.scalajs.dom.raw.SVGTitleElement,
-    tspan: org.scalajs.dom.raw.SVGTSpanElement,
-    use: org.scalajs.dom.raw.SVGUseElement,
-    view: org.scalajs.dom.raw.SVGViewElement
+    g: org.scalajs.dom.SVGGElement,
+    image: org.scalajs.dom.SVGImageElement,
+    line: org.scalajs.dom.SVGLineElement,
+    linearGradient: org.scalajs.dom.SVGLinearGradientElement,
+    marker: org.scalajs.dom.SVGMarkerElement,
+    mask: org.scalajs.dom.SVGMaskElement,
+    metadata: org.scalajs.dom.SVGMetadataElement,
+    mpath: SVGMPathElement,
+    path: org.scalajs.dom.SVGPathElement,
+    pattern: org.scalajs.dom.SVGPatternElement,
+    polygon: org.scalajs.dom.SVGPolygonElement,
+    polyline: org.scalajs.dom.SVGPolylineElement,
+    radialGradient: org.scalajs.dom.SVGRadialGradientElement,
+    rect: org.scalajs.dom.SVGRectElement,
+    script: org.scalajs.dom.SVGScriptElement,
+    set: SVGSetElement,
+    stop: org.scalajs.dom.SVGStopElement,
+    style: org.scalajs.dom.SVGStyleElement,
+    svg: org.scalajs.dom.SVGSVGElement,
+    switch: org.scalajs.dom.SVGSwitchElement,
+    symbol: org.scalajs.dom.SVGSymbolElement,
+    text: org.scalajs.dom.SVGTextElement,
+    textPath: org.scalajs.dom.SVGTextPathElement,
+    title: org.scalajs.dom.SVGTitleElement,
+    tspan: org.scalajs.dom.SVGTSpanElement,
+    use: org.scalajs.dom.SVGUseElement,
+    view: org.scalajs.dom.SVGViewElement
   ): SVGElementTagNameMap = {
-    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], circle = circle.asInstanceOf[js.Any], clipPath = clipPath.asInstanceOf[js.Any], defs = defs.asInstanceOf[js.Any], desc = desc.asInstanceOf[js.Any], ellipse = ellipse.asInstanceOf[js.Any], feBlend = feBlend.asInstanceOf[js.Any], feColorMatrix = feColorMatrix.asInstanceOf[js.Any], feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any], feComposite = feComposite.asInstanceOf[js.Any], feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any], feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any], feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any], feDistantLight = feDistantLight.asInstanceOf[js.Any], feFlood = feFlood.asInstanceOf[js.Any], feFuncA = feFuncA.asInstanceOf[js.Any], feFuncB = feFuncB.asInstanceOf[js.Any], feFuncG = feFuncG.asInstanceOf[js.Any], feFuncR = feFuncR.asInstanceOf[js.Any], feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any], feImage = feImage.asInstanceOf[js.Any], feMerge = feMerge.asInstanceOf[js.Any], feMergeNode = feMergeNode.asInstanceOf[js.Any], feMorphology = feMorphology.asInstanceOf[js.Any], feOffset = feOffset.asInstanceOf[js.Any], fePointLight = fePointLight.asInstanceOf[js.Any], feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any], feSpotLight = feSpotLight.asInstanceOf[js.Any], feTile = feTile.asInstanceOf[js.Any], feTurbulence = feTurbulence.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], foreignObject = foreignObject.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], linearGradient = linearGradient.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mask = mask.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], polygon = polygon.asInstanceOf[js.Any], polyline = polyline.asInstanceOf[js.Any], radialGradient = radialGradient.asInstanceOf[js.Any], rect = rect.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], stop = stop.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], svg = svg.asInstanceOf[js.Any], switch = switch.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textPath = textPath.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], tspan = tspan.asInstanceOf[js.Any], use = use.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], animate = animate.asInstanceOf[js.Any], animateMotion = animateMotion.asInstanceOf[js.Any], animateTransform = animateTransform.asInstanceOf[js.Any], circle = circle.asInstanceOf[js.Any], clipPath = clipPath.asInstanceOf[js.Any], defs = defs.asInstanceOf[js.Any], desc = desc.asInstanceOf[js.Any], ellipse = ellipse.asInstanceOf[js.Any], feBlend = feBlend.asInstanceOf[js.Any], feColorMatrix = feColorMatrix.asInstanceOf[js.Any], feComponentTransfer = feComponentTransfer.asInstanceOf[js.Any], feComposite = feComposite.asInstanceOf[js.Any], feConvolveMatrix = feConvolveMatrix.asInstanceOf[js.Any], feDiffuseLighting = feDiffuseLighting.asInstanceOf[js.Any], feDisplacementMap = feDisplacementMap.asInstanceOf[js.Any], feDistantLight = feDistantLight.asInstanceOf[js.Any], feDropShadow = feDropShadow.asInstanceOf[js.Any], feFlood = feFlood.asInstanceOf[js.Any], feFuncA = feFuncA.asInstanceOf[js.Any], feFuncB = feFuncB.asInstanceOf[js.Any], feFuncG = feFuncG.asInstanceOf[js.Any], feFuncR = feFuncR.asInstanceOf[js.Any], feGaussianBlur = feGaussianBlur.asInstanceOf[js.Any], feImage = feImage.asInstanceOf[js.Any], feMerge = feMerge.asInstanceOf[js.Any], feMergeNode = feMergeNode.asInstanceOf[js.Any], feMorphology = feMorphology.asInstanceOf[js.Any], feOffset = feOffset.asInstanceOf[js.Any], fePointLight = fePointLight.asInstanceOf[js.Any], feSpecularLighting = feSpecularLighting.asInstanceOf[js.Any], feSpotLight = feSpotLight.asInstanceOf[js.Any], feTile = feTile.asInstanceOf[js.Any], feTurbulence = feTurbulence.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], foreignObject = foreignObject.asInstanceOf[js.Any], g = g.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], linearGradient = linearGradient.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mask = mask.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], mpath = mpath.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], polygon = polygon.asInstanceOf[js.Any], polyline = polyline.asInstanceOf[js.Any], radialGradient = radialGradient.asInstanceOf[js.Any], rect = rect.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any], set = set.asInstanceOf[js.Any], stop = stop.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], svg = svg.asInstanceOf[js.Any], switch = switch.asInstanceOf[js.Any], symbol = symbol.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textPath = textPath.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], tspan = tspan.asInstanceOf[js.Any], use = use.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGElementTagNameMap]
   }
   
@@ -191,174 +272,192 @@ object SVGElementTagNameMap {
   implicit class SVGElementTagNameMapMutableBuilder[Self <: SVGElementTagNameMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setA(value: org.scalajs.dom.raw.SVGAElement): Self = StObject.set(x, "a", value.asInstanceOf[js.Any])
+    def setA(value: org.scalajs.dom.SVGAElement): Self = StObject.set(x, "a", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCircle(value: org.scalajs.dom.raw.SVGCircleElement): Self = StObject.set(x, "circle", value.asInstanceOf[js.Any])
+    def setAnimate(value: SVGAnimateElement): Self = StObject.set(x, "animate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClipPath(value: org.scalajs.dom.raw.SVGClipPathElement): Self = StObject.set(x, "clipPath", value.asInstanceOf[js.Any])
+    def setAnimateMotion(value: SVGAnimateMotionElement): Self = StObject.set(x, "animateMotion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDefs(value: org.scalajs.dom.raw.SVGDefsElement): Self = StObject.set(x, "defs", value.asInstanceOf[js.Any])
+    def setAnimateTransform(value: SVGAnimateTransformElement): Self = StObject.set(x, "animateTransform", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDesc(value: org.scalajs.dom.raw.SVGDescElement): Self = StObject.set(x, "desc", value.asInstanceOf[js.Any])
+    def setCircle(value: org.scalajs.dom.SVGCircleElement): Self = StObject.set(x, "circle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEllipse(value: org.scalajs.dom.raw.SVGEllipseElement): Self = StObject.set(x, "ellipse", value.asInstanceOf[js.Any])
+    def setClipPath(value: org.scalajs.dom.SVGClipPathElement): Self = StObject.set(x, "clipPath", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeBlend(value: org.scalajs.dom.raw.SVGFEBlendElement): Self = StObject.set(x, "feBlend", value.asInstanceOf[js.Any])
+    def setDefs(value: org.scalajs.dom.SVGDefsElement): Self = StObject.set(x, "defs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeColorMatrix(value: org.scalajs.dom.raw.SVGFEColorMatrixElement): Self = StObject.set(x, "feColorMatrix", value.asInstanceOf[js.Any])
+    def setDesc(value: org.scalajs.dom.SVGDescElement): Self = StObject.set(x, "desc", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeComponentTransfer(value: org.scalajs.dom.raw.SVGFEComponentTransferElement): Self = StObject.set(x, "feComponentTransfer", value.asInstanceOf[js.Any])
+    def setEllipse(value: org.scalajs.dom.SVGEllipseElement): Self = StObject.set(x, "ellipse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeComposite(value: org.scalajs.dom.raw.SVGFECompositeElement): Self = StObject.set(x, "feComposite", value.asInstanceOf[js.Any])
+    def setFeBlend(value: org.scalajs.dom.SVGFEBlendElement): Self = StObject.set(x, "feBlend", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeConvolveMatrix(value: org.scalajs.dom.raw.SVGFEConvolveMatrixElement): Self = StObject.set(x, "feConvolveMatrix", value.asInstanceOf[js.Any])
+    def setFeColorMatrix(value: org.scalajs.dom.SVGFEColorMatrixElement): Self = StObject.set(x, "feColorMatrix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeDiffuseLighting(value: org.scalajs.dom.raw.SVGFEDiffuseLightingElement): Self = StObject.set(x, "feDiffuseLighting", value.asInstanceOf[js.Any])
+    def setFeComponentTransfer(value: org.scalajs.dom.SVGFEComponentTransferElement): Self = StObject.set(x, "feComponentTransfer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeDisplacementMap(value: org.scalajs.dom.raw.SVGFEDisplacementMapElement): Self = StObject.set(x, "feDisplacementMap", value.asInstanceOf[js.Any])
+    def setFeComposite(value: org.scalajs.dom.SVGFECompositeElement): Self = StObject.set(x, "feComposite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeDistantLight(value: org.scalajs.dom.raw.SVGFEDistantLightElement): Self = StObject.set(x, "feDistantLight", value.asInstanceOf[js.Any])
+    def setFeConvolveMatrix(value: org.scalajs.dom.SVGFEConvolveMatrixElement): Self = StObject.set(x, "feConvolveMatrix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeFlood(value: org.scalajs.dom.raw.SVGFEFloodElement): Self = StObject.set(x, "feFlood", value.asInstanceOf[js.Any])
+    def setFeDiffuseLighting(value: org.scalajs.dom.SVGFEDiffuseLightingElement): Self = StObject.set(x, "feDiffuseLighting", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeFuncA(value: org.scalajs.dom.raw.SVGFEFuncAElement): Self = StObject.set(x, "feFuncA", value.asInstanceOf[js.Any])
+    def setFeDisplacementMap(value: org.scalajs.dom.SVGFEDisplacementMapElement): Self = StObject.set(x, "feDisplacementMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeFuncB(value: org.scalajs.dom.raw.SVGFEFuncBElement): Self = StObject.set(x, "feFuncB", value.asInstanceOf[js.Any])
+    def setFeDistantLight(value: org.scalajs.dom.SVGFEDistantLightElement): Self = StObject.set(x, "feDistantLight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeFuncG(value: org.scalajs.dom.raw.SVGFEFuncGElement): Self = StObject.set(x, "feFuncG", value.asInstanceOf[js.Any])
+    def setFeDropShadow(value: SVGFEDropShadowElement): Self = StObject.set(x, "feDropShadow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeFuncR(value: org.scalajs.dom.raw.SVGFEFuncRElement): Self = StObject.set(x, "feFuncR", value.asInstanceOf[js.Any])
+    def setFeFlood(value: org.scalajs.dom.SVGFEFloodElement): Self = StObject.set(x, "feFlood", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeGaussianBlur(value: org.scalajs.dom.raw.SVGFEGaussianBlurElement): Self = StObject.set(x, "feGaussianBlur", value.asInstanceOf[js.Any])
+    def setFeFuncA(value: org.scalajs.dom.SVGFEFuncAElement): Self = StObject.set(x, "feFuncA", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeImage(value: org.scalajs.dom.raw.SVGFEImageElement): Self = StObject.set(x, "feImage", value.asInstanceOf[js.Any])
+    def setFeFuncB(value: org.scalajs.dom.SVGFEFuncBElement): Self = StObject.set(x, "feFuncB", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeMerge(value: org.scalajs.dom.raw.SVGFEMergeElement): Self = StObject.set(x, "feMerge", value.asInstanceOf[js.Any])
+    def setFeFuncG(value: org.scalajs.dom.SVGFEFuncGElement): Self = StObject.set(x, "feFuncG", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeMergeNode(value: org.scalajs.dom.raw.SVGFEMergeNodeElement): Self = StObject.set(x, "feMergeNode", value.asInstanceOf[js.Any])
+    def setFeFuncR(value: org.scalajs.dom.SVGFEFuncRElement): Self = StObject.set(x, "feFuncR", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeMorphology(value: org.scalajs.dom.raw.SVGFEMorphologyElement): Self = StObject.set(x, "feMorphology", value.asInstanceOf[js.Any])
+    def setFeGaussianBlur(value: org.scalajs.dom.SVGFEGaussianBlurElement): Self = StObject.set(x, "feGaussianBlur", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeOffset(value: org.scalajs.dom.raw.SVGFEOffsetElement): Self = StObject.set(x, "feOffset", value.asInstanceOf[js.Any])
+    def setFeImage(value: org.scalajs.dom.SVGFEImageElement): Self = StObject.set(x, "feImage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFePointLight(value: org.scalajs.dom.raw.SVGFEPointLightElement): Self = StObject.set(x, "fePointLight", value.asInstanceOf[js.Any])
+    def setFeMerge(value: org.scalajs.dom.SVGFEMergeElement): Self = StObject.set(x, "feMerge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeSpecularLighting(value: org.scalajs.dom.raw.SVGFESpecularLightingElement): Self = StObject.set(x, "feSpecularLighting", value.asInstanceOf[js.Any])
+    def setFeMergeNode(value: org.scalajs.dom.SVGFEMergeNodeElement): Self = StObject.set(x, "feMergeNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeSpotLight(value: org.scalajs.dom.raw.SVGFESpotLightElement): Self = StObject.set(x, "feSpotLight", value.asInstanceOf[js.Any])
+    def setFeMorphology(value: org.scalajs.dom.SVGFEMorphologyElement): Self = StObject.set(x, "feMorphology", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeTile(value: org.scalajs.dom.raw.SVGFETileElement): Self = StObject.set(x, "feTile", value.asInstanceOf[js.Any])
+    def setFeOffset(value: org.scalajs.dom.SVGFEOffsetElement): Self = StObject.set(x, "feOffset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFeTurbulence(value: org.scalajs.dom.raw.SVGFETurbulenceElement): Self = StObject.set(x, "feTurbulence", value.asInstanceOf[js.Any])
+    def setFePointLight(value: org.scalajs.dom.SVGFEPointLightElement): Self = StObject.set(x, "fePointLight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilter(value: org.scalajs.dom.raw.SVGFilterElement): Self = StObject.set(x, "filter", value.asInstanceOf[js.Any])
+    def setFeSpecularLighting(value: org.scalajs.dom.SVGFESpecularLightingElement): Self = StObject.set(x, "feSpecularLighting", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFeSpotLight(value: org.scalajs.dom.SVGFESpotLightElement): Self = StObject.set(x, "feSpotLight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFeTile(value: org.scalajs.dom.SVGFETileElement): Self = StObject.set(x, "feTile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFeTurbulence(value: org.scalajs.dom.SVGFETurbulenceElement): Self = StObject.set(x, "feTurbulence", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFilter(value: org.scalajs.dom.SVGFilterElement): Self = StObject.set(x, "filter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setForeignObject(value: SVGForeignObjectElement): Self = StObject.set(x, "foreignObject", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setG(value: org.scalajs.dom.raw.SVGGElement): Self = StObject.set(x, "g", value.asInstanceOf[js.Any])
+    def setG(value: org.scalajs.dom.SVGGElement): Self = StObject.set(x, "g", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setImage(value: org.scalajs.dom.raw.SVGImageElement): Self = StObject.set(x, "image", value.asInstanceOf[js.Any])
+    def setImage(value: org.scalajs.dom.SVGImageElement): Self = StObject.set(x, "image", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLine(value: org.scalajs.dom.raw.SVGLineElement): Self = StObject.set(x, "line", value.asInstanceOf[js.Any])
+    def setLine(value: org.scalajs.dom.SVGLineElement): Self = StObject.set(x, "line", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLinearGradient(value: org.scalajs.dom.raw.SVGLinearGradientElement): Self = StObject.set(x, "linearGradient", value.asInstanceOf[js.Any])
+    def setLinearGradient(value: org.scalajs.dom.SVGLinearGradientElement): Self = StObject.set(x, "linearGradient", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarker(value: org.scalajs.dom.raw.SVGMarkerElement): Self = StObject.set(x, "marker", value.asInstanceOf[js.Any])
+    def setMarker(value: org.scalajs.dom.SVGMarkerElement): Self = StObject.set(x, "marker", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMask(value: org.scalajs.dom.raw.SVGMaskElement): Self = StObject.set(x, "mask", value.asInstanceOf[js.Any])
+    def setMask(value: org.scalajs.dom.SVGMaskElement): Self = StObject.set(x, "mask", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMetadata(value: org.scalajs.dom.raw.SVGMetadataElement): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
+    def setMetadata(value: org.scalajs.dom.SVGMetadataElement): Self = StObject.set(x, "metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPath(value: org.scalajs.dom.raw.SVGPathElement): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
+    def setMpath(value: SVGMPathElement): Self = StObject.set(x, "mpath", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPattern(value: org.scalajs.dom.raw.SVGPatternElement): Self = StObject.set(x, "pattern", value.asInstanceOf[js.Any])
+    def setPath(value: org.scalajs.dom.SVGPathElement): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPolygon(value: org.scalajs.dom.raw.SVGPolygonElement): Self = StObject.set(x, "polygon", value.asInstanceOf[js.Any])
+    def setPattern(value: org.scalajs.dom.SVGPatternElement): Self = StObject.set(x, "pattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPolyline(value: org.scalajs.dom.raw.SVGPolylineElement): Self = StObject.set(x, "polyline", value.asInstanceOf[js.Any])
+    def setPolygon(value: org.scalajs.dom.SVGPolygonElement): Self = StObject.set(x, "polygon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRadialGradient(value: org.scalajs.dom.raw.SVGRadialGradientElement): Self = StObject.set(x, "radialGradient", value.asInstanceOf[js.Any])
+    def setPolyline(value: org.scalajs.dom.SVGPolylineElement): Self = StObject.set(x, "polyline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRect(value: org.scalajs.dom.raw.SVGRectElement): Self = StObject.set(x, "rect", value.asInstanceOf[js.Any])
+    def setRadialGradient(value: org.scalajs.dom.SVGRadialGradientElement): Self = StObject.set(x, "radialGradient", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScript(value: org.scalajs.dom.raw.SVGScriptElement): Self = StObject.set(x, "script", value.asInstanceOf[js.Any])
+    def setRect(value: org.scalajs.dom.SVGRectElement): Self = StObject.set(x, "rect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStop(value: org.scalajs.dom.raw.SVGStopElement): Self = StObject.set(x, "stop", value.asInstanceOf[js.Any])
+    def setScript(value: org.scalajs.dom.SVGScriptElement): Self = StObject.set(x, "script", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStyle(value: org.scalajs.dom.raw.SVGStyleElement): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    def setSet(value: SVGSetElement): Self = StObject.set(x, "set", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSvg(value: org.scalajs.dom.raw.SVGSVGElement): Self = StObject.set(x, "svg", value.asInstanceOf[js.Any])
+    def setStop(value: org.scalajs.dom.SVGStopElement): Self = StObject.set(x, "stop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSwitch(value: org.scalajs.dom.raw.SVGSwitchElement): Self = StObject.set(x, "switch", value.asInstanceOf[js.Any])
+    def setStyle(value: org.scalajs.dom.SVGStyleElement): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSymbol(value: org.scalajs.dom.raw.SVGSymbolElement): Self = StObject.set(x, "symbol", value.asInstanceOf[js.Any])
+    def setSvg(value: org.scalajs.dom.SVGSVGElement): Self = StObject.set(x, "svg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setText(value: org.scalajs.dom.raw.SVGTextElement): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
+    def setSwitch(value: org.scalajs.dom.SVGSwitchElement): Self = StObject.set(x, "switch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTextPath(value: org.scalajs.dom.raw.SVGTextPathElement): Self = StObject.set(x, "textPath", value.asInstanceOf[js.Any])
+    def setSymbol(value: org.scalajs.dom.SVGSymbolElement): Self = StObject.set(x, "symbol", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTitle(value: org.scalajs.dom.raw.SVGTitleElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
+    def setText(value: org.scalajs.dom.SVGTextElement): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTspan(value: org.scalajs.dom.raw.SVGTSpanElement): Self = StObject.set(x, "tspan", value.asInstanceOf[js.Any])
+    def setTextPath(value: org.scalajs.dom.SVGTextPathElement): Self = StObject.set(x, "textPath", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUse(value: org.scalajs.dom.raw.SVGUseElement): Self = StObject.set(x, "use", value.asInstanceOf[js.Any])
+    def setTitle(value: org.scalajs.dom.SVGTitleElement): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setView(value: org.scalajs.dom.raw.SVGViewElement): Self = StObject.set(x, "view", value.asInstanceOf[js.Any])
+    def setTspan(value: org.scalajs.dom.SVGTSpanElement): Self = StObject.set(x, "tspan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUse(value: org.scalajs.dom.SVGUseElement): Self = StObject.set(x, "use", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setView(value: org.scalajs.dom.SVGViewElement): Self = StObject.set(x, "view", value.asInstanceOf[js.Any])
   }
 }

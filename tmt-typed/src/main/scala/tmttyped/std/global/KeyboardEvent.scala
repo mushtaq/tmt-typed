@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.KeyboardEventInit
+import org.scalajs.dom.KeyboardEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,23 +12,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class KeyboardEvent protected ()
   extends StObject
      with tmttyped.std.KeyboardEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: KeyboardEventInit) = this()
 }
 object KeyboardEvent {
   
+  /* standard DOM */
   @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_LEFT")
   @js.native
   val DOM_KEY_LOCATION_LEFT: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_NUMPAD")
   @js.native
   val DOM_KEY_LOCATION_NUMPAD: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_RIGHT")
   @js.native
   val DOM_KEY_LOCATION_RIGHT: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("KeyboardEvent.DOM_KEY_LOCATION_STANDARD")
   @js.native
   val DOM_KEY_LOCATION_STANDARD: Double = js.native

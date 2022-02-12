@@ -12,40 +12,58 @@ trait SVGFEBlendElement
      with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_COLOR: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_COLOR_BURN: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_COLOR_DODGE: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_DARKEN: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_DIFFERENCE: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_EXCLUSION: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_HARD_LIGHT: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_HUE: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_LIGHTEN: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_LUMINOSITY: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_MULTIPLY: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_NORMAL: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_OVERLAY: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_SATURATION: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_SCREEN: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_SOFT_LIGHT: Double = js.native
   
+  /* standard DOM */
   val SVG_FEBLEND_MODE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -57,19 +75,23 @@ trait SVGFEBlendElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val in1: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val in1: org.scalajs.dom.SVGAnimatedString = js.native
   
-  val in2: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val in2: org.scalajs.dom.SVGAnimatedString = js.native
   
-  val mode: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val mode: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

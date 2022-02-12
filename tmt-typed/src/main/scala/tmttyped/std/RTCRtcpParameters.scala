@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCRtcpParameters extends StObject {
   
+  /* standard DOM */
   var cname: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var reducedSize: js.UndefOr[scala.Boolean] = js.undefined
 }
 object RTCRtcpParameters {

@@ -9,8 +9,10 @@ trait ConstrainULongRange
   extends StObject
      with ULongRange {
   
+  /* standard DOM */
   var exact: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var ideal: js.UndefOr[Double] = js.undefined
 }
 object ConstrainULongRange {

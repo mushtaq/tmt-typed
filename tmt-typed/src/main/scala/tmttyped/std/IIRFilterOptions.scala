@@ -9,8 +9,10 @@ trait IIRFilterOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var feedback: js.Array[Double]
   
+  /* standard DOM */
   var feedforward: js.Array[Double]
 }
 object IIRFilterOptions {

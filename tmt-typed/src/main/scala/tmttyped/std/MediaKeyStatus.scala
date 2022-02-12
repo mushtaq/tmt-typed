@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - tmttyped.std.stdStrings.released
   - tmttyped.std.stdStrings.`status-pending`
   - tmttyped.std.stdStrings.usable
+  - tmttyped.std.stdStrings.`usable-in-future`
 */
 trait MediaKeyStatus extends StObject
 object MediaKeyStatus {
@@ -37,4 +38,7 @@ object MediaKeyStatus {
   
   @scala.inline
   def usable: tmttyped.std.stdStrings.usable = "usable".asInstanceOf[tmttyped.std.stdStrings.usable]
+  
+  @scala.inline
+  def `usable-in-future`: tmttyped.std.stdStrings.`usable-in-future` = "usable-in-future".asInstanceOf[tmttyped.std.stdStrings.`usable-in-future`]
 }

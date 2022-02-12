@@ -31,8 +31,8 @@ trait Http2Stream extends StObject {
     */
   val aborted: Boolean = js.native
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_aborted(event: tmttyped.node.nodeStrings.aborted, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -76,7 +76,7 @@ trait Http2Stream extends StObject {
     * Closes the `Http2Stream` instance by sending an `RST_STREAM` frame to the
     * connected HTTP/2 peer.
     * @since v8.4.0
-    * @param code Unsigned 32-bit integer identifying the error code.
+    * @param [code=http2.constants.NGHTTP2_NO_ERROR] Unsigned 32-bit integer identifying the error code.
     * @param callback An optional function registered to listen for the `'close'` event.
     */
   def close(): Unit = js.native
@@ -97,8 +97,8 @@ trait Http2Stream extends StObject {
     */
   val destroyed: Boolean = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_aborted(event: tmttyped.node.nodeStrings.aborted): Boolean = js.native
   @JSName("emit")
@@ -144,8 +144,8 @@ trait Http2Stream extends StObject {
     */
   val id: js.UndefOr[Double] = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_aborted(event: tmttyped.node.nodeStrings.aborted, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -178,8 +178,8 @@ trait Http2Stream extends StObject {
   @JSName("on")
   def on_wantTrailers(event: wantTrailers, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_aborted(event: tmttyped.node.nodeStrings.aborted, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -219,8 +219,8 @@ trait Http2Stream extends StObject {
     */
   val pending: Boolean = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_aborted(event: tmttyped.node.nodeStrings.aborted, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -253,8 +253,8 @@ trait Http2Stream extends StObject {
   @JSName("prependListener")
   def prependListener_wantTrailers(event: wantTrailers, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_aborted(event: tmttyped.node.nodeStrings.aborted, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")

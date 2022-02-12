@@ -7,18 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaKeySystemConfiguration extends StObject {
   
+  /* standard DOM */
   var audioCapabilities: js.UndefOr[js.Array[MediaKeySystemMediaCapability]] = js.undefined
   
+  /* standard DOM */
   var distinctiveIdentifier: js.UndefOr[MediaKeysRequirement] = js.undefined
   
+  /* standard DOM */
   var initDataTypes: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var label: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var persistentState: js.UndefOr[MediaKeysRequirement] = js.undefined
   
+  /* standard DOM */
   var sessionTypes: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var videoCapabilities: js.UndefOr[js.Array[MediaKeySystemMediaCapability]] = js.undefined
 }
 object MediaKeySystemConfiguration {

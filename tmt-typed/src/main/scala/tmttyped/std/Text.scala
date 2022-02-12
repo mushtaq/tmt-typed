@@ -12,13 +12,11 @@ trait Text
      with CharacterData
      with Slottable {
   
-  /**
-    * Splits data at the given offset and returns the remainder as Text node.
-    */
-  def splitText(offset: Double): org.scalajs.dom.raw.Text = js.native
+  /** Splits data at the given offset and returns the remainder as Text node. */
+  /* standard DOM */
+  def splitText(offset: Double): org.scalajs.dom.Text = js.native
   
-  /**
-    * Returns the combined data of all direct Text node siblings.
-    */
+  /** Returns the combined data of all direct Text node siblings. */
+  /* standard DOM */
   val wholeText: java.lang.String = js.native
 }

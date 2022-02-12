@@ -1,12 +1,12 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.ReferrerPolicy
-import org.scalajs.dom.experimental.RequestCache
-import org.scalajs.dom.experimental.RequestCredentials
-import org.scalajs.dom.experimental.RequestDestination
-import org.scalajs.dom.experimental.RequestInit
-import org.scalajs.dom.experimental.RequestMode
-import org.scalajs.dom.experimental.RequestRedirect
+import org.scalajs.dom.ReferrerPolicy
+import org.scalajs.dom.RequestCache
+import org.scalajs.dom.RequestCredentials
+import org.scalajs.dom.RequestDestination
+import org.scalajs.dom.RequestInit
+import org.scalajs.dom.RequestMode
+import org.scalajs.dom.RequestRedirect
 import tmttyped.std.RequestInfo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -19,117 +19,100 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Request protected ()
   extends StObject
      with tmttyped.std.Request {
+  /* standard DOM */
   def this(input: RequestInfo) = this()
   def this(input: RequestInfo, init: RequestInit) = this()
   
+  /* standard DOM */
   /* CompleteClass */
   override def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def blob(): js.Promise[org.scalajs.dom.raw.Blob] = js.native
+  override def blob(): js.Promise[org.scalajs.dom.Blob] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val body: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | Null = js.native
+  override val body: org.scalajs.dom.ReadableStream[js.typedarray.Uint8Array] | Null = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val bodyUsed: scala.Boolean = js.native
   
-  /**
-    * Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching.
-    */
+  /** Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching. */
+  /* standard DOM */
   /* CompleteClass */
   override val cache: RequestCache = js.native
   
-  /**
-    * Returns the credentials mode associated with request, which is a string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL.
-    */
+  /** Returns the credentials mode associated with request, which is a string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. */
+  /* standard DOM */
   /* CompleteClass */
   override val credentials: RequestCredentials = js.native
   
-  /**
-    * Returns the kind of resource requested by request, e.g., "document" or "script".
-    */
+  /** Returns the kind of resource requested by request, e.g., "document" or "script". */
+  /* standard DOM */
   /* CompleteClass */
   override val destination: RequestDestination = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def formData(): js.Promise[org.scalajs.dom.raw.FormData] = js.native
+  override def formData(): js.Promise[org.scalajs.dom.FormData] = js.native
   
-  /**
-    * Returns a Headers object consisting of the headers associated with request. Note that headers added in the network layer by the user agent will not be accounted for in this object, e.g., the "Host" header.
-    */
+  /** Returns a Headers object consisting of the headers associated with request. Note that headers added in the network layer by the user agent will not be accounted for in this object, e.g., the "Host" header. */
+  /* standard DOM */
   /* CompleteClass */
-  override val headers: org.scalajs.dom.experimental.Headers = js.native
+  override val headers: org.scalajs.dom.Headers = js.native
   
-  /**
-    * Returns request's subresource integrity metadata, which is a cryptographic hash of the resource being fetched. Its value consists of multiple hashes separated by whitespace. [SRI]
-    */
+  /** Returns request's subresource integrity metadata, which is a cryptographic hash of the resource being fetched. Its value consists of multiple hashes separated by whitespace. [SRI] */
+  /* standard DOM */
   /* CompleteClass */
   override val integrity: java.lang.String = js.native
   
-  /**
-    * Returns a boolean indicating whether or not request is for a history navigation (a.k.a. back-foward navigation).
-    */
+  /* standard DOM */
   /* CompleteClass */
-  override val isHistoryNavigation: scala.Boolean = js.native
+  override def json(): js.Promise[Any] = js.native
   
-  /**
-    * Returns a boolean indicating whether or not request is for a reload navigation.
-    */
-  /* CompleteClass */
-  override val isReloadNavigation: scala.Boolean = js.native
-  
-  /* CompleteClass */
-  override def json(): js.Promise[js.Any] = js.native
-  
-  /**
-    * Returns a boolean indicating whether or not request can outlive the global in which it was created.
-    */
+  /** Returns a boolean indicating whether or not request can outlive the global in which it was created. */
+  /* standard DOM */
   /* CompleteClass */
   override val keepalive: scala.Boolean = js.native
   
-  /**
-    * Returns request's HTTP method, which is "GET" by default.
-    */
+  /** Returns request's HTTP method, which is "GET" by default. */
+  /* standard DOM */
   /* CompleteClass */
   override val method: java.lang.String = js.native
   
-  /**
-    * Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs.
-    */
+  /** Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs. */
+  /* standard DOM */
   /* CompleteClass */
   override val mode: RequestMode = js.native
   
-  /**
-    * Returns the redirect mode associated with request, which is a string indicating how redirects for the request will be handled during fetching. A request will follow redirects by default.
-    */
+  /** Returns the redirect mode associated with request, which is a string indicating how redirects for the request will be handled during fetching. A request will follow redirects by default. */
+  /* standard DOM */
   /* CompleteClass */
   override val redirect: RequestRedirect = js.native
   
-  /**
-    * Returns the referrer of request. Its value can be a same-origin URL if explicitly set in init, the empty string to indicate no referrer, and "about:client" when defaulting to the global's default. This is used during fetching to determine the value of the `Referer` header of the request being made.
-    */
+  /** Returns the referrer of request. Its value can be a same-origin URL if explicitly set in init, the empty string to indicate no referrer, and "about:client" when defaulting to the global's default. This is used during fetching to determine the value of the `Referer` header of the request being made. */
+  /* standard DOM */
   /* CompleteClass */
   override val referrer: java.lang.String = js.native
   
-  /**
-    * Returns the referrer policy associated with request. This is used during fetching to compute the value of the request's referrer.
-    */
+  /** Returns the referrer policy associated with request. This is used during fetching to compute the value of the request's referrer. */
+  /* standard DOM */
   /* CompleteClass */
   override val referrerPolicy: ReferrerPolicy = js.native
   
-  /**
-    * Returns the signal associated with request, which is an AbortSignal object indicating whether or not request has been aborted, and its abort event handler.
-    */
+  /** Returns the signal associated with request, which is an AbortSignal object indicating whether or not request has been aborted, and its abort event handler. */
+  /* standard DOM */
   /* CompleteClass */
-  override val signal: org.scalajs.dom.experimental.AbortSignal = js.native
+  override val signal: org.scalajs.dom.AbortSignal = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def text(): js.Promise[java.lang.String] = js.native
   
-  /**
-    * Returns the URL of request as a string.
-    */
+  /** Returns the URL of request as a string. */
+  /* standard DOM */
   /* CompleteClass */
   override val url: java.lang.String = js.native
 }

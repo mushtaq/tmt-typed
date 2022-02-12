@@ -9,7 +9,8 @@ trait TrackEventInit
   extends StObject
      with EventInit {
   
-  var track: js.UndefOr[org.scalajs.dom.raw.TextTrack | Null] = js.undefined
+  /* standard DOM */
+  var track: js.UndefOr[org.scalajs.dom.TextTrack | Null] = js.undefined
 }
 object TrackEventInit {
   
@@ -23,7 +24,7 @@ object TrackEventInit {
   implicit class TrackEventInitMutableBuilder[Self <: TrackEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setTrack(value: org.scalajs.dom.raw.TextTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
+    def setTrack(value: org.scalajs.dom.TextTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTrackNull: Self = StObject.set(x, "track", null)

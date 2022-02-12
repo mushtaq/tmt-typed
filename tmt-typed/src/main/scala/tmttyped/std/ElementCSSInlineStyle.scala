@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ElementCSSInlineStyle extends StObject {
   
-  val style: org.scalajs.dom.raw.CSSStyleDeclaration
+  /* standard DOM */
+  val style: org.scalajs.dom.CSSStyleDeclaration
 }
 object ElementCSSInlineStyle {
   
   @scala.inline
-  def apply(style: org.scalajs.dom.raw.CSSStyleDeclaration): ElementCSSInlineStyle = {
+  def apply(style: org.scalajs.dom.CSSStyleDeclaration): ElementCSSInlineStyle = {
     val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementCSSInlineStyle]
   }
@@ -21,6 +22,6 @@ object ElementCSSInlineStyle {
   implicit class ElementCSSInlineStyleMutableBuilder[Self <: ElementCSSInlineStyle] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setStyle(value: org.scalajs.dom.raw.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

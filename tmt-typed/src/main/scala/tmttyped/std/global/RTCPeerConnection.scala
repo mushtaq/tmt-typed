@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.webrtc.RTCConfiguration
+import org.scalajs.dom.RTCConfiguration
 import tmttyped.std.AlgorithmIdentifier
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("RTCPeerConnection")
 @js.native
+/* standard DOM */
 class RTCPeerConnection ()
   extends StObject
      with tmttyped.std.RTCPeerConnection {
@@ -21,6 +22,7 @@ object RTCPeerConnection {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard DOM */
   @scala.inline
   def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[tmttyped.std.RTCCertificate] = ^.asInstanceOf[js.Dynamic].applyDynamic("generateCertificate")(keygenAlgorithm.asInstanceOf[js.Any]).asInstanceOf[js.Promise[tmttyped.std.RTCCertificate]]
 }

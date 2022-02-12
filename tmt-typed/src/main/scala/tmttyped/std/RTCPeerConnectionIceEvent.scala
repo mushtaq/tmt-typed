@@ -11,5 +11,6 @@ trait RTCPeerConnectionIceEvent
   extends StObject
      with Event {
   
-  val candidate: org.scalajs.dom.experimental.webrtc.RTCIceCandidate | Null = js.native
+  /* standard DOM */
+  val candidate: org.scalajs.dom.RTCIceCandidate | Null = js.native
 }

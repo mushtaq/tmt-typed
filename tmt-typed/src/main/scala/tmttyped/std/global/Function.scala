@@ -15,6 +15,7 @@ class Function protected ()
     * Creates a new function.
     * @param args A list of arguments the function accepts.
     */
+  /* standard es5 */
   def this(args: java.lang.String*) = this()
 }
 object Function {

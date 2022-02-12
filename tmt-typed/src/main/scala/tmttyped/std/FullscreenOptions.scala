@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait FullscreenOptions extends StObject {
   
+  /* standard DOM */
   var navigationUI: js.UndefOr[FullscreenNavigationUI] = js.undefined
 }
 object FullscreenOptions {

@@ -10,24 +10,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMImplementation extends StObject {
   
+  /* standard DOM */
   def createDocument(): XMLDocument = js.native
   def createDocument(namespace: java.lang.String): XMLDocument = js.native
   def createDocument(namespace: java.lang.String, qualifiedName: java.lang.String): XMLDocument = js.native
   def createDocument(
     namespace: java.lang.String,
     qualifiedName: java.lang.String,
-    doctype: org.scalajs.dom.raw.DocumentType
+    doctype: org.scalajs.dom.DocumentType
   ): XMLDocument = js.native
-  def createDocument(namespace: java.lang.String, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
+  def createDocument(namespace: java.lang.String, qualifiedName: Null, doctype: org.scalajs.dom.DocumentType): XMLDocument = js.native
   def createDocument(namespace: Null, qualifiedName: java.lang.String): XMLDocument = js.native
-  def createDocument(namespace: Null, qualifiedName: java.lang.String, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
-  def createDocument(namespace: Null, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
+  def createDocument(namespace: Null, qualifiedName: java.lang.String, doctype: org.scalajs.dom.DocumentType): XMLDocument = js.native
+  def createDocument(namespace: Null, qualifiedName: Null, doctype: org.scalajs.dom.DocumentType): XMLDocument = js.native
   
-  def createDocumentType(qualifiedName: java.lang.String, publicId: java.lang.String, systemId: java.lang.String): org.scalajs.dom.raw.DocumentType = js.native
+  /* standard DOM */
+  def createDocumentType(qualifiedName: java.lang.String, publicId: java.lang.String, systemId: java.lang.String): org.scalajs.dom.DocumentType = js.native
   
-  def createHTMLDocument(): org.scalajs.dom.raw.Document = js.native
-  def createHTMLDocument(title: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  /* standard DOM */
+  def createHTMLDocument(): org.scalajs.dom.Document = js.native
+  def createHTMLDocument(title: java.lang.String): org.scalajs.dom.Document = js.native
   
   /** @deprecated */
-  def hasFeature(args: js.Any*): `true` = js.native
+  /* standard DOM */
+  def hasFeature(args: Any*): `true` = js.native
 }

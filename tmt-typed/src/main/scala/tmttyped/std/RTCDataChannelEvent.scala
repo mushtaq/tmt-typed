@@ -10,5 +10,6 @@ trait RTCDataChannelEvent
   extends StObject
      with Event {
   
-  val channel: org.scalajs.dom.experimental.webrtc.RTCDataChannel = js.native
+  /* standard DOM */
+  val channel: org.scalajs.dom.RTCDataChannel = js.native
 }

@@ -1,14 +1,13 @@
 package tmttyped.node.cryptoMod
 
 import tmttyped.node.bufferMod.global.Buffer
+import tmttyped.node.streamMod.TransformOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Transform>`
-  *
   * The `Hash` class is a utility for creating hash digests of data. It can be
   * used in one of two ways:
   *
@@ -23,30 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * ```js
   * const {
-  *   createHash,
+  *   createHash
   * } = await import('crypto');
-  *
-  * const hash = createHash('sha256');
-  *
-  * hash.on('readable', () => {
-  *   // Only one element is going to be produced by the
-  *   // hash stream.
-  *   const data = hash.read();
-  *   if (data) {
-  *     console.log(data.toString('hex'));
-  *     // Prints:
-  *     //   6a2da20943931e9834fc12cfe5bb47bbd9ae43489a30726962b576f4e3993e50
-  *   }
-  * });
-  *
-  * hash.write('some data to hash');
-  * hash.end();
-  * ```
-  *
-  * ```js
-  * const {
-  *   createHash,
-  * } = require('crypto');
   *
   * const hash = createHash('sha256');
   *
@@ -69,50 +46,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * ```js
   * import { createReadStream } from 'fs';
-  *
-  * const {
-  *   createHash,
-  * } = await import('crypto');
-  * const hash = createHash('sha256');
-  *
-  * const input = createReadStream('test.js');
-  * input.pipe(hash).setEncoding('hex').pipe(process.stdout);
-  * ```
-  *
-  * ```js
-  * const {
-  *   createReadStream,
-  * } = require('fs');
-  *
-  * const {
-  *   createHash,
-  * } = require('crypto');
+  * import { stdout } from 'process';
+  * const { createHash } = await import('crypto');
   *
   * const hash = createHash('sha256');
   *
   * const input = createReadStream('test.js');
-  * input.pipe(hash).setEncoding('hex').pipe(process.stdout);
+  * input.pipe(hash).setEncoding('hex').pipe(stdout);
   * ```
   *
   * Example: Using the `hash.update()` and `hash.digest()` methods:
   *
   * ```js
   * const {
-  *   createHash,
+  *   createHash
   * } = await import('crypto');
-  *
-  * const hash = createHash('sha256');
-  *
-  * hash.update('some data to hash');
-  * console.log(hash.digest('hex'));
-  * // Prints:
-  * //   6a2da20943931e9834fc12cfe5bb47bbd9ae43489a30726962b576f4e3993e50
-  * ```
-  *
-  * ```js
-  * const {
-  *   createHash,
-  * } = require('crypto');
   *
   * const hash = createHash('sha256');
   *
@@ -125,7 +73,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Hash")
 @js.native
-class Hash protected () extends StObject {
+/* private */ class Hash () extends StObject {
   
   /**
     * Creates a new `Hash` object that contains a deep copy of the internal state
@@ -141,28 +89,8 @@ class Hash protected () extends StObject {
     * ```js
     * // Calculate a rolling hash.
     * const {
-    *   createHash,
+    *   createHash
     * } = await import('crypto');
-    *
-    * const hash = createHash('sha256');
-    *
-    * hash.update('one');
-    * console.log(hash.copy().digest('hex'));
-    *
-    * hash.update('two');
-    * console.log(hash.copy().digest('hex'));
-    *
-    * hash.update('three');
-    * console.log(hash.copy().digest('hex'));
-    *
-    * // Etc.
-    * ```
-    *
-    * ```js
-    * // Calculate a rolling hash.
-    * const {
-    *   createHash,
-    * } = require('crypto');
     *
     * const hash = createHash('sha256');
     *
@@ -181,6 +109,7 @@ class Hash protected () extends StObject {
     * @param options `stream.transform` options
     */
   def copy(): Hash = js.native
+  def copy(options: TransformOptions): Hash = js.native
   
   /**
     * Calculates the digest of all of the data passed to be hashed (using the `hash.update()` method).
@@ -195,7 +124,7 @@ class Hash protected () extends StObject {
   def digest(): Buffer = js.native
   def digest(encoding: BinaryToTextEncoding): String = js.native
   
-  def update(data: String, input_encoding: Encoding): Hash = js.native
+  def update(data: String, inputEncoding: Encoding): Hash = js.native
   /**
     * Updates the hash content with the given `data`, the encoding of which
     * is given in `inputEncoding`.

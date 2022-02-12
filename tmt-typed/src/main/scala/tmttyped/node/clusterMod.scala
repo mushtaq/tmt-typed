@@ -2,10 +2,11 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.Shortcut
 import tmttyped.node.NodeJS.Dict
-import tmttyped.node.childProcessMod.ChildProcess
+import tmttyped.node.childProcessMod.MessageOptions
 import tmttyped.node.childProcessMod.SendHandle
 import tmttyped.node.childProcessMod.Serializable
 import tmttyped.node.eventsMod.EventEmitterOptions
+import tmttyped.node.nodeChildProcessMod.ChildProcess
 import tmttyped.node.nodeNetMod.Server
 import tmttyped.node.nodeNetMod.Socket
 import tmttyped.node.nodeStrings.disconnect
@@ -43,23 +44,23 @@ object clusterMod extends Shortcut {
       *   5. message
       *   6. online
       */
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_disconnect(event: disconnect, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ java.lang.String, Unit]): this.type = js.native
+    def addListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ String, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_listening(event: listening, listener: js.Function1[/* address */ Address, Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_message(event: message, listener: js.Function2[/* message */ js.Any, /* handle */ Socket | Server, Unit]): this.type = js.native
+    def addListener_message(event: message, listener: js.Function2[/* message */ Any, /* handle */ Socket | Server, Unit]): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("addListener")
     def addListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
     def destroy(): Unit = js.native
-    def destroy(signal: java.lang.String): Unit = js.native
+    def destroy(signal: String): Unit = js.native
     
     /**
       * In a worker, this function will close all servers, wait for the `'close'` event
@@ -124,20 +125,20 @@ object clusterMod extends Shortcut {
       */
     def disconnect(): Unit = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_disconnect(event: disconnect): Boolean = js.native
     @JSName("emit")
     def emit_error(event: error, error: js.Error): Boolean = js.native
     @JSName("emit")
-    def emit_exit(event: exit, code: Double, signal: java.lang.String): Boolean = js.native
+    def emit_exit(event: exit, code: Double, signal: String): Boolean = js.native
     @JSName("emit")
     def emit_listening(event: listening, address: Address): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, message: js.Any, handle: Server): Boolean = js.native
+    def emit_message(event: message, message: Any, handle: Server): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, message: js.Any, handle: Socket): Boolean = js.native
+    def emit_message(event: message, message: Any, handle: Socket): Boolean = js.native
     @JSName("emit")
     def emit_online(event: online): Boolean = js.native
     
@@ -184,9 +185,12 @@ object clusterMod extends Shortcut {
       * because of exiting or being signaled). Otherwise, it returns `false`.
       *
       * ```js
-      * const cluster = require('cluster');
-      * const http = require('http');
-      * const numCPUs = require('os').cpus().length;
+      * import cluster from 'cluster';
+      * import http from 'http';
+      * import { cpus } from 'os';
+      * import process from 'process';
+      *
+      * const numCPUs = cpus().length;
       *
       * if (cluster.isPrimary) {
       *   console.log(`Primary ${process.pid} is running`);
@@ -234,67 +238,67 @@ object clusterMod extends Shortcut {
       * In a worker, `process.kill()` exists, but it is not this function;
       * it is `kill()`.
       * @since v0.9.12
-      * @param signal Name of the kill signal to send to the worker process.
+      * @param [signal='SIGTERM'] Name of the kill signal to send to the worker process.
       */
     def kill(): Unit = js.native
-    def kill(signal: java.lang.String): Unit = js.native
+    def kill(signal: String): Unit = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_disconnect(event: disconnect, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
     def on_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("on")
-    def on_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ java.lang.String, Unit]): this.type = js.native
+    def on_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ String, Unit]): this.type = js.native
     @JSName("on")
     def on_listening(event: listening, listener: js.Function1[/* address */ Address, Unit]): this.type = js.native
     @JSName("on")
-    def on_message(event: message, listener: js.Function2[/* message */ js.Any, /* handle */ Socket | Server, Unit]): this.type = js.native
+    def on_message(event: message, listener: js.Function2[/* message */ Any, /* handle */ Socket | Server, Unit]): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("on")
     def on_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_disconnect(event: disconnect, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
     def once_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("once")
-    def once_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ java.lang.String, Unit]): this.type = js.native
+    def once_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ String, Unit]): this.type = js.native
     @JSName("once")
     def once_listening(event: listening, listener: js.Function1[/* address */ Address, Unit]): this.type = js.native
     @JSName("once")
-    def once_message(event: message, listener: js.Function2[/* message */ js.Any, /* handle */ Socket | Server, Unit]): this.type = js.native
+    def once_message(event: message, listener: js.Function2[/* message */ Any, /* handle */ Socket | Server, Unit]): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("once")
     def once_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_disconnect(event: disconnect, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ java.lang.String, Unit]): this.type = js.native
+    def prependListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ String, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_listening(event: listening, listener: js.Function1[/* address */ Address, Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_message(event: message, listener: js.Function2[/* message */ js.Any, /* handle */ Socket | Server, Unit]): this.type = js.native
+    def prependListener_message(event: message, listener: js.Function2[/* message */ Any, /* handle */ Socket | Server, Unit]): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("prependListener")
     def prependListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_disconnect(event: disconnect, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_error(event: error, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ java.lang.String, Unit]): this.type = js.native
+    def prependOnceListener_exit(event: exit, listener: js.Function2[/* code */ Double, /* signal */ String, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_listening(event: listening, listener: js.Function1[/* address */ Address, Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_message(event: message, listener: js.Function2[/* message */ js.Any, /* handle */ Socket | Server, Unit]): this.type = js.native
+    def prependOnceListener_message(event: message, listener: js.Function2[/* message */ Any, /* handle */ Socket | Server, Unit]): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("prependOnceListener")
     def prependOnceListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
@@ -336,18 +340,31 @@ object clusterMod extends Shortcut {
       * @param options The `options` argument, if present, is an object used to parameterize the sending of certain types of handles. `options` supports the following properties:
       */
     def send(message: Serializable): Boolean = js.native
-    def send(message: Serializable, sendHandle: Unit, callback: js.Function1[/* error */ js.Error | Null, Unit]): Boolean = js.native
+    def send(message: Serializable, callback: js.Function1[/* error */ js.Error | Null, Unit]): Boolean = js.native
     def send(message: Serializable, sendHandle: SendHandle): Boolean = js.native
     def send(
       message: Serializable,
       sendHandle: SendHandle,
       callback: js.Function1[/* error */ js.Error | Null, Unit]
     ): Boolean = js.native
+    def send(
+      message: Serializable,
+      sendHandle: SendHandle,
+      options: Unit,
+      callback: js.Function1[/* error */ js.Error | Null, Unit]
+    ): Boolean = js.native
+    def send(message: Serializable, sendHandle: SendHandle, options: MessageOptions): Boolean = js.native
+    def send(
+      message: Serializable,
+      sendHandle: SendHandle,
+      options: MessageOptions,
+      callback: js.Function1[/* error */ js.Error | Null, Unit]
+    ): Boolean = js.native
   }
   
   trait Address extends StObject {
     
-    var address: java.lang.String
+    var address: String
     
     var addressType: Double | udp4 | udp6
     
@@ -356,7 +373,7 @@ object clusterMod extends Shortcut {
   object Address {
     
     @scala.inline
-    def apply(address: java.lang.String, addressType: Double | udp4 | udp6, port: Double): Address = {
+    def apply(address: String, addressType: Double | udp4 | udp6, port: Double): Address = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], addressType = addressType.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
       __obj.asInstanceOf[Address]
     }
@@ -365,7 +382,7 @@ object clusterMod extends Shortcut {
     implicit class AddressMutableBuilder[Self <: Address] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setAddressType(value: Double | udp4 | udp6): Self = StObject.set(x, "addressType", value.asInstanceOf[js.Any])
@@ -392,13 +409,13 @@ object clusterMod extends Shortcut {
       *   6. online
       *   7. setup
       */
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_disconnect(event: disconnect, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_exit(
       event: exit,
-      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ java.lang.String, Unit]
+      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ String, Unit]
     ): this.type = js.native
     @JSName("addListener")
     def addListener_fork(event: fork, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -407,7 +424,7 @@ object clusterMod extends Shortcut {
     @JSName("addListener")
     def addListener_message(
       event: message,
-      listener: js.Function3[/* worker */ Worker, /* message */ js.Any, /* handle */ Socket | Server, Unit]
+      listener: js.Function3[/* worker */ Worker, /* message */ Any, /* handle */ Socket | Server, Unit]
     ): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("addListener")
@@ -418,42 +435,42 @@ object clusterMod extends Shortcut {
     def disconnect(): Unit = js.native
     def disconnect(callback: js.Function0[Unit]): Unit = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_disconnect(event: disconnect, worker: Worker): Boolean = js.native
     @JSName("emit")
-    def emit_exit(event: exit, worker: Worker, code: Double, signal: java.lang.String): Boolean = js.native
+    def emit_exit(event: exit, worker: Worker, code: Double, signal: String): Boolean = js.native
     @JSName("emit")
     def emit_fork(event: fork, worker: Worker): Boolean = js.native
     @JSName("emit")
     def emit_listening(event: listening, worker: Worker, address: Address): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, worker: Worker, message: js.Any, handle: Server): Boolean = js.native
+    def emit_message(event: message, worker: Worker, message: Any, handle: Server): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, worker: Worker, message: js.Any, handle: Socket): Boolean = js.native
+    def emit_message(event: message, worker: Worker, message: Any, handle: Socket): Boolean = js.native
     @JSName("emit")
     def emit_online(event: online, worker: Worker): Boolean = js.native
     @JSName("emit")
     def emit_setup(event: setup, settings: ClusterSettings): Boolean = js.native
     
     def fork(): Worker = js.native
-    def fork(env: js.Any): Worker = js.native
+    def fork(env: Any): Worker = js.native
     
-    /** @deprecated since v16.0.0 - use setupPrimary. */
+    /** @deprecated since v16.0.0 - use isPrimary. */
     val isMaster: Boolean = js.native
     
     val isPrimary: Boolean = js.native
     
     val isWorker: Boolean = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_disconnect(event: disconnect, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("on")
     def on_exit(
       event: exit,
-      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ java.lang.String, Unit]
+      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ String, Unit]
     ): this.type = js.native
     @JSName("on")
     def on_fork(event: fork, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -462,7 +479,7 @@ object clusterMod extends Shortcut {
     @JSName("on")
     def on_message(
       event: message,
-      listener: js.Function3[/* worker */ Worker, /* message */ js.Any, /* handle */ Socket | Server, Unit]
+      listener: js.Function3[/* worker */ Worker, /* message */ Any, /* handle */ Socket | Server, Unit]
     ): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("on")
@@ -470,13 +487,13 @@ object clusterMod extends Shortcut {
     @JSName("on")
     def on_setup(event: setup, listener: js.Function1[/* settings */ ClusterSettings, Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_disconnect(event: disconnect, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("once")
     def once_exit(
       event: exit,
-      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ java.lang.String, Unit]
+      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ String, Unit]
     ): this.type = js.native
     @JSName("once")
     def once_fork(event: fork, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -485,7 +502,7 @@ object clusterMod extends Shortcut {
     @JSName("once")
     def once_message(
       event: message,
-      listener: js.Function3[/* worker */ Worker, /* message */ js.Any, /* handle */ Socket | Server, Unit]
+      listener: js.Function3[/* worker */ Worker, /* message */ Any, /* handle */ Socket | Server, Unit]
     ): this.type = js.native
     // the handle is a net.Socket or net.Server object, or undefined.
     @JSName("once")
@@ -493,13 +510,13 @@ object clusterMod extends Shortcut {
     @JSName("once")
     def once_setup(event: setup, listener: js.Function1[/* settings */ ClusterSettings, Unit]): this.type = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_disconnect(event: disconnect, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_exit(
       event: exit,
-      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ java.lang.String, Unit]
+      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ String, Unit]
     ): this.type = js.native
     @JSName("prependListener")
     def prependListener_fork(event: fork, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -509,25 +526,20 @@ object clusterMod extends Shortcut {
     @JSName("prependListener")
     def prependListener_message(
       event: message,
-      listener: js.Function3[
-          /* worker */ Worker, 
-          /* message */ js.Any, 
-          /* handle */ js.UndefOr[Socket | Server], 
-          Unit
-        ]
+      listener: js.Function3[/* worker */ Worker, /* message */ Any, /* handle */ js.UndefOr[Socket | Server], Unit]
     ): this.type = js.native
     @JSName("prependListener")
     def prependListener_online(event: online, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_setup(event: setup, listener: js.Function1[/* settings */ ClusterSettings, Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_disconnect(event: disconnect, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_exit(
       event: exit,
-      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ java.lang.String, Unit]
+      listener: js.Function3[/* worker */ Worker, /* code */ Double, /* signal */ String, Unit]
     ): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_fork(event: fork, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -537,7 +549,7 @@ object clusterMod extends Shortcut {
     @JSName("prependOnceListener")
     def prependOnceListener_message(
       event: message,
-      listener: js.Function3[/* worker */ Worker, /* message */ js.Any, /* handle */ Socket | Server, Unit]
+      listener: js.Function3[/* worker */ Worker, /* message */ Any, /* handle */ Socket | Server, Unit]
     ): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_online(event: online, listener: js.Function1[/* worker */ Worker, Unit]): this.type = js.native
@@ -565,12 +577,12 @@ object clusterMod extends Shortcut {
   
   trait ClusterSettings extends StObject {
     
-    var args: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+    var args: js.UndefOr[js.Array[String]] = js.undefined
     
     // default: process.execArgv
-    var exec: js.UndefOr[java.lang.String] = js.undefined
+    var exec: js.UndefOr[String] = js.undefined
     
-    var execArgv: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+    var execArgv: js.UndefOr[js.Array[String]] = js.undefined
     
     var gid: js.UndefOr[Double] = js.undefined
     
@@ -578,7 +590,7 @@ object clusterMod extends Shortcut {
     
     var silent: js.UndefOr[Boolean] = js.undefined
     
-    var stdio: js.UndefOr[js.Array[js.Any]] = js.undefined
+    var stdio: js.UndefOr[js.Array[Any]] = js.undefined
     
     var uid: js.UndefOr[Double] = js.undefined
   }
@@ -594,25 +606,25 @@ object clusterMod extends Shortcut {
     implicit class ClusterSettingsMutableBuilder[Self <: ClusterSettings] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setArgs(value: js.Array[java.lang.String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
+      def setArgs(value: js.Array[String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
       
       @scala.inline
-      def setArgsVarargs(value: java.lang.String*): Self = StObject.set(x, "args", js.Array(value :_*))
+      def setArgsVarargs(value: String*): Self = StObject.set(x, "args", js.Array(value :_*))
       
       @scala.inline
-      def setExec(value: java.lang.String): Self = StObject.set(x, "exec", value.asInstanceOf[js.Any])
+      def setExec(value: String): Self = StObject.set(x, "exec", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setExecArgv(value: js.Array[java.lang.String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
+      def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
       
       @scala.inline
-      def setExecArgvVarargs(value: java.lang.String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
+      def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
       
       @scala.inline
       def setExecUndefined: Self = StObject.set(x, "exec", js.undefined)
@@ -639,13 +651,13 @@ object clusterMod extends Shortcut {
       def setSilentUndefined: Self = StObject.set(x, "silent", js.undefined)
       
       @scala.inline
-      def setStdio(value: js.Array[js.Any]): Self = StObject.set(x, "stdio", value.asInstanceOf[js.Any])
+      def setStdio(value: js.Array[Any]): Self = StObject.set(x, "stdio", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setStdioUndefined: Self = StObject.set(x, "stdio", js.undefined)
       
       @scala.inline
-      def setStdioVarargs(value: js.Any*): Self = StObject.set(x, "stdio", js.Array(value :_*))
+      def setStdioVarargs(value: Any*): Self = StObject.set(x, "stdio", js.Array(value :_*))
       
       @scala.inline
       def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])

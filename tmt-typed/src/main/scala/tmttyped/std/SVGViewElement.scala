@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SVGViewElement
   extends StObject
      with SVGElement
-     with SVGFitToViewBox
-     with SVGZoomAndPan {
+     with SVGFitToViewBox {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -24,17 +24,15 @@ trait SVGViewElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
-  
-  /** @deprecated */
-  val viewTarget: org.scalajs.dom.raw.SVGStringList = js.native
 }

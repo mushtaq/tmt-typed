@@ -7,56 +7,69 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object std {
   
-  type AlgorithmIdentifier = java.lang.String | org.scalajs.dom.crypto.Algorithm
+  type AlgorithmIdentifier = org.scalajs.dom.Algorithm | java.lang.String
   
   type ArrayBufferLike = tmttyped.std.SharedArrayBuffer | js.typedarray.ArrayBuffer
   
+  /** Available only in secure contexts. */
   type AudioWorklet = tmttyped.std.Worklet
   
   type AutoKeyword = tmttyped.std.stdStrings.auto
   
+  /**
+    * Recursively unwraps the "awaited type" of a type. Non-promise "thenables" should resolve to `never`. This emulates the behavior of `await`.
+    */
+  type Awaited[T] = (// the argument to `then` was not callable
+  T) | scala.Any
+  
   type BigInteger = js.typedarray.Uint8Array
   
-  type BlobCallback = js.Function1[/* blob */ org.scalajs.dom.raw.Blob | scala.Null, scala.Unit]
+  type BinaryData = js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
   
-  type BlobPart = tmttyped.std.BufferSource | org.scalajs.dom.raw.Blob | java.lang.String
+  type BlobCallback = js.Function1[/* blob */ org.scalajs.dom.Blob | scala.Null, scala.Unit]
   
-  type BodyInit = org.scalajs.dom.raw.Blob | tmttyped.std.BufferSource | org.scalajs.dom.raw.FormData | tmttyped.std.URLSearchParams | org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | java.lang.String
+  type BlobPart = tmttyped.std.BufferSource | org.scalajs.dom.Blob | java.lang.String
+  
+  type BodyInit = org.scalajs.dom.ReadableStream[scala.Any] | tmttyped.std.XMLHttpRequestBodyInit
   
   type BufferSource = js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer
   
   /** A CDATA section that can be used within XML to include extended portions of unescaped text. The symbols < and & don’t need escaping as they normally do when inside a CDATA section. */
-  type CDATASection = org.scalajs.dom.raw.Text
+  type CDATASection = org.scalajs.dom.Text
   
   type COSEAlgorithmIdentifier = scala.Double
+  
+  type CSSNumberish = scala.Double
   
   /** An object representing a single CSS @supports at-rule. It implements the CSSConditionRule interface, and therefore the CSSRule and CSSGroupingRule interfaces with a type value of 12 (CSSRule.SUPPORTS_RULE). */
   type CSSSupportsRule = tmttyped.std.CSSConditionRule
   
-  /* Rewritten from type alias, can be one of: 
-    - tmttyped.std.HTMLOrSVGImageElement
-    - org.scalajs.dom.raw.HTMLVideoElement
-    - org.scalajs.dom.raw.HTMLCanvasElement
-    - tmttyped.std.ImageBitmap
-    - tmttyped.std.OffscreenCanvas
-  */
-  type CanvasImageSource = tmttyped.std._CanvasImageSource | tmttyped.std.HTMLOrSVGImageElement | org.scalajs.dom.raw.HTMLVideoElement | org.scalajs.dom.raw.HTMLCanvasElement
+  type CanvasImageSource = tmttyped.std.HTMLOrSVGImageElement | org.scalajs.dom.HTMLVideoElement | org.scalajs.dom.HTMLCanvasElement | tmttyped.std.ImageBitmap
   
   /**
     * Convert first character of string literal type to uppercase
     */
-  type Capitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  type Capitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ scala.Any
   
   /** The ChannelMergerNode interface, often used in conjunction with its opposite, ChannelSplitterNode, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
-  type ChannelMergerNode = org.scalajs.dom.raw.AudioNode
+  type ChannelMergerNode = org.scalajs.dom.AudioNode
   
   /** The ChannelSplitterNode interface, often used in conjunction with its opposite, ChannelMergerNode, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
-  type ChannelSplitterNode = org.scalajs.dom.raw.AudioNode
+  type ChannelSplitterNode = org.scalajs.dom.AudioNode
   
   type ClassDecorator = js.Function1[/* target */ js.Function, js.Function | scala.Unit]
   
+  /** @deprecated */
+  type ClientRect = org.scalajs.dom.DOMRect
+  
+  type ClipboardItemData = js.Promise[tmttyped.std.ClipboardItemDataType]
+  
+  type ClipboardItemDataType = java.lang.String | org.scalajs.dom.Blob
+  
+  type ClipboardItems = js.Array[tmttyped.std.ClipboardItem]
+  
   /** Textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view. */
-  type Comment = org.scalajs.dom.raw.CharacterData
+  type Comment = org.scalajs.dom.CharacterData
   
   type ConstrainBoolean = scala.Boolean | tmttyped.std.ConstrainBooleanParameters
   
@@ -69,18 +82,19 @@ package object std {
   /**
     * Obtain the parameters of a constructor function type in a tuple
     */
-  type ConstructorParameters[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ js.Any, js.Any] */] = js.Any
+  type ConstructorParameters[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ scala.Any, scala.Any] */] = scala.Any
   
   type DOMHighResTimeStamp = scala.Double
   
   /** Used by the dataset HTML attribute to represent data for custom attributes added to elements. */
-  type DOMStringMap = org.scalablytyped.runtime.StringDictionary[js.UndefOr[java.lang.String]]
+  type DOMStringMap = /* standard DOM */
+  org.scalablytyped.runtime.StringDictionary[js.UndefOr[java.lang.String]]
   
   type DOMTimeStamp = scala.Double
   
-  type DecodeErrorCallback = js.Function1[/* error */ org.scalajs.dom.raw.DOMException, scala.Unit]
+  type DecodeErrorCallback = js.Function1[/* error */ org.scalajs.dom.DOMException, scala.Unit]
   
-  type DecodeSuccessCallback = js.Function1[/* decodedData */ org.scalajs.dom.raw.AudioBuffer, scala.Unit]
+  type DecodeSuccessCallback = js.Function1[/* decodedData */ org.scalajs.dom.AudioBuffer, scala.Unit]
   
   type DocumentTimeline = tmttyped.std.AnimationTimeline
   
@@ -88,16 +102,16 @@ package object std {
   type ElementTagNameMap = tmttyped.std.HTMLElementTagNameMap with (tmttyped.std.Pick[
     tmttyped.std.SVGElementTagNameMap, 
     tmttyped.std.Exclude[
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 57 */ js.Any, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 118 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 63 */ scala.Any, 
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 117 */ scala.Any
     ]
   ])
   
+  type ErrorCallback = js.Function1[/* err */ org.scalajs.dom.DOMException, scala.Unit]
+  
   type EvalError = js.Error
   
-  type EventHandlerNonNull = js.Function1[/* event */ org.scalajs.dom.raw.Event, js.Any]
-  
-  type EventListener = js.Function1[/* evt */ org.scalajs.dom.raw.Event, scala.Unit]
+  type EventListener = js.Function1[/* evt */ org.scalajs.dom.Event, scala.Unit]
   
   type EventListenerOrEventListenerObject = tmttyped.std.EventListener | tmttyped.std.EventListenerObject
   
@@ -111,19 +125,19 @@ package object std {
     */
   type Extract[T, U] = T
   
+  type FileCallback = js.Function1[/* file */ org.scalajs.dom.File, scala.Unit]
+  
+  type FileSystemEntriesCallback = js.Function1[/* entries */ js.Array[tmttyped.std.FileSystemEntry], scala.Unit]
+  
+  type FileSystemEntryCallback = js.Function1[/* entry */ tmttyped.std.FileSystemEntry, scala.Unit]
+  
   type FlatArray[Arr, Depth /* <: scala.Double */] = /* import warning: importer.ImportType#apply Failed type conversion: std.anon.Done<Arr>[Depth extends -1 ? 'done' : 'recur'] */ js.Any
   
   type Float32List = js.typedarray.Float32Array | js.Array[tmttyped.std.GLfloat]
   
-  type ForEachCallback = js.Function2[
-    /* keyId */ js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer | scala.Null, 
-    /* status */ tmttyped.std.MediaKeyStatus, 
-    scala.Unit
-  ]
+  type FormDataEntryValue = org.scalajs.dom.File | java.lang.String
   
-  type FormDataEntryValue = org.scalajs.dom.raw.File | java.lang.String
-  
-  type FrameRequestCallback = js.Function1[/* time */ scala.Double, scala.Unit]
+  type FrameRequestCallback = js.Function1[/* time */ tmttyped.std.DOMHighResTimeStamp, scala.Unit]
   
   type FunctionStringCallback = js.Function1[/* data */ java.lang.String, scala.Unit]
   
@@ -153,24 +167,32 @@ package object std {
   
   type GamepadHapticActuatorType = tmttyped.std.stdStrings.vibration
   
-  type HTMLOrSVGImageElement = org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.SVGImageElement
+  type HTMLOrSVGImageElement = org.scalajs.dom.HTMLImageElement | org.scalajs.dom.SVGImageElement
   
-  type HTMLOrSVGScriptElement = org.scalajs.dom.raw.HTMLScriptElement | org.scalajs.dom.raw.SVGScriptElement
+  type HTMLOrSVGScriptElement = org.scalajs.dom.HTMLScriptElement | org.scalajs.dom.SVGScriptElement
   
   type HashAlgorithmIdentifier = tmttyped.std.AlgorithmIdentifier
   
-  type HeadersInit = org.scalajs.dom.experimental.Headers | js.Array[js.Array[java.lang.String]] | (tmttyped.std.Record[java.lang.String, java.lang.String])
+  type HeadersInit = js.Array[js.Array[java.lang.String]] | (tmttyped.std.Record[java.lang.String, java.lang.String]) | org.scalajs.dom.Headers
   
-  type IDBKeyPath = java.lang.String
+  type IDBValidKey = scala.Double | java.lang.String | js.Date | tmttyped.std.BufferSource | (js.Array[
+    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias std.IDBValidKey */ js.Object
+  ])
   
-  type IDBValidKey = scala.Double | java.lang.String | js.Date | tmttyped.std.BufferSource | tmttyped.std.IDBArrayKey
+  type IdleRequestCallback = js.Function1[/* deadline */ tmttyped.std.IdleDeadline, scala.Unit]
   
-  type ImageBitmapSource = tmttyped.std.CanvasImageSource | org.scalajs.dom.raw.Blob | org.scalajs.dom.raw.ImageData
+  type ImageBitmapSource = tmttyped.std.CanvasImageSource | org.scalajs.dom.Blob | org.scalajs.dom.ImageData
+  
+  /**
+    * The type for the `assert` property of the optional second argument to `import()`.
+    */
+  type ImportAssertions = /* standard es5 */
+  org.scalablytyped.runtime.StringDictionary[java.lang.String]
   
   /**
     * Obtain the return type of a constructor function type
     */
-  type InstanceType[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ js.Any, js.Any] */] = js.Any
+  type InstanceType[T /* <: org.scalablytyped.runtime.Instantiable1[/* args */ scala.Any, scala.Any] */] = scala.Any
   
   type Int32List = js.typedarray.Int32Array | js.Array[tmttyped.std.GLint]
   
@@ -185,39 +207,30 @@ package object std {
   /**
     * Convert string literal type to lowercase
     */
-  type Lowercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  type Lowercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ scala.Any
   
-  type MSCredentialType = tmttyped.std.stdStrings.FIDO_2_0
+  type MediaProvider = org.scalajs.dom.MediaStream | tmttyped.std.MediaSource | org.scalajs.dom.Blob
   
-  type MSLaunchUriCallback = js.Function0[scala.Unit]
+  type MediaSessionActionHandler = js.Function1[/* details */ tmttyped.std.MediaSessionActionDetails, scala.Unit]
   
-  type MediaProvider = org.scalajs.dom.experimental.mediastream.MediaStream | tmttyped.std.MediaSource | org.scalajs.dom.raw.Blob
-  
-  type MediaStreamTrackAudioSourceNode = org.scalajs.dom.raw.AudioNode
-  
-  type MessageEventSource = org.scalajs.dom.raw.Window | org.scalajs.dom.raw.MessagePort | org.scalajs.dom.experimental.serviceworkers.ServiceWorker
+  type MessageEventSource = org.scalajs.dom.Window | org.scalajs.dom.MessagePort | org.scalajs.dom.ServiceWorker
   
   type MethodDecorator = js.Function3[
     /* target */ js.Object, 
     /* propertyKey */ java.lang.String | js.Symbol, 
-    /* descriptor */ tmttyped.std.TypedPropertyDescriptor[js.Any], 
-    tmttyped.std.TypedPropertyDescriptor[js.Any] | scala.Unit
+    /* descriptor */ tmttyped.std.TypedPropertyDescriptor[scala.Any], 
+    tmttyped.std.TypedPropertyDescriptor[scala.Any] | scala.Unit
   ]
   
-  /** @deprecated */
-  type MouseWheelEvent = org.scalajs.dom.raw.WheelEvent
-  
   type MutationCallback = js.Function2[
-    /* mutations */ js.Array[org.scalajs.dom.raw.MutationRecord], 
-    /* observer */ org.scalajs.dom.raw.MutationObserver, 
+    /* mutations */ js.Array[org.scalajs.dom.MutationRecord], 
+    /* observer */ org.scalajs.dom.MutationObserver, 
     scala.Unit
   ]
   
   type NamedCurve = java.lang.String
   
-  type NavigatorUserMediaErrorCallback = js.Function1[/* error */ tmttyped.std.MediaStreamError, scala.Unit]
-  
-  type NavigatorUserMediaSuccessCallback = js.Function1[/* stream */ org.scalajs.dom.experimental.mediastream.MediaStream, scala.Unit]
+  type NodeFilter = (js.Function1[/* node */ org.scalajs.dom.Node, scala.Double]) | tmttyped.std.anon.AcceptNode
   
   /**
     * Exclude null and undefined from T
@@ -225,14 +238,6 @@ package object std {
   type NonNullable[T] = T
   
   type NotificationPermissionCallback = js.Function1[/* permission */ tmttyped.std.NotificationPermission, scala.Unit]
-  
-  /* Rewritten from type alias, can be one of: 
-    - tmttyped.std.OffscreenCanvasRenderingContext2D
-    - tmttyped.std.ImageBitmapRenderingContext
-    - org.scalajs.dom.raw.WebGLRenderingContext
-    - tmttyped.std.WebGL2RenderingContext
-  */
-  type OffscreenRenderingContext = tmttyped.std._OffscreenRenderingContext | org.scalajs.dom.raw.WebGLRenderingContext
   
   /**
     * Construct a type with the properties of T except for those in type K.
@@ -242,21 +247,21 @@ package object std {
   /**
     * Removes the 'this' parameter from a function type.
     */
-  type OmitThisParameter[T] = T | (js.Function1[/* args */ js.Any, js.Any])
+  type OmitThisParameter[T] = T | (js.Function1[/* args */ scala.Any, scala.Any])
   
   type OnBeforeUnloadEventHandler = tmttyped.std.OnBeforeUnloadEventHandlerNonNull | scala.Null
   
-  type OnBeforeUnloadEventHandlerNonNull = js.Function1[/* event */ org.scalajs.dom.raw.Event, java.lang.String | scala.Null]
+  type OnBeforeUnloadEventHandlerNonNull = js.Function1[/* event */ org.scalajs.dom.Event, java.lang.String | scala.Null]
   
   type OnErrorEventHandler = tmttyped.std.OnErrorEventHandlerNonNull | scala.Null
   
   type OnErrorEventHandlerNonNull = js.Function5[
-    /* event */ org.scalajs.dom.raw.Event | java.lang.String, 
+    /* event */ org.scalajs.dom.Event | java.lang.String, 
     /* source */ js.UndefOr[java.lang.String], 
     /* lineno */ js.UndefOr[scala.Double], 
     /* colno */ js.UndefOr[scala.Double], 
     /* error */ js.UndefOr[js.Error], 
-    js.Any
+    scala.Any
   ]
   
   type ParameterDecorator = js.Function3[
@@ -269,7 +274,7 @@ package object std {
   /**
     * Obtain the parameters of a function type in a tuple
     */
-  type Parameters[T /* <: js.Function1[/* args */ js.Any, js.Any] */] = js.Any
+  type Parameters[T /* <: js.Function1[/* args */ scala.Any, scala.Any] */] = scala.Any
   
   /**
     * Make all properties in T optional
@@ -280,19 +285,15 @@ package object std {
   
   type PaymentRequestUpdateEventInit = tmttyped.std.EventInit
   
-  type PerformanceEntryList = js.Array[org.scalajs.dom.raw.PerformanceEntry]
-  
-  /** PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of "mark". Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline. */
-  type PerformanceMark = org.scalajs.dom.raw.PerformanceEntry
-  
-  /** PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of "measure". Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline. */
-  type PerformanceMeasure = org.scalajs.dom.raw.PerformanceEntry
+  type PerformanceEntryList = js.Array[org.scalajs.dom.PerformanceEntry]
   
   type PerformanceObserverCallback = js.Function2[
     /* entries */ tmttyped.std.PerformanceObserverEntryList, 
     /* observer */ tmttyped.std.PerformanceObserver, 
     scala.Unit
   ]
+  
+  type PerformancePaintTiming = org.scalajs.dom.PerformanceEntry
   
   /**
     * From T, pick a set of properties whose keys are in the union K
@@ -308,7 +309,7 @@ package object std {
   type PromiseConstructorLike = org.scalablytyped.runtime.Instantiable1[
     /* executor */ js.Function2[
       /* resolve */ js.Function1[/* value */ js.Object | js.Thenable[js.Object], scala.Unit], 
-      /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], scala.Unit], 
+      /* reject */ js.Function1[/* reason */ js.UndefOr[scala.Any], scala.Unit], 
       scala.Unit
     ], 
     js.Thenable[js.Object]
@@ -316,7 +317,8 @@ package object std {
   
   type PropertyDecorator = js.Function2[/* target */ js.Object, /* propertyKey */ java.lang.String | js.Symbol, scala.Unit]
   
-  type PropertyDescriptorMap = org.scalablytyped.runtime.StringDictionary[js.PropertyDescriptor]
+  type PropertyDescriptorMap = /* standard es5 */
+  org.scalablytyped.runtime.StringDictionary[js.PropertyDescriptor]
   
   type PropertyKey = java.lang.String | scala.Double | js.Symbol
   
@@ -328,18 +330,15 @@ package object std {
   
   type RTCIceCredentialType = tmttyped.std.stdStrings.password
   
-  type RTCPeerConnectionErrorCallback = js.Function1[/* error */ org.scalajs.dom.raw.DOMException, scala.Unit]
+  type RTCPeerConnectionErrorCallback = js.Function1[/* error */ org.scalajs.dom.DOMException, scala.Unit]
   
   type RTCRtcpMuxPolicy = tmttyped.std.stdStrings.require
   
   type RTCRtpReceiveParameters = tmttyped.std.RTCRtpParameters
   
-  type RTCSessionDescriptionCallback = js.Function1[
-    /* description */ org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit, 
-    scala.Unit
-  ]
+  type RTCRtpSynchronizationSource = tmttyped.std.RTCRtpContributingSource
   
-  type RTCStatsCallback = js.Function1[/* report */ org.scalajs.dom.experimental.webrtc.RTCStatsReport, scala.Unit]
+  type RTCSessionDescriptionCallback = js.Function1[/* description */ org.scalajs.dom.RTCSessionDescriptionInit, scala.Unit]
   
   type RangeError = js.Error
   
@@ -361,15 +360,17 @@ package object std {
   
   type ReferenceError = js.Error
   
+  type RemotePlaybackAvailabilityCallback = js.Function1[/* available */ scala.Boolean, scala.Unit]
+  
   /* Rewritten from type alias, can be one of: 
-    - org.scalajs.dom.raw.CanvasRenderingContext2D
+    - org.scalajs.dom.CanvasRenderingContext2D
     - tmttyped.std.ImageBitmapRenderingContext
-    - org.scalajs.dom.raw.WebGLRenderingContext
+    - org.scalajs.dom.WebGLRenderingContext
     - tmttyped.std.WebGL2RenderingContext
   */
-  type RenderingContext = tmttyped.std._RenderingContext | org.scalajs.dom.raw.CanvasRenderingContext2D | org.scalajs.dom.raw.WebGLRenderingContext
+  type RenderingContext = tmttyped.std._RenderingContext | org.scalajs.dom.CanvasRenderingContext2D | org.scalajs.dom.WebGLRenderingContext
   
-  type RequestInfo = org.scalajs.dom.experimental.Request | java.lang.String
+  type RequestInfo = org.scalajs.dom.Request | java.lang.String
   
   /**
     * Make all properties in T required
@@ -387,54 +388,35 @@ package object std {
   /**
     * Obtain the return type of a function type
     */
-  type ReturnType[T /* <: js.Function1[/* args */ js.Any, js.Any] */] = js.Any
+  type ReturnType[T /* <: js.Function1[/* args */ scala.Any, scala.Any] */] = scala.Any
   
   type SVGMatrix = tmttyped.std.DOMMatrix
   
-  type SVGPathSegClosePath = org.scalajs.dom.raw.SVGPathSeg
-  
   type SVGPoint = tmttyped.std.DOMPoint
   
-  type SVGRect = tmttyped.std.DOMRect
+  type SVGRect = org.scalajs.dom.DOMRect
   
   type StaticRange = tmttyped.std.AbstractRange
   
   type SyntaxError = js.Error
   
-  /* Rewritten from type alias, can be one of: 
-    - tmttyped.std.ImageBitmap
-    - org.scalajs.dom.raw.ImageData
-    - org.scalajs.dom.raw.HTMLImageElement
-    - org.scalajs.dom.raw.HTMLCanvasElement
-    - org.scalajs.dom.raw.HTMLVideoElement
-    - tmttyped.std.OffscreenCanvas
-  */
-  type TexImageSource = tmttyped.std._TexImageSource | org.scalajs.dom.raw.ImageData | org.scalajs.dom.raw.HTMLImageElement | org.scalajs.dom.raw.HTMLCanvasElement | org.scalajs.dom.raw.HTMLVideoElement
+  type TexImageSource = tmttyped.std.ImageBitmap | org.scalajs.dom.ImageData | org.scalajs.dom.HTMLImageElement | org.scalajs.dom.HTMLCanvasElement | org.scalajs.dom.HTMLVideoElement
   
   /**
     * Extracts the type of the 'this' parameter of a function type, or 'unknown' if the function type has no 'this' parameter.
     */
-  type ThisParameterType[T] = js.Any
+  type ThisParameterType[T] = scala.Any
   
   type TimerHandler = java.lang.String | js.Function
   
-  /* Rewritten from type alias, can be one of: 
-    - js.typedarray.ArrayBuffer
-    - org.scalajs.dom.raw.MessagePort
-    - tmttyped.std.ImageBitmap
-    - tmttyped.std.OffscreenCanvas
-  */
-  type Transferable = tmttyped.std._Transferable | js.typedarray.ArrayBuffer | org.scalajs.dom.raw.MessagePort
+  type Transferable = js.typedarray.ArrayBuffer | org.scalajs.dom.MessagePort | tmttyped.std.ImageBitmap
   
   type TransformerFlushCallback[O] = js.Function1[
     /* controller */ tmttyped.std.TransformStreamDefaultController[O], 
     scala.Unit | js.Thenable[scala.Unit]
   ]
   
-  type TransformerStartCallback[O] = js.Function1[
-    /* controller */ tmttyped.std.TransformStreamDefaultController[O], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
+  type TransformerStartCallback[O] = js.Function1[/* controller */ tmttyped.std.TransformStreamDefaultController[O], scala.Any]
   
   type TransformerTransformCallback[I, O] = js.Function2[
     /* chunk */ I, 
@@ -451,16 +433,13 @@ package object std {
   /**
     * Convert first character of string literal type to lowercase
     */
-  type Uncapitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  type Uncapitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ scala.Any
   
-  type UnderlyingSinkAbortCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
+  type UnderlyingSinkAbortCallback = js.Function1[/* reason */ js.UndefOr[scala.Any], scala.Unit | js.Thenable[scala.Unit]]
   
   type UnderlyingSinkCloseCallback = js.Function0[scala.Unit | js.Thenable[scala.Unit]]
   
-  type UnderlyingSinkStartCallback = js.Function1[
-    /* controller */ tmttyped.std.WritableStreamDefaultController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
+  type UnderlyingSinkStartCallback = js.Function1[/* controller */ tmttyped.std.WritableStreamDefaultController, scala.Any]
   
   type UnderlyingSinkWriteCallback[W] = js.Function2[
     /* chunk */ W, 
@@ -468,22 +447,19 @@ package object std {
     scala.Unit | js.Thenable[scala.Unit]
   ]
   
-  type UnderlyingSourceCancelCallback = js.Function1[/* reason */ js.Any, scala.Unit | js.Thenable[scala.Unit]]
+  type UnderlyingSourceCancelCallback = js.Function1[/* reason */ js.UndefOr[scala.Any], scala.Unit | js.Thenable[scala.Unit]]
   
   type UnderlyingSourcePullCallback[R] = js.Function1[
     /* controller */ tmttyped.std.ReadableStreamController[R], 
     scala.Unit | js.Thenable[scala.Unit]
   ]
   
-  type UnderlyingSourceStartCallback[R] = js.Function1[
-    /* controller */ tmttyped.std.ReadableStreamController[R], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
+  type UnderlyingSourceStartCallback[R] = js.Function1[/* controller */ tmttyped.std.ReadableStreamController[R], scala.Any]
   
   /**
     * Convert string literal type to uppercase
     */
-  type Uppercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  type Uppercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ scala.Any
   
   type UvmEntries = js.Array[tmttyped.std.UvmEntry]
   
@@ -495,12 +471,14 @@ package object std {
   
   type WebKitCSSMatrix = tmttyped.std.DOMMatrix
   
-  type WindowProxy = org.scalajs.dom.raw.Window
+  type WindowProxy = org.scalajs.dom.Window
+  
+  type XMLHttpRequestBodyInit = org.scalajs.dom.Blob | tmttyped.std.BufferSource | org.scalajs.dom.FormData | tmttyped.std.URLSearchParams | java.lang.String
   
   /** The XPathEvaluator interface allows to compile and evaluate XPath expressions. */
   type XPathEvaluator = tmttyped.std.XPathEvaluatorBase
   
   type XPathNSResolver = (js.Function1[/* prefix */ java.lang.String | scala.Null, java.lang.String | scala.Null]) | tmttyped.std.anon.LookupNamespaceURI
   
-  type webkitURL = org.scalajs.dom.experimental.URL
+  type webkitURL = org.scalajs.dom.URL
 }

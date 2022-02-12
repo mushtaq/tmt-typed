@@ -11,5 +11,4 @@ trait WebGL2RenderingContext
      with WebGL2RenderingContextBase
      with WebGL2RenderingContextOverloads
      with WebGLRenderingContextBase
-     with _OffscreenRenderingContext
      with _RenderingContext

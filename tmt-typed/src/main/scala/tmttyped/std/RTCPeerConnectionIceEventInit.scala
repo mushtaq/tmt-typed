@@ -9,8 +9,10 @@ trait RTCPeerConnectionIceEventInit
   extends StObject
      with EventInit {
   
-  var candidate: js.UndefOr[org.scalajs.dom.experimental.webrtc.RTCIceCandidate | Null] = js.undefined
+  /* standard DOM */
+  var candidate: js.UndefOr[org.scalajs.dom.RTCIceCandidate | Null] = js.undefined
   
+  /* standard DOM */
   var url: js.UndefOr[java.lang.String | Null] = js.undefined
 }
 object RTCPeerConnectionIceEventInit {
@@ -25,7 +27,7 @@ object RTCPeerConnectionIceEventInit {
   implicit class RTCPeerConnectionIceEventInitMutableBuilder[Self <: RTCPeerConnectionIceEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCandidate(value: org.scalajs.dom.experimental.webrtc.RTCIceCandidate): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])
+    def setCandidate(value: org.scalajs.dom.RTCIceCandidate): Self = StObject.set(x, "candidate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCandidateNull: Self = StObject.set(x, "candidate", null)

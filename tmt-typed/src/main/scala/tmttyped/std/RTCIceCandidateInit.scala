@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCIceCandidateInit extends StObject {
   
+  /* standard DOM */
   var candidate: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var sdpMLineIndex: js.UndefOr[Double | Null] = js.undefined
   
+  /* standard DOM */
   var sdpMid: js.UndefOr[java.lang.String | Null] = js.undefined
   
+  /* standard DOM */
   var usernameFragment: js.UndefOr[java.lang.String | Null] = js.undefined
 }
 object RTCIceCandidateInit {

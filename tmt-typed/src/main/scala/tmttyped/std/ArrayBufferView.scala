@@ -10,16 +10,19 @@ trait ArrayBufferView extends StObject {
   /**
     * The ArrayBuffer instance referenced by the array.
     */
+  /* standard es5 */
   var buffer: ArrayBufferLike
   
   /**
     * The length in bytes of the array.
     */
+  /* standard es5 */
   var byteLength: Double
   
   /**
     * The offset in bytes of the array.
     */
+  /* standard es5 */
   var byteOffset: Double
 }
 object ArrayBufferView {

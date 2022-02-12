@@ -7,20 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EventSourceEventMap extends StObject {
   
-  var error: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var error: org.scalajs.dom.Event
   
-  var message: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var message: org.scalajs.dom.MessageEvent
   
-  var open: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var open: org.scalajs.dom.Event
 }
 object EventSourceEventMap {
   
   @scala.inline
-  def apply(
-    error: org.scalajs.dom.raw.Event,
-    message: org.scalajs.dom.raw.MessageEvent,
-    open: org.scalajs.dom.raw.Event
-  ): EventSourceEventMap = {
+  def apply(error: org.scalajs.dom.Event, message: org.scalajs.dom.MessageEvent, open: org.scalajs.dom.Event): EventSourceEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventSourceEventMap]
   }
@@ -29,12 +28,12 @@ object EventSourceEventMap {
   implicit class EventSourceEventMapMutableBuilder[Self <: EventSourceEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setError(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOpen(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
+    def setOpen(value: org.scalajs.dom.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
   }
 }

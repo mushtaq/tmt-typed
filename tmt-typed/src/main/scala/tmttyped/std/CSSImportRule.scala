@@ -9,11 +9,14 @@ trait CSSImportRule
   extends StObject
      with CSSRule {
   
+  /* standard DOM */
   val href: java.lang.String
   
-  val media: org.scalajs.dom.raw.MediaList
+  /* standard DOM */
+  val media: org.scalajs.dom.MediaList
   
-  val styleSheet: org.scalajs.dom.raw.CSSStyleSheet
+  /* standard DOM */
+  val styleSheet: org.scalajs.dom.CSSStyleSheet
 }
 object CSSImportRule {
   
@@ -31,8 +34,8 @@ object CSSImportRule {
     SUPPORTS_RULE: Double,
     cssText: java.lang.String,
     href: java.lang.String,
-    media: org.scalajs.dom.raw.MediaList,
-    styleSheet: org.scalajs.dom.raw.CSSStyleSheet,
+    media: org.scalajs.dom.MediaList,
+    styleSheet: org.scalajs.dom.CSSStyleSheet,
     `type`: Double
   ): CSSImportRule = {
     val __obj = js.Dynamic.literal(CHARSET_RULE = CHARSET_RULE.asInstanceOf[js.Any], FONT_FACE_RULE = FONT_FACE_RULE.asInstanceOf[js.Any], IMPORT_RULE = IMPORT_RULE.asInstanceOf[js.Any], KEYFRAMES_RULE = KEYFRAMES_RULE.asInstanceOf[js.Any], KEYFRAME_RULE = KEYFRAME_RULE.asInstanceOf[js.Any], MEDIA_RULE = MEDIA_RULE.asInstanceOf[js.Any], NAMESPACE_RULE = NAMESPACE_RULE.asInstanceOf[js.Any], PAGE_RULE = PAGE_RULE.asInstanceOf[js.Any], STYLE_RULE = STYLE_RULE.asInstanceOf[js.Any], SUPPORTS_RULE = SUPPORTS_RULE.asInstanceOf[js.Any], cssText = cssText.asInstanceOf[js.Any], href = href.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], styleSheet = styleSheet.asInstanceOf[js.Any], parentRule = null, parentStyleSheet = null)
@@ -47,9 +50,9 @@ object CSSImportRule {
     def setHref(value: java.lang.String): Self = StObject.set(x, "href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMedia(value: org.scalajs.dom.raw.MediaList): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
+    def setMedia(value: org.scalajs.dom.MediaList): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStyleSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = StObject.set(x, "styleSheet", value.asInstanceOf[js.Any])
+    def setStyleSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "styleSheet", value.asInstanceOf[js.Any])
   }
 }

@@ -11,11 +11,15 @@ trait OscillatorNode
   extends StObject
      with AudioScheduledSourceNode {
   
-  val detune: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val detune: org.scalajs.dom.AudioParam = js.native
   
-  val frequency: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val frequency: org.scalajs.dom.AudioParam = js.native
   
-  def setPeriodicWave(periodicWave: org.scalajs.dom.raw.PeriodicWave): Unit = js.native
+  /* standard DOM */
+  def setPeriodicWave(periodicWave: org.scalajs.dom.PeriodicWave): Unit = js.native
   
+  /* standard DOM */
   var `type`: OscillatorType = js.native
 }

@@ -11,6 +11,7 @@ trait SVGFESpotLightElement
   extends StObject
      with SVGElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,30 +23,39 @@ trait SVGFESpotLightElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val limitingConeAngle: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val limitingConeAngle: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val pointsAtX: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val pointsAtX: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val pointsAtY: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val pointsAtY: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val pointsAtZ: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val pointsAtZ: org.scalajs.dom.SVGAnimatedNumber = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val specularExponent: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val specularExponent: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val x: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val y: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val z: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val z: org.scalajs.dom.SVGAnimatedNumber = js.native
 }

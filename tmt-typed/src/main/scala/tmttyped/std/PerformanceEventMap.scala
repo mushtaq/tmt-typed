@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PerformanceEventMap extends StObject {
   
-  var resourcetimingbufferfull: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var resourcetimingbufferfull: org.scalajs.dom.Event
 }
 object PerformanceEventMap {
   
   @scala.inline
-  def apply(resourcetimingbufferfull: org.scalajs.dom.raw.Event): PerformanceEventMap = {
+  def apply(resourcetimingbufferfull: org.scalajs.dom.Event): PerformanceEventMap = {
     val __obj = js.Dynamic.literal(resourcetimingbufferfull = resourcetimingbufferfull.asInstanceOf[js.Any])
     __obj.asInstanceOf[PerformanceEventMap]
   }
@@ -21,6 +22,6 @@ object PerformanceEventMap {
   implicit class PerformanceEventMapMutableBuilder[Self <: PerformanceEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setResourcetimingbufferfull(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "resourcetimingbufferfull", value.asInstanceOf[js.Any])
+    def setResourcetimingbufferfull(value: org.scalajs.dom.Event): Self = StObject.set(x, "resourcetimingbufferfull", value.asInstanceOf[js.Any])
   }
 }

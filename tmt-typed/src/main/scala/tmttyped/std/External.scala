@@ -5,12 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** @deprecated */
 trait External extends StObject {
   
   /** @deprecated */
+  /* standard DOM */
   def AddSearchProvider(): Unit
   
   /** @deprecated */
+  /* standard DOM */
   def IsSearchProviderInstalled(): Unit
 }
 object External {

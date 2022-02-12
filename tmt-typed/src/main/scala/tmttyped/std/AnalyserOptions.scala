@@ -9,12 +9,16 @@ trait AnalyserOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var fftSize: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var maxDecibels: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var minDecibels: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var smoothingTimeConstant: js.UndefOr[Double] = js.undefined
 }
 object AnalyserOptions {

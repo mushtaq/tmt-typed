@@ -10,12 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StyleSheetList
   extends StObject
-     with /* index */ NumberDictionary[org.scalajs.dom.raw.CSSStyleSheet] {
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.CSSStyleSheet] {
   
-  def item(index: Double): org.scalajs.dom.raw.CSSStyleSheet | Null = js.native
+  /* standard DOM */
+  def item(index: Double): org.scalajs.dom.CSSStyleSheet | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.CSSStyleSheet]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.CSSStyleSheet]] = js.native
   
+  /* standard DOM */
   val length: Double = js.native
 }

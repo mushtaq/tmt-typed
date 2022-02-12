@@ -1,5 +1,8 @@
 package tmttyped.std
 
+import tmttyped.std.Intl.RelativeTimeFormatLocaleMatcher
+import tmttyped.std.stdStrings.`best fit`
+import tmttyped.std.stdStrings.lookup
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,28 +13,57 @@ object anon {
   @js.native
   trait `0` extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     @JSName(js.Symbol.replace)
     var replace: js.Function2[
         /* string */ java.lang.String, 
-        /* replacer */ js.Function2[/* substring */ java.lang.String, /* repeated */ js.Any, java.lang.String], 
+        /* replacer */ js.Function2[/* substring */ java.lang.String, /* repeated */ Any, java.lang.String], 
         java.lang.String
       ] = js.native
   }
   
+  trait AcceptNode extends StObject {
+    
+    /* standard DOM */
+    def acceptNode(node: org.scalajs.dom.Node): Double
+  }
+  object AcceptNode {
+    
+    @scala.inline
+    def apply(acceptNode: org.scalajs.dom.Node => Double): AcceptNode = {
+      val __obj = js.Dynamic.literal(acceptNode = js.Any.fromFunction1(acceptNode))
+      __obj.asInstanceOf[AcceptNode]
+    }
+    
+    @scala.inline
+    implicit class AcceptNodeMutableBuilder[Self <: AcceptNode] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setAcceptNode(value: org.scalajs.dom.Node => Double): Self = StObject.set(x, "acceptNode", js.Any.fromFunction1(value))
+    }
+  }
+  
   trait CopyWithin extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     var copyWithin: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var entries: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var fill: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var find: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var findIndex: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var keys: scala.Boolean
     
+    /* standard es2015.symbol.wellknown */
     var values: scala.Boolean
   }
   object CopyWithin {
@@ -78,8 +110,10 @@ object anon {
   
   trait Done[Arr] extends StObject {
     
+    /* standard es2019.array */
     var done: Arr
     
+    /* standard es2019.array */
     var recur: Arr
   }
   object Done {
@@ -103,12 +137,13 @@ object anon {
   
   trait Item[T] extends StObject {
     
-    def Item(index: js.Any): T
+    /* standard ScriptHost */
+    def Item(index: Any): T
   }
   object Item {
     
     @scala.inline
-    def apply[T](Item: js.Any => T): Item[T] = {
+    def apply[T](Item: Any => T): Item[T] = {
       val __obj = js.Dynamic.literal(Item = js.Any.fromFunction1(Item))
       __obj.asInstanceOf[Item[T]]
     }
@@ -117,14 +152,16 @@ object anon {
     implicit class ItemMutableBuilder[Self <: Item[_], T] (val x: Self with Item[T]) extends AnyVal {
       
       @scala.inline
-      def setItem(value: js.Any => T): Self = StObject.set(x, "Item", js.Any.fromFunction1(value))
+      def setItem(value: Any => T): Self = StObject.set(x, "Item", js.Any.fromFunction1(value))
     }
   }
   
   trait Length extends StObject {
     
+    /* standard ScriptHost */
     def Item(n: Double): java.lang.String
     
+    /* standard ScriptHost */
     var length: Double
   }
   object Length {
@@ -146,9 +183,55 @@ object anon {
     }
   }
   
+  trait LocaleMatcher extends StObject {
+    
+    /* standard es2018.intl */
+    var localeMatcher: js.UndefOr[lookup | (`best fit`)] = js.undefined
+  }
+  object LocaleMatcher {
+    
+    @scala.inline
+    def apply(): LocaleMatcher = {
+      val __obj = js.Dynamic.literal()
+      __obj.asInstanceOf[LocaleMatcher]
+    }
+    
+    @scala.inline
+    implicit class LocaleMatcherMutableBuilder[Self <: LocaleMatcher] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setLocaleMatcher(value: lookup | (`best fit`)): Self = StObject.set(x, "localeMatcher", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setLocaleMatcherUndefined: Self = StObject.set(x, "localeMatcher", js.undefined)
+    }
+  }
+  
+  trait LocaleMatcherRelativeTimeFormatLocaleMatcher extends StObject {
+    
+    /* standard es2020.intl */
+    var localeMatcher: RelativeTimeFormatLocaleMatcher
+  }
+  object LocaleMatcherRelativeTimeFormatLocaleMatcher {
+    
+    @scala.inline
+    def apply(localeMatcher: RelativeTimeFormatLocaleMatcher): LocaleMatcherRelativeTimeFormatLocaleMatcher = {
+      val __obj = js.Dynamic.literal(localeMatcher = localeMatcher.asInstanceOf[js.Any])
+      __obj.asInstanceOf[LocaleMatcherRelativeTimeFormatLocaleMatcher]
+    }
+    
+    @scala.inline
+    implicit class LocaleMatcherRelativeTimeFormatLocaleMatcherMutableBuilder[Self <: LocaleMatcherRelativeTimeFormatLocaleMatcher] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setLocaleMatcher(value: RelativeTimeFormatLocaleMatcher): Self = StObject.set(x, "localeMatcher", value.asInstanceOf[js.Any])
+    }
+  }
+  
   @js.native
   trait LookupNamespaceURI extends StObject {
     
+    /* standard DOM */
     def lookupNamespaceURI(): java.lang.String | Null = js.native
     def lookupNamespaceURI(prefix: java.lang.String): java.lang.String | Null = js.native
   }
@@ -156,14 +239,17 @@ object anon {
   @js.native
   trait Match extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     @JSName(js.Symbol.`match`)
     var `match`: js.Function1[/* string */ java.lang.String, RegExpMatchArray | Null] = js.native
   }
   
   trait Proxy[T /* <: js.Object */] extends StObject {
     
+    /* standard es2015.proxy */
     var proxy: T
     
+    /* standard es2015.proxy */
     def revoke(): Unit
   }
   object Proxy {
@@ -185,9 +271,34 @@ object anon {
     }
   }
   
+  trait Raw extends StObject {
+    
+    /* standard es2015.core */
+    var raw: js.Array[java.lang.String] | ArrayLike[java.lang.String]
+  }
+  object Raw {
+    
+    @scala.inline
+    def apply(raw: js.Array[java.lang.String] | ArrayLike[java.lang.String]): Raw = {
+      val __obj = js.Dynamic.literal(raw = raw.asInstanceOf[js.Any])
+      __obj.asInstanceOf[Raw]
+    }
+    
+    @scala.inline
+    implicit class RawMutableBuilder[Self <: Raw] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setRaw(value: js.Array[java.lang.String] | ArrayLike[java.lang.String]): Self = StObject.set(x, "raw", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def setRawVarargs(value: java.lang.String*): Self = StObject.set(x, "raw", js.Array(value :_*))
+    }
+  }
+  
   @js.native
   trait Replace extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     @JSName(js.Symbol.replace)
     var replace: js.Function2[/* string */ java.lang.String, /* replaceValue */ java.lang.String, java.lang.String] = js.native
   }
@@ -195,6 +306,7 @@ object anon {
   @js.native
   trait Search extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     @JSName(js.Symbol.search)
     var search: js.Function1[/* string */ java.lang.String, Double] = js.native
   }
@@ -202,11 +314,40 @@ object anon {
   @js.native
   trait Split extends StObject {
     
+    /* standard es2015.symbol.wellknown */
     @JSName(js.Symbol.split)
     var split: js.Function2[
         /* string */ java.lang.String, 
         /* limit */ js.UndefOr[Double], 
         js.Array[java.lang.String]
       ] = js.native
+  }
+  
+  trait Then extends StObject {
+    
+    /* standard es5 */
+    def `then`(
+      onfulfilled: /* import warning: importer.ImportType#apply Failed type conversion: infer F */ js.Any
+    ): Any
+  }
+  object Then {
+    
+    @scala.inline
+    def apply(
+      `then`: /* import warning: importer.ImportType#apply Failed type conversion: infer F */ js.Any => Any
+    ): Then = {
+      val __obj = js.Dynamic.literal()
+      __obj.updateDynamic("then")(js.Any.fromFunction1(`then`))
+      __obj.asInstanceOf[Then]
+    }
+    
+    @scala.inline
+    implicit class ThenMutableBuilder[Self <: Then] (val x: Self) extends AnyVal {
+      
+      @scala.inline
+      def setThen(
+        value: /* import warning: importer.ImportType#apply Failed type conversion: infer F */ js.Any => Any
+      ): Self = StObject.set(x, "then", js.Any.fromFunction1(value))
+    }
   }
 }

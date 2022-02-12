@@ -8,18 +8,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A screen, usually the one on which the current window is being rendered, and is obtained using window.screen. */
 trait Screen extends StObject {
   
+  /* standard DOM */
   val availHeight: Double
   
+  /* standard DOM */
   val availWidth: Double
   
+  /* standard DOM */
   val colorDepth: Double
   
+  /* standard DOM */
   val height: Double
   
+  /* standard DOM */
   val orientation: ScreenOrientation
   
+  /* standard DOM */
   val pixelDepth: Double
   
+  /* standard DOM */
   val width: Double
 }
 object Screen {

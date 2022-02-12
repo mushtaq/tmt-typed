@@ -9,31 +9,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Geolocation extends StObject {
   
+  /* standard DOM */
   def clearWatch(watchId: Double): Unit = js.native
   
+  /* standard DOM */
   def getCurrentPosition(successCallback: PositionCallback): Unit = js.native
-  def getCurrentPosition(
-    successCallback: PositionCallback,
-    errorCallback: Unit,
-    options: org.scalajs.dom.raw.PositionOptions
-  ): Unit = js.native
+  def getCurrentPosition(successCallback: PositionCallback, errorCallback: Null, options: org.scalajs.dom.PositionOptions): Unit = js.native
+  def getCurrentPosition(successCallback: PositionCallback, errorCallback: Unit, options: org.scalajs.dom.PositionOptions): Unit = js.native
   def getCurrentPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Unit = js.native
   def getCurrentPosition(
     successCallback: PositionCallback,
     errorCallback: PositionErrorCallback,
-    options: org.scalajs.dom.raw.PositionOptions
+    options: org.scalajs.dom.PositionOptions
   ): Unit = js.native
   
+  /* standard DOM */
   def watchPosition(successCallback: PositionCallback): Double = js.native
-  def watchPosition(
-    successCallback: PositionCallback,
-    errorCallback: Unit,
-    options: org.scalajs.dom.raw.PositionOptions
-  ): Double = js.native
+  def watchPosition(successCallback: PositionCallback, errorCallback: Null, options: org.scalajs.dom.PositionOptions): Double = js.native
+  def watchPosition(successCallback: PositionCallback, errorCallback: Unit, options: org.scalajs.dom.PositionOptions): Double = js.native
   def watchPosition(successCallback: PositionCallback, errorCallback: PositionErrorCallback): Double = js.native
   def watchPosition(
     successCallback: PositionCallback,
     errorCallback: PositionErrorCallback,
-    options: org.scalajs.dom.raw.PositionOptions
+    options: org.scalajs.dom.PositionOptions
   ): Double = js.native
 }

@@ -11,17 +11,24 @@ trait TouchEvent
   extends StObject
      with UIEvent {
   
+  /* standard DOM */
   val altKey: scala.Boolean = js.native
   
-  val changedTouches: org.scalajs.dom.raw.TouchList = js.native
+  /* standard DOM */
+  val changedTouches: org.scalajs.dom.TouchList = js.native
   
+  /* standard DOM */
   val ctrlKey: scala.Boolean = js.native
   
+  /* standard DOM */
   val metaKey: scala.Boolean = js.native
   
+  /* standard DOM */
   val shiftKey: scala.Boolean = js.native
   
-  val targetTouches: org.scalajs.dom.raw.TouchList = js.native
+  /* standard DOM */
+  val targetTouches: org.scalajs.dom.TouchList = js.native
   
-  val touches: org.scalajs.dom.raw.TouchList = js.native
+  /* standard DOM */
+  val touches: org.scalajs.dom.TouchList = js.native
 }

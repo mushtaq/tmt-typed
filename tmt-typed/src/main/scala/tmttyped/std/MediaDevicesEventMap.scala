@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaDevicesEventMap extends StObject {
   
-  var devicechange: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var devicechange: org.scalajs.dom.Event
 }
 object MediaDevicesEventMap {
   
   @scala.inline
-  def apply(devicechange: org.scalajs.dom.raw.Event): MediaDevicesEventMap = {
+  def apply(devicechange: org.scalajs.dom.Event): MediaDevicesEventMap = {
     val __obj = js.Dynamic.literal(devicechange = devicechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaDevicesEventMap]
   }
@@ -21,6 +22,6 @@ object MediaDevicesEventMap {
   implicit class MediaDevicesEventMapMutableBuilder[Self <: MediaDevicesEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setDevicechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "devicechange", value.asInstanceOf[js.Any])
+    def setDevicechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "devicechange", value.asInstanceOf[js.Any])
   }
 }

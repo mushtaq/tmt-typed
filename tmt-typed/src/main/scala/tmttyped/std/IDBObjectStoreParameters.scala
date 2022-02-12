@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait IDBObjectStoreParameters extends StObject {
   
+  /* standard DOM */
   var autoIncrement: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var keyPath: js.UndefOr[java.lang.String | js.Array[java.lang.String] | Null] = js.undefined
 }
 object IDBObjectStoreParameters {

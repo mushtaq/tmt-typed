@@ -9,7 +9,8 @@ trait PopStateEventInit
   extends StObject
      with EventInit {
   
-  var state: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var state: js.UndefOr[Any] = js.undefined
 }
 object PopStateEventInit {
   
@@ -23,7 +24,7 @@ object PopStateEventInit {
   implicit class PopStateEventInitMutableBuilder[Self <: PopStateEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setState(value: js.Any): Self = StObject.set(x, "state", value.asInstanceOf[js.Any])
+    def setState(value: Any): Self = StObject.set(x, "state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStateUndefined: Self = StObject.set(x, "state", js.undefined)

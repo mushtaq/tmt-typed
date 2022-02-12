@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AudioBuffer protected ()
   extends StObject
      with tmttyped.std.AudioBuffer {
+  /* standard DOM */
   def this(options: AudioBufferOptions) = this()
 }

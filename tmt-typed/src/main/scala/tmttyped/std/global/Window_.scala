@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.EventListenerOptions
 import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.EventListenerOrEventListenerObject
 import tmttyped.std.FrameRequestCallback
@@ -13,10 +13,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Window")
 @js.native
+/* standard DOM */
 class Window_ ()
   extends StObject
      with Window {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -28,12 +30,15 @@ class Window_ ()
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def cancelAnimationFrame(handle: Double): Unit = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val localStorage: org.scalajs.dom.raw.Storage = js.native
+  override val localStorage: org.scalajs.dom.Storage = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -45,9 +50,11 @@ class Window_ ()
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def requestAnimationFrame(callback: FrameRequestCallback): Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val sessionStorage: org.scalajs.dom.raw.Storage = js.native
+  override val sessionStorage: org.scalajs.dom.Storage = js.native
 }

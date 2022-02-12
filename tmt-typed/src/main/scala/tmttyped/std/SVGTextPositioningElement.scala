@@ -11,13 +11,18 @@ trait SVGTextPositioningElement
   extends StObject
      with SVGTextContentElement {
   
-  val dx: org.scalajs.dom.raw.SVGAnimatedLengthList = js.native
+  /* standard DOM */
+  val dx: org.scalajs.dom.SVGAnimatedLengthList = js.native
   
-  val dy: org.scalajs.dom.raw.SVGAnimatedLengthList = js.native
+  /* standard DOM */
+  val dy: org.scalajs.dom.SVGAnimatedLengthList = js.native
   
-  val rotate: org.scalajs.dom.raw.SVGAnimatedNumberList = js.native
+  /* standard DOM */
+  val rotate: org.scalajs.dom.SVGAnimatedNumberList = js.native
   
-  val x: org.scalajs.dom.raw.SVGAnimatedLengthList = js.native
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedLengthList = js.native
   
-  val y: org.scalajs.dom.raw.SVGAnimatedLengthList = js.native
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedLengthList = js.native
 }

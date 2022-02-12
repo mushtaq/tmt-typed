@@ -7,9 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ShadowRootInit extends StObject {
   
+  /* standard DOM */
   var delegatesFocus: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var mode: ShadowRootMode
+  
+  /* standard DOM */
+  var slotAssignment: js.UndefOr[SlotAssignmentMode] = js.undefined
 }
 object ShadowRootInit {
   
@@ -30,5 +35,11 @@ object ShadowRootInit {
     
     @scala.inline
     def setMode(value: ShadowRootMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSlotAssignment(value: SlotAssignmentMode): Self = StObject.set(x, "slotAssignment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSlotAssignmentUndefined: Self = StObject.set(x, "slotAssignment", js.undefined)
   }
 }

@@ -11,69 +11,91 @@ trait Range
   extends StObject
      with AbstractRange {
   
+  /* standard DOM */
   val END_TO_END: Double = js.native
   
+  /* standard DOM */
   val END_TO_START: Double = js.native
   
+  /* standard DOM */
   val START_TO_END: Double = js.native
   
+  /* standard DOM */
   val START_TO_START: Double = js.native
   
-  def cloneContents(): org.scalajs.dom.raw.DocumentFragment = js.native
+  /* standard DOM */
+  def cloneContents(): org.scalajs.dom.DocumentFragment = js.native
   
-  def cloneRange(): org.scalajs.dom.raw.Range = js.native
+  /* standard DOM */
+  def cloneRange(): org.scalajs.dom.Range = js.native
   
+  /* standard DOM */
   def collapse(): Unit = js.native
   def collapse(toStart: scala.Boolean): Unit = js.native
   
-  /**
-    * Returns the node, furthest away from the document, that is an ancestor of both range's start node and end node.
-    */
-  val commonAncestorContainer: org.scalajs.dom.raw.Node = js.native
+  /** Returns the node, furthest away from the document, that is an ancestor of both range's start node and end node. */
+  /* standard DOM */
+  val commonAncestorContainer: org.scalajs.dom.Node = js.native
   
-  def compareBoundaryPoints(how: Double, sourceRange: org.scalajs.dom.raw.Range): Double = js.native
+  /* standard DOM */
+  def compareBoundaryPoints(how: Double, sourceRange: org.scalajs.dom.Range): Double = js.native
   
-  /**
-    * Returns −1 if the point is before the range, 0 if the point is in the range, and 1 if the point is after the range.
-    */
-  def comparePoint(node: org.scalajs.dom.raw.Node, offset: Double): Double = js.native
+  /** Returns −1 if the point is before the range, 0 if the point is in the range, and 1 if the point is after the range. */
+  /* standard DOM */
+  def comparePoint(node: org.scalajs.dom.Node, offset: Double): Double = js.native
   
-  def createContextualFragment(fragment: java.lang.String): org.scalajs.dom.raw.DocumentFragment = js.native
+  /* standard DOM */
+  def createContextualFragment(fragment: java.lang.String): org.scalajs.dom.DocumentFragment = js.native
   
+  /* standard DOM */
   def deleteContents(): Unit = js.native
   
+  /* standard DOM */
   def detach(): Unit = js.native
   
-  def extractContents(): org.scalajs.dom.raw.DocumentFragment = js.native
+  /* standard DOM */
+  def extractContents(): org.scalajs.dom.DocumentFragment = js.native
   
-  def getBoundingClientRect(): DOMRect = js.native
+  /* standard DOM */
+  def getBoundingClientRect(): org.scalajs.dom.DOMRect = js.native
   
+  /* standard DOM */
   def getClientRects(): DOMRectList = js.native
   
-  def insertNode(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def insertNode(node: org.scalajs.dom.Node): Unit = js.native
   
-  /**
-    * Returns whether range intersects node.
-    */
-  def intersectsNode(node: org.scalajs.dom.raw.Node): scala.Boolean = js.native
+  /** Returns whether range intersects node. */
+  /* standard DOM */
+  def intersectsNode(node: org.scalajs.dom.Node): scala.Boolean = js.native
   
-  def isPointInRange(node: org.scalajs.dom.raw.Node, offset: Double): scala.Boolean = js.native
+  /* standard DOM */
+  def isPointInRange(node: org.scalajs.dom.Node, offset: Double): scala.Boolean = js.native
   
-  def selectNode(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def selectNode(node: org.scalajs.dom.Node): Unit = js.native
   
-  def selectNodeContents(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def selectNodeContents(node: org.scalajs.dom.Node): Unit = js.native
   
-  def setEnd(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
+  /* standard DOM */
+  def setEnd(node: org.scalajs.dom.Node, offset: Double): Unit = js.native
   
-  def setEndAfter(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def setEndAfter(node: org.scalajs.dom.Node): Unit = js.native
   
-  def setEndBefore(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def setEndBefore(node: org.scalajs.dom.Node): Unit = js.native
   
-  def setStart(node: org.scalajs.dom.raw.Node, offset: Double): Unit = js.native
+  /* standard DOM */
+  def setStart(node: org.scalajs.dom.Node, offset: Double): Unit = js.native
   
-  def setStartAfter(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def setStartAfter(node: org.scalajs.dom.Node): Unit = js.native
   
-  def setStartBefore(node: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def setStartBefore(node: org.scalajs.dom.Node): Unit = js.native
   
-  def surroundContents(newParent: org.scalajs.dom.raw.Node): Unit = js.native
+  /* standard DOM */
+  def surroundContents(newParent: org.scalajs.dom.Node): Unit = js.native
 }

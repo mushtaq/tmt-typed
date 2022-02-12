@@ -1,7 +1,7 @@
 package tmttyped.node
 
-import tmttyped.node.anon.EntryTypes
-import tmttyped.node.anon.TypeEntryType
+import tmttyped.node.anon.Buffered
+import tmttyped.node.anon.BufferedType
 import tmttyped.node.nodeAsyncHooksMod.AsyncResource
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
@@ -20,13 +20,13 @@ object perfHooksMod {
     */
   @JSImport("perf_hooks", "PerformanceEntry")
   @js.native
-  class PerformanceEntry protected () extends StObject {
+  /* protected */ class PerformanceEntry () extends StObject {
     
     /**
       * Additional detail specific to the `entryType`.
       * @since v16.0.0
       */
-    val details: js.UndefOr[NodeGCPerformanceDetail | js.Any] = js.native
+    val detail: js.UndefOr[NodeGCPerformanceDetail | Any] = js.native
     
     /**
       * The total number of milliseconds elapsed for this entry. This value will not
@@ -53,7 +53,7 @@ object perfHooksMod {
       * The name of the performance entry.
       * @since v8.5.0
       */
-    val name: java.lang.String = js.native
+    val name: String = js.native
     
     /**
       * The high resolution millisecond timestamp marking the starting time of the
@@ -72,7 +72,7 @@ object perfHooksMod {
     */
   @JSImport("perf_hooks", "PerformanceNodeTiming")
   @js.native
-  class PerformanceNodeTiming protected () extends PerformanceEntry {
+  /* protected */ class PerformanceNodeTiming () extends PerformanceEntry {
     
     /**
       * The high resolution millisecond timestamp at which the Node.js process
@@ -135,7 +135,7 @@ object perfHooksMod {
     def disconnect(): Unit = js.native
     
     /**
-      * Subscribes the `<PerformanceObserver>` instance to notifications of new `<PerformanceEntry>` instances identified either by `options.entryTypes`or `options.type`:
+      * Subscribes the `PerformanceObserver` instance to notifications of new `PerformanceEntry` instances identified either by `options.entryTypes`or `options.type`:
       *
       * ```js
       * const {
@@ -153,8 +153,8 @@ object perfHooksMod {
       * ```
       * @since v8.5.0
       */
-    def observe(options: EntryTypes): Unit = js.native
-    def observe(options: TypeEntryType): Unit = js.native
+    def observe(options: Buffered): Unit = js.native
+    def observe(options: BufferedType): Unit = js.native
   }
   
   object constants {
@@ -205,8 +205,8 @@ object perfHooksMod {
   }
   
   /**
-    * Returns a `<RecordableHistogram>`.
-    * @since v15.9.0
+    * Returns a `RecordableHistogram`.
+    * @since v15.9.0, v14.18.0
     */
   @scala.inline
   def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]
@@ -554,7 +554,7 @@ object perfHooksMod {
     /**
       * Additional optional detail to include with the mark.
       */
-    var detail: js.UndefOr[js.Any] = js.undefined
+    var detail: js.UndefOr[Any] = js.undefined
     
     /**
       * An optional timestamp to be used as the mark time.
@@ -574,7 +574,7 @@ object perfHooksMod {
     implicit class MarkOptionsMutableBuilder[Self <: MarkOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setDetail(value: js.Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+      def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
@@ -592,7 +592,7 @@ object perfHooksMod {
     /**
       * Additional optional detail to include with the mark.
       */
-    var detail: js.UndefOr[js.Any] = js.undefined
+    var detail: js.UndefOr[Any] = js.undefined
     
     /**
       * Duration between start and end times.
@@ -602,12 +602,12 @@ object perfHooksMod {
     /**
       * Timestamp to be used as the end time, or a string identifying a previously recorded mark.
       */
-    var end: js.UndefOr[Double | java.lang.String] = js.undefined
+    var end: js.UndefOr[Double | String] = js.undefined
     
     /**
       * Timestamp to be used as the start time, or a string identifying a previously recorded mark.
       */
-    var start: js.UndefOr[Double | java.lang.String] = js.undefined
+    var start: js.UndefOr[Double | String] = js.undefined
   }
   object MeasureOptions {
     
@@ -621,7 +621,7 @@ object perfHooksMod {
     implicit class MeasureOptionsMutableBuilder[Self <: MeasureOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setDetail(value: js.Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+      def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
@@ -633,13 +633,13 @@ object perfHooksMod {
       def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
       
       @scala.inline
-      def setEnd(value: Double | java.lang.String): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
+      def setEnd(value: Double | String): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setEndUndefined: Self = StObject.set(x, "end", js.undefined)
       
       @scala.inline
-      def setStart(value: Double | java.lang.String): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
+      def setStart(value: Double | String): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
@@ -777,8 +777,8 @@ object perfHooksMod {
       * ```
       * @since v8.5.0
       */
-    def getEntriesByName(name: java.lang.String): js.Array[PerformanceEntry] = js.native
-    def getEntriesByName(name: java.lang.String, `type`: EntryType): js.Array[PerformanceEntry] = js.native
+    def getEntriesByName(name: String): js.Array[PerformanceEntry] = js.native
+    def getEntriesByName(name: String, `type`: EntryType): js.Array[PerformanceEntry] = js.native
     
     /**
       * Returns a list of `PerformanceEntry` objects in chronological order
@@ -829,7 +829,7 @@ object perfHooksMod {
       * @param name
       */
     def clearMarks(): Unit = js.native
-    def clearMarks(name: java.lang.String): Unit = js.native
+    def clearMarks(name: String): Unit = js.native
     
     /**
       * eventLoopUtilization is similar to CPU utilization except that it is calculated using high precision wall-clock time.
@@ -856,8 +856,8 @@ object perfHooksMod {
       * @param name
       */
     def mark(): Unit = js.native
-    def mark(name: java.lang.String): Unit = js.native
-    def mark(name: java.lang.String, options: MarkOptions): Unit = js.native
+    def mark(name: String): Unit = js.native
+    def mark(name: String, options: MarkOptions): Unit = js.native
     def mark(name: Unit, options: MarkOptions): Unit = js.native
     
     /**
@@ -875,11 +875,11 @@ object perfHooksMod {
       * @param startMark
       * @param endMark
       */
-    def measure(name: java.lang.String): Unit = js.native
-    def measure(name: java.lang.String, options: MeasureOptions): Unit = js.native
-    def measure(name: java.lang.String, startMark: java.lang.String): Unit = js.native
-    def measure(name: java.lang.String, startMark: java.lang.String, endMark: java.lang.String): Unit = js.native
-    def measure(name: java.lang.String, startMark: Unit, endMark: java.lang.String): Unit = js.native
+    def measure(name: String): Unit = js.native
+    def measure(name: String, options: MeasureOptions): Unit = js.native
+    def measure(name: String, startMark: String): Unit = js.native
+    def measure(name: String, startMark: String, endMark: String): Unit = js.native
+    def measure(name: String, startMark: Unit, endMark: String): Unit = js.native
     
     /**
       * An instance of the PerformanceNodeTiming class that provides performance metrics for specific Node.js operational milestones.
@@ -901,8 +901,8 @@ object perfHooksMod {
       * A PerformanceObserver must be subscribed to the 'function' event type in order for the timing details to be accessed.
       * @param fn
       */
-    def timerify[T /* <: js.Function1[/* repeated */ js.Any, js.Any] */](fn: T): T = js.native
-    def timerify[T /* <: js.Function1[/* repeated */ js.Any, js.Any] */](fn: T, options: TimerifyOptions): T = js.native
+    def timerify[T /* <: js.Function1[/* repeated */ Any, Any] */](fn: T): T = js.native
+    def timerify[T /* <: js.Function1[/* repeated */ Any, Any] */](fn: T, options: TimerifyOptions): T = js.native
   }
   
   @js.native
@@ -912,7 +912,7 @@ object perfHooksMod {
     
     def record(`val`: js.BigInt): Unit = js.native
     /**
-      * @since v15.9.0
+      * @since v15.9.0, v14.18.0
       * @param val The amount to record in the histogram.
       */
     def record(`val`: Double): Unit = js.native
@@ -922,7 +922,7 @@ object perfHooksMod {
       * previous call to `recordDelta()` and records that amount in the histogram.
       *
       * ## Examples
-      * @since v15.9.0
+      * @since v15.9.0, v14.18.0
       */
     def recordDelta(): Unit = js.native
   }

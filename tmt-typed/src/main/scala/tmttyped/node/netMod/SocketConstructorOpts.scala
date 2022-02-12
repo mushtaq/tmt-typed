@@ -1,5 +1,6 @@
 package tmttyped.node.netMod
 
+import tmttyped.node.AbortSignal
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +13,8 @@ trait SocketConstructorOpts extends StObject {
   var fd: js.UndefOr[Double] = js.undefined
   
   var readable: js.UndefOr[Boolean] = js.undefined
+  
+  var signal: js.UndefOr[AbortSignal] = js.undefined
   
   var writable: js.UndefOr[Boolean] = js.undefined
 }
@@ -43,6 +46,12 @@ object SocketConstructorOpts {
     
     @scala.inline
     def setReadableUndefined: Self = StObject.set(x, "readable", js.undefined)
+    
+    @scala.inline
+    def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
     
     @scala.inline
     def setWritable(value: Boolean): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])

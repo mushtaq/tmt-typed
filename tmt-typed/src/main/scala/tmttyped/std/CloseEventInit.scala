@@ -9,10 +9,13 @@ trait CloseEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var code: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var reason: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var wasClean: js.UndefOr[scala.Boolean] = js.undefined
 }
 object CloseEventInit {

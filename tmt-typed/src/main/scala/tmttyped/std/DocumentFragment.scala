@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DocumentFragment
   extends StObject
-     with Node
      with NonElementParentNode
      with ParentNode {
   
+  /* standard DOM */
   @JSName("ownerDocument")
-  val ownerDocument_DocumentFragment: org.scalajs.dom.raw.Document = js.native
+  val ownerDocument_DocumentFragment: org.scalajs.dom.Document = js.native
 }

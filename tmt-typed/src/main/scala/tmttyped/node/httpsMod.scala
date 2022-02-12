@@ -1,15 +1,29 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
-import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.httpMod.ClientRequestArgs
-import tmttyped.node.httpMod.HttpBase
 import tmttyped.node.httpMod.RequestListener
-import tmttyped.node.netMod.LookupFunction
 import tmttyped.node.nodeHttpMod.ClientRequest
 import tmttyped.node.nodeHttpMod.IncomingMessage
-import tmttyped.node.nodeNetMod.Socket
+import tmttyped.node.nodeHttpMod.ServerResponse
+import tmttyped.node.nodeStreamMod.Duplex
+import tmttyped.node.nodeStrings.OCSPRequest
+import tmttyped.node.nodeStrings.checkContinue
+import tmttyped.node.nodeStrings.checkExpectation
+import tmttyped.node.nodeStrings.clientError
+import tmttyped.node.nodeStrings.close
+import tmttyped.node.nodeStrings.connect
+import tmttyped.node.nodeStrings.connection
+import tmttyped.node.nodeStrings.error
+import tmttyped.node.nodeStrings.keylog
+import tmttyped.node.nodeStrings.listening
+import tmttyped.node.nodeStrings.newSession
+import tmttyped.node.nodeStrings.request
+import tmttyped.node.nodeStrings.resumeSession
+import tmttyped.node.nodeStrings.secureConnection
+import tmttyped.node.nodeStrings.tlsClientError
+import tmttyped.node.nodeStrings.upgrade
+import tmttyped.node.nodeTlsMod.TLSSocket
 import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.tlsMod.CommonConnectionOptions
 import tmttyped.node.tlsMod.PSKCallbackNegotation
@@ -41,19 +55,378 @@ object httpsMod {
   }
   
   /**
-    * * Extends: `<tls.Server>`
-    *
     * See `http.Server` for more information.
     * @since v0.3.4
     */
   @JSImport("https", "Server")
   @js.native
-  class Server ()
-    extends StObject
-       with HttpBase {
+  class Server () extends StObject {
     def this(options: ServerOptions) = this()
     def this(requestListener: RequestListener) = this()
     def this(options: ServerOptions, requestListener: RequestListener) = this()
+    
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_OCSPRequest(
+      event: OCSPRequest,
+      listener: js.Function3[
+          /* certificate */ Buffer, 
+          /* issuer */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("addListener")
+    def addListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    @JSName("addListener")
+    def addListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    @JSName("addListener")
+    def addListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_connect(
+      event: connect,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    @JSName("addListener")
+    def addListener_connection(event: connection, listener: js.Function1[/* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_keylog(event: keylog, listener: js.Function2[/* line */ Buffer, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_newSession(
+      event: newSession,
+      listener: js.Function3[
+          /* sessionId */ Buffer, 
+          /* sessionData */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("addListener")
+    def addListener_request(event: request, listener: RequestListener): this.type = js.native
+    @JSName("addListener")
+    def addListener_resumeSession(
+      event: resumeSession,
+      listener: js.Function2[
+          /* sessionId */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("addListener")
+    def addListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("addListener")
+    def addListener_upgrade(
+      event: upgrade,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    
+    def emit(event: String, args: Any*): Boolean = js.native
+    @JSName("emit")
+    def emit_OCSPRequest(
+      event: OCSPRequest,
+      certificate: Buffer,
+      issuer: Buffer,
+      callback: js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit]
+    ): Boolean = js.native
+    @JSName("emit")
+    def emit_checkContinue(event: checkContinue, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    @JSName("emit")
+    def emit_checkExpectation(event: checkExpectation, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    @JSName("emit")
+    def emit_clientError(event: clientError, err: js.Error, socket: Duplex): Boolean = js.native
+    @JSName("emit")
+    def emit_close(event: close): Boolean = js.native
+    @JSName("emit")
+    def emit_connect(event: connect, req: IncomingMessage, socket: Duplex, head: Buffer): Boolean = js.native
+    @JSName("emit")
+    def emit_connection(event: connection, socket: Duplex): Boolean = js.native
+    @JSName("emit")
+    def emit_error(event: error, err: js.Error): Boolean = js.native
+    @JSName("emit")
+    def emit_keylog(event: keylog, line: Buffer, tlsSocket: TLSSocket): Boolean = js.native
+    @JSName("emit")
+    def emit_listening(event: listening): Boolean = js.native
+    @JSName("emit")
+    def emit_newSession(
+      event: newSession,
+      sessionId: Buffer,
+      sessionData: Buffer,
+      callback: js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit]
+    ): Boolean = js.native
+    @JSName("emit")
+    def emit_request(event: request, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    @JSName("emit")
+    def emit_resumeSession(
+      event: resumeSession,
+      sessionId: Buffer,
+      callback: js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit]
+    ): Boolean = js.native
+    @JSName("emit")
+    def emit_secureConnection(event: secureConnection, tlsSocket: TLSSocket): Boolean = js.native
+    @JSName("emit")
+    def emit_tlsClientError(event: tlsClientError, err: js.Error, tlsSocket: TLSSocket): Boolean = js.native
+    @JSName("emit")
+    def emit_upgrade(event: upgrade, req: IncomingMessage, socket: Duplex, head: Buffer): Boolean = js.native
+    
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    @JSName("on")
+    def on_OCSPRequest(
+      event: OCSPRequest,
+      listener: js.Function3[
+          /* certificate */ Buffer, 
+          /* issuer */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("on")
+    def on_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    @JSName("on")
+    def on_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    @JSName("on")
+    def on_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("on")
+    def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_connect(
+      event: connect,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    @JSName("on")
+    def on_connection(event: connection, listener: js.Function1[/* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("on")
+    def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("on")
+    def on_keylog(event: keylog, listener: js.Function2[/* line */ Buffer, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("on")
+    def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("on")
+    def on_newSession(
+      event: newSession,
+      listener: js.Function3[
+          /* sessionId */ Buffer, 
+          /* sessionData */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("on")
+    def on_request(event: request, listener: RequestListener): this.type = js.native
+    @JSName("on")
+    def on_resumeSession(
+      event: resumeSession,
+      listener: js.Function2[
+          /* sessionId */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("on")
+    def on_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("on")
+    def on_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("on")
+    def on_upgrade(
+      event: upgrade,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    @JSName("once")
+    def once_OCSPRequest(
+      event: OCSPRequest,
+      listener: js.Function3[
+          /* certificate */ Buffer, 
+          /* issuer */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("once")
+    def once_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    @JSName("once")
+    def once_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    @JSName("once")
+    def once_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("once")
+    def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_connect(
+      event: connect,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    @JSName("once")
+    def once_connection(event: connection, listener: js.Function1[/* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("once")
+    def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("once")
+    def once_keylog(event: keylog, listener: js.Function2[/* line */ Buffer, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("once")
+    def once_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("once")
+    def once_newSession(
+      event: newSession,
+      listener: js.Function3[
+          /* sessionId */ Buffer, 
+          /* sessionData */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("once")
+    def once_request(event: request, listener: RequestListener): this.type = js.native
+    @JSName("once")
+    def once_resumeSession(
+      event: resumeSession,
+      listener: js.Function2[
+          /* sessionId */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("once")
+    def once_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("once")
+    def once_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("once")
+    def once_upgrade(
+      event: upgrade,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_OCSPRequest(
+      event: OCSPRequest,
+      listener: js.Function3[
+          /* certificate */ Buffer, 
+          /* issuer */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_connect(
+      event: connect,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_connection(event: connection, listener: js.Function1[/* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_keylog(event: keylog, listener: js.Function2[/* line */ Buffer, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_newSession(
+      event: newSession,
+      listener: js.Function3[
+          /* sessionId */ Buffer, 
+          /* sessionData */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_request(event: request, listener: RequestListener): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_resumeSession(
+      event: resumeSession,
+      listener: js.Function2[
+          /* sessionId */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependListener")
+    def prependListener_upgrade(
+      event: upgrade,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_OCSPRequest(
+      event: OCSPRequest,
+      listener: js.Function3[
+          /* certificate */ Buffer, 
+          /* issuer */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error | Null, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_connect(
+      event: connect,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_connection(event: connection, listener: js.Function1[/* socket */ Duplex, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_keylog(event: keylog, listener: js.Function2[/* line */ Buffer, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_newSession(
+      event: newSession,
+      listener: js.Function3[
+          /* sessionId */ Buffer, 
+          /* sessionData */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_request(event: request, listener: RequestListener): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_resumeSession(
+      event: resumeSession,
+      listener: js.Function2[
+          /* sessionId */ Buffer, 
+          /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+          Unit
+        ]
+    ): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_secureConnection(event: secureConnection, listener: js.Function1[/* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
+    @JSName("prependOnceListener")
+    def prependOnceListener_upgrade(
+      event: upgrade,
+      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+    ): this.type = js.native
   }
   
   /**
@@ -103,9 +476,9 @@ object httpsMod {
   def createServer(requestListener: RequestListener): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[Server]
   
   @scala.inline
-  def get(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  def get(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
-  def get(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def get(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   /**
     * Like `http.get()` but for HTTPS.
     *
@@ -139,13 +512,9 @@ object httpsMod {
   @scala.inline
   def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
-  def get(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def get(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
-  def get(
-    url: java.lang.String,
-    options: RequestOptions,
-    callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def get(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
   def get(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
@@ -158,9 +527,9 @@ object httpsMod {
   def globalAgent_=(x: Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
   
   @scala.inline
-  def request(options: java.lang.String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  def request(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
   @scala.inline
-  def request(options: java.lang.String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def request(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   /**
     * Makes a request to a secure web server.
     *
@@ -350,20 +719,16 @@ object httpsMod {
   @scala.inline
   def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
-  def request(url: java.lang.String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def request(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
-  def request(
-    url: java.lang.String,
-    options: RequestOptions,
-    callback: js.Function1[/* res */ IncomingMessage, Unit]
-  ): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  def request(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
   def request(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   @scala.inline
   def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - tmttyped.node.tlsMod.ConnectionOptions because var conflicts: timeout. Inlined host, port, path, socket, checkServerIdentity, servername, session, minDHSize, lookup, pskCallback */ trait AgentOptions
+  - tmttyped.node.tlsMod.ConnectionOptions because var conflicts: host, lookup, port, timeout. Inlined path, socket, checkServerIdentity, servername, session, minDHSize, pskCallback */ trait AgentOptions
     extends StObject
        with tmttyped.node.httpMod.AgentOptions
        with SecureContextOptions
@@ -371,20 +736,14 @@ object httpsMod {
     
     // Establish secure connection on a given socket rather than creating a new socket
     var checkServerIdentity: js.UndefOr[
-        js.Function2[/* host */ java.lang.String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
+        js.Function2[/* hostname */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
       ] = js.undefined
-    
-    var host: js.UndefOr[java.lang.String] = js.undefined
-    
-    var lookup: js.UndefOr[LookupFunction] = js.undefined
     
     var maxCachedSessions: js.UndefOr[Double] = js.undefined
     
     var minDHSize: js.UndefOr[Double] = js.undefined
     
-    var path: js.UndefOr[java.lang.String] = js.undefined
-    
-    var port: js.UndefOr[Double] = js.undefined
+    var path: js.UndefOr[String] = js.undefined
     
     /**
       * When negotiating TLS-PSK (pre-shared keys), this function is called
@@ -403,15 +762,15 @@ object httpsMod {
       * compatible with the selected cipher's digest.
       * `identity` must use UTF-8 encoding.
       */
-    var pskCallback: js.UndefOr[js.Function1[/* hint */ java.lang.String | Null, PSKCallbackNegotation | Null]] = js.undefined
+    var pskCallback: js.UndefOr[js.Function1[/* hint */ String | Null, PSKCallbackNegotation | Null]] = js.undefined
     
-    var servername: js.UndefOr[java.lang.String] = js.undefined
+    var servername: js.UndefOr[String] = js.undefined
     
     // SNI TLS Extension
     var session: js.UndefOr[Buffer] = js.undefined
     
     // Creates unix socket connection to path. If this option is specified, `host` and `port` are ignored.
-    var socket: js.UndefOr[Socket] = js.undefined
+    var socket: js.UndefOr[tmttyped.node.streamMod.Duplex] = js.undefined
   }
   object AgentOptions {
     
@@ -425,29 +784,10 @@ object httpsMod {
     implicit class AgentOptionsMutableBuilder[Self <: AgentOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setCheckServerIdentity(value: (/* host */ java.lang.String, /* cert */ PeerCertificate) => js.UndefOr[js.Error]): Self = StObject.set(x, "checkServerIdentity", js.Any.fromFunction2(value))
+      def setCheckServerIdentity(value: (/* hostname */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error]): Self = StObject.set(x, "checkServerIdentity", js.Any.fromFunction2(value))
       
       @scala.inline
       def setCheckServerIdentityUndefined: Self = StObject.set(x, "checkServerIdentity", js.undefined)
-      
-      @scala.inline
-      def setHost(value: java.lang.String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
-      
-      @scala.inline
-      def setLookup(
-        value: (/* hostname */ java.lang.String, /* options */ LookupOneOptions, /* callback */ js.Function3[
-              /* err */ ErrnoException | Null, 
-              /* address */ java.lang.String, 
-              /* family */ Double, 
-              Unit
-            ]) => Unit
-      ): Self = StObject.set(x, "lookup", js.Any.fromFunction3(value))
-      
-      @scala.inline
-      def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
       
       @scala.inline
       def setMaxCachedSessions(value: Double): Self = StObject.set(x, "maxCachedSessions", value.asInstanceOf[js.Any])
@@ -462,25 +802,19 @@ object httpsMod {
       def setMinDHSizeUndefined: Self = StObject.set(x, "minDHSize", js.undefined)
       
       @scala.inline
-      def setPath(value: java.lang.String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
+      def setPath(value: String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setPathUndefined: Self = StObject.set(x, "path", js.undefined)
       
       @scala.inline
-      def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
-      
-      @scala.inline
-      def setPskCallback(value: /* hint */ java.lang.String | Null => PSKCallbackNegotation | Null): Self = StObject.set(x, "pskCallback", js.Any.fromFunction1(value))
+      def setPskCallback(value: /* hint */ String | Null => PSKCallbackNegotation | Null): Self = StObject.set(x, "pskCallback", js.Any.fromFunction1(value))
       
       @scala.inline
       def setPskCallbackUndefined: Self = StObject.set(x, "pskCallback", js.undefined)
       
       @scala.inline
-      def setServername(value: java.lang.String): Self = StObject.set(x, "servername", value.asInstanceOf[js.Any])
+      def setServername(value: String): Self = StObject.set(x, "servername", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setServernameUndefined: Self = StObject.set(x, "servername", js.undefined)
@@ -492,7 +826,7 @@ object httpsMod {
       def setSessionUndefined: Self = StObject.set(x, "session", js.undefined)
       
       @scala.inline
-      def setSocket(value: Socket): Self = StObject.set(x, "socket", value.asInstanceOf[js.Any])
+      def setSocket(value: tmttyped.node.streamMod.Duplex): Self = StObject.set(x, "socket", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setSocketUndefined: Self = StObject.set(x, "socket", js.undefined)
@@ -507,7 +841,7 @@ object httpsMod {
     var rejectUnauthorized: js.UndefOr[Boolean] = js.undefined
     
     // Defaults to true
-    var servername: js.UndefOr[java.lang.String] = js.undefined
+    var servername: js.UndefOr[String] = js.undefined
   }
   object RequestOptions {
     
@@ -527,7 +861,7 @@ object httpsMod {
       def setRejectUnauthorizedUndefined: Self = StObject.set(x, "rejectUnauthorized", js.undefined)
       
       @scala.inline
-      def setServername(value: java.lang.String): Self = StObject.set(x, "servername", value.asInstanceOf[js.Any])
+      def setServername(value: String): Self = StObject.set(x, "servername", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setServernameUndefined: Self = StObject.set(x, "servername", js.undefined)

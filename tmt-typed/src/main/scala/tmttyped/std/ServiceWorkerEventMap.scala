@@ -9,12 +9,13 @@ trait ServiceWorkerEventMap
   extends StObject
      with AbstractWorkerEventMap {
   
-  var statechange: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var statechange: org.scalajs.dom.Event
 }
 object ServiceWorkerEventMap {
   
   @scala.inline
-  def apply(error: org.scalajs.dom.raw.ErrorEvent, statechange: org.scalajs.dom.raw.Event): ServiceWorkerEventMap = {
+  def apply(error: org.scalajs.dom.ErrorEvent, statechange: org.scalajs.dom.Event): ServiceWorkerEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceWorkerEventMap]
   }
@@ -23,6 +24,6 @@ object ServiceWorkerEventMap {
   implicit class ServiceWorkerEventMapMutableBuilder[Self <: ServiceWorkerEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setStatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "statechange", value.asInstanceOf[js.Any])
+    def setStatechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "statechange", value.asInstanceOf[js.Any])
   }
 }

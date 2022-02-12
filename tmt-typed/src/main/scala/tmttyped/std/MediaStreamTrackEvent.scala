@@ -11,5 +11,6 @@ trait MediaStreamTrackEvent
   extends StObject
      with Event {
   
-  val track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack = js.native
+  /* standard DOM */
+  val track: org.scalajs.dom.MediaStreamTrack = js.native
 }

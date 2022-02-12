@@ -7,16 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AudioBufferSourceOptions extends StObject {
   
-  var buffer: js.UndefOr[org.scalajs.dom.raw.AudioBuffer | Null] = js.undefined
+  /* standard DOM */
+  var buffer: js.UndefOr[org.scalajs.dom.AudioBuffer | Null] = js.undefined
   
+  /* standard DOM */
   var detune: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var loop: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var loopEnd: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var loopStart: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var playbackRate: js.UndefOr[Double] = js.undefined
 }
 object AudioBufferSourceOptions {
@@ -31,7 +37,7 @@ object AudioBufferSourceOptions {
   implicit class AudioBufferSourceOptionsMutableBuilder[Self <: AudioBufferSourceOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+    def setBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBufferNull: Self = StObject.set(x, "buffer", null)

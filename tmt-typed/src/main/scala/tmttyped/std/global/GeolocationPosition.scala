@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.DOMTimeStamp
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("GeolocationPosition")
 @js.native
+/* standard DOM */
 class GeolocationPosition ()
   extends StObject
      with tmttyped.std.GeolocationPosition {
   
+  /* standard DOM */
   /* CompleteClass */
   override val coords: tmttyped.std.GeolocationCoordinates = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val timestamp: Double = js.native
+  override val timestamp: DOMTimeStamp = js.native
 }

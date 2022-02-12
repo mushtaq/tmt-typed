@@ -10,12 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TouchList
   extends StObject
-     with /* index */ NumberDictionary[org.scalajs.dom.raw.Touch] {
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.Touch] {
   
-  def item(index: Double): org.scalajs.dom.raw.Touch | Null = js.native
+  /* standard DOM */
+  def item(index: Double): org.scalajs.dom.Touch | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.Touch]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.Touch]] = js.native
   
+  /* standard DOM */
   val length: Double = js.native
 }

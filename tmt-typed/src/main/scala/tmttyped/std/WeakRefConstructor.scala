@@ -13,4 +13,5 @@ trait WeakRefConstructor
   * Creates a WeakRef instance for the given target object.
   * @param target The target object for the WeakRef instance.
   */
+/* standard es2021.weakref */
 Instantiable1[/* target */ js.Object, WeakRef[js.Object]]

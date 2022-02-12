@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EXTSRGB extends StObject {
   
+  /* standard DOM */
   val FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT: GLenum
   
+  /* standard DOM */
   val SRGB8_ALPHA8_EXT: GLenum
   
+  /* standard DOM */
   val SRGB_ALPHA_EXT: GLenum
   
+  /* standard DOM */
   val SRGB_EXT: GLenum
 }
 object EXTSRGB {

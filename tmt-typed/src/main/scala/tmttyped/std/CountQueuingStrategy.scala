@@ -8,18 +8,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** This Streams API interface provides a built-in byte length queuing strategy that can be used when constructing streams. */
 trait CountQueuingStrategy
   extends StObject
-     with QueuingStrategy[js.Any] {
+     with QueuingStrategy[Any] {
   
+  /* standard DOM */
   @JSName("highWaterMark")
   val highWaterMark_CountQueuingStrategy: Double
   
+  /* standard DOM */
   @JSName("size")
-  def size_MCountQueuingStrategy(chunk: js.Any): Double
+  def size_MCountQueuingStrategy(chunk: Any): Double
 }
 object CountQueuingStrategy {
   
   @scala.inline
-  def apply(highWaterMark: Double, size: js.Any => Double): CountQueuingStrategy = {
+  def apply(highWaterMark: Double, size: Any => Double): CountQueuingStrategy = {
     val __obj = js.Dynamic.literal(highWaterMark = highWaterMark.asInstanceOf[js.Any], size = js.Any.fromFunction1(size))
     __obj.asInstanceOf[CountQueuingStrategy]
   }
@@ -31,6 +33,6 @@ object CountQueuingStrategy {
     def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: js.Any => Double): Self = StObject.set(x, "size", js.Any.fromFunction1(value))
+    def setSize(value: Any => Double): Self = StObject.set(x, "size", js.Any.fromFunction1(value))
   }
 }

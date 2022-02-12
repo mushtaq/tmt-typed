@@ -11,6 +11,7 @@ trait IIRFilterNode
   extends StObject
      with AudioNode {
   
+  /* standard DOM */
   def getFrequencyResponse(
     frequencyHz: js.typedarray.Float32Array,
     magResponse: js.typedarray.Float32Array,

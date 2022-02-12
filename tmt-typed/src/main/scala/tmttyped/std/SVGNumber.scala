@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the <number> basic data type. */
 trait SVGNumber extends StObject {
   
+  /* standard DOM */
   var value: Double
 }
 object SVGNumber {

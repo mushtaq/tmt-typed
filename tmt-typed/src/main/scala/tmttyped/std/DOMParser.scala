@@ -17,12 +17,13 @@ trait DOMParser extends StObject {
     *
     * Values other than the above for type will cause a TypeError exception to be thrown.
     */
-  def parseFromString(string: java.lang.String, `type`: DOMParserSupportedType): org.scalajs.dom.raw.Document
+  /* standard DOM */
+  def parseFromString(string: java.lang.String, `type`: DOMParserSupportedType): org.scalajs.dom.Document
 }
 object DOMParser {
   
   @scala.inline
-  def apply(parseFromString: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.raw.Document): DOMParser = {
+  def apply(parseFromString: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): DOMParser = {
     val __obj = js.Dynamic.literal(parseFromString = js.Any.fromFunction2(parseFromString))
     __obj.asInstanceOf[DOMParser]
   }
@@ -31,6 +32,6 @@ object DOMParser {
   implicit class DOMParserMutableBuilder[Self <: DOMParser] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setParseFromString(value: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.raw.Document): Self = StObject.set(x, "parseFromString", js.Any.fromFunction2(value))
+    def setParseFromString(value: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): Self = StObject.set(x, "parseFromString", js.Any.fromFunction2(value))
   }
 }

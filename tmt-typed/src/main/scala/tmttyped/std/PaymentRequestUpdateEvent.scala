@@ -5,12 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** This Payment Request API interface enables a web page to update the details of a PaymentRequest in response to a user action. */
+/**
+  * This Payment Request API interface enables a web page to update the details of a PaymentRequest in response to a user action.
+  * Available only in secure contexts.
+  */
 @js.native
 trait PaymentRequestUpdateEvent
   extends StObject
      with Event {
   
-  def updateWith(detailsPromise: js.Promise[PaymentDetailsUpdate]): Unit = js.native
+  def updateWith(detailsPromise: js.Thenable[PaymentDetailsUpdate]): Unit = js.native
+  /* standard DOM */
   def updateWith(detailsPromise: PaymentDetailsUpdate): Unit = js.native
 }

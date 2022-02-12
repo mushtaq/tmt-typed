@@ -9,12 +9,13 @@ trait RTCDataChannelEventInit
   extends StObject
      with EventInit {
   
-  var channel: org.scalajs.dom.experimental.webrtc.RTCDataChannel
+  /* standard DOM */
+  var channel: org.scalajs.dom.RTCDataChannel
 }
 object RTCDataChannelEventInit {
   
   @scala.inline
-  def apply(channel: org.scalajs.dom.experimental.webrtc.RTCDataChannel): RTCDataChannelEventInit = {
+  def apply(channel: org.scalajs.dom.RTCDataChannel): RTCDataChannelEventInit = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDataChannelEventInit]
   }
@@ -23,6 +24,6 @@ object RTCDataChannelEventInit {
   implicit class RTCDataChannelEventInitMutableBuilder[Self <: RTCDataChannelEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setChannel(value: org.scalajs.dom.experimental.webrtc.RTCDataChannel): Self = StObject.set(x, "channel", value.asInstanceOf[js.Any])
+    def setChannel(value: org.scalajs.dom.RTCDataChannel): Self = StObject.set(x, "channel", value.asInstanceOf[js.Any])
   }
 }

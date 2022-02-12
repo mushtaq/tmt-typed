@@ -9,18 +9,21 @@ trait AudioProcessingEventInit
   extends StObject
      with EventInit {
   
-  var inputBuffer: org.scalajs.dom.raw.AudioBuffer
+  /* standard DOM */
+  var inputBuffer: org.scalajs.dom.AudioBuffer
   
-  var outputBuffer: org.scalajs.dom.raw.AudioBuffer
+  /* standard DOM */
+  var outputBuffer: org.scalajs.dom.AudioBuffer
   
+  /* standard DOM */
   var playbackTime: Double
 }
 object AudioProcessingEventInit {
   
   @scala.inline
   def apply(
-    inputBuffer: org.scalajs.dom.raw.AudioBuffer,
-    outputBuffer: org.scalajs.dom.raw.AudioBuffer,
+    inputBuffer: org.scalajs.dom.AudioBuffer,
+    outputBuffer: org.scalajs.dom.AudioBuffer,
     playbackTime: Double
   ): AudioProcessingEventInit = {
     val __obj = js.Dynamic.literal(inputBuffer = inputBuffer.asInstanceOf[js.Any], outputBuffer = outputBuffer.asInstanceOf[js.Any], playbackTime = playbackTime.asInstanceOf[js.Any])
@@ -31,10 +34,10 @@ object AudioProcessingEventInit {
   implicit class AudioProcessingEventInitMutableBuilder[Self <: AudioProcessingEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setInputBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = StObject.set(x, "inputBuffer", value.asInstanceOf[js.Any])
+    def setInputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "inputBuffer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = StObject.set(x, "outputBuffer", value.asInstanceOf[js.Any])
+    def setOutputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "outputBuffer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPlaybackTime(value: Double): Self = StObject.set(x, "playbackTime", value.asInstanceOf[js.Any])

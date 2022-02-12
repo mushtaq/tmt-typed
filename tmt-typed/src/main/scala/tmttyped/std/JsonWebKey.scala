@@ -7,40 +7,58 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait JsonWebKey extends StObject {
   
+  /* standard DOM */
   var alg: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var crv: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var d: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var dp: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var dq: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var e: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var ext: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var k: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var key_ops: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var kty: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var n: js.UndefOr[java.lang.String] = js.undefined
   
-  var oth: js.UndefOr[js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]] = js.undefined
+  /* standard DOM */
+  var oth: js.UndefOr[js.Array[org.scalajs.dom.RsaOtherPrimesInfo]] = js.undefined
   
+  /* standard DOM */
   var p: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var q: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var qi: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var use: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var x: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var y: js.UndefOr[java.lang.String] = js.undefined
 }
 object JsonWebKey {
@@ -124,13 +142,13 @@ object JsonWebKey {
     def setNUndefined: Self = StObject.set(x, "n", js.undefined)
     
     @scala.inline
-    def setOth(value: js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]): Self = StObject.set(x, "oth", value.asInstanceOf[js.Any])
+    def setOth(value: js.Array[org.scalajs.dom.RsaOtherPrimesInfo]): Self = StObject.set(x, "oth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOthUndefined: Self = StObject.set(x, "oth", js.undefined)
     
     @scala.inline
-    def setOthVarargs(value: org.scalajs.dom.crypto.RsaOtherPrimesInfo*): Self = StObject.set(x, "oth", js.Array(value :_*))
+    def setOthVarargs(value: org.scalajs.dom.RsaOtherPrimesInfo*): Self = StObject.set(x, "oth", js.Array(value :_*))
     
     @scala.inline
     def setP(value: java.lang.String): Self = StObject.set(x, "p", value.asInstanceOf[js.Any])

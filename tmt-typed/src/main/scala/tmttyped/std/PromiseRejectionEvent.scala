@@ -10,7 +10,9 @@ trait PromiseRejectionEvent
   extends StObject
      with Event {
   
-  val promise: js.Promise[js.Any] = js.native
+  /* standard DOM */
+  val promise: js.Promise[Any] = js.native
   
-  val reason: js.Any = js.native
+  /* standard DOM */
+  val reason: Any = js.native
 }

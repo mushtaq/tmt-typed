@@ -1325,10 +1325,10 @@ object constantsMod {
   /** Specifies the active default cipher list used by the current Node.js process  (colon-separated values). */
   @JSImport("constants", "defaultCipherList")
   @js.native
-  val defaultCipherList: java.lang.String = js.native
+  val defaultCipherList: String = js.native
   
   /** Specifies the built-in default cipher list used by Node.js (colon-separated values). */
   @JSImport("constants", "defaultCoreCipherList")
   @js.native
-  val defaultCoreCipherList: java.lang.String = js.native
+  val defaultCoreCipherList: String = js.native
 }

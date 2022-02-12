@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait WEBGLDebugShaders extends StObject {
   
-  def getTranslatedShaderSource(shader: org.scalajs.dom.raw.WebGLShader): java.lang.String
+  /* standard DOM */
+  def getTranslatedShaderSource(shader: org.scalajs.dom.WebGLShader): java.lang.String
 }
 object WEBGLDebugShaders {
   
   @scala.inline
-  def apply(getTranslatedShaderSource: org.scalajs.dom.raw.WebGLShader => java.lang.String): WEBGLDebugShaders = {
+  def apply(getTranslatedShaderSource: org.scalajs.dom.WebGLShader => java.lang.String): WEBGLDebugShaders = {
     val __obj = js.Dynamic.literal(getTranslatedShaderSource = js.Any.fromFunction1(getTranslatedShaderSource))
     __obj.asInstanceOf[WEBGLDebugShaders]
   }
@@ -21,6 +22,6 @@ object WEBGLDebugShaders {
   implicit class WEBGLDebugShadersMutableBuilder[Self <: WEBGLDebugShaders] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setGetTranslatedShaderSource(value: org.scalajs.dom.raw.WebGLShader => java.lang.String): Self = StObject.set(x, "getTranslatedShaderSource", js.Any.fromFunction1(value))
+    def setGetTranslatedShaderSource(value: org.scalajs.dom.WebGLShader => java.lang.String): Self = StObject.set(x, "getTranslatedShaderSource", js.Any.fromFunction1(value))
   }
 }

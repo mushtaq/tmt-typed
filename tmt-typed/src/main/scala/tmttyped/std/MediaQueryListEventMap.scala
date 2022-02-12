@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaQueryListEventMap extends StObject {
   
+  /* standard DOM */
   var change: MediaQueryListEvent
 }
 object MediaQueryListEventMap {

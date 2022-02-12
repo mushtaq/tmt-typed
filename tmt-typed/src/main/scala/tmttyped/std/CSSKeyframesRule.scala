@@ -10,14 +10,19 @@ trait CSSKeyframesRule
   extends StObject
      with CSSRule {
   
+  /* standard DOM */
   def appendRule(rule: java.lang.String): Unit
   
-  val cssRules: org.scalajs.dom.raw.CSSRuleList
+  /* standard DOM */
+  val cssRules: org.scalajs.dom.CSSRuleList
   
+  /* standard DOM */
   def deleteRule(select: java.lang.String): Unit
   
-  def findRule(select: java.lang.String): org.scalajs.dom.raw.CSSKeyframeRule | Null
+  /* standard DOM */
+  def findRule(select: java.lang.String): org.scalajs.dom.CSSKeyframeRule | Null
   
+  /* standard DOM */
   var name: java.lang.String
 }
 object CSSKeyframesRule {
@@ -35,10 +40,10 @@ object CSSKeyframesRule {
     STYLE_RULE: Double,
     SUPPORTS_RULE: Double,
     appendRule: java.lang.String => Unit,
-    cssRules: org.scalajs.dom.raw.CSSRuleList,
+    cssRules: org.scalajs.dom.CSSRuleList,
     cssText: java.lang.String,
     deleteRule: java.lang.String => Unit,
-    findRule: java.lang.String => org.scalajs.dom.raw.CSSKeyframeRule | Null,
+    findRule: java.lang.String => org.scalajs.dom.CSSKeyframeRule | Null,
     name: java.lang.String,
     `type`: Double
   ): CSSKeyframesRule = {
@@ -54,13 +59,13 @@ object CSSKeyframesRule {
     def setAppendRule(value: java.lang.String => Unit): Self = StObject.set(x, "appendRule", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setCssRules(value: org.scalajs.dom.raw.CSSRuleList): Self = StObject.set(x, "cssRules", value.asInstanceOf[js.Any])
+    def setCssRules(value: org.scalajs.dom.CSSRuleList): Self = StObject.set(x, "cssRules", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDeleteRule(value: java.lang.String => Unit): Self = StObject.set(x, "deleteRule", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setFindRule(value: java.lang.String => org.scalajs.dom.raw.CSSKeyframeRule | Null): Self = StObject.set(x, "findRule", js.Any.fromFunction1(value))
+    def setFindRule(value: java.lang.String => org.scalajs.dom.CSSKeyframeRule | Null): Self = StObject.set(x, "findRule", js.Any.fromFunction1(value))
     
     @scala.inline
     def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])

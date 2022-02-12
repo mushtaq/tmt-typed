@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CanvasRect extends StObject {
   
+  /* standard DOM */
   def clearRect(x: Double, y: Double, w: Double, h: Double): Unit
   
+  /* standard DOM */
   def fillRect(x: Double, y: Double, w: Double, h: Double): Unit
   
+  /* standard DOM */
   def strokeRect(x: Double, y: Double, w: Double, h: Double): Unit
 }
 object CanvasRect {

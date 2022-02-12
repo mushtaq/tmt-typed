@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 trait VarDate extends StObject {
   
-  var VarDate_typekey: VarDate
+  /* standard ScriptHost */
+  /* private */ var VarDate_typekey: VarDate
 }
 object VarDate {
   

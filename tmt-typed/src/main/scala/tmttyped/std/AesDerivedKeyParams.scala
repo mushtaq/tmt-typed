@@ -9,6 +9,7 @@ trait AesDerivedKeyParams
   extends StObject
      with Algorithm {
   
+  /* standard DOM */
   var length: Double
 }
 object AesDerivedKeyParams {

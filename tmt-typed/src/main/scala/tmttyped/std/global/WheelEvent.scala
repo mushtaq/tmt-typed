@@ -12,19 +12,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class WheelEvent protected ()
   extends StObject
      with tmttyped.std.WheelEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: WheelEventInit) = this()
 }
 object WheelEvent {
   
+  /* standard DOM */
   @JSGlobal("WheelEvent.DOM_DELTA_LINE")
   @js.native
   val DOM_DELTA_LINE: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("WheelEvent.DOM_DELTA_PAGE")
   @js.native
   val DOM_DELTA_PAGE: Double = js.native
   
+  /* standard DOM */
   @JSGlobal("WheelEvent.DOM_DELTA_PIXEL")
   @js.native
   val DOM_DELTA_PIXEL: Double = js.native

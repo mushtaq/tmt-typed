@@ -16,6 +16,7 @@ class FinalizationRegistry[T] protected ()
     * Creates a finalization registry with an associated cleanup callback
     * @param cleanupCallback The callback to call after an object in the registry has been reclaimed.
     */
+  /* standard es2021.weakref */
   def this(cleanupCallback: js.Function1[/* heldValue */ T, Unit]) = this()
 }
 object FinalizationRegistry {

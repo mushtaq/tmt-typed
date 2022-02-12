@@ -13,8 +13,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<net.Server>`
-  *
   * Accepts encrypted connections using TLS or SSL.
   * @since v0.3.2
   */
@@ -35,7 +33,7 @@ class Server () extends StObject {
     * @param hostname A SNI host name or wildcard (e.g. `'*'`)
     * @param context An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc).
     */
-  def addContext(hostName: String, credentials: SecureContextOptions): Unit = js.native
+  def addContext(hostname: String, context: SecureContextOptions): Unit = js.native
   
   /**
     * events.EventEmitter
@@ -46,7 +44,7 @@ class Server () extends StObject {
     * 5. secureConnection
     * 6. keylog
     */
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_OCSPRequest(
     event: OCSPRequest,
@@ -83,8 +81,8 @@ class Server () extends StObject {
   @JSName("addListener")
   def addListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_OCSPRequest(
     event: OCSPRequest,
@@ -121,7 +119,7 @@ class Server () extends StObject {
     */
   def getTicketKeys(): Buffer = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_OCSPRequest(
     event: OCSPRequest,
@@ -158,7 +156,7 @@ class Server () extends StObject {
   @JSName("on")
   def on_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_OCSPRequest(
     event: OCSPRequest,
@@ -195,7 +193,7 @@ class Server () extends StObject {
   @JSName("once")
   def once_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_OCSPRequest(
     event: OCSPRequest,
@@ -232,7 +230,7 @@ class Server () extends StObject {
   @JSName("prependListener")
   def prependListener_tlsClientError(event: tlsClientError, listener: js.Function2[/* err */ js.Error, /* tlsSocket */ TLSSocket, Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_OCSPRequest(
     event: OCSPRequest,
@@ -275,7 +273,7 @@ class Server () extends StObject {
     * @since v11.0.0
     * @param options An object containing any of the possible properties from the {@link createSecureContext} `options` arguments (e.g. `key`, `cert`, `ca`, etc).
     */
-  def setSecureContext(details: SecureContextOptions): Unit = js.native
+  def setSecureContext(options: SecureContextOptions): Unit = js.native
   
   /**
     * Sets the session ticket keys.

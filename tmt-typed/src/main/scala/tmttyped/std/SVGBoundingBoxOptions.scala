@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait SVGBoundingBoxOptions extends StObject {
   
+  /* standard DOM */
   var clipped: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var fill: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var markers: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var stroke: js.UndefOr[scala.Boolean] = js.undefined
 }
 object SVGBoundingBoxOptions {

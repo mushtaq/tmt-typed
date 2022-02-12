@@ -9,12 +9,13 @@ trait MediaStreamTrackEventInit
   extends StObject
      with EventInit {
   
-  var track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack
+  /* standard DOM */
+  var track: org.scalajs.dom.MediaStreamTrack
 }
 object MediaStreamTrackEventInit {
   
   @scala.inline
-  def apply(track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): MediaStreamTrackEventInit = {
+  def apply(track: org.scalajs.dom.MediaStreamTrack): MediaStreamTrackEventInit = {
     val __obj = js.Dynamic.literal(track = track.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaStreamTrackEventInit]
   }
@@ -23,6 +24,6 @@ object MediaStreamTrackEventInit {
   implicit class MediaStreamTrackEventInitMutableBuilder[Self <: MediaStreamTrackEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setTrack(value: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
+    def setTrack(value: org.scalajs.dom.MediaStreamTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
   }
 }

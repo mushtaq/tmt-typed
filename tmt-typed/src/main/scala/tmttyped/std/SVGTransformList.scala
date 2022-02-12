@@ -1,83 +1,53 @@
 package tmttyped.std
 
+import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The SVGTransformList defines a list of SVGTransform objects. */
-trait SVGTransformList extends StObject {
+@js.native
+trait SVGTransformList
+  extends StObject
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.SVGTransform] {
   
-  def appendItem(newItem: org.scalajs.dom.raw.SVGTransform): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def appendItem(newItem: org.scalajs.dom.SVGTransform): org.scalajs.dom.SVGTransform = js.native
   
-  def clear(): Unit
+  /* standard DOM */
+  def clear(): Unit = js.native
   
-  def consolidate(): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def consolidate(): org.scalajs.dom.SVGTransform | Null = js.native
   
-  def createSVGTransformFromMatrix(matrix: org.scalajs.dom.raw.SVGMatrix): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def createSVGTransformFromMatrix(): org.scalajs.dom.SVGTransform = js.native
+  def createSVGTransformFromMatrix(matrix: DOMMatrix2DInit): org.scalajs.dom.SVGTransform = js.native
   
-  def getItem(index: Double): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def getItem(index: Double): org.scalajs.dom.SVGTransform = js.native
   
-  def initialize(newItem: org.scalajs.dom.raw.SVGTransform): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def initialize(newItem: org.scalajs.dom.SVGTransform): org.scalajs.dom.SVGTransform = js.native
   
-  def insertItemBefore(newItem: org.scalajs.dom.raw.SVGTransform, index: Double): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  def insertItemBefore(newItem: org.scalajs.dom.SVGTransform, index: Double): org.scalajs.dom.SVGTransform = js.native
   
-  val numberOfItems: Double
+  /* standard DOM.Iterable */
+  @JSName(js.Symbol.iterator)
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.SVGTransform]] = js.native
   
-  def removeItem(index: Double): org.scalajs.dom.raw.SVGTransform
+  /* standard DOM */
+  val length: Double = js.native
   
-  def replaceItem(newItem: org.scalajs.dom.raw.SVGTransform, index: Double): org.scalajs.dom.raw.SVGTransform
-}
-object SVGTransformList {
+  /* standard DOM */
+  val numberOfItems: Double = js.native
   
-  @scala.inline
-  def apply(
-    appendItem: org.scalajs.dom.raw.SVGTransform => org.scalajs.dom.raw.SVGTransform,
-    clear: () => Unit,
-    consolidate: () => org.scalajs.dom.raw.SVGTransform,
-    createSVGTransformFromMatrix: org.scalajs.dom.raw.SVGMatrix => org.scalajs.dom.raw.SVGTransform,
-    getItem: Double => org.scalajs.dom.raw.SVGTransform,
-    initialize: org.scalajs.dom.raw.SVGTransform => org.scalajs.dom.raw.SVGTransform,
-    insertItemBefore: (org.scalajs.dom.raw.SVGTransform, Double) => org.scalajs.dom.raw.SVGTransform,
-    numberOfItems: Double,
-    removeItem: Double => org.scalajs.dom.raw.SVGTransform,
-    replaceItem: (org.scalajs.dom.raw.SVGTransform, Double) => org.scalajs.dom.raw.SVGTransform
-  ): SVGTransformList = {
-    val __obj = js.Dynamic.literal(appendItem = js.Any.fromFunction1(appendItem), clear = js.Any.fromFunction0(clear), consolidate = js.Any.fromFunction0(consolidate), createSVGTransformFromMatrix = js.Any.fromFunction1(createSVGTransformFromMatrix), getItem = js.Any.fromFunction1(getItem), initialize = js.Any.fromFunction1(initialize), insertItemBefore = js.Any.fromFunction2(insertItemBefore), numberOfItems = numberOfItems.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), replaceItem = js.Any.fromFunction2(replaceItem))
-    __obj.asInstanceOf[SVGTransformList]
-  }
+  /* standard DOM */
+  def removeItem(index: Double): org.scalajs.dom.SVGTransform = js.native
   
-  @scala.inline
-  implicit class SVGTransformListMutableBuilder[Self <: SVGTransformList] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def setAppendItem(value: org.scalajs.dom.raw.SVGTransform => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "appendItem", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setClear(value: () => Unit): Self = StObject.set(x, "clear", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setConsolidate(value: () => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "consolidate", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setCreateSVGTransformFromMatrix(value: org.scalajs.dom.raw.SVGMatrix => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "createSVGTransformFromMatrix", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setGetItem(value: Double => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "getItem", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setInitialize(value: org.scalajs.dom.raw.SVGTransform => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "initialize", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setInsertItemBefore(value: (org.scalajs.dom.raw.SVGTransform, Double) => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "insertItemBefore", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setNumberOfItems(value: Double): Self = StObject.set(x, "numberOfItems", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRemoveItem(value: Double => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "removeItem", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setReplaceItem(value: (org.scalajs.dom.raw.SVGTransform, Double) => org.scalajs.dom.raw.SVGTransform): Self = StObject.set(x, "replaceItem", js.Any.fromFunction2(value))
-  }
+  /* standard DOM */
+  def replaceItem(newItem: org.scalajs.dom.SVGTransform, index: Double): org.scalajs.dom.SVGTransform = js.native
 }

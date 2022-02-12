@@ -26,5 +26,9 @@ trait CanvasRenderingContext2D
      with CanvasTransform
      with CanvasUserInterface {
   
-  val canvas: org.scalajs.dom.raw.HTMLCanvasElement = js.native
+  /* standard DOM */
+  val canvas: org.scalajs.dom.HTMLCanvasElement = js.native
+  
+  /* standard DOM */
+  def getContextAttributes(): CanvasRenderingContext2DSettings = js.native
 }

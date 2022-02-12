@@ -10,8 +10,10 @@ trait ReadableStreamDefaultReadValueResult[T]
   extends StObject
      with ReadableStreamDefaultReadResult[T] {
   
+  /* standard DOM */
   var done: `false`
   
+  /* standard DOM */
   var value: T
 }
 object ReadableStreamDefaultReadValueResult {

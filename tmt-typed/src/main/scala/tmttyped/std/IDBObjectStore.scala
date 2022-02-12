@@ -18,12 +18,12 @@ trait IDBObjectStore extends StObject {
     *
     * If successful, request's result will be the record's key.
     */
-  def add(value: js.Any): org.scalajs.dom.raw.IDBRequest = js.native
-  def add(value: js.Any, key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def add(value: Any): org.scalajs.dom.IDBRequest[Any, IDBValidKey] = js.native
+  def add(value: Any, key: IDBValidKey): org.scalajs.dom.IDBRequest[Any, IDBValidKey] = js.native
   
-  /**
-    * Returns true if the store has a key generator, and false otherwise.
-    */
+  /** Returns true if the store has a key generator, and false otherwise. */
+  /* standard DOM */
   val autoIncrement: scala.Boolean = js.native
   
   /**
@@ -31,101 +31,108 @@ trait IDBObjectStore extends StObject {
     *
     * If successful, request's result will be undefined.
     */
-  def clear(): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def clear(): org.scalajs.dom.IDBRequest[Any, Unit] = js.native
   
   /**
     * Retrieves the number of records matching the given key or key range in query.
     *
     * If successful, request's result will be the count.
     */
-  def count(): org.scalajs.dom.raw.IDBRequest = js.native
-  def count(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def count(key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def count(): org.scalajs.dom.IDBRequest[Any, Double] = js.native
+  def count(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, Double] = js.native
+  def count(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, Double] = js.native
   
   /**
     * Creates a new index in store with the given name, keyPath and options and returns a new IDBIndex. If the keyPath and options define constraints that cannot be satisfied with the data already in store the upgrade transaction will abort with a "ConstraintError" DOMException.
     *
     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
     */
-  def createIndex(name: java.lang.String, keyPath: java.lang.String): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: java.lang.String, options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String]): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String]): org.scalajs.dom.raw.IDBIndex = js.native
-  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.raw.IDBIndex = js.native
+  /* standard DOM.Iterable */
+  def createIndex(name: java.lang.String, keyPath: java.lang.String): org.scalajs.dom.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: java.lang.String, options: IDBIndexParameters): org.scalajs.dom.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String]): org.scalajs.dom.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Array[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String]): org.scalajs.dom.IDBIndex = js.native
+  def createIndex(name: java.lang.String, keyPath: js.Iterable[java.lang.String], options: IDBIndexParameters): org.scalajs.dom.IDBIndex = js.native
   
-  def delete(key: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def delete(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, Unit] = js.native
   /**
     * Deletes records in store with the given key or in the given key range in query.
     *
     * If successful, request's result will be undefined.
     */
-  def delete(key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def delete(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, Unit] = js.native
   
   /**
     * Deletes the index in store with the given name.
     *
     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
     */
+  /* standard DOM */
   def deleteIndex(name: java.lang.String): Unit = js.native
   
-  def get(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def get(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, Any] = js.native
   /**
     * Retrieves the value of the first record matching the given key or key range in query.
     *
     * If successful, request's result will be the value, or undefined if there was no matching record.
     */
-  def get(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def get(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, Any] = js.native
   
   /**
     * Retrieves the values of the records matching the given key or key range in query (up to count if given).
     *
     * If successful, request's result will be an Array of the values.
     */
-  def getAll(): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: Unit, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAll(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def getAll(): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: org.scalajs.dom.IDBKeyRange, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: Null, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: Unit, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
+  def getAll(query: IDBValidKey, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[Any]] = js.native
   
   /**
     * Retrieves the keys of records matching the given key or key range in query (up to count if given).
     *
     * If successful, request's result will be an Array of the keys.
     */
-  def getAllKeys(): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: org.scalajs.dom.raw.IDBKeyRange, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: Null, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: Unit, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
-  def getAllKeys(query: IDBValidKey, count: Double): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def getAllKeys(): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: org.scalajs.dom.IDBKeyRange, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: Null, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: Unit, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
+  def getAllKeys(query: IDBValidKey, count: Double): org.scalajs.dom.IDBRequest[Any, js.Array[IDBValidKey]] = js.native
   
-  def getKey(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
+  def getKey(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, js.UndefOr[IDBValidKey]] = js.native
   /**
     * Retrieves the key of the first record matching the given key or key range in query.
     *
     * If successful, request's result will be the key, or undefined if there was no matching record.
     */
-  def getKey(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def getKey(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, js.UndefOr[IDBValidKey]] = js.native
   
-  def index(name: java.lang.String): org.scalajs.dom.raw.IDBIndex = js.native
+  /* standard DOM */
+  def index(name: java.lang.String): org.scalajs.dom.IDBIndex = js.native
   
-  /**
-    * Returns a list of the names of indexes in the store.
-    */
-  val indexNames: org.scalajs.dom.raw.DOMStringList = js.native
+  /** Returns a list of the names of indexes in the store. */
+  /* standard DOM */
+  val indexNames: org.scalajs.dom.DOMStringList = js.native
   
-  /**
-    * Returns the key path of the store, or null if none.
-    */
+  /** Returns the key path of the store, or null if none. */
+  /* standard DOM */
   val keyPath: java.lang.String | js.Array[java.lang.String] = js.native
   
-  /**
-    * Returns the name of the store.
-    */
+  /** Returns the name of the store. */
+  /* standard DOM */
   var name: java.lang.String = js.native
   
   /**
@@ -133,26 +140,28 @@ trait IDBObjectStore extends StObject {
     *
     * If successful, request's result will be an IDBCursorWithValue pointing at the first matching record, or null if there were no matching records.
     */
-  def openCursor(): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: Unit, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
-  def openCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def openCursor(): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: org.scalajs.dom.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: Unit, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
+  def openCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursorWithValue[Any] | Null] = js.native
   
   /**
     * Opens a cursor with key only flag set over the records matching query, ordered by direction. If query is null, all records in store are matched.
     *
     * If successful, request's result will be an IDBCursor pointing at the first matching record, or null if there were no matching records.
     */
-  def openKeyCursor(): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: org.scalajs.dom.raw.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: Unit, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
-  def openKeyCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def openKeyCursor(): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: org.scalajs.dom.IDBKeyRange): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: org.scalajs.dom.IDBKeyRange, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: Null, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: Unit, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: IDBValidKey): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
+  def openKeyCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.IDBRequest[Any, org.scalajs.dom.IDBCursor[Any] | Null] = js.native
   
   /**
     * Adds or updates a record in store with the given value and key.
@@ -163,11 +172,11 @@ trait IDBObjectStore extends StObject {
     *
     * If successful, request's result will be the record's key.
     */
-  def put(value: js.Any): org.scalajs.dom.raw.IDBRequest = js.native
-  def put(value: js.Any, key: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
+  /* standard DOM */
+  def put(value: Any): org.scalajs.dom.IDBRequest[Any, IDBValidKey] = js.native
+  def put(value: Any, key: IDBValidKey): org.scalajs.dom.IDBRequest[Any, IDBValidKey] = js.native
   
-  /**
-    * Returns the associated transaction.
-    */
-  val transaction: org.scalajs.dom.raw.IDBTransaction = js.native
+  /** Returns the associated transaction. */
+  /* standard DOM */
+  val transaction: org.scalajs.dom.IDBTransaction = js.native
 }

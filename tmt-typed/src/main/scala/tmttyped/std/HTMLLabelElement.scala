@@ -11,6 +11,7 @@ trait HTMLLabelElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,25 +23,26 @@ trait HTMLLabelElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val control: org.scalajs.dom.raw.HTMLElement | Null = js.native
+  /** Returns the form control that is associated with this element. */
+  /* standard DOM */
+  val control: org.scalajs.dom.HTMLElement | Null = js.native
   
-  /**
-    * Retrieves a reference to the form that the object is embedded in.
-    */
-  val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
+  /** Retrieves a reference to the form that the object is embedded in. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
-  /**
-    * Sets or retrieves the object to which the given label object is assigned.
-    */
+  /** Sets or retrieves the object to which the given label object is assigned. */
+  /* standard DOM */
   var htmlFor: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

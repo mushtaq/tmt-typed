@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WritableStreamDefaultController extends StObject {
   
+  /* standard DOM */
   def error(): Unit = js.native
-  def error(e: js.Any): Unit = js.native
+  def error(e: Any): Unit = js.native
 }

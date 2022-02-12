@@ -11,6 +11,7 @@ trait HTMLMapElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,23 +23,22 @@ trait HTMLMapElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Retrieves a collection of the area objects defined for the given map object.
-    */
-  val areas: org.scalajs.dom.raw.HTMLCollection = js.native
+  /** Retrieves a collection of the area objects defined for the given map object. */
+  /* standard DOM */
+  val areas: org.scalajs.dom.HTMLCollection[Any] = js.native
   
-  /**
-    * Sets or retrieves the name of the object.
-    */
+  /** Sets or retrieves the name of the object. */
+  /* standard DOM */
   var name: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit
+import org.scalajs.dom.RTCPeerConnectionIceEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RTCPeerConnectionIceEvent protected ()
   extends StObject
      with tmttyped.std.RTCPeerConnectionIceEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: RTCPeerConnectionIceEventInit) = this()
 }

@@ -26,8 +26,8 @@ object nodeAsyncHooksMod {
     * logged within each request.
     *
     * ```js
-    * const http = require('http');
-    * const { AsyncLocalStorage } = require('async_hooks');
+    * import http from 'http';
+    * import { AsyncLocalStorage } from 'async_hooks';
     *
     * const asyncLocalStorage = new AsyncLocalStorage();
     *
@@ -77,7 +77,7 @@ object nodeAsyncHooksMod {
     * The following is an overview of the `AsyncResource` API.
     *
     * ```js
-    * const { AsyncResource, executionAsyncId } = require('async_hooks');
+    * import { AsyncResource, executionAsyncId } from 'async_hooks';
     *
     * // AsyncResource() is meant to be extended. Instantiating a
     * // new AsyncResource() also triggers init. If triggerAsyncId is omitted then
@@ -117,9 +117,9 @@ object nodeAsyncHooksMod {
       *   this async event (default: `executionAsyncId()`), or an
       *   AsyncResourceOptions object (since 9.3)
       */
-    def this(`type`: java.lang.String) = this()
-    def this(`type`: java.lang.String, triggerAsyncId: Double) = this()
-    def this(`type`: java.lang.String, triggerAsyncId: AsyncResourceOptions) = this()
+    def this(`type`: String) = this()
+    def this(`type`: String, triggerAsyncId: Double) = this()
+    def this(`type`: String, triggerAsyncId: AsyncResourceOptions) = this()
   }
   object AsyncResource {
     
@@ -138,13 +138,13 @@ object nodeAsyncHooksMod {
       */
     /* static member */
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func): Func with tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func): Func with tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: java.lang.String): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: java.lang.String, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
   }
   
   /**
@@ -159,9 +159,9 @@ object nodeAsyncHooksMod {
     * specifics of all functions that can be passed to `callbacks` is in the `Hook Callbacks` section.
     *
     * ```js
-    * const async_hooks = require('async_hooks');
+    * import { createHook } from 'async_hooks';
     *
-    * const asyncHook = async_hooks.createHook({
+    * const asyncHook = createHook({
     *   init(asyncId, type, triggerAsyncId, resource) { },
     *   destroy(asyncId) { }
     * });
@@ -190,15 +190,15 @@ object nodeAsyncHooksMod {
     * @return Instance used for disabling and enabling hooks
     */
   @scala.inline
-  def createHook(options: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(options.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
+  def createHook(callbacks: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(callbacks.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
   
   /**
     * ```js
-    * const async_hooks = require('async_hooks');
+    * import { executionAsyncId } from 'async_hooks';
     *
-    * console.log(async_hooks.executionAsyncId());  // 1 - bootstrap
+    * console.log(executionAsyncId());  // 1 - bootstrap
     * fs.open(path, 'r', (err, fd) => {
-    *   console.log(async_hooks.executionAsyncId());  // 6 - open()
+    *   console.log(executionAsyncId());  // 6 - open()
     * });
     * ```
     *
@@ -236,11 +236,11 @@ object nodeAsyncHooksMod {
     * but having an object representing the top-level can be helpful.
     *
     * ```js
-    * const { open } = require('fs');
-    * const { executionAsyncId, executionAsyncResource } = require('async_hooks');
+    * import { open } from 'fs';
+    * import { executionAsyncId, executionAsyncResource } from 'async_hooks';
     *
     * console.log(executionAsyncId(), executionAsyncResource());  // 1 {}
-    * open(__filename, 'r', (err, fd) => {
+    * open(new URL(import.meta.url), 'r', (err, fd) => {
     *   console.log(executionAsyncId(), executionAsyncResource());  // 7 FSReqWrap
     * });
     * ```
@@ -249,12 +249,12 @@ object nodeAsyncHooksMod {
     * use of a tracking `Map` to store the metadata:
     *
     * ```js
-    * const { createServer } = require('http');
-    * const {
+    * import { createServer } from 'http';
+    * import {
     *   executionAsyncId,
     *   executionAsyncResource,
     *   createHook
-    * } = require('async_hooks');
+    * } from 'async_hooks';
     * const sym = Symbol('state'); // Private symbol to avoid pollution
     *
     * createHook({

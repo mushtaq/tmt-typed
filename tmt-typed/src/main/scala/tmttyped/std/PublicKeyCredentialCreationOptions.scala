@@ -7,22 +7,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PublicKeyCredentialCreationOptions extends StObject {
   
+  /* standard DOM */
   var attestation: js.UndefOr[AttestationConveyancePreference] = js.undefined
   
+  /* standard DOM */
   var authenticatorSelection: js.UndefOr[AuthenticatorSelectionCriteria] = js.undefined
   
+  /* standard DOM */
   var challenge: BufferSource
   
+  /* standard DOM */
   var excludeCredentials: js.UndefOr[js.Array[PublicKeyCredentialDescriptor]] = js.undefined
   
+  /* standard DOM */
   var extensions: js.UndefOr[AuthenticationExtensionsClientInputs] = js.undefined
   
+  /* standard DOM */
   var pubKeyCredParams: js.Array[PublicKeyCredentialParameters]
   
+  /* standard DOM */
   var rp: PublicKeyCredentialRpEntity
   
+  /* standard DOM */
   var timeout: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var user: PublicKeyCredentialUserEntity
 }
 object PublicKeyCredentialCreationOptions {

@@ -14,6 +14,7 @@ object WScript {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard ScriptHost */
   @JSGlobal("WScript.Arguments")
   @js.native
   def Arguments: Length = js.native
@@ -23,6 +24,7 @@ object WScript {
   /**
     * The Windows Script Host build version number.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.BuildVersion")
   @js.native
   def BuildVersion: Double = js.native
@@ -32,35 +34,40 @@ object WScript {
   /**
     * Connects a COM object's event sources to functions named with a given prefix, in the form prefix_event.
     */
+  /* standard ScriptHost */
   @scala.inline
-  def ConnectObject(objEventSource: js.Any, strPrefix: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ConnectObject")(objEventSource.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  def ConnectObject(objEventSource: Any, strPrefix: java.lang.String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ConnectObject")(objEventSource.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Creates a COM object.
     * @param strProgiID
     * @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
     */
+  /* standard ScriptHost */
   @scala.inline
-  def CreateObject(strProgID: java.lang.String): js.Any = ^.asInstanceOf[js.Dynamic].applyDynamic("CreateObject")(strProgID.asInstanceOf[js.Any]).asInstanceOf[js.Any]
+  def CreateObject(strProgID: java.lang.String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("CreateObject")(strProgID.asInstanceOf[js.Any]).asInstanceOf[Any]
   @scala.inline
-  def CreateObject(strProgID: java.lang.String, strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("CreateObject")(strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def CreateObject(strProgID: java.lang.String, strPrefix: java.lang.String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("CreateObject")(strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * Disconnects a COM object from its event sources.
     */
+  /* standard ScriptHost */
   @scala.inline
-  def DisconnectObject(obj: js.Any): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("DisconnectObject")(obj.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def DisconnectObject(obj: Any): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("DisconnectObject")(obj.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Outputs text to either a message box (under WScript.exe) or the command console window followed by
     * a newline (under CScript.exe).
     */
+  /* standard ScriptHost */
   @scala.inline
-  def Echo(s: js.Any): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("Echo")(s.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def Echo(s: Any): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("Echo")(s.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Fully qualified path of the host executable.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.FullName")
   @js.native
   def FullName: java.lang.String = js.native
@@ -74,18 +81,20 @@ object WScript {
     * @param strProgID
     * @param strPrefix Function names in the form prefix_event will be bound to this object's COM events.
     */
+  /* standard ScriptHost */
   @scala.inline
-  def GetObject(strPathname: java.lang.String): js.Any = ^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any]).asInstanceOf[js.Any]
+  def GetObject(strPathname: java.lang.String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any]).asInstanceOf[Any]
   @scala.inline
-  def GetObject(strPathname: java.lang.String, strProgID: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def GetObject(strPathname: java.lang.String, strProgID: java.lang.String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any])).asInstanceOf[Any]
   @scala.inline
-  def GetObject(strPathname: java.lang.String, strProgID: java.lang.String, strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def GetObject(strPathname: java.lang.String, strProgID: java.lang.String, strPrefix: java.lang.String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[Any]
   @scala.inline
-  def GetObject(strPathname: java.lang.String, strProgID: Unit, strPrefix: java.lang.String): js.Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[js.Any]
+  def GetObject(strPathname: java.lang.String, strProgID: Unit, strPrefix: java.lang.String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("GetObject")(strPathname.asInstanceOf[js.Any], strProgID.asInstanceOf[js.Any], strPrefix.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * Gets/sets the script mode - interactive(true) or batch(false).
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.Interactive")
   @js.native
   def Interactive: scala.Boolean = js.native
@@ -95,6 +104,7 @@ object WScript {
   /**
     * The name of the host executable (WScript.exe or CScript.exe).
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.Name")
   @js.native
   def Name: java.lang.String = js.native
@@ -104,6 +114,7 @@ object WScript {
   /**
     * Path of the directory containing the host executable.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.Path")
   @js.native
   def Path: java.lang.String = js.native
@@ -113,6 +124,7 @@ object WScript {
   /**
     * Forces the script to stop immediately, with an optional exit code.
     */
+  /* standard ScriptHost */
   @scala.inline
   def Quit(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("Quit")().asInstanceOf[Double]
   @scala.inline
@@ -121,6 +133,7 @@ object WScript {
   /**
     *  The full path of the currently running script.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.ScriptFullName")
   @js.native
   def ScriptFullName: java.lang.String = js.native
@@ -130,6 +143,7 @@ object WScript {
   /**
     * The filename of the currently running script.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.ScriptName")
   @js.native
   def ScriptName: java.lang.String = js.native
@@ -140,6 +154,7 @@ object WScript {
     * Suspends script execution for a specified length of time, then continues execution.
     * @param intTime Interval (in milliseconds) to suspend script execution.
     */
+  /* standard ScriptHost */
   @scala.inline
   def Sleep(intTime: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("Sleep")(intTime.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
@@ -147,6 +162,7 @@ object WScript {
     * Exposes the write-only error output stream for the current script.
     * Can be accessed only while using CScript.exe.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.StdErr")
   @js.native
   def StdErr: TextStreamWriter = js.native
@@ -157,6 +173,7 @@ object WScript {
     * Exposes the read-only input stream for the current script.
     * Can be accessed only while using CScript.exe.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.StdIn")
   @js.native
   def StdIn: TextStreamReader = js.native
@@ -167,6 +184,7 @@ object WScript {
     * Exposes the write-only output stream for the current script.
     * Can be accessed only while using CScript.exe.
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.StdOut")
   @js.native
   def StdOut: TextStreamWriter = js.native
@@ -176,6 +194,7 @@ object WScript {
   /**
     * Windows Script Host version
     */
+  /* standard ScriptHost */
   @JSGlobal("WScript.Version")
   @js.native
   def Version: java.lang.String = js.native

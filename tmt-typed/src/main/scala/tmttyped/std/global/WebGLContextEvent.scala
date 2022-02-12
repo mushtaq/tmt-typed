@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class WebGLContextEvent protected ()
   extends StObject
      with tmttyped.std.WebGLContextEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInit: WebGLContextEventInit) = this()
 }

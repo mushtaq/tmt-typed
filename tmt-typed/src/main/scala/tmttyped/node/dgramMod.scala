@@ -42,7 +42,7 @@ object dgramMod {
       * 4. listening
       * 5. message
       */
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
@@ -66,8 +66,9 @@ object dgramMod {
       * When sharing a UDP socket across multiple `cluster` workers, the`socket.addMembership()` function must be called only once or an`EADDRINUSE` error will occur:
       *
       * ```js
-      * const cluster = require('cluster');
-      * const dgram = require('dgram');
+      * import cluster from 'cluster';
+      * import dgram from 'dgram';
+      *
       * if (cluster.isPrimary) {
       *   cluster.fork(); // Works ok.
       *   cluster.fork(); // Fails with EADDRINUSE.
@@ -80,8 +81,8 @@ object dgramMod {
       * ```
       * @since v0.6.9
       */
-    def addMembership(multicastAddress: java.lang.String): Unit = js.native
-    def addMembership(multicastAddress: java.lang.String, multicastInterface: java.lang.String): Unit = js.native
+    def addMembership(multicastAddress: String): Unit = js.native
+    def addMembership(multicastAddress: String, multicastInterface: String): Unit = js.native
     
     /**
       * Tells the kernel to join a source-specific multicast channel at the given`sourceAddress` and `groupAddress`, using the `multicastInterface` with the`IP_ADD_SOURCE_MEMBERSHIP` socket
@@ -93,12 +94,8 @@ object dgramMod {
       * port, listening on all interfaces.
       * @since v13.1.0, v12.16.0
       */
-    def addSourceSpecificMembership(sourceAddress: java.lang.String, groupAddress: java.lang.String): Unit = js.native
-    def addSourceSpecificMembership(
-      sourceAddress: java.lang.String,
-      groupAddress: java.lang.String,
-      multicastInterface: java.lang.String
-    ): Unit = js.native
+    def addSourceSpecificMembership(sourceAddress: String, groupAddress: String): Unit = js.native
+    def addSourceSpecificMembership(sourceAddress: String, groupAddress: String, multicastInterface: String): Unit = js.native
     
     /**
       * Returns an object containing the address information for a socket.
@@ -129,7 +126,8 @@ object dgramMod {
       * Example of a UDP server listening on port 41234:
       *
       * ```js
-      * const dgram = require('dgram');
+      * import dgram from 'dgram';
+      *
       * const server = dgram.createSocket('udp4');
       *
       * server.on('error', (err) => {
@@ -152,19 +150,19 @@ object dgramMod {
       * @since v0.1.99
       * @param callback with no parameters. Called when binding is complete.
       */
-    def bind(): Unit = js.native
-    def bind(callback: js.Function0[Unit]): Unit = js.native
-    def bind(options: BindOptions): Unit = js.native
-    def bind(options: BindOptions, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Double): Unit = js.native
-    def bind(port: Double, address: java.lang.String): Unit = js.native
-    def bind(port: Double, address: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Double, address: Unit, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Double, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Unit, address: java.lang.String): Unit = js.native
-    def bind(port: Unit, address: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Unit, address: Unit, callback: js.Function0[Unit]): Unit = js.native
-    def bind(port: Unit, callback: js.Function0[Unit]): Unit = js.native
+    def bind(): this.type = js.native
+    def bind(callback: js.Function0[Unit]): this.type = js.native
+    def bind(options: BindOptions): this.type = js.native
+    def bind(options: BindOptions, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Double): this.type = js.native
+    def bind(port: Double, address: String): this.type = js.native
+    def bind(port: Double, address: String, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Double, address: Unit, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Double, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Unit, address: String): this.type = js.native
+    def bind(port: Unit, address: String, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Unit, address: Unit, callback: js.Function0[Unit]): this.type = js.native
+    def bind(port: Unit, callback: js.Function0[Unit]): this.type = js.native
     
     /**
       * Close the underlying socket and stop listening for data on it. If a callback is
@@ -172,8 +170,8 @@ object dgramMod {
       * @since v0.1.99
       * @param callback Called when the socket has been closed.
       */
-    def close(): Unit = js.native
-    def close(callback: js.Function0[Unit]): Unit = js.native
+    def close(): this.type = js.native
+    def close(callback: js.Function0[Unit]): this.type = js.native
     
     /**
       * Associates the `dgram.Socket` to a remote address and port. Every
@@ -189,8 +187,8 @@ object dgramMod {
       * @param callback Called when the connection is completed or on error.
       */
     def connect(port: Double): Unit = js.native
-    def connect(port: Double, address: java.lang.String): Unit = js.native
-    def connect(port: Double, address: java.lang.String, callback: js.Function0[Unit]): Unit = js.native
+    def connect(port: Double, address: String): Unit = js.native
+    def connect(port: Double, address: String, callback: js.Function0[Unit]): Unit = js.native
     def connect(port: Double, address: Unit, callback: js.Function0[Unit]): Unit = js.native
     def connect(port: Double, callback: js.Function0[Unit]): Unit = js.native
     
@@ -211,8 +209,8 @@ object dgramMod {
       * drop membership on all valid interfaces.
       * @since v0.6.9
       */
-    def dropMembership(multicastAddress: java.lang.String): Unit = js.native
-    def dropMembership(multicastAddress: java.lang.String, multicastInterface: java.lang.String): Unit = js.native
+    def dropMembership(multicastAddress: String): Unit = js.native
+    def dropMembership(multicastAddress: String, multicastInterface: String): Unit = js.native
     
     /**
       * Instructs the kernel to leave a source-specific multicast channel at the given`sourceAddress` and `groupAddress` using the `IP_DROP_SOURCE_MEMBERSHIP`socket option. This method is
@@ -224,15 +222,11 @@ object dgramMod {
       * drop membership on all valid interfaces.
       * @since v13.1.0, v12.16.0
       */
-    def dropSourceSpecificMembership(sourceAddress: java.lang.String, groupAddress: java.lang.String): Unit = js.native
-    def dropSourceSpecificMembership(
-      sourceAddress: java.lang.String,
-      groupAddress: java.lang.String,
-      multicastInterface: java.lang.String
-    ): Unit = js.native
+    def dropSourceSpecificMembership(sourceAddress: String, groupAddress: String): Unit = js.native
+    def dropSourceSpecificMembership(sourceAddress: String, groupAddress: String, multicastInterface: String): Unit = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
@@ -258,7 +252,7 @@ object dgramMod {
       */
     def getSendBufferSize(): Double = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -270,7 +264,7 @@ object dgramMod {
     @JSName("on")
     def on_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -282,7 +276,7 @@ object dgramMod {
     @JSName("once")
     def once_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -294,7 +288,7 @@ object dgramMod {
     @JSName("prependListener")
     def prependListener_message(event: message, listener: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -347,7 +341,7 @@ object dgramMod {
       *
       * The `address` argument is a string. If the value of `address` is a host name,
       * DNS will be used to resolve the address of the host. If `address` is not
-      * provided or otherwise falsy, `'127.0.0.1'` (for `udp4` sockets) or `'::1'`(for `udp6` sockets) will be used by default.
+      * provided or otherwise nullish, `'127.0.0.1'` (for `udp4` sockets) or `'::1'`(for `udp6` sockets) will be used by default.
       *
       * If the socket has not been previously bound with a call to `bind`, the socket
       * is assigned a random port number and is bound to the "all interfaces" address
@@ -371,7 +365,9 @@ object dgramMod {
       * Example of sending a UDP packet to a port on `localhost`;
       *
       * ```js
-      * const dgram = require('dgram');
+      * import dgram from 'dgram';
+      * import { Buffer } from 'buffer';
+      *
       * const message = Buffer.from('Some bytes');
       * const client = dgram.createSocket('udp4');
       * client.send(message, 41234, 'localhost', (err) => {
@@ -382,7 +378,9 @@ object dgramMod {
       * Example of sending a UDP packet composed of multiple buffers to a port on`127.0.0.1`;
       *
       * ```js
-      * const dgram = require('dgram');
+      * import dgram from 'dgram';
+      * import { Buffer } from 'buffer';
+      *
       * const buf1 = Buffer.from('Some ');
       * const buf2 = Buffer.from('bytes');
       * const client = dgram.createSocket('udp4');
@@ -399,7 +397,9 @@ object dgramMod {
       * Example of sending a UDP packet using a socket connected to a port on`localhost`:
       *
       * ```js
-      * const dgram = require('dgram');
+      * import dgram from 'dgram';
+      * import { Buffer } from 'buffer';
+      *
       * const message = Buffer.from('Some bytes');
       * const client = dgram.createSocket('udp4');
       * client.connect(41234, 'localhost', (err) => {
@@ -416,30 +416,27 @@ object dgramMod {
       * @param address Destination host name or IP address.
       * @param callback Called when the message has been sent.
       */
-    def send(msg: java.lang.String): Unit = js.native
+    def send(msg: String): Unit = js.native
+    def send(msg: String, callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
+    def send(msg: String, offset: Double, length: Double): Unit = js.native
     def send(
-      msg: java.lang.String,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(msg: java.lang.String, offset: Double, length: Double): Unit = js.native
-    def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
-    def send(msg: java.lang.String, offset: Double, length: Double, port: Double): Unit = js.native
-    def send(msg: java.lang.String, offset: Double, length: Double, port: Double, address: java.lang.String): Unit = js.native
+    def send(msg: String, offset: Double, length: Double, port: Double): Unit = js.native
+    def send(msg: String, offset: Double, length: Double, port: Double, address: String): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Double,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Double,
@@ -447,23 +444,23 @@ object dgramMod {
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Double,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
-    def send(msg: java.lang.String, offset: Double, length: Double, port: Unit, address: java.lang.String): Unit = js.native
+    def send(msg: String, offset: Double, length: Double, port: Unit, address: String): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Unit,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Unit,
@@ -471,88 +468,85 @@ object dgramMod {
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       offset: Double,
       length: Double,
       port: Unit,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
-    def send(msg: java.lang.String, port: Double): Unit = js.native
-    def send(msg: java.lang.String, port: Double, address: java.lang.String): Unit = js.native
+    def send(msg: String, port: Double): Unit = js.native
+    def send(msg: String, port: Double, address: String): Unit = js.native
     def send(
-      msg: java.lang.String,
+      msg: String,
       port: Double,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: java.lang.String,
-      port: Double,
-      address: Unit,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(
-      msg: java.lang.String,
-      port: Double,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(msg: java.lang.String, port: Unit, address: java.lang.String): Unit = js.native
-    def send(
-      msg: java.lang.String,
-      port: Unit,
-      address: java.lang.String,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(
-      msg: java.lang.String,
-      port: Unit,
-      address: Unit,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(
-      msg: java.lang.String,
-      port: Unit,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(msg: js.Array[js.Any]): Unit = js.native
-    def send(
-      msg: js.Array[js.Any],
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(msg: js.Array[js.Any], port: Double): Unit = js.native
-    def send(msg: js.Array[js.Any], port: Double, address: java.lang.String): Unit = js.native
-    def send(
-      msg: js.Array[js.Any],
-      port: Double,
-      address: java.lang.String,
-      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
-    ): Unit = js.native
-    def send(
-      msg: js.Array[js.Any],
+      msg: String,
       port: Double,
       address: Unit,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: js.Array[js.Any],
+      msg: String,
       port: Double,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
-    def send(msg: js.Array[js.Any], port: Unit, address: java.lang.String): Unit = js.native
+    def send(msg: String, port: Unit, address: String): Unit = js.native
     def send(
-      msg: js.Array[js.Any],
+      msg: String,
       port: Unit,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: js.Array[js.Any],
+      msg: String,
       port: Unit,
       address: Unit,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
-      msg: js.Array[js.Any],
+      msg: String,
+      port: Unit,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(msg: js.Array[Any]): Unit = js.native
+    def send(msg: js.Array[Any], callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]): Unit = js.native
+    def send(msg: js.Array[Any], port: Double): Unit = js.native
+    def send(msg: js.Array[Any], port: Double, address: String): Unit = js.native
+    def send(
+      msg: js.Array[Any],
+      port: Double,
+      address: String,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(
+      msg: js.Array[Any],
+      port: Double,
+      address: Unit,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(
+      msg: js.Array[Any],
+      port: Double,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(msg: js.Array[Any], port: Unit, address: String): Unit = js.native
+    def send(
+      msg: js.Array[Any],
+      port: Unit,
+      address: String,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(
+      msg: js.Array[Any],
+      port: Unit,
+      address: Unit,
+      callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
+    ): Unit = js.native
+    def send(
+      msg: js.Array[Any],
       port: Unit,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
@@ -569,19 +563,13 @@ object dgramMod {
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double): Unit = js.native
+    def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Double, address: String): Unit = js.native
     def send(
       msg: js.typedarray.Uint8Array,
       offset: Double,
       length: Double,
       port: Double,
-      address: java.lang.String
-    ): Unit = js.native
-    def send(
-      msg: js.typedarray.Uint8Array,
-      offset: Double,
-      length: Double,
-      port: Double,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
@@ -599,19 +587,13 @@ object dgramMod {
       port: Double,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
+    def send(msg: js.typedarray.Uint8Array, offset: Double, length: Double, port: Unit, address: String): Unit = js.native
     def send(
       msg: js.typedarray.Uint8Array,
       offset: Double,
       length: Double,
       port: Unit,
-      address: java.lang.String
-    ): Unit = js.native
-    def send(
-      msg: js.typedarray.Uint8Array,
-      offset: Double,
-      length: Double,
-      port: Unit,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
@@ -630,11 +612,11 @@ object dgramMod {
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(msg: js.typedarray.Uint8Array, port: Double): Unit = js.native
-    def send(msg: js.typedarray.Uint8Array, port: Double, address: java.lang.String): Unit = js.native
+    def send(msg: js.typedarray.Uint8Array, port: Double, address: String): Unit = js.native
     def send(
       msg: js.typedarray.Uint8Array,
       port: Double,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
@@ -648,11 +630,11 @@ object dgramMod {
       port: Double,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
-    def send(msg: js.typedarray.Uint8Array, port: Unit, address: java.lang.String): Unit = js.native
+    def send(msg: js.typedarray.Uint8Array, port: Unit, address: String): Unit = js.native
     def send(
       msg: js.typedarray.Uint8Array,
       port: Unit,
-      address: java.lang.String,
+      address: String,
       callback: js.Function2[/* error */ js.Error | Null, /* bytes */ Double, Unit]
     ): Unit = js.native
     def send(
@@ -677,7 +659,7 @@ object dgramMod {
     def setBroadcast(flag: Boolean): Unit = js.native
     
     /**
-      * _All references to scope in this section are referring to[IPv6 Zone Indices](https://en.wikipedia.org/wiki/IPv6_address#Scoped_literal_IPv6_addresses), which are defined by [RFC
+      * _All references to scope in this section are referring to [IPv6 Zone Indices](https://en.wikipedia.org/wiki/IPv6_address#Scoped_literal_IPv6_addresses), which are defined by [RFC
       * 4007](https://tools.ietf.org/html/rfc4007). In string form, an IP_
       * _with a scope index is written as `'IP%scope'` where scope is an interface name_
       * _or interface number._
@@ -733,7 +715,7 @@ object dgramMod {
       * ```
       * @since v8.6.0
       */
-    def setMulticastInterface(multicastInterface: java.lang.String): Unit = js.native
+    def setMulticastInterface(multicastInterface: String): Unit = js.native
     
     /**
       * Sets or clears the `IP_MULTICAST_LOOP` socket option. When set to `true`,
@@ -742,7 +724,7 @@ object dgramMod {
       * This method throws `EBADF` if called on an unbound socket.
       * @since v0.3.8
       */
-    def setMulticastLoopback(flag: Boolean): Unit = js.native
+    def setMulticastLoopback(flag: Boolean): Boolean = js.native
     
     /**
       * Sets the `IP_MULTICAST_TTL` socket option. While TTL generally stands for
@@ -756,7 +738,7 @@ object dgramMod {
       * This method throws `EBADF` if called on an unbound socket.
       * @since v0.3.8
       */
-    def setMulticastTTL(ttl: Double): Unit = js.native
+    def setMulticastTTL(ttl: Double): Double = js.native
     
     /**
       * Sets the `SO_RCVBUF` socket option. Sets the maximum socket receive buffer
@@ -789,7 +771,7 @@ object dgramMod {
       * This method throws `EBADF` if called on an unbound socket.
       * @since v0.1.101
       */
-    def setTTL(ttl: Double): Unit = js.native
+    def setTTL(ttl: Double): Double = js.native
     
     /**
       * By default, binding a socket will cause it to block the Node.js process from
@@ -841,7 +823,7 @@ object dgramMod {
   
   trait BindOptions extends StObject {
     
-    var address: js.UndefOr[java.lang.String] = js.undefined
+    var address: js.UndefOr[String] = js.undefined
     
     var exclusive: js.UndefOr[Boolean] = js.undefined
     
@@ -861,7 +843,7 @@ object dgramMod {
     implicit class BindOptionsMutableBuilder[Self <: BindOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
@@ -888,7 +870,7 @@ object dgramMod {
   
   trait RemoteInfo extends StObject {
     
-    var address: java.lang.String
+    var address: String
     
     var family: IPv4 | IPv6
     
@@ -899,7 +881,7 @@ object dgramMod {
   object RemoteInfo {
     
     @scala.inline
-    def apply(address: java.lang.String, family: IPv4 | IPv6, port: Double, size: Double): RemoteInfo = {
+    def apply(address: String, family: IPv4 | IPv6, port: Double, size: Double): RemoteInfo = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
       __obj.asInstanceOf[RemoteInfo]
     }
@@ -908,7 +890,7 @@ object dgramMod {
     implicit class RemoteInfoMutableBuilder[Self <: RemoteInfo] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setFamily(value: IPv4 | IPv6): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
@@ -932,14 +914,9 @@ object dgramMod {
     
     var lookup: js.UndefOr[
         js.Function3[
-          /* hostname */ java.lang.String, 
+          /* hostname */ String, 
           /* options */ LookupOneOptions, 
-          /* callback */ js.Function3[
-            /* err */ ErrnoException | Null, 
-            /* address */ java.lang.String, 
-            /* family */ Double, 
-            Unit
-          ], 
+          /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit], 
           Unit
         ]
       ] = js.undefined
@@ -972,12 +949,7 @@ object dgramMod {
       
       @scala.inline
       def setLookup(
-        value: (/* hostname */ java.lang.String, /* options */ LookupOneOptions, /* callback */ js.Function3[
-              /* err */ ErrnoException | Null, 
-              /* address */ java.lang.String, 
-              /* family */ Double, 
-              Unit
-            ]) => Unit
+        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
       ): Self = StObject.set(x, "lookup", js.Any.fromFunction3(value))
       
       @scala.inline

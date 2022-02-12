@@ -9,8 +9,10 @@ trait ScrollIntoViewOptions
   extends StObject
      with ScrollOptions {
   
+  /* standard DOM */
   var block: js.UndefOr[ScrollLogicalPosition] = js.undefined
   
+  /* standard DOM */
   var `inline`: js.UndefOr[ScrollLogicalPosition] = js.undefined
 }
 object ScrollIntoViewOptions {

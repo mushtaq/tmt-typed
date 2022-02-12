@@ -11,5 +11,6 @@ trait StereoPannerNode
   extends StObject
      with AudioNode {
   
-  val pan: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val pan: org.scalajs.dom.AudioParam = js.native
 }

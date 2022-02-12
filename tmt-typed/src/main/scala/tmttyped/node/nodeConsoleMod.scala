@@ -112,6 +112,12 @@ object nodeConsoleMod {
         
         var colorMode: js.UndefOr[Boolean | auto] = js.undefined
         
+        /**
+          * Set group indentation
+          * @default 2
+          */
+        var groupIndentation: js.UndefOr[Double] = js.undefined
+        
         var ignoreErrors: js.UndefOr[Boolean] = js.undefined
         
         var inspectOptions: js.UndefOr[InspectOptions] = js.undefined
@@ -136,6 +142,12 @@ object nodeConsoleMod {
           
           @scala.inline
           def setColorModeUndefined: Self = StObject.set(x, "colorMode", js.undefined)
+          
+          @scala.inline
+          def setGroupIndentation(value: Double): Self = StObject.set(x, "groupIndentation", value.asInstanceOf[js.Any])
+          
+          @scala.inline
+          def setGroupIndentationUndefined: Self = StObject.set(x, "groupIndentation", js.undefined)
           
           @scala.inline
           def setIgnoreErrors(value: Boolean): Self = StObject.set(x, "ignoreErrors", value.asInstanceOf[js.Any])
@@ -190,10 +202,10 @@ object nodeConsoleMod {
         * ```
         * @since v0.1.101
         * @param value The value tested for being truthy.
-        * @param ...message All arguments besides `value` are used as error message.
+        * @param message All arguments besides `value` are used as error message.
         */
-      def assert(value: js.Any, message: java.lang.String, optionalParams: js.Any*): Unit = js.native
-      def assert(value: js.Any, message: Unit, optionalParams: js.Any*): Unit = js.native
+      def assert(value: Any, message: String, optionalParams: Any*): Unit = js.native
+      def assert(value: Any, message: Unit, optionalParams: Any*): Unit = js.native
       
       /**
         * When `stdout` is a TTY, calling `console.clear()` will attempt to clear the
@@ -236,7 +248,7 @@ object nodeConsoleMod {
         * @param label The display label for the counter.
         */
       def count(): Unit = js.native
-      def count(label: java.lang.String): Unit = js.native
+      def count(label: String): Unit = js.native
       
       /**
         * Resets the internal counter specific to `label`.
@@ -256,29 +268,29 @@ object nodeConsoleMod {
         * @param label The display label for the counter.
         */
       def countReset(): Unit = js.native
-      def countReset(label: java.lang.String): Unit = js.native
+      def countReset(label: String): Unit = js.native
       
       /**
         * The `console.debug()` function is an alias for {@link log}.
         * @since v8.0.0
         */
-      def debug(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def debug(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def debug(message: Any, optionalParams: Any*): Unit = js.native
+      def debug(message: Unit, optionalParams: Any*): Unit = js.native
       
       /**
         * Uses `util.inspect()` on `obj` and prints the resulting string to `stdout`.
         * This function bypasses any custom `inspect()` function defined on `obj`.
         * @since v0.1.101
         */
-      def dir(obj: js.Any): Unit = js.native
-      def dir(obj: js.Any, options: InspectOptions): Unit = js.native
+      def dir(obj: Any): Unit = js.native
+      def dir(obj: Any, options: InspectOptions): Unit = js.native
       
       /**
         * This method calls `console.log()` passing it the arguments received.
         * This method does not produce any XML formatting.
         * @since v8.0.0
         */
-      def dirxml(data: js.Any*): Unit = js.native
+      def dirxml(data: Any*): Unit = js.native
       
       /**
         * Prints to `stderr` with newline. Multiple arguments can be passed, with the
@@ -297,8 +309,8 @@ object nodeConsoleMod {
         * values are concatenated. See `util.format()` for more information.
         * @since v0.1.100
         */
-      def error(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def error(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def error(message: Any, optionalParams: Any*): Unit = js.native
+      def error(message: Unit, optionalParams: Any*): Unit = js.native
       
       /**
         * Increases indentation of subsequent lines by spaces for `groupIndentation`length.
@@ -307,13 +319,13 @@ object nodeConsoleMod {
         * additional indentation.
         * @since v8.5.0
         */
-      def group(label: js.Any*): Unit = js.native
+      def group(label: Any*): Unit = js.native
       
       /**
         * An alias for {@link group}.
         * @since v8.5.0
         */
-      def groupCollapsed(label: js.Any*): Unit = js.native
+      def groupCollapsed(label: Any*): Unit = js.native
       
       /**
         * Decreases indentation of subsequent lines by spaces for `groupIndentation`length.
@@ -325,8 +337,8 @@ object nodeConsoleMod {
         * The `console.info()` function is an alias for {@link log}.
         * @since v0.1.100
         */
-      def info(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def info(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def info(message: Any, optionalParams: Any*): Unit = js.native
+      def info(message: Unit, optionalParams: Any*): Unit = js.native
       
       /**
         * Prints to `stdout` with newline. Multiple arguments can be passed, with the
@@ -344,8 +356,8 @@ object nodeConsoleMod {
         * See `util.format()` for more information.
         * @since v0.1.100
         */
-      def log(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def log(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def log(message: Any, optionalParams: Any*): Unit = js.native
+      def log(message: Unit, optionalParams: Any*): Unit = js.native
       
       // --- Inspector mode only ---
       /**
@@ -353,14 +365,14 @@ object nodeConsoleMod {
         *  Starts a JavaScript CPU profile with an optional label.
         */
       def profile(): Unit = js.native
-      def profile(label: java.lang.String): Unit = js.native
+      def profile(label: String): Unit = js.native
       
       /**
         * This method does not display anything unless used in the inspector.
         *  Stops the current JavaScript CPU profiling session if one has been started and prints the report to the Profiles panel of the inspector.
         */
       def profileEnd(): Unit = js.native
-      def profileEnd(label: java.lang.String): Unit = js.native
+      def profileEnd(label: String): Unit = js.native
       
       /**
         * Try to construct a table with the columns of the properties of `tabularData`(or use `properties`) and rows of `tabularData` and log it. Falls back to just
@@ -393,8 +405,8 @@ object nodeConsoleMod {
         * @since v10.0.0
         * @param properties Alternate properties for constructing the table.
         */
-      def table(tabularData: js.Any): Unit = js.native
-      def table(tabularData: js.Any, properties: js.Array[java.lang.String]): Unit = js.native
+      def table(tabularData: Any): Unit = js.native
+      def table(tabularData: Any, properties: js.Array[String]): Unit = js.native
       
       /**
         * Starts a timer that can be used to compute the duration of an operation. Timers
@@ -404,7 +416,7 @@ object nodeConsoleMod {
         * @since v0.1.104
         */
       def time(): Unit = js.native
-      def time(label: java.lang.String): Unit = js.native
+      def time(label: String): Unit = js.native
       
       /**
         * Stops a timer that was previously started by calling {@link time} and
@@ -419,7 +431,7 @@ object nodeConsoleMod {
         * @since v0.1.104
         */
       def timeEnd(): Unit = js.native
-      def timeEnd(label: java.lang.String): Unit = js.native
+      def timeEnd(label: String): Unit = js.native
       
       /**
         * For a timer that was previously started by calling {@link time}, prints
@@ -435,15 +447,15 @@ object nodeConsoleMod {
         * ```
         * @since v10.7.0
         */
-      def timeLog(label: java.lang.String, data: js.Any*): Unit = js.native
-      def timeLog(label: Unit, data: js.Any*): Unit = js.native
+      def timeLog(label: String, data: Any*): Unit = js.native
+      def timeLog(label: Unit, data: Any*): Unit = js.native
       
       /**
         * This method does not display anything unless used in the inspector.
         *  Adds an event with the label `label` to the Timeline panel of the inspector.
         */
       def timeStamp(): Unit = js.native
-      def timeStamp(label: java.lang.String): Unit = js.native
+      def timeStamp(label: String): Unit = js.native
       
       /**
         * Prints to `stderr` the string `'Trace: '`, followed by the `util.format()` formatted message and stack trace to the current position in the code.
@@ -465,15 +477,15 @@ object nodeConsoleMod {
         * ```
         * @since v0.1.104
         */
-      def trace(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def trace(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def trace(message: Any, optionalParams: Any*): Unit = js.native
+      def trace(message: Unit, optionalParams: Any*): Unit = js.native
       
       /**
         * The `console.warn()` function is an alias for {@link error}.
         * @since v0.1.100
         */
-      def warn(message: js.Any, optionalParams: js.Any*): Unit = js.native
-      def warn(message: Unit, optionalParams: js.Any*): Unit = js.native
+      def warn(message: Any, optionalParams: Any*): Unit = js.native
+      def warn(message: Unit, optionalParams: Any*): Unit = js.native
     }
   }
 }

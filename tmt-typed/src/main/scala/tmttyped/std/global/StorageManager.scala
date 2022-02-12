@@ -9,16 +9,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("StorageManager")
 @js.native
+/* standard DOM */
 class StorageManager ()
   extends StObject
      with tmttyped.std.StorageManager {
   
+  /* standard DOM */
   /* CompleteClass */
   override def estimate(): js.Promise[StorageEstimate] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def persist(): js.Promise[scala.Boolean] = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def persisted(): js.Promise[scala.Boolean] = js.native
 }

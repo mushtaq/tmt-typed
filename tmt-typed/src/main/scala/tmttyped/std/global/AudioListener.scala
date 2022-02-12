@@ -8,42 +8,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("AudioListener")
 @js.native
+/* standard DOM */
 class AudioListener ()
   extends StObject
      with tmttyped.std.AudioListener {
   
+  /* standard DOM */
   /* CompleteClass */
-  override val forwardX: org.scalajs.dom.raw.AudioParam = js.native
+  override val forwardX: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val forwardY: org.scalajs.dom.raw.AudioParam = js.native
+  override val forwardY: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val forwardZ: org.scalajs.dom.raw.AudioParam = js.native
+  override val forwardZ: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val positionX: org.scalajs.dom.raw.AudioParam = js.native
+  override val positionX: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val positionY: org.scalajs.dom.raw.AudioParam = js.native
+  override val positionY: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val positionZ: org.scalajs.dom.raw.AudioParam = js.native
+  override val positionZ: org.scalajs.dom.AudioParam = js.native
   
   /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override def setOrientation(x: Double, y: Double, z: Double, xUp: Double, yUp: Double, zUp: Double): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override def setPosition(x: Double, y: Double, z: Double): Unit = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val upX: org.scalajs.dom.raw.AudioParam = js.native
+  override val upX: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val upY: org.scalajs.dom.raw.AudioParam = js.native
+  override val upY: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val upZ: org.scalajs.dom.raw.AudioParam = js.native
+  override val upZ: org.scalajs.dom.AudioParam = js.native
 }

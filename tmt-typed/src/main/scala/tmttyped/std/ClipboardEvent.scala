@@ -11,5 +11,6 @@ trait ClipboardEvent
   extends StObject
      with Event {
   
-  val clipboardData: org.scalajs.dom.raw.DataTransfer | Null = js.native
+  /* standard DOM */
+  val clipboardData: org.scalajs.dom.DataTransfer | Null = js.native
 }

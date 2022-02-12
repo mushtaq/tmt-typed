@@ -7,11 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CredentialRequestOptions extends StObject {
   
+  /* standard DOM */
   var mediation: js.UndefOr[CredentialMediationRequirement] = js.undefined
   
+  /* standard DOM */
   var publicKey: js.UndefOr[PublicKeyCredentialRequestOptions] = js.undefined
   
-  var signal: js.UndefOr[org.scalajs.dom.experimental.AbortSignal] = js.undefined
+  /* standard DOM */
+  var signal: js.UndefOr[org.scalajs.dom.AbortSignal] = js.undefined
 }
 object CredentialRequestOptions {
   
@@ -37,7 +40,7 @@ object CredentialRequestOptions {
     def setPublicKeyUndefined: Self = StObject.set(x, "publicKey", js.undefined)
     
     @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)

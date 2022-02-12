@@ -16,244 +16,263 @@ trait FileReader
   extends StObject
      with EventTarget {
   
+  /* standard DOM */
   val DONE: Double = js.native
   
+  /* standard DOM */
   val EMPTY: Double = js.native
   
+  /* standard DOM */
   val LOADING: Double = js.native
   
+  /* standard DOM */
   def abort(): Unit = js.native
   
+  /* standard DOM */
   @JSName("addEventListener")
   def addEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val error: org.scalajs.dom.raw.DOMException | Null = js.native
+  /* standard DOM */
+  val error: org.scalajs.dom.DOMException | Null = js.native
   
-  var onabort: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onabort: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  var onload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  var onloadend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onloadend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  var onloadstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onloadstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  var onprogress: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]) | Null = js.native
+  /* standard DOM */
+  var onprogress: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]) | Null = js.native
   
-  def readAsArrayBuffer(blob: org.scalajs.dom.raw.Blob): Unit = js.native
+  /* standard DOM */
+  def readAsArrayBuffer(blob: org.scalajs.dom.Blob): Unit = js.native
   
-  def readAsBinaryString(blob: org.scalajs.dom.raw.Blob): Unit = js.native
+  /* standard DOM */
+  def readAsBinaryString(blob: org.scalajs.dom.Blob): Unit = js.native
   
-  def readAsDataURL(blob: org.scalajs.dom.raw.Blob): Unit = js.native
+  /* standard DOM */
+  def readAsDataURL(blob: org.scalajs.dom.Blob): Unit = js.native
   
-  def readAsText(blob: org.scalajs.dom.raw.Blob): Unit = js.native
-  def readAsText(blob: org.scalajs.dom.raw.Blob, encoding: java.lang.String): Unit = js.native
+  /* standard DOM */
+  def readAsText(blob: org.scalajs.dom.Blob): Unit = js.native
+  def readAsText(blob: org.scalajs.dom.Blob, encoding: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   val readyState: Double = js.native
   
+  /* standard DOM */
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadend(
     `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_progress(
     `type`: progress,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.ProgressEvent, Any],
     options: scala.Boolean
   ): Unit = js.native
   
+  /* standard DOM */
   val result: java.lang.String | js.typedarray.ArrayBuffer | Null = js.native
 }

@@ -50,7 +50,7 @@ object traceEventsMod {
     * @since v10.0.0
     */
   @scala.inline
-  def getEnabledCategories(): js.UndefOr[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[java.lang.String]]
+  def getEnabledCategories(): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[String]]
   
   trait CreateTracingOptions extends StObject {
     
@@ -59,12 +59,12 @@ object traceEventsMod {
       * coerced to a string when possible. An error will be thrown if the
       * value cannot be coerced.
       */
-    var categories: js.Array[java.lang.String]
+    var categories: js.Array[String]
   }
   object CreateTracingOptions {
     
     @scala.inline
-    def apply(categories: js.Array[java.lang.String]): CreateTracingOptions = {
+    def apply(categories: js.Array[String]): CreateTracingOptions = {
       val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any])
       __obj.asInstanceOf[CreateTracingOptions]
     }
@@ -73,10 +73,10 @@ object traceEventsMod {
     implicit class CreateTracingOptionsMutableBuilder[Self <: CreateTracingOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setCategories(value: js.Array[java.lang.String]): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
+      def setCategories(value: js.Array[String]): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCategoriesVarargs(value: java.lang.String*): Self = StObject.set(x, "categories", js.Array(value :_*))
+      def setCategoriesVarargs(value: String*): Self = StObject.set(x, "categories", js.Array(value :_*))
     }
   }
   
@@ -96,7 +96,7 @@ object traceEventsMod {
       * A comma-separated list of the trace event categories covered by this
       * `Tracing` object.
       */
-    val categories: java.lang.String
+    val categories: String
     
     /**
       * Disables this `Tracing` object.
@@ -121,7 +121,7 @@ object traceEventsMod {
   object Tracing {
     
     @scala.inline
-    def apply(categories: java.lang.String, disable: () => Unit, enable: () => Unit, enabled: Boolean): Tracing = {
+    def apply(categories: String, disable: () => Unit, enable: () => Unit, enabled: Boolean): Tracing = {
       val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any], disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), enabled = enabled.asInstanceOf[js.Any])
       __obj.asInstanceOf[Tracing]
     }
@@ -130,7 +130,7 @@ object traceEventsMod {
     implicit class TracingMutableBuilder[Self <: Tracing] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setCategories(value: java.lang.String): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
+      def setCategories(value: String): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setDisable(value: () => Unit): Self = StObject.set(x, "disable", js.Any.fromFunction0(value))

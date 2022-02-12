@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ElementCreationOptions extends StObject {
   
+  /* standard DOM */
   var is: js.UndefOr[java.lang.String] = js.undefined
 }
 object ElementCreationOptions {

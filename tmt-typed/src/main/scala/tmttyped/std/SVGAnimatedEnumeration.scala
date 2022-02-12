@@ -8,8 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Used for attributes whose value must be a constant from a particular enumeration and which can be animated. */
 trait SVGAnimatedEnumeration extends StObject {
   
+  /* standard DOM */
   val animVal: Double
   
+  /* standard DOM */
   var baseVal: Double
 }
 object SVGAnimatedEnumeration {

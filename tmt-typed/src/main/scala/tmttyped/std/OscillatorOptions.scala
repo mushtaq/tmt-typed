@@ -9,12 +9,16 @@ trait OscillatorOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var detune: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var frequency: js.UndefOr[Double] = js.undefined
   
-  var periodicWave: js.UndefOr[org.scalajs.dom.raw.PeriodicWave] = js.undefined
+  /* standard DOM */
+  var periodicWave: js.UndefOr[org.scalajs.dom.PeriodicWave] = js.undefined
   
+  /* standard DOM */
   var `type`: js.UndefOr[OscillatorType] = js.undefined
 }
 object OscillatorOptions {
@@ -41,7 +45,7 @@ object OscillatorOptions {
     def setFrequencyUndefined: Self = StObject.set(x, "frequency", js.undefined)
     
     @scala.inline
-    def setPeriodicWave(value: org.scalajs.dom.raw.PeriodicWave): Self = StObject.set(x, "periodicWave", value.asInstanceOf[js.Any])
+    def setPeriodicWave(value: org.scalajs.dom.PeriodicWave): Self = StObject.set(x, "periodicWave", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPeriodicWaveUndefined: Self = StObject.set(x, "periodicWave", js.undefined)

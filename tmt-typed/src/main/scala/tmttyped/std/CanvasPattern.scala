@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CanvasPattern extends StObject {
   
-  /**
-    * Sets the transformation matrix that will be used when rendering the pattern during a fill or stroke painting operation.
-    */
+  /** Sets the transformation matrix that will be used when rendering the pattern during a fill or stroke painting operation. */
+  /* standard DOM */
   def setTransform(): Unit = js.native
   def setTransform(transform: DOMMatrix2DInit): Unit = js.native
 }

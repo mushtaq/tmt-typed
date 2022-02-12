@@ -9,28 +9,40 @@ trait PointerEventInit
   extends StObject
      with MouseEventInit {
   
-  var coalescedEvents: js.UndefOr[js.Array[org.scalajs.dom.raw.PointerEvent]] = js.undefined
+  /* standard DOM */
+  var coalescedEvents: js.UndefOr[js.Array[org.scalajs.dom.PointerEvent]] = js.undefined
   
+  /* standard DOM */
   var height: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var isPrimary: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var pointerId: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var pointerType: js.UndefOr[java.lang.String] = js.undefined
   
-  var predictedEvents: js.UndefOr[js.Array[org.scalajs.dom.raw.PointerEvent]] = js.undefined
+  /* standard DOM */
+  var predictedEvents: js.UndefOr[js.Array[org.scalajs.dom.PointerEvent]] = js.undefined
   
+  /* standard DOM */
   var pressure: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var tangentialPressure: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var tiltX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var tiltY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var twist: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var width: js.UndefOr[Double] = js.undefined
 }
 object PointerEventInit {
@@ -45,13 +57,13 @@ object PointerEventInit {
   implicit class PointerEventInitMutableBuilder[Self <: PointerEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCoalescedEvents(value: js.Array[org.scalajs.dom.raw.PointerEvent]): Self = StObject.set(x, "coalescedEvents", value.asInstanceOf[js.Any])
+    def setCoalescedEvents(value: js.Array[org.scalajs.dom.PointerEvent]): Self = StObject.set(x, "coalescedEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCoalescedEventsUndefined: Self = StObject.set(x, "coalescedEvents", js.undefined)
     
     @scala.inline
-    def setCoalescedEventsVarargs(value: org.scalajs.dom.raw.PointerEvent*): Self = StObject.set(x, "coalescedEvents", js.Array(value :_*))
+    def setCoalescedEventsVarargs(value: org.scalajs.dom.PointerEvent*): Self = StObject.set(x, "coalescedEvents", js.Array(value :_*))
     
     @scala.inline
     def setHeight(value: Double): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
@@ -78,13 +90,13 @@ object PointerEventInit {
     def setPointerTypeUndefined: Self = StObject.set(x, "pointerType", js.undefined)
     
     @scala.inline
-    def setPredictedEvents(value: js.Array[org.scalajs.dom.raw.PointerEvent]): Self = StObject.set(x, "predictedEvents", value.asInstanceOf[js.Any])
+    def setPredictedEvents(value: js.Array[org.scalajs.dom.PointerEvent]): Self = StObject.set(x, "predictedEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPredictedEventsUndefined: Self = StObject.set(x, "predictedEvents", js.undefined)
     
     @scala.inline
-    def setPredictedEventsVarargs(value: org.scalajs.dom.raw.PointerEvent*): Self = StObject.set(x, "predictedEvents", js.Array(value :_*))
+    def setPredictedEventsVarargs(value: org.scalajs.dom.PointerEvent*): Self = StObject.set(x, "predictedEvents", js.Array(value :_*))
     
     @scala.inline
     def setPressure(value: Double): Self = StObject.set(x, "pressure", value.asInstanceOf[js.Any])

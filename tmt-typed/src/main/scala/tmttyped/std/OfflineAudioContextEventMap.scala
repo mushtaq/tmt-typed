@@ -9,12 +9,13 @@ trait OfflineAudioContextEventMap
   extends StObject
      with BaseAudioContextEventMap {
   
-  var complete: org.scalajs.dom.raw.OfflineAudioCompletionEvent
+  /* standard DOM */
+  var complete: org.scalajs.dom.OfflineAudioCompletionEvent
 }
 object OfflineAudioContextEventMap {
   
   @scala.inline
-  def apply(complete: org.scalajs.dom.raw.OfflineAudioCompletionEvent, statechange: org.scalajs.dom.raw.Event): OfflineAudioContextEventMap = {
+  def apply(complete: org.scalajs.dom.OfflineAudioCompletionEvent, statechange: org.scalajs.dom.Event): OfflineAudioContextEventMap = {
     val __obj = js.Dynamic.literal(complete = complete.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineAudioContextEventMap]
   }
@@ -23,6 +24,6 @@ object OfflineAudioContextEventMap {
   implicit class OfflineAudioContextEventMapMutableBuilder[Self <: OfflineAudioContextEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setComplete(value: org.scalajs.dom.raw.OfflineAudioCompletionEvent): Self = StObject.set(x, "complete", value.asInstanceOf[js.Any])
+    def setComplete(value: org.scalajs.dom.OfflineAudioCompletionEvent): Self = StObject.set(x, "complete", value.asInstanceOf[js.Any])
   }
 }

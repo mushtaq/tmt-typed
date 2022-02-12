@@ -10,8 +10,10 @@ trait PromiseFulfilledResult[T]
   extends StObject
      with PromiseSettledResult[T] {
   
+  /* standard es2020.promise */
   var status: fulfilled
   
+  /* standard es2020.promise */
   var value: T
 }
 object PromiseFulfilledResult {

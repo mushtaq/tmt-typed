@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class VBArray[T] protected ()
   extends StObject
      with tmttyped.std.VBArray[T] {
+  /* standard ScriptHost */
   def this(safeArray: tmttyped.std.SafeArray[T]) = this()
 }
 object VBArray {

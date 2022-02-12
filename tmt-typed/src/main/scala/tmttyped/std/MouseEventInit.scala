@@ -9,22 +9,31 @@ trait MouseEventInit
   extends StObject
      with EventModifierInit {
   
+  /* standard DOM */
   var button: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var buttons: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var clientX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var clientY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var movementX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var movementY: js.UndefOr[Double] = js.undefined
   
-  var relatedTarget: js.UndefOr[org.scalajs.dom.raw.EventTarget | Null] = js.undefined
+  /* standard DOM */
+  var relatedTarget: js.UndefOr[org.scalajs.dom.EventTarget | Null] = js.undefined
   
+  /* standard DOM */
   var screenX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var screenY: js.UndefOr[Double] = js.undefined
 }
 object MouseEventInit {
@@ -75,7 +84,7 @@ object MouseEventInit {
     def setMovementYUndefined: Self = StObject.set(x, "movementY", js.undefined)
     
     @scala.inline
-    def setRelatedTarget(value: org.scalajs.dom.raw.EventTarget): Self = StObject.set(x, "relatedTarget", value.asInstanceOf[js.Any])
+    def setRelatedTarget(value: org.scalajs.dom.EventTarget): Self = StObject.set(x, "relatedTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRelatedTargetNull: Self = StObject.set(x, "relatedTarget", null)

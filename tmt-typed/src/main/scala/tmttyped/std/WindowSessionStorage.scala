@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait WindowSessionStorage extends StObject {
   
-  val sessionStorage: org.scalajs.dom.raw.Storage
+  /* standard DOM */
+  val sessionStorage: org.scalajs.dom.Storage
 }
 object WindowSessionStorage {
   
   @scala.inline
-  def apply(sessionStorage: org.scalajs.dom.raw.Storage): WindowSessionStorage = {
+  def apply(sessionStorage: org.scalajs.dom.Storage): WindowSessionStorage = {
     val __obj = js.Dynamic.literal(sessionStorage = sessionStorage.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowSessionStorage]
   }
@@ -21,6 +22,6 @@ object WindowSessionStorage {
   implicit class WindowSessionStorageMutableBuilder[Self <: WindowSessionStorage] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setSessionStorage(value: org.scalajs.dom.raw.Storage): Self = StObject.set(x, "sessionStorage", value.asInstanceOf[js.Any])
+    def setSessionStorage(value: org.scalajs.dom.Storage): Self = StObject.set(x, "sessionStorage", value.asInstanceOf[js.Any])
   }
 }

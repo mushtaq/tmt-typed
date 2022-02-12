@@ -1,901 +1,1002 @@
 package tmttyped.std
 
 import tmttyped.std.stdStrings.jwk
-import tmttyped.std.stdStrings.pkcs8
-import tmttyped.std.stdStrings.raw
-import tmttyped.std.stdStrings.spki
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** This Web Crypto API interface provides a number of low-level cryptographic functions. It is accessed via the Crypto.subtle properties available in a window context (via Window.crypto). */
+/**
+  * This Web Crypto API interface provides a number of low-level cryptographic functions. It is accessed via the Crypto.subtle properties available in a window context (via Window.crypto).
+  * Available only in secure contexts.
+  */
 @js.native
 trait SubtleCrypto extends StObject {
   
-  def decrypt(
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def decrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  /* standard DOM */
+  def decrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
   
-  def deriveBits(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    length: Double
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    length: Double
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    length: Double
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    length: Double
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(algorithm: AlgorithmIdentifier, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def deriveBits(algorithm: HkdfParams, baseKey: org.scalajs.dom.crypto.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def deriveBits(algorithm: org.scalajs.dom.EcdhKeyDeriveParams, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def deriveBits(algorithm: org.scalajs.dom.Pbkdf2Params, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
+  def deriveBits(algorithm: AlgorithmIdentifier, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def deriveBits(algorithm: HkdfParams, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.ConcatParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    algorithm: org.scalajs.dom.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
     algorithm: AlgorithmIdentifier,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM */
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def deriveKey(
-    algorithm: HkdfParams,
-    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.CryptoKey,
     derivedKeyType: HkdfParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: org.scalajs.dom.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: HkdfParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: HkdfParams,
+    baseKey: org.scalajs.dom.CryptoKey,
+    derivedKeyType: HkdfParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.ArrayBuffer): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.DataView): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Float32Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Float64Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int16Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int32Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int8Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint16Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint32Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint8Array): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint8ClampedArray): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
+  def digest(algorithm: AlgorithmIdentifier, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
-  def encrypt(
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def encrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  /* standard DOM */
+  def encrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
   
-  def exportKey(format: java.lang.String, key: org.scalajs.dom.crypto.CryptoKey): js.Promise[org.scalajs.dom.crypto.JsonWebKey | js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
   @JSName("exportKey")
-  def exportKey_jwk(format: jwk, key: org.scalajs.dom.crypto.CryptoKey): js.Promise[org.scalajs.dom.crypto.JsonWebKey] = js.native
+  def exportKey_jwk(format: Exclude[org.scalajs.dom.KeyFormat, jwk], key: org.scalajs.dom.CryptoKey): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
   @JSName("exportKey")
-  def exportKey_pkcs8(format: pkcs8, key: org.scalajs.dom.crypto.CryptoKey): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("exportKey")
-  def exportKey_raw(format: raw, key: org.scalajs.dom.crypto.CryptoKey): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("exportKey")
-  def exportKey_spki(format: spki, key: org.scalajs.dom.crypto.CryptoKey): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def exportKey_jwk(format: jwk, key: org.scalajs.dom.CryptoKey): js.Promise[org.scalajs.dom.JsonWebKey] = js.native
   
+  /* standard DOM.Iterable */
   def generateKey(
-    algorithm: org.scalajs.dom.crypto.AesKeyGenParams,
+    algorithm: org.scalajs.dom.AesKeyGenParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def generateKey(
-    algorithm: org.scalajs.dom.crypto.DhKeyGenParams,
+    algorithm: org.scalajs.dom.EcKeyGenParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKeyPair] = js.native
   def generateKey(
-    algorithm: org.scalajs.dom.crypto.EcKeyGenParams,
+    algorithm: org.scalajs.dom.HmacKeyGenParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   def generateKey(
-    algorithm: org.scalajs.dom.crypto.HmacKeyGenParams,
+    algorithm: org.scalajs.dom.Pbkdf2Params,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
   def generateKey(
-    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    algorithm: org.scalajs.dom.RsaHashedKeyGenParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def generateKey(
-    algorithm: org.scalajs.dom.crypto.RsaHashedKeyGenParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKeyPair] = js.native
+  /* standard DOM */
   def generateKey(
     algorithm: AlgorithmIdentifier,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKeyPair | org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKeyPair | org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
+  def generateKey(
+    algorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKeyPair | org.scalajs.dom.CryptoKey] = js.native
   
-  def importKey(
-    format: raw | pkcs8 | spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaHashedImportParams | org.scalajs.dom.crypto.EcKeyImportParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.DhImportKeyParams | org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaHashedImportParams | org.scalajs.dom.crypto.EcKeyImportParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.DhImportKeyParams | org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.AesKeyAlgorithm,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.DhImportKeyParams,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.AesKeyAlgorithm,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.EcKeyImportParams,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.EcKeyImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.HmacImportParams,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.EcKeyImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.HmacImportParams,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   @JSName("importKey")
   def importKey_jwk(
-    format: jwk,
-    keyData: org.scalajs.dom.crypto.JsonWebKey,
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM */
+  @JSName("importKey")
+  def importKey_jwk(
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
     algorithm: AlgorithmIdentifier,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
+  @JSName("importKey")
+  def importKey_jwk(
+    format: Exclude[org.scalajs.dom.KeyFormat, jwk],
+    keyData: BufferSource,
+    algorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.JsonWebKey,
+    algorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.JsonWebKey,
+    algorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.JsonWebKey,
+    algorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.JsonWebKey,
+    algorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
+  @JSName("importKey")
+  def importKey_jwk(
+    format: jwk,
+    keyData: org.scalajs.dom.JsonWebKey,
+    algorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.DataView
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float64Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8ClampedArray
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.DataView
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float64Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8ClampedArray
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.DataView
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float64Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8ClampedArray
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.ArrayBuffer
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.DataView
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Float64Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint16Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint32Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8Array
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def sign(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Uint8ClampedArray
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(algorithm: org.scalajs.dom.EcdsaParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def sign(algorithm: org.scalajs.dom.RsaPssParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
+  def sign(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   def unwrapKey(
-    format: raw | pkcs8 | spki | jwk | java.lang.String,
-    wrappedKey: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    unwrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    unwrapAlgorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
-    unwrappedKeyAlgorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaHashedImportParams | org.scalajs.dom.crypto.EcKeyImportParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.DhImportKeyParams | org.scalajs.dom.crypto.AesKeyAlgorithm,
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
     extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Promise[org.scalajs.dom.crypto.CryptoKey] = js.native
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCbcParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesCtrParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.AesGcmParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: org.scalajs.dom.RsaOaepParams,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.AesKeyAlgorithm,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.EcKeyImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: org.scalajs.dom.RsaHashedImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM */
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
+  /* standard DOM.Iterable */
+  def unwrapKey(
+    format: org.scalajs.dom.KeyFormat,
+    wrappedKey: BufferSource,
+    unwrappingKey: org.scalajs.dom.CryptoKey,
+    unwrapAlgorithm: AlgorithmIdentifier,
+    unwrappedKeyAlgorithm: AlgorithmIdentifier,
+    extractable: scala.Boolean,
+    keyUsages: js.Iterable[org.scalajs.dom.KeyUsage]
+  ): js.Promise[org.scalajs.dom.CryptoKey] = js.native
   
   def verify(
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaPssParams | org.scalajs.dom.crypto.EcdsaParams | org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    signature: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    algorithm: org.scalajs.dom.EcdsaParams,
+    key: org.scalajs.dom.CryptoKey,
+    signature: BufferSource,
+    data: BufferSource
+  ): js.Promise[scala.Boolean] = js.native
+  def verify(
+    algorithm: org.scalajs.dom.RsaPssParams,
+    key: org.scalajs.dom.CryptoKey,
+    signature: BufferSource,
+    data: BufferSource
+  ): js.Promise[scala.Boolean] = js.native
+  /* standard DOM */
+  def verify(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.CryptoKey,
+    signature: BufferSource,
+    data: BufferSource
   ): js.Promise[scala.Boolean] = js.native
   
   def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+    format: org.scalajs.dom.KeyFormat,
+    key: org.scalajs.dom.CryptoKey,
+    wrappingKey: org.scalajs.dom.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.AesCbcParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+    format: org.scalajs.dom.KeyFormat,
+    key: org.scalajs.dom.CryptoKey,
+    wrappingKey: org.scalajs.dom.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.AesCtrParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+    format: org.scalajs.dom.KeyFormat,
+    key: org.scalajs.dom.CryptoKey,
+    wrappingKey: org.scalajs.dom.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.AesGcmParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+    format: org.scalajs.dom.KeyFormat,
+    key: org.scalajs.dom.CryptoKey,
+    wrappingKey: org.scalajs.dom.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.RsaOaepParams
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  /* standard DOM */
   def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  def wrapKey(
-    format: java.lang.String,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_jwk(
-    format: jwk,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_pkcs8(
-    format: pkcs8,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_raw(
-    format: raw,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
-  ): js.Promise[js.typedarray.ArrayBuffer] = js.native
-  @JSName("wrapKey")
-  def wrapKey_spki(
-    format: spki,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    format: org.scalajs.dom.KeyFormat,
+    key: org.scalajs.dom.CryptoKey,
+    wrappingKey: org.scalajs.dom.CryptoKey,
     wrapAlgorithm: AlgorithmIdentifier
   ): js.Promise[js.typedarray.ArrayBuffer] = js.native
 }

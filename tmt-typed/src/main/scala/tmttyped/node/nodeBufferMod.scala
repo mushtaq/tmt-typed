@@ -62,7 +62,7 @@ object nodeBufferMod {
       * @param array The octets to store.
       * @deprecated since v10.0.0 - Use `Buffer.from(array)` instead.
       */
-    def this(array: js.Array[js.Any]) = this()
+    def this(array: js.Array[Any]) = this()
     /**
       * Allocates a new buffer containing the given {array} of octets.
       *
@@ -91,8 +91,8 @@ object nodeBufferMod {
       * @param encoding encoding to use, optional.  Default is 'utf8'
       * @deprecated since v10.0.0 - Use `Buffer.from(string[, encoding])` instead.
       */
-    def this(str: java.lang.String) = this()
-    def this(str: java.lang.String, encoding: BufferEncoding) = this()
+    def this(str: String) = this()
+    def this(str: String, encoding: BufferEncoding) = this()
   }
   
   @scala.inline
@@ -138,6 +138,9 @@ object nodeBufferMod {
   @JSImport("node:buffer", "kStringMaxLength")
   @js.native
   val kStringMaxLength: Double = js.native
+  
+  @scala.inline
+  def resolveObjectURL(id: String): js.UndefOr[tmttyped.node.bufferMod.Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveObjectURL")(id.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[tmttyped.node.bufferMod.Blob]]
   
   @scala.inline
   def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("transcode")(source.asInstanceOf[js.Any], fromEnc.asInstanceOf[js.Any], toEnc.asInstanceOf[js.Any])).asInstanceOf[Buffer]

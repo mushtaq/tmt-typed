@@ -11,6 +11,7 @@ trait SVGClipPathElement
   extends StObject
      with SVGElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,18 +23,21 @@ trait SVGClipPathElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val clipPathUnits: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val clipPathUnits: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val transform: org.scalajs.dom.raw.SVGAnimatedTransformList = js.native
+  /* standard DOM */
+  val transform: org.scalajs.dom.SVGAnimatedTransformList = js.native
 }

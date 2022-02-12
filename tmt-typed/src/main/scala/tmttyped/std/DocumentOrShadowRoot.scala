@@ -7,43 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait DocumentOrShadowRoot extends StObject {
   
-  val activeElement: org.scalajs.dom.raw.Element | Null
-  
-  def caretPositionFromPoint(x: Double, y: Double): CaretPosition | Null
-  
-  /** @deprecated */
-  def caretRangeFromPoint(x: Double, y: Double): org.scalajs.dom.raw.Range
-  
-  def elementFromPoint(x: Double, y: Double): org.scalajs.dom.raw.Element | Null
-  
-  def elementsFromPoint(x: Double, y: Double): js.Array[org.scalajs.dom.raw.Element]
+  /**
+    * Returns the deepest element in the document through which or to which key events are being routed. This is, roughly speaking, the focused element in the document.
+    *
+    * For the purposes of this API, when a child browsing context is focused, its container is focused in the parent browsing context. For example, if the user moves the focus to a text control in an iframe, the iframe is the element returned by the activeElement API in the iframe's node document.
+    *
+    * Similarly, when the focused element is in a different node tree than documentOrShadowRoot, the element returned will be the host that's located in the same node tree as documentOrShadowRoot if documentOrShadowRoot is a shadow-including inclusive ancestor of the focused element, and null if not.
+    */
+  /* standard DOM */
+  val activeElement: org.scalajs.dom.Element | Null
   
   /**
-    * Returns document's fullscreen element.
+    * Returns the element for the specified x coordinate and the specified y coordinate.
+    * @param x The x-offset
+    * @param y The y-offset
     */
-  val fullscreenElement: org.scalajs.dom.raw.Element | Null
+  /* standard DOM */
+  def elementFromPoint(x: Double, y: Double): org.scalajs.dom.Element | Null
   
-  def getSelection(): org.scalajs.dom.raw.Selection | Null
+  /* standard DOM */
+  def elementsFromPoint(x: Double, y: Double): js.Array[org.scalajs.dom.Element]
   
-  val pointerLockElement: org.scalajs.dom.raw.Element | Null
+  /** Returns document's fullscreen element. */
+  /* standard DOM */
+  val fullscreenElement: org.scalajs.dom.Element | Null
   
-  /**
-    * Retrieves a collection of styleSheet objects representing the style sheets that correspond to each instance of a link or style object in the document.
-    */
-  val styleSheets: org.scalajs.dom.raw.StyleSheetList
+  /* standard DOM */
+  def getAnimations(): js.Array[Animation]
+  
+  /* standard DOM */
+  val pictureInPictureElement: org.scalajs.dom.Element | Null
+  
+  /* standard DOM */
+  val pointerLockElement: org.scalajs.dom.Element | Null
+  
+  /** Retrieves a collection of styleSheet objects representing the style sheets that correspond to each instance of a link or style object in the document. */
+  /* standard DOM */
+  val styleSheets: org.scalajs.dom.StyleSheetList
 }
 object DocumentOrShadowRoot {
   
   @scala.inline
   def apply(
-    caretPositionFromPoint: (Double, Double) => CaretPosition | Null,
-    caretRangeFromPoint: (Double, Double) => org.scalajs.dom.raw.Range,
-    elementFromPoint: (Double, Double) => org.scalajs.dom.raw.Element | Null,
-    elementsFromPoint: (Double, Double) => js.Array[org.scalajs.dom.raw.Element],
-    getSelection: () => org.scalajs.dom.raw.Selection | Null,
-    styleSheets: org.scalajs.dom.raw.StyleSheetList
+    elementFromPoint: (Double, Double) => org.scalajs.dom.Element | Null,
+    elementsFromPoint: (Double, Double) => js.Array[org.scalajs.dom.Element],
+    getAnimations: () => js.Array[Animation],
+    styleSheets: org.scalajs.dom.StyleSheetList
   ): DocumentOrShadowRoot = {
-    val __obj = js.Dynamic.literal(caretPositionFromPoint = js.Any.fromFunction2(caretPositionFromPoint), caretRangeFromPoint = js.Any.fromFunction2(caretRangeFromPoint), elementFromPoint = js.Any.fromFunction2(elementFromPoint), elementsFromPoint = js.Any.fromFunction2(elementsFromPoint), getSelection = js.Any.fromFunction0(getSelection), styleSheets = styleSheets.asInstanceOf[js.Any], activeElement = null, fullscreenElement = null, pointerLockElement = null)
+    val __obj = js.Dynamic.literal(elementFromPoint = js.Any.fromFunction2(elementFromPoint), elementsFromPoint = js.Any.fromFunction2(elementsFromPoint), getAnimations = js.Any.fromFunction0(getAnimations), styleSheets = styleSheets.asInstanceOf[js.Any], activeElement = null, fullscreenElement = null, pictureInPictureElement = null, pointerLockElement = null)
     __obj.asInstanceOf[DocumentOrShadowRoot]
   }
   
@@ -51,39 +62,39 @@ object DocumentOrShadowRoot {
   implicit class DocumentOrShadowRootMutableBuilder[Self <: DocumentOrShadowRoot] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setActiveElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "activeElement", value.asInstanceOf[js.Any])
+    def setActiveElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "activeElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setActiveElementNull: Self = StObject.set(x, "activeElement", null)
     
     @scala.inline
-    def setCaretPositionFromPoint(value: (Double, Double) => CaretPosition | Null): Self = StObject.set(x, "caretPositionFromPoint", js.Any.fromFunction2(value))
+    def setElementFromPoint(value: (Double, Double) => org.scalajs.dom.Element | Null): Self = StObject.set(x, "elementFromPoint", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setCaretRangeFromPoint(value: (Double, Double) => org.scalajs.dom.raw.Range): Self = StObject.set(x, "caretRangeFromPoint", js.Any.fromFunction2(value))
+    def setElementsFromPoint(value: (Double, Double) => js.Array[org.scalajs.dom.Element]): Self = StObject.set(x, "elementsFromPoint", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setElementFromPoint(value: (Double, Double) => org.scalajs.dom.raw.Element | Null): Self = StObject.set(x, "elementFromPoint", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setElementsFromPoint(value: (Double, Double) => js.Array[org.scalajs.dom.raw.Element]): Self = StObject.set(x, "elementsFromPoint", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setFullscreenElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "fullscreenElement", value.asInstanceOf[js.Any])
+    def setFullscreenElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "fullscreenElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFullscreenElementNull: Self = StObject.set(x, "fullscreenElement", null)
     
     @scala.inline
-    def setGetSelection(value: () => org.scalajs.dom.raw.Selection | Null): Self = StObject.set(x, "getSelection", js.Any.fromFunction0(value))
+    def setGetAnimations(value: () => js.Array[Animation]): Self = StObject.set(x, "getAnimations", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setPointerLockElement(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "pointerLockElement", value.asInstanceOf[js.Any])
+    def setPictureInPictureElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pictureInPictureElement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPictureInPictureElementNull: Self = StObject.set(x, "pictureInPictureElement", null)
+    
+    @scala.inline
+    def setPointerLockElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pointerLockElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPointerLockElementNull: Self = StObject.set(x, "pointerLockElement", null)
     
     @scala.inline
-    def setStyleSheets(value: org.scalajs.dom.raw.StyleSheetList): Self = StObject.set(x, "styleSheets", value.asInstanceOf[js.Any])
+    def setStyleSheets(value: org.scalajs.dom.StyleSheetList): Self = StObject.set(x, "styleSheets", value.asInstanceOf[js.Any])
   }
 }

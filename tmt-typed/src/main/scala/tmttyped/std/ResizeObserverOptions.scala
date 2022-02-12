@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResizeObserverOptions extends StObject {
   
+  /* standard DOM */
   var box: js.UndefOr[ResizeObserverBoxOptions] = js.undefined
 }
 object ResizeObserverOptions {

@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ArrayBuffer protected ()
   extends StObject
      with tmttyped.std.ArrayBuffer {
+  /* standard es5 */
   def this(byteLength: Double) = this()
 }
 object ArrayBuffer {

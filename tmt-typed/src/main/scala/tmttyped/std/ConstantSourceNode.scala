@@ -10,5 +10,6 @@ trait ConstantSourceNode
   extends StObject
      with AudioScheduledSourceNode {
   
-  val offset: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val offset: org.scalajs.dom.AudioParam = js.native
 }

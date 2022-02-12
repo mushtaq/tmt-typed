@@ -35,9 +35,12 @@ package object cryptoMod {
     * @return `true` if the candidate is a prime with an error probability less than `0.25 ** options.checks`.
     */
   @scala.inline
-  def checkPrimeSync(value: tmttyped.node.cryptoMod.LargeNumberLike): scala.Boolean = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkPrimeSync")(value.asInstanceOf[js.Any]).asInstanceOf[scala.Boolean]
+  def checkPrimeSync(candidate: tmttyped.node.cryptoMod.LargeNumberLike): scala.Boolean = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkPrimeSync")(candidate.asInstanceOf[js.Any]).asInstanceOf[scala.Boolean]
   @scala.inline
-  def checkPrimeSync(value: tmttyped.node.cryptoMod.LargeNumberLike, options: tmttyped.node.cryptoMod.CheckPrimeOptions): scala.Boolean = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkPrimeSync")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Boolean]
+  def checkPrimeSync(
+    candidate: tmttyped.node.cryptoMod.LargeNumberLike,
+    options: tmttyped.node.cryptoMod.CheckPrimeOptions
+  ): scala.Boolean = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkPrimeSync")(candidate.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Boolean]
   
   /** @deprecated since v10.0.0 use `createCipheriv()` */
   @scala.inline
@@ -70,7 +73,7 @@ package object cryptoMod {
     * non-cryptographically secure hash algorithm allow passwords to be tested very
     * rapidly.
     *
-    * In line with OpenSSL's recommendation to use a more modern algorithm instead of[`EVP_BytesToKey`](https://www.openssl.org/docs/man1.1.0/crypto/EVP_BytesToKey.html) it is recommended that
+    * In line with OpenSSL's recommendation to use a more modern algorithm instead of [`EVP_BytesToKey`](https://www.openssl.org/docs/man1.1.0/crypto/EVP_BytesToKey.html) it is recommended that
     * developers derive a key and IV on
     * their own using {@link scrypt} and to use {@link createCipheriv} to create the `Cipher` object. Users should not use ciphers with counter mode
     * (e.g. CTR, GCM, or CCM) in `crypto.createCipher()`. A warning is emitted when
@@ -138,7 +141,7 @@ package object cryptoMod {
     * recent OpenSSL releases, `openssl list -cipher-algorithms`(`openssl list-cipher-algorithms` for older versions of OpenSSL) will
     * display the available cipher algorithms.
     *
-    * The `key` is the raw key used by the `algorithm` and `iv` is an[initialization vector](https://en.wikipedia.org/wiki/Initialization_vector). Both arguments must be `'utf8'` encoded
+    * The `key` is the raw key used by the `algorithm` and `iv` is an [initialization vector](https://en.wikipedia.org/wiki/Initialization_vector). Both arguments must be `'utf8'` encoded
     * strings,`Buffers`, `TypedArray`, or `DataView`s. The `key` may optionally be
     * a `KeyObject` of type `secret`. If the cipher does not need
     * an initialization vector, `iv` may be `null`.
@@ -207,7 +210,7 @@ package object cryptoMod {
     * non-cryptographically secure hash algorithm allow passwords to be tested very
     * rapidly.
     *
-    * In line with OpenSSL's recommendation to use a more modern algorithm instead of[`EVP_BytesToKey`](https://www.openssl.org/docs/man1.1.0/crypto/EVP_BytesToKey.html) it is recommended that
+    * In line with OpenSSL's recommendation to use a more modern algorithm instead of [`EVP_BytesToKey`](https://www.openssl.org/docs/man1.1.0/crypto/EVP_BytesToKey.html) it is recommended that
     * developers derive a key and IV on
     * their own using {@link scrypt} and to use {@link createDecipheriv} to create the `Decipher` object.
     * @since v0.1.94
@@ -271,7 +274,7 @@ package object cryptoMod {
     * recent OpenSSL releases, `openssl list -cipher-algorithms`(`openssl list-cipher-algorithms` for older versions of OpenSSL) will
     * display the available cipher algorithms.
     *
-    * The `key` is the raw key used by the `algorithm` and `iv` is an[initialization vector](https://en.wikipedia.org/wiki/Initialization_vector). Both arguments must be `'utf8'` encoded
+    * The `key` is the raw key used by the `algorithm` and `iv` is an [initialization vector](https://en.wikipedia.org/wiki/Initialization_vector). Both arguments must be `'utf8'` encoded
     * strings,`Buffers`, `TypedArray`, or `DataView`s. The `key` may optionally be
     * a `KeyObject` of type `secret`. If the cipher does not need
     * an initialization vector, `iv` may be `null`.
@@ -330,35 +333,36 @@ package object cryptoMod {
     * otherwise a number, `Buffer`, `TypedArray`, or `DataView` is expected.
     * @since v0.11.12
     * @param primeEncoding The `encoding` of the `prime` string.
+    * @param [generator=2]
     * @param generatorEncoding The `encoding` of the `generator` string.
     */
   @scala.inline
-  def createDiffieHellman(prime_length: scala.Double): tmttyped.node.cryptoMod.DiffieHellman_ = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime_length.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  def createDiffieHellman(primeLength: scala.Double): tmttyped.node.cryptoMod.DiffieHellman_ = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(primeLength.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
-  def createDiffieHellman(prime_length: scala.Double, generator: scala.Double): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime_length.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  def createDiffieHellman(primeLength: scala.Double, generator: scala.Double): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(primeLength.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
-  def createDiffieHellman(prime_length: scala.Double, generator: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime_length.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  def createDiffieHellman(primeLength: scala.Double, generator: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(primeLength.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
-  def createDiffieHellman(prime: java.lang.String, prime_encoding: tmttyped.node.cryptoMod.BinaryToTextEncoding): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], prime_encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  def createDiffieHellman(prime: java.lang.String, primeEncoding: tmttyped.node.cryptoMod.BinaryToTextEncoding): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], primeEncoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
   def createDiffieHellman(
     prime: java.lang.String,
-    prime_encoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
+    primeEncoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
     generator: java.lang.String,
-    generator_encoding: tmttyped.node.cryptoMod.BinaryToTextEncoding
-  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], prime_encoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any], generator_encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+    generatorEncoding: tmttyped.node.cryptoMod.BinaryToTextEncoding
+  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], primeEncoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any], generatorEncoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
   def createDiffieHellman(
     prime: java.lang.String,
-    prime_encoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
+    primeEncoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
     generator: scala.Double
-  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], prime_encoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], primeEncoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
   def createDiffieHellman(
     prime: java.lang.String,
-    prime_encoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
+    primeEncoding: tmttyped.node.cryptoMod.BinaryToTextEncoding,
     generator: tmttyped.node.NodeJS.ArrayBufferView
-  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], prime_encoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  ): tmttyped.node.cryptoMod.DiffieHellman_ = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any], primeEncoding.asInstanceOf[js.Any], generator.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   @scala.inline
   def createDiffieHellman(prime: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.cryptoMod.DiffieHellman_ = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createDiffieHellman")(prime.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   
@@ -370,7 +374,7 @@ package object cryptoMod {
     * @since v0.11.14
     */
   @scala.inline
-  def createECDH(curve_name: java.lang.String): tmttyped.node.cryptoMod.ECDH = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createECDH")(curve_name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.ECDH]
+  def createECDH(curveName: java.lang.String): tmttyped.node.cryptoMod.ECDH = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createECDH")(curveName.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.ECDH]
   
   /**
     * Creates and returns a `Hash` object that can be used to generate hash digests
@@ -389,38 +393,12 @@ package object cryptoMod {
     * import {
     *   createReadStream
     * } from 'fs';
-    *
+    * import { argv } from 'process';
     * const {
-    *   createHash,
+    *   createHash
     * } = await import('crypto');
     *
-    * const filename = process.argv[2];
-    *
-    * const hash = createHash('sha256');
-    *
-    * const input = createReadStream(filename);
-    * input.on('readable', () => {
-    *   // Only one element is going to be produced by the
-    *   // hash stream.
-    *   const data = input.read();
-    *   if (data)
-    *     hash.update(data);
-    *   else {
-    *     console.log(`${hash.digest('hex')} ${filename}`);
-    *   }
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   createReadStream,
-    * } = require('fs');
-    *
-    * const {
-    *   createHash,
-    * } = require('crypto');
-    *
-    * const filename = process.argv[2];
+    * const filename = argv[2];
     *
     * const hash = createHash('sha256');
     *
@@ -462,38 +440,12 @@ package object cryptoMod {
     * import {
     *   createReadStream
     * } from 'fs';
-    *
+    * import { argv } from 'process';
     * const {
-    *   createHmac,
+    *   createHmac
     * } = await import('crypto');
     *
-    * const filename = process.argv[2];
-    *
-    * const hmac = createHmac('sha256', 'a secret');
-    *
-    * const input = createReadStream(filename);
-    * input.on('readable', () => {
-    *   // Only one element is going to be produced by the
-    *   // hash stream.
-    *   const data = input.read();
-    *   if (data)
-    *     hmac.update(data);
-    *   else {
-    *     console.log(`${hmac.digest('hex')} ${filename}`);
-    *   }
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   createReadStream,
-    * } = require('fs');
-    *
-    * const {
-    *   createHmac,
-    * } = require('crypto');
-    *
-    * const filename = process.argv[2];
+    * const filename = argv[2];
     *
     * const hmac = createHmac('sha256', 'a secret');
     *
@@ -571,6 +523,8 @@ package object cryptoMod {
   @scala.inline
   def createPublicKey(key: tmttyped.node.cryptoMod.PublicKeyInput): tmttyped.node.cryptoMod.KeyObject = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createPublicKey")(key.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.KeyObject]
   
+  @scala.inline
+  def createSecretKey(key: java.lang.String, encoding: tmttyped.node.bufferMod.global.BufferEncoding): tmttyped.node.cryptoMod.KeyObject = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecretKey")(key.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyObject]
   /**
     * Creates and returns a new key object containing a secret key for symmetric
     * encryption or `Hmac`.
@@ -627,6 +581,58 @@ package object cryptoMod {
   @scala.inline
   def fips: scala.Boolean = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].selectDynamic("fips").asInstanceOf[scala.Boolean]
   
+  /**
+    * Asynchronously generates a new random secret key of the given `length`. The`type` will determine which validations will be performed on the `length`.
+    *
+    * ```js
+    * const {
+    *   generateKey
+    * } = await import('crypto');
+    *
+    * generateKey('hmac', { length: 64 }, (err, key) => {
+    *   if (err) throw err;
+    *   console.log(key.export().toString('hex'));  // 46e..........620
+    * });
+    * ```
+    * @since v15.0.0
+    * @param type The intended use of the generated secret key. Currently accepted values are `'hmac'` and `'aes'`.
+    */
+  @scala.inline
+  def generateKey(
+    `type`: tmttyped.node.nodeStrings.hmac | tmttyped.node.nodeStrings.aes,
+    options: tmttyped.node.anon.Length,
+    callback: js.Function2[
+      /* err */ js.Error | scala.Null, 
+      /* key */ tmttyped.node.cryptoMod.KeyObject, 
+      scala.Unit
+    ]
+  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKey")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def generateKeyPair(
+    `type`: tmttyped.node.nodeStrings.`rsa-pss`,
+    options: tmttyped.node.cryptoMod.RSAPSSKeyPairKeyObjectOptions,
+    callback: js.Function3[
+      /* err */ js.Error | scala.Null, 
+      /* publicKey */ tmttyped.node.cryptoMod.KeyObject, 
+      /* privateKey */ tmttyped.node.cryptoMod.KeyObject, 
+      scala.Unit
+    ]
+  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPair")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def generateKeyPair(
+    `type`: tmttyped.node.nodeStrings.`rsa-pss`,
+    options: tmttyped.node.cryptoMod.RSAPSSKeyPairOptions[
+      tmttyped.node.nodeStrings.der | tmttyped.node.nodeStrings.pem, 
+      tmttyped.node.nodeStrings.der | tmttyped.node.nodeStrings.pem
+    ],
+    callback: js.Function3[
+      js.Error | scala.Null, 
+      (/* publicKey */ tmttyped.node.bufferMod.global.Buffer) | (/* publicKey */ java.lang.String), 
+      (/* privateKey */ tmttyped.node.bufferMod.global.Buffer) | (/* privateKey */ java.lang.String), 
+      scala.Unit
+    ]
+  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPair")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def generateKeyPair(
     `type`: tmttyped.node.nodeStrings.dsa,
@@ -761,8 +767,8 @@ package object cryptoMod {
     ]
   ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPair")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   /**
-    * Generates a new asymmetric key pair of the given `type`. RSA, DSA, EC, Ed25519,
-    * Ed448, X25519, X448, and DH are currently supported.
+    * Generates a new asymmetric key pair of the given `type`. RSA, RSA-PSS, DSA, EC,
+    * Ed25519, Ed448, X25519, X448, and DH are currently supported.
     *
     * If a `publicKeyEncoding` or `privateKeyEncoding` was specified, this function
     * behaves as if `keyObject.export()` had been called on its result. Otherwise,
@@ -772,30 +778,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   generateKeyPair,
+    *   generateKeyPair
     * } = await import('crypto');
-    *
-    * generateKeyPair('rsa', {
-    *   modulusLength: 4096,
-    *   publicKeyEncoding: {
-    *     type: 'spki',
-    *     format: 'pem'
-    *   },
-    *   privateKeyEncoding: {
-    *     type: 'pkcs8',
-    *     format: 'pem',
-    *     cipher: 'aes-256-cbc',
-    *     passphrase: 'top secret'
-    *   }
-    * }, (err, publicKey, privateKey) => {
-    *   // Handle errors and use the generated key pair.
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   generateKeyPair,
-    * } = require('crypto');
     *
     * generateKeyPair('rsa', {
     *   modulusLength: 4096,
@@ -819,7 +803,7 @@ package object cryptoMod {
     * If this method is invoked as its `util.promisify()` ed version, it returns
     * a `Promise` for an `Object` with `publicKey` and `privateKey` properties.
     * @since v10.12.0
-    * @param type Must be `'rsa'`, `'dsa'`, `'ec'`, `'ed25519'`, `'ed448'`, `'x25519'`, `'x448'`, or `'dh'`.
+    * @param type Must be `'rsa'`, `'rsa-pss'`, `'dsa'`, `'ec'`, `'ed25519'`, `'ed448'`, `'x25519'`, `'x448'`, or `'dh'`.
     */
   @scala.inline
   def generateKeyPair(
@@ -910,6 +894,14 @@ package object cryptoMod {
   
   @scala.inline
   def generateKeyPairSync(
+    `type`: tmttyped.node.nodeStrings.`rsa-pss`,
+    options: tmttyped.node.cryptoMod.RSAPSSKeyPairOptions[
+      tmttyped.node.nodeStrings.der | tmttyped.node.nodeStrings.pem, 
+      tmttyped.node.nodeStrings.der | tmttyped.node.nodeStrings.pem
+    ]
+  ): tmttyped.node.cryptoMod.KeyPairSyncResult[java.lang.String, java.lang.String] = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyPairSyncResult[java.lang.String, java.lang.String]]
+  @scala.inline
+  def generateKeyPairSync(
     `type`: tmttyped.node.nodeStrings.dsa,
     options: tmttyped.node.cryptoMod.DSAKeyPairOptions[
       tmttyped.node.nodeStrings.der | tmttyped.node.nodeStrings.pem, 
@@ -941,8 +933,8 @@ package object cryptoMod {
     ]
   ): tmttyped.node.cryptoMod.KeyPairSyncResult[java.lang.String, java.lang.String] = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyPairSyncResult[java.lang.String, java.lang.String]]
   /**
-    * Generates a new asymmetric key pair of the given `type`. RSA, DSA, EC, Ed25519,
-    * Ed448, X25519, X448, and DH are currently supported.
+    * Generates a new asymmetric key pair of the given `type`. RSA, RSA-PSS, DSA, EC,
+    * Ed25519, Ed448, X25519, X448, and DH are currently supported.
     *
     * If a `publicKeyEncoding` or `privateKeyEncoding` was specified, this function
     * behaves as if `keyObject.export()` had been called on its result. Otherwise,
@@ -954,31 +946,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   generateKeyPairSync,
+    *   generateKeyPairSync
     * } = await import('crypto');
-    *
-    * const {
-    *   publicKey,
-    *   privateKey,
-    * } = generateKeyPairSync('rsa', {
-    *   modulusLength: 4096,
-    *   publicKeyEncoding: {
-    *     type: 'spki',
-    *     format: 'pem'
-    *   },
-    *   privateKeyEncoding: {
-    *     type: 'pkcs8',
-    *     format: 'pem',
-    *     cipher: 'aes-256-cbc',
-    *     passphrase: 'top secret'
-    *   }
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   generateKeyPairSync,
-    * } = require('crypto');
     *
     * const {
     *   publicKey,
@@ -1002,7 +971,7 @@ package object cryptoMod {
     * When PEM encoding was selected, the respective key will be a string, otherwise
     * it will be a buffer containing the data encoded as DER.
     * @since v10.12.0
-    * @param type Must be `'rsa'`, `'dsa'`, `'ec'`, `'ed25519'`, `'ed448'`, `'x25519'`, `'x448'`, or `'dh'`.
+    * @param type Must be `'rsa'`, `'rsa-pss'`, `'dsa'`, `'ec'`, `'ed25519'`, `'ed448'`, `'x25519'`, `'x448'`, or `'dh'`.
     */
   @scala.inline
   def generateKeyPairSync(
@@ -1055,6 +1024,12 @@ package object cryptoMod {
   def generateKeyPairSync_rsa(`type`: tmttyped.node.nodeStrings.rsa, options: tmttyped.node.cryptoMod.RSAKeyPairKeyObjectOptions): tmttyped.node.cryptoMod.KeyPairKeyObjectResult = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyPairKeyObjectResult]
   
   @scala.inline
+  def generateKeyPairSync_rsapss(
+    `type`: tmttyped.node.nodeStrings.`rsa-pss`,
+    options: tmttyped.node.cryptoMod.RSAPSSKeyPairKeyObjectOptions
+  ): tmttyped.node.cryptoMod.KeyPairKeyObjectResult = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyPairKeyObjectResult]
+  
+  @scala.inline
   def generateKeyPairSync_x25519(`type`: tmttyped.node.nodeStrings.x25519): tmttyped.node.cryptoMod.KeyPairKeyObjectResult = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.KeyPairKeyObjectResult]
   @scala.inline
   def generateKeyPairSync_x25519(
@@ -1070,54 +1045,25 @@ package object cryptoMod {
     options: tmttyped.node.cryptoMod.X448KeyPairKeyObjectOptions
   ): tmttyped.node.cryptoMod.KeyPairKeyObjectResult = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeyPairSync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyPairKeyObjectResult]
   
-  @scala.inline
-  def generateKey_aes(
-    `type`: tmttyped.node.nodeStrings.aes,
-    options: tmttyped.node.anon.Length,
-    callback: js.Function2[
-      /* err */ js.Error | scala.Null, 
-      /* key */ tmttyped.node.cryptoMod.KeyObject, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKey")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
   /**
-    * Asynchronously generates a new random secret key of the given `length`. The`type` will determine which validations will be performed on the `length`.
+    * Synchronously generates a new random secret key of the given `length`. The`type` will determine which validations will be performed on the `length`.
     *
     * ```js
     * const {
-    *   generateKey,
+    *   generateKeySync
     * } = await import('crypto');
     *
-    * generateKey('hmac', { length: 64 }, (err, key) => {
-    *   if (err) throw err;
-    *   console.log(key.export().toString('hex'));  // 46e..........620
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   generateKey,
-    * } = require('crypto');
-    *
-    * generateKey('hmac', { length: 64 }, (err, key) => {
-    *   if (err) throw err;
-    *   console.log(key.export().toString('hex'));  // 46e..........620
-    * });
+    * const key = generateKeySync('hmac', { length: 64 });
+    * console.log(key.export().toString('hex'));  // e89..........41e
     * ```
     * @since v15.0.0
     * @param type The intended use of the generated secret key. Currently accepted values are `'hmac'` and `'aes'`.
     */
   @scala.inline
-  def generateKey_hmac(
-    `type`: tmttyped.node.nodeStrings.hmac,
-    options: tmttyped.node.anon.Length,
-    callback: js.Function2[
-      /* err */ js.Error | scala.Null, 
-      /* key */ tmttyped.node.cryptoMod.KeyObject, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKey")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def generateKeySync(
+    `type`: tmttyped.node.nodeStrings.hmac | tmttyped.node.nodeStrings.aes,
+    options: tmttyped.node.anon.Length
+  ): tmttyped.node.cryptoMod.KeyObject = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("generateKeySync")(`type`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.cryptoMod.KeyObject]
   
   /**
     * Generates a pseudorandom prime of `size` bits.
@@ -1141,8 +1087,8 @@ package object cryptoMod {
     * if given as an `ArrayBuffer`, `SharedArrayBuffer`, `TypedArray`, `Buffer`, or`DataView`.
     *
     * By default, the prime is encoded as a big-endian sequence of octets
-    * in an [&lt;ArrayBuffer&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). If the `bigint` option is `true`, then a
-    * [&lt;bigint&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)is provided.
+    * in an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). If the `bigint` option is `true`, then a
+    * [bigint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) is provided.
     * @since v15.8.0
     * @param size The size (in bits) of the prime to generate.
     */
@@ -1196,8 +1142,8 @@ package object cryptoMod {
     * if given as an `ArrayBuffer`, `SharedArrayBuffer`, `TypedArray`, `Buffer`, or`DataView`.
     *
     * By default, the prime is encoded as a big-endian sequence of octets
-    * in an [&lt;ArrayBuffer&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). If the `bigint` option is `true`, then a
-    * [&lt;bigint&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)is provided.
+    * in an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). If the `bigint` option is `true`, then a
+    * [bigint](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) is provided.
     * @since v15.8.0
     * @param size The size (in bits) of the prime to generate.
     */
@@ -1233,16 +1179,8 @@ package object cryptoMod {
   /**
     * ```js
     * const {
-    *   getCiphers,
+    *   getCiphers
     * } = await import('crypto');
-    *
-    * console.log(getCiphers()); // ['aes-128-cbc', 'aes-128-ccm', ...]
-    * ```
-    *
-    * ```js
-    * const {
-    *   getCiphers,
-    * } = require('crypto');
     *
     * console.log(getCiphers()); // ['aes-128-cbc', 'aes-128-ccm', ...]
     * ```
@@ -1255,16 +1193,8 @@ package object cryptoMod {
   /**
     * ```js
     * const {
-    *   getCurves,
+    *   getCurves
     * } = await import('crypto');
-    *
-    * console.log(getCurves()); // ['Oakley-EC2N-3', 'Oakley-EC2N-4', ...]
-    * ```
-    *
-    * ```js
-    * const {
-    *   getCurves,
-    * } = require('crypto');
     *
     * console.log(getCurves()); // ['Oakley-EC2N-3', 'Oakley-EC2N-4', ...]
     * ```
@@ -1276,7 +1206,7 @@ package object cryptoMod {
   
   /**
     * Creates a predefined `DiffieHellmanGroup` key exchange object. The
-    * supported groups are: `'modp1'`, `'modp2'`, `'modp5'` (defined in[RFC 2412](https://www.rfc-editor.org/rfc/rfc2412.txt), but see `Caveats`) and `'modp14'`, `'modp15'`,`'modp16'`, `'modp17'`,
+    * supported groups are: `'modp1'`, `'modp2'`, `'modp5'` (defined in [RFC 2412](https://www.rfc-editor.org/rfc/rfc2412.txt), but see `Caveats`) and `'modp14'`, `'modp15'`,`'modp16'`, `'modp17'`,
     * `'modp18'` (defined in [RFC 3526](https://www.rfc-editor.org/rfc/rfc3526.txt)). The
     * returned object mimics the interface of objects created by {@link createDiffieHellman}, but will not allow changing
     * the keys (with `diffieHellman.setPublicKey()`, for example). The
@@ -1288,26 +1218,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   getDiffieHellman,
+    *   getDiffieHellman
     * } = await import('crypto');
-    * const alice = getDiffieHellman('modp14');
-    * const bob = getDiffieHellman('modp14');
-    *
-    * alice.generateKeys();
-    * bob.generateKeys();
-    *
-    * const aliceSecret = alice.computeSecret(bob.getPublicKey(), null, 'hex');
-    * const bobSecret = bob.computeSecret(alice.getPublicKey(), null, 'hex');
-    *
-    * // aliceSecret and bobSecret should be the same
-    * console.log(aliceSecret === bobSecret);
-    * ```
-    *
-    * ```js
-    * const {
-    *   getDiffieHellman,
-    * } = require('crypto');
-    *
     * const alice = getDiffieHellman('modp14');
     * const bob = getDiffieHellman('modp14');
     *
@@ -1323,7 +1235,7 @@ package object cryptoMod {
     * @since v0.7.5
     */
   @scala.inline
-  def getDiffieHellman(group_name: java.lang.String): tmttyped.node.cryptoMod.DiffieHellman_ = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("getDiffieHellman")(group_name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
+  def getDiffieHellman(groupName: java.lang.String): tmttyped.node.cryptoMod.DiffieHellman_ = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("getDiffieHellman")(groupName.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.cryptoMod.DiffieHellman_]
   
   /**
     * @since v10.0.0
@@ -1335,16 +1247,8 @@ package object cryptoMod {
   /**
     * ```js
     * const {
-    *   getHashes,
+    *   getHashes
     * } = await import('crypto');
-    *
-    * console.log(getHashes()); // ['DSA', 'DSA-SHA', 'DSA-SHA1', ...]
-    * ```
-    *
-    * ```js
-    * const {
-    *   getHashes,
-    * } = require('crypto');
     *
     * console.log(getHashes()); // ['DSA', 'DSA-SHA', 'DSA-SHA1', ...]
     * ```
@@ -1355,28 +1259,18 @@ package object cryptoMod {
   def getHashes(): js.Array[java.lang.String] = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("getHashes")().asInstanceOf[js.Array[java.lang.String]]
   
   /**
-    * HKDF is a simple key derivation function defined in RFC 5869\. The given `key`,`salt` and `info` are used with the `digest` to derive a key of `keylen` bytes.
+    * HKDF is a simple key derivation function defined in RFC 5869\. The given `ikm`,`salt` and `info` are used with the `digest` to derive a key of `keylen` bytes.
     *
     * The supplied `callback` function is called with two arguments: `err` and`derivedKey`. If an errors occurs while deriving the key, `err` will be set;
     * otherwise `err` will be `null`. The successfully generated `derivedKey` will
-    * be passed to the callback as an [&lt;ArrayBuffer&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). An error will be thrown if any
+    * be passed to the callback as an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). An error will be thrown if any
     * of the input arguments specify invalid values or types.
     *
     * ```js
+    * import { Buffer } from 'buffer';
     * const {
-    *   hkdf,
+    *   hkdf
     * } = await import('crypto');
-    *
-    * hkdf('sha512', 'key', 'salt', 'info', 64, (err, derivedKey) => {
-    *   if (err) throw err;
-    *   console.log(Buffer.from(derivedKey).toString('hex'));  // '24156e2...5391653'
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   hkdf,
-    * } = require('crypto');
     *
     * hkdf('sha512', 'key', 'salt', 'info', 64, (err, derivedKey) => {
     *   if (err) throw err;
@@ -1385,7 +1279,7 @@ package object cryptoMod {
     * ```
     * @since v15.0.0
     * @param digest The digest algorithm to use.
-    * @param key The secret key. It must be at least one byte in length.
+    * @param ikm The input keying material. It must be at least one byte in length.
     * @param salt The salt value. Must be provided but can be zero-length.
     * @param info Additional info value. Must be provided but can be zero-length, and cannot be more than 1024 bytes.
     * @param keylen The length of the key to generate. Must be greater than 0. The maximum allowable value is `255` times the number of bytes produced by the selected digest function (e.g. `sha512`
@@ -1394,7 +1288,7 @@ package object cryptoMod {
   @scala.inline
   def hkdf(
     digest: java.lang.String,
-    key: tmttyped.node.cryptoMod.BinaryLike,
+    irm: tmttyped.node.cryptoMod.BinaryLike,
     salt: tmttyped.node.cryptoMod.BinaryLike,
     info: tmttyped.node.cryptoMod.BinaryLike,
     keylen: scala.Double,
@@ -1403,11 +1297,11 @@ package object cryptoMod {
       /* derivedKey */ js.typedarray.ArrayBuffer, 
       scala.Unit
     ]
-  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdf")(digest.asInstanceOf[js.Any], key.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdf")(digest.asInstanceOf[js.Any], irm.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def hkdf(
     digest: java.lang.String,
-    key: tmttyped.node.cryptoMod.KeyObject,
+    irm: tmttyped.node.cryptoMod.KeyObject,
     salt: tmttyped.node.cryptoMod.BinaryLike,
     info: tmttyped.node.cryptoMod.BinaryLike,
     keylen: scala.Double,
@@ -1416,37 +1310,29 @@ package object cryptoMod {
       /* derivedKey */ js.typedarray.ArrayBuffer, 
       scala.Unit
     ]
-  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdf")(digest.asInstanceOf[js.Any], key.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdf")(digest.asInstanceOf[js.Any], irm.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   /**
     * Provides a synchronous HKDF key derivation function as defined in RFC 5869\. The
-    * given `key`, `salt` and `info` are used with the `digest` to derive a key of`keylen` bytes.
+    * given `ikm`, `salt` and `info` are used with the `digest` to derive a key of`keylen` bytes.
     *
-    * The successfully generated `derivedKey` will be returned as an [&lt;ArrayBuffer&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+    * The successfully generated `derivedKey` will be returned as an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
     *
     * An error will be thrown if any of the input arguments specify invalid values or
     * types, or if the derived key cannot be generated.
     *
     * ```js
+    * import { Buffer } from 'buffer';
     * const {
-    *   hkdfSync,
+    *   hkdfSync
     * } = await import('crypto');
-    *
-    * const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info', 64);
-    * console.log(Buffer.from(derivedKey).toString('hex'));  // '24156e2...5391653'
-    * ```
-    *
-    * ```js
-    * const {
-    *   hkdfSync,
-    * } = require('crypto');
     *
     * const derivedKey = hkdfSync('sha512', 'key', 'salt', 'info', 64);
     * console.log(Buffer.from(derivedKey).toString('hex'));  // '24156e2...5391653'
     * ```
     * @since v15.0.0
     * @param digest The digest algorithm to use.
-    * @param key The secret key. It must be at least one byte in length.
+    * @param ikm The input keying material. It must be at least one byte in length.
     * @param salt The salt value. Must be provided but can be zero-length.
     * @param info Additional info value. Must be provided but can be zero-length, and cannot be more than 1024 bytes.
     * @param keylen The length of the key to generate. Must be greater than 0. The maximum allowable value is `255` times the number of bytes produced by the selected digest function (e.g. `sha512`
@@ -1455,19 +1341,19 @@ package object cryptoMod {
   @scala.inline
   def hkdfSync(
     digest: java.lang.String,
-    key: tmttyped.node.cryptoMod.BinaryLike,
+    ikm: tmttyped.node.cryptoMod.BinaryLike,
     salt: tmttyped.node.cryptoMod.BinaryLike,
     info: tmttyped.node.cryptoMod.BinaryLike,
     keylen: scala.Double
-  ): js.typedarray.ArrayBuffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdfSync")(digest.asInstanceOf[js.Any], key.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any])).asInstanceOf[js.typedarray.ArrayBuffer]
+  ): js.typedarray.ArrayBuffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdfSync")(digest.asInstanceOf[js.Any], ikm.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any])).asInstanceOf[js.typedarray.ArrayBuffer]
   @scala.inline
   def hkdfSync(
     digest: java.lang.String,
-    key: tmttyped.node.cryptoMod.KeyObject,
+    ikm: tmttyped.node.cryptoMod.KeyObject,
     salt: tmttyped.node.cryptoMod.BinaryLike,
     info: tmttyped.node.cryptoMod.BinaryLike,
     keylen: scala.Double
-  ): js.typedarray.ArrayBuffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdfSync")(digest.asInstanceOf[js.Any], key.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any])).asInstanceOf[js.typedarray.ArrayBuffer]
+  ): js.typedarray.ArrayBuffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("hkdfSync")(digest.asInstanceOf[js.Any], ikm.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], info.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any])).asInstanceOf[js.typedarray.ArrayBuffer]
   
   /**
     * Provides an asynchronous Password-Based Key Derivation Function 2 (PBKDF2)
@@ -1492,19 +1378,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   pbkdf2,
+    *   pbkdf2
     * } = await import('crypto');
-    *
-    * pbkdf2('secret', 'salt', 100000, 64, 'sha512', (err, derivedKey) => {
-    *   if (err) throw err;
-    *   console.log(derivedKey.toString('hex'));  // '3745e48...08d59ae'
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   pbkdf2,
-    * } = require('crypto');
     *
     * pbkdf2('secret', 'salt', 100000, 64, 'sha512', (err, derivedKey) => {
     *   if (err) throw err;
@@ -1516,16 +1391,7 @@ package object cryptoMod {
     * deprecated and use should be avoided.
     *
     * ```js
-    * const crypto = await import('crypto');
-    * crypto.DEFAULT_ENCODING = 'hex';
-    * crypto.pbkdf2('secret', 'salt', 100000, 512, 'sha512', (err, derivedKey) => {
-    *   if (err) throw err;
-    *   console.log(derivedKey);  // '3745e48...aa39b34'
-    * });
-    * ```
-    *
-    * ```js
-    * const crypto = require('crypto');
+    * import crypto from 'crypto';
     * crypto.DEFAULT_ENCODING = 'hex';
     * crypto.pbkdf2('secret', 'salt', 100000, 512, 'sha512', (err, derivedKey) => {
     *   if (err) throw err;
@@ -1575,17 +1441,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   pbkdf2Sync,
+    *   pbkdf2Sync
     * } = await import('crypto');
-    *
-    * const key = pbkdf2Sync('secret', 'salt', 100000, 64, 'sha512');
-    * console.log(key.toString('hex'));  // '3745e48...08d59ae'
-    * ```
-    *
-    * ```js
-    * const {
-    *   pbkdf2Sync,
-    * } = require('crypto');
     *
     * const key = pbkdf2Sync('secret', 'salt', 100000, 64, 'sha512');
     * console.log(key.toString('hex'));  // '3745e48...08d59ae'
@@ -1595,14 +1452,7 @@ package object cryptoMod {
     * should be avoided.
     *
     * ```js
-    * const crypto = await import('crypto');
-    * crypto.DEFAULT_ENCODING = 'hex';
-    * const key = crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
-    * console.log(key);  // '3745e48...aa39b34'
-    * ```
-    *
-    * ```js
-    * const crypto = require('crypto');
+    * import crypto from 'crypto';
     * crypto.DEFAULT_ENCODING = 'hex';
     * const key = crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
     * console.log(key);  // '3745e48...aa39b34'
@@ -1621,7 +1471,7 @@ package object cryptoMod {
   ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("pbkdf2Sync")(password.asInstanceOf[js.Any], salt.asInstanceOf[js.Any], iterations.asInstanceOf[js.Any], keylen.asInstanceOf[js.Any], digest.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   
   @scala.inline
-  def privateDecrypt(private_key: tmttyped.node.cryptoMod.KeyLike, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateDecrypt")(private_key.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def privateDecrypt(privateKey: tmttyped.node.cryptoMod.KeyLike, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateDecrypt")(privateKey.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   /**
     * Decrypts `buffer` with `privateKey`. `buffer` was previously encrypted using
     * the corresponding public key, for example using {@link publicEncrypt}.
@@ -1631,10 +1481,10 @@ package object cryptoMod {
     * @since v0.11.14
     */
   @scala.inline
-  def privateDecrypt(private_key: tmttyped.node.cryptoMod.RsaPrivateKey, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateDecrypt")(private_key.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def privateDecrypt(privateKey: tmttyped.node.cryptoMod.RsaPrivateKey, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateDecrypt")(privateKey.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   
   @scala.inline
-  def privateEncrypt(private_key: tmttyped.node.cryptoMod.KeyLike, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateEncrypt")(private_key.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def privateEncrypt(privateKey: tmttyped.node.cryptoMod.KeyLike, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateEncrypt")(privateKey.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   /**
     * Encrypts `buffer` with `privateKey`. The returned data can be decrypted using
     * the corresponding public key, for example using {@link publicDecrypt}.
@@ -1644,7 +1494,7 @@ package object cryptoMod {
     * @since v1.1.0
     */
   @scala.inline
-  def privateEncrypt(private_key: tmttyped.node.cryptoMod.RsaPrivateKey, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateEncrypt")(private_key.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def privateEncrypt(privateKey: tmttyped.node.cryptoMod.RsaPrivateKey, buffer: tmttyped.node.NodeJS.ArrayBufferView): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("privateEncrypt")(privateKey.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   
   @scala.inline
   def pseudoRandomBytes(size: scala.Double): tmttyped.node.bufferMod.global.Buffer = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("pseudoRandomBytes")(size.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
@@ -1705,20 +1555,8 @@ package object cryptoMod {
     * ```js
     * // Asynchronous
     * const {
-    *   randomBytes,
+    *   randomBytes
     * } = await import('crypto');
-    *
-    * randomBytes(256, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(`${buf.length} bytes of random data: ${buf.toString('hex')}`);
-    * });
-    * ```
-    *
-    * ```js
-    * // Asynchronous
-    * const {
-    *   randomBytes,
-    * } = require('crypto');
     *
     * randomBytes(256, (err, buf) => {
     *   if (err) throw err;
@@ -1733,19 +1571,8 @@ package object cryptoMod {
     * ```js
     * // Synchronous
     * const {
-    *   randomBytes,
+    *   randomBytes
     * } = await import('crypto');
-    *
-    * const buf = randomBytes(256);
-    * console.log(
-    *   `${buf.length} bytes of random data: ${buf.toString('hex')}`);
-    * ```
-    *
-    * ```js
-    * // Synchronous
-    * const {
-    *   randomBytes,
-    * } = require('crypto');
     *
     * const buf = randomBytes(256);
     * console.log(
@@ -1933,32 +1760,8 @@ package object cryptoMod {
     * If the `callback` function is not provided, an error will be thrown.
     *
     * ```js
-    * const {
-    *   randomFill,
-    * } = await import('crypto');
-    *
-    * const buf = Buffer.alloc(10);
-    * randomFill(buf, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(buf.toString('hex'));
-    * });
-    *
-    * randomFill(buf, 5, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(buf.toString('hex'));
-    * });
-    *
-    * // The above is equivalent to the following:
-    * randomFill(buf, 5, 5, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(buf.toString('hex'));
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   randomFill,
-    * } = require('crypto');
+    * import { Buffer } from 'buffer';
+    * const { randomFill } = await import('crypto');
     *
     * const buf = Buffer.alloc(10);
     * randomFill(buf, (err, buf) => {
@@ -1987,35 +1790,8 @@ package object cryptoMod {
     * distribution and have no meaningful lower or upper bounds.
     *
     * ```js
-    * const {
-    *   randomFill,
-    * } = await import('crypto');
-    *
-    * const a = new Uint32Array(10);
-    * randomFill(a, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(Buffer.from(buf.buffer, buf.byteOffset, buf.byteLength)
-    *     .toString('hex'));
-    * });
-    *
-    * const b = new DataView(new ArrayBuffer(10));
-    * randomFill(b, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(Buffer.from(buf.buffer, buf.byteOffset, buf.byteLength)
-    *     .toString('hex'));
-    * });
-    *
-    * const c = new ArrayBuffer(10);
-    * randomFill(c, (err, buf) => {
-    *   if (err) throw err;
-    *   console.log(Buffer.from(buf).toString('hex'));
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   randomFill,
-    * } = require('crypto');
+    * import { Buffer } from 'buffer';
+    * const { randomFill } = await import('crypto');
     *
     * const a = new Uint32Array(10);
     * randomFill(a, (err, buf) => {
@@ -2047,6 +1823,8 @@ package object cryptoMod {
     * request.
     * @since v7.10.0, v6.13.0
     * @param buffer Must be supplied. The size of the provided `buffer` must not be larger than `2**31 - 1`.
+    * @param [offset=0]
+    * @param [size=buffer.length - offset]
     * @param callback `function(err, buf) {}`.
     */
   @scala.inline
@@ -2202,25 +1980,8 @@ package object cryptoMod {
     * Synchronous version of {@link randomFill}.
     *
     * ```js
-    * const {
-    *   randomFillSync,
-    * } = await import('crypto');
-    *
-    * const buf = Buffer.alloc(10);
-    * console.log(randomFillSync(buf).toString('hex'));
-    *
-    * randomFillSync(buf, 5);
-    * console.log(buf.toString('hex'));
-    *
-    * // The above is equivalent to the following:
-    * randomFillSync(buf, 5, 5);
-    * console.log(buf.toString('hex'));
-    * ```
-    *
-    * ```js
-    * const {
-    *   randomFillSync,
-    * } = require('crypto');
+    * import { Buffer } from 'buffer';
+    * const { randomFillSync } = await import('crypto');
     *
     * const buf = Buffer.alloc(10);
     * console.log(randomFillSync(buf).toString('hex'));
@@ -2236,26 +1997,8 @@ package object cryptoMod {
     * Any `ArrayBuffer`, `TypedArray` or `DataView` instance may be passed as`buffer`.
     *
     * ```js
-    * const {
-    *   randomFillSync,
-    * } = await import('crypto');
-    *
-    * const a = new Uint32Array(10);
-    * console.log(Buffer.from(randomFillSync(a).buffer,
-    *                         a.byteOffset, a.byteLength).toString('hex'));
-    *
-    * const b = new DataView(new ArrayBuffer(10));
-    * console.log(Buffer.from(randomFillSync(b).buffer,
-    *                         b.byteOffset, b.byteLength).toString('hex'));
-    *
-    * const c = new ArrayBuffer(10);
-    * console.log(Buffer.from(randomFillSync(c)).toString('hex'));
-    * ```
-    *
-    * ```js
-    * const {
-    *   randomFillSync,
-    * } = require('crypto');
+    * import { Buffer } from 'buffer';
+    * const { randomFillSync } = await import('crypto');
     *
     * const a = new Uint32Array(10);
     * console.log(Buffer.from(randomFillSync(a).buffer,
@@ -2270,6 +2013,8 @@ package object cryptoMod {
     * ```
     * @since v7.10.0, v6.13.0
     * @param buffer Must be supplied. The size of the provided `buffer` must not be larger than `2**31 - 1`.
+    * @param [offset=0]
+    * @param [size=buffer.length - offset]
     * @return The object passed as `buffer` argument.
     */
   @scala.inline
@@ -2318,20 +2063,8 @@ package object cryptoMod {
     * ```js
     * // Asynchronous
     * const {
-    *   randomInt,
+    *   randomInt
     * } = await import('crypto');
-    *
-    * randomInt(3, (err, n) => {
-    *   if (err) throw err;
-    *   console.log(`Random number chosen from (0, 1, 2): ${n}`);
-    * });
-    * ```
-    *
-    * ```js
-    * // Asynchronous
-    * const {
-    *   randomInt,
-    * } = require('crypto');
     *
     * randomInt(3, (err, n) => {
     *   if (err) throw err;
@@ -2342,18 +2075,8 @@ package object cryptoMod {
     * ```js
     * // Synchronous
     * const {
-    *   randomInt,
+    *   randomInt
     * } = await import('crypto');
-    *
-    * const n = randomInt(3);
-    * console.log(`Random number chosen from (0, 1, 2): ${n}`);
-    * ```
-    *
-    * ```js
-    * // Synchronous
-    * const {
-    *   randomInt,
-    * } = require('crypto');
     *
     * const n = randomInt(3);
     * console.log(`Random number chosen from (0, 1, 2): ${n}`);
@@ -2362,24 +2085,14 @@ package object cryptoMod {
     * ```js
     * // With `min` argument
     * const {
-    *   randomInt,
+    *   randomInt
     * } = await import('crypto');
-    *
-    * const n = randomInt(1, 7);
-    * console.log(`The dice rolled: ${n}`);
-    * ```
-    *
-    * ```js
-    * // With `min` argument
-    * const {
-    *   randomInt,
-    * } = require('crypto');
     *
     * const n = randomInt(1, 7);
     * console.log(`The dice rolled: ${n}`);
     * ```
     * @since v14.10.0, v12.19.0
-    * @param min Start of random range (inclusive).
+    * @param [min=0] Start of random range (inclusive).
     * @param max End of random range (exclusive).
     * @param callback `function(err, n) {}`.
     */
@@ -2400,9 +2113,9 @@ package object cryptoMod {
   ): scala.Unit = (tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("randomInt")(min.asInstanceOf[js.Any], max.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   /**
-    * Generates a random [RFC 4122](https://www.rfc-editor.org/rfc/rfc4122.txt) Version 4 UUID. The UUID is generated using a
+    * Generates a random [RFC 4122](https://www.rfc-editor.org/rfc/rfc4122.txt) version 4 UUID. The UUID is generated using a
     * cryptographic pseudorandom number generator.
-    * @since v15.6.0
+    * @since v15.6.0, v14.17.0
     */
   @scala.inline
   def randomUUID(): java.lang.String = tmttyped.node.cryptoMod.^.asInstanceOf[js.Dynamic].applyDynamic("randomUUID")().asInstanceOf[java.lang.String]
@@ -2427,25 +2140,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   scrypt,
+    *   scrypt
     * } = await import('crypto');
-    *
-    * // Using the factory defaults.
-    * scrypt('password', 'salt', 64, (err, derivedKey) => {
-    *   if (err) throw err;
-    *   console.log(derivedKey.toString('hex'));  // '3745e48...08d59ae'
-    * });
-    * // Using a custom N parameter. Must be a power of two.
-    * scrypt('password', 'salt', 64, { N: 1024 }, (err, derivedKey) => {
-    *   if (err) throw err;
-    *   console.log(derivedKey.toString('hex'));  // '3745e48...aa39b34'
-    * });
-    * ```
-    *
-    * ```js
-    * const {
-    *   scrypt,
-    * } = require('crypto');
     *
     * // Using the factory defaults.
     * scrypt('password', 'salt', 64, (err, derivedKey) => {
@@ -2502,21 +2198,8 @@ package object cryptoMod {
     *
     * ```js
     * const {
-    *   scryptSync,
+    *   scryptSync
     * } = await import('crypto');
-    * // Using the factory defaults.
-    *
-    * const key1 = scryptSync('password', 'salt', 64);
-    * console.log(key1.toString('hex'));  // '3745e48...08d59ae'
-    * // Using a custom N parameter. Must be a power of two.
-    * const key2 = scryptSync('password', 'salt', 64, { N: 1024 });
-    * console.log(key2.toString('hex'));  // '3745e48...aa39b34'
-    * ```
-    *
-    * ```js
-    * const {
-    *   scryptSync,
-    * } = require('crypto');
     * // Using the factory defaults.
     *
     * const key1 = scryptSync('password', 'salt', 64);
@@ -2717,7 +2400,7 @@ package object cryptoMod {
     * This function is based on a constant-time algorithm.
     * Returns true if `a` is equal to `b`, without leaking timing information that
     * would allow an attacker to guess one of the values. This is suitable for
-    * comparing HMAC digests or secret values like authentication cookies or[capability urls](https://www.w3.org/TR/capability-urls/).
+    * comparing HMAC digests or secret values like authentication cookies or [capability urls](https://www.w3.org/TR/capability-urls/).
     *
     * `a` and `b` must both be `Buffer`s, `TypedArray`s, or `DataView`s, and they
     * must have the same byte length.

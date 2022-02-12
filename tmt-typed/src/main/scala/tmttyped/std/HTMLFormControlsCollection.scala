@@ -16,5 +16,6 @@ trait HTMLFormControlsCollection
     *
     * If there are multiple matching items, then a RadioNodeList object containing all those elements is returned.
     */
-  def namedItem(name: java.lang.String): RadioNodeList | org.scalajs.dom.raw.Element | Null = js.native
+  /* standard DOM */
+  def namedItem(name: java.lang.String): RadioNodeList | org.scalajs.dom.Element | Null = js.native
 }

@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class BroadcastChannel protected ()
   extends StObject
      with tmttyped.std.BroadcastChannel {
+  /* standard DOM */
   def this(name: java.lang.String) = this()
 }

@@ -10,7 +10,9 @@ trait MediaQueryListEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val matches: scala.Boolean = js.native
   
+  /* standard DOM */
   val media: java.lang.String = js.native
 }

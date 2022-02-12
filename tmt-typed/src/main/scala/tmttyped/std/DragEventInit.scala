@@ -9,7 +9,8 @@ trait DragEventInit
   extends StObject
      with MouseEventInit {
   
-  var dataTransfer: js.UndefOr[org.scalajs.dom.raw.DataTransfer | Null] = js.undefined
+  /* standard DOM */
+  var dataTransfer: js.UndefOr[org.scalajs.dom.DataTransfer | Null] = js.undefined
 }
 object DragEventInit {
   
@@ -23,7 +24,7 @@ object DragEventInit {
   implicit class DragEventInitMutableBuilder[Self <: DragEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setDataTransfer(value: org.scalajs.dom.raw.DataTransfer): Self = StObject.set(x, "dataTransfer", value.asInstanceOf[js.Any])
+    def setDataTransfer(value: org.scalajs.dom.DataTransfer): Self = StObject.set(x, "dataTransfer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDataTransferNull: Self = StObject.set(x, "dataTransfer", null)

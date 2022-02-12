@@ -12,4 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ActiveXObject
   extends StObject
-     with Instantiable1[/* s */ java.lang.String, js.Any]
+     with /* standard ScriptHost */
+Instantiable1[/* s */ java.lang.String, Any]

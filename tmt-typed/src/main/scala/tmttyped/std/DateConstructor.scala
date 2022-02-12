@@ -16,12 +16,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DateConstructor
   extends StObject
-     with Instantiable0[js.Date]
-     with Instantiable1[
+     with /* standard ScriptHost */
+/* standard es2015.core */
+/* standard es5 */
+Instantiable1[
       (/* value */ js.Date) | (/* value */ Double) | (/* value */ java.lang.String) | (/* vd */ VarDate), 
       js.Date
     ]
-     with Instantiable2[/* year */ Double, /* month */ Double, js.Date]
+     with /* standard es5 */
+Instantiable0[js.Date]
+     with /* standard es5 */
+Instantiable2[/* year */ Double, /* month */ Double, js.Date]
      with Instantiable3[/* year */ Double, /* month */ Double, /* date */ Double, js.Date]
      with Instantiable4[
       /* year */ Double, 
@@ -58,6 +63,7 @@ trait DateConstructor
       js.Date
     ] {
   
+  /* standard es5 */
   def apply(): java.lang.String = js.native
   
   /**
@@ -70,6 +76,7 @@ trait DateConstructor
     * @param seconds Must be supplied if milliseconds is supplied. A number from 0 to 59 that specifies the seconds.
     * @param ms A number from 0 to 999 that specifies the milliseconds.
     */
+  /* standard es5 */
   def UTC(year: Double, month: Double): Double = js.native
   def UTC(year: Double, month: Double, date: Double): Double = js.native
   def UTC(year: Double, month: Double, date: Double, hours: Double): Double = js.native
@@ -143,11 +150,13 @@ trait DateConstructor
   def UTC(year: Double, month: Double, date: Unit, hours: Unit, minutes: Unit, seconds: Double, ms: Double): Double = js.native
   def UTC(year: Double, month: Double, date: Unit, hours: Unit, minutes: Unit, seconds: Unit, ms: Double): Double = js.native
   
+  /* standard es5 */
   def now(): Double = js.native
   
   /**
     * Parses a string containing a date, and returns the number of milliseconds between that date and midnight, January 1, 1970.
     * @param s A date string
     */
+  /* standard es5 */
   def parse(s: java.lang.String): Double = js.native
 }

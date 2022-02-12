@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.EventListenerOptions
 import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.EventListenerOrEventListenerObject
 import tmttyped.std.WorkerOptions
@@ -15,11 +15,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Worker protected ()
   extends StObject
      with tmttyped.std.Worker {
-  def this(stringUrl: java.lang.String) = this()
-  def this(stringUrl: org.scalajs.dom.experimental.URL) = this()
-  def this(stringUrl: java.lang.String, options: WorkerOptions) = this()
-  def this(stringUrl: org.scalajs.dom.experimental.URL, options: WorkerOptions) = this()
+  /* standard DOM */
+  def this(scriptURL: java.lang.String) = this()
+  def this(scriptURL: org.scalajs.dom.URL) = this()
+  def this(scriptURL: java.lang.String, options: WorkerOptions) = this()
+  def this(scriptURL: org.scalajs.dom.URL, options: WorkerOptions) = this()
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -31,6 +33,7 @@ class Worker protected ()
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */

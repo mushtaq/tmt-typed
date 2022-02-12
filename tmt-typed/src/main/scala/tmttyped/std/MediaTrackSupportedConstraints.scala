@@ -7,34 +7,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaTrackSupportedConstraints extends StObject {
   
+  /* standard DOM */
   var aspectRatio: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var autoGainControl: js.UndefOr[scala.Boolean] = js.undefined
   
-  var channelCount: js.UndefOr[scala.Boolean] = js.undefined
-  
+  /* standard DOM */
   var deviceId: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var echoCancellation: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var facingMode: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var frameRate: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var groupId: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var height: js.UndefOr[scala.Boolean] = js.undefined
   
-  var latency: js.UndefOr[scala.Boolean] = js.undefined
-  
+  /* standard DOM */
   var noiseSuppression: js.UndefOr[scala.Boolean] = js.undefined
   
-  var resizeMode: js.UndefOr[scala.Boolean] = js.undefined
-  
+  /* standard DOM */
   var sampleRate: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var sampleSize: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
+  var suppressLocalAudioPlayback: js.UndefOr[scala.Boolean] = js.undefined
+  
+  /* standard DOM */
   var width: js.UndefOr[scala.Boolean] = js.undefined
 }
 object MediaTrackSupportedConstraints {
@@ -59,12 +68,6 @@ object MediaTrackSupportedConstraints {
     
     @scala.inline
     def setAutoGainControlUndefined: Self = StObject.set(x, "autoGainControl", js.undefined)
-    
-    @scala.inline
-    def setChannelCount(value: scala.Boolean): Self = StObject.set(x, "channelCount", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChannelCountUndefined: Self = StObject.set(x, "channelCount", js.undefined)
     
     @scala.inline
     def setDeviceId(value: scala.Boolean): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
@@ -103,22 +106,10 @@ object MediaTrackSupportedConstraints {
     def setHeightUndefined: Self = StObject.set(x, "height", js.undefined)
     
     @scala.inline
-    def setLatency(value: scala.Boolean): Self = StObject.set(x, "latency", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLatencyUndefined: Self = StObject.set(x, "latency", js.undefined)
-    
-    @scala.inline
     def setNoiseSuppression(value: scala.Boolean): Self = StObject.set(x, "noiseSuppression", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNoiseSuppressionUndefined: Self = StObject.set(x, "noiseSuppression", js.undefined)
-    
-    @scala.inline
-    def setResizeMode(value: scala.Boolean): Self = StObject.set(x, "resizeMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResizeModeUndefined: Self = StObject.set(x, "resizeMode", js.undefined)
     
     @scala.inline
     def setSampleRate(value: scala.Boolean): Self = StObject.set(x, "sampleRate", value.asInstanceOf[js.Any])
@@ -131,6 +122,12 @@ object MediaTrackSupportedConstraints {
     
     @scala.inline
     def setSampleSizeUndefined: Self = StObject.set(x, "sampleSize", js.undefined)
+    
+    @scala.inline
+    def setSuppressLocalAudioPlayback(value: scala.Boolean): Self = StObject.set(x, "suppressLocalAudioPlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSuppressLocalAudioPlaybackUndefined: Self = StObject.set(x, "suppressLocalAudioPlayback", js.undefined)
     
     @scala.inline
     def setWidth(value: scala.Boolean): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])

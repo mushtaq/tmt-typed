@@ -11,10 +11,13 @@ trait CSSGroupingRule
   extends StObject
      with CSSRule {
   
-  val cssRules: org.scalajs.dom.raw.CSSRuleList = js.native
+  /* standard DOM */
+  val cssRules: org.scalajs.dom.CSSRuleList = js.native
   
+  /* standard DOM */
   def deleteRule(index: Double): Unit = js.native
   
+  /* standard DOM */
   def insertRule(rule: java.lang.String): Double = js.native
   def insertRule(rule: java.lang.String, index: Double): Double = js.native
 }

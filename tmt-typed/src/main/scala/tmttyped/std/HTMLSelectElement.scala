@@ -11,20 +11,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HTMLSelectElement
   extends StObject
      with HTMLElement
-     with /* name */ NumberDictionary[org.scalajs.dom.raw.HTMLOptionElement | org.scalajs.dom.raw.HTMLOptGroupElement] {
+     with /* standard DOM */
+/* name */ NumberDictionary[org.scalajs.dom.HTMLOptionElement | org.scalajs.dom.HTMLOptGroupElement] {
   
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement, before: org.scalajs.dom.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement, before: Double): Unit = js.native
   /**
     * Adds an element to the areas, controlRange, or options collection.
     * @param element Variant of type Number that specifies the index position in the collection where the element is placed. If no value is given, the method places the element at the end of the collection.
     * @param before Variant of type Object that specifies an element to insert before, or null to append the object to the collection.
     */
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
+  /* standard DOM */
+  def add(element: org.scalajs.dom.HTMLOptionElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptionElement, before: org.scalajs.dom.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptionElement, before: Double): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -36,115 +39,115 @@ trait HTMLSelectElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   var autocomplete: java.lang.String = js.native
   
-  /**
-    * Returns whether a form will validate when it is submitted, without having to submit it.
-    */
+  /** Returns whether a form will validate when it is submitted, without having to submit it. */
+  /* standard DOM */
   def checkValidity(): scala.Boolean = js.native
   
+  /* standard DOM */
   var disabled: scala.Boolean = js.native
   
-  /**
-    * Retrieves a reference to the form that the object is embedded in.
-    */
-  val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
+  /** Retrieves a reference to the form that the object is embedded in. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
   /**
     * Retrieves a select object or an object from an options collection.
     * @param name Variant of type Number or String that specifies the object or collection to retrieve. If this parameter is an integer, it is the zero-based index of the object. If this parameter is a string, all objects with matching name or id properties are retrieved, and a collection is returned if more than one match is made.
     * @param index Variant of type Number that specifies the zero-based index of the object to retrieve when a collection is returned.
     */
-  def item(index: Double): org.scalajs.dom.raw.Element | Null = js.native
+  /* standard DOM */
+  def item(index: Double): org.scalajs.dom.HTMLOptionElement | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.Element]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.HTMLOptionElement]] = js.native
   
-  val labels: org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLLabelElement with org.scalajs.dom.raw.Node] = js.native
+  /* standard DOM */
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
   
-  /**
-    * Sets or retrieves the number of objects in a collection.
-    */
+  /** Sets or retrieves the number of objects in a collection. */
+  /* standard DOM */
   var length: Double = js.native
   
-  /**
-    * Sets or retrieves the Boolean value indicating whether multiple items can be selected from a list.
-    */
+  /** Sets or retrieves the Boolean value indicating whether multiple items can be selected from a list. */
+  /* standard DOM */
   var multiple: scala.Boolean = js.native
   
-  /**
-    * Sets or retrieves the name of the object.
-    */
+  /** Sets or retrieves the name of the object. */
+  /* standard DOM */
   var name: java.lang.String = js.native
   
   /**
     * Retrieves a select object or an object from an options collection.
     * @param namedItem A String that specifies the name or id property of the object to retrieve. A collection is returned if more than one match is made.
     */
-  def namedItem(name: java.lang.String): org.scalajs.dom.raw.HTMLOptionElement | Null = js.native
+  /* standard DOM */
+  def namedItem(name: java.lang.String): org.scalajs.dom.HTMLOptionElement | Null = js.native
   
+  /** Returns an HTMLOptionsCollection of the list of options. */
+  /* standard DOM */
   val options: HTMLOptionsCollection = js.native
   
+  /* standard DOM */
   def remove(index: Double): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   def reportValidity(): scala.Boolean = js.native
   
-  /**
-    * When present, marks an element that can't be submitted without a value.
-    */
+  /** When present, marks an element that can't be submitted without a value. */
+  /* standard DOM */
   var required: scala.Boolean = js.native
   
-  /**
-    * Sets or retrieves the index of the selected option in a select object.
-    */
+  /** Sets or retrieves the index of the selected option in a select object. */
+  /* standard DOM */
   var selectedIndex: Double = js.native
   
-  val selectedOptions: HTMLCollectionOf[org.scalajs.dom.raw.HTMLOptionElement] = js.native
+  /* standard DOM */
+  val selectedOptions: HTMLCollectionOf[org.scalajs.dom.HTMLOptionElement] = js.native
   
   /**
     * Sets a custom error message that is displayed when a form is submitted.
     * @param error Sets a custom error message that is displayed when a form is submitted.
     */
+  /* standard DOM */
   def setCustomValidity(error: java.lang.String): Unit = js.native
   
-  /**
-    * Sets or retrieves the number of rows in the list box.
-    */
+  /** Sets or retrieves the number of rows in the list box. */
+  /* standard DOM */
   var size: Double = js.native
   
-  /**
-    * Retrieves the type of select control based on the value of the MULTIPLE attribute.
-    */
+  /** Retrieves the type of select control based on the value of the MULTIPLE attribute. */
+  /* standard DOM */
   val `type`: java.lang.String = js.native
   
-  /**
-    * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
-    */
+  /** Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting. */
+  /* standard DOM */
   val validationMessage: java.lang.String = js.native
   
-  /**
-    * Returns a  ValidityState object that represents the validity states of an element.
-    */
-  val validity: org.scalajs.dom.raw.ValidityState = js.native
+  /** Returns a  ValidityState object that represents the validity states of an element. */
+  /* standard DOM */
+  val validity: org.scalajs.dom.ValidityState = js.native
   
-  /**
-    * Sets or retrieves the value which is returned to the server when the form control is submitted.
-    */
+  /** Sets or retrieves the value which is returned to the server when the form control is submitted. */
+  /* standard DOM */
   var value: java.lang.String = js.native
   
-  /**
-    * Returns whether an element will successfully validate based on forms validation rules and constraints.
-    */
+  /** Returns whether an element will successfully validate based on forms validation rules and constraints. */
+  /* standard DOM */
   val willValidate: scala.Boolean = js.native
 }

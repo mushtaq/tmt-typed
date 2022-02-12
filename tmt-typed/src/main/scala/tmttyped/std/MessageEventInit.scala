@@ -9,14 +9,19 @@ trait MessageEventInit[T]
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var data: js.UndefOr[T] = js.undefined
   
+  /* standard DOM */
   var lastEventId: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var origin: js.UndefOr[java.lang.String] = js.undefined
   
-  var ports: js.UndefOr[js.Array[org.scalajs.dom.raw.MessagePort]] = js.undefined
+  /* standard DOM */
+  var ports: js.UndefOr[js.Array[org.scalajs.dom.MessagePort]] = js.undefined
   
+  /* standard DOM */
   var source: js.UndefOr[MessageEventSource | Null] = js.undefined
 }
 object MessageEventInit {
@@ -49,13 +54,13 @@ object MessageEventInit {
     def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
     
     @scala.inline
-    def setPorts(value: js.Array[org.scalajs.dom.raw.MessagePort]): Self = StObject.set(x, "ports", value.asInstanceOf[js.Any])
+    def setPorts(value: js.Array[org.scalajs.dom.MessagePort]): Self = StObject.set(x, "ports", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPortsUndefined: Self = StObject.set(x, "ports", js.undefined)
     
     @scala.inline
-    def setPortsVarargs(value: org.scalajs.dom.raw.MessagePort*): Self = StObject.set(x, "ports", js.Array(value :_*))
+    def setPortsVarargs(value: org.scalajs.dom.MessagePort*): Self = StObject.set(x, "ports", js.Array(value :_*))
     
     @scala.inline
     def setSource(value: MessageEventSource): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])

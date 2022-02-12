@@ -9,32 +9,46 @@ trait EventModifierInit
   extends StObject
      with UIEventInit {
   
+  /* standard DOM */
   var altKey: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var ctrlKey: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var metaKey: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierAltGraph: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierCapsLock: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierFn: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierFnLock: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierHyper: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierNumLock: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierScrollLock: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierSuper: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierSymbol: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var modifierSymbolLock: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var shiftKey: js.UndefOr[scala.Boolean] = js.undefined
 }
 object EventModifierInit {

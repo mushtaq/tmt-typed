@@ -12,38 +12,36 @@ trait TextTrack
   extends StObject
      with EventTarget {
   
-  /**
-    * Returns the text track cues from the text track list of cues that are currently active (i.e. that start before the current playback position and end after it), as a TextTrackCueList object.
-    */
-  val activeCues: org.scalajs.dom.raw.TextTrackCueList | Null = js.native
+  /** Returns the text track cues from the text track list of cues that are currently active (i.e. that start before the current playback position and end after it), as a TextTrackCueList object. */
+  /* standard DOM */
+  val activeCues: org.scalajs.dom.TextTrackCueList | Null = js.native
   
-  /**
-    * Adds the given cue to textTrack's text track list of cues.
-    */
-  def addCue(cue: org.scalajs.dom.raw.TextTrackCue): Unit = js.native
+  /** Adds the given cue to textTrack's text track list of cues. */
+  /* standard DOM */
+  def addCue(cue: org.scalajs.dom.TextTrackCue): Unit = js.native
   
+  /* standard DOM */
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Returns the text track list of cues, as a TextTrackCueList object.
-    */
-  val cues: org.scalajs.dom.raw.TextTrackCueList | Null = js.native
+  /** Returns the text track list of cues, as a TextTrackCueList object. */
+  /* standard DOM */
+  val cues: org.scalajs.dom.TextTrackCueList | Null = js.native
   
   /**
     * Returns the ID of the given track.
@@ -52,26 +50,23 @@ trait TextTrack
     *
     * For TextTrack objects corresponding to track elements, this is the ID of the track element.
     */
+  /* standard DOM */
   val id: java.lang.String = js.native
   
-  /**
-    * Returns the text track in-band metadata track dispatch type string.
-    */
+  /** Returns the text track in-band metadata track dispatch type string. */
+  /* standard DOM */
   val inBandMetadataTrackDispatchType: java.lang.String = js.native
   
-  /**
-    * Returns the text track kind string.
-    */
+  /** Returns the text track kind string. */
+  /* standard DOM */
   val kind: TextTrackKind = js.native
   
-  /**
-    * Returns the text track label, if there is one, or the empty string otherwise (indicating that a custom label probably needs to be generated from the other attributes of the object if the object is exposed to the user).
-    */
+  /** Returns the text track label, if there is one, or the empty string otherwise (indicating that a custom label probably needs to be generated from the other attributes of the object if the object is exposed to the user). */
+  /* standard DOM */
   val label: java.lang.String = js.native
   
-  /**
-    * Returns the text track language string.
-    */
+  /** Returns the text track language string. */
+  /* standard DOM */
   val language: java.lang.String = js.native
   
   /**
@@ -79,30 +74,32 @@ trait TextTrack
     *
     * Can be set, to change the mode.
     */
+  /* standard DOM */
   var mode: TextTrackMode = js.native
   
-  var oncuechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
+  /* standard DOM */
+  var oncuechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
-  /**
-    * Removes the given cue from textTrack's text track list of cues.
-    */
-  def removeCue(cue: org.scalajs.dom.raw.TextTrackCue): Unit = js.native
+  /** Removes the given cue from textTrack's text track list of cues. */
+  /* standard DOM */
+  def removeCue(cue: org.scalajs.dom.TextTrackCue): Unit = js.native
   
+  /* standard DOM */
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
 }

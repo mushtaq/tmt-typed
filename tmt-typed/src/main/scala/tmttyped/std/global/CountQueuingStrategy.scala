@@ -12,13 +12,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CountQueuingStrategy protected ()
   extends StObject
      with tmttyped.std.CountQueuingStrategy {
+  /* standard DOM */
   def this(init: QueuingStrategyInit) = this()
   
+  /* standard DOM */
   /* CompleteClass */
   @JSName("highWaterMark")
   override val highWaterMark_CountQueuingStrategy: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   @JSName("size")
-  override def size_MCountQueuingStrategy(chunk: js.Any): Double = js.native
+  override def size_MCountQueuingStrategy(chunk: Any): Double = js.native
 }

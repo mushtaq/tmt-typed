@@ -16,20 +16,20 @@ object moduleMod extends Shortcut {
   class ^ protected ()
     extends StObject
        with tmttyped.node.NodeJS.Module {
-    def this(id: java.lang.String) = this()
-    def this(id: java.lang.String, parent: Module) = this()
+    def this(id: String) = this()
+    def this(id: String, parent: Module) = this()
     
     /* CompleteClass */
     override var children: js.Array[tmttyped.node.NodeJS.Module] = js.native
     
     /* CompleteClass */
-    override var exports: js.Any = js.native
+    override var exports: Any = js.native
     
     /* CompleteClass */
-    override var filename: java.lang.String = js.native
+    override var filename: String = js.native
     
     /* CompleteClass */
-    override var id: java.lang.String = js.native
+    override var id: String = js.native
     
     /**
       * `true` if the module is running during the Node.js preload
@@ -46,25 +46,25 @@ object moduleMod extends Shortcut {
       * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
       */
     /* CompleteClass */
-    override var path: java.lang.String = js.native
+    override var path: String = js.native
     
     /* CompleteClass */
-    override var paths: js.Array[java.lang.String] = js.native
+    override var paths: js.Array[String] = js.native
     
     /* CompleteClass */
-    override def require(id: java.lang.String): js.Any = js.native
+    override def require(id: String): Any = js.native
     /* CompleteClass */
     @JSName("require")
     override var require_Original: Require = js.native
   }
   @JSImport("module", JSImport.Namespace)
   @js.native
-  val ^ : js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = js.native
+  val ^ : js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]) = js.native
   
   /* static member */
   @JSImport("module", "Module")
   @js.native
-  def Module: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module] = js.native
+  def Module: Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module] = js.native
   type Module = NodeModule
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
@@ -73,20 +73,20 @@ object moduleMod extends Shortcut {
   class ModuleCls protected ()
     extends StObject
        with tmttyped.node.NodeJS.Module {
-    def this(id: java.lang.String) = this()
-    def this(id: java.lang.String, parent: Module) = this()
+    def this(id: String) = this()
+    def this(id: String, parent: Module) = this()
     
     /* CompleteClass */
     override var children: js.Array[tmttyped.node.NodeJS.Module] = js.native
     
     /* CompleteClass */
-    override var exports: js.Any = js.native
+    override var exports: Any = js.native
     
     /* CompleteClass */
-    override var filename: java.lang.String = js.native
+    override var filename: String = js.native
     
     /* CompleteClass */
-    override var id: java.lang.String = js.native
+    override var id: String = js.native
     
     /**
       * `true` if the module is running during the Node.js preload
@@ -103,20 +103,20 @@ object moduleMod extends Shortcut {
       * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
       */
     /* CompleteClass */
-    override var path: java.lang.String = js.native
+    override var path: String = js.native
     
     /* CompleteClass */
-    override var paths: js.Array[java.lang.String] = js.native
+    override var paths: js.Array[String] = js.native
     
     /* CompleteClass */
-    override def require(id: java.lang.String): js.Any = js.native
+    override def require(id: String): Any = js.native
     /* CompleteClass */
     @JSName("require")
     override var require_Original: Require = js.native
   }
   
   @scala.inline
-  def Module_=(x: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
+  def Module_=(x: Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
   
   /**
     * @since v13.7.0, v12.17.0
@@ -133,19 +133,22 @@ object moduleMod extends Shortcut {
       */
     def findEntry(line: Double, column: Double): SourceMapping = js.native
     
+    /**
+      * Getter for the payload used to construct the `SourceMap` instance.
+      */
     val payload: SourceMapPayload = js.native
   }
   
   /* static member */
   @JSImport("module", "builtinModules")
   @js.native
-  def builtinModules: js.Array[java.lang.String] = js.native
+  def builtinModules: js.Array[String] = js.native
   @scala.inline
-  def builtinModules_=(x: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("builtinModules")(x.asInstanceOf[js.Any])
+  def builtinModules_=(x: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("builtinModules")(x.asInstanceOf[js.Any])
   
   /* static member */
   @scala.inline
-  def createRequire(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
+  def createRequire(path: String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   @scala.inline
   def createRequire(path: URL): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
@@ -155,9 +158,9 @@ object moduleMod extends Shortcut {
     * @since v13.7.0, v12.17.0
     */
   @scala.inline
-  def findSourceMap(path: java.lang.String): SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[SourceMap]
+  def findSourceMap(path: String): SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[SourceMap]
   @scala.inline
-  def findSourceMap(path: java.lang.String, error: js.Error): SourceMap = (^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[SourceMap]
+  def findSourceMap(path: String, error: js.Error): SourceMap = (^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[SourceMap]
   
   /* static member */
   @scala.inline
@@ -203,21 +206,21 @@ object moduleMod extends Shortcut {
   
   /* static member */
   @scala.inline
-  def wrap(code: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def wrap(code: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[String]
   
   trait SourceMapPayload extends StObject {
     
-    var file: java.lang.String
+    var file: String
     
-    var mappings: java.lang.String
+    var mappings: String
     
-    var names: js.Array[java.lang.String]
+    var names: js.Array[String]
     
-    var sourceRoot: java.lang.String
+    var sourceRoot: String
     
-    var sources: js.Array[java.lang.String]
+    var sources: js.Array[String]
     
-    var sourcesContent: js.Array[java.lang.String]
+    var sourcesContent: js.Array[String]
     
     var version: Double
   }
@@ -225,12 +228,12 @@ object moduleMod extends Shortcut {
     
     @scala.inline
     def apply(
-      file: java.lang.String,
-      mappings: java.lang.String,
-      names: js.Array[java.lang.String],
-      sourceRoot: java.lang.String,
-      sources: js.Array[java.lang.String],
-      sourcesContent: js.Array[java.lang.String],
+      file: String,
+      mappings: String,
+      names: js.Array[String],
+      sourceRoot: String,
+      sources: js.Array[String],
+      sourcesContent: js.Array[String],
       version: Double
     ): SourceMapPayload = {
       val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], mappings = mappings.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], sourceRoot = sourceRoot.asInstanceOf[js.Any], sources = sources.asInstanceOf[js.Any], sourcesContent = sourcesContent.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
@@ -241,31 +244,31 @@ object moduleMod extends Shortcut {
     implicit class SourceMapPayloadMutableBuilder[Self <: SourceMapPayload] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setFile(value: java.lang.String): Self = StObject.set(x, "file", value.asInstanceOf[js.Any])
+      def setFile(value: String): Self = StObject.set(x, "file", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setMappings(value: java.lang.String): Self = StObject.set(x, "mappings", value.asInstanceOf[js.Any])
+      def setMappings(value: String): Self = StObject.set(x, "mappings", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setNames(value: js.Array[java.lang.String]): Self = StObject.set(x, "names", value.asInstanceOf[js.Any])
+      def setNames(value: js.Array[String]): Self = StObject.set(x, "names", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setNamesVarargs(value: java.lang.String*): Self = StObject.set(x, "names", js.Array(value :_*))
+      def setNamesVarargs(value: String*): Self = StObject.set(x, "names", js.Array(value :_*))
       
       @scala.inline
-      def setSourceRoot(value: java.lang.String): Self = StObject.set(x, "sourceRoot", value.asInstanceOf[js.Any])
+      def setSourceRoot(value: String): Self = StObject.set(x, "sourceRoot", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setSources(value: js.Array[java.lang.String]): Self = StObject.set(x, "sources", value.asInstanceOf[js.Any])
+      def setSources(value: js.Array[String]): Self = StObject.set(x, "sources", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setSourcesContent(value: js.Array[java.lang.String]): Self = StObject.set(x, "sourcesContent", value.asInstanceOf[js.Any])
+      def setSourcesContent(value: js.Array[String]): Self = StObject.set(x, "sourcesContent", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setSourcesContentVarargs(value: java.lang.String*): Self = StObject.set(x, "sourcesContent", js.Array(value :_*))
+      def setSourcesContentVarargs(value: String*): Self = StObject.set(x, "sourcesContent", js.Array(value :_*))
       
       @scala.inline
-      def setSourcesVarargs(value: java.lang.String*): Self = StObject.set(x, "sources", js.Array(value :_*))
+      def setSourcesVarargs(value: String*): Self = StObject.set(x, "sources", js.Array(value :_*))
       
       @scala.inline
       def setVersion(value: Double): Self = StObject.set(x, "version", value.asInstanceOf[js.Any])
@@ -282,7 +285,7 @@ object moduleMod extends Shortcut {
     
     var originalLine: Double
     
-    var originalSource: java.lang.String
+    var originalSource: String
   }
   object SourceMapping {
     
@@ -292,7 +295,7 @@ object moduleMod extends Shortcut {
       generatedLine: Double,
       originalColumn: Double,
       originalLine: Double,
-      originalSource: java.lang.String
+      originalSource: String
     ): SourceMapping = {
       val __obj = js.Dynamic.literal(generatedColumn = generatedColumn.asInstanceOf[js.Any], generatedLine = generatedLine.asInstanceOf[js.Any], originalColumn = originalColumn.asInstanceOf[js.Any], originalLine = originalLine.asInstanceOf[js.Any], originalSource = originalSource.asInstanceOf[js.Any])
       __obj.asInstanceOf[SourceMapping]
@@ -314,14 +317,14 @@ object moduleMod extends Shortcut {
       def setOriginalLine(value: Double): Self = StObject.set(x, "originalLine", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setOriginalSource(value: java.lang.String): Self = StObject.set(x, "originalSource", value.asInstanceOf[js.Any])
+      def setOriginalSource(value: String): Self = StObject.set(x, "originalSource", value.asInstanceOf[js.Any])
     }
   }
   
-  type _To = js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module])
+  type _To = js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module])
   
   /* This means you don't have to write `^`, but can instead just say `moduleMod.foo` */
-  override def _to: js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = ^
+  override def _to: js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]) = ^
   
   object global {
     
@@ -341,18 +344,18 @@ object moduleMod extends Shortcut {
         */
       var resolve: js.UndefOr[
             js.Function2[
-              /* specified */ java.lang.String, 
-              /* parent */ js.UndefOr[java.lang.String | org.scalajs.dom.experimental.URL], 
-              js.Promise[java.lang.String]
+              /* specified */ String, 
+              /* parent */ js.UndefOr[String | org.scalajs.dom.URL], 
+              js.Promise[String]
             ]
           ] = js.undefined
       
-      var url: java.lang.String
+      var url: String
     }
     object ImportMeta {
       
       @scala.inline
-      def apply(url: java.lang.String): ImportMeta = {
+      def apply(url: String): ImportMeta = {
         val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
         __obj.asInstanceOf[ImportMeta]
       }
@@ -362,14 +365,14 @@ object moduleMod extends Shortcut {
         
         @scala.inline
         def setResolve(
-          value: (/* specified */ java.lang.String, /* parent */ js.UndefOr[java.lang.String | org.scalajs.dom.experimental.URL]) => js.Promise[java.lang.String]
+          value: (/* specified */ String, /* parent */ js.UndefOr[String | org.scalajs.dom.URL]) => js.Promise[String]
         ): Self = StObject.set(x, "resolve", js.Any.fromFunction2(value))
         
         @scala.inline
         def setResolveUndefined: Self = StObject.set(x, "resolve", js.undefined)
         
         @scala.inline
-        def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
+        def setUrl(value: String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
       }
     }
   }

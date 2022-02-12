@@ -12,14 +12,19 @@ trait SVGFEConvolveMatrixElement
      with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
+  /* standard DOM */
   val SVG_EDGEMODE_DUPLICATE: Double = js.native
   
+  /* standard DOM */
   val SVG_EDGEMODE_NONE: Double = js.native
   
+  /* standard DOM */
   val SVG_EDGEMODE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   val SVG_EDGEMODE_WRAP: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -31,38 +36,51 @@ trait SVGFEConvolveMatrixElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val bias: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val bias: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val divisor: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val divisor: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val edgeMode: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val edgeMode: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
-  val in1: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val in1: org.scalajs.dom.SVGAnimatedString = js.native
   
-  val kernelMatrix: org.scalajs.dom.raw.SVGAnimatedNumberList = js.native
+  /* standard DOM */
+  val kernelMatrix: org.scalajs.dom.SVGAnimatedNumberList = js.native
   
-  val kernelUnitLengthX: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val kernelUnitLengthX: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val kernelUnitLengthY: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val kernelUnitLengthY: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val orderX: org.scalajs.dom.raw.SVGAnimatedInteger = js.native
+  /* standard DOM */
+  val orderX: org.scalajs.dom.SVGAnimatedInteger = js.native
   
-  val orderY: org.scalajs.dom.raw.SVGAnimatedInteger = js.native
+  /* standard DOM */
+  val orderY: org.scalajs.dom.SVGAnimatedInteger = js.native
   
-  val preserveAlpha: org.scalajs.dom.raw.SVGAnimatedBoolean = js.native
+  /* standard DOM */
+  val preserveAlpha: org.scalajs.dom.SVGAnimatedBoolean = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val targetX: org.scalajs.dom.raw.SVGAnimatedInteger = js.native
+  /* standard DOM */
+  val targetX: org.scalajs.dom.SVGAnimatedInteger = js.native
   
-  val targetY: org.scalajs.dom.raw.SVGAnimatedInteger = js.native
+  /* standard DOM */
+  val targetY: org.scalajs.dom.SVGAnimatedInteger = js.native
 }

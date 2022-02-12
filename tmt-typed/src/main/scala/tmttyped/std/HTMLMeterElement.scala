@@ -11,6 +11,7 @@ trait HTMLMeterElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,28 +23,36 @@ trait HTMLMeterElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   var high: Double = js.native
   
-  val labels: org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLLabelElement with org.scalajs.dom.raw.Node] = js.native
+  /* standard DOM */
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
   
+  /* standard DOM */
   var low: Double = js.native
   
+  /* standard DOM */
   var max: Double = js.native
   
+  /* standard DOM */
   var min: Double = js.native
   
+  /* standard DOM */
   var optimum: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   var value: Double = js.native
 }

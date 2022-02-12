@@ -17,8 +17,8 @@ inThisBuild(
       "-Xcheckinit"
 //      "-Xasync" does not work with Scala.js js yet
     ),
-    sources in (Compile, doc) := Nil,
-    publishArtifact in (Compile, packageDoc) := false
+    Compile / doc / sources := Nil,
+    Compile / packageDoc / publishArtifact := false
   )
 )
 
@@ -30,7 +30,7 @@ lazy val `tmt-typed` = project
   .enablePlugins(ScalablyTypedConverterGenSourcePlugin)
   .settings(
     Compile / npmDependencies ++= Seq(
-      "@microsoft/fetch-event-source"   -> "^2.0.0",
+      "@microsoft/fetch-event-source"   -> "^2.0.1",
       "@types/rsocket-websocket-client" -> "^0.0.4",
       "typescript"                      -> "^4.2.2"
     ),

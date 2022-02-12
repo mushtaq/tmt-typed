@@ -9,13 +9,14 @@ trait RsaHashedKeyAlgorithm
   extends StObject
      with RsaKeyAlgorithm {
   
-  var hash: org.scalajs.dom.crypto.KeyAlgorithm
+  /* standard DOM */
+  var hash: org.scalajs.dom.KeyAlgorithm
 }
 object RsaHashedKeyAlgorithm {
   
   @scala.inline
   def apply(
-    hash: org.scalajs.dom.crypto.KeyAlgorithm,
+    hash: org.scalajs.dom.KeyAlgorithm,
     modulusLength: Double,
     name: java.lang.String,
     publicExponent: js.typedarray.Uint8Array
@@ -28,6 +29,6 @@ object RsaHashedKeyAlgorithm {
   implicit class RsaHashedKeyAlgorithmMutableBuilder[Self <: RsaHashedKeyAlgorithm] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setHash(value: org.scalajs.dom.crypto.KeyAlgorithm): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
+    def setHash(value: org.scalajs.dom.KeyAlgorithm): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
   }
 }

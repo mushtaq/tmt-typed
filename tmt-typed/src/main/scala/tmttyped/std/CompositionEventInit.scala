@@ -9,6 +9,7 @@ trait CompositionEventInit
   extends StObject
      with UIEventInit {
   
+  /* standard DOM */
   var data: js.UndefOr[java.lang.String] = js.undefined
 }
 object CompositionEventInit {

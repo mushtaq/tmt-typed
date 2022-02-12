@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NavigatorLanguage extends StObject {
   
+  /* standard DOM */
   val language: java.lang.String
   
+  /* standard DOM */
   val languages: js.Array[java.lang.String]
 }
 object NavigatorLanguage {

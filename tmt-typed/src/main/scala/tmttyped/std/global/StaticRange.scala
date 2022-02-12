@@ -12,35 +12,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class StaticRange protected ()
   extends StObject
      with tmttyped.std.AbstractRange {
+  /* standard DOM */
   def this(init: StaticRangeInit) = this()
   
-  /**
-    * Returns true if range is collapsed, and false otherwise.
-    */
+  /** Returns true if range is collapsed, and false otherwise. */
+  /* standard DOM */
   /* CompleteClass */
   override val collapsed: scala.Boolean = js.native
   
-  /**
-    * Returns range's end node.
-    */
+  /** Returns range's end node. */
+  /* standard DOM */
   /* CompleteClass */
-  override val endContainer: org.scalajs.dom.raw.Node = js.native
+  override val endContainer: org.scalajs.dom.Node = js.native
   
-  /**
-    * Returns range's end offset.
-    */
+  /** Returns range's end offset. */
+  /* standard DOM */
   /* CompleteClass */
   override val endOffset: Double = js.native
   
-  /**
-    * Returns range's start node.
-    */
+  /** Returns range's start node. */
+  /* standard DOM */
   /* CompleteClass */
-  override val startContainer: org.scalajs.dom.raw.Node = js.native
+  override val startContainer: org.scalajs.dom.Node = js.native
   
-  /**
-    * Returns range's start offset.
-    */
+  /** Returns range's start offset. */
+  /* standard DOM */
   /* CompleteClass */
   override val startOffset: Double = js.native
 }

@@ -9,8 +9,10 @@ trait MediaQueryListEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var matches: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var media: js.UndefOr[java.lang.String] = js.undefined
 }
 object MediaQueryListEventInit {

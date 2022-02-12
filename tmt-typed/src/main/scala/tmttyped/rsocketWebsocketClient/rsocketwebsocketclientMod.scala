@@ -1,6 +1,6 @@
 package tmttyped.rsocketWebsocketClient
 
-import org.scalajs.dom.raw.WebSocket
+import org.scalajs.dom.WebSocket
 import tmttyped.rsocketCore.rsocketencodingMod.Encoders
 import tmttyped.rsocketFlowable.mod.Flowable
 import tmttyped.rsocketTypes.reactiveSocketTypesMod.ConnectionStatus
@@ -19,7 +19,7 @@ object rsocketwebsocketclientMod {
     extends StObject
        with RSocketWebSocketClient {
     def this(options: ClientOptions) = this()
-    def this(options: ClientOptions, encoders: Encoders[js.Any]) = this()
+    def this(options: ClientOptions, encoders: Encoders[Any]) = this()
     
     /**
       * Close the underlying connection, emitting `onComplete` on the receive()

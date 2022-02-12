@@ -10,20 +10,25 @@ trait Response
   extends StObject
      with Body {
   
-  val headers: org.scalajs.dom.experimental.Headers
+  /* standard DOM */
+  val headers: org.scalajs.dom.Headers
   
+  /* standard DOM */
   val ok: scala.Boolean
   
+  /* standard DOM */
   val redirected: scala.Boolean
   
+  /* standard DOM */
   val status: Double
   
+  /* standard DOM */
   val statusText: java.lang.String
   
-  val trailer: js.Promise[org.scalajs.dom.experimental.Headers]
+  /* standard DOM */
+  val `type`: org.scalajs.dom.ResponseType
   
-  val `type`: org.scalajs.dom.experimental.ResponseType
-  
+  /* standard DOM */
   val url: java.lang.String
 }
 object Response {
@@ -31,21 +36,20 @@ object Response {
   @scala.inline
   def apply(
     arrayBuffer: () => js.Promise[js.typedarray.ArrayBuffer],
-    blob: () => js.Promise[org.scalajs.dom.raw.Blob],
+    blob: () => js.Promise[org.scalajs.dom.Blob],
     bodyUsed: scala.Boolean,
-    formData: () => js.Promise[org.scalajs.dom.raw.FormData],
-    headers: org.scalajs.dom.experimental.Headers,
-    json: () => js.Promise[js.Any],
+    formData: () => js.Promise[org.scalajs.dom.FormData],
+    headers: org.scalajs.dom.Headers,
+    json: () => js.Promise[Any],
     ok: scala.Boolean,
     redirected: scala.Boolean,
     status: Double,
     statusText: java.lang.String,
     text: () => js.Promise[java.lang.String],
-    trailer: js.Promise[org.scalajs.dom.experimental.Headers],
-    `type`: org.scalajs.dom.experimental.ResponseType,
+    `type`: org.scalajs.dom.ResponseType,
     url: java.lang.String
   ): Response = {
-    val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), ok = ok.asInstanceOf[js.Any], redirected = redirected.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusText = statusText.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), trailer = trailer.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], body = null)
+    val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), ok = ok.asInstanceOf[js.Any], redirected = redirected.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusText = statusText.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any], body = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Response]
   }
@@ -54,7 +58,7 @@ object Response {
   implicit class ResponseMutableBuilder[Self <: Response] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+    def setHeaders(value: org.scalajs.dom.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOk(value: scala.Boolean): Self = StObject.set(x, "ok", value.asInstanceOf[js.Any])
@@ -69,10 +73,7 @@ object Response {
     def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTrailer(value: js.Promise[org.scalajs.dom.experimental.Headers]): Self = StObject.set(x, "trailer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: org.scalajs.dom.experimental.ResponseType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    def setType(value: org.scalajs.dom.ResponseType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])

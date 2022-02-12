@@ -1,7 +1,5 @@
 package tmttyped.std
 
-import tmttyped.std.stdStrings.SVGUnload
-import tmttyped.std.stdStrings.SVGZoom
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,10 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SVGSVGElement
   extends StObject
      with SVGGraphicsElement
-     with DocumentEvent
      with SVGFitToViewBox
-     with SVGZoomAndPan {
+     with WindowEventHandlers {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -26,156 +24,118 @@ trait SVGSVGElement
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
-    options: scala.Boolean
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
-    options: AddEventListenerOptions
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGZoom(
-    `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
-    options: scala.Boolean
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_SVGZoom(
-    `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
-    options: AddEventListenerOptions
-  ): Unit = js.native
   
+  /* standard DOM */
   def animationsPaused(): scala.Boolean = js.native
   
-  def checkEnclosure(element: org.scalajs.dom.raw.SVGElement, rect: org.scalajs.dom.raw.SVGRect): scala.Boolean = js.native
+  /* standard DOM */
+  def checkEnclosure(element: org.scalajs.dom.SVGElement, rect: DOMRectReadOnly): scala.Boolean = js.native
   
-  def checkIntersection(element: org.scalajs.dom.raw.SVGElement, rect: org.scalajs.dom.raw.SVGRect): scala.Boolean = js.native
+  /* standard DOM */
+  def checkIntersection(element: org.scalajs.dom.SVGElement, rect: DOMRectReadOnly): scala.Boolean = js.native
   
-  def createSVGAngle(): org.scalajs.dom.raw.SVGAngle = js.native
+  /* standard DOM */
+  def createSVGAngle(): org.scalajs.dom.SVGAngle = js.native
   
-  def createSVGLength(): org.scalajs.dom.raw.SVGLength = js.native
+  /* standard DOM */
+  def createSVGLength(): org.scalajs.dom.SVGLength = js.native
   
-  def createSVGMatrix(): org.scalajs.dom.raw.SVGMatrix = js.native
+  /* standard DOM */
+  def createSVGMatrix(): DOMMatrix = js.native
   
-  def createSVGNumber(): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def createSVGNumber(): org.scalajs.dom.SVGNumber = js.native
   
-  def createSVGPoint(): org.scalajs.dom.raw.SVGPoint = js.native
+  /* standard DOM */
+  def createSVGPoint(): DOMPoint = js.native
   
-  def createSVGRect(): org.scalajs.dom.raw.SVGRect = js.native
+  /* standard DOM */
+  def createSVGRect(): org.scalajs.dom.DOMRect = js.native
   
-  def createSVGTransform(): org.scalajs.dom.raw.SVGTransform = js.native
+  /* standard DOM */
+  def createSVGTransform(): org.scalajs.dom.SVGTransform = js.native
   
-  def createSVGTransformFromMatrix(matrix: org.scalajs.dom.raw.SVGMatrix): org.scalajs.dom.raw.SVGTransform = js.native
+  /* standard DOM */
+  def createSVGTransformFromMatrix(): org.scalajs.dom.SVGTransform = js.native
+  def createSVGTransformFromMatrix(matrix: DOMMatrix2DInit): org.scalajs.dom.SVGTransform = js.native
   
+  /* standard DOM */
   var currentScale: Double = js.native
   
-  val currentTranslate: org.scalajs.dom.raw.SVGPoint = js.native
+  /* standard DOM */
+  val currentTranslate: DOMPointReadOnly = js.native
   
+  /* standard DOM */
   def deselectAll(): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def forceRedraw(): Unit = js.native
   
-  def getComputedStyle(elt: org.scalajs.dom.raw.Element): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
-  def getComputedStyle(elt: org.scalajs.dom.raw.Element, pseudoElt: java.lang.String): org.scalajs.dom.raw.CSSStyleDeclaration = js.native
-  
+  /* standard DOM */
   def getCurrentTime(): Double = js.native
   
-  def getElementById(elementId: java.lang.String): org.scalajs.dom.raw.Element = js.native
+  /* standard DOM */
+  def getElementById(elementId: java.lang.String): org.scalajs.dom.Element = js.native
   
-  def getEnclosureList(rect: org.scalajs.dom.raw.SVGRect): org.scalajs.dom.raw.NodeListOf[
-    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
+  /* standard DOM */
+  def getEnclosureList(rect: DOMRectReadOnly): org.scalajs.dom.NodeList[
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
   ] = js.native
-  def getEnclosureList(rect: org.scalajs.dom.raw.SVGRect, referenceElement: org.scalajs.dom.raw.SVGElement): org.scalajs.dom.raw.NodeListOf[
-    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
-  ] = js.native
-  
-  def getIntersectionList(rect: org.scalajs.dom.raw.SVGRect): org.scalajs.dom.raw.NodeListOf[
-    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
-  ] = js.native
-  def getIntersectionList(rect: org.scalajs.dom.raw.SVGRect, referenceElement: org.scalajs.dom.raw.SVGElement): org.scalajs.dom.raw.NodeListOf[
-    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
+  def getEnclosureList(rect: DOMRectReadOnly, referenceElement: org.scalajs.dom.SVGElement): org.scalajs.dom.NodeList[
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
   ] = js.native
   
-  val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  def getIntersectionList(rect: DOMRectReadOnly): org.scalajs.dom.NodeList[
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+  ] = js.native
+  def getIntersectionList(rect: DOMRectReadOnly, referenceElement: org.scalajs.dom.SVGElement): org.scalajs.dom.NodeList[
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+  ] = js.native
   
-  var onunload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]) | Null = js.native
+  /* standard DOM */
+  val height: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  var onzoom: (js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]) | Null = js.native
-  
+  /* standard DOM */
   def pauseAnimations(): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any]
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGUnload(
-    `type`: SVGUnload,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, js.Any],
-    options: scala.Boolean
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGZoom(`type`: SVGZoom, listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any]): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGZoom(
-    `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
-    options: org.scalajs.dom.raw.EventListenerOptions
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_SVGZoom(
-    `type`: SVGZoom,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ SVGZoomEvent, js.Any],
-    options: scala.Boolean
-  ): Unit = js.native
   
+  /* standard DOM */
   def setCurrentTime(seconds: Double): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def suspendRedraw(maxWaitMilliseconds: Double): Double = js.native
   
+  /* standard DOM */
   def unpauseAnimations(): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def unsuspendRedraw(suspendHandleID: Double): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   def unsuspendRedrawAll(): Unit = js.native
   
-  val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val width: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedLength = js.native
 }

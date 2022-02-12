@@ -11,23 +11,27 @@ trait AudioContext
   extends StObject
      with BaseAudioContext {
   
+  /* standard DOM */
   val baseLatency: Double = js.native
   
+  /* standard DOM */
   def close(): js.Promise[Unit] = js.native
   
-  def createMediaElementSource(mediaElement: org.scalajs.dom.raw.HTMLMediaElement): org.scalajs.dom.raw.MediaElementAudioSourceNode = js.native
+  /* standard DOM */
+  def createMediaElementSource(mediaElement: org.scalajs.dom.HTMLMediaElement): org.scalajs.dom.MediaElementAudioSourceNode = js.native
   
-  def createMediaStreamDestination(): org.scalajs.dom.raw.MediaStreamAudioDestinationNode = js.native
+  /* standard DOM */
+  def createMediaStreamDestination(): org.scalajs.dom.MediaStreamAudioDestinationNode = js.native
   
-  def createMediaStreamSource(mediaStream: org.scalajs.dom.experimental.mediastream.MediaStream): org.scalajs.dom.raw.MediaStreamAudioSourceNode = js.native
+  /* standard DOM */
+  def createMediaStreamSource(mediaStream: org.scalajs.dom.MediaStream): org.scalajs.dom.MediaStreamAudioSourceNode = js.native
   
-  def createMediaStreamTrackSource(mediaStreamTrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): org.scalajs.dom.raw.AudioNode = js.native
-  
+  /* standard DOM */
   def getOutputTimestamp(): AudioTimestamp = js.native
   
-  val outputLatency: Double = js.native
-  
+  /* standard DOM */
   def resume(): js.Promise[Unit] = js.native
   
+  /* standard DOM */
   def suspend(): js.Promise[Unit] = js.native
 }

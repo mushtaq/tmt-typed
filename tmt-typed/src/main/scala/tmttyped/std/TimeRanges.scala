@@ -13,11 +13,11 @@ trait TimeRanges extends StObject {
     *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
+  /* standard DOM */
   def end(index: Double): Double
   
-  /**
-    * Returns the number of ranges in the object.
-    */
+  /** Returns the number of ranges in the object. */
+  /* standard DOM */
   val length: Double
   
   /**
@@ -25,6 +25,7 @@ trait TimeRanges extends StObject {
     *
     * Throws an "IndexSizeError" DOMException if the index is out of range.
     */
+  /* standard DOM */
   def start(index: Double): Double
 }
 object TimeRanges {

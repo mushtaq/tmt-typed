@@ -11,6 +11,7 @@ trait HTMLBaseElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,24 +23,23 @@ trait HTMLBaseElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Gets or sets the baseline URL on which relative links are based.
-    */
+  /** Gets or sets the baseline URL on which relative links are based. */
+  /* standard DOM */
   var href: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  /**
-    * Sets or retrieves the window or frame at which to target content.
-    */
+  /** Sets or retrieves the window or frame at which to target content. */
+  /* standard DOM */
   var target: java.lang.String = js.native
 }

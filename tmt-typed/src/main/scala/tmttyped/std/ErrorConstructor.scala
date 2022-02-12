@@ -10,9 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ErrorConstructor
   extends StObject
-     with Instantiable0[js.Error]
+     with /* standard es5 */
+Instantiable0[js.Error]
      with Instantiable1[/* message */ java.lang.String, js.Error] {
   
+  /* standard es5 */
   def apply(): js.Error = js.native
   def apply(message: java.lang.String): js.Error = js.native
 }

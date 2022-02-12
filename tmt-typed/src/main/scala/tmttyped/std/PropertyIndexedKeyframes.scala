@@ -8,14 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PropertyIndexedKeyframes
   extends StObject
-     with /* property */ StringDictionary[
+     with /* standard DOM */
+/* property */ StringDictionary[
       js.UndefOr[java.lang.String | (js.Array[Double | Null | java.lang.String]) | Double | Null]
     ] {
   
+  /* standard DOM */
   var composite: js.UndefOr[CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]] = js.undefined
   
+  /* standard DOM */
   var easing: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var offset: js.UndefOr[Double | (js.Array[Double | Null])] = js.undefined
 }
 object PropertyIndexedKeyframes {

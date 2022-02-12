@@ -57,12 +57,15 @@ object anon {
   /* Inlined std.Error & {  source :rsocket-core.rsocket-core/RSocketFrame.ErrorSource} */
   trait ErrorsourceErrorSource extends StObject {
     
+    /* standard es5 */
     var message: String
     
+    /* standard es5 */
     var name: String
     
     var source: ErrorSource
     
+    /* standard es5 */
     var stack: js.UndefOr[String] = js.undefined
   }
   object ErrorsourceErrorSource {

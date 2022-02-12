@@ -9,41 +9,47 @@ trait RTCTransportStats
   extends StObject
      with RTCStats {
   
+  /* standard DOM */
   var bytesReceived: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var bytesSent: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var dtlsCipher: js.UndefOr[java.lang.String] = js.undefined
   
-  var dtlsState: js.UndefOr[RTCDtlsTransportState] = js.undefined
+  /* standard DOM */
+  var dtlsState: RTCDtlsTransportState
   
-  var iceRole: js.UndefOr[RTCIceRole] = js.undefined
-  
+  /* standard DOM */
   var localCertificateId: js.UndefOr[java.lang.String] = js.undefined
   
-  var packetsReceived: js.UndefOr[Double] = js.undefined
-  
-  var packetsSent: js.UndefOr[Double] = js.undefined
-  
+  /* standard DOM */
   var remoteCertificateId: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var rtcpTransportStatsId: js.UndefOr[java.lang.String] = js.undefined
   
-  var selectedCandidatePairChanges: js.UndefOr[Double] = js.undefined
-  
+  /* standard DOM */
   var selectedCandidatePairId: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var srtpCipher: js.UndefOr[java.lang.String] = js.undefined
   
-  var tlsGroup: js.UndefOr[java.lang.String] = js.undefined
-  
+  /* standard DOM */
   var tlsVersion: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCTransportStats {
   
   @scala.inline
-  def apply(): RTCTransportStats = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    dtlsState: RTCDtlsTransportState,
+    id: java.lang.String,
+    timestamp: DOMHighResTimeStamp,
+    `type`: org.scalajs.dom.RTCStatsType
+  ): RTCTransportStats = {
+    val __obj = js.Dynamic.literal(dtlsState = dtlsState.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCTransportStats]
   }
   
@@ -72,31 +78,10 @@ object RTCTransportStats {
     def setDtlsState(value: RTCDtlsTransportState): Self = StObject.set(x, "dtlsState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDtlsStateUndefined: Self = StObject.set(x, "dtlsState", js.undefined)
-    
-    @scala.inline
-    def setIceRole(value: RTCIceRole): Self = StObject.set(x, "iceRole", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIceRoleUndefined: Self = StObject.set(x, "iceRole", js.undefined)
-    
-    @scala.inline
     def setLocalCertificateId(value: java.lang.String): Self = StObject.set(x, "localCertificateId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLocalCertificateIdUndefined: Self = StObject.set(x, "localCertificateId", js.undefined)
-    
-    @scala.inline
-    def setPacketsReceived(value: Double): Self = StObject.set(x, "packetsReceived", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPacketsReceivedUndefined: Self = StObject.set(x, "packetsReceived", js.undefined)
-    
-    @scala.inline
-    def setPacketsSent(value: Double): Self = StObject.set(x, "packetsSent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPacketsSentUndefined: Self = StObject.set(x, "packetsSent", js.undefined)
     
     @scala.inline
     def setRemoteCertificateId(value: java.lang.String): Self = StObject.set(x, "remoteCertificateId", value.asInstanceOf[js.Any])
@@ -111,12 +96,6 @@ object RTCTransportStats {
     def setRtcpTransportStatsIdUndefined: Self = StObject.set(x, "rtcpTransportStatsId", js.undefined)
     
     @scala.inline
-    def setSelectedCandidatePairChanges(value: Double): Self = StObject.set(x, "selectedCandidatePairChanges", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectedCandidatePairChangesUndefined: Self = StObject.set(x, "selectedCandidatePairChanges", js.undefined)
-    
-    @scala.inline
     def setSelectedCandidatePairId(value: java.lang.String): Self = StObject.set(x, "selectedCandidatePairId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -127,12 +106,6 @@ object RTCTransportStats {
     
     @scala.inline
     def setSrtpCipherUndefined: Self = StObject.set(x, "srtpCipher", js.undefined)
-    
-    @scala.inline
-    def setTlsGroup(value: java.lang.String): Self = StObject.set(x, "tlsGroup", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTlsGroupUndefined: Self = StObject.set(x, "tlsGroup", js.undefined)
     
     @scala.inline
     def setTlsVersion(value: java.lang.String): Self = StObject.set(x, "tlsVersion", value.asInstanceOf[js.Any])

@@ -8,19 +8,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** This Intersection Observer API interface describes the intersection between the target element and its root container at a specific moment of transition. */
 trait IntersectionObserverEntry extends StObject {
   
+  /* standard DOM */
   val boundingClientRect: DOMRectReadOnly
   
+  /* standard DOM */
   val intersectionRatio: Double
   
+  /* standard DOM */
   val intersectionRect: DOMRectReadOnly
   
+  /* standard DOM */
   val isIntersecting: scala.Boolean
   
+  /* standard DOM */
   val rootBounds: DOMRectReadOnly | Null
   
-  val target: org.scalajs.dom.raw.Element
+  /* standard DOM */
+  val target: org.scalajs.dom.Element
   
-  val time: Double
+  /* standard DOM */
+  val time: DOMHighResTimeStamp
 }
 object IntersectionObserverEntry {
   
@@ -30,8 +37,8 @@ object IntersectionObserverEntry {
     intersectionRatio: Double,
     intersectionRect: DOMRectReadOnly,
     isIntersecting: scala.Boolean,
-    target: org.scalajs.dom.raw.Element,
-    time: Double
+    target: org.scalajs.dom.Element,
+    time: DOMHighResTimeStamp
   ): IntersectionObserverEntry = {
     val __obj = js.Dynamic.literal(boundingClientRect = boundingClientRect.asInstanceOf[js.Any], intersectionRatio = intersectionRatio.asInstanceOf[js.Any], intersectionRect = intersectionRect.asInstanceOf[js.Any], isIntersecting = isIntersecting.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], rootBounds = null)
     __obj.asInstanceOf[IntersectionObserverEntry]
@@ -59,9 +66,9 @@ object IntersectionObserverEntry {
     def setRootBoundsNull: Self = StObject.set(x, "rootBounds", null)
     
     @scala.inline
-    def setTarget(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
+    def setTarget(value: org.scalajs.dom.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTime(value: Double): Self = StObject.set(x, "time", value.asInstanceOf[js.Any])
+    def setTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "time", value.asInstanceOf[js.Any])
   }
 }

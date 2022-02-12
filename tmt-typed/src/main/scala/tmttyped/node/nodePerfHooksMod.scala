@@ -22,7 +22,7 @@ object nodePerfHooksMod {
     */
   @JSImport("node:perf_hooks", "PerformanceEntry")
   @js.native
-  class PerformanceEntry protected ()
+  /* protected */ class PerformanceEntry ()
     extends tmttyped.node.perfHooksMod.PerformanceEntry
   
   /**
@@ -34,7 +34,7 @@ object nodePerfHooksMod {
     */
   @JSImport("node:perf_hooks", "PerformanceNodeTiming")
   @js.native
-  class PerformanceNodeTiming protected ()
+  /* protected */ class PerformanceNodeTiming ()
     extends tmttyped.node.perfHooksMod.PerformanceNodeTiming
   
   @JSImport("node:perf_hooks", "PerformanceObserver")
@@ -92,8 +92,8 @@ object nodePerfHooksMod {
   }
   
   /**
-    * Returns a `<RecordableHistogram>`.
-    * @since v15.9.0
+    * Returns a `RecordableHistogram`.
+    * @since v15.9.0, v14.18.0
     */
   @scala.inline
   def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]

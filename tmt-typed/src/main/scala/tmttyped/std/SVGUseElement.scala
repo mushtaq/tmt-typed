@@ -12,6 +12,7 @@ trait SVGUseElement
      with SVGGraphicsElement
      with SVGURIReference {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,22 +24,27 @@ trait SVGUseElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val height: org.scalajs.dom.SVGAnimatedLength = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val width: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedLength = js.native
 }

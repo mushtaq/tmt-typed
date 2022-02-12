@@ -11,13 +11,18 @@ trait ErrorEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val colno: Double = js.native
   
-  val error: js.Any = js.native
+  /* standard DOM */
+  val error: Any = js.native
   
+  /* standard DOM */
   val filename: java.lang.String = js.native
   
+  /* standard DOM */
   val lineno: Double = js.native
   
+  /* standard DOM */
   val message: java.lang.String = js.native
 }

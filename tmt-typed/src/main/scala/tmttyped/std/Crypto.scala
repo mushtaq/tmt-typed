@@ -6,20 +6,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives. */
-@js.native
 trait Crypto extends StObject {
   
-  def getRandomValues(array: js.typedarray.DataView): js.typedarray.DataView = js.native
-  def getRandomValues(array: js.typedarray.Float32Array): js.typedarray.Float32Array = js.native
-  def getRandomValues(array: js.typedarray.Float64Array): js.typedarray.Float64Array = js.native
-  def getRandomValues(array: js.typedarray.Int16Array): js.typedarray.Int16Array = js.native
-  def getRandomValues(array: js.typedarray.Int32Array): js.typedarray.Int32Array = js.native
-  def getRandomValues(array: js.typedarray.Int8Array): js.typedarray.Int8Array = js.native
-  def getRandomValues(array: js.typedarray.Uint16Array): js.typedarray.Uint16Array = js.native
-  def getRandomValues(array: js.typedarray.Uint32Array): js.typedarray.Uint32Array = js.native
-  def getRandomValues(array: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
-  def getRandomValues(array: js.typedarray.Uint8ClampedArray): js.typedarray.Uint8ClampedArray = js.native
-  def getRandomValues(array: Null): Null = js.native
+  /* standard DOM */
+  def getRandomValues[T /* <: js.typedarray.ArrayBufferView | Null */](array: T): T
   
-  val subtle: org.scalajs.dom.crypto.SubtleCrypto = js.native
+  /** Available only in secure contexts. */
+  /* standard DOM */
+  val subtle: org.scalajs.dom.SubtleCrypto
+}
+object Crypto {
+  
+  @scala.inline
+  def apply(getRandomValues: Any => Any, subtle: org.scalajs.dom.SubtleCrypto): Crypto = {
+    val __obj = js.Dynamic.literal(getRandomValues = js.Any.fromFunction1(getRandomValues), subtle = subtle.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Crypto]
+  }
+  
+  @scala.inline
+  implicit class CryptoMutableBuilder[Self <: Crypto] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setGetRandomValues(value: Any => Any): Self = StObject.set(x, "getRandomValues", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSubtle(value: org.scalajs.dom.SubtleCrypto): Self = StObject.set(x, "subtle", value.asInstanceOf[js.Any])
+  }
 }

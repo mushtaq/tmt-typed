@@ -1,6 +1,5 @@
 package tmttyped.std
 
-import tmttyped.std.stdStrings.anyfunc
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object WebAssembly {
   
-  trait CompileError extends StObject
+  type CompileError = js.Error
   
   /* Rewritten from type alias, can be one of: 
     - js.Function
@@ -24,12 +23,13 @@ object WebAssembly {
     extends StObject
        with _ExportValue {
     
-    var value: js.Any
+    /* standard DOM */
+    var value: Any
   }
   object Global {
     
     @scala.inline
-    def apply(value: js.Any): Global = {
+    def apply(value: Any): Global = {
       val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
       __obj.asInstanceOf[Global]
     }
@@ -38,14 +38,16 @@ object WebAssembly {
     implicit class GlobalMutableBuilder[Self <: Global] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setValue(value: js.Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+      def setValue(value: Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     }
   }
   
   trait GlobalDescriptor extends StObject {
     
+    /* standard DOM */
     var mutable: js.UndefOr[scala.Boolean] = js.undefined
     
+    /* standard DOM */
     var value: ValueType
   }
   object GlobalDescriptor {
@@ -98,6 +100,7 @@ object WebAssembly {
   
   trait Instance extends StObject {
     
+    /* standard DOM */
     val exports: Exports
   }
   object Instance {
@@ -116,14 +119,16 @@ object WebAssembly {
     }
   }
   
-  trait LinkError extends StObject
+  type LinkError = js.Error
   
   trait Memory
     extends StObject
        with _ExportValue {
     
+    /* standard DOM */
     val buffer: js.typedarray.ArrayBuffer
     
+    /* standard DOM */
     def grow(delta: Double): Double
   }
   object Memory {
@@ -147,10 +152,13 @@ object WebAssembly {
   
   trait MemoryDescriptor extends StObject {
     
+    /* standard DOM */
     var initial: Double
     
+    /* standard DOM */
     var maximum: js.UndefOr[Double] = js.undefined
     
+    /* standard DOM */
     var shared: js.UndefOr[scala.Boolean] = js.undefined
   }
   object MemoryDescriptor {
@@ -185,8 +193,10 @@ object WebAssembly {
   
   trait ModuleExportDescriptor extends StObject {
     
+    /* standard DOM */
     var kind: ImportExportKind
     
+    /* standard DOM */
     var name: java.lang.String
   }
   object ModuleExportDescriptor {
@@ -210,10 +220,13 @@ object WebAssembly {
   
   trait ModuleImportDescriptor extends StObject {
     
+    /* standard DOM */
     var kind: ImportExportKind
     
+    /* standard DOM */
     var module: java.lang.String
     
+    /* standard DOM */
     var name: java.lang.String
   }
   object ModuleImportDescriptor {
@@ -240,29 +253,37 @@ object WebAssembly {
   
   type ModuleImports = Record[java.lang.String, ImportValue]
   
-  trait RuntimeError extends StObject
+  type RuntimeError = js.Error
   
   @js.native
   trait Table
     extends StObject
        with _ExportValue {
     
-    def get(index: Double): js.Function | Null = js.native
+    /* standard DOM */
+    def get(index: Double): Any = js.native
     
+    /* standard DOM */
     def grow(delta: Double): Double = js.native
+    def grow(delta: Double, value: Any): Double = js.native
     
+    /* standard DOM */
     val length: Double = js.native
     
+    /* standard DOM */
     def set(index: Double): Unit = js.native
-    def set(index: Double, value: js.Function): Unit = js.native
+    def set(index: Double, value: Any): Unit = js.native
   }
   
   trait TableDescriptor extends StObject {
     
+    /* standard DOM */
     var element: TableKind
     
+    /* standard DOM */
     var initial: Double
     
+    /* standard DOM */
     var maximum: js.UndefOr[Double] = js.undefined
   }
   object TableDescriptor {
@@ -290,9 +311,23 @@ object WebAssembly {
     }
   }
   
-  type TableKind = anyfunc
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.std.stdStrings.anyfunc
+    - tmttyped.std.stdStrings.externref
+  */
+  trait TableKind extends StObject
+  object TableKind {
+    
+    @scala.inline
+    def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
+    
+    @scala.inline
+    def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
+  }
   
   /* Rewritten from type alias, can be one of: 
+    - tmttyped.std.stdStrings.anyfunc
+    - tmttyped.std.stdStrings.externref
     - tmttyped.std.stdStrings.f32
     - tmttyped.std.stdStrings.f64
     - tmttyped.std.stdStrings.i32
@@ -300,6 +335,12 @@ object WebAssembly {
   */
   trait ValueType extends StObject
   object ValueType {
+    
+    @scala.inline
+    def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
+    
+    @scala.inline
+    def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
     
     @scala.inline
     def f32: tmttyped.std.stdStrings.f32 = "f32".asInstanceOf[tmttyped.std.stdStrings.f32]
@@ -316,8 +357,10 @@ object WebAssembly {
   
   trait WebAssemblyInstantiatedSource extends StObject {
     
+    /* standard DOM */
     var instance: Instance
     
+    /* standard DOM */
     var module: Module
   }
   object WebAssemblyInstantiatedSource {

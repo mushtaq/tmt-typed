@@ -10,11 +10,15 @@ trait RTCTrackEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val receiver: RTCRtpReceiver = js.native
   
-  val streams: js.Array[org.scalajs.dom.experimental.mediastream.MediaStream] = js.native
+  /* standard DOM */
+  val streams: js.Array[org.scalajs.dom.MediaStream] = js.native
   
-  val track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack = js.native
+  /* standard DOM */
+  val track: org.scalajs.dom.MediaStreamTrack = js.native
   
+  /* standard DOM */
   val transceiver: RTCRtpTransceiver = js.native
 }

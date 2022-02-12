@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AudioWorkletNode protected ()
   extends StObject
      with tmttyped.std.AudioWorkletNode {
+  /* standard DOM */
   def this(context: tmttyped.std.BaseAudioContext, name: java.lang.String) = this()
   def this(context: tmttyped.std.BaseAudioContext, name: java.lang.String, options: AudioWorkletNodeOptions) = this()
 }

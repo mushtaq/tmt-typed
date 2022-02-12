@@ -10,7 +10,9 @@ trait MediaEncryptedEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val initData: js.typedarray.ArrayBuffer | Null = js.native
   
+  /* standard DOM */
   val initDataType: java.lang.String = js.native
 }

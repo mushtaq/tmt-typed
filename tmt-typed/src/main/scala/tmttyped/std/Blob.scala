@@ -9,22 +9,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Blob extends StObject {
   
+  /* standard DOM */
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
+  /* standard DOM */
   val size: Double = js.native
   
-  def slice(): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Double): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Double, end: Double, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Double, end: Unit, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Unit, end: Double): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Unit, end: Double, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
-  def slice(start: Unit, end: Unit, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
+  /* standard DOM */
+  def slice(): org.scalajs.dom.Blob = js.native
+  def slice(start: Double): org.scalajs.dom.Blob = js.native
+  def slice(start: Double, end: Double): org.scalajs.dom.Blob = js.native
+  def slice(start: Double, end: Double, contentType: java.lang.String): org.scalajs.dom.Blob = js.native
+  def slice(start: Double, end: Unit, contentType: java.lang.String): org.scalajs.dom.Blob = js.native
+  def slice(start: Unit, end: Double): org.scalajs.dom.Blob = js.native
+  def slice(start: Unit, end: Double, contentType: java.lang.String): org.scalajs.dom.Blob = js.native
+  def slice(start: Unit, end: Unit, contentType: java.lang.String): org.scalajs.dom.Blob = js.native
   
-  def stream(): org.scalajs.dom.experimental.ReadableStream[js.Any] = js.native
+  /* standard DOM */
+  def stream(): org.scalajs.dom.ReadableStream[Any] = js.native
   
+  /* standard DOM */
   def text(): js.Promise[java.lang.String] = js.native
   
+  /* standard DOM */
   val `type`: java.lang.String = js.native
 }

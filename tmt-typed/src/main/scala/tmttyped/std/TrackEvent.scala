@@ -11,8 +11,7 @@ trait TrackEvent
   extends StObject
      with Event {
   
-  /**
-    * Returns the track object (TextTrack, AudioTrack, or VideoTrack) to which the event relates.
-    */
-  val track: org.scalajs.dom.raw.TextTrack | Null = js.native
+  /** Returns the track object (TextTrack, AudioTrack, or VideoTrack) to which the event relates. */
+  /* standard DOM */
+  val track: org.scalajs.dom.TextTrack | Null = js.native
 }

@@ -7,19 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextTrackListEventMap extends StObject {
   
-  var addtrack: org.scalajs.dom.raw.TrackEvent
+  /* standard DOM */
+  var addtrack: org.scalajs.dom.TrackEvent
   
-  var change: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var change: org.scalajs.dom.Event
   
-  var removetrack: org.scalajs.dom.raw.TrackEvent
+  /* standard DOM */
+  var removetrack: org.scalajs.dom.TrackEvent
 }
 object TextTrackListEventMap {
   
   @scala.inline
   def apply(
-    addtrack: org.scalajs.dom.raw.TrackEvent,
-    change: org.scalajs.dom.raw.Event,
-    removetrack: org.scalajs.dom.raw.TrackEvent
+    addtrack: org.scalajs.dom.TrackEvent,
+    change: org.scalajs.dom.Event,
+    removetrack: org.scalajs.dom.TrackEvent
   ): TextTrackListEventMap = {
     val __obj = js.Dynamic.literal(addtrack = addtrack.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], removetrack = removetrack.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextTrackListEventMap]
@@ -29,12 +32,12 @@ object TextTrackListEventMap {
   implicit class TextTrackListEventMapMutableBuilder[Self <: TextTrackListEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setAddtrack(value: org.scalajs.dom.raw.TrackEvent): Self = StObject.set(x, "addtrack", value.asInstanceOf[js.Any])
+    def setAddtrack(value: org.scalajs.dom.TrackEvent): Self = StObject.set(x, "addtrack", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "change", value.asInstanceOf[js.Any])
+    def setChange(value: org.scalajs.dom.Event): Self = StObject.set(x, "change", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemovetrack(value: org.scalajs.dom.raw.TrackEvent): Self = StObject.set(x, "removetrack", value.asInstanceOf[js.Any])
+    def setRemovetrack(value: org.scalajs.dom.TrackEvent): Self = StObject.set(x, "removetrack", value.asInstanceOf[js.Any])
   }
 }

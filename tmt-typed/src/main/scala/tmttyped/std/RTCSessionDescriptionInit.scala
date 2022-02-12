@@ -7,14 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCSessionDescriptionInit extends StObject {
   
+  /* standard DOM */
   var sdp: js.UndefOr[java.lang.String] = js.undefined
   
-  var `type`: org.scalajs.dom.experimental.webrtc.RTCSdpType
+  /* standard DOM */
+  var `type`: org.scalajs.dom.RTCSdpType
 }
 object RTCSessionDescriptionInit {
   
   @scala.inline
-  def apply(`type`: org.scalajs.dom.experimental.webrtc.RTCSdpType): RTCSessionDescriptionInit = {
+  def apply(`type`: org.scalajs.dom.RTCSdpType): RTCSessionDescriptionInit = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCSessionDescriptionInit]
@@ -30,6 +32,6 @@ object RTCSessionDescriptionInit {
     def setSdpUndefined: Self = StObject.set(x, "sdp", js.undefined)
     
     @scala.inline
-    def setType(value: org.scalajs.dom.experimental.webrtc.RTCSdpType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    def setType(value: org.scalajs.dom.RTCSdpType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

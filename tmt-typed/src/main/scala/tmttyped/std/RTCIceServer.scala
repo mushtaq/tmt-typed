@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCIceServer extends StObject {
   
+  /* standard DOM */
   var credential: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var credentialType: js.UndefOr[RTCIceCredentialType] = js.undefined
   
+  /* standard DOM */
   var urls: java.lang.String | js.Array[java.lang.String]
   
+  /* standard DOM */
   var username: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCIceServer {

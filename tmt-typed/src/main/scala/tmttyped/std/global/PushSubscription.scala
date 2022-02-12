@@ -1,7 +1,7 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.push.PushEncryptionKeyName
-import org.scalajs.dom.experimental.push.PushSubscriptionJSON
+import org.scalajs.dom.PushEncryptionKeyName
+import org.scalajs.dom.PushSubscriptionJSON
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,25 +10,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("PushSubscription")
 @js.native
+/* standard DOM */
 class PushSubscription ()
   extends StObject
      with tmttyped.std.PushSubscription {
   
+  /* standard DOM */
   /* CompleteClass */
   override val endpoint: java.lang.String = js.native
   
-  /* CompleteClass */
-  override val expirationTime: Double | Null = js.native
-  
+  /* standard DOM */
   /* CompleteClass */
   override def getKey(name: PushEncryptionKeyName): js.typedarray.ArrayBuffer | Null = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val options: org.scalajs.dom.experimental.push.PushSubscriptionOptions = js.native
+  override val options: org.scalajs.dom.PushSubscriptionOptions = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def toJSON(): PushSubscriptionJSON = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override def unsubscribe(): js.Promise[scala.Boolean] = js.native
 }

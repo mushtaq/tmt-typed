@@ -1,0 +1,27 @@
+package tmttyped.std
+
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+trait FontFaceSource extends StObject {
+  
+  /* standard DOM */
+  val fonts: FontFaceSet
+}
+object FontFaceSource {
+  
+  @scala.inline
+  def apply(fonts: FontFaceSet): FontFaceSource = {
+    val __obj = js.Dynamic.literal(fonts = fonts.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FontFaceSource]
+  }
+  
+  @scala.inline
+  implicit class FontFaceSourceMutableBuilder[Self <: FontFaceSource] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setFonts(value: FontFaceSet): Self = StObject.set(x, "fonts", value.asInstanceOf[js.Any])
+  }
+}

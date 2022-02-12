@@ -9,10 +9,13 @@ trait TransitionEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var elapsedTime: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var propertyName: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var pseudoElement: js.UndefOr[java.lang.String] = js.undefined
 }
 object TransitionEventInit {

@@ -11,6 +11,7 @@ trait HTMLLegendElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,20 +24,21 @@ trait HTMLLegendElement
   ): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var align: java.lang.String = js.native
   
-  /**
-    * Retrieves a reference to the form that the object is embedded in.
-    */
-  val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
+  /** Retrieves a reference to the form that the object is embedded in. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

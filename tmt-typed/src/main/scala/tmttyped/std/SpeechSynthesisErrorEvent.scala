@@ -10,5 +10,6 @@ trait SpeechSynthesisErrorEvent
   extends StObject
      with SpeechSynthesisEvent {
   
+  /* standard DOM */
   val error: SpeechSynthesisErrorCode = js.native
 }

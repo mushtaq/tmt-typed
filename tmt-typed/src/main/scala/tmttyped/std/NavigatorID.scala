@@ -7,22 +7,38 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NavigatorID extends StObject {
   
+  /** @deprecated */
+  /* standard DOM */
   val appCodeName: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val appName: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val appVersion: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val platform: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val product: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val productSub: java.lang.String
   
+  /* standard DOM */
   val userAgent: java.lang.String
   
+  /* standard DOM */
   val vendor: java.lang.String
   
+  /** @deprecated */
+  /* standard DOM */
   val vendorSub: java.lang.String
 }
 object NavigatorID {

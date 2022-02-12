@@ -1,5 +1,6 @@
 package tmttyped.node.fsMod
 
+import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.data
 import tmttyped.node.nodeStrings.end
@@ -19,8 +20,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ReadStream () extends StObject {
   def this(opts: ReadableOptions) = this()
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   /**
     * events.EventEmitter
     *   1. open
@@ -53,9 +54,10 @@ class ReadStream () extends StObject {
   var bytesRead: Double = js.native
   
   def close(): Unit = js.native
+  def close(callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): Unit = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_close(event: tmttyped.node.nodeStrings.close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -75,8 +77,8 @@ class ReadStream () extends StObject {
   @JSName("on")
   def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: tmttyped.node.nodeStrings.close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -98,8 +100,8 @@ class ReadStream () extends StObject {
   
   /**
     * The path to the file the stream is reading from as specified in the first
-    * argument to `fs.createReadStream()`. If `path` is passed as a string, then`readStream.path` will be a string. If `path` is passed as a `<Buffer>`, then`readStream.path` will be a
-    * `<Buffer>`.
+    * argument to `fs.createReadStream()`. If `path` is passed as a string, then`readStream.path` will be a string. If `path` is passed as a `Buffer`, then`readStream.path` will be a
+    * `Buffer`. If `fd` is specified, then`readStream.path` will be `undefined`.
     * @since v0.1.93
     */
   var path: String | Buffer = js.native
@@ -111,8 +113,8 @@ class ReadStream () extends StObject {
     */
   var pending: Boolean = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: tmttyped.node.nodeStrings.close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -132,8 +134,8 @@ class ReadStream () extends StObject {
   @JSName("prependListener")
   def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: tmttyped.node.nodeStrings.close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")

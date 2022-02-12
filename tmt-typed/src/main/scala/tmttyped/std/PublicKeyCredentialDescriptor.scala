@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PublicKeyCredentialDescriptor extends StObject {
   
+  /* standard DOM */
   var id: BufferSource
   
+  /* standard DOM */
   var transports: js.UndefOr[js.Array[AuthenticatorTransport]] = js.undefined
   
+  /* standard DOM */
   var `type`: PublicKeyCredentialType
 }
 object PublicKeyCredentialDescriptor {

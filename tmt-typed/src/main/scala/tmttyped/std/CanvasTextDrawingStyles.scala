@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CanvasTextDrawingStyles extends StObject {
   
+  /* standard DOM */
   var direction: CanvasDirection
   
+  /* standard DOM */
   var font: java.lang.String
   
+  /* standard DOM */
   var textAlign: CanvasTextAlign
   
+  /* standard DOM */
   var textBaseline: CanvasTextBaseline
 }
 object CanvasTextDrawingStyles {

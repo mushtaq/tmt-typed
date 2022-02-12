@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AudioProcessingEvent protected ()
   extends StObject
      with tmttyped.std.AudioProcessingEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String, eventInitDict: AudioProcessingEventInit) = this()
 }

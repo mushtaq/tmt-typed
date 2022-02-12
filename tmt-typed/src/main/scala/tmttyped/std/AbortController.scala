@@ -8,20 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A controller object that allows you to abort one or more DOM requests as and when desired. */
 trait AbortController extends StObject {
   
-  /**
-    * Invoking this method will set this object's AbortSignal's aborted flag and signal to any observers that the associated activity is to be aborted.
-    */
+  /** Invoking this method will set this object's AbortSignal's aborted flag and signal to any observers that the associated activity is to be aborted. */
+  /* standard DOM */
   def abort(): Unit
   
-  /**
-    * Returns the AbortSignal object associated with this object.
-    */
-  val signal: org.scalajs.dom.experimental.AbortSignal
+  /** Returns the AbortSignal object associated with this object. */
+  /* standard DOM */
+  val signal: org.scalajs.dom.AbortSignal
 }
 object AbortController {
   
   @scala.inline
-  def apply(abort: () => Unit, signal: org.scalajs.dom.experimental.AbortSignal): AbortController = {
+  def apply(abort: () => Unit, signal: org.scalajs.dom.AbortSignal): AbortController = {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction0(abort), signal = signal.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbortController]
   }
@@ -33,6 +31,6 @@ object AbortController {
     def setAbort(value: () => Unit): Self = StObject.set(x, "abort", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
   }
 }

@@ -11,6 +11,7 @@ trait HTMLTableSectionElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -24,45 +25,51 @@ trait HTMLTableSectionElement
   
   /**
     * Sets or retrieves a value that indicates the table alignment.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var align: java.lang.String = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var ch: java.lang.String = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var chOff: java.lang.String = js.native
   
   /**
     * Removes the specified row (tr) from the element and from the rows collection.
     * @param index Number that specifies the zero-based position in the rows collection of the row to remove.
     */
+  /* standard DOM */
   def deleteRow(index: Double): Unit = js.native
   
   /**
     * Creates a new row (tr) in the table, and adds the row to the rows collection.
     * @param index Number that specifies where to insert the row in the rows collection. The default value is -1, which appends the new row to the end of the rows collection.
     */
-  def insertRow(): org.scalajs.dom.raw.HTMLTableRowElement = js.native
-  def insertRow(index: Double): org.scalajs.dom.raw.HTMLTableRowElement = js.native
+  /* standard DOM */
+  def insertRow(): org.scalajs.dom.HTMLTableRowElement = js.native
+  def insertRow(index: Double): org.scalajs.dom.HTMLTableRowElement = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  /**
-    * Sets or retrieves the number of horizontal rows contained in the object.
-    */
-  val rows: HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableRowElement] = js.native
+  /** Sets or retrieves the number of horizontal rows contained in the object. */
+  /* standard DOM */
+  val rows: HTMLCollectionOf[org.scalajs.dom.HTMLTableRowElement] = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var vAlign: java.lang.String = js.native
 }

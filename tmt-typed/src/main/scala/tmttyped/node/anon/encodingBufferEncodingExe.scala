@@ -1,5 +1,6 @@
 package tmttyped.node.anon
 
+import tmttyped.node.AbortSignal
 import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.processMod.global.NodeJS.ProcessEnv
@@ -25,6 +26,8 @@ trait encodingBufferEncodingExe extends StObject {
   var maxBuffer: js.UndefOr[Double] = js.undefined
   
   var shell: js.UndefOr[String] = js.undefined
+  
+  var signal: js.UndefOr[AbortSignal] = js.undefined
   
   /**
     * @default 0
@@ -87,6 +90,12 @@ object encodingBufferEncodingExe {
     
     @scala.inline
     def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
+    
+    @scala.inline
+    def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])

@@ -8,36 +8,52 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements. */
 trait SVGPreserveAspectRatio extends StObject {
   
+  /* standard DOM */
   val SVG_MEETORSLICE_MEET: Double
   
+  /* standard DOM */
   val SVG_MEETORSLICE_SLICE: Double
   
+  /* standard DOM */
   val SVG_MEETORSLICE_UNKNOWN: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_NONE: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_UNKNOWN: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMAXYMAX: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMAXYMID: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMAXYMIN: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMIDYMAX: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMIDYMID: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMIDYMIN: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMINYMAX: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMINYMID: Double
   
+  /* standard DOM */
   val SVG_PRESERVEASPECTRATIO_XMINYMIN: Double
   
+  /* standard DOM */
   var align: Double
   
+  /* standard DOM */
   var meetOrSlice: Double
 }
 object SVGPreserveAspectRatio {

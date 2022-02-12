@@ -1,7 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.deviceorientation.DeviceMotionEventInit
-import tmttyped.std.PermissionState
+import org.scalajs.dom.DeviceMotionEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,15 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class DeviceMotionEvent protected ()
   extends StObject
      with tmttyped.std.DeviceMotionEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: DeviceMotionEventInit) = this()
-}
-object DeviceMotionEvent {
-  
-  @JSGlobal("DeviceMotionEvent")
-  @js.native
-  val ^ : js.Any = js.native
-  
-  @scala.inline
-  def requestPermission(): js.Promise[PermissionState] = ^.asInstanceOf[js.Dynamic].applyDynamic("requestPermission")().asInstanceOf[js.Promise[PermissionState]]
 }

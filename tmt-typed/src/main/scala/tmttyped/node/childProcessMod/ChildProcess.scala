@@ -14,8 +14,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Instances of the `ChildProcess` represent spawned child processes.
+  *
+  * Instances of `ChildProcess` are not intended to be created directly. Rather,
+  * use the {@link spawn}, {@link exec},{@link execFile}, or {@link fork} methods to create
+  * instances of `ChildProcess`.
+  * @since v2.2.0
+  */
+@JSImport("child_process", "ChildProcess")
 @js.native
-trait ChildProcess extends StObject {
+class ChildProcess () extends StObject {
   
   /**
     * events.EventEmitter
@@ -26,7 +35,7 @@ trait ChildProcess extends StObject {
     * 5. message
     * 6. spawn
     */
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function2[/* code */ Double | Null, /* signal */ Signals | Null, Unit]): this.type = js.native
   @JSName("addListener")
@@ -74,8 +83,8 @@ trait ChildProcess extends StObject {
     */
   def disconnect(): Unit = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -109,8 +118,8 @@ trait ChildProcess extends StObject {
   
   /**
     * The `subprocess.kill()` method sends a signal to the child process. If no
-    * argument is given, the process will be sent the `'SIGTERM'` signal. See[`signal(7)`](http://man7.org/linux/man-pages/man7/signal.7.html) for a list of available signals. This function
-    * returns `true` if[`kill(2)`](http://man7.org/linux/man-pages/man2/kill.2.html) succeeds, and `false` otherwise.
+    * argument is given, the process will be sent the `'SIGTERM'` signal. See [`signal(7)`](http://man7.org/linux/man-pages/man7/signal.7.html) for a list of available signals. This function
+    * returns `true` if [`kill(2)`](http://man7.org/linux/man-pages/man2/kill.2.html) succeeds, and `false` otherwise.
     *
     * ```js
     * const { spawn } = require('child_process');
@@ -178,7 +187,7 @@ trait ChildProcess extends StObject {
     */
   val killed: Boolean = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function2[/* code */ Double | Null, /* signal */ Signals | Null, Unit]): this.type = js.native
   @JSName("on")
@@ -195,7 +204,7 @@ trait ChildProcess extends StObject {
   @JSName("on")
   def on_spawn(event: tmttyped.node.nodeStrings.spawn, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function2[/* code */ Double | Null, /* signal */ Signals | Null, Unit]): this.type = js.native
   @JSName("once")
@@ -228,7 +237,7 @@ trait ChildProcess extends StObject {
     */
   val pid: js.UndefOr[Double] = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function2[/* code */ Double | Null, /* signal */ Signals | Null, Unit]): this.type = js.native
   @JSName("prependListener")
@@ -245,7 +254,7 @@ trait ChildProcess extends StObject {
   @JSName("prependListener")
   def prependListener_spawn(event: tmttyped.node.nodeStrings.spawn, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function2[/* code */ Double | Null, /* signal */ Signals | Null, Unit]): this.type = js.native
   @JSName("prependOnceListener")

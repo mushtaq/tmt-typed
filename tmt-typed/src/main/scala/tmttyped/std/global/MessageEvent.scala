@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class MessageEvent[T] protected ()
   extends StObject
      with tmttyped.std.MessageEvent[T] {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: MessageEventInit[T]) = this()
 }

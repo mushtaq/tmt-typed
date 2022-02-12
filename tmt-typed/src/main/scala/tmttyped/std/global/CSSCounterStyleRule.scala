@@ -1,0 +1,116 @@
+package tmttyped.std.global
+
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+/* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
+@JSGlobal("CSSCounterStyleRule")
+@js.native
+/* standard DOM */
+class CSSCounterStyleRule ()
+  extends StObject
+     with tmttyped.std.CSSCounterStyleRule {
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val CHARSET_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val FONT_FACE_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val IMPORT_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val KEYFRAMES_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val KEYFRAME_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val MEDIA_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val NAMESPACE_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val PAGE_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val STYLE_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val SUPPORTS_RULE: Double = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var additiveSymbols: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var cssText: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var fallback: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var name: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var negative: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var pad: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val parentRule: org.scalajs.dom.CSSRule | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val parentStyleSheet: org.scalajs.dom.CSSStyleSheet | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var prefix: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var range: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var speakAs: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var suffix: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var symbols: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var system: java.lang.String = js.native
+  
+  /** @deprecated */
+  /* standard DOM */
+  /* CompleteClass */
+  override val `type`: Double = js.native
+}

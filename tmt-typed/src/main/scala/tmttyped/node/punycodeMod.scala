@@ -22,10 +22,10 @@ object punycodeMod {
     * @since v0.5.1
     */
   @scala.inline
-  def decode(string: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
-    * The `punycode.encode()` method converts a string of Unicode codepoints to a[Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
+    * The `punycode.encode()` method converts a string of Unicode codepoints to a [Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
     *
     * ```js
     * punycode.encode('mañana'); // 'maana-pta'
@@ -34,7 +34,7 @@ object punycodeMod {
     * @since v0.5.1
     */
   @scala.inline
-  def encode(string: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toASCII()` method converts a Unicode string representing an
@@ -51,11 +51,11 @@ object punycodeMod {
     * @since v0.6.1
     */
   @scala.inline
-  def toASCII(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toUnicode()` method converts a string representing a domain name
-    * containing [Punycode](https://tools.ietf.org/html/rfc3492) encoded characters into Unicode. Only the [Punycode](https://tools.ietf.org/html/rfc3492)encoded parts of the domain name are be
+    * containing [Punycode](https://tools.ietf.org/html/rfc3492) encoded characters into Unicode. Only the [Punycode](https://tools.ietf.org/html/rfc3492) encoded parts of the domain name are be
     * converted.
     *
     * ```js
@@ -67,7 +67,7 @@ object punycodeMod {
     * @since v0.6.1
     */
   @scala.inline
-  def toUnicode(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   trait ucs2 extends StObject {
     
@@ -78,7 +78,7 @@ object punycodeMod {
       * Users currently depending on the punycode module should switch to using
       * the userland-provided Punycode.js module instead.
       */
-    def decode(string: java.lang.String): js.Array[Double]
+    def decode(string: String): js.Array[Double]
     
     /**
       * @deprecated since v7.0.0
@@ -87,7 +87,7 @@ object punycodeMod {
       * Users currently depending on the punycode module should switch to using
       * the userland-provided Punycode.js module instead.
       */
-    def encode(codePoints: js.Array[Double]): java.lang.String
+    def encode(codePoints: js.Array[Double]): String
   }
   object ucs2 {
     
@@ -106,10 +106,10 @@ object punycodeMod {
     implicit class ucs2MutableBuilder[Self <: ucs2] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setDecode(value: java.lang.String => js.Array[Double]): Self = StObject.set(x, "decode", js.Any.fromFunction1(value))
+      def setDecode(value: String => js.Array[Double]): Self = StObject.set(x, "decode", js.Any.fromFunction1(value))
       
       @scala.inline
-      def setEncode(value: js.Array[Double] => java.lang.String): Self = StObject.set(x, "encode", js.Any.fromFunction1(value))
+      def setEncode(value: js.Array[Double] => String): Self = StObject.set(x, "encode", js.Any.fromFunction1(value))
     }
   }
   
@@ -122,5 +122,5 @@ object punycodeMod {
     */
   @JSImport("punycode", "version")
   @js.native
-  val version: java.lang.String = js.native
+  val version: String = js.native
 }

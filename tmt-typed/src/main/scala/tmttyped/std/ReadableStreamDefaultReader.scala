@@ -10,7 +10,9 @@ trait ReadableStreamDefaultReader[R]
   extends StObject
      with ReadableStreamGenericReader {
   
+  /* standard DOM */
   def read(): js.Promise[ReadableStreamDefaultReadResult[R]] = js.native
   
+  /* standard DOM */
   def releaseLock(): Unit = js.native
 }

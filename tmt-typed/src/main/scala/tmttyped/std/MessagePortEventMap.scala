@@ -7,14 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MessagePortEventMap extends StObject {
   
-  var message: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var message: org.scalajs.dom.MessageEvent
   
-  var messageerror: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var messageerror: org.scalajs.dom.MessageEvent
 }
 object MessagePortEventMap {
   
   @scala.inline
-  def apply(message: org.scalajs.dom.raw.MessageEvent, messageerror: org.scalajs.dom.raw.MessageEvent): MessagePortEventMap = {
+  def apply(message: org.scalajs.dom.MessageEvent, messageerror: org.scalajs.dom.MessageEvent): MessagePortEventMap = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], messageerror = messageerror.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessagePortEventMap]
   }
@@ -23,9 +25,9 @@ object MessagePortEventMap {
   implicit class MessagePortEventMapMutableBuilder[Self <: MessagePortEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessageerror(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

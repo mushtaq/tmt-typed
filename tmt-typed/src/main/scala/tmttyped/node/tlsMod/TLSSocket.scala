@@ -16,8 +16,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<net.Socket>`
-  *
   * Performs transparent encryption of written data and all required TLS
   * negotiation.
   *
@@ -36,7 +34,7 @@ class TLSSocket protected () extends StObject {
   def this(socket: Socket) = this()
   def this(socket: Socket, options: TLSSocketOptions) = this()
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_OCSPResponse(event: OCSPResponse, listener: js.Function1[/* response */ Buffer, Unit]): this.type = js.native
   @JSName("addListener")
@@ -48,9 +46,10 @@ class TLSSocket protected () extends StObject {
   
   /**
     * String containing the selected ALPN protocol.
-    * When ALPN has no selected protocol, tlsSocket.alpnProtocol equals false.
+    * Before a handshake has completed, this value is always null.
+    * When a handshake is completed but not ALPN protocol was selected, tlsSocket.alpnProtocol equals false.
     */
-  var alpnProtocol: js.UndefOr[String] = js.native
+  var alpnProtocol: String | `false` | Null = js.native
   
   /**
     * Returns the reason why the peer's certificate was not been verified. This
@@ -60,7 +59,9 @@ class TLSSocket protected () extends StObject {
   var authorizationError: js.Error = js.native
   
   /**
-    * A boolean that is true if the peer certificate was signed by one of the specified CAs, otherwise false.
+    * Returns `true` if the peer certificate was signed by one of the CAs specified
+    * when creating the `tls.TLSSocket` instance, otherwise `false`.
+    * @since v0.11.4
     */
   var authorized: Boolean = js.native
   
@@ -71,8 +72,8 @@ class TLSSocket protected () extends StObject {
     */
   def disableRenegotiation(): Unit = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_OCSPResponse(event: OCSPResponse, response: Buffer): Boolean = js.native
   @JSName("emit")
@@ -155,7 +156,7 @@ class TLSSocket protected () extends StObject {
     * }
     * ```
     *
-    * See[SSL\_CIPHER\_get\_name](https://www.openssl.org/docs/man1.1.1/man3/SSL_CIPHER_get_name.html)for more information.
+    * See [SSL\_CIPHER\_get\_name](https://www.openssl.org/docs/man1.1.1/man3/SSL_CIPHER_get_name.html) for more information.
     * @since v0.11.4
     */
   def getCipher(): CipherNameAndProtocol = js.native
@@ -220,7 +221,7 @@ class TLSSocket protected () extends StObject {
   def getPeerFinished(): js.UndefOr[Buffer] = js.native
   
   /**
-    * Returns the peer certificate as an `<X509Certificate>` object.
+    * Returns the peer certificate as an `X509Certificate` object.
     *
     * If there is no peer certificate, or the socket has been destroyed,`undefined` will be returned.
     * @since v15.9.0
@@ -260,7 +261,7 @@ class TLSSocket protected () extends StObject {
   def getSession(): js.UndefOr[Buffer] = js.native
   
   /**
-    * See[SSL\_get\_shared\_sigalgs](https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html)for more information.
+    * See [SSL\_get\_shared\_sigalgs](https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html) for more information.
     * @since v12.11.0
     * @return List of signature algorithms shared between the server and the client in the order of decreasing preference.
     */
@@ -277,7 +278,7 @@ class TLSSocket protected () extends StObject {
   def getTLSTicket(): js.UndefOr[Buffer] = js.native
   
   /**
-    * Returns the local certificate as an `<X509Certificate>` object.
+    * Returns the local certificate as an `X509Certificate` object.
     *
     * If there is no local certificate, or the socket has been destroyed,`undefined` will be returned.
     * @since v15.9.0
@@ -291,7 +292,7 @@ class TLSSocket protected () extends StObject {
     */
   def isSessionReused(): Boolean = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_OCSPResponse(event: OCSPResponse, listener: js.Function1[/* response */ Buffer, Unit]): this.type = js.native
   @JSName("on")
@@ -301,7 +302,7 @@ class TLSSocket protected () extends StObject {
   @JSName("on")
   def on_session(event: session, listener: js.Function1[/* session */ Buffer, Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_OCSPResponse(event: OCSPResponse, listener: js.Function1[/* response */ Buffer, Unit]): this.type = js.native
   @JSName("once")
@@ -311,7 +312,7 @@ class TLSSocket protected () extends StObject {
   @JSName("once")
   def once_session(event: session, listener: js.Function1[/* session */ Buffer, Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_OCSPResponse(event: OCSPResponse, listener: js.Function1[/* response */ Buffer, Unit]): this.type = js.native
   @JSName("prependListener")
@@ -321,7 +322,7 @@ class TLSSocket protected () extends StObject {
   @JSName("prependListener")
   def prependListener_session(event: session, listener: js.Function1[/* session */ Buffer, Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_OCSPResponse(event: OCSPResponse, listener: js.Function1[/* response */ Buffer, Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -361,7 +362,7 @@ class TLSSocket protected () extends StObject {
     * smaller fragments add extra TLS framing bytes and CPU overhead, which may
     * decrease overall server throughput.
     * @since v0.11.11
-    * @param size The maximum TLS fragment size. The maximum value is `16384`.
+    * @param [size=16384] The maximum TLS fragment size. The maximum value is `16384`.
     */
   def setMaxSendFragment(size: Double): Boolean = js.native
 }

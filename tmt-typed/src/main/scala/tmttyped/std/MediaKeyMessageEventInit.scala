@@ -9,8 +9,10 @@ trait MediaKeyMessageEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var message: js.typedarray.ArrayBuffer
   
+  /* standard DOM */
   var messageType: MediaKeyMessageType
 }
 object MediaKeyMessageEventInit {

@@ -10,7 +10,7 @@ package object childProcessMod {
   /**
     * Spawns a shell then executes the `command` within that shell, buffering any
     * generated output. The `command` string passed to the exec function is processed
-    * directly by the shell and special characters (vary based on[shell](https://en.wikipedia.org/wiki/List_of_command-line_interpreters))
+    * directly by the shell and special characters (vary based on [shell](https://en.wikipedia.org/wiki/List_of_command-line_interpreters))
     * need to be dealt with accordingly:
     *
     * ```js
@@ -637,57 +637,45 @@ package object childProcessMod {
   ): tmttyped.node.childProcessMod.ChildProcess = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   
   @scala.inline
-  def execFileSync(command: java.lang.String): java.lang.String = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def execFileSync(file: java.lang.String): java.lang.String | tmttyped.node.bufferMod.global.Buffer = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
-  def execFileSync(command: java.lang.String, args: js.Array[java.lang.String]): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  def execFileSync(file: java.lang.String, args: js.Array[java.lang.String]): java.lang.String | tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
+    file: java.lang.String,
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileSyncOptions
-  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  ): java.lang.String | tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
+    file: java.lang.String,
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithBufferEncoding
-  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
+    file: java.lang.String,
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithStringEncoding
-  ): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  ): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
+    file: java.lang.String,
     args: scala.Unit,
     options: tmttyped.node.childProcessMod.ExecFileSyncOptions
-  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  ): java.lang.String | tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
+  @scala.inline
+  def execFileSync(file: java.lang.String, options: tmttyped.node.childProcessMod.ExecFileSyncOptions): java.lang.String | tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
-    args: scala.Unit,
+    file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithBufferEncoding
-  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execFileSync(
-    command: java.lang.String,
-    args: scala.Unit,
+    file: java.lang.String,
     options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithStringEncoding
-  ): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
-  @scala.inline
-  def execFileSync(command: java.lang.String, options: tmttyped.node.childProcessMod.ExecFileSyncOptions): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
-  @scala.inline
-  def execFileSync(
-    command: java.lang.String,
-    options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithBufferEncoding
-  ): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
-  @scala.inline
-  def execFileSync(
-    command: java.lang.String,
-    options: tmttyped.node.childProcessMod.ExecFileSyncOptionsWithStringEncoding
-  ): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
+  ): java.lang.String = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String]
   
   /**
     * The `child_process.execFileSync()` method is generally identical to {@link execFile} with the exception that the method will not
@@ -710,14 +698,14 @@ package object childProcessMod {
     * @return The stdout from the command.
     */
   @scala.inline
-  def execFileSync_Buffer(command: java.lang.String): tmttyped.node.bufferMod.global.Buffer = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def execFileSync_Buffer(file: java.lang.String): tmttyped.node.bufferMod.global.Buffer = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
-  def execFileSync_Buffer(command: java.lang.String, args: js.Array[java.lang.String]): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def execFileSync_Buffer(file: java.lang.String, args: js.Array[java.lang.String]): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
   
   @scala.inline
-  def execSync(command: java.lang.String): java.lang.String = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def execSync(command: java.lang.String): java.lang.String | tmttyped.node.bufferMod.global.Buffer = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
-  def execSync(command: java.lang.String, options: tmttyped.node.childProcessMod.ExecSyncOptions): tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.bufferMod.global.Buffer]
+  def execSync(command: java.lang.String, options: tmttyped.node.childProcessMod.ExecSyncOptions): java.lang.String | tmttyped.node.bufferMod.global.Buffer = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[java.lang.String | tmttyped.node.bufferMod.global.Buffer]
   @scala.inline
   def execSync(
     command: java.lang.String,
@@ -1012,13 +1000,13 @@ package object childProcessMod {
   @scala.inline
   def spawnSync(command: java.lang.String): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
   @scala.inline
-  def spawnSync(command: java.lang.String, args: js.Array[java.lang.String]): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String]]
+  def spawnSync(command: java.lang.String, args: js.Array[java.lang.String]): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
   @scala.inline
   def spawnSync(
     command: java.lang.String,
     args: js.Array[java.lang.String],
     options: tmttyped.node.childProcessMod.SpawnSyncOptions
-  ): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
+  ): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer]]
   @scala.inline
   def spawnSync(
     command: java.lang.String,
@@ -1036,21 +1024,9 @@ package object childProcessMod {
     command: java.lang.String,
     args: scala.Unit,
     options: tmttyped.node.childProcessMod.SpawnSyncOptions
-  ): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
+  ): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer]]
   @scala.inline
-  def spawnSync(
-    command: java.lang.String,
-    args: scala.Unit,
-    options: tmttyped.node.childProcessMod.SpawnSyncOptionsWithBufferEncoding
-  ): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
-  @scala.inline
-  def spawnSync(
-    command: java.lang.String,
-    args: scala.Unit,
-    options: tmttyped.node.childProcessMod.SpawnSyncOptionsWithStringEncoding
-  ): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String]]
-  @scala.inline
-  def spawnSync(command: java.lang.String, options: tmttyped.node.childProcessMod.SpawnSyncOptions): tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[tmttyped.node.bufferMod.global.Buffer]]
+  def spawnSync(command: java.lang.String, options: tmttyped.node.childProcessMod.SpawnSyncOptions): tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer] = (tmttyped.node.childProcessMod.^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.SpawnSyncReturns[java.lang.String | tmttyped.node.bufferMod.global.Buffer]]
   @scala.inline
   def spawnSync(
     command: java.lang.String,

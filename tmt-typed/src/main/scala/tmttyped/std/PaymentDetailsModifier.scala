@@ -7,18 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentDetailsModifier extends StObject {
   
+  /* standard DOM */
   var additionalDisplayItems: js.UndefOr[js.Array[PaymentItem]] = js.undefined
   
-  var data: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var data: js.UndefOr[Any] = js.undefined
   
-  var supportedMethods: java.lang.String | js.Array[java.lang.String]
+  /* standard DOM */
+  var supportedMethods: java.lang.String
   
+  /* standard DOM */
   var total: js.UndefOr[PaymentItem] = js.undefined
 }
 object PaymentDetailsModifier {
   
   @scala.inline
-  def apply(supportedMethods: java.lang.String | js.Array[java.lang.String]): PaymentDetailsModifier = {
+  def apply(supportedMethods: java.lang.String): PaymentDetailsModifier = {
     val __obj = js.Dynamic.literal(supportedMethods = supportedMethods.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentDetailsModifier]
   }
@@ -36,16 +40,13 @@ object PaymentDetailsModifier {
     def setAdditionalDisplayItemsVarargs(value: PaymentItem*): Self = StObject.set(x, "additionalDisplayItems", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
+    def setData(value: Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
     @scala.inline
-    def setSupportedMethods(value: java.lang.String | js.Array[java.lang.String]): Self = StObject.set(x, "supportedMethods", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSupportedMethodsVarargs(value: java.lang.String*): Self = StObject.set(x, "supportedMethods", js.Array(value :_*))
+    def setSupportedMethods(value: java.lang.String): Self = StObject.set(x, "supportedMethods", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTotal(value: PaymentItem): Self = StObject.set(x, "total", value.asInstanceOf[js.Any])

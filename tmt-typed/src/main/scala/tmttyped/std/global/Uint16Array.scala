@@ -11,12 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Uint16Array")
 @js.native
+/* standard es2017.typedarrays */
 class Uint16Array ()
   extends StObject
      with tmttyped.std.Uint16Array {
+  /* standard es5 */
   def this(array: ArrayBufferLike) = this()
+  /* standard es5 */
   def this(array: ArrayLike[Double]) = this()
+  /* standard es2015.iterable */
   def this(elements: js.Iterable[Double]) = this()
+  /* standard es5 */
   def this(length: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double, length: Double) = this()

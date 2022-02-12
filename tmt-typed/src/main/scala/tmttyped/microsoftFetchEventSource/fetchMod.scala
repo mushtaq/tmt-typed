@@ -1,6 +1,6 @@
 package tmttyped.microsoftFetchEventSource
 
-import org.scalajs.dom.experimental.Response
+import org.scalajs.dom.Response
 import tmttyped.microsoftFetchEventSource.anon.FnCall
 import tmttyped.microsoftFetchEventSource.parseMod.EventSourceMessage
 import tmttyped.std.Record
@@ -38,7 +38,7 @@ object fetchMod {
     
     var onclose: js.UndefOr[js.Function0[Unit]] = js.undefined
     
-    var onerror: js.UndefOr[js.Function1[/* err */ js.Any, js.UndefOr[Double | Null | Unit]]] = js.undefined
+    var onerror: js.UndefOr[js.Function1[/* err */ Any, js.UndefOr[Double | Null | Unit]]] = js.undefined
     
     var onmessage: js.UndefOr[js.Function1[/* ev */ EventSourceMessage, Unit]] = js.undefined
     
@@ -76,7 +76,7 @@ object fetchMod {
       def setOncloseUndefined: Self = StObject.set(x, "onclose", js.undefined)
       
       @scala.inline
-      def setOnerror(value: /* err */ js.Any => js.UndefOr[Double | Null | Unit]): Self = StObject.set(x, "onerror", js.Any.fromFunction1(value))
+      def setOnerror(value: /* err */ Any => js.UndefOr[Double | Null | Unit]): Self = StObject.set(x, "onerror", js.Any.fromFunction1(value))
       
       @scala.inline
       def setOnerrorUndefined: Self = StObject.set(x, "onerror", js.undefined)

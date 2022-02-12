@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextEncoderCommon extends StObject {
   
-  /**
-    * Returns "utf-8".
-    */
+  /** Returns "utf-8". */
+  /* standard DOM */
   val encoding: java.lang.String
 }
 object TextEncoderCommon {

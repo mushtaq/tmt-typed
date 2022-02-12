@@ -10,7 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProxyConstructor
   extends StObject
-     with Instantiable2[/* target */ js.Object, /* handler */ ProxyHandler[js.Object], js.Object] {
+     with /* standard es2015.proxy */
+Instantiable2[/* target */ js.Object, /* handler */ ProxyHandler[js.Object], js.Object] {
   
+  /* standard es2015.proxy */
   def revocable[T /* <: js.Object */](target: T, handler: ProxyHandler[T]): Proxy[T] = js.native
 }

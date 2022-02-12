@@ -9,6 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Crypto")
 @js.native
+/* standard DOM */
 class Crypto_ ()
   extends StObject
-     with Crypto
+     with Crypto {
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override def getRandomValues[T /* <: js.typedarray.ArrayBufferView | Null */](array: T): T = js.native
+  
+  /** Available only in secure contexts. */
+  /* standard DOM */
+  /* CompleteClass */
+  override val subtle: org.scalajs.dom.SubtleCrypto = js.native
+}

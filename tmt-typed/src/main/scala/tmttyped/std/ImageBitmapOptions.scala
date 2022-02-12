@@ -7,16 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ImageBitmapOptions extends StObject {
   
+  /* standard DOM */
   var colorSpaceConversion: js.UndefOr[ColorSpaceConversion] = js.undefined
   
+  /* standard DOM */
   var imageOrientation: js.UndefOr[ImageOrientation] = js.undefined
   
+  /* standard DOM */
   var premultiplyAlpha: js.UndefOr[PremultiplyAlpha] = js.undefined
   
+  /* standard DOM */
   var resizeHeight: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var resizeQuality: js.UndefOr[ResizeQuality] = js.undefined
   
+  /* standard DOM */
   var resizeWidth: js.UndefOr[Double] = js.undefined
 }
 object ImageBitmapOptions {

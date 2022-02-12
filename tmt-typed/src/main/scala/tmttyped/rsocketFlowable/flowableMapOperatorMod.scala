@@ -13,7 +13,7 @@ object flowableMapOperatorMod {
     extends StObject
        with FlowableMapOperator[T, R] {
     def this(
-      subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<R> */ js.Any,
+      subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<R> */ Any,
       fn: js.Function1[/* t */ T, R]
     ) = this()
     
@@ -28,7 +28,7 @@ object flowableMapOperatorMod {
     
     /* CompleteClass */
     override def onSubscribe(
-      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any
+      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any
     ): Unit = js.native
   }
   
@@ -42,7 +42,7 @@ object flowableMapOperatorMod {
     def onNext(t: T): Unit
     
     def onSubscribe(
-      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any
+      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any
     ): Unit
   }
   object FlowableMapOperator {
@@ -52,7 +52,7 @@ object flowableMapOperatorMod {
       onComplete: () => Unit,
       onError: js.Error => Unit,
       onNext: T => Unit,
-      onSubscribe: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any => Unit
+      onSubscribe: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any => Unit
     ): FlowableMapOperator[T, R] = {
       val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction0(onComplete), onError = js.Any.fromFunction1(onError), onNext = js.Any.fromFunction1(onNext), onSubscribe = js.Any.fromFunction1(onSubscribe))
       __obj.asInstanceOf[FlowableMapOperator[T, R]]
@@ -72,7 +72,7 @@ object flowableMapOperatorMod {
       
       @scala.inline
       def setOnSubscribe(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any => Unit
+        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any => Unit
       ): Self = StObject.set(x, "onSubscribe", js.Any.fromFunction1(value))
     }
   }

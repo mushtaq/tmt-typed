@@ -9,14 +9,19 @@ trait StorageEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var key: js.UndefOr[java.lang.String | Null] = js.undefined
   
+  /* standard DOM */
   var newValue: js.UndefOr[java.lang.String | Null] = js.undefined
   
+  /* standard DOM */
   var oldValue: js.UndefOr[java.lang.String | Null] = js.undefined
   
-  var storageArea: js.UndefOr[org.scalajs.dom.raw.Storage | Null] = js.undefined
+  /* standard DOM */
+  var storageArea: js.UndefOr[org.scalajs.dom.Storage | Null] = js.undefined
   
+  /* standard DOM */
   var url: js.UndefOr[java.lang.String] = js.undefined
 }
 object StorageEventInit {
@@ -58,7 +63,7 @@ object StorageEventInit {
     def setOldValueUndefined: Self = StObject.set(x, "oldValue", js.undefined)
     
     @scala.inline
-    def setStorageArea(value: org.scalajs.dom.raw.Storage): Self = StObject.set(x, "storageArea", value.asInstanceOf[js.Any])
+    def setStorageArea(value: org.scalajs.dom.Storage): Self = StObject.set(x, "storageArea", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStorageAreaNull: Self = StObject.set(x, "storageArea", null)

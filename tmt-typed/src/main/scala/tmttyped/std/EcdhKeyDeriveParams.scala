@@ -9,12 +9,13 @@ trait EcdhKeyDeriveParams
   extends StObject
      with Algorithm {
   
-  var public: org.scalajs.dom.crypto.CryptoKey
+  /* standard DOM */
+  var public: org.scalajs.dom.CryptoKey
 }
 object EcdhKeyDeriveParams {
   
   @scala.inline
-  def apply(name: java.lang.String, public: org.scalajs.dom.crypto.CryptoKey): EcdhKeyDeriveParams = {
+  def apply(name: java.lang.String, public: org.scalajs.dom.CryptoKey): EcdhKeyDeriveParams = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any])
     __obj.asInstanceOf[EcdhKeyDeriveParams]
   }
@@ -23,6 +24,6 @@ object EcdhKeyDeriveParams {
   implicit class EcdhKeyDeriveParamsMutableBuilder[Self <: EcdhKeyDeriveParams] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setPublic(value: org.scalajs.dom.crypto.CryptoKey): Self = StObject.set(x, "public", value.asInstanceOf[js.Any])
+    def setPublic(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "public", value.asInstanceOf[js.Any])
   }
 }

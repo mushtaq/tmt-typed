@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AuthenticationExtensionsClientOutputs extends StObject {
   
+  /* standard DOM */
   var appid: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var credProps: js.UndefOr[CredentialPropertiesOutput] = js.undefined
   
+  /* standard DOM */
   var uvm: js.UndefOr[UvmEntries] = js.undefined
 }
 object AuthenticationExtensionsClientOutputs {

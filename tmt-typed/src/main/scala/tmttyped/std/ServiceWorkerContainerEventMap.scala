@@ -7,19 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ServiceWorkerContainerEventMap extends StObject {
   
-  var controllerchange: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var controllerchange: org.scalajs.dom.Event
   
-  var message: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var message: org.scalajs.dom.MessageEvent
   
-  var messageerror: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var messageerror: org.scalajs.dom.MessageEvent
 }
 object ServiceWorkerContainerEventMap {
   
   @scala.inline
   def apply(
-    controllerchange: org.scalajs.dom.raw.Event,
-    message: org.scalajs.dom.raw.MessageEvent,
-    messageerror: org.scalajs.dom.raw.MessageEvent
+    controllerchange: org.scalajs.dom.Event,
+    message: org.scalajs.dom.MessageEvent,
+    messageerror: org.scalajs.dom.MessageEvent
   ): ServiceWorkerContainerEventMap = {
     val __obj = js.Dynamic.literal(controllerchange = controllerchange.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], messageerror = messageerror.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceWorkerContainerEventMap]
@@ -29,12 +32,12 @@ object ServiceWorkerContainerEventMap {
   implicit class ServiceWorkerContainerEventMapMutableBuilder[Self <: ServiceWorkerContainerEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setControllerchange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "controllerchange", value.asInstanceOf[js.Any])
+    def setControllerchange(value: org.scalajs.dom.Event): Self = StObject.set(x, "controllerchange", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessageerror(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

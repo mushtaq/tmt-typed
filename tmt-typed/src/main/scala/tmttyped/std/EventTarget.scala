@@ -20,35 +20,36 @@ trait EventTarget extends StObject {
     *
     * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
     *
+    * If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+    *
     * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
     */
+  /* standard DOM */
   def addEventListener(`type`: java.lang.String): Unit = js.native
-  def addEventListener(`type`: java.lang.String, listener: Null, options: scala.Boolean): Unit = js.native
-  def addEventListener(`type`: java.lang.String, listener: Null, options: AddEventListenerOptions): Unit = js.native
-  def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
-  def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
+  def addEventListener(`type`: java.lang.String, callback: Null, options: scala.Boolean): Unit = js.native
+  def addEventListener(`type`: java.lang.String, callback: Null, options: AddEventListenerOptions): Unit = js.native
+  def addEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
+  def addEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   def addEventListener(
     `type`: java.lang.String,
-    listener: EventListenerOrEventListenerObject,
+    callback: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
-    */
-  def dispatchEvent(event: org.scalajs.dom.raw.Event): scala.Boolean = js.native
+  /** Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise. */
+  /* standard DOM */
+  def dispatchEvent(event: org.scalajs.dom.Event): scala.Boolean = js.native
   
-  /**
-    * Removes the event listener in target's event listener list with the same type, callback, and options.
-    */
+  /** Removes the event listener in target's event listener list with the same type, callback, and options. */
+  /* standard DOM */
   def removeEventListener(`type`: java.lang.String): Unit = js.native
-  def removeEventListener(`type`: java.lang.String, callback: Null, options: org.scalajs.dom.raw.EventListenerOptions): Unit = js.native
+  def removeEventListener(`type`: java.lang.String, callback: Null, options: org.scalajs.dom.EventListenerOptions): Unit = js.native
   def removeEventListener(`type`: java.lang.String, callback: Null, options: scala.Boolean): Unit = js.native
   def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   def removeEventListener(
     `type`: java.lang.String,
     callback: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
 }

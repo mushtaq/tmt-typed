@@ -9,6 +9,7 @@ trait SpeechSynthesisErrorEventInit
   extends StObject
      with SpeechSynthesisEventInit {
   
+  /* standard DOM */
   var error: SpeechSynthesisErrorCode
 }
 object SpeechSynthesisErrorEventInit {

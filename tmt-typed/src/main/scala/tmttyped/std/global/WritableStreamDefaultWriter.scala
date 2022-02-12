@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class WritableStreamDefaultWriter[W] protected ()
   extends StObject
      with tmttyped.std.WritableStreamDefaultWriter[W] {
+  /* standard DOM */
   def this(stream: tmttyped.std.WritableStream[W]) = this()
 }

@@ -9,8 +9,10 @@ trait WaveShaperOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var curve: js.UndefOr[js.Array[Double] | js.typedarray.Float32Array] = js.undefined
   
+  /* standard DOM */
   var oversample: js.UndefOr[OverSampleType] = js.undefined
 }
 object WaveShaperOptions {

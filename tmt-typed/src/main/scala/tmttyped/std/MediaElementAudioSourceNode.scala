@@ -11,5 +11,6 @@ trait MediaElementAudioSourceNode
   extends StObject
      with AudioNode {
   
-  val mediaElement: org.scalajs.dom.raw.HTMLMediaElement = js.native
+  /* standard DOM */
+  val mediaElement: org.scalajs.dom.HTMLMediaElement = js.native
 }

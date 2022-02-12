@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedArrayBuffer protected ()
   extends StObject
      with tmttyped.std.SharedArrayBuffer {
+  /* standard es2017.sharedmemory */
   def this(byteLength: Double) = this()
 }
 object SharedArrayBuffer {

@@ -7,13 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResizeObserverEntry extends StObject {
   
+  /* standard DOM */
   val borderBoxSize: js.Array[ResizeObserverSize]
   
+  /* standard DOM */
   val contentBoxSize: js.Array[ResizeObserverSize]
   
+  /* standard DOM */
   val contentRect: DOMRectReadOnly
   
-  val target: org.scalajs.dom.raw.Element
+  /* standard DOM */
+  val target: org.scalajs.dom.Element
 }
 object ResizeObserverEntry {
   
@@ -22,7 +26,7 @@ object ResizeObserverEntry {
     borderBoxSize: js.Array[ResizeObserverSize],
     contentBoxSize: js.Array[ResizeObserverSize],
     contentRect: DOMRectReadOnly,
-    target: org.scalajs.dom.raw.Element
+    target: org.scalajs.dom.Element
   ): ResizeObserverEntry = {
     val __obj = js.Dynamic.literal(borderBoxSize = borderBoxSize.asInstanceOf[js.Any], contentBoxSize = contentBoxSize.asInstanceOf[js.Any], contentRect = contentRect.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeObserverEntry]
@@ -47,6 +51,6 @@ object ResizeObserverEntry {
     def setContentRect(value: DOMRectReadOnly): Self = StObject.set(x, "contentRect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTarget(value: org.scalajs.dom.raw.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
+    def setTarget(value: org.scalajs.dom.Element): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
   }
 }

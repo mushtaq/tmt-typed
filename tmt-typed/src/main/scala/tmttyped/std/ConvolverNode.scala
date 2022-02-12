@@ -11,7 +11,9 @@ trait ConvolverNode
   extends StObject
      with AudioNode {
   
-  var buffer: org.scalajs.dom.raw.AudioBuffer | Null = js.native
+  /* standard DOM */
+  var buffer: org.scalajs.dom.AudioBuffer | Null = js.native
   
+  /* standard DOM */
   var normalize: scala.Boolean = js.native
 }

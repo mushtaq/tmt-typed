@@ -9,6 +9,7 @@ trait CustomEventInit[T]
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var detail: js.UndefOr[T] = js.undefined
 }
 object CustomEventInit {

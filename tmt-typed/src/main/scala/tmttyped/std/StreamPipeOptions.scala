@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait StreamPipeOptions extends StObject {
   
+  /* standard DOM */
   var preventAbort: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var preventCancel: js.UndefOr[scala.Boolean] = js.undefined
   
   /**
@@ -28,9 +30,11 @@ trait StreamPipeOptions extends StObject {
     *
     * The signal option can be set to an AbortSignal to allow aborting an ongoing pipe operation via the corresponding AbortController. In this case, this source readable stream will be canceled, and destination aborted, unless the respective options preventCancel or preventAbort are set.
     */
+  /* standard DOM */
   var preventClose: js.UndefOr[scala.Boolean] = js.undefined
   
-  var signal: js.UndefOr[org.scalajs.dom.experimental.AbortSignal] = js.undefined
+  /* standard DOM */
+  var signal: js.UndefOr[org.scalajs.dom.AbortSignal] = js.undefined
 }
 object StreamPipeOptions {
   
@@ -62,7 +66,7 @@ object StreamPipeOptions {
     def setPreventCloseUndefined: Self = StObject.set(x, "preventClose", js.undefined)
     
     @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)

@@ -11,6 +11,7 @@ trait SVGLinearGradientElement
   extends StObject
      with SVGGradientElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,22 +23,27 @@ trait SVGLinearGradientElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val x1: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val x1: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val x2: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val x2: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val y1: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val y1: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val y2: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val y2: org.scalajs.dom.SVGAnimatedLength = js.native
 }

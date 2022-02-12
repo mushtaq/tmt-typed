@@ -8,29 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The dimensions of a piece of text in the canvas, as created by the CanvasRenderingContext2D.measureText() method. */
 trait TextMetrics extends StObject {
   
-  /**
-    * Returns the measurement described below.
-    */
+  /** Returns the measurement described below. */
+  /* standard DOM */
   val actualBoundingBoxAscent: Double
   
-  /**
-    * Returns the measurement described below.
-    */
+  /** Returns the measurement described below. */
+  /* standard DOM */
   val actualBoundingBoxDescent: Double
   
-  /**
-    * Returns the measurement described below.
-    */
+  /** Returns the measurement described below. */
+  /* standard DOM */
   val actualBoundingBoxLeft: Double
   
-  /**
-    * Returns the measurement described below.
-    */
+  /** Returns the measurement described below. */
+  /* standard DOM */
   val actualBoundingBoxRight: Double
   
-  /**
-    * Returns the measurement described below.
-    */
+  /** Returns the measurement described below. */
+  /* standard DOM */
+  val fontBoundingBoxAscent: Double
+  
+  /** Returns the measurement described below. */
+  /* standard DOM */
+  val fontBoundingBoxDescent: Double
+  
+  /** Returns the measurement described below. */
+  /* standard DOM */
   val width: Double
 }
 object TextMetrics {
@@ -41,9 +44,11 @@ object TextMetrics {
     actualBoundingBoxDescent: Double,
     actualBoundingBoxLeft: Double,
     actualBoundingBoxRight: Double,
+    fontBoundingBoxAscent: Double,
+    fontBoundingBoxDescent: Double,
     width: Double
   ): TextMetrics = {
-    val __obj = js.Dynamic.literal(actualBoundingBoxAscent = actualBoundingBoxAscent.asInstanceOf[js.Any], actualBoundingBoxDescent = actualBoundingBoxDescent.asInstanceOf[js.Any], actualBoundingBoxLeft = actualBoundingBoxLeft.asInstanceOf[js.Any], actualBoundingBoxRight = actualBoundingBoxRight.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(actualBoundingBoxAscent = actualBoundingBoxAscent.asInstanceOf[js.Any], actualBoundingBoxDescent = actualBoundingBoxDescent.asInstanceOf[js.Any], actualBoundingBoxLeft = actualBoundingBoxLeft.asInstanceOf[js.Any], actualBoundingBoxRight = actualBoundingBoxRight.asInstanceOf[js.Any], fontBoundingBoxAscent = fontBoundingBoxAscent.asInstanceOf[js.Any], fontBoundingBoxDescent = fontBoundingBoxDescent.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextMetrics]
   }
   
@@ -61,6 +66,12 @@ object TextMetrics {
     
     @scala.inline
     def setActualBoundingBoxRight(value: Double): Self = StObject.set(x, "actualBoundingBoxRight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFontBoundingBoxAscent(value: Double): Self = StObject.set(x, "fontBoundingBoxAscent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFontBoundingBoxDescent(value: Double): Self = StObject.set(x, "fontBoundingBoxDescent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWidth(value: Double): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])

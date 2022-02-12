@@ -8,20 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Comment")
 @js.native
+/* standard DOM */
 class Comment ()
   extends StObject
      with tmttyped.std.CharacterData {
   def this(data: java.lang.String) = this()
   
-  /**
-    * Returns the first following sibling that is an element, and null otherwise.
-    */
+  /** Returns the first following sibling that is an element, and null otherwise. */
+  /* standard DOM */
   /* CompleteClass */
-  override val nextElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  override val nextElementSibling: org.scalajs.dom.Element | Null = js.native
   
-  /**
-    * Returns the first preceding sibling that is an element, and null otherwise.
-    */
+  /** Returns the first preceding sibling that is an element, and null otherwise. */
+  /* standard DOM */
   /* CompleteClass */
-  override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  override val previousElementSibling: org.scalajs.dom.Element | Null = js.native
 }

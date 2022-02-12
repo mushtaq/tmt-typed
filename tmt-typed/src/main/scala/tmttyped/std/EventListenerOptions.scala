@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EventListenerOptions extends StObject {
   
+  /* standard DOM */
   var capture: js.UndefOr[scala.Boolean] = js.undefined
 }
 object EventListenerOptions {

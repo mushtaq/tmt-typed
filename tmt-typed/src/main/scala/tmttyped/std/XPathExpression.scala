@@ -9,8 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XPathExpression extends StObject {
   
-  def evaluate(contextNode: org.scalajs.dom.raw.Node): org.scalajs.dom.raw.XPathResult = js.native
-  def evaluate(contextNode: org.scalajs.dom.raw.Node, `type`: Double): org.scalajs.dom.raw.XPathResult = js.native
-  def evaluate(contextNode: org.scalajs.dom.raw.Node, `type`: Double, result: org.scalajs.dom.raw.XPathResult): org.scalajs.dom.raw.XPathResult = js.native
-  def evaluate(contextNode: org.scalajs.dom.raw.Node, `type`: Unit, result: org.scalajs.dom.raw.XPathResult): org.scalajs.dom.raw.XPathResult = js.native
+  /* standard DOM */
+  def evaluate(contextNode: org.scalajs.dom.Node): org.scalajs.dom.XPathResult = js.native
+  def evaluate(contextNode: org.scalajs.dom.Node, `type`: Double): org.scalajs.dom.XPathResult = js.native
+  def evaluate(contextNode: org.scalajs.dom.Node, `type`: Double, result: org.scalajs.dom.XPathResult): org.scalajs.dom.XPathResult = js.native
+  def evaluate(contextNode: org.scalajs.dom.Node, `type`: Unit, result: org.scalajs.dom.XPathResult): org.scalajs.dom.XPathResult = js.native
 }

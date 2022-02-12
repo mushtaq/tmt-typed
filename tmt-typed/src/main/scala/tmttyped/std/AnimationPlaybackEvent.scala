@@ -10,7 +10,9 @@ trait AnimationPlaybackEvent
   extends StObject
      with Event {
   
-  val currentTime: Double | Null = js.native
+  /* standard DOM */
+  val currentTime: CSSNumberish | Null = js.native
   
-  val timelineTime: Double | Null = js.native
+  /* standard DOM */
+  val timelineTime: CSSNumberish | Null = js.native
 }

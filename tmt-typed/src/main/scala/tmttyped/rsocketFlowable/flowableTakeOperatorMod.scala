@@ -13,7 +13,7 @@ object flowableTakeOperatorMod {
     extends StObject
        with FlowableTakeOperator[T] {
     def this(
-      subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ js.Any,
+      subscriber: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscriber<T> */ Any,
       toTake: Double
     ) = this()
     
@@ -28,7 +28,7 @@ object flowableTakeOperatorMod {
     
     /* CompleteClass */
     override def onSubscribe(
-      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any
+      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any
     ): Unit = js.native
   }
   
@@ -42,7 +42,7 @@ object flowableTakeOperatorMod {
     def onNext(t: T): Unit
     
     def onSubscribe(
-      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any
+      subscription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any
     ): Unit
   }
   object FlowableTakeOperator {
@@ -52,7 +52,7 @@ object flowableTakeOperatorMod {
       onComplete: () => Unit,
       onError: js.Error => Unit,
       onNext: T => Unit,
-      onSubscribe: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any => Unit
+      onSubscribe: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any => Unit
     ): FlowableTakeOperator[T] = {
       val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction0(onComplete), onError = js.Any.fromFunction1(onError), onNext = js.Any.fromFunction1(onNext), onSubscribe = js.Any.fromFunction1(onSubscribe))
       __obj.asInstanceOf[FlowableTakeOperator[T]]
@@ -72,7 +72,7 @@ object flowableTakeOperatorMod {
       
       @scala.inline
       def setOnSubscribe(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ js.Any => Unit
+        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any => Unit
       ): Self = StObject.set(x, "onSubscribe", js.Any.fromFunction1(value))
     }
   }

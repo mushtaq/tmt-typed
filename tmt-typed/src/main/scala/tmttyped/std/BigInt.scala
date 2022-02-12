@@ -14,6 +14,7 @@ trait BigInt extends StObject {
   
   def toString(radix: Double): java.lang.String = js.native
   
+  /* standard es2020.bigint */
   @JSName(js.Symbol.toStringTag)
   val toStringTag: tmttyped.std.stdStrings.BigInt = js.native
 }

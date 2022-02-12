@@ -10,16 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("WebGLActiveInfo")
 @js.native
+/* standard DOM */
 class WebGLActiveInfo ()
   extends StObject
      with tmttyped.std.WebGLActiveInfo {
   
+  /* standard DOM */
   /* CompleteClass */
   override val name: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val size: GLint = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val `type`: GLenum = js.native
 }

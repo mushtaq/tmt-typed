@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.EventListenerOptions
 import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
@@ -11,10 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("ServiceWorker")
 @js.native
+/* standard DOM */
 class ServiceWorker ()
   extends StObject
      with tmttyped.std.ServiceWorker {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -26,6 +28,7 @@ class ServiceWorker ()
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */

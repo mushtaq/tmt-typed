@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCCertificateExpiration extends StObject {
   
-  var expires: js.UndefOr[Double] = js.undefined
+  /* standard DOM */
+  var expires: js.UndefOr[DOMTimeStamp] = js.undefined
 }
 object RTCCertificateExpiration {
   
@@ -21,7 +22,7 @@ object RTCCertificateExpiration {
   implicit class RTCCertificateExpirationMutableBuilder[Self <: RTCCertificateExpiration] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setExpires(value: Double): Self = StObject.set(x, "expires", value.asInstanceOf[js.Any])
+    def setExpires(value: DOMTimeStamp): Self = StObject.set(x, "expires", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setExpiresUndefined: Self = StObject.set(x, "expires", js.undefined)

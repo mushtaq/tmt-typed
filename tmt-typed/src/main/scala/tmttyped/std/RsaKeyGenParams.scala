@@ -9,8 +9,10 @@ trait RsaKeyGenParams
   extends StObject
      with Algorithm {
   
+  /* standard DOM */
   var modulusLength: Double
   
+  /* standard DOM */
   var publicExponent: js.typedarray.Uint8Array
 }
 object RsaKeyGenParams {

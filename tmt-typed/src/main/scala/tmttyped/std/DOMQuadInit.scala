@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait DOMQuadInit extends StObject {
   
+  /* standard DOM */
   var p1: js.UndefOr[DOMPointInit] = js.undefined
   
+  /* standard DOM */
   var p2: js.UndefOr[DOMPointInit] = js.undefined
   
+  /* standard DOM */
   var p3: js.UndefOr[DOMPointInit] = js.undefined
   
+  /* standard DOM */
   var p4: js.UndefOr[DOMPointInit] = js.undefined
 }
 object DOMQuadInit {

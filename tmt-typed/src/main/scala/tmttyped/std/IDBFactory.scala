@@ -14,16 +14,18 @@ trait IDBFactory extends StObject {
     *
     * Throws a "DataError" DOMException if either input is not a valid key.
     */
-  def cmp(first: js.Any, second: js.Any): Double = js.native
+  /* standard DOM */
+  def cmp(first: Any, second: Any): Double = js.native
   
-  /**
-    * Attempts to delete the named database. If the database already exists and there are open connections that don't close in response to a versionchange event, the request will be blocked until all they close. If the request is successful request's result will be null.
-    */
-  def deleteDatabase(name: java.lang.String): org.scalajs.dom.raw.IDBOpenDBRequest = js.native
+  /* standard DOM */
+  def databases(): js.Promise[js.Array[IDBDatabaseInfo]] = js.native
   
-  /**
-    * Attempts to open a connection to the named database with the current version, or 1 if it does not already exist. If the request is successful request's result will be the connection.
-    */
-  def open(name: java.lang.String): org.scalajs.dom.raw.IDBOpenDBRequest = js.native
-  def open(name: java.lang.String, version: Double): org.scalajs.dom.raw.IDBOpenDBRequest = js.native
+  /** Attempts to delete the named database. If the database already exists and there are open connections that don't close in response to a versionchange event, the request will be blocked until all they close. If the request is successful request's result will be null. */
+  /* standard DOM */
+  def deleteDatabase(name: java.lang.String): org.scalajs.dom.IDBOpenDBRequest[Any] = js.native
+  
+  /** Attempts to open a connection to the named database with the current version, or 1 if it does not already exist. If the request is successful request's result will be the connection. */
+  /* standard DOM */
+  def open(name: java.lang.String): org.scalajs.dom.IDBOpenDBRequest[Any] = js.native
+  def open(name: java.lang.String, version: Double): org.scalajs.dom.IDBOpenDBRequest[Any] = js.native
 }

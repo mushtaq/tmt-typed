@@ -19,7 +19,7 @@ object PromiseSettledResult {
   }
   
   @scala.inline
-  def PromiseRejectedResult(reason: js.Any): tmttyped.std.PromiseRejectedResult = {
+  def PromiseRejectedResult(reason: Any): tmttyped.std.PromiseRejectedResult = {
     val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any], status = "rejected")
     __obj.asInstanceOf[tmttyped.std.PromiseRejectedResult]
   }

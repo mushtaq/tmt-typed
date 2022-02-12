@@ -10,8 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StatOptionsbigintfalseund extends StObject {
   
   var bigint: js.UndefOr[Boolean] with js.UndefOr[`false`]
-  
-  var throwIfNoEntry: js.UndefOr[Boolean] = js.undefined
 }
 object StatOptionsbigintfalseund {
   
@@ -26,11 +24,5 @@ object StatOptionsbigintfalseund {
     
     @scala.inline
     def setBigint(value: js.UndefOr[Boolean] with js.UndefOr[`false`]): Self = StObject.set(x, "bigint", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setThrowIfNoEntry(value: Boolean): Self = StObject.set(x, "throwIfNoEntry", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setThrowIfNoEntryUndefined: Self = StObject.set(x, "throwIfNoEntry", js.undefined)
   }
 }

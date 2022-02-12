@@ -10,79 +10,56 @@ trait Request
   extends StObject
      with Body {
   
-  /**
-    * Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching.
-    */
-  val cache: org.scalajs.dom.experimental.RequestCache
+  /** Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching. */
+  /* standard DOM */
+  val cache: org.scalajs.dom.RequestCache
   
-  /**
-    * Returns the credentials mode associated with request, which is a string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL.
-    */
-  val credentials: org.scalajs.dom.experimental.RequestCredentials
+  /** Returns the credentials mode associated with request, which is a string indicating whether credentials will be sent with the request always, never, or only when sent to a same-origin URL. */
+  /* standard DOM */
+  val credentials: org.scalajs.dom.RequestCredentials
   
-  /**
-    * Returns the kind of resource requested by request, e.g., "document" or "script".
-    */
-  val destination: org.scalajs.dom.experimental.RequestDestination
+  /** Returns the kind of resource requested by request, e.g., "document" or "script". */
+  /* standard DOM */
+  val destination: org.scalajs.dom.RequestDestination
   
-  /**
-    * Returns a Headers object consisting of the headers associated with request. Note that headers added in the network layer by the user agent will not be accounted for in this object, e.g., the "Host" header.
-    */
-  val headers: org.scalajs.dom.experimental.Headers
+  /** Returns a Headers object consisting of the headers associated with request. Note that headers added in the network layer by the user agent will not be accounted for in this object, e.g., the "Host" header. */
+  /* standard DOM */
+  val headers: org.scalajs.dom.Headers
   
-  /**
-    * Returns request's subresource integrity metadata, which is a cryptographic hash of the resource being fetched. Its value consists of multiple hashes separated by whitespace. [SRI]
-    */
+  /** Returns request's subresource integrity metadata, which is a cryptographic hash of the resource being fetched. Its value consists of multiple hashes separated by whitespace. [SRI] */
+  /* standard DOM */
   val integrity: java.lang.String
   
-  /**
-    * Returns a boolean indicating whether or not request is for a history navigation (a.k.a. back-foward navigation).
-    */
-  val isHistoryNavigation: scala.Boolean
-  
-  /**
-    * Returns a boolean indicating whether or not request is for a reload navigation.
-    */
-  val isReloadNavigation: scala.Boolean
-  
-  /**
-    * Returns a boolean indicating whether or not request can outlive the global in which it was created.
-    */
+  /** Returns a boolean indicating whether or not request can outlive the global in which it was created. */
+  /* standard DOM */
   val keepalive: scala.Boolean
   
-  /**
-    * Returns request's HTTP method, which is "GET" by default.
-    */
+  /** Returns request's HTTP method, which is "GET" by default. */
+  /* standard DOM */
   val method: java.lang.String
   
-  /**
-    * Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs.
-    */
-  val mode: org.scalajs.dom.experimental.RequestMode
+  /** Returns the mode associated with request, which is a string indicating whether the request will use CORS, or will be restricted to same-origin URLs. */
+  /* standard DOM */
+  val mode: org.scalajs.dom.RequestMode
   
-  /**
-    * Returns the redirect mode associated with request, which is a string indicating how redirects for the request will be handled during fetching. A request will follow redirects by default.
-    */
-  val redirect: org.scalajs.dom.experimental.RequestRedirect
+  /** Returns the redirect mode associated with request, which is a string indicating how redirects for the request will be handled during fetching. A request will follow redirects by default. */
+  /* standard DOM */
+  val redirect: org.scalajs.dom.RequestRedirect
   
-  /**
-    * Returns the referrer of request. Its value can be a same-origin URL if explicitly set in init, the empty string to indicate no referrer, and "about:client" when defaulting to the global's default. This is used during fetching to determine the value of the `Referer` header of the request being made.
-    */
+  /** Returns the referrer of request. Its value can be a same-origin URL if explicitly set in init, the empty string to indicate no referrer, and "about:client" when defaulting to the global's default. This is used during fetching to determine the value of the `Referer` header of the request being made. */
+  /* standard DOM */
   val referrer: java.lang.String
   
-  /**
-    * Returns the referrer policy associated with request. This is used during fetching to compute the value of the request's referrer.
-    */
-  val referrerPolicy: org.scalajs.dom.experimental.ReferrerPolicy
+  /** Returns the referrer policy associated with request. This is used during fetching to compute the value of the request's referrer. */
+  /* standard DOM */
+  val referrerPolicy: org.scalajs.dom.ReferrerPolicy
   
-  /**
-    * Returns the signal associated with request, which is an AbortSignal object indicating whether or not request has been aborted, and its abort event handler.
-    */
-  val signal: org.scalajs.dom.experimental.AbortSignal
+  /** Returns the signal associated with request, which is an AbortSignal object indicating whether or not request has been aborted, and its abort event handler. */
+  /* standard DOM */
+  val signal: org.scalajs.dom.AbortSignal
   
-  /**
-    * Returns the URL of request as a string.
-    */
+  /** Returns the URL of request as a string. */
+  /* standard DOM */
   val url: java.lang.String
 }
 object Request {
@@ -90,28 +67,26 @@ object Request {
   @scala.inline
   def apply(
     arrayBuffer: () => js.Promise[js.typedarray.ArrayBuffer],
-    blob: () => js.Promise[org.scalajs.dom.raw.Blob],
+    blob: () => js.Promise[org.scalajs.dom.Blob],
     bodyUsed: scala.Boolean,
-    cache: org.scalajs.dom.experimental.RequestCache,
-    credentials: org.scalajs.dom.experimental.RequestCredentials,
-    destination: org.scalajs.dom.experimental.RequestDestination,
-    formData: () => js.Promise[org.scalajs.dom.raw.FormData],
-    headers: org.scalajs.dom.experimental.Headers,
+    cache: org.scalajs.dom.RequestCache,
+    credentials: org.scalajs.dom.RequestCredentials,
+    destination: org.scalajs.dom.RequestDestination,
+    formData: () => js.Promise[org.scalajs.dom.FormData],
+    headers: org.scalajs.dom.Headers,
     integrity: java.lang.String,
-    isHistoryNavigation: scala.Boolean,
-    isReloadNavigation: scala.Boolean,
-    json: () => js.Promise[js.Any],
+    json: () => js.Promise[Any],
     keepalive: scala.Boolean,
     method: java.lang.String,
-    mode: org.scalajs.dom.experimental.RequestMode,
-    redirect: org.scalajs.dom.experimental.RequestRedirect,
+    mode: org.scalajs.dom.RequestMode,
+    redirect: org.scalajs.dom.RequestRedirect,
     referrer: java.lang.String,
-    referrerPolicy: org.scalajs.dom.experimental.ReferrerPolicy,
-    signal: org.scalajs.dom.experimental.AbortSignal,
+    referrerPolicy: org.scalajs.dom.ReferrerPolicy,
+    signal: org.scalajs.dom.AbortSignal,
     text: () => js.Promise[java.lang.String],
     url: java.lang.String
   ): Request = {
-    val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], integrity = integrity.asInstanceOf[js.Any], isHistoryNavigation = isHistoryNavigation.asInstanceOf[js.Any], isReloadNavigation = isReloadNavigation.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), keepalive = keepalive.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], referrerPolicy = referrerPolicy.asInstanceOf[js.Any], signal = signal.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any], body = null)
+    val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], integrity = integrity.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), keepalive = keepalive.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], referrerPolicy = referrerPolicy.asInstanceOf[js.Any], signal = signal.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any], body = null)
     __obj.asInstanceOf[Request]
   }
   
@@ -119,25 +94,19 @@ object Request {
   implicit class RequestMutableBuilder[Self <: Request] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCache(value: org.scalajs.dom.experimental.RequestCache): Self = StObject.set(x, "cache", value.asInstanceOf[js.Any])
+    def setCache(value: org.scalajs.dom.RequestCache): Self = StObject.set(x, "cache", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
+    def setCredentials(value: org.scalajs.dom.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDestination(value: org.scalajs.dom.experimental.RequestDestination): Self = StObject.set(x, "destination", value.asInstanceOf[js.Any])
+    def setDestination(value: org.scalajs.dom.RequestDestination): Self = StObject.set(x, "destination", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaders(value: org.scalajs.dom.experimental.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+    def setHeaders(value: org.scalajs.dom.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIntegrity(value: java.lang.String): Self = StObject.set(x, "integrity", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIsHistoryNavigation(value: scala.Boolean): Self = StObject.set(x, "isHistoryNavigation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIsReloadNavigation(value: scala.Boolean): Self = StObject.set(x, "isReloadNavigation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setKeepalive(value: scala.Boolean): Self = StObject.set(x, "keepalive", value.asInstanceOf[js.Any])
@@ -146,19 +115,19 @@ object Request {
     def setMethod(value: java.lang.String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMode(value: org.scalajs.dom.experimental.RequestMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
+    def setMode(value: org.scalajs.dom.RequestMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = StObject.set(x, "redirect", value.asInstanceOf[js.Any])
+    def setRedirect(value: org.scalajs.dom.RequestRedirect): Self = StObject.set(x, "redirect", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReferrer(value: java.lang.String): Self = StObject.set(x, "referrer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = StObject.set(x, "referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: org.scalajs.dom.ReferrerPolicy): Self = StObject.set(x, "referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])

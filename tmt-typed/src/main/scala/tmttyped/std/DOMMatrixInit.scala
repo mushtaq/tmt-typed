@@ -9,26 +9,37 @@ trait DOMMatrixInit
   extends StObject
      with DOMMatrix2DInit {
   
+  /* standard DOM */
   var is2D: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var m13: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m14: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m23: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m24: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m31: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m32: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m33: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m34: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m43: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var m44: js.UndefOr[Double] = js.undefined
 }
 object DOMMatrixInit {

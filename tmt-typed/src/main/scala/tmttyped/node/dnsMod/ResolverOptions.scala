@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResolverOptions extends StObject {
   
   var timeout: js.UndefOr[Double] = js.undefined
+  
+  /**
+    * @default 4
+    */
+  var tries: js.UndefOr[Double] = js.undefined
 }
 object ResolverOptions {
   
@@ -25,5 +30,11 @@ object ResolverOptions {
     
     @scala.inline
     def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+    
+    @scala.inline
+    def setTries(value: Double): Self = StObject.set(x, "tries", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTriesUndefined: Self = StObject.set(x, "tries", js.undefined)
   }
 }

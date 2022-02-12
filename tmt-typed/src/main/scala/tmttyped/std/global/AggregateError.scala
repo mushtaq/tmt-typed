@@ -12,15 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AggregateError protected ()
   extends StObject
      with tmttyped.std.AggregateError {
-  def this(errors: js.Iterable[js.Any]) = this()
-  def this(errors: js.Iterable[js.Any], message: java.lang.String) = this()
+  /* standard es2021.promise */
+  def this(errors: js.Iterable[Any]) = this()
+  def this(errors: js.Iterable[Any], message: java.lang.String) = this()
   
+  /* standard es2021.promise */
   /* CompleteClass */
-  override var errors: js.Array[js.Any] = js.native
+  override var errors: js.Array[Any] = js.native
   
+  /* standard es5 */
   /* CompleteClass */
   override var message: java.lang.String = js.native
   
+  /* standard es5 */
   /* CompleteClass */
   override var name: java.lang.String = js.native
 }

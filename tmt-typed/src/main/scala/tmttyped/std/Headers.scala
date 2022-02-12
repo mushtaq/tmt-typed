@@ -9,39 +9,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Headers extends StObject {
   
+  /* standard DOM */
   def append(name: java.lang.String, value: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   def delete(name: java.lang.String): Unit = js.native
   
-  /**
-    * Returns an iterator allowing to go through all key/value pairs contained in this object.
-    */
+  /** Returns an iterator allowing to go through all key/value pairs contained in this object. */
+  /* standard DOM.Iterable */
   def entries(): IterableIterator[js.Tuple2[java.lang.String, java.lang.String]] = js.native
   
+  /* standard DOM */
   def forEach(
     callbackfn: js.Function3[/* value */ java.lang.String, /* key */ java.lang.String, /* parent */ this.type, Unit]
   ): Unit = js.native
   def forEach(
     callbackfn: js.Function3[/* value */ java.lang.String, /* key */ java.lang.String, /* parent */ this.type, Unit],
-    thisArg: js.Any
+    thisArg: Any
   ): Unit = js.native
   
+  /* standard DOM */
   def get(name: java.lang.String): java.lang.String | Null = js.native
   
+  /* standard DOM */
   def has(name: java.lang.String): scala.Boolean = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[js.Tuple2[java.lang.String, java.lang.String]]] = js.native
   
-  /**
-    * Returns an iterator allowing to go through all keys of the key/value pairs contained in this object.
-    */
+  /** Returns an iterator allowing to go through all keys of the key/value pairs contained in this object. */
+  /* standard DOM.Iterable */
   def keys(): IterableIterator[java.lang.String] = js.native
   
+  /* standard DOM */
   def set(name: java.lang.String, value: java.lang.String): Unit = js.native
   
-  /**
-    * Returns an iterator allowing to go through all values of the key/value pairs contained in this object.
-    */
+  /** Returns an iterator allowing to go through all values of the key/value pairs contained in this object. */
+  /* standard DOM.Iterable */
   def values(): IterableIterator[java.lang.String] = js.native
 }

@@ -22,10 +22,10 @@ object nodePunycodeMod {
     * @since v0.5.1
     */
   @scala.inline
-  def decode(string: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
-    * The `punycode.encode()` method converts a string of Unicode codepoints to a[Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
+    * The `punycode.encode()` method converts a string of Unicode codepoints to a [Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
     *
     * ```js
     * punycode.encode('mañana'); // 'maana-pta'
@@ -34,7 +34,7 @@ object nodePunycodeMod {
     * @since v0.5.1
     */
   @scala.inline
-  def encode(string: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toASCII()` method converts a Unicode string representing an
@@ -51,11 +51,11 @@ object nodePunycodeMod {
     * @since v0.6.1
     */
   @scala.inline
-  def toASCII(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toUnicode()` method converts a string representing a domain name
-    * containing [Punycode](https://tools.ietf.org/html/rfc3492) encoded characters into Unicode. Only the [Punycode](https://tools.ietf.org/html/rfc3492)encoded parts of the domain name are be
+    * containing [Punycode](https://tools.ietf.org/html/rfc3492) encoded characters into Unicode. Only the [Punycode](https://tools.ietf.org/html/rfc3492) encoded parts of the domain name are be
     * converted.
     *
     * ```js
@@ -67,7 +67,7 @@ object nodePunycodeMod {
     * @since v0.6.1
     */
   @scala.inline
-  def toUnicode(domain: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * @deprecated since v7.0.0
@@ -89,5 +89,5 @@ object nodePunycodeMod {
     */
   @JSImport("node:punycode", "version")
   @js.native
-  val version: java.lang.String = js.native
+  val version: String = js.native
 }

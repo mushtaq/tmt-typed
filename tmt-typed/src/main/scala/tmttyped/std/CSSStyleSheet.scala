@@ -11,6 +11,8 @@ trait CSSStyleSheet
   extends StObject
      with StyleSheet {
   
+  /** @deprecated */
+  /* standard DOM */
   def addRule(): Double = js.native
   def addRule(selector: java.lang.String): Double = js.native
   def addRule(selector: java.lang.String, style: java.lang.String): Double = js.native
@@ -20,17 +22,25 @@ trait CSSStyleSheet
   def addRule(selector: Unit, style: java.lang.String, index: Double): Double = js.native
   def addRule(selector: Unit, style: Unit, index: Double): Double = js.native
   
-  val cssRules: org.scalajs.dom.raw.CSSRuleList = js.native
+  /* standard DOM */
+  val cssRules: org.scalajs.dom.CSSRuleList = js.native
   
+  /* standard DOM */
   def deleteRule(index: Double): Unit = js.native
   
+  /* standard DOM */
   def insertRule(rule: java.lang.String): Double = js.native
   def insertRule(rule: java.lang.String, index: Double): Double = js.native
   
-  val ownerRule: org.scalajs.dom.raw.CSSRule | Null = js.native
+  /* standard DOM */
+  val ownerRule: org.scalajs.dom.CSSRule | Null = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   def removeRule(): Unit = js.native
   def removeRule(index: Double): Unit = js.native
   
-  val rules: org.scalajs.dom.raw.CSSRuleList = js.native
+  /** @deprecated */
+  /* standard DOM */
+  val rules: org.scalajs.dom.CSSRuleList = js.native
 }

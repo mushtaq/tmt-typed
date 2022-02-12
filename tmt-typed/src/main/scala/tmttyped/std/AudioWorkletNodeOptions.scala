@@ -9,15 +9,20 @@ trait AudioWorkletNodeOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var numberOfInputs: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var numberOfOutputs: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var outputChannelCount: js.UndefOr[js.Array[Double]] = js.undefined
   
+  /* standard DOM */
   var parameterData: js.UndefOr[Record[java.lang.String, Double]] = js.undefined
   
-  var processorOptions: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var processorOptions: js.UndefOr[Any] = js.undefined
 }
 object AudioWorkletNodeOptions {
   
@@ -58,7 +63,7 @@ object AudioWorkletNodeOptions {
     def setParameterDataUndefined: Self = StObject.set(x, "parameterData", js.undefined)
     
     @scala.inline
-    def setProcessorOptions(value: js.Any): Self = StObject.set(x, "processorOptions", value.asInstanceOf[js.Any])
+    def setProcessorOptions(value: Any): Self = StObject.set(x, "processorOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProcessorOptionsUndefined: Self = StObject.set(x, "processorOptions", js.undefined)

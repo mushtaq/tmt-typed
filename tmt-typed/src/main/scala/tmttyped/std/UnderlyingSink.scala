@@ -7,14 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait UnderlyingSink[W] extends StObject {
   
+  /* standard DOM */
   var abort: js.UndefOr[UnderlyingSinkAbortCallback] = js.undefined
   
+  /* standard DOM */
   var close: js.UndefOr[UnderlyingSinkCloseCallback] = js.undefined
   
+  /* standard DOM */
   var start: js.UndefOr[UnderlyingSinkStartCallback] = js.undefined
   
+  /* standard DOM */
   var `type`: Unit
   
+  /* standard DOM */
   var write: js.UndefOr[UnderlyingSinkWriteCallback[W]] = js.undefined
 }
 object UnderlyingSink {
@@ -30,7 +35,7 @@ object UnderlyingSink {
   implicit class UnderlyingSinkMutableBuilder[Self <: UnderlyingSink[_], W] (val x: Self with UnderlyingSink[W]) extends AnyVal {
     
     @scala.inline
-    def setAbort(value: /* reason */ js.Any => Unit | js.Thenable[Unit]): Self = StObject.set(x, "abort", js.Any.fromFunction1(value))
+    def setAbort(value: /* reason */ js.UndefOr[Any] => Unit | js.Thenable[Unit]): Self = StObject.set(x, "abort", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAbortUndefined: Self = StObject.set(x, "abort", js.undefined)
@@ -42,7 +47,7 @@ object UnderlyingSink {
     def setCloseUndefined: Self = StObject.set(x, "close", js.undefined)
     
     @scala.inline
-    def setStart(value: /* controller */ WritableStreamDefaultController => Unit | js.Thenable[Unit]): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
+    def setStart(value: /* controller */ WritableStreamDefaultController => Any): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
     
     @scala.inline
     def setStartUndefined: Self = StObject.set(x, "start", js.undefined)

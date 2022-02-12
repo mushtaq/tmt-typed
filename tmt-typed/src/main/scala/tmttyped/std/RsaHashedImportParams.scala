@@ -9,6 +9,7 @@ trait RsaHashedImportParams
   extends StObject
      with Algorithm {
   
+  /* standard DOM */
   var hash: HashAlgorithmIdentifier
 }
 object RsaHashedImportParams {

@@ -11,21 +11,30 @@ trait AnalyserNode
   extends StObject
      with AudioNode {
   
+  /* standard DOM */
   var fftSize: Double = js.native
   
+  /* standard DOM */
   val frequencyBinCount: Double = js.native
   
+  /* standard DOM */
   def getByteFrequencyData(array: js.typedarray.Uint8Array): Unit = js.native
   
+  /* standard DOM */
   def getByteTimeDomainData(array: js.typedarray.Uint8Array): Unit = js.native
   
+  /* standard DOM */
   def getFloatFrequencyData(array: js.typedarray.Float32Array): Unit = js.native
   
+  /* standard DOM */
   def getFloatTimeDomainData(array: js.typedarray.Float32Array): Unit = js.native
   
+  /* standard DOM */
   var maxDecibels: Double = js.native
   
+  /* standard DOM */
   var minDecibels: Double = js.native
   
+  /* standard DOM */
   var smoothingTimeConstant: Double = js.native
 }

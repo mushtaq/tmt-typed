@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class VTTCue protected ()
   extends StObject
      with tmttyped.std.VTTCue {
+  /* standard DOM */
   def this(startTime: Double, endTime: Double, text: java.lang.String) = this()
 }

@@ -7,25 +7,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait SVGFilterPrimitiveStandardAttributes extends StObject {
   
-  val height: org.scalajs.dom.raw.SVGAnimatedLength
+  /* standard DOM */
+  val height: org.scalajs.dom.SVGAnimatedLength
   
-  val result: org.scalajs.dom.raw.SVGAnimatedString
+  /* standard DOM */
+  val result: org.scalajs.dom.SVGAnimatedString
   
-  val width: org.scalajs.dom.raw.SVGAnimatedLength
+  /* standard DOM */
+  val width: org.scalajs.dom.SVGAnimatedLength
   
-  val x: org.scalajs.dom.raw.SVGAnimatedLength
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedLength
   
-  val y: org.scalajs.dom.raw.SVGAnimatedLength
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedLength
 }
 object SVGFilterPrimitiveStandardAttributes {
   
   @scala.inline
   def apply(
-    height: org.scalajs.dom.raw.SVGAnimatedLength,
-    result: org.scalajs.dom.raw.SVGAnimatedString,
-    width: org.scalajs.dom.raw.SVGAnimatedLength,
-    x: org.scalajs.dom.raw.SVGAnimatedLength,
-    y: org.scalajs.dom.raw.SVGAnimatedLength
+    height: org.scalajs.dom.SVGAnimatedLength,
+    result: org.scalajs.dom.SVGAnimatedString,
+    width: org.scalajs.dom.SVGAnimatedLength,
+    x: org.scalajs.dom.SVGAnimatedLength,
+    y: org.scalajs.dom.SVGAnimatedLength
   ): SVGFilterPrimitiveStandardAttributes = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGFilterPrimitiveStandardAttributes]
@@ -35,18 +40,18 @@ object SVGFilterPrimitiveStandardAttributes {
   implicit class SVGFilterPrimitiveStandardAttributesMutableBuilder[Self <: SVGFilterPrimitiveStandardAttributes] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setHeight(value: org.scalajs.dom.raw.SVGAnimatedLength): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
+    def setHeight(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResult(value: org.scalajs.dom.raw.SVGAnimatedString): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
+    def setResult(value: org.scalajs.dom.SVGAnimatedString): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWidth(value: org.scalajs.dom.raw.SVGAnimatedLength): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])
+    def setWidth(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setX(value: org.scalajs.dom.raw.SVGAnimatedLength): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
+    def setX(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setY(value: org.scalajs.dom.raw.SVGAnimatedLength): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
+    def setY(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
   }
 }

@@ -7,25 +7,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCDataChannelEventMap extends StObject {
   
-  var bufferedamountlow: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var bufferedamountlow: org.scalajs.dom.Event
   
-  var close: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var close: org.scalajs.dom.Event
   
-  var error: RTCErrorEvent
+  /* standard DOM */
+  var error: org.scalajs.dom.Event
   
-  var message: org.scalajs.dom.raw.MessageEvent
+  /* standard DOM */
+  var message: org.scalajs.dom.MessageEvent
   
-  var open: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var open: org.scalajs.dom.Event
 }
 object RTCDataChannelEventMap {
   
   @scala.inline
   def apply(
-    bufferedamountlow: org.scalajs.dom.raw.Event,
-    close: org.scalajs.dom.raw.Event,
-    error: RTCErrorEvent,
-    message: org.scalajs.dom.raw.MessageEvent,
-    open: org.scalajs.dom.raw.Event
+    bufferedamountlow: org.scalajs.dom.Event,
+    close: org.scalajs.dom.Event,
+    error: org.scalajs.dom.Event,
+    message: org.scalajs.dom.MessageEvent,
+    open: org.scalajs.dom.Event
   ): RTCDataChannelEventMap = {
     val __obj = js.Dynamic.literal(bufferedamountlow = bufferedamountlow.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDataChannelEventMap]
@@ -35,18 +40,18 @@ object RTCDataChannelEventMap {
   implicit class RTCDataChannelEventMapMutableBuilder[Self <: RTCDataChannelEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setBufferedamountlow(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "bufferedamountlow", value.asInstanceOf[js.Any])
+    def setBufferedamountlow(value: org.scalajs.dom.Event): Self = StObject.set(x, "bufferedamountlow", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClose(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "close", value.asInstanceOf[js.Any])
+    def setClose(value: org.scalajs.dom.Event): Self = StObject.set(x, "close", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setError(value: RTCErrorEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMessage(value: org.scalajs.dom.raw.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOpen(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
+    def setOpen(value: org.scalajs.dom.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
   }
 }

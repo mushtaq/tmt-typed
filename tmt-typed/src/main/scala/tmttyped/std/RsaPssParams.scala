@@ -9,6 +9,7 @@ trait RsaPssParams
   extends StObject
      with Algorithm {
   
+  /* standard DOM */
   var saltLength: Double
 }
 object RsaPssParams {

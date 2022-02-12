@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NotificationAction extends StObject {
   
+  /* standard DOM */
   var action: java.lang.String
   
+  /* standard DOM */
   var icon: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var title: java.lang.String
 }
 object NotificationAction {

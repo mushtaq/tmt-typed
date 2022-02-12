@@ -18,12 +18,13 @@ object nodeDiagnosticsChannelMod {
     * lookups at publish time, enabling very fast publish speeds and allowing
     * for heavy use while incurring very minimal cost. Channels are created with {@link channel}, constructing a channel directly
     * with `new Channel(name)` is not supported.
+    * @since v15.1.0, v14.17.0
     */
   @JSImport("node:diagnostics_channel", "Channel")
   @js.native
   class Channel_ protected ()
     extends tmttyped.node.diagnosticsChannelMod.Channel_ {
-    protected def this(name: java.lang.String) = this()
+    /* private */ def this(name: String) = this()
   }
   
   /**
@@ -32,15 +33,16 @@ object nodeDiagnosticsChannelMod {
     * publish time as much as possible.
     *
     * ```js
-    * const diagnostics_channel = require('diagnostics_channel');
+    * import diagnostics_channel from 'diagnostics_channel';
     *
     * const channel = diagnostics_channel.channel('my-channel');
     * ```
+    * @since v15.1.0, v14.17.0
     * @param name The channel name
     * @return The named channel object
     */
   @scala.inline
-  def channel(name: java.lang.String): tmttyped.node.diagnosticsChannelMod.Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.diagnosticsChannelMod.Channel_]
+  def channel(name: String): tmttyped.node.diagnosticsChannelMod.Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.diagnosticsChannelMod.Channel_]
   
   /**
     * Check if there are active subscribers to the named channel. This is helpful if
@@ -50,15 +52,16 @@ object nodeDiagnosticsChannelMod {
     * performance-sensitive code.
     *
     * ```js
-    * const diagnostics_channel = require('diagnostics_channel');
+    * import diagnostics_channel from 'diagnostics_channel';
     *
     * if (diagnostics_channel.hasSubscribers('my-channel')) {
     *   // There are subscribers, prepare and publish message
     * }
     * ```
+    * @since v15.1.0, v14.17.0
     * @param name The channel name
     * @return If there are active subscribers
     */
   @scala.inline
-  def hasSubscribers(name: java.lang.String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  def hasSubscribers(name: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
 }

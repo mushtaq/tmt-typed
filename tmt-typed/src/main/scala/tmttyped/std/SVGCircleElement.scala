@@ -11,9 +11,12 @@ trait SVGCircleElement
   extends StObject
      with SVGGeometryElement {
   
-  val cx: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val cx: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val cy: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val cy: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val r: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val r: org.scalajs.dom.SVGAnimatedLength = js.native
 }

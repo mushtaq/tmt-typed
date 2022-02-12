@@ -17,18 +17,18 @@ object nodeModuleMod extends Shortcut {
   @js.native
   class ^ protected ()
     extends tmttyped.node.moduleMod.^ {
-    def this(id: java.lang.String) = this()
-    def this(id: java.lang.String, parent: Module) = this()
+    def this(id: String) = this()
+    def this(id: String, parent: Module) = this()
   }
   @JSImport("node:module", JSImport.Namespace)
   @js.native
-  val ^ : js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = js.native
+  val ^ : js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]) = js.native
   
   /* static member */
   @JSImport("node:module", "Module")
   @js.native
   def Module: Instantiable2[
-    /* id */ java.lang.String, 
+    /* id */ String, 
     /* parent */ js.UndefOr[tmttyped.node.moduleMod.Module], 
     tmttyped.node.moduleMod.Module
   ] = js.native
@@ -39,20 +39,20 @@ object nodeModuleMod extends Shortcut {
   class ModuleCls protected ()
     extends StObject
        with tmttyped.node.NodeJS.Module {
-    def this(id: java.lang.String) = this()
-    def this(id: java.lang.String, parent: Module) = this()
+    def this(id: String) = this()
+    def this(id: String, parent: Module) = this()
     
     /* CompleteClass */
     override var children: js.Array[tmttyped.node.NodeJS.Module] = js.native
     
     /* CompleteClass */
-    override var exports: js.Any = js.native
+    override var exports: Any = js.native
     
     /* CompleteClass */
-    override var filename: java.lang.String = js.native
+    override var filename: String = js.native
     
     /* CompleteClass */
-    override var id: java.lang.String = js.native
+    override var id: String = js.native
     
     /**
       * `true` if the module is running during the Node.js preload
@@ -69,20 +69,20 @@ object nodeModuleMod extends Shortcut {
       * The directory name of the module. This is usually the same as the path.dirname() of the module.id.
       */
     /* CompleteClass */
-    override var path: java.lang.String = js.native
+    override var path: String = js.native
     
     /* CompleteClass */
-    override var paths: js.Array[java.lang.String] = js.native
+    override var paths: js.Array[String] = js.native
     
     /* CompleteClass */
-    override def require(id: java.lang.String): js.Any = js.native
+    override def require(id: String): Any = js.native
     /* CompleteClass */
     @JSName("require")
     override var require_Original: Require = js.native
   }
   
   @scala.inline
-  def Module_=(x: Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
+  def Module_=(x: Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Module")(x.asInstanceOf[js.Any])
   
   /**
     * @since v13.7.0, v12.17.0
@@ -97,13 +97,13 @@ object nodeModuleMod extends Shortcut {
   /* static member */
   @JSImport("node:module", "builtinModules")
   @js.native
-  def builtinModules: js.Array[java.lang.String] = js.native
+  def builtinModules: js.Array[String] = js.native
   @scala.inline
-  def builtinModules_=(x: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("builtinModules")(x.asInstanceOf[js.Any])
+  def builtinModules_=(x: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("builtinModules")(x.asInstanceOf[js.Any])
   
   /* static member */
   @scala.inline
-  def createRequire(path: java.lang.String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
+  def createRequire(path: String): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   @scala.inline
   def createRequire(path: URL): NodeRequire = ^.asInstanceOf[js.Dynamic].applyDynamic("createRequire")(path.asInstanceOf[js.Any]).asInstanceOf[NodeRequire]
   
@@ -113,9 +113,9 @@ object nodeModuleMod extends Shortcut {
     * @since v13.7.0, v12.17.0
     */
   @scala.inline
-  def findSourceMap(path: java.lang.String): tmttyped.node.moduleMod.SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.moduleMod.SourceMap]
+  def findSourceMap(path: String): tmttyped.node.moduleMod.SourceMap = ^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.moduleMod.SourceMap]
   @scala.inline
-  def findSourceMap(path: java.lang.String, error: js.Error): tmttyped.node.moduleMod.SourceMap = (^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.moduleMod.SourceMap]
+  def findSourceMap(path: String, error: js.Error): tmttyped.node.moduleMod.SourceMap = (^.asInstanceOf[js.Dynamic].applyDynamic("findSourceMap")(path.asInstanceOf[js.Any], error.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.moduleMod.SourceMap]
   
   /* static member */
   @scala.inline
@@ -161,10 +161,10 @@ object nodeModuleMod extends Shortcut {
   
   /* static member */
   @scala.inline
-  def wrap(code: java.lang.String): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[java.lang.String]
+  def wrap(code: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("wrap")(code.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  type _To = js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module])
+  type _To = js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module])
   
   /* This means you don't have to write `^`, but can instead just say `nodeModuleMod.foo` */
-  override def _to: js.Object with (Instantiable2[/* id */ java.lang.String, /* parent */ js.UndefOr[Module], Module]) = ^
+  override def _to: js.Object with (Instantiable2[/* id */ String, /* parent */ js.UndefOr[Module], Module]) = ^
 }

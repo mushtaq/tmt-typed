@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentDetailsBase extends StObject {
   
+  /* standard DOM */
   var displayItems: js.UndefOr[js.Array[PaymentItem]] = js.undefined
   
+  /* standard DOM */
   var modifiers: js.UndefOr[js.Array[PaymentDetailsModifier]] = js.undefined
-  
-  var shippingOptions: js.UndefOr[js.Array[PaymentShippingOption]] = js.undefined
 }
 object PaymentDetailsBase {
   
@@ -41,14 +41,5 @@ object PaymentDetailsBase {
     
     @scala.inline
     def setModifiersVarargs(value: PaymentDetailsModifier*): Self = StObject.set(x, "modifiers", js.Array(value :_*))
-    
-    @scala.inline
-    def setShippingOptions(value: js.Array[PaymentShippingOption]): Self = StObject.set(x, "shippingOptions", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShippingOptionsUndefined: Self = StObject.set(x, "shippingOptions", js.undefined)
-    
-    @scala.inline
-    def setShippingOptionsVarargs(value: PaymentShippingOption*): Self = StObject.set(x, "shippingOptions", js.Array(value :_*))
   }
 }

@@ -7,19 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextDecoderCommon extends StObject {
   
-  /**
-    * Returns encoding's name, lowercased.
-    */
+  /** Returns encoding's name, lowercased. */
+  /* standard DOM */
   val encoding: java.lang.String
   
-  /**
-    * Returns true if error mode is "fatal", otherwise false.
-    */
+  /** Returns true if error mode is "fatal", otherwise false. */
+  /* standard DOM */
   val fatal: scala.Boolean
   
-  /**
-    * Returns the value of ignore BOM.
-    */
+  /** Returns the value of ignore BOM. */
+  /* standard DOM */
   val ignoreBOM: scala.Boolean
 }
 object TextDecoderCommon {

@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class IIRFilterNode protected ()
   extends StObject
      with tmttyped.std.IIRFilterNode {
+  /* standard DOM */
   def this(context: tmttyped.std.BaseAudioContext, options: IIRFilterOptions) = this()
 }

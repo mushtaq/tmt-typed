@@ -11,11 +11,11 @@ trait HTMLTableCellElement
   extends StObject
      with HTMLElement {
   
-  /**
-    * Sets or retrieves abbreviated text for the object.
-    */
+  /** Sets or retrieves abbreviated text for the object. */
+  /* standard DOM */
   var abbr: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -29,79 +29,84 @@ trait HTMLTableCellElement
   
   /**
     * Sets or retrieves how the object is aligned with adjacent text.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var align: java.lang.String = js.native
   
   /**
     * Sets or retrieves a comma-delimited list of conceptual categories associated with the object.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var axis: java.lang.String = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var bgColor: java.lang.String = js.native
   
-  /**
-    * Retrieves the position of the object in the cells collection of a row.
-    */
+  /** Retrieves the position of the object in the cells collection of a row. */
+  /* standard DOM */
   val cellIndex: Double = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var ch: java.lang.String = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var chOff: java.lang.String = js.native
   
-  /**
-    * Sets or retrieves the number columns in the table that the object should span.
-    */
+  /** Sets or retrieves the number columns in the table that the object should span. */
+  /* standard DOM */
   var colSpan: Double = js.native
   
-  /**
-    * Sets or retrieves a list of header cells that provide information for the object.
-    */
+  /** Sets or retrieves a list of header cells that provide information for the object. */
+  /* standard DOM */
   var headers: java.lang.String = js.native
   
   /**
     * Sets or retrieves the height of the object.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var height: java.lang.String = js.native
   
   /**
     * Sets or retrieves whether the browser automatically performs wordwrap.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var noWrap: scala.Boolean = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  /**
-    * Sets or retrieves how many rows in a table the cell should span.
-    */
+  /** Sets or retrieves how many rows in a table the cell should span. */
+  /* standard DOM */
   var rowSpan: Double = js.native
   
-  /**
-    * Sets or retrieves the group of cells in a table to which the object's information applies.
-    */
+  /** Sets or retrieves the group of cells in a table to which the object's information applies. */
+  /* standard DOM */
   var scope: java.lang.String = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var vAlign: java.lang.String = js.native
   
   /**
     * Sets or retrieves the width of the object.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var width: java.lang.String = js.native
 }

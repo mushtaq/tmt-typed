@@ -7,14 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait VisualViewportEventMap extends StObject {
   
-  var resize: org.scalajs.dom.raw.UIEvent
+  /* standard DOM */
+  var resize: org.scalajs.dom.Event
   
-  var scroll: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var scroll: org.scalajs.dom.Event
 }
 object VisualViewportEventMap {
   
   @scala.inline
-  def apply(resize: org.scalajs.dom.raw.UIEvent, scroll: org.scalajs.dom.raw.Event): VisualViewportEventMap = {
+  def apply(resize: org.scalajs.dom.Event, scroll: org.scalajs.dom.Event): VisualViewportEventMap = {
     val __obj = js.Dynamic.literal(resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any])
     __obj.asInstanceOf[VisualViewportEventMap]
   }
@@ -23,9 +25,9 @@ object VisualViewportEventMap {
   implicit class VisualViewportEventMapMutableBuilder[Self <: VisualViewportEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setResize(value: org.scalajs.dom.raw.UIEvent): Self = StObject.set(x, "resize", value.asInstanceOf[js.Any])
+    def setResize(value: org.scalajs.dom.Event): Self = StObject.set(x, "resize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScroll(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "scroll", value.asInstanceOf[js.Any])
+    def setScroll(value: org.scalajs.dom.Event): Self = StObject.set(x, "scroll", value.asInstanceOf[js.Any])
   }
 }

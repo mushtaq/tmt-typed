@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AudioScheduledSourceNodeEventMap extends StObject {
   
-  var ended: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var ended: org.scalajs.dom.Event
 }
 object AudioScheduledSourceNodeEventMap {
   
   @scala.inline
-  def apply(ended: org.scalajs.dom.raw.Event): AudioScheduledSourceNodeEventMap = {
+  def apply(ended: org.scalajs.dom.Event): AudioScheduledSourceNodeEventMap = {
     val __obj = js.Dynamic.literal(ended = ended.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioScheduledSourceNodeEventMap]
   }
@@ -21,6 +22,6 @@ object AudioScheduledSourceNodeEventMap {
   implicit class AudioScheduledSourceNodeEventMapMutableBuilder[Self <: AudioScheduledSourceNodeEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setEnded(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "ended", value.asInstanceOf[js.Any])
+    def setEnded(value: org.scalajs.dom.Event): Self = StObject.set(x, "ended", value.asInstanceOf[js.Any])
   }
 }

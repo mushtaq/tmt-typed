@@ -12,6 +12,7 @@ trait SVGAElement
      with SVGGraphicsElement
      with SVGURIReference {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,16 +24,24 @@ trait SVGAElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
+  var rel: java.lang.String = js.native
+  
+  /* standard DOM */
+  val relList: org.scalajs.dom.DOMTokenList = js.native
+  
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val target: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val target: org.scalajs.dom.SVGAnimatedString = js.native
 }

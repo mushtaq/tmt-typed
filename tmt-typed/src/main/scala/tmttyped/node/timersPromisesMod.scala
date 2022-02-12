@@ -23,16 +23,6 @@ object timersPromisesMod {
     *
     * console.log(res);  // Prints 'result'
     * ```
-    *
-    * ```js
-    * const {
-    *   setImmediate,
-    * } = require('timers/promises');
-    *
-    * setImmediate('result').then((res) => {
-    *   console.log(res);  // Prints 'result'
-    * });
-    * ```
     * @since v15.0.0
     * @param value A value with which the promise is fulfilled.
     */
@@ -61,23 +51,6 @@ object timersPromisesMod {
     *     break;
     * }
     * console.log(Date.now());
-    * ```
-    *
-    * ```js
-    * const {
-    *   setInterval,
-    * } = require('timers/promises');
-    * const interval = 100;
-    *
-    * (async function() {
-    *   for await (const startTime of setInterval(interval, Date.now())) {
-    *     const now = Date.now();
-    *     console.log(now);
-    *     if ((now - startTime) > 1000)
-    *       break;
-    *   }
-    *   console.log(Date.now());
-    * })();
     * ```
     * @since v15.9.0
     */
@@ -108,18 +81,8 @@ object timersPromisesMod {
     *
     * console.log(res);  // Prints 'result'
     * ```
-    *
-    * ```js
-    * const {
-    *   setTimeout,
-    * } = require('timers/promises');
-    *
-    * setTimeout(100, 'result').then((res) => {
-    *   console.log(res);  // Prints 'result'
-    * });
-    * ```
     * @since v15.0.0
-    * @param delay The number of milliseconds to wait before fulfilling the promise.
+    * @param [delay=1] The number of milliseconds to wait before fulfilling the promise.
     * @param value A value with which the promise is fulfilled.
     */
   @scala.inline

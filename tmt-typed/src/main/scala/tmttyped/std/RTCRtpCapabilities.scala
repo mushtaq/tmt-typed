@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCRtpCapabilities extends StObject {
   
+  /* standard DOM */
   var codecs: js.Array[RTCRtpCodecCapability]
   
+  /* standard DOM */
   var headerExtensions: js.Array[RTCRtpHeaderExtensionCapability]
 }
 object RTCRtpCapabilities {

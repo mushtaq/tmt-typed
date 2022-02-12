@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.mediastream.MediaStreamTrackEventInit
+import org.scalajs.dom.MediaStreamTrackEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class MediaStreamTrackEvent protected ()
   extends StObject
      with tmttyped.std.MediaStreamTrackEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String, eventInitDict: MediaStreamTrackEventInit) = this()
 }

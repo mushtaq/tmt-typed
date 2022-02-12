@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EventListenerObject extends StObject {
   
-  def handleEvent(evt: org.scalajs.dom.raw.Event): Unit
+  /* standard DOM */
+  def handleEvent(`object`: org.scalajs.dom.Event): Unit
 }
 object EventListenerObject {
   
   @scala.inline
-  def apply(handleEvent: org.scalajs.dom.raw.Event => Unit): EventListenerObject = {
+  def apply(handleEvent: org.scalajs.dom.Event => Unit): EventListenerObject = {
     val __obj = js.Dynamic.literal(handleEvent = js.Any.fromFunction1(handleEvent))
     __obj.asInstanceOf[EventListenerObject]
   }
@@ -21,6 +22,6 @@ object EventListenerObject {
   implicit class EventListenerObjectMutableBuilder[Self <: EventListenerObject] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setHandleEvent(value: org.scalajs.dom.raw.Event => Unit): Self = StObject.set(x, "handleEvent", js.Any.fromFunction1(value))
+    def setHandleEvent(value: org.scalajs.dom.Event => Unit): Self = StObject.set(x, "handleEvent", js.Any.fromFunction1(value))
   }
 }

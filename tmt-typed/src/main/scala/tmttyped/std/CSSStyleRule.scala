@@ -10,9 +10,11 @@ trait CSSStyleRule
   extends StObject
      with CSSRule {
   
+  /* standard DOM */
   var selectorText: java.lang.String
   
-  val style: org.scalajs.dom.raw.CSSStyleDeclaration
+  /* standard DOM */
+  val style: org.scalajs.dom.CSSStyleDeclaration
 }
 object CSSStyleRule {
   
@@ -30,7 +32,7 @@ object CSSStyleRule {
     SUPPORTS_RULE: Double,
     cssText: java.lang.String,
     selectorText: java.lang.String,
-    style: org.scalajs.dom.raw.CSSStyleDeclaration,
+    style: org.scalajs.dom.CSSStyleDeclaration,
     `type`: Double
   ): CSSStyleRule = {
     val __obj = js.Dynamic.literal(CHARSET_RULE = CHARSET_RULE.asInstanceOf[js.Any], FONT_FACE_RULE = FONT_FACE_RULE.asInstanceOf[js.Any], IMPORT_RULE = IMPORT_RULE.asInstanceOf[js.Any], KEYFRAMES_RULE = KEYFRAMES_RULE.asInstanceOf[js.Any], KEYFRAME_RULE = KEYFRAME_RULE.asInstanceOf[js.Any], MEDIA_RULE = MEDIA_RULE.asInstanceOf[js.Any], NAMESPACE_RULE = NAMESPACE_RULE.asInstanceOf[js.Any], PAGE_RULE = PAGE_RULE.asInstanceOf[js.Any], STYLE_RULE = STYLE_RULE.asInstanceOf[js.Any], SUPPORTS_RULE = SUPPORTS_RULE.asInstanceOf[js.Any], cssText = cssText.asInstanceOf[js.Any], selectorText = selectorText.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], parentRule = null, parentStyleSheet = null)
@@ -45,6 +47,6 @@ object CSSStyleRule {
     def setSelectorText(value: java.lang.String): Self = StObject.set(x, "selectorText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStyle(value: org.scalajs.dom.raw.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

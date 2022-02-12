@@ -10,7 +10,7 @@ trait SpawnSyncReturns[T] extends StObject {
   
   var error: js.UndefOr[js.Error] = js.undefined
   
-  var output: js.Array[String]
+  var output: js.Array[T | Null]
   
   var pid: Double
   
@@ -25,7 +25,7 @@ trait SpawnSyncReturns[T] extends StObject {
 object SpawnSyncReturns {
   
   @scala.inline
-  def apply[T](output: js.Array[String], pid: Double, stderr: T, stdout: T): SpawnSyncReturns[T] = {
+  def apply[T](output: js.Array[T | Null], pid: Double, stderr: T, stdout: T): SpawnSyncReturns[T] = {
     val __obj = js.Dynamic.literal(output = output.asInstanceOf[js.Any], pid = pid.asInstanceOf[js.Any], stderr = stderr.asInstanceOf[js.Any], stdout = stdout.asInstanceOf[js.Any], signal = null, status = null)
     __obj.asInstanceOf[SpawnSyncReturns[T]]
   }
@@ -40,10 +40,10 @@ object SpawnSyncReturns {
     def setErrorUndefined: Self = StObject.set(x, "error", js.undefined)
     
     @scala.inline
-    def setOutput(value: js.Array[String]): Self = StObject.set(x, "output", value.asInstanceOf[js.Any])
+    def setOutput(value: js.Array[T | Null]): Self = StObject.set(x, "output", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputVarargs(value: String*): Self = StObject.set(x, "output", js.Array(value :_*))
+    def setOutputVarargs(value: (T | Null)*): Self = StObject.set(x, "output", js.Array(value :_*))
     
     @scala.inline
     def setPid(value: Double): Self = StObject.set(x, "pid", value.asInstanceOf[js.Any])

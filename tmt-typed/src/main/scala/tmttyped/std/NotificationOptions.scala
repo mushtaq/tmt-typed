@@ -7,32 +7,46 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NotificationOptions extends StObject {
   
+  /* standard DOM */
   var actions: js.UndefOr[js.Array[NotificationAction]] = js.undefined
   
+  /* standard DOM */
   var badge: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var body: js.UndefOr[java.lang.String] = js.undefined
   
-  var data: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var data: js.UndefOr[Any] = js.undefined
   
+  /* standard DOM */
   var dir: js.UndefOr[NotificationDirection] = js.undefined
   
+  /* standard DOM */
   var icon: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var image: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var lang: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var renotify: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var requireInteraction: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var silent: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var tag: js.UndefOr[java.lang.String] = js.undefined
   
-  var timestamp: js.UndefOr[Double] = js.undefined
+  /* standard DOM */
+  var timestamp: js.UndefOr[DOMTimeStamp] = js.undefined
   
+  /* standard DOM */
   var vibrate: js.UndefOr[VibratePattern] = js.undefined
 }
 object NotificationOptions {
@@ -68,7 +82,7 @@ object NotificationOptions {
     def setBodyUndefined: Self = StObject.set(x, "body", js.undefined)
     
     @scala.inline
-    def setData(value: js.Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
+    def setData(value: Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
@@ -122,7 +136,7 @@ object NotificationOptions {
     def setTagUndefined: Self = StObject.set(x, "tag", js.undefined)
     
     @scala.inline
-    def setTimestamp(value: Double): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
+    def setTimestamp(value: DOMTimeStamp): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTimestampUndefined: Self = StObject.set(x, "timestamp", js.undefined)

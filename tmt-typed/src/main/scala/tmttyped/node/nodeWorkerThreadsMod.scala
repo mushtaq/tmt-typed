@@ -52,7 +52,7 @@ object nodeWorkerThreadsMod {
   @js.native
   class BroadcastChannel protected ()
     extends tmttyped.node.workerThreadsMod.BroadcastChannel {
-    def this(name: java.lang.String) = this()
+    def this(name: String) = this()
   }
   
   /**
@@ -80,7 +80,7 @@ object nodeWorkerThreadsMod {
     * asynchronous, two-way communications channel. It can be used to transfer
     * structured data, memory regions and other `MessagePort`s between different `Worker` s.
     *
-    * This implementation matches [browser `MessagePort`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort)s.
+    * This implementation matches [browser `MessagePort`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort) s.
     * @since v10.5.0
     */
   @JSImport("node:worker_threads", "MessagePort")
@@ -162,9 +162,9 @@ object nodeWorkerThreadsMod {
       *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
       *                  or a WHATWG URL object using file: protocol. If options.eval is true, this is a string containing JavaScript code rather than a path.
       */
-    def this(filename: java.lang.String) = this()
+    def this(filename: String) = this()
     def this(filename: URL) = this()
-    def this(filename: java.lang.String, options: WorkerOptions) = this()
+    def this(filename: String, options: WorkerOptions) = this()
     def this(filename: URL, options: WorkerOptions) = this()
   }
   
@@ -189,7 +189,7 @@ object nodeWorkerThreadsMod {
     *   console.log(getEnvironmentData('Hello'));  // Prints 'World!'.
     * }
     * ```
-    * @since v15.12.0
+    * @since v15.12.0, v14.18.0
     * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     */
@@ -241,11 +241,11 @@ object nodeWorkerThreadsMod {
     * takes its place.
     *
     * The returned `MessagePort` is an object in the target context and
-    * inherits from its global `Object` class. Objects passed to the[`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) listener are also created in the
+    * inherits from its global `Object` class. Objects passed to the [`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) listener are also created in the
     * target context
     * and inherit from its global `Object` class.
     *
-    * However, the created `MessagePort` no longer inherits from[`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and only
+    * However, the created `MessagePort` no longer inherits from [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and only
     * [`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) can be used to receive
     * events using it.
     * @since v11.13.0
@@ -253,7 +253,7 @@ object nodeWorkerThreadsMod {
     * @param contextifiedSandbox A `contextified` object as returned by the `vm.createContext()` method.
     */
   @scala.inline
-  def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, context: Context): tmttyped.node.workerThreadsMod.MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.workerThreadsMod.MessagePort]
+  def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, contextifiedSandbox: Context): tmttyped.node.workerThreadsMod.MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.workerThreadsMod.MessagePort]
   
   @JSImport("node:worker_threads", "parentPort")
   @js.native
@@ -286,7 +286,7 @@ object nodeWorkerThreadsMod {
   
   /**
     * The `worker.setEnvironmentData()` API sets the content of`worker.getEnvironmentData()` in the current thread and all new `Worker`instances spawned from the current context.
-    * @since v15.12.0
+    * @since v15.12.0, v14.18.0
     * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     * @param value Any arbitrary, cloneable JavaScript value that will be cloned and passed automatically to all new `Worker` instances. If `value` is passed as `undefined`, any previously set value
@@ -301,5 +301,5 @@ object nodeWorkerThreadsMod {
   
   @JSImport("node:worker_threads", "workerData")
   @js.native
-  val workerData: js.Any = js.native
+  val workerData: Any = js.native
 }

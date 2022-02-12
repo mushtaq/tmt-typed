@@ -9,6 +9,7 @@ trait ChannelSplitterOptions
   extends StObject
      with AudioNodeOptions {
   
+  /* standard DOM */
   var numberOfOutputs: js.UndefOr[Double] = js.undefined
 }
 object ChannelSplitterOptions {

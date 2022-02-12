@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CanvasImageSmoothing extends StObject {
   
+  /* standard DOM */
   var imageSmoothingEnabled: scala.Boolean
   
+  /* standard DOM */
   var imageSmoothingQuality: ImageSmoothingQuality
 }
 object CanvasImageSmoothing {

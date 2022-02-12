@@ -9,21 +9,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReadableStream[R] extends StObject {
   
+  /* standard DOM */
   def cancel(): js.Promise[Unit] = js.native
-  def cancel(reason: js.Any): js.Promise[Unit] = js.native
+  def cancel(reason: Any): js.Promise[Unit] = js.native
   
+  /* standard DOM */
   def getReader(): ReadableStreamDefaultReader[R] = js.native
   
+  /* standard DOM */
   val locked: scala.Boolean = js.native
   
-  def pipeThrough[T](transform: ReadableWritablePair[T, R]): org.scalajs.dom.experimental.ReadableStream[T] = js.native
-  def pipeThrough[T](transform: ReadableWritablePair[T, R], options: StreamPipeOptions): org.scalajs.dom.experimental.ReadableStream[T] = js.native
+  /* standard DOM */
+  def pipeThrough[T](transform: ReadableWritablePair[T, R]): org.scalajs.dom.ReadableStream[T] = js.native
+  def pipeThrough[T](transform: ReadableWritablePair[T, R], options: StreamPipeOptions): org.scalajs.dom.ReadableStream[T] = js.native
   
-  def pipeTo(dest: WritableStream[R]): js.Promise[Unit] = js.native
-  def pipeTo(dest: WritableStream[R], options: StreamPipeOptions): js.Promise[Unit] = js.native
+  /* standard DOM */
+  def pipeTo(destination: WritableStream[R]): js.Promise[Unit] = js.native
+  def pipeTo(destination: WritableStream[R], options: StreamPipeOptions): js.Promise[Unit] = js.native
   
-  def tee(): js.Tuple2[
-    org.scalajs.dom.experimental.ReadableStream[R], 
-    org.scalajs.dom.experimental.ReadableStream[R]
-  ] = js.native
+  /* standard DOM */
+  def tee(): js.Tuple2[org.scalajs.dom.ReadableStream[R], org.scalajs.dom.ReadableStream[R]] = js.native
 }

@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.RTCRtpTransceiverDirection
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,6 +9,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("RTCRtpTransceiver")
 @js.native
+/* standard DOM */
 class RTCRtpTransceiver ()
   extends StObject
-     with tmttyped.std.RTCRtpTransceiver
+     with tmttyped.std.RTCRtpTransceiver {
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val currentDirection: RTCRtpTransceiverDirection | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var direction: RTCRtpTransceiverDirection = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val mid: java.lang.String | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val receiver: tmttyped.std.RTCRtpReceiver = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override val sender: tmttyped.std.RTCRtpSender = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override def stop(): Unit = js.native
+}

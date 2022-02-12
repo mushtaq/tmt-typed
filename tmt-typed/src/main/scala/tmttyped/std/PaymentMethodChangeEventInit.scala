@@ -9,8 +9,10 @@ trait PaymentMethodChangeEventInit
   extends StObject
      with EventInit {
   
-  var methodDetails: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var methodDetails: js.UndefOr[Any] = js.undefined
   
+  /* standard DOM */
   var methodName: js.UndefOr[java.lang.String] = js.undefined
 }
 object PaymentMethodChangeEventInit {
@@ -25,7 +27,7 @@ object PaymentMethodChangeEventInit {
   implicit class PaymentMethodChangeEventInitMutableBuilder[Self <: PaymentMethodChangeEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setMethodDetails(value: js.Any): Self = StObject.set(x, "methodDetails", value.asInstanceOf[js.Any])
+    def setMethodDetails(value: Any): Self = StObject.set(x, "methodDetails", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMethodDetailsUndefined: Self = StObject.set(x, "methodDetails", js.undefined)

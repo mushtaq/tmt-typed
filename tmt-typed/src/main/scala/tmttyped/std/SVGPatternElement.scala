@@ -13,6 +13,7 @@ trait SVGPatternElement
      with SVGFitToViewBox
      with SVGURIReference {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -24,28 +25,36 @@ trait SVGPatternElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val height: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val height: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val patternContentUnits: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val patternContentUnits: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
-  val patternTransform: org.scalajs.dom.raw.SVGAnimatedTransformList = js.native
+  /* standard DOM */
+  val patternTransform: org.scalajs.dom.SVGAnimatedTransformList = js.native
   
-  val patternUnits: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val patternUnits: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val width: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val x: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val y: org.scalajs.dom.SVGAnimatedLength = js.native
 }

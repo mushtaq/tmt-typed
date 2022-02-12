@@ -12,10 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PerformanceObserver protected ()
   extends StObject
      with tmttyped.std.PerformanceObserver {
+  /* standard DOM */
   def this(callback: PerformanceObserverCallback) = this()
 }
 object PerformanceObserver {
   
+  /* standard DOM */
   @JSGlobal("PerformanceObserver.supportedEntryTypes")
   @js.native
   val supportedEntryTypes: js.Array[java.lang.String] = js.native

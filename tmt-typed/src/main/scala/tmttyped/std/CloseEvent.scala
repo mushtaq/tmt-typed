@@ -11,18 +11,15 @@ trait CloseEvent
   extends StObject
      with Event {
   
-  /**
-    * Returns the WebSocket connection close code provided by the server.
-    */
+  /** Returns the WebSocket connection close code provided by the server. */
+  /* standard DOM */
   val code: Double = js.native
   
-  /**
-    * Returns the WebSocket connection close reason provided by the server.
-    */
+  /** Returns the WebSocket connection close reason provided by the server. */
+  /* standard DOM */
   val reason: java.lang.String = js.native
   
-  /**
-    * Returns true if the connection closed cleanly; false otherwise.
-    */
+  /** Returns true if the connection closed cleanly; false otherwise. */
+  /* standard DOM */
   val wasClean: scala.Boolean = js.native
 }

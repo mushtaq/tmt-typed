@@ -9,6 +9,7 @@ trait RTCDTMFToneChangeEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var tone: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCDTMFToneChangeEventInit {

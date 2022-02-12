@@ -10,26 +10,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SVGNumberList
   extends StObject
-     with /* index */ NumberDictionary[org.scalajs.dom.raw.SVGNumber] {
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.SVGNumber] {
   
-  def appendItem(newItem: org.scalajs.dom.raw.SVGNumber): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def appendItem(newItem: org.scalajs.dom.SVGNumber): org.scalajs.dom.SVGNumber = js.native
   
+  /* standard DOM */
   def clear(): Unit = js.native
   
-  def getItem(index: Double): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def getItem(index: Double): org.scalajs.dom.SVGNumber = js.native
   
-  def initialize(newItem: org.scalajs.dom.raw.SVGNumber): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def initialize(newItem: org.scalajs.dom.SVGNumber): org.scalajs.dom.SVGNumber = js.native
   
-  def insertItemBefore(newItem: org.scalajs.dom.raw.SVGNumber, index: Double): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def insertItemBefore(newItem: org.scalajs.dom.SVGNumber, index: Double): org.scalajs.dom.SVGNumber = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.SVGNumber]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.SVGNumber]] = js.native
   
+  /* standard DOM */
   val length: Double = js.native
   
+  /* standard DOM */
   val numberOfItems: Double = js.native
   
-  def removeItem(index: Double): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def removeItem(index: Double): org.scalajs.dom.SVGNumber = js.native
   
-  def replaceItem(newItem: org.scalajs.dom.raw.SVGNumber, index: Double): org.scalajs.dom.raw.SVGNumber = js.native
+  /* standard DOM */
+  def replaceItem(newItem: org.scalajs.dom.SVGNumber, index: Double): org.scalajs.dom.SVGNumber = js.native
 }

@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PermissionDescriptor extends StObject {
   
+  /* standard DOM */
   var name: PermissionName
 }
 object PermissionDescriptor {

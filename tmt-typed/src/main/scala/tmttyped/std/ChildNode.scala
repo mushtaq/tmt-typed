@@ -15,18 +15,19 @@ trait ChildNode
     *
     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
     */
-  def after(nodes: (org.scalajs.dom.raw.Node | java.lang.String)*): Unit = js.native
+  /* standard DOM */
+  def after(nodes: (org.scalajs.dom.Node | java.lang.String)*): Unit = js.native
   
   /**
     * Inserts nodes just before node, while replacing strings in nodes with equivalent Text nodes.
     *
     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
     */
-  def before(nodes: (org.scalajs.dom.raw.Node | java.lang.String)*): Unit = js.native
+  /* standard DOM */
+  def before(nodes: (org.scalajs.dom.Node | java.lang.String)*): Unit = js.native
   
-  /**
-    * Removes node.
-    */
+  /** Removes node. */
+  /* standard DOM */
   def remove(): Unit = js.native
   
   /**
@@ -34,5 +35,6 @@ trait ChildNode
     *
     * Throws a "HierarchyRequestError" DOMException if the constraints of the node tree are violated.
     */
-  def replaceWith(nodes: (org.scalajs.dom.raw.Node | java.lang.String)*): Unit = js.native
+  /* standard DOM */
+  def replaceWith(nodes: (org.scalajs.dom.Node | java.lang.String)*): Unit = js.native
 }

@@ -11,6 +11,7 @@ trait HTMLButtonElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,91 +23,83 @@ trait HTMLButtonElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Returns whether a form will validate when it is submitted, without having to submit it.
-    */
+  /** Returns whether a form will validate when it is submitted, without having to submit it. */
+  /* standard DOM */
   def checkValidity(): scala.Boolean = js.native
   
+  /* standard DOM */
   var disabled: scala.Boolean = js.native
   
-  /**
-    * Retrieves a reference to the form that the object is embedded in.
-    */
-  val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
+  /** Retrieves a reference to the form that the object is embedded in. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
-  /**
-    * Overrides the action attribute (where the data on a form is sent) on the parent form element.
-    */
+  /** Overrides the action attribute (where the data on a form is sent) on the parent form element. */
+  /* standard DOM */
   var formAction: java.lang.String = js.native
   
-  /**
-    * Used to override the encoding (formEnctype attribute) specified on the form element.
-    */
+  /** Used to override the encoding (formEnctype attribute) specified on the form element. */
+  /* standard DOM */
   var formEnctype: java.lang.String = js.native
   
-  /**
-    * Overrides the submit method attribute previously specified on a form element.
-    */
+  /** Overrides the submit method attribute previously specified on a form element. */
+  /* standard DOM */
   var formMethod: java.lang.String = js.native
   
-  /**
-    * Overrides any validation or required attributes on a form or form elements to allow it to be submitted without validation. This can be used to create a "save draft"-type submit option.
-    */
+  /** Overrides any validation or required attributes on a form or form elements to allow it to be submitted without validation. This can be used to create a "save draft"-type submit option. */
+  /* standard DOM */
   var formNoValidate: scala.Boolean = js.native
   
-  /**
-    * Overrides the target attribute on a form element.
-    */
+  /** Overrides the target attribute on a form element. */
+  /* standard DOM */
   var formTarget: java.lang.String = js.native
   
-  val labels: org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLLabelElement with org.scalajs.dom.raw.Node] = js.native
+  /* standard DOM */
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
   
-  /**
-    * Sets or retrieves the name of the object.
-    */
+  /** Sets or retrieves the name of the object. */
+  /* standard DOM */
   var name: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   def reportValidity(): scala.Boolean = js.native
   
   /**
     * Sets a custom error message that is displayed when a form is submitted.
     * @param error Sets a custom error message that is displayed when a form is submitted.
     */
+  /* standard DOM */
   def setCustomValidity(error: java.lang.String): Unit = js.native
   
-  /**
-    * Gets the classification and default behavior of the button.
-    */
+  /** Gets the classification and default behavior of the button. */
+  /* standard DOM */
   var `type`: java.lang.String = js.native
   
-  /**
-    * Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting.
-    */
+  /** Returns the error message that would be displayed if the user submits the form, or an empty string if no error message. It also triggers the standard error message, such as "this is a required field". The result is that the user sees validation messages without actually submitting. */
+  /* standard DOM */
   val validationMessage: java.lang.String = js.native
   
-  /**
-    * Returns a  ValidityState object that represents the validity states of an element.
-    */
-  val validity: org.scalajs.dom.raw.ValidityState = js.native
+  /** Returns a  ValidityState object that represents the validity states of an element. */
+  /* standard DOM */
+  val validity: org.scalajs.dom.ValidityState = js.native
   
-  /**
-    * Sets or retrieves the default or selected value of the control.
-    */
+  /** Sets or retrieves the default or selected value of the control. */
+  /* standard DOM */
   var value: java.lang.String = js.native
   
-  /**
-    * Returns whether an element will successfully validate based on forms validation rules and constraints.
-    */
+  /** Returns whether an element will successfully validate based on forms validation rules and constraints. */
+  /* standard DOM */
   val willValidate: scala.Boolean = js.native
 }

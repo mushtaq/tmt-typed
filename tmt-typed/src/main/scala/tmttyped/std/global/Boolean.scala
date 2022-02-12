@@ -9,10 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Boolean")
 @js.native
+/* standard es5 */
 class Boolean ()
   extends StObject
      with tmttyped.std.Boolean {
-  def this(value: js.Any) = this()
+  def this(value: Any) = this()
 }
 object Boolean {
   

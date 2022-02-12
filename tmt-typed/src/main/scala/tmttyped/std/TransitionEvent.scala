@@ -11,9 +11,12 @@ trait TransitionEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val elapsedTime: Double = js.native
   
+  /* standard DOM */
   val propertyName: java.lang.String = js.native
   
+  /* standard DOM */
   val pseudoElement: java.lang.String = js.native
 }

@@ -22,8 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Http2ServerResponse protected () extends StObject {
   def this(stream: ServerHttp2Stream) = this()
   
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -50,12 +50,12 @@ class Http2ServerResponse protected () extends StObject {
   /**
     * See `response.socket`.
     * @since v8.4.0
-    * @deprecated Since v13.0.0 - Deprecated. Use `socket`.
+    * @deprecated Since v13.0.0 - Use `socket`.
     */
   val connection: Socket | TLSSocket = js.native
   
   /**
-    * Call {@link tream.pushStream} with the given headers, and wrap the
+    * Call `http2stream.pushStream()` with the given headers, and wrap the
     * given `Http2Stream` on a newly created `Http2ServerResponse` as the callback
     * parameter if successful. When `Http2ServerRequest` is closed, the callback is
     * called with an error `ERR_HTTP2_INVALID_STREAM`.
@@ -69,8 +69,8 @@ class Http2ServerResponse protected () extends StObject {
     callback: js.Function2[/* err */ js.Error | Null, /* res */ this.type, Unit]
   ): Unit = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -95,22 +95,22 @@ class Http2ServerResponse protected () extends StObject {
     * is finished.
     * @since v8.4.0
     */
-  def end(): Unit = js.native
-  def end(callback: js.Function0[Unit]): Unit = js.native
-  def end(data: String): Unit = js.native
-  def end(data: String, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: String, encoding: BufferEncoding): Unit = js.native
-  def end(data: String, encoding: BufferEncoding, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: js.typedarray.Uint8Array): Unit = js.native
-  def end(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): Unit = js.native
-  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding): Unit = js.native
-  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding, callback: js.Function0[Unit]): Unit = js.native
+  def end(): this.type = js.native
+  def end(callback: js.Function0[Unit]): this.type = js.native
+  def end(data: String): this.type = js.native
+  def end(data: String, callback: js.Function0[Unit]): this.type = js.native
+  def end(data: String, encoding: BufferEncoding): this.type = js.native
+  def end(data: String, encoding: BufferEncoding, callback: js.Function0[Unit]): this.type = js.native
+  def end(data: js.typedarray.Uint8Array): this.type = js.native
+  def end(data: js.typedarray.Uint8Array, callback: js.Function0[Unit]): this.type = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding): this.type = js.native
+  def end(data: js.typedarray.Uint8Array, encoding: BufferEncoding, callback: js.Function0[Unit]): this.type = js.native
   
   /**
     * Boolean value that indicates whether the response has completed. Starts
     * as `false`. After `response.end()` executes, the value will be `true`.
     * @since v8.4.0
-    * @deprecated Since v13.4.0,v12.16.0 - Deprecated. Use `writableEnded`.
+    * @deprecated Since v13.4.0,v12.16.0 - Use `writableEnded`.
     */
   val finished: Boolean = js.native
   
@@ -179,8 +179,8 @@ class Http2ServerResponse protected () extends StObject {
     */
   val headersSent: Boolean = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -194,8 +194,8 @@ class Http2ServerResponse protected () extends StObject {
   @JSName("on")
   def on_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -209,8 +209,8 @@ class Http2ServerResponse protected () extends StObject {
   @JSName("once")
   def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -224,8 +224,8 @@ class Http2ServerResponse protected () extends StObject {
   @JSName("prependListener")
   def prependListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+  def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -249,6 +249,20 @@ class Http2ServerResponse protected () extends StObject {
     */
   def removeHeader(name: String): Unit = js.native
   
+  /**
+    * A reference to the original HTTP2 request object.
+    * @since v15.7.0
+    */
+  val req: Http2ServerRequest = js.native
+  
+  /**
+    * When true, the Date header will be automatically generated and sent in
+    * the response if it is not already present in the headers. Defaults to true.
+    *
+    * This should only be disabled for testing; HTTP requires the Date header
+    * in responses.
+    * @since v8.4.0
+    */
   var sendDate: Boolean = js.native
   
   def setHeader(name: String, value: String): Unit = js.native
@@ -301,12 +315,60 @@ class Http2ServerResponse protected () extends StObject {
   def setTimeout(msecs: Double): Unit = js.native
   def setTimeout(msecs: Double, callback: js.Function0[Unit]): Unit = js.native
   
+  /**
+    * Returns a `Proxy` object that acts as a `net.Socket` (or `tls.TLSSocket`) but
+    * applies getters, setters, and methods based on HTTP/2 logic.
+    *
+    * `destroyed`, `readable`, and `writable` properties will be retrieved from and
+    * set on `response.stream`.
+    *
+    * `destroy`, `emit`, `end`, `on` and `once` methods will be called on`response.stream`.
+    *
+    * `setTimeout` method will be called on `response.stream.session`.
+    *
+    * `pause`, `read`, `resume`, and `write` will throw an error with code`ERR_HTTP2_NO_SOCKET_MANIPULATION`. See `Http2Session and Sockets` for
+    * more information.
+    *
+    * All other interactions will be routed directly to the socket.
+    *
+    * ```js
+    * const http2 = require('http2');
+    * const server = http2.createServer((req, res) => {
+    *   const ip = req.socket.remoteAddress;
+    *   const port = req.socket.remotePort;
+    *   res.end(`Your IP address is ${ip} and your source port is ${port}.`);
+    * }).listen(3000);
+    * ```
+    * @since v8.4.0
+    */
   val socket: Socket | TLSSocket = js.native
   
+  /**
+    * When using implicit headers (not calling `response.writeHead()` explicitly),
+    * this property controls the status code that will be sent to the client when
+    * the headers get flushed.
+    *
+    * ```js
+    * response.statusCode = 404;
+    * ```
+    *
+    * After response header was sent to the client, this property indicates the
+    * status code which was sent out.
+    * @since v8.4.0
+    */
   var statusCode: Double = js.native
   
+  /**
+    * Status message is not supported by HTTP/2 (RFC 7540 8.1.2.4). It returns
+    * an empty string.
+    * @since v8.4.0
+    */
   var statusMessage: _empty = js.native
   
+  /**
+    * The `Http2Stream` object backing the response.
+    * @since v8.4.0
+    */
   val stream: ServerHttp2Stream = js.native
   
   /**

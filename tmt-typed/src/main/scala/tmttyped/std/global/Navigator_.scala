@@ -1,10 +1,6 @@
 package tmttyped.std.global
 
-import tmttyped.std.ConfirmSiteSpecificExceptionsInformation
-import tmttyped.std.ExceptionInformation
 import tmttyped.std.Navigator
-import tmttyped.std.StoreExceptionsInformation
-import tmttyped.std.StoreSiteSpecificExceptionsInformation
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,88 +9,98 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Navigator")
 @js.native
+/* standard DOM */
 class Navigator_ ()
   extends StObject
      with Navigator {
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val appCodeName: java.lang.String = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val appName: java.lang.String = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val appVersion: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def confirmSiteSpecificTrackingException(args: ConfirmSiteSpecificExceptionsInformation): scala.Boolean = js.native
+  override val connection: tmttyped.std.NetworkInformation = js.native
   
-  /* CompleteClass */
-  override def confirmWebWideTrackingException(args: ExceptionInformation): scala.Boolean = js.native
-  
+  /* standard DOM */
   /* CompleteClass */
   override val cookieEnabled: scala.Boolean = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val hardwareConcurrency: Double = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override def javaEnabled(): scala.Boolean = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val language: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val languages: js.Array[java.lang.String] = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val mimeTypes: tmttyped.std.MimeTypeArray = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val onLine: scala.Boolean = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val platform: java.lang.String = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val plugins: tmttyped.std.PluginArray = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val product: java.lang.String = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val productSub: java.lang.String = js.native
   
-  /* CompleteClass */
-  override def registerProtocolHandler(scheme: java.lang.String, url: java.lang.String, title: java.lang.String): Unit = js.native
-  
-  /* CompleteClass */
-  override def removeSiteSpecificTrackingException(args: ExceptionInformation): Unit = js.native
-  
-  /* CompleteClass */
-  override def removeWebWideTrackingException(args: ExceptionInformation): Unit = js.native
-  
+  /* standard DOM */
   /* CompleteClass */
   override val storage: tmttyped.std.StorageManager = js.native
   
-  /* CompleteClass */
-  override def storeSiteSpecificTrackingException(args: StoreSiteSpecificExceptionsInformation): Unit = js.native
-  
-  /* CompleteClass */
-  override def storeWebWideTrackingException(args: StoreExceptionsInformation): Unit = js.native
-  
-  /* CompleteClass */
-  override def unregisterProtocolHandler(scheme: java.lang.String, url: java.lang.String): Unit = js.native
-  
+  /* standard DOM */
   /* CompleteClass */
   override val userAgent: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val vendor: java.lang.String = js.native
   
+  /** @deprecated */
+  /* standard DOM */
   /* CompleteClass */
   override val vendorSub: java.lang.String = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val webdriver: scala.Boolean = js.native
 }

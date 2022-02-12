@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PositionOptions extends StObject {
   
+  /* standard DOM */
   var enableHighAccuracy: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var maximumAge: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var timeout: js.UndefOr[Double] = js.undefined
 }
 object PositionOptions {

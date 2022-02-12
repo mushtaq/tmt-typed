@@ -5,12 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait StorageManager extends StObject {
   
+  /* standard DOM */
   def estimate(): js.Promise[StorageEstimate]
   
+  /* standard DOM */
   def persist(): js.Promise[scala.Boolean]
   
+  /* standard DOM */
   def persisted(): js.Promise[scala.Boolean]
 }
 object StorageManager {

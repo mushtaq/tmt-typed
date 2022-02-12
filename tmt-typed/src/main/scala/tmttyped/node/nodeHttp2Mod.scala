@@ -33,7 +33,7 @@ object nodeHttp2Mod {
       stream: ServerHttp2Stream,
       headers: IncomingHttpHeaders,
       options: ReadableOptions,
-      rawHeaders: js.Array[java.lang.String]
+      rawHeaders: js.Array[String]
     ) = this()
   }
   
@@ -44,31 +44,31 @@ object nodeHttp2Mod {
   }
   
   @scala.inline
-  def connect(authority: java.lang.String): ClientHttp2Session = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any]).asInstanceOf[ClientHttp2Session]
+  def connect(authority: String): ClientHttp2Session = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any]).asInstanceOf[ClientHttp2Session]
   @scala.inline
   def connect(
-    authority: java.lang.String,
+    authority: String,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
   def connect(
-    authority: java.lang.String,
+    authority: String,
     options: Unit,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
-  def connect(authority: java.lang.String, options: ClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  def connect(authority: String, options: ClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
   def connect(
-    authority: java.lang.String,
+    authority: String,
     options: ClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
-  def connect(authority: java.lang.String, options: SecureClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
+  def connect(authority: String, options: SecureClientSessionOptions): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
   @scala.inline
   def connect(
-    authority: java.lang.String,
+    authority: String,
     options: SecureClientSessionOptions,
     listener: js.Function2[/* session */ ClientHttp2Session, /* socket */ Socket | TLSSocket, Unit]
   ): ClientHttp2Session = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(authority.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[ClientHttp2Session]
@@ -122,399 +122,399 @@ object nodeHttp2Mod {
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCEPT")
     @js.native
-    val HTTP2_HEADER_ACCEPT: java.lang.String = js.native
+    val HTTP2_HEADER_ACCEPT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCEPT_CHARSET")
     @js.native
-    val HTTP2_HEADER_ACCEPT_CHARSET: java.lang.String = js.native
+    val HTTP2_HEADER_ACCEPT_CHARSET: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCEPT_ENCODING")
     @js.native
-    val HTTP2_HEADER_ACCEPT_ENCODING: java.lang.String = js.native
+    val HTTP2_HEADER_ACCEPT_ENCODING: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCEPT_LANGUAGE")
     @js.native
-    val HTTP2_HEADER_ACCEPT_LANGUAGE: java.lang.String = js.native
+    val HTTP2_HEADER_ACCEPT_LANGUAGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCEPT_RANGES")
     @js.native
-    val HTTP2_HEADER_ACCEPT_RANGES: java.lang.String = js.native
+    val HTTP2_HEADER_ACCEPT_RANGES: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ACCESS_CONTROL_ALLOW_ORIGIN")
     @js.native
-    val HTTP2_HEADER_ACCESS_CONTROL_ALLOW_ORIGIN: java.lang.String = js.native
+    val HTTP2_HEADER_ACCESS_CONTROL_ALLOW_ORIGIN: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_AGE")
     @js.native
-    val HTTP2_HEADER_AGE: java.lang.String = js.native
+    val HTTP2_HEADER_AGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ALLOW")
     @js.native
-    val HTTP2_HEADER_ALLOW: java.lang.String = js.native
+    val HTTP2_HEADER_ALLOW: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_AUTHORITY")
     @js.native
-    val HTTP2_HEADER_AUTHORITY: java.lang.String = js.native
+    val HTTP2_HEADER_AUTHORITY: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_AUTHORIZATION")
     @js.native
-    val HTTP2_HEADER_AUTHORIZATION: java.lang.String = js.native
+    val HTTP2_HEADER_AUTHORIZATION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CACHE_CONTROL")
     @js.native
-    val HTTP2_HEADER_CACHE_CONTROL: java.lang.String = js.native
+    val HTTP2_HEADER_CACHE_CONTROL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONNECTION")
     @js.native
-    val HTTP2_HEADER_CONNECTION: java.lang.String = js.native
+    val HTTP2_HEADER_CONNECTION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_DISPOSITION")
     @js.native
-    val HTTP2_HEADER_CONTENT_DISPOSITION: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_DISPOSITION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_ENCODING")
     @js.native
-    val HTTP2_HEADER_CONTENT_ENCODING: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_ENCODING: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_LANGUAGE")
     @js.native
-    val HTTP2_HEADER_CONTENT_LANGUAGE: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_LANGUAGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_LENGTH")
     @js.native
-    val HTTP2_HEADER_CONTENT_LENGTH: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_LENGTH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_LOCATION")
     @js.native
-    val HTTP2_HEADER_CONTENT_LOCATION: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_LOCATION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_MD5")
     @js.native
-    val HTTP2_HEADER_CONTENT_MD5: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_MD5: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_RANGE")
     @js.native
-    val HTTP2_HEADER_CONTENT_RANGE: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_RANGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_CONTENT_TYPE")
     @js.native
-    val HTTP2_HEADER_CONTENT_TYPE: java.lang.String = js.native
+    val HTTP2_HEADER_CONTENT_TYPE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_COOKIE")
     @js.native
-    val HTTP2_HEADER_COOKIE: java.lang.String = js.native
+    val HTTP2_HEADER_COOKIE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_DATE")
     @js.native
-    val HTTP2_HEADER_DATE: java.lang.String = js.native
+    val HTTP2_HEADER_DATE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_ETAG")
     @js.native
-    val HTTP2_HEADER_ETAG: java.lang.String = js.native
+    val HTTP2_HEADER_ETAG: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_EXPECT")
     @js.native
-    val HTTP2_HEADER_EXPECT: java.lang.String = js.native
+    val HTTP2_HEADER_EXPECT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_EXPIRES")
     @js.native
-    val HTTP2_HEADER_EXPIRES: java.lang.String = js.native
+    val HTTP2_HEADER_EXPIRES: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_FROM")
     @js.native
-    val HTTP2_HEADER_FROM: java.lang.String = js.native
+    val HTTP2_HEADER_FROM: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_HOST")
     @js.native
-    val HTTP2_HEADER_HOST: java.lang.String = js.native
+    val HTTP2_HEADER_HOST: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_HTTP2_SETTINGS")
     @js.native
-    val HTTP2_HEADER_HTTP2_SETTINGS: java.lang.String = js.native
+    val HTTP2_HEADER_HTTP2_SETTINGS: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_IF_MATCH")
     @js.native
-    val HTTP2_HEADER_IF_MATCH: java.lang.String = js.native
+    val HTTP2_HEADER_IF_MATCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_IF_MODIFIED_SINCE")
     @js.native
-    val HTTP2_HEADER_IF_MODIFIED_SINCE: java.lang.String = js.native
+    val HTTP2_HEADER_IF_MODIFIED_SINCE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_IF_NONE_MATCH")
     @js.native
-    val HTTP2_HEADER_IF_NONE_MATCH: java.lang.String = js.native
+    val HTTP2_HEADER_IF_NONE_MATCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_IF_RANGE")
     @js.native
-    val HTTP2_HEADER_IF_RANGE: java.lang.String = js.native
+    val HTTP2_HEADER_IF_RANGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_IF_UNMODIFIED_SINCE")
     @js.native
-    val HTTP2_HEADER_IF_UNMODIFIED_SINCE: java.lang.String = js.native
+    val HTTP2_HEADER_IF_UNMODIFIED_SINCE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_KEEP_ALIVE")
     @js.native
-    val HTTP2_HEADER_KEEP_ALIVE: java.lang.String = js.native
+    val HTTP2_HEADER_KEEP_ALIVE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_LAST_MODIFIED")
     @js.native
-    val HTTP2_HEADER_LAST_MODIFIED: java.lang.String = js.native
+    val HTTP2_HEADER_LAST_MODIFIED: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_LINK")
     @js.native
-    val HTTP2_HEADER_LINK: java.lang.String = js.native
+    val HTTP2_HEADER_LINK: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_LOCATION")
     @js.native
-    val HTTP2_HEADER_LOCATION: java.lang.String = js.native
+    val HTTP2_HEADER_LOCATION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_MAX_FORWARDS")
     @js.native
-    val HTTP2_HEADER_MAX_FORWARDS: java.lang.String = js.native
+    val HTTP2_HEADER_MAX_FORWARDS: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_METHOD")
     @js.native
-    val HTTP2_HEADER_METHOD: java.lang.String = js.native
+    val HTTP2_HEADER_METHOD: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_PATH")
     @js.native
-    val HTTP2_HEADER_PATH: java.lang.String = js.native
+    val HTTP2_HEADER_PATH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_PREFER")
     @js.native
-    val HTTP2_HEADER_PREFER: java.lang.String = js.native
+    val HTTP2_HEADER_PREFER: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_PROXY_AUTHENTICATE")
     @js.native
-    val HTTP2_HEADER_PROXY_AUTHENTICATE: java.lang.String = js.native
+    val HTTP2_HEADER_PROXY_AUTHENTICATE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_PROXY_AUTHORIZATION")
     @js.native
-    val HTTP2_HEADER_PROXY_AUTHORIZATION: java.lang.String = js.native
+    val HTTP2_HEADER_PROXY_AUTHORIZATION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_PROXY_CONNECTION")
     @js.native
-    val HTTP2_HEADER_PROXY_CONNECTION: java.lang.String = js.native
+    val HTTP2_HEADER_PROXY_CONNECTION: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_RANGE")
     @js.native
-    val HTTP2_HEADER_RANGE: java.lang.String = js.native
+    val HTTP2_HEADER_RANGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_REFERER")
     @js.native
-    val HTTP2_HEADER_REFERER: java.lang.String = js.native
+    val HTTP2_HEADER_REFERER: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_REFRESH")
     @js.native
-    val HTTP2_HEADER_REFRESH: java.lang.String = js.native
+    val HTTP2_HEADER_REFRESH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_RETRY_AFTER")
     @js.native
-    val HTTP2_HEADER_RETRY_AFTER: java.lang.String = js.native
+    val HTTP2_HEADER_RETRY_AFTER: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_SCHEME")
     @js.native
-    val HTTP2_HEADER_SCHEME: java.lang.String = js.native
+    val HTTP2_HEADER_SCHEME: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_SERVER")
     @js.native
-    val HTTP2_HEADER_SERVER: java.lang.String = js.native
+    val HTTP2_HEADER_SERVER: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_SET_COOKIE")
     @js.native
-    val HTTP2_HEADER_SET_COOKIE: java.lang.String = js.native
+    val HTTP2_HEADER_SET_COOKIE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_STATUS")
     @js.native
-    val HTTP2_HEADER_STATUS: java.lang.String = js.native
+    val HTTP2_HEADER_STATUS: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_STRICT_TRANSPORT_SECURITY")
     @js.native
-    val HTTP2_HEADER_STRICT_TRANSPORT_SECURITY: java.lang.String = js.native
+    val HTTP2_HEADER_STRICT_TRANSPORT_SECURITY: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_TE")
     @js.native
-    val HTTP2_HEADER_TE: java.lang.String = js.native
+    val HTTP2_HEADER_TE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_TRANSFER_ENCODING")
     @js.native
-    val HTTP2_HEADER_TRANSFER_ENCODING: java.lang.String = js.native
+    val HTTP2_HEADER_TRANSFER_ENCODING: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_UPGRADE")
     @js.native
-    val HTTP2_HEADER_UPGRADE: java.lang.String = js.native
+    val HTTP2_HEADER_UPGRADE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_USER_AGENT")
     @js.native
-    val HTTP2_HEADER_USER_AGENT: java.lang.String = js.native
+    val HTTP2_HEADER_USER_AGENT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_VARY")
     @js.native
-    val HTTP2_HEADER_VARY: java.lang.String = js.native
+    val HTTP2_HEADER_VARY: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_VIA")
     @js.native
-    val HTTP2_HEADER_VIA: java.lang.String = js.native
+    val HTTP2_HEADER_VIA: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_HEADER_WWW_AUTHENTICATE")
     @js.native
-    val HTTP2_HEADER_WWW_AUTHENTICATE: java.lang.String = js.native
+    val HTTP2_HEADER_WWW_AUTHENTICATE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_ACL")
     @js.native
-    val HTTP2_METHOD_ACL: java.lang.String = js.native
+    val HTTP2_METHOD_ACL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_BASELINE_CONTROL")
     @js.native
-    val HTTP2_METHOD_BASELINE_CONTROL: java.lang.String = js.native
+    val HTTP2_METHOD_BASELINE_CONTROL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_BIND")
     @js.native
-    val HTTP2_METHOD_BIND: java.lang.String = js.native
+    val HTTP2_METHOD_BIND: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_CHECKIN")
     @js.native
-    val HTTP2_METHOD_CHECKIN: java.lang.String = js.native
+    val HTTP2_METHOD_CHECKIN: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_CHECKOUT")
     @js.native
-    val HTTP2_METHOD_CHECKOUT: java.lang.String = js.native
+    val HTTP2_METHOD_CHECKOUT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_CONNECT")
     @js.native
-    val HTTP2_METHOD_CONNECT: java.lang.String = js.native
+    val HTTP2_METHOD_CONNECT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_COPY")
     @js.native
-    val HTTP2_METHOD_COPY: java.lang.String = js.native
+    val HTTP2_METHOD_COPY: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_DELETE")
     @js.native
-    val HTTP2_METHOD_DELETE: java.lang.String = js.native
+    val HTTP2_METHOD_DELETE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_GET")
     @js.native
-    val HTTP2_METHOD_GET: java.lang.String = js.native
+    val HTTP2_METHOD_GET: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_HEAD")
     @js.native
-    val HTTP2_METHOD_HEAD: java.lang.String = js.native
+    val HTTP2_METHOD_HEAD: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_LABEL")
     @js.native
-    val HTTP2_METHOD_LABEL: java.lang.String = js.native
+    val HTTP2_METHOD_LABEL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_LINK")
     @js.native
-    val HTTP2_METHOD_LINK: java.lang.String = js.native
+    val HTTP2_METHOD_LINK: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_LOCK")
     @js.native
-    val HTTP2_METHOD_LOCK: java.lang.String = js.native
+    val HTTP2_METHOD_LOCK: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MERGE")
     @js.native
-    val HTTP2_METHOD_MERGE: java.lang.String = js.native
+    val HTTP2_METHOD_MERGE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MKACTIVITY")
     @js.native
-    val HTTP2_METHOD_MKACTIVITY: java.lang.String = js.native
+    val HTTP2_METHOD_MKACTIVITY: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MKCALENDAR")
     @js.native
-    val HTTP2_METHOD_MKCALENDAR: java.lang.String = js.native
+    val HTTP2_METHOD_MKCALENDAR: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MKCOL")
     @js.native
-    val HTTP2_METHOD_MKCOL: java.lang.String = js.native
+    val HTTP2_METHOD_MKCOL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MKREDIRECTREF")
     @js.native
-    val HTTP2_METHOD_MKREDIRECTREF: java.lang.String = js.native
+    val HTTP2_METHOD_MKREDIRECTREF: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MKWORKSPACE")
     @js.native
-    val HTTP2_METHOD_MKWORKSPACE: java.lang.String = js.native
+    val HTTP2_METHOD_MKWORKSPACE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_MOVE")
     @js.native
-    val HTTP2_METHOD_MOVE: java.lang.String = js.native
+    val HTTP2_METHOD_MOVE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_OPTIONS")
     @js.native
-    val HTTP2_METHOD_OPTIONS: java.lang.String = js.native
+    val HTTP2_METHOD_OPTIONS: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_ORDERPATCH")
     @js.native
-    val HTTP2_METHOD_ORDERPATCH: java.lang.String = js.native
+    val HTTP2_METHOD_ORDERPATCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_PATCH")
     @js.native
-    val HTTP2_METHOD_PATCH: java.lang.String = js.native
+    val HTTP2_METHOD_PATCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_POST")
     @js.native
-    val HTTP2_METHOD_POST: java.lang.String = js.native
+    val HTTP2_METHOD_POST: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_PRI")
     @js.native
-    val HTTP2_METHOD_PRI: java.lang.String = js.native
+    val HTTP2_METHOD_PRI: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_PROPFIND")
     @js.native
-    val HTTP2_METHOD_PROPFIND: java.lang.String = js.native
+    val HTTP2_METHOD_PROPFIND: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_PROPPATCH")
     @js.native
-    val HTTP2_METHOD_PROPPATCH: java.lang.String = js.native
+    val HTTP2_METHOD_PROPPATCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_PUT")
     @js.native
-    val HTTP2_METHOD_PUT: java.lang.String = js.native
+    val HTTP2_METHOD_PUT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_REBIND")
     @js.native
-    val HTTP2_METHOD_REBIND: java.lang.String = js.native
+    val HTTP2_METHOD_REBIND: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_REPORT")
     @js.native
-    val HTTP2_METHOD_REPORT: java.lang.String = js.native
+    val HTTP2_METHOD_REPORT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_SEARCH")
     @js.native
-    val HTTP2_METHOD_SEARCH: java.lang.String = js.native
+    val HTTP2_METHOD_SEARCH: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_TRACE")
     @js.native
-    val HTTP2_METHOD_TRACE: java.lang.String = js.native
+    val HTTP2_METHOD_TRACE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UNBIND")
     @js.native
-    val HTTP2_METHOD_UNBIND: java.lang.String = js.native
+    val HTTP2_METHOD_UNBIND: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UNCHECKOUT")
     @js.native
-    val HTTP2_METHOD_UNCHECKOUT: java.lang.String = js.native
+    val HTTP2_METHOD_UNCHECKOUT: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UNLINK")
     @js.native
-    val HTTP2_METHOD_UNLINK: java.lang.String = js.native
+    val HTTP2_METHOD_UNLINK: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UNLOCK")
     @js.native
-    val HTTP2_METHOD_UNLOCK: java.lang.String = js.native
+    val HTTP2_METHOD_UNLOCK: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UPDATE")
     @js.native
-    val HTTP2_METHOD_UPDATE: java.lang.String = js.native
+    val HTTP2_METHOD_UPDATE: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_UPDATEREDIRECTREF")
     @js.native
-    val HTTP2_METHOD_UPDATEREDIRECTREF: java.lang.String = js.native
+    val HTTP2_METHOD_UPDATEREDIRECTREF: String = js.native
     
     @JSImport("node:http2", "constants.HTTP2_METHOD_VERSION_CONTROL")
     @js.native
-    val HTTP2_METHOD_VERSION_CONTROL: java.lang.String = js.native
+    val HTTP2_METHOD_VERSION_CONTROL: String = js.native
     
     @JSImport("node:http2", "constants.HTTP_STATUS_ACCEPTED")
     @js.native

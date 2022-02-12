@@ -7,13 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentValidationErrors extends StObject {
   
+  /* standard DOM */
   var error: js.UndefOr[java.lang.String] = js.undefined
   
-  var payer: js.UndefOr[PayerErrors] = js.undefined
-  
-  var paymentMethod: js.UndefOr[js.Any] = js.undefined
-  
-  var shippingAddress: js.UndefOr[AddressErrors] = js.undefined
+  /* standard DOM */
+  var paymentMethod: js.UndefOr[Any] = js.undefined
 }
 object PaymentValidationErrors {
   
@@ -33,21 +31,9 @@ object PaymentValidationErrors {
     def setErrorUndefined: Self = StObject.set(x, "error", js.undefined)
     
     @scala.inline
-    def setPayer(value: PayerErrors): Self = StObject.set(x, "payer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPayerUndefined: Self = StObject.set(x, "payer", js.undefined)
-    
-    @scala.inline
-    def setPaymentMethod(value: js.Any): Self = StObject.set(x, "paymentMethod", value.asInstanceOf[js.Any])
+    def setPaymentMethod(value: Any): Self = StObject.set(x, "paymentMethod", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPaymentMethodUndefined: Self = StObject.set(x, "paymentMethod", js.undefined)
-    
-    @scala.inline
-    def setShippingAddress(value: AddressErrors): Self = StObject.set(x, "shippingAddress", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShippingAddressUndefined: Self = StObject.set(x, "shippingAddress", js.undefined)
   }
 }

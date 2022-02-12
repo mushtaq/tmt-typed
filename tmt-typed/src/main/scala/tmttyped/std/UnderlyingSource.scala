@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait UnderlyingSource[R] extends StObject {
   
+  /* standard DOM */
   var cancel: js.UndefOr[UnderlyingSourceCancelCallback] = js.undefined
   
+  /* standard DOM */
   var pull: js.UndefOr[UnderlyingSourcePullCallback[R]] = js.undefined
   
+  /* standard DOM */
   var start: js.UndefOr[UnderlyingSourceStartCallback[R]] = js.undefined
   
+  /* standard DOM */
   var `type`: Unit
 }
 object UnderlyingSource {
@@ -28,7 +32,7 @@ object UnderlyingSource {
   implicit class UnderlyingSourceMutableBuilder[Self <: UnderlyingSource[_], R] (val x: Self with UnderlyingSource[R]) extends AnyVal {
     
     @scala.inline
-    def setCancel(value: /* reason */ js.Any => Unit | js.Thenable[Unit]): Self = StObject.set(x, "cancel", js.Any.fromFunction1(value))
+    def setCancel(value: /* reason */ js.UndefOr[Any] => Unit | js.Thenable[Unit]): Self = StObject.set(x, "cancel", js.Any.fromFunction1(value))
     
     @scala.inline
     def setCancelUndefined: Self = StObject.set(x, "cancel", js.undefined)
@@ -40,7 +44,7 @@ object UnderlyingSource {
     def setPullUndefined: Self = StObject.set(x, "pull", js.undefined)
     
     @scala.inline
-    def setStart(value: /* controller */ ReadableStreamController[R] => Unit | js.Thenable[Unit]): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
+    def setStart(value: /* controller */ ReadableStreamController[R] => Any): Self = StObject.set(x, "start", js.Any.fromFunction1(value))
     
     @scala.inline
     def setStartUndefined: Self = StObject.set(x, "start", js.undefined)

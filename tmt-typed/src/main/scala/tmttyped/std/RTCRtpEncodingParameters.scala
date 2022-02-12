@@ -9,10 +9,16 @@ trait RTCRtpEncodingParameters
   extends StObject
      with RTCRtpCodingParameters {
   
+  /* standard DOM */
   var active: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var maxBitrate: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
+  var priority: js.UndefOr[RTCPriorityType] = js.undefined
+  
+  /* standard DOM */
   var scaleResolutionDownBy: js.UndefOr[Double] = js.undefined
 }
 object RTCRtpEncodingParameters {
@@ -37,6 +43,12 @@ object RTCRtpEncodingParameters {
     
     @scala.inline
     def setMaxBitrateUndefined: Self = StObject.set(x, "maxBitrate", js.undefined)
+    
+    @scala.inline
+    def setPriority(value: RTCPriorityType): Self = StObject.set(x, "priority", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPriorityUndefined: Self = StObject.set(x, "priority", js.undefined)
     
     @scala.inline
     def setScaleResolutionDownBy(value: Double): Self = StObject.set(x, "scaleResolutionDownBy", value.asInstanceOf[js.Any])

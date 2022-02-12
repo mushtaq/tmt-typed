@@ -8,14 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Used for attributes of basic type <angle> which can be animated. */
 trait SVGAnimatedAngle extends StObject {
   
-  val animVal: org.scalajs.dom.raw.SVGAngle
+  /* standard DOM */
+  val animVal: org.scalajs.dom.SVGAngle
   
-  val baseVal: org.scalajs.dom.raw.SVGAngle
+  /* standard DOM */
+  val baseVal: org.scalajs.dom.SVGAngle
 }
 object SVGAnimatedAngle {
   
   @scala.inline
-  def apply(animVal: org.scalajs.dom.raw.SVGAngle, baseVal: org.scalajs.dom.raw.SVGAngle): SVGAnimatedAngle = {
+  def apply(animVal: org.scalajs.dom.SVGAngle, baseVal: org.scalajs.dom.SVGAngle): SVGAnimatedAngle = {
     val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGAnimatedAngle]
   }
@@ -24,9 +26,9 @@ object SVGAnimatedAngle {
   implicit class SVGAnimatedAngleMutableBuilder[Self <: SVGAnimatedAngle] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setAnimVal(value: org.scalajs.dom.raw.SVGAngle): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])
+    def setAnimVal(value: org.scalajs.dom.SVGAngle): Self = StObject.set(x, "animVal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBaseVal(value: org.scalajs.dom.raw.SVGAngle): Self = StObject.set(x, "baseVal", value.asInstanceOf[js.Any])
+    def setBaseVal(value: org.scalajs.dom.SVGAngle): Self = StObject.set(x, "baseVal", value.asInstanceOf[js.Any])
   }
 }

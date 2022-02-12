@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Iterable[T] extends StObject {
   
+  /* standard es2015.iterable */
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Iterator[T]] = js.native
 }

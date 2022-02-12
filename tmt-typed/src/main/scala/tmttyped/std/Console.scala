@@ -8,61 +8,76 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Console extends StObject {
   
-  def assert(condition: scala.Boolean, data: js.Any*): Unit = js.native
-  def assert(condition: Unit, data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def assert(condition: scala.Boolean, data: Any*): Unit = js.native
+  def assert(condition: Unit, data: Any*): Unit = js.native
   
+  /* standard DOM */
   def clear(): Unit = js.native
   
+  /* standard DOM */
   def count(): Unit = js.native
   def count(label: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   def countReset(): Unit = js.native
   def countReset(label: java.lang.String): Unit = js.native
   
-  def debug(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def debug(data: Any*): Unit = js.native
   
+  /* standard DOM */
   def dir(): Unit = js.native
-  def dir(item: js.Any): Unit = js.native
-  def dir(item: js.Any, options: js.Any): Unit = js.native
-  def dir(item: Unit, options: js.Any): Unit = js.native
+  def dir(item: Any): Unit = js.native
+  def dir(item: Any, options: Any): Unit = js.native
+  def dir(item: Unit, options: Any): Unit = js.native
   
-  def dirxml(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def dirxml(data: Any*): Unit = js.native
   
-  def error(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def error(data: Any*): Unit = js.native
   
-  def exception(message: java.lang.String, optionalParams: js.Any*): Unit = js.native
-  def exception(message: Unit, optionalParams: js.Any*): Unit = js.native
+  /* standard DOM */
+  def group(data: Any*): Unit = js.native
   
-  def group(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def groupCollapsed(data: Any*): Unit = js.native
   
-  def groupCollapsed(data: js.Any*): Unit = js.native
-  
+  /* standard DOM */
   def groupEnd(): Unit = js.native
   
-  def info(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def info(data: Any*): Unit = js.native
   
-  def log(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def log(data: Any*): Unit = js.native
   
-  var memory: js.Any = js.native
-  
+  /* standard DOM */
   def table(): Unit = js.native
-  def table(tabularData: js.Any): Unit = js.native
-  def table(tabularData: js.Any, properties: js.Array[java.lang.String]): Unit = js.native
+  def table(tabularData: Any): Unit = js.native
+  def table(tabularData: Any, properties: js.Array[java.lang.String]): Unit = js.native
   def table(tabularData: Unit, properties: js.Array[java.lang.String]): Unit = js.native
   
+  /* standard DOM */
   def time(): Unit = js.native
   def time(label: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   def timeEnd(): Unit = js.native
   def timeEnd(label: java.lang.String): Unit = js.native
   
-  def timeLog(label: java.lang.String, data: js.Any*): Unit = js.native
-  def timeLog(label: Unit, data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def timeLog(label: java.lang.String, data: Any*): Unit = js.native
+  def timeLog(label: Unit, data: Any*): Unit = js.native
   
+  /* standard DOM */
   def timeStamp(): Unit = js.native
   def timeStamp(label: java.lang.String): Unit = js.native
   
-  def trace(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def trace(data: Any*): Unit = js.native
   
-  def warn(data: js.Any*): Unit = js.native
+  /* standard DOM */
+  def warn(data: Any*): Unit = js.native
 }

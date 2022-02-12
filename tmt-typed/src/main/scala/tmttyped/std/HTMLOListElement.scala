@@ -11,6 +11,7 @@ trait HTMLOListElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,25 +24,28 @@ trait HTMLOListElement
   ): Unit = js.native
   
   /** @deprecated */
+  /* standard DOM */
   var compact: scala.Boolean = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   var reversed: scala.Boolean = js.native
   
-  /**
-    * The starting number.
-    */
+  /** The starting number. */
+  /* standard DOM */
   var start: Double = js.native
   
+  /* standard DOM */
   var `type`: java.lang.String = js.native
 }

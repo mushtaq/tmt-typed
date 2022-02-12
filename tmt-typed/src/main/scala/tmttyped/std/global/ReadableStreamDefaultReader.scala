@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ReadableStreamDefaultReader[R] protected ()
   extends StObject
      with tmttyped.std.ReadableStreamDefaultReader[R] {
-  def this(stream: org.scalajs.dom.experimental.ReadableStream[R]) = this()
+  /* standard DOM */
+  def this(stream: org.scalajs.dom.ReadableStream[R]) = this()
 }

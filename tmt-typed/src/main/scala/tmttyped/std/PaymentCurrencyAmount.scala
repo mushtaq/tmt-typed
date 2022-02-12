@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentCurrencyAmount extends StObject {
   
+  /* standard DOM */
   var currency: java.lang.String
   
+  /* standard DOM */
   var value: java.lang.String
 }
 object PaymentCurrencyAmount {

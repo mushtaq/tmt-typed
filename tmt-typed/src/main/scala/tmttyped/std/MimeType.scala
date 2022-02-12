@@ -5,27 +5,38 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** Provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object. */
+/**
+  * Provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object.
+  * @deprecated
+  */
 trait MimeType extends StObject {
   
   /**
     * Returns the MIME type's description.
+    * @deprecated
     */
+  /* standard DOM */
   val description: java.lang.String
   
   /**
     * Returns the Plugin object that implements this MIME type.
+    * @deprecated
     */
+  /* standard DOM */
   val enabledPlugin: Plugin
   
   /**
     * Returns the MIME type's typical file extensions, in a comma-separated list.
+    * @deprecated
     */
+  /* standard DOM */
   val suffixes: java.lang.String
   
   /**
     * Returns the MIME type.
+    * @deprecated
     */
+  /* standard DOM */
   val `type`: java.lang.String
 }
 object MimeType {

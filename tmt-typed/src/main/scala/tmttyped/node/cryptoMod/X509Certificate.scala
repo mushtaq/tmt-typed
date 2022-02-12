@@ -18,14 +18,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * console.log(x509.subject);
   * ```
-  *
-  * ```js
-  * const { X509Certificate } = require('crypto');
-  *
-  * const x509 = new X509Certificate('{... pem encoded cert ...}');
-  *
-  * console.log(x509.subject);
-  * ```
   * @since v15.6.0
   */
 @JSImport("crypto", "X509Certificate")
@@ -115,7 +107,7 @@ class X509Certificate protected () extends StObject {
   val keyUsage: js.Array[String] = js.native
   
   /**
-    * The public key `<KeyObject>` for this certificate.
+    * The public key `KeyObject` for this certificate.
     * @since v15.6.0
     */
   val publicKey: KeyObject = js.native

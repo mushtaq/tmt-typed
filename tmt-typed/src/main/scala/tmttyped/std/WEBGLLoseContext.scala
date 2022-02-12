@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait WEBGLLoseContext extends StObject {
   
+  /* standard DOM */
   def loseContext(): Unit
   
+  /* standard DOM */
   def restoreContext(): Unit
 }
 object WEBGLLoseContext {

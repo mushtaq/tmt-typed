@@ -9,9 +9,11 @@ trait AnimationPlaybackEventInit
   extends StObject
      with EventInit {
   
-  var currentTime: js.UndefOr[Double | Null] = js.undefined
+  /* standard DOM */
+  var currentTime: js.UndefOr[CSSNumberish | Null] = js.undefined
   
-  var timelineTime: js.UndefOr[Double | Null] = js.undefined
+  /* standard DOM */
+  var timelineTime: js.UndefOr[CSSNumberish | Null] = js.undefined
 }
 object AnimationPlaybackEventInit {
   
@@ -25,7 +27,7 @@ object AnimationPlaybackEventInit {
   implicit class AnimationPlaybackEventInitMutableBuilder[Self <: AnimationPlaybackEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCurrentTime(value: Double): Self = StObject.set(x, "currentTime", value.asInstanceOf[js.Any])
+    def setCurrentTime(value: CSSNumberish): Self = StObject.set(x, "currentTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCurrentTimeNull: Self = StObject.set(x, "currentTime", null)
@@ -34,7 +36,7 @@ object AnimationPlaybackEventInit {
     def setCurrentTimeUndefined: Self = StObject.set(x, "currentTime", js.undefined)
     
     @scala.inline
-    def setTimelineTime(value: Double): Self = StObject.set(x, "timelineTime", value.asInstanceOf[js.Any])
+    def setTimelineTime(value: CSSNumberish): Self = StObject.set(x, "timelineTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTimelineTimeNull: Self = StObject.set(x, "timelineTime", null)

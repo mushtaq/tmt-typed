@@ -1,7 +1,6 @@
 package tmttyped.std
 
 import tmttyped.std.stdStrings.nfc_
-import tmttyped.std.stdStrings.usb_
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - tmttyped.std.stdStrings.ble
   - tmttyped.std.stdStrings.internal
   - tmttyped.std.stdStrings.nfc_
-  - tmttyped.std.stdStrings.usb_
+  - tmttyped.std.stdStrings.usb
 */
 trait AuthenticatorTransport extends StObject
 object AuthenticatorTransport {
@@ -26,5 +25,5 @@ object AuthenticatorTransport {
   def nfc: nfc_ = "nfc".asInstanceOf[nfc_]
   
   @scala.inline
-  def usb: usb_ = "usb".asInstanceOf[usb_]
+  def usb: tmttyped.std.stdStrings.usb = "usb".asInstanceOf[tmttyped.std.stdStrings.usb]
 }

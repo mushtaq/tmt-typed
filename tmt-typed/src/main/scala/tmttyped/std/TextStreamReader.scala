@@ -12,11 +12,13 @@ trait TextStreamReader
   /**
     * Indicates whether the stream pointer position is at the end of a line.
     */
+  /* standard ScriptHost */
   var AtEndOfLine: scala.Boolean
   
   /**
     * Indicates whether the stream pointer position is at the end of a stream.
     */
+  /* standard ScriptHost */
   var AtEndOfStream: scala.Boolean
   
   /**
@@ -24,12 +26,14 @@ trait TextStreamReader
     * Does not return until the ENTER key is pressed.
     * Can only be used on a stream in reading mode; causes an error in writing or appending mode.
     */
+  /* standard ScriptHost */
   def Read(characters: Double): java.lang.String
   
   /**
     * Returns all characters from an input stream.
     * Can only be used on a stream in reading mode; causes an error in writing or appending mode.
     */
+  /* standard ScriptHost */
   def ReadAll(): java.lang.String
   
   /**
@@ -37,6 +41,7 @@ trait TextStreamReader
     * Although this method extracts the newline character, it does not add it to the returned string.
     * Can only be used on a stream in reading mode; causes an error in writing or appending mode.
     */
+  /* standard ScriptHost */
   def ReadLine(): java.lang.String
   
   /**
@@ -44,12 +49,14 @@ trait TextStreamReader
     * Can only be used on a stream in reading mode; causes an error in writing or appending mode.
     * @param characters Positive number of characters to skip forward. (Backward skipping is not supported.)
     */
+  /* standard ScriptHost */
   def Skip(characters: Double): Unit
   
   /**
     * Skips the next line when reading from an input text stream.
     * Can only be used on a stream in reading mode, not writing or appending mode.
     */
+  /* standard ScriptHost */
   def SkipLine(): Unit
 }
 object TextStreamReader {

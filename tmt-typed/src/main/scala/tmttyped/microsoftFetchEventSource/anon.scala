@@ -1,7 +1,7 @@
 package tmttyped.microsoftFetchEventSource
 
-import org.scalajs.dom.experimental.RequestInit
-import org.scalajs.dom.experimental.Response
+import org.scalajs.dom.RequestInit
+import org.scalajs.dom.Response
 import tmttyped.std.RequestInfo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js

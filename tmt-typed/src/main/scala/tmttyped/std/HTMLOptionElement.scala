@@ -11,6 +11,7 @@ trait HTMLOptionElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,51 +23,46 @@ trait HTMLOptionElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Sets or retrieves the status of an option.
-    */
+  /** Sets or retrieves the status of an option. */
+  /* standard DOM */
   var defaultSelected: scala.Boolean = js.native
   
+  /* standard DOM */
   var disabled: scala.Boolean = js.native
   
-  /**
-    * Retrieves a reference to the form that the object is embedded in.
-    */
-  val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
+  /** Retrieves a reference to the form that the object is embedded in. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
-  /**
-    * Sets or retrieves the ordinal position of an option in a list box.
-    */
+  /** Sets or retrieves the ordinal position of an option in a list box. */
+  /* standard DOM */
   val index: Double = js.native
   
-  /**
-    * Sets or retrieves a value that you can use to implement your own label functionality for the object.
-    */
+  /** Sets or retrieves a value that you can use to implement your own label functionality for the object. */
+  /* standard DOM */
   var label: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  /**
-    * Sets or retrieves whether the option in the list box is the default item.
-    */
+  /** Sets or retrieves whether the option in the list box is the default item. */
+  /* standard DOM */
   var selected: scala.Boolean = js.native
   
-  /**
-    * Sets or retrieves the text string specified by the option tag.
-    */
+  /** Sets or retrieves the text string specified by the option tag. */
+  /* standard DOM */
   var text: java.lang.String = js.native
   
-  /**
-    * Sets or retrieves the value which is returned to the server when the form control is submitted.
-    */
+  /** Sets or retrieves the value which is returned to the server when the form control is submitted. */
+  /* standard DOM */
   var value: java.lang.String = js.native
 }

@@ -12,158 +12,101 @@ trait IDBRequest[T]
   extends StObject
      with EventTarget {
   
+  /* standard DOM */
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * When a request is completed, returns the error (a DOMException), or null if the request succeeded. Throws a "InvalidStateError" DOMException if the request is still pending.
-    */
-  val error: org.scalajs.dom.raw.DOMException | Null = js.native
+  /** When a request is completed, returns the error (a DOMException), or null if the request succeeded. Throws a "InvalidStateError" DOMException if the request is still pending. */
+  /* standard DOM */
+  val error: org.scalajs.dom.DOMException | Null = js.native
   
-  var onerror: (js.ThisFunction1[
-    /* this */ org.scalajs.dom.raw.IDBRequest, 
-    /* ev */ org.scalajs.dom.raw.Event, 
-    js.Any
-  ]) | Null = js.native
+  /* standard DOM */
+  var onerror: (js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
-  var onsuccess: (js.ThisFunction1[
-    /* this */ org.scalajs.dom.raw.IDBRequest, 
-    /* ev */ org.scalajs.dom.raw.Event, 
-    js.Any
-  ]) | Null = js.native
+  /* standard DOM */
+  var onsuccess: (js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
-  /**
-    * Returns "pending" until a request is complete, then returns "done".
-    */
+  /** Returns "pending" until a request is complete, then returns "done". */
+  /* standard DOM */
   val readyState: IDBRequestReadyState = js.native
   
+  /* standard DOM */
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: tmttyped.std.stdStrings.error,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ]
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
-    options: org.scalajs.dom.raw.EventListenerOptions
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_success(
     `type`: success,
-    listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.IDBRequest, 
-      /* ev */ org.scalajs.dom.raw.Event, 
-      js.Any
-    ],
+    listener: js.ThisFunction1[/* this */ org.scalajs.dom.IDBRequest[Any, T], /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
   
-  /**
-    * When a request is completed, returns the result, or undefined if the request failed. Throws a "InvalidStateError" DOMException if the request is still pending.
-    */
+  /** When a request is completed, returns the result, or undefined if the request failed. Throws a "InvalidStateError" DOMException if the request is still pending. */
+  /* standard DOM */
   val result: T = js.native
   
-  /**
-    * Returns the IDBObjectStore, IDBIndex, or IDBCursor the request was made against, or null if is was an open request.
-    */
-  val source: org.scalajs.dom.raw.IDBObjectStore | org.scalajs.dom.raw.IDBIndex | org.scalajs.dom.raw.IDBCursor = js.native
+  /** Returns the IDBObjectStore, IDBIndex, or IDBCursor the request was made against, or null if is was an open request. */
+  /* standard DOM */
+  val source: org.scalajs.dom.IDBObjectStore | org.scalajs.dom.IDBIndex | org.scalajs.dom.IDBCursor[Any] = js.native
   
-  /**
-    * Returns the IDBTransaction the request was made within. If this as an open request, then it returns an upgrade transaction while it is running, or null otherwise.
-    */
-  val transaction: org.scalajs.dom.raw.IDBTransaction | Null = js.native
+  /** Returns the IDBTransaction the request was made within. If this as an open request, then it returns an upgrade transaction while it is running, or null otherwise. */
+  /* standard DOM */
+  val transaction: org.scalajs.dom.IDBTransaction | Null = js.native
 }

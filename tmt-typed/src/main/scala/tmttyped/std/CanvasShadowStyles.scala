@@ -7,12 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CanvasShadowStyles extends StObject {
   
+  /* standard DOM */
   var shadowBlur: Double
   
+  /* standard DOM */
   var shadowColor: java.lang.String
   
+  /* standard DOM */
   var shadowOffsetX: Double
   
+  /* standard DOM */
   var shadowOffsetY: Double
 }
 object CanvasShadowStyles {

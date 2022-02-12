@@ -9,8 +9,10 @@ trait MediaEncryptedEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var initData: js.UndefOr[js.typedarray.ArrayBuffer | Null] = js.undefined
   
+  /* standard DOM */
   var initDataType: js.UndefOr[java.lang.String] = js.undefined
 }
 object MediaEncryptedEventInit {

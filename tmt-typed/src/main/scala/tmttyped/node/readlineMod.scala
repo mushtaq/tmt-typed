@@ -40,7 +40,7 @@ object readlineMod {
       *
       * @see https://nodejs.org/dist/latest-v10.x/docs/api/readline.html#readline_class_interface
       */
-    protected def this(input: ReadableStream) = this()
+    /* protected */ def this(input: ReadableStream) = this()
     /**
       * NOTE: According to the documentation:
       *
@@ -49,18 +49,18 @@ object readlineMod {
       *
       * @see https://nodejs.org/dist/latest-v10.x/docs/api/readline.html#readline_class_interface
       */
-    protected def this(options: ReadLineOptions) = this()
-    protected def this(input: ReadableStream, output: WritableStream) = this()
-    protected def this(input: ReadableStream, output: Unit, completer: AsyncCompleter) = this()
-    protected def this(input: ReadableStream, output: Unit, completer: Completer) = this()
-    protected def this(input: ReadableStream, output: WritableStream, completer: AsyncCompleter) = this()
-    protected def this(input: ReadableStream, output: WritableStream, completer: Completer) = this()
-    protected def this(input: ReadableStream, output: Unit, completer: Unit, terminal: Boolean) = this()
-    protected def this(input: ReadableStream, output: Unit, completer: AsyncCompleter, terminal: Boolean) = this()
-    protected def this(input: ReadableStream, output: Unit, completer: Completer, terminal: Boolean) = this()
-    protected def this(input: ReadableStream, output: WritableStream, completer: Unit, terminal: Boolean) = this()
-    protected def this(input: ReadableStream, output: WritableStream, completer: AsyncCompleter, terminal: Boolean) = this()
-    protected def this(input: ReadableStream, output: WritableStream, completer: Completer, terminal: Boolean) = this()
+    /* protected */ def this(options: ReadLineOptions) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream) = this()
+    /* protected */ def this(input: ReadableStream, output: Unit, completer: AsyncCompleter) = this()
+    /* protected */ def this(input: ReadableStream, output: Unit, completer: Completer) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream, completer: AsyncCompleter) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream, completer: Completer) = this()
+    /* protected */ def this(input: ReadableStream, output: Unit, completer: Unit, terminal: Boolean) = this()
+    /* protected */ def this(input: ReadableStream, output: Unit, completer: AsyncCompleter, terminal: Boolean) = this()
+    /* protected */ def this(input: ReadableStream, output: Unit, completer: Completer, terminal: Boolean) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream, completer: Unit, terminal: Boolean) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream, completer: AsyncCompleter, terminal: Boolean) = this()
+    /* protected */ def this(input: ReadableStream, output: WritableStream, completer: Completer, terminal: Boolean) = this()
     
     /**
       * events.EventEmitter
@@ -73,7 +73,7 @@ object readlineMod {
       * 7. SIGTSTP
       * 8. history
       */
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
@@ -83,9 +83,9 @@ object readlineMod {
     @JSName("addListener")
     def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_history(event: history, listener: js.Function1[/* history */ js.Array[java.lang.String], Unit]): this.type = js.native
+    def addListener_history(event: history, listener: js.Function1[/* history */ js.Array[String], Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def addListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
@@ -113,8 +113,8 @@ object readlineMod {
       */
     val cursor: Double = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_SIGCONT(event: SIGCONT): Boolean = js.native
     @JSName("emit")
@@ -124,9 +124,9 @@ object readlineMod {
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
-    def emit_history(event: history, history: js.Array[java.lang.String]): Boolean = js.native
+    def emit_history(event: history, history: js.Array[String]): Boolean = js.native
     @JSName("emit")
-    def emit_line(event: tmttyped.node.nodeStrings.line, input: java.lang.String): Boolean = js.native
+    def emit_line(event: tmttyped.node.nodeStrings.line, input: String): Boolean = js.native
     @JSName("emit")
     def emit_pause(event: pause): Boolean = js.native
     @JSName("emit")
@@ -145,7 +145,7 @@ object readlineMod {
       * @since v15.3.0
       * @return the current prompt string
       */
-    def getPrompt(): java.lang.String = js.native
+    def getPrompt(): String = js.native
     
     /**
       * The current input data being processed by node.
@@ -177,9 +177,9 @@ object readlineMod {
       * ```
       * @since v0.1.98
       */
-    val line: java.lang.String = js.native
+    val line: String = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -189,15 +189,15 @@ object readlineMod {
     @JSName("on")
     def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
-    def on_history(event: history, listener: js.Function1[/* history */ js.Array[java.lang.String], Unit]): this.type = js.native
+    def on_history(event: history, listener: js.Function1[/* history */ js.Array[String], Unit]): this.type = js.native
     @JSName("on")
-    def on_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def on_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("on")
     def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
     def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -207,9 +207,9 @@ object readlineMod {
     @JSName("once")
     def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
-    def once_history(event: history, listener: js.Function1[/* history */ js.Array[java.lang.String], Unit]): this.type = js.native
+    def once_history(event: history, listener: js.Function1[/* history */ js.Array[String], Unit]): this.type = js.native
     @JSName("once")
-    def once_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def once_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("once")
     def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -224,7 +224,7 @@ object readlineMod {
       */
     def pause(): this.type = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -234,15 +234,15 @@ object readlineMod {
     @JSName("prependListener")
     def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_history(event: history, listener: js.Function1[/* history */ js.Array[java.lang.String], Unit]): this.type = js.native
+    def prependListener_history(event: history, listener: js.Function1[/* history */ js.Array[String], Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def prependListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -252,9 +252,9 @@ object readlineMod {
     @JSName("prependOnceListener")
     def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_history(event: history, listener: js.Function1[/* history */ js.Array[java.lang.String], Unit]): this.type = js.native
+    def prependOnceListener_history(event: history, listener: js.Function1[/* history */ js.Array[String], Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def prependOnceListener_line(event: tmttyped.node.nodeStrings.line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -334,12 +334,8 @@ object readlineMod {
       * @param query A statement or query to write to `output`, prepended to the prompt.
       * @param callback A callback function that is invoked with the user's input in response to the `query`.
       */
-    def question(query: java.lang.String, callback: js.Function1[/* answer */ java.lang.String, Unit]): Unit = js.native
-    def question(
-      query: java.lang.String,
-      options: Abortable,
-      callback: js.Function1[/* answer */ java.lang.String, Unit]
-    ): Unit = js.native
+    def question(query: String, callback: js.Function1[/* answer */ String, Unit]): Unit = js.native
+    def question(query: String, options: Abortable, callback: js.Function1[/* answer */ String, Unit]): Unit = js.native
     
     /**
       * The `rl.resume()` method resumes the `input` stream if it has been paused.
@@ -351,7 +347,7 @@ object readlineMod {
       * The `rl.setPrompt()` method sets the prompt that will be written to `output`whenever `rl.prompt()` is called.
       * @since v0.1.98
       */
-    def setPrompt(prompt: java.lang.String): Unit = js.native
+    def setPrompt(prompt: String): Unit = js.native
     
     val terminal: Boolean = js.native
     
@@ -377,8 +373,10 @@ object readlineMod {
       * The `rl.write()` method will write the data to the `readline` `Interface`'s`input`_as if it were provided by the user_.
       * @since v0.1.98
       */
-    def write(data: java.lang.String): Unit = js.native
-    def write(data: java.lang.String, key: Key): Unit = js.native
+    def write(data: String): Unit = js.native
+    def write(data: String, key: Key): Unit = js.native
+    def write(data: Null, key: Key): Unit = js.native
+    def write(data: Unit, key: Key): Unit = js.native
     def write(data: Buffer): Unit = js.native
     def write(data: Buffer, key: Key): Unit = js.native
   }
@@ -501,6 +499,109 @@ object readlineMod {
     * readline.emitKeypressEvents(process.stdin);
     * if (process.stdin.isTTY)
     *   process.stdin.setRawMode(true);
+    * ```
+    *
+    * ## Example: Tiny CLI
+    *
+    * The following example illustrates the use of `readline.Interface` class to
+    * implement a small command-line interface:
+    *
+    * ```js
+    * const readline = require('readline');
+    * const rl = readline.createInterface({
+    *   input: process.stdin,
+    *   output: process.stdout,
+    *   prompt: 'OHAI> '
+    * });
+    *
+    * rl.prompt();
+    *
+    * rl.on('line', (line) => {
+    *   switch (line.trim()) {
+    *     case 'hello':
+    *       console.log('world!');
+    *       break;
+    *     default:
+    *       console.log(`Say what? I might have heard '${line.trim()}'`);
+    *       break;
+    *   }
+    *   rl.prompt();
+    * }).on('close', () => {
+    *   console.log('Have a great day!');
+    *   process.exit(0);
+    * });
+    * ```
+    *
+    * ## Example: Read file stream line-by-Line
+    *
+    * A common use case for `readline` is to consume an input file one line at a
+    * time. The easiest way to do so is leveraging the `fs.ReadStream` API as
+    * well as a `for await...of` loop:
+    *
+    * ```js
+    * const fs = require('fs');
+    * const readline = require('readline');
+    *
+    * async function processLineByLine() {
+    *   const fileStream = fs.createReadStream('input.txt');
+    *
+    *   const rl = readline.createInterface({
+    *     input: fileStream,
+    *     crlfDelay: Infinity
+    *   });
+    *   // Note: we use the crlfDelay option to recognize all instances of CR LF
+    *   // ('\r\n') in input.txt as a single line break.
+    *
+    *   for await (const line of rl) {
+    *     // Each line in input.txt will be successively available here as `line`.
+    *     console.log(`Line from file: ${line}`);
+    *   }
+    * }
+    *
+    * processLineByLine();
+    * ```
+    *
+    * Alternatively, one could use the `'line'` event:
+    *
+    * ```js
+    * const fs = require('fs');
+    * const readline = require('readline');
+    *
+    * const rl = readline.createInterface({
+    *   input: fs.createReadStream('sample.txt'),
+    *   crlfDelay: Infinity
+    * });
+    *
+    * rl.on('line', (line) => {
+    *   console.log(`Line from file: ${line}`);
+    * });
+    * ```
+    *
+    * Currently, `for await...of` loop can be a bit slower. If `async` / `await`flow and speed are both essential, a mixed approach can be applied:
+    *
+    * ```js
+    * const { once } = require('events');
+    * const { createReadStream } = require('fs');
+    * const { createInterface } = require('readline');
+    *
+    * (async function processLineByLine() {
+    *   try {
+    *     const rl = createInterface({
+    *       input: createReadStream('big-file.txt'),
+    *       crlfDelay: Infinity
+    *     });
+    *
+    *     rl.on('line', (line) => {
+    *       // Process the line.
+    *     });
+    *
+    *     await once(rl, 'close');
+    *
+    *     console.log('File processed.');
+    *   } catch (err) {
+    *     console.error(err);
+    *   }
+    * })();
     * ```
     * @since v0.7.7
     */
@@ -625,7 +726,7 @@ object readlineMod {
   def moveCursor(stream: WritableStream, dx: Double, dy: Double, callback: js.Function0[Unit]): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("moveCursor")(stream.asInstanceOf[js.Any], dx.asInstanceOf[js.Any], dy.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
   type AsyncCompleter = js.Function2[
-    /* line */ java.lang.String, 
+    /* line */ String, 
     /* callback */ js.Function2[
       /* err */ js.UndefOr[Null | js.Error], 
       /* result */ js.UndefOr[CompleterResult], 
@@ -635,9 +736,9 @@ object readlineMod {
   ]
   
   // type forwarded for backwards compatibility
-  type Completer = js.Function1[/* line */ java.lang.String, CompleterResult]
+  type Completer = js.Function1[/* line */ String, CompleterResult]
   
-  type CompleterResult = js.Tuple2[js.Array[java.lang.String], java.lang.String]
+  type CompleterResult = js.Tuple2[js.Array[String], String]
   
   trait CursorPos extends StObject {
     
@@ -688,9 +789,9 @@ object readlineMod {
     
     var meta: js.UndefOr[Boolean] = js.undefined
     
-    var name: js.UndefOr[java.lang.String] = js.undefined
+    var name: js.UndefOr[String] = js.undefined
     
-    var sequence: js.UndefOr[java.lang.String] = js.undefined
+    var sequence: js.UndefOr[String] = js.undefined
     
     var shift: js.UndefOr[Boolean] = js.undefined
   }
@@ -718,13 +819,13 @@ object readlineMod {
       def setMetaUndefined: Self = StObject.set(x, "meta", js.undefined)
       
       @scala.inline
-      def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
       
       @scala.inline
-      def setSequence(value: java.lang.String): Self = StObject.set(x, "sequence", value.asInstanceOf[js.Any])
+      def setSequence(value: String): Self = StObject.set(x, "sequence", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setSequenceUndefined: Self = StObject.set(x, "sequence", js.undefined)
@@ -753,7 +854,7 @@ object readlineMod {
       * check, otherwise the history caching mechanism is not initialized at all.
       * @default []
       */
-    var history: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+    var history: js.UndefOr[js.Array[String]] = js.undefined
     
     var historySize: js.UndefOr[Double] = js.undefined
     
@@ -761,7 +862,7 @@ object readlineMod {
     
     var output: js.UndefOr[WritableStream] = js.undefined
     
-    var prompt: js.UndefOr[java.lang.String] = js.undefined
+    var prompt: js.UndefOr[String] = js.undefined
     
     /**
       * If `true`, when a new input line added
@@ -790,11 +891,11 @@ object readlineMod {
       def setCompleter(value: Completer | AsyncCompleter): Self = StObject.set(x, "completer", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCompleterFunction1(value: /* line */ java.lang.String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
+      def setCompleterFunction1(value: /* line */ String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
       
       @scala.inline
       def setCompleterFunction2(
-        value: (/* line */ java.lang.String, /* callback */ js.Function2[
+        value: (/* line */ String, /* callback */ js.Function2[
               /* err */ js.UndefOr[Null | js.Error], 
               /* result */ js.UndefOr[CompleterResult], 
               Unit
@@ -817,7 +918,7 @@ object readlineMod {
       def setEscapeCodeTimeoutUndefined: Self = StObject.set(x, "escapeCodeTimeout", js.undefined)
       
       @scala.inline
-      def setHistory(value: js.Array[java.lang.String]): Self = StObject.set(x, "history", value.asInstanceOf[js.Any])
+      def setHistory(value: js.Array[String]): Self = StObject.set(x, "history", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setHistorySize(value: Double): Self = StObject.set(x, "historySize", value.asInstanceOf[js.Any])
@@ -829,7 +930,7 @@ object readlineMod {
       def setHistoryUndefined: Self = StObject.set(x, "history", js.undefined)
       
       @scala.inline
-      def setHistoryVarargs(value: java.lang.String*): Self = StObject.set(x, "history", js.Array(value :_*))
+      def setHistoryVarargs(value: String*): Self = StObject.set(x, "history", js.Array(value :_*))
       
       @scala.inline
       def setInput(value: ReadableStream): Self = StObject.set(x, "input", value.asInstanceOf[js.Any])
@@ -841,7 +942,7 @@ object readlineMod {
       def setOutputUndefined: Self = StObject.set(x, "output", js.undefined)
       
       @scala.inline
-      def setPrompt(value: java.lang.String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
+      def setPrompt(value: String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setPromptUndefined: Self = StObject.set(x, "prompt", js.undefined)

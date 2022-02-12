@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaElementAudioSourceOptions extends StObject {
   
-  var mediaElement: org.scalajs.dom.raw.HTMLMediaElement
+  /* standard DOM */
+  var mediaElement: org.scalajs.dom.HTMLMediaElement
 }
 object MediaElementAudioSourceOptions {
   
   @scala.inline
-  def apply(mediaElement: org.scalajs.dom.raw.HTMLMediaElement): MediaElementAudioSourceOptions = {
+  def apply(mediaElement: org.scalajs.dom.HTMLMediaElement): MediaElementAudioSourceOptions = {
     val __obj = js.Dynamic.literal(mediaElement = mediaElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaElementAudioSourceOptions]
   }
@@ -21,6 +22,6 @@ object MediaElementAudioSourceOptions {
   implicit class MediaElementAudioSourceOptionsMutableBuilder[Self <: MediaElementAudioSourceOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setMediaElement(value: org.scalajs.dom.raw.HTMLMediaElement): Self = StObject.set(x, "mediaElement", value.asInstanceOf[js.Any])
+    def setMediaElement(value: org.scalajs.dom.HTMLMediaElement): Self = StObject.set(x, "mediaElement", value.asInstanceOf[js.Any])
   }
 }

@@ -10,12 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FileList
   extends StObject
-     with /* index */ NumberDictionary[org.scalajs.dom.raw.File] {
+     with /* standard DOM */
+/* index */ NumberDictionary[org.scalajs.dom.File] {
   
-  def item(index: Double): org.scalajs.dom.raw.File | Null = js.native
+  /* standard DOM */
+  def item(index: Double): org.scalajs.dom.File | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.File]] = js.native
+  var iterator: js.Function0[IterableIterator[org.scalajs.dom.File]] = js.native
   
+  /* standard DOM */
   val length: Double = js.native
 }

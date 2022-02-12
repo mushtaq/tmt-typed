@@ -9,12 +9,16 @@ trait WheelEventInit
   extends StObject
      with MouseEventInit {
   
+  /* standard DOM */
   var deltaMode: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var deltaX: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var deltaY: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var deltaZ: js.UndefOr[Double] = js.undefined
 }
 object WheelEventInit {

@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.NotificationOptions
+import org.scalajs.dom.NotificationOptions
 import tmttyped.std.NotificationPermission
 import tmttyped.std.NotificationPermissionCallback
 import org.scalablytyped.runtime.StObject
@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Notification protected ()
   extends StObject
      with tmttyped.std.Notification {
+  /* standard DOM */
   def this(title: java.lang.String) = this()
   def this(title: java.lang.String, options: NotificationOptions) = this()
 }
@@ -23,14 +24,12 @@ object Notification {
   @js.native
   val ^ : js.Any = js.native
   
-  @JSGlobal("Notification.maxActions")
-  @js.native
-  val maxActions: Double = js.native
-  
+  /* standard DOM */
   @JSGlobal("Notification.permission")
   @js.native
   val permission: NotificationPermission = js.native
   
+  /* standard DOM */
   @scala.inline
   def requestPermission(): js.Promise[NotificationPermission] = ^.asInstanceOf[js.Dynamic].applyDynamic("requestPermission")().asInstanceOf[js.Promise[NotificationPermission]]
   @scala.inline

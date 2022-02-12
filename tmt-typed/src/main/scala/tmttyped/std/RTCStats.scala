@@ -7,17 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCStats extends StObject {
   
-  var id: js.UndefOr[java.lang.String] = js.undefined
+  /* standard DOM */
+  var id: java.lang.String
   
-  var timestamp: js.UndefOr[Double] = js.undefined
+  /* standard DOM */
+  var timestamp: DOMHighResTimeStamp
   
-  var `type`: js.UndefOr[org.scalajs.dom.experimental.webrtc.RTCStatsType] = js.undefined
+  /* standard DOM */
+  var `type`: org.scalajs.dom.RTCStatsType
 }
 object RTCStats {
   
   @scala.inline
-  def apply(): RTCStats = {
-    val __obj = js.Dynamic.literal()
+  def apply(id: java.lang.String, timestamp: DOMHighResTimeStamp, `type`: org.scalajs.dom.RTCStatsType): RTCStats = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCStats]
   }
   
@@ -28,18 +32,9 @@ object RTCStats {
     def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdUndefined: Self = StObject.set(x, "id", js.undefined)
+    def setTimestamp(value: DOMHighResTimeStamp): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTimestamp(value: Double): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTimestampUndefined: Self = StObject.set(x, "timestamp", js.undefined)
-    
-    @scala.inline
-    def setType(value: org.scalajs.dom.experimental.webrtc.RTCStatsType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
+    def setType(value: org.scalajs.dom.RTCStatsType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

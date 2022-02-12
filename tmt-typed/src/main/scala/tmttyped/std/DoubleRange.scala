@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait DoubleRange extends StObject {
   
+  /* standard DOM */
   var max: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var min: js.UndefOr[Double] = js.undefined
 }
 object DoubleRange {

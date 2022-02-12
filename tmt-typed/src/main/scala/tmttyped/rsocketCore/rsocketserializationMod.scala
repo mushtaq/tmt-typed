@@ -20,20 +20,20 @@ object rsocketserializationMod {
     
     @JSImport("rsocket-core/RSocketSerialization", "IdentitySerializers.data")
     @js.native
-    def data: Serializer[js.Any] = js.native
+    def data: Serializer[Any] = js.native
     @scala.inline
-    def data_=(x: Serializer[js.Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("data")(x.asInstanceOf[js.Any])
+    def data_=(x: Serializer[Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("data")(x.asInstanceOf[js.Any])
     
     @JSImport("rsocket-core/RSocketSerialization", "IdentitySerializers.metadata")
     @js.native
-    def metadata: Serializer[js.Any] = js.native
+    def metadata: Serializer[Any] = js.native
     @scala.inline
-    def metadata_=(x: Serializer[js.Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
+    def metadata_=(x: Serializer[Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
   }
   
   @JSImport("rsocket-core/RSocketSerialization", "JsonSerializer")
   @js.native
-  val JsonSerializer: Serializer[js.Any] = js.native
+  val JsonSerializer: Serializer[Any] = js.native
   
   object JsonSerializers {
     
@@ -43,15 +43,15 @@ object rsocketserializationMod {
     
     @JSImport("rsocket-core/RSocketSerialization", "JsonSerializers.data")
     @js.native
-    def data: Serializer[js.Any] = js.native
+    def data: Serializer[Any] = js.native
     @scala.inline
-    def data_=(x: Serializer[js.Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("data")(x.asInstanceOf[js.Any])
+    def data_=(x: Serializer[Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("data")(x.asInstanceOf[js.Any])
     
     @JSImport("rsocket-core/RSocketSerialization", "JsonSerializers.metadata")
     @js.native
-    def metadata: Serializer[js.Any] = js.native
+    def metadata: Serializer[Any] = js.native
     @scala.inline
-    def metadata_=(x: Serializer[js.Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
+    def metadata_=(x: Serializer[Any]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("metadata")(x.asInstanceOf[js.Any])
   }
   
   trait PayloadSerializers[D, M] extends StObject {

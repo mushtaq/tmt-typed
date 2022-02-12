@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object win32Mod extends Shortcut {
   
-  @JSImport("path/win32", JSImport.Namespace)
+  @JSImport("node:path/win32", JSImport.Namespace)
   @js.native
   val ^ : PlatformPath = js.native
   

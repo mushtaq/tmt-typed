@@ -8,26 +8,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid. */
 trait ValidityState extends StObject {
   
+  /* standard DOM */
   val badInput: scala.Boolean
   
+  /* standard DOM */
   val customError: scala.Boolean
   
+  /* standard DOM */
   val patternMismatch: scala.Boolean
   
+  /* standard DOM */
   val rangeOverflow: scala.Boolean
   
+  /* standard DOM */
   val rangeUnderflow: scala.Boolean
   
+  /* standard DOM */
   val stepMismatch: scala.Boolean
   
+  /* standard DOM */
   val tooLong: scala.Boolean
   
+  /* standard DOM */
   val tooShort: scala.Boolean
   
+  /* standard DOM */
   val typeMismatch: scala.Boolean
   
+  /* standard DOM */
   val valid: scala.Boolean
   
+  /* standard DOM */
   val valueMissing: scala.Boolean
 }
 object ValidityState {

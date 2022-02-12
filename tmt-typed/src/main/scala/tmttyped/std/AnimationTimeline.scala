@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AnimationTimeline extends StObject {
   
+  /* standard DOM */
   val currentTime: Double | Null
 }
 object AnimationTimeline {

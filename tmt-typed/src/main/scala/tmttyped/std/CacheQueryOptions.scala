@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CacheQueryOptions extends StObject {
   
+  /* standard DOM */
   var ignoreMethod: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var ignoreSearch: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var ignoreVary: js.UndefOr[scala.Boolean] = js.undefined
 }
 object CacheQueryOptions {

@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextEncoderEncodeIntoResult extends StObject {
   
+  /* standard DOM */
   var read: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var written: js.UndefOr[Double] = js.undefined
 }
 object TextEncoderEncodeIntoResult {

@@ -24,8 +24,8 @@ object stringDecoderMod {
       * @since v0.9.3
       * @param buffer A `Buffer`, or `TypedArray`, or `DataView` containing the bytes to decode.
       */
-    def end(): java.lang.String = js.native
-    def end(buffer: Buffer): java.lang.String = js.native
+    def end(): String = js.native
+    def end(buffer: Buffer): String = js.native
     
     /**
       * Returns a decoded string, ensuring that any incomplete multibyte characters at
@@ -34,6 +34,6 @@ object stringDecoderMod {
       * @since v0.1.99
       * @param buffer A `Buffer`, or `TypedArray`, or `DataView` containing the bytes to decode.
       */
-    def write(buffer: Buffer): java.lang.String = js.native
+    def write(buffer: Buffer): String = js.native
   }
 }

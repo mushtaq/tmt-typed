@@ -36,40 +36,40 @@ package object fsMod {
   @scala.inline
   def appendFile(
     file: tmttyped.node.fsMod.PathOrFileDescriptor,
-    data: java.lang.String,
-    options: tmttyped.node.fsMod.WriteFileOptions,
-    callback: tmttyped.node.fsMod.NoParamCallback
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def appendFile(
-    file: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: js.typedarray.Uint8Array,
     callback: tmttyped.node.fsMod.NoParamCallback
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def appendFile(
-    file: tmttyped.node.fsMod.PathOrFileDescriptor,
+    path: tmttyped.node.fsMod.PathOrFileDescriptor,
+    data: java.lang.String,
+    options: tmttyped.node.fsMod.WriteFileOptions,
+    callback: tmttyped.node.fsMod.NoParamCallback
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def appendFile(
+    path: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: js.typedarray.Uint8Array,
     options: tmttyped.node.fsMod.WriteFileOptions,
     callback: tmttyped.node.fsMod.NoParamCallback
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def appendFileSync(file: tmttyped.node.fsMod.PathOrFileDescriptor, data: java.lang.String): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def appendFileSync(path: tmttyped.node.fsMod.PathOrFileDescriptor, data: java.lang.String): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def appendFileSync(
-    file: tmttyped.node.fsMod.PathOrFileDescriptor,
+    path: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: java.lang.String,
     options: tmttyped.node.fsMod.WriteFileOptions
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
-  def appendFileSync(file: tmttyped.node.fsMod.PathOrFileDescriptor, data: js.typedarray.Uint8Array): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def appendFileSync(path: tmttyped.node.fsMod.PathOrFileDescriptor, data: js.typedarray.Uint8Array): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def appendFileSync(
-    file: tmttyped.node.fsMod.PathOrFileDescriptor,
+    path: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: js.typedarray.Uint8Array,
     options: tmttyped.node.fsMod.WriteFileOptions
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def chmod(
@@ -110,26 +110,45 @@ package object fsMod {
   def copyFile(
     src: tmttyped.node.fsMod.PathLike,
     dest: tmttyped.node.fsMod.PathLike,
-    flags: scala.Double,
+    mode: scala.Double,
     callback: tmttyped.node.fsMod.NoParamCallback
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def copyFileSync(src: tmttyped.node.fsMod.PathLike, dest: tmttyped.node.fsMod.PathLike): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
-  def copyFileSync(src: tmttyped.node.fsMod.PathLike, dest: tmttyped.node.fsMod.PathLike, flags: scala.Double): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def copyFileSync(src: tmttyped.node.fsMod.PathLike, dest: tmttyped.node.fsMod.PathLike, mode: scala.Double): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def cp(
+    source: java.lang.String,
+    destination: java.lang.String,
+    callback: js.Function1[/* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def cp(
+    source: java.lang.String,
+    destination: java.lang.String,
+    opts: tmttyped.node.fsMod.CopyOptions,
+    callback: js.Function1[/* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  
+  @scala.inline
+  def cpSync(source: java.lang.String, destination: java.lang.String): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def cpSync(source: java.lang.String, destination: java.lang.String, opts: tmttyped.node.fsMod.CopyOptions): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def createReadStream(path: tmttyped.node.fsMod.PathLike): tmttyped.node.fsMod.ReadStream = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.ReadStream]
   @scala.inline
-  def createReadStream(path: tmttyped.node.fsMod.PathLike, options: java.lang.String): tmttyped.node.fsMod.ReadStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  def createReadStream(path: tmttyped.node.fsMod.PathLike, options: tmttyped.node.bufferMod.global.BufferEncoding): tmttyped.node.fsMod.ReadStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
   @scala.inline
   def createReadStream(path: tmttyped.node.fsMod.PathLike, options: tmttyped.node.fsMod.ReadStreamOptions): tmttyped.node.fsMod.ReadStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
   
   @scala.inline
   def createWriteStream(path: tmttyped.node.fsMod.PathLike): tmttyped.node.fsMod.WriteStream = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.WriteStream]
   @scala.inline
-  def createWriteStream(path: tmttyped.node.fsMod.PathLike, options: java.lang.String): tmttyped.node.fsMod.WriteStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  def createWriteStream(path: tmttyped.node.fsMod.PathLike, options: tmttyped.node.bufferMod.global.BufferEncoding): tmttyped.node.fsMod.WriteStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
   @scala.inline
   def createWriteStream(path: tmttyped.node.fsMod.PathLike, options: tmttyped.node.fsMod.StreamOptions): tmttyped.node.fsMod.WriteStream = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
   
@@ -213,7 +232,16 @@ package object fsMod {
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def fstatSync: tmttyped.node.fsMod.StatSyncFn[scala.Double] = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].selectDynamic("fstatSync").asInstanceOf[tmttyped.node.fsMod.StatSyncFn[scala.Double]]
+  def fstatSync(fd: scala.Double): tmttyped.node.fsMod.Stats = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def fstatSync(fd: scala.Double, options: tmttyped.node.anon.StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
+  @scala.inline
+  def fstatSync(fd: scala.Double, options: tmttyped.node.anon.StatOptionsbiginttrue): tmttyped.node.fsMod.BigIntStats = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.BigIntStats]
+  @scala.inline
+  def fstatSync(fd: scala.Double, options: tmttyped.node.fsMod.StatOptions): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
+  
+  @scala.inline
+  def fstatSync_Union(fd: scala.Double): tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | tmttyped.node.fsMod.BigIntStats]
   
   @scala.inline
   def fsync(fd: scala.Double, callback: tmttyped.node.fsMod.NoParamCallback): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -328,7 +356,7 @@ package object fsMod {
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def lstatSync: tmttyped.node.fsMod.StatSyncFn[tmttyped.node.fsMod.PathLike] = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].selectDynamic("lstatSync").asInstanceOf[tmttyped.node.fsMod.StatSyncFn[tmttyped.node.fsMod.PathLike]]
+  def lstatSync: tmttyped.node.fsMod.StatSyncFn = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].selectDynamic("lstatSync").asInstanceOf[tmttyped.node.fsMod.StatSyncFn]
   
   @scala.inline
   def lutimes(
@@ -545,7 +573,7 @@ package object fsMod {
   
   @scala.inline
   def opendir(
-    path: java.lang.String,
+    path: tmttyped.node.fsMod.PathLike,
     cb: js.Function2[
       /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
       /* dir */ tmttyped.node.fsMod.Dir, 
@@ -554,7 +582,7 @@ package object fsMod {
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def opendir(
-    path: java.lang.String,
+    path: tmttyped.node.fsMod.PathLike,
     options: tmttyped.node.fsMod.OpenDirOptions,
     cb: js.Function2[
       /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
@@ -564,9 +592,9 @@ package object fsMod {
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def opendirSync(path: java.lang.String): tmttyped.node.fsMod.Dir = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Dir]
+  def opendirSync(path: tmttyped.node.fsMod.PathLike): tmttyped.node.fsMod.Dir = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Dir]
   @scala.inline
-  def opendirSync(path: java.lang.String, options: tmttyped.node.fsMod.OpenDirOptions): tmttyped.node.fsMod.Dir = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Dir]
+  def opendirSync(path: tmttyped.node.fsMod.PathLike, options: tmttyped.node.fsMod.OpenDirOptions): tmttyped.node.fsMod.Dir = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Dir]
   
   @scala.inline
   def read(
@@ -917,16 +945,6 @@ package object fsMod {
   @scala.inline
   def readFile(
     path: tmttyped.node.fsMod.PathOrFileDescriptor,
-    options: java.lang.String,
-    callback: js.Function2[
-      tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      tmttyped.node.bufferMod.global.Buffer | (/* data */ java.lang.String), 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def readFile(
-    path: tmttyped.node.fsMod.PathOrFileDescriptor,
     options: scala.Null,
     callback: js.Function2[
       tmttyped.node.NodeJS.ErrnoException | scala.Null, 
@@ -971,6 +989,16 @@ package object fsMod {
     callback: js.Function2[
       /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
       /* data */ tmttyped.node.bufferMod.global.Buffer, 
+      scala.Unit
+    ]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def readFile(
+    path: tmttyped.node.fsMod.PathOrFileDescriptor,
+    options: tmttyped.node.bufferMod.global.BufferEncoding,
+    callback: js.Function2[
+      tmttyped.node.NodeJS.ErrnoException | scala.Null, 
+      tmttyped.node.bufferMod.global.Buffer | (/* data */ java.lang.String), 
       scala.Unit
     ]
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1291,7 +1319,7 @@ package object fsMod {
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def statSync: tmttyped.node.fsMod.StatSyncFn[tmttyped.node.fsMod.PathLike] = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].selectDynamic("statSync").asInstanceOf[tmttyped.node.fsMod.StatSyncFn[tmttyped.node.fsMod.PathLike]]
+  def statSync: tmttyped.node.fsMod.StatSyncFn = tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].selectDynamic("statSync").asInstanceOf[tmttyped.node.fsMod.StatSyncFn]
   
   @scala.inline
   def symlinkSync(target: tmttyped.node.fsMod.PathLike, path: tmttyped.node.fsMod.PathLike): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
@@ -1413,27 +1441,37 @@ package object fsMod {
       /* prev */ tmttyped.node.fsMod.Stats, 
       scala.Unit
     ]
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): tmttyped.node.fsMod.StatWatcher = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.StatWatcher]
   @scala.inline
   def watchFile(
     filename: tmttyped.node.fsMod.PathLike,
     options: scala.Unit,
     listener: js.Function2[
-      /* curr */ tmttyped.node.fsMod.Stats, 
-      /* prev */ tmttyped.node.fsMod.Stats, 
+      (/* curr */ tmttyped.node.fsMod.BigIntStats) | (/* curr */ tmttyped.node.fsMod.Stats), 
+      (/* prev */ tmttyped.node.fsMod.BigIntStats) | (/* prev */ tmttyped.node.fsMod.Stats), 
       scala.Unit
     ]
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): tmttyped.node.fsMod.StatWatcher = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.StatWatcher]
   @scala.inline
   def watchFile(
     filename: tmttyped.node.fsMod.PathLike,
-    options: tmttyped.node.anon.Interval,
+    options: tmttyped.node.anon.WatchFileOptionsbigintfal,
     listener: js.Function2[
       /* curr */ tmttyped.node.fsMod.Stats, 
       /* prev */ tmttyped.node.fsMod.Stats, 
       scala.Unit
     ]
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): tmttyped.node.fsMod.StatWatcher = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.StatWatcher]
+  @scala.inline
+  def watchFile(
+    filename: tmttyped.node.fsMod.PathLike,
+    options: tmttyped.node.anon.WatchFileOptionsbiginttru,
+    listener: js.Function2[
+      /* curr */ tmttyped.node.fsMod.BigIntStats, 
+      /* prev */ tmttyped.node.fsMod.BigIntStats, 
+      scala.Unit
+    ]
+  ): tmttyped.node.fsMod.StatWatcher = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.StatWatcher]
   
   @scala.inline
   def watch_buffer(filename: tmttyped.node.fsMod.PathLike, options: tmttyped.node.nodeStrings.buffer_): tmttyped.node.fsMod.FSWatcher = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.FSWatcher]
@@ -8115,6 +8153,20 @@ package object fsMod {
   
   @scala.inline
   def writeFile(
+    file: tmttyped.node.fsMod.PathOrFileDescriptor,
+    data: java.lang.String,
+    options: tmttyped.node.fsMod.WriteFileOptions,
+    callback: tmttyped.node.fsMod.NoParamCallback
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def writeFile(
+    file: tmttyped.node.fsMod.PathOrFileDescriptor,
+    data: tmttyped.node.NodeJS.ArrayBufferView,
+    options: tmttyped.node.fsMod.WriteFileOptions,
+    callback: tmttyped.node.fsMod.NoParamCallback
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  @scala.inline
+  def writeFile(
     path: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: java.lang.String,
     callback: tmttyped.node.fsMod.NoParamCallback
@@ -8122,40 +8174,26 @@ package object fsMod {
   @scala.inline
   def writeFile(
     path: tmttyped.node.fsMod.PathOrFileDescriptor,
-    data: java.lang.String,
-    options: tmttyped.node.fsMod.WriteFileOptions,
-    callback: tmttyped.node.fsMod.NoParamCallback
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def writeFile(
-    path: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: tmttyped.node.NodeJS.ArrayBufferView,
     callback: tmttyped.node.fsMod.NoParamCallback
   ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def writeFile(
-    path: tmttyped.node.fsMod.PathOrFileDescriptor,
-    data: tmttyped.node.NodeJS.ArrayBufferView,
-    options: tmttyped.node.fsMod.WriteFileOptions,
-    callback: tmttyped.node.fsMod.NoParamCallback
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
-  def writeFileSync(path: tmttyped.node.fsMod.PathOrFileDescriptor, data: java.lang.String): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def writeFileSync(file: tmttyped.node.fsMod.PathOrFileDescriptor, data: java.lang.String): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def writeFileSync(
-    path: tmttyped.node.fsMod.PathOrFileDescriptor,
+    file: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: java.lang.String,
     options: tmttyped.node.fsMod.WriteFileOptions
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
-  def writeFileSync(path: tmttyped.node.fsMod.PathOrFileDescriptor, data: tmttyped.node.NodeJS.ArrayBufferView): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  def writeFileSync(file: tmttyped.node.fsMod.PathOrFileDescriptor, data: tmttyped.node.NodeJS.ArrayBufferView): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   @scala.inline
   def writeFileSync(
-    path: tmttyped.node.fsMod.PathOrFileDescriptor,
+    file: tmttyped.node.fsMod.PathOrFileDescriptor,
     data: tmttyped.node.NodeJS.ArrayBufferView,
     options: tmttyped.node.fsMod.WriteFileOptions
-  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
+  ): scala.Unit = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
   def writeSync(fd: scala.Double, buffer: tmttyped.node.NodeJS.ArrayBufferView): scala.Double = (tmttyped.node.fsMod.^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[scala.Double]
@@ -8336,11 +8374,12 @@ package object fsMod {
   
   type TimeLike = java.lang.String | scala.Double | js.Date
   
-  type WatchListener[T] = js.Function2[
-    /* event */ tmttyped.node.nodeStrings.rename | tmttyped.node.nodeStrings.change, 
-    /* filename */ T, 
-    scala.Unit
-  ]
+  type WatchListener[T] = js.Function2[/* event */ tmttyped.node.fsMod.WatchEventType, /* filename */ T, scala.Unit]
   
-  type WriteFileOptions = tmttyped.node.anon.ObjectEncodingOptionsAborEncoding | java.lang.String | scala.Null
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.node.anon.ObjectEncodingOptionsAborEncoding
+    - tmttyped.node.bufferMod.global.BufferEncoding
+    - scala.Null
+  */
+  type WriteFileOptions = tmttyped.node.fsMod._WriteFileOptions | scala.Null
 }

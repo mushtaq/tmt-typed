@@ -10,12 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Object")
 @js.native
+/* standard es5 */
 class Object ()
   extends StObject
      with tmttyped.std.Object {
-  def this(value: js.Any) = this()
+  def this(value: Any) = this()
   
   /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
+  /* standard es5 */
   /* CompleteClass */
   override var constructor: js.Function = js.native
   
@@ -23,6 +25,7 @@ class Object ()
     * Determines whether an object has a property with the specified name.
     * @param v A property name.
     */
+  /* standard es5 */
   /* CompleteClass */
   override def hasOwnProperty(v: PropertyKey): scala.Boolean = js.native
   
@@ -30,6 +33,7 @@ class Object ()
     * Determines whether a specified property is enumerable.
     * @param v A property name.
     */
+  /* standard es5 */
   /* CompleteClass */
   override def propertyIsEnumerable(v: PropertyKey): scala.Boolean = js.native
 }

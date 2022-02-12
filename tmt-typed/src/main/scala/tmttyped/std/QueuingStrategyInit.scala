@@ -12,6 +12,7 @@ trait QueuingStrategyInit extends StObject {
     *
     * Note that the provided high water mark will not be validated ahead of time. Instead, if it is negative, NaN, or not a number, the resulting ByteLengthQueuingStrategy will cause the corresponding stream constructor to throw.
     */
+  /* standard DOM */
   var highWaterMark: Double
 }
 object QueuingStrategyInit {

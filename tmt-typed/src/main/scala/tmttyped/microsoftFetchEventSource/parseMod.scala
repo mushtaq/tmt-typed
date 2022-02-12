@@ -1,6 +1,6 @@
 package tmttyped.microsoftFetchEventSource
 
-import org.scalajs.dom.experimental.ReadableStream
+import org.scalajs.dom.ReadableStream
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

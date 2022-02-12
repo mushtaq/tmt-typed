@@ -18,11 +18,11 @@ trait PageTransitionEvent
     *
     * Things that can cause the page to be unsalvageable include:
     *
-    * Listening for beforeunload events
-    * Listening for unload events
+    * The user agent decided to not keep the Document alive in a session history entry after unload
     * Having iframes that are not salvageable
     * Active WebSocket objects
     * Aborting a Document
     */
+  /* standard DOM */
   val persisted: scala.Boolean = js.native
 }

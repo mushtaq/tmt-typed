@@ -11,11 +11,15 @@ trait SVGEllipseElement
   extends StObject
      with SVGGeometryElement {
   
-  val cx: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val cx: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val cy: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val cy: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val rx: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val rx: org.scalajs.dom.SVGAnimatedLength = js.native
   
-  val ry: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val ry: org.scalajs.dom.SVGAnimatedLength = js.native
 }

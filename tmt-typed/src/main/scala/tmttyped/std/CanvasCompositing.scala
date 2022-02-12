@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait CanvasCompositing extends StObject {
   
+  /* standard DOM */
   var globalAlpha: Double
   
+  /* standard DOM */
   var globalCompositeOperation: java.lang.String
 }
 object CanvasCompositing {

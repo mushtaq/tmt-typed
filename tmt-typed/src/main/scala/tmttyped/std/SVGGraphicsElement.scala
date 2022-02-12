@@ -12,6 +12,7 @@ trait SVGGraphicsElement
      with SVGElement
      with SVGTests {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -23,23 +24,28 @@ trait SVGGraphicsElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  def getBBox(): DOMRect = js.native
-  def getBBox(options: SVGBoundingBoxOptions): DOMRect = js.native
+  /* standard DOM */
+  def getBBox(): org.scalajs.dom.DOMRect = js.native
+  def getBBox(options: SVGBoundingBoxOptions): org.scalajs.dom.DOMRect = js.native
   
+  /* standard DOM */
   def getCTM(): DOMMatrix | Null = js.native
   
+  /* standard DOM */
   def getScreenCTM(): DOMMatrix | Null = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val transform: org.scalajs.dom.raw.SVGAnimatedTransformList = js.native
+  /* standard DOM */
+  val transform: org.scalajs.dom.SVGAnimatedTransformList = js.native
 }

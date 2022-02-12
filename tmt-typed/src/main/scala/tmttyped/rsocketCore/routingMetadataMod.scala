@@ -28,5 +28,5 @@ object routingMetadataMod {
   def encodeRoute(route: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoute")(route.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
   @scala.inline
-  def encodeRoutes(routes: String*): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoutes")(routes.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  def encodeRoutes(routes: String*): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeRoutes")(routes.asInstanceOf[Seq[js.Any]] :_*)).asInstanceOf[Buffer]
 }

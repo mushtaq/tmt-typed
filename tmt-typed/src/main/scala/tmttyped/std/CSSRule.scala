@@ -8,32 +8,47 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A single CSS rule. There are several types of rules, listed in the Type constants section below. */
 trait CSSRule extends StObject {
   
+  /* standard DOM */
   val CHARSET_RULE: Double
   
+  /* standard DOM */
   val FONT_FACE_RULE: Double
   
+  /* standard DOM */
   val IMPORT_RULE: Double
   
+  /* standard DOM */
   val KEYFRAMES_RULE: Double
   
+  /* standard DOM */
   val KEYFRAME_RULE: Double
   
+  /* standard DOM */
   val MEDIA_RULE: Double
   
+  /* standard DOM */
   val NAMESPACE_RULE: Double
   
+  /* standard DOM */
   val PAGE_RULE: Double
   
+  /* standard DOM */
   val STYLE_RULE: Double
   
+  /* standard DOM */
   val SUPPORTS_RULE: Double
   
+  /* standard DOM */
   var cssText: java.lang.String
   
-  val parentRule: org.scalajs.dom.raw.CSSRule | Null
+  /* standard DOM */
+  val parentRule: org.scalajs.dom.CSSRule | Null
   
-  val parentStyleSheet: org.scalajs.dom.raw.CSSStyleSheet | Null
+  /* standard DOM */
+  val parentStyleSheet: org.scalajs.dom.CSSStyleSheet | Null
   
+  /** @deprecated */
+  /* standard DOM */
   val `type`: Double
 }
 object CSSRule {
@@ -89,13 +104,13 @@ object CSSRule {
     def setPAGE_RULE(value: Double): Self = StObject.set(x, "PAGE_RULE", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParentRule(value: org.scalajs.dom.raw.CSSRule): Self = StObject.set(x, "parentRule", value.asInstanceOf[js.Any])
+    def setParentRule(value: org.scalajs.dom.CSSRule): Self = StObject.set(x, "parentRule", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentRuleNull: Self = StObject.set(x, "parentRule", null)
     
     @scala.inline
-    def setParentStyleSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = StObject.set(x, "parentStyleSheet", value.asInstanceOf[js.Any])
+    def setParentStyleSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "parentStyleSheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentStyleSheetNull: Self = StObject.set(x, "parentStyleSheet", null)

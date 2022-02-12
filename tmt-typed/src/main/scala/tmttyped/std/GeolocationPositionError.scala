@@ -7,14 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait GeolocationPositionError extends StObject {
   
+  /* standard DOM */
   val PERMISSION_DENIED: Double
   
+  /* standard DOM */
   val POSITION_UNAVAILABLE: Double
   
+  /* standard DOM */
   val TIMEOUT: Double
   
+  /* standard DOM */
   val code: Double
   
+  /* standard DOM */
   val message: java.lang.String
 }
 object GeolocationPositionError {

@@ -11,5 +11,6 @@ trait FocusEvent
   extends StObject
      with UIEvent {
   
-  val relatedTarget: org.scalajs.dom.raw.EventTarget | Null = js.native
+  /* standard DOM */
+  val relatedTarget: org.scalajs.dom.EventTarget | Null = js.native
 }

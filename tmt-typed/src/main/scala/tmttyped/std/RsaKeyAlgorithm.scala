@@ -9,8 +9,10 @@ trait RsaKeyAlgorithm
   extends StObject
      with KeyAlgorithm {
   
+  /* standard DOM */
   var modulusLength: Double
   
+  /* standard DOM */
   var publicExponent: js.typedarray.Uint8Array
 }
 object RsaKeyAlgorithm {

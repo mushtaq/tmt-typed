@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMTokenList
   extends StObject
-     with /* index */ NumberDictionary[java.lang.String] {
+     with /* standard DOM */
+/* index */ NumberDictionary[java.lang.String] {
   
   /**
     * Adds all arguments passed, except those already present.
@@ -19,36 +20,38 @@ trait DOMTokenList
     *
     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
     */
+  /* standard DOM */
   def add(tokens: java.lang.String*): Unit = js.native
   
-  /**
-    * Returns true if token is present, and false otherwise.
-    */
+  /** Returns true if token is present, and false otherwise. */
+  /* standard DOM */
   def contains(token: java.lang.String): scala.Boolean = js.native
   
+  /* standard DOM.Iterable */
   def entries(): IterableIterator[js.Tuple2[Double, java.lang.String]] = js.native
   
+  /* standard DOM */
   def forEach(
     callbackfn: js.Function3[/* value */ java.lang.String, /* key */ Double, /* parent */ this.type, Unit]
   ): Unit = js.native
   def forEach(
     callbackfn: js.Function3[/* value */ java.lang.String, /* key */ Double, /* parent */ this.type, Unit],
-    thisArg: js.Any
+    thisArg: Any
   ): Unit = js.native
   
-  /**
-    * Returns the token with index index.
-    */
+  /** Returns the token with index index. */
+  /* standard DOM */
   def item(index: Double): java.lang.String | Null = js.native
   
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[java.lang.String]] = js.native
   
+  /* standard DOM.Iterable */
   def keys(): IterableIterator[Double] = js.native
   
-  /**
-    * Returns the number of tokens.
-    */
+  /** Returns the number of tokens. */
+  /* standard DOM */
   val length: Double = js.native
   
   /**
@@ -58,6 +61,7 @@ trait DOMTokenList
     *
     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
     */
+  /* standard DOM */
   def remove(tokens: java.lang.String*): Unit = js.native
   
   /**
@@ -69,13 +73,15 @@ trait DOMTokenList
     *
     * Throws an "InvalidCharacterError" DOMException if one of the arguments contains any ASCII whitespace.
     */
-  def replace(oldToken: java.lang.String, newToken: java.lang.String): Unit = js.native
+  /* standard DOM */
+  def replace(token: java.lang.String, newToken: java.lang.String): scala.Boolean = js.native
   
   /**
     * Returns true if token is in the associated attribute's supported tokens. Returns false otherwise.
     *
     * Throws a TypeError if the associated attribute has no supported tokens defined.
     */
+  /* standard DOM */
   def supports(token: java.lang.String): scala.Boolean = js.native
   
   /**
@@ -87,6 +93,7 @@ trait DOMTokenList
     *
     * Throws an "InvalidCharacterError" DOMException if token contains any spaces.
     */
+  /* standard DOM */
   def toggle(token: java.lang.String): scala.Boolean = js.native
   def toggle(token: java.lang.String, force: scala.Boolean): scala.Boolean = js.native
   
@@ -95,7 +102,9 @@ trait DOMTokenList
     *
     * Can be set, to change the associated attribute.
     */
+  /* standard DOM */
   var value: java.lang.String = js.native
   
+  /* standard DOM.Iterable */
   def values(): IterableIterator[java.lang.String] = js.native
 }

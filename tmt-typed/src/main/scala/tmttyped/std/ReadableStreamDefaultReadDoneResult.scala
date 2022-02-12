@@ -8,10 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ReadableStreamDefaultReadDoneResult
   extends StObject
-     with ReadableStreamDefaultReadResult[js.Any] {
+     with ReadableStreamDefaultReadResult[Any] {
   
+  /* standard DOM */
   var done: `true`
   
+  /* standard DOM */
   var value: Unit
 }
 object ReadableStreamDefaultReadDoneResult {

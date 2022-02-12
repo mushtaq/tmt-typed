@@ -8,8 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReadableStreamGenericReader extends StObject {
   
+  /* standard DOM */
   def cancel(): js.Promise[Unit] = js.native
-  def cancel(reason: js.Any): js.Promise[Unit] = js.native
+  def cancel(reason: Any): js.Promise[Unit] = js.native
   
+  /* standard DOM */
   val closed: js.Promise[Unit] = js.native
 }

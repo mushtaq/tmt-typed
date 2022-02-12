@@ -11,30 +11,45 @@ trait AudioNode
   extends StObject
      with EventTarget {
   
+  /* standard DOM */
   var channelCount: Double = js.native
   
+  /* standard DOM */
   var channelCountMode: ChannelCountMode = js.native
   
+  /* standard DOM */
   var channelInterpretation: ChannelInterpretation = js.native
   
-  def connect(destinationNode: org.scalajs.dom.raw.AudioNode): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double, input: Double): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Unit, input: Double): org.scalajs.dom.raw.AudioNode = js.native
-  def connect(destinationParam: org.scalajs.dom.raw.AudioParam): Unit = js.native
-  def connect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
+  /* standard DOM */
+  def connect(destinationNode: org.scalajs.dom.AudioNode): org.scalajs.dom.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.AudioNode, output: Double): org.scalajs.dom.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.AudioNode, output: Double, input: Double): org.scalajs.dom.AudioNode = js.native
+  def connect(destinationNode: org.scalajs.dom.AudioNode, output: Unit, input: Double): org.scalajs.dom.AudioNode = js.native
+  /* standard DOM */
+  def connect(destinationParam: org.scalajs.dom.AudioParam): Unit = js.native
+  def connect(destinationParam: org.scalajs.dom.AudioParam, output: Double): Unit = js.native
   
+  /* standard DOM */
   val context: BaseAudioContext = js.native
   
+  /* standard DOM */
   def disconnect(): Unit = js.native
-  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode): Unit = js.native
-  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double): Unit = js.native
-  def disconnect(destinationNode: org.scalajs.dom.raw.AudioNode, output: Double, input: Double): Unit = js.native
-  def disconnect(destinationParam: org.scalajs.dom.raw.AudioParam): Unit = js.native
-  def disconnect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
+  /* standard DOM */
+  def disconnect(destinationNode: org.scalajs.dom.AudioNode): Unit = js.native
+  /* standard DOM */
+  def disconnect(destinationNode: org.scalajs.dom.AudioNode, output: Double): Unit = js.native
+  /* standard DOM */
+  def disconnect(destinationNode: org.scalajs.dom.AudioNode, output: Double, input: Double): Unit = js.native
+  /* standard DOM */
+  def disconnect(destinationParam: org.scalajs.dom.AudioParam): Unit = js.native
+  /* standard DOM */
+  def disconnect(destinationParam: org.scalajs.dom.AudioParam, output: Double): Unit = js.native
+  /* standard DOM */
   def disconnect(output: Double): Unit = js.native
   
+  /* standard DOM */
   val numberOfInputs: Double = js.native
   
+  /* standard DOM */
   val numberOfOutputs: Double = js.native
 }

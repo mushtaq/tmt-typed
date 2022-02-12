@@ -5,10 +5,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait Credential extends StObject {
   
+  /* standard DOM */
   val id: java.lang.String
   
+  /* standard DOM */
   val `type`: java.lang.String
 }
 object Credential {

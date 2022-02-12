@@ -9,8 +9,10 @@ trait PeriodicWaveOptions
   extends StObject
      with PeriodicWaveConstraints {
   
+  /* standard DOM */
   var imag: js.UndefOr[js.Array[Double] | js.typedarray.Float32Array] = js.undefined
   
+  /* standard DOM */
   var real: js.UndefOr[js.Array[Double] | js.typedarray.Float32Array] = js.undefined
 }
 object PeriodicWaveOptions {

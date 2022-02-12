@@ -8,14 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CanvasImageData extends StObject {
   
-  def createImageData(imagedata: org.scalajs.dom.raw.ImageData): org.scalajs.dom.raw.ImageData = js.native
-  def createImageData(sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
+  /* standard DOM */
+  def createImageData(imagedata: org.scalajs.dom.ImageData): org.scalajs.dom.ImageData = js.native
+  /* standard DOM */
+  def createImageData(sw: Double, sh: Double): org.scalajs.dom.ImageData = js.native
+  def createImageData(sw: Double, sh: Double, settings: ImageDataSettings): org.scalajs.dom.ImageData = js.native
   
-  def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): org.scalajs.dom.raw.ImageData = js.native
+  /* standard DOM */
+  def getImageData(sx: Double, sy: Double, sw: Double, sh: Double): org.scalajs.dom.ImageData = js.native
+  def getImageData(sx: Double, sy: Double, sw: Double, sh: Double, settings: ImageDataSettings): org.scalajs.dom.ImageData = js.native
   
-  def putImageData(imagedata: org.scalajs.dom.raw.ImageData, dx: Double, dy: Double): Unit = js.native
+  /* standard DOM */
+  def putImageData(imagedata: org.scalajs.dom.ImageData, dx: Double, dy: Double): Unit = js.native
+  /* standard DOM */
   def putImageData(
-    imagedata: org.scalajs.dom.raw.ImageData,
+    imagedata: org.scalajs.dom.ImageData,
     dx: Double,
     dy: Double,
     dirtyX: Double,

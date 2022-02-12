@@ -7,8 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Writable>`
-  *
   * The `Verify` class is a utility for verifying signatures. It can be used in one
   * of two ways:
   *
@@ -24,9 +22,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Verify")
 @js.native
-class Verify_ protected () extends StObject {
+/* private */ class Verify_ () extends StObject {
   
-  def update(data: String, input_encoding: Encoding): Verify_ = js.native
+  def update(data: String, inputEncoding: Encoding): Verify_ = js.native
   /**
     * Updates the `Verify` content with the given `data`, the encoding of which
     * is given in `inputEncoding`.

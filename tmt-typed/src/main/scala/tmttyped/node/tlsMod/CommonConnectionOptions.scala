@@ -25,7 +25,7 @@ trait CommonConnectionOptions extends StObject {
   var SNICallback: js.UndefOr[
     js.Function2[
       /* servername */ String, 
-      /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit], 
+      /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ js.UndefOr[SecureContext], Unit], 
       Unit
     ]
   ] = js.undefined
@@ -97,7 +97,7 @@ object CommonConnectionOptions {
     
     @scala.inline
     def setSNICallback(
-      value: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ SecureContext, Unit]) => Unit
+      value: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ js.UndefOr[SecureContext], Unit]) => Unit
     ): Self = StObject.set(x, "SNICallback", js.Any.fromFunction2(value))
     
     @scala.inline

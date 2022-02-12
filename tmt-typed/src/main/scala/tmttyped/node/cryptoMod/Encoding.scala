@@ -7,13 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - tmttyped.node.nodeStrings.base64
+  - tmttyped.node.nodeStrings.base64url
   - tmttyped.node.nodeStrings.hex
+  - tmttyped.node.nodeStrings.binary
   - tmttyped.node.nodeStrings.utf8
   - tmttyped.node.nodeStrings.`utf-8`
   - tmttyped.node.nodeStrings.utf16le
   - tmttyped.node.nodeStrings.latin1
   - tmttyped.node.nodeStrings.ascii
-  - tmttyped.node.nodeStrings.binary
   - tmttyped.node.nodeStrings.ucs2
   - tmttyped.node.nodeStrings.`ucs-2`
 */
@@ -25,6 +26,9 @@ object Encoding {
   
   @scala.inline
   def base64: tmttyped.node.nodeStrings.base64 = "base64".asInstanceOf[tmttyped.node.nodeStrings.base64]
+  
+  @scala.inline
+  def base64url: tmttyped.node.nodeStrings.base64url = "base64url".asInstanceOf[tmttyped.node.nodeStrings.base64url]
   
   @scala.inline
   def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]

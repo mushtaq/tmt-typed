@@ -9,9 +9,8 @@ trait RsaOaepParams
   extends StObject
      with Algorithm {
   
-  var label: js.UndefOr[
-    js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ] = js.undefined
+  /* standard DOM */
+  var label: js.UndefOr[BufferSource] = js.undefined
 }
 object RsaOaepParams {
   
@@ -25,9 +24,7 @@ object RsaOaepParams {
   implicit class RsaOaepParamsMutableBuilder[Self <: RsaOaepParams] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setLabel(
-      value: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-    ): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
+    def setLabel(value: BufferSource): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)

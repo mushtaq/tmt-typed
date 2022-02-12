@@ -17,6 +17,7 @@ trait RSAKeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] exten
   var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with Type
   
   /**
+    * Public exponent
     * @default 0x10001
     */
   var publicExponent: js.UndefOr[Double] = js.undefined

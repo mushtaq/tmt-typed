@@ -11,5 +11,6 @@ trait CSSMediaRule
   extends StObject
      with CSSConditionRule {
   
-  val media: org.scalajs.dom.raw.MediaList = js.native
+  /* standard DOM */
+  val media: org.scalajs.dom.MediaList = js.native
 }

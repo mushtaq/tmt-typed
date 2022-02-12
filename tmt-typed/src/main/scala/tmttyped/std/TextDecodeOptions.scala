@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextDecodeOptions extends StObject {
   
+  /* standard DOM */
   var stream: js.UndefOr[scala.Boolean] = js.undefined
 }
 object TextDecodeOptions {

@@ -7,34 +7,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaTrackConstraintSet extends StObject {
   
+  /* standard DOM */
   var aspectRatio: js.UndefOr[ConstrainDouble] = js.undefined
   
+  /* standard DOM */
   var autoGainControl: js.UndefOr[ConstrainBoolean] = js.undefined
   
+  /* standard DOM */
   var channelCount: js.UndefOr[ConstrainULong] = js.undefined
   
+  /* standard DOM */
   var deviceId: js.UndefOr[ConstrainDOMString] = js.undefined
   
+  /* standard DOM */
   var echoCancellation: js.UndefOr[ConstrainBoolean] = js.undefined
   
+  /* standard DOM */
   var facingMode: js.UndefOr[ConstrainDOMString] = js.undefined
   
+  /* standard DOM */
   var frameRate: js.UndefOr[ConstrainDouble] = js.undefined
   
+  /* standard DOM */
   var groupId: js.UndefOr[ConstrainDOMString] = js.undefined
   
+  /* standard DOM */
   var height: js.UndefOr[ConstrainULong] = js.undefined
   
+  /* standard DOM */
   var latency: js.UndefOr[ConstrainDouble] = js.undefined
   
+  /* standard DOM */
   var noiseSuppression: js.UndefOr[ConstrainBoolean] = js.undefined
   
-  var resizeMode: js.UndefOr[ConstrainDOMString] = js.undefined
-  
+  /* standard DOM */
   var sampleRate: js.UndefOr[ConstrainULong] = js.undefined
   
+  /* standard DOM */
   var sampleSize: js.UndefOr[ConstrainULong] = js.undefined
   
+  /* standard DOM */
+  var suppressLocalAudioPlayback: js.UndefOr[ConstrainBoolean] = js.undefined
+  
+  /* standard DOM */
   var width: js.UndefOr[ConstrainULong] = js.undefined
 }
 object MediaTrackConstraintSet {
@@ -124,15 +139,6 @@ object MediaTrackConstraintSet {
     def setNoiseSuppressionUndefined: Self = StObject.set(x, "noiseSuppression", js.undefined)
     
     @scala.inline
-    def setResizeMode(value: ConstrainDOMString): Self = StObject.set(x, "resizeMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResizeModeUndefined: Self = StObject.set(x, "resizeMode", js.undefined)
-    
-    @scala.inline
-    def setResizeModeVarargs(value: java.lang.String*): Self = StObject.set(x, "resizeMode", js.Array(value :_*))
-    
-    @scala.inline
     def setSampleRate(value: ConstrainULong): Self = StObject.set(x, "sampleRate", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -143,6 +149,12 @@ object MediaTrackConstraintSet {
     
     @scala.inline
     def setSampleSizeUndefined: Self = StObject.set(x, "sampleSize", js.undefined)
+    
+    @scala.inline
+    def setSuppressLocalAudioPlayback(value: ConstrainBoolean): Self = StObject.set(x, "suppressLocalAudioPlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSuppressLocalAudioPlaybackUndefined: Self = StObject.set(x, "suppressLocalAudioPlayback", js.undefined)
     
     @scala.inline
     def setWidth(value: ConstrainULong): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])

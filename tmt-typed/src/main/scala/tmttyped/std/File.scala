@@ -11,7 +11,12 @@ trait File
   extends StObject
      with Blob {
   
+  /* standard DOM */
   val lastModified: Double = js.native
   
+  /* standard DOM */
   val name: java.lang.String = js.native
+  
+  /* standard DOM */
+  val webkitRelativePath: java.lang.String = js.native
 }

@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait SecureContext extends StObject {
   
-  var context: js.Any
+  var context: Any
 }
 object SecureContext {
   
   @scala.inline
-  def apply(context: js.Any): SecureContext = {
+  def apply(context: Any): SecureContext = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecureContext]
   }
@@ -21,6 +21,6 @@ object SecureContext {
   implicit class SecureContextMutableBuilder[Self <: SecureContext] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setContext(value: js.Any): Self = StObject.set(x, "context", value.asInstanceOf[js.Any])
+    def setContext(value: Any): Self = StObject.set(x, "context", value.asInstanceOf[js.Any])
   }
 }

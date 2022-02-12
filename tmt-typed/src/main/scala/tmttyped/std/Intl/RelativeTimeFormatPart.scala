@@ -10,15 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * that can be used for custom locale-aware formatting.
   *
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).
-  *
-  * [Specification](https://tc39.es/ecma402/#sec-FormatRelativeTimeToParts).
   */
 trait RelativeTimeFormatPart extends StObject {
   
+  /* standard es2020.intl */
   var `type`: String
   
+  /* standard es2020.intl */
   var unit: js.UndefOr[RelativeTimeFormatUnit] = js.undefined
   
+  /* standard es2020.intl */
   var value: String
 }
 object RelativeTimeFormatPart {

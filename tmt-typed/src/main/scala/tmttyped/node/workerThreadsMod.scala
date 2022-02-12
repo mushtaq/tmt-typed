@@ -62,7 +62,7 @@ object workerThreadsMod {
   class BroadcastChannel protected ()
     extends StObject
        with RefCounted {
-    def this(name: java.lang.String) = this()
+    def this(name: String) = this()
     
     /**
       * Closes the `BroadcastChannel` connection.
@@ -70,25 +70,25 @@ object workerThreadsMod {
       */
     def close(): Unit = js.native
     
-    val name: java.lang.String = js.native
+    val name: String = js.native
     
     /**
       * Invoked with a single \`MessageEvent\` argument when a message is received.
       * @since v15.4.0
       */
-    def onmessage(message: js.Any): Unit = js.native
+    def onmessage(message: Any): Unit = js.native
     
     /**
       * Invoked with a received message cannot be deserialized.
       * @since v15.4.0
       */
-    def onmessageerror(message: js.Any): Unit = js.native
+    def onmessageerror(message: Any): Unit = js.native
     
     /**
       * @since v15.4.0
       * @param message Any cloneable JavaScript value.
       */
-    def postMessage(message: js.Any): Unit = js.native
+    def postMessage(message: Any): Unit = js.native
     
     /* CompleteClass */
     override def ref(): this.type = js.native
@@ -126,7 +126,7 @@ object workerThreadsMod {
     * asynchronous, two-way communications channel. It can be used to transfer
     * structured data, memory regions and other `MessagePort`s between different `Worker` s.
     *
-    * This implementation matches [browser `MessagePort`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort)s.
+    * This implementation matches [browser `MessagePort`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort) s.
     * @since v10.5.0
     */
   @JSImport("worker_threads", "MessagePort")
@@ -135,12 +135,12 @@ object workerThreadsMod {
     extends StObject
        with _TransferListItem {
     
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def addListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
@@ -154,39 +154,39 @@ object workerThreadsMod {
       */
     def close(): Unit = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, value: js.Any): Boolean = js.native
+    def emit_message(event: message, value: Any): Boolean = js.native
     @JSName("emit")
     def emit_messageerror(event: messageerror, error: js.Error): Boolean = js.native
     
-    def off(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def off(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def off(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def off(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("off")
     def off_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("off")
-    def off_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def off_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("off")
     def off_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
-    def on_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def on_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
-    def once_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def once_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
@@ -256,24 +256,24 @@ object workerThreadsMod {
       * behind this API, see the `serialization API of the v8 module`.
       * @since v10.5.0
       */
-    def postMessage(value: js.Any): Unit = js.native
-    def postMessage(value: js.Any, transferList: js.Array[TransferListItem]): Unit = js.native
+    def postMessage(value: Any): Unit = js.native
+    def postMessage(value: Any, transferList: js.Array[TransferListItem]): Unit = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def prependListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
@@ -288,12 +288,12 @@ object workerThreadsMod {
       */
     def ref(): Unit = js.native
     
-    def removeListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def removeListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("removeListener")
-    def removeListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def removeListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
@@ -396,32 +396,32 @@ object workerThreadsMod {
       *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
       *                  or a WHATWG URL object using file: protocol. If options.eval is true, this is a string containing JavaScript code rather than a path.
       */
-    def this(filename: java.lang.String) = this()
+    def this(filename: String) = this()
     def this(filename: URL) = this()
-    def this(filename: java.lang.String, options: WorkerOptions) = this()
+    def this(filename: String, options: WorkerOptions) = this()
     def this(filename: URL, options: WorkerOptions) = this()
     
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def addListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_error(event: error, err: js.Error): Boolean = js.native
     @JSName("emit")
     def emit_exit(event: exit, exitCode: Double): Boolean = js.native
     @JSName("emit")
-    def emit_message(event: message, value: js.Any): Boolean = js.native
+    def emit_message(event: message, value: Any): Boolean = js.native
     @JSName("emit")
     def emit_messageerror(event: messageerror, error: js.Error): Boolean = js.native
     @JSName("emit")
@@ -438,40 +438,40 @@ object workerThreadsMod {
       */
     def getHeapSnapshot(): js.Promise[Readable] = js.native
     
-    def off(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def off(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def off(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def off(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("off")
     def off_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("off")
     def off_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("off")
-    def off_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def off_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("off")
     def off_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("off")
     def off_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("on")
     def on_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("on")
-    def on_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def on_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("on")
     def on_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("once")
     def once_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("once")
-    def once_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def once_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("once")
@@ -480,7 +480,7 @@ object workerThreadsMod {
     /**
       * An object that can be used to query performance information from a worker
       * instance. Similar to `perf_hooks.performance`.
-      * @since v15.1.0, v12.22.0
+      * @since v15.1.0, v14.17.0, v12.22.0
       */
     val performance: WorkerPerformance = js.native
     
@@ -489,30 +489,30 @@ object workerThreadsMod {
       * See `port.postMessage()` for more details.
       * @since v10.5.0
       */
-    def postMessage(value: js.Any): Unit = js.native
-    def postMessage(value: js.Any, transferList: js.Array[TransferListItem]): Unit = js.native
+    def postMessage(value: Any): Unit = js.native
+    def postMessage(value: Any, transferList: js.Array[TransferListItem]): Unit = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def prependListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -526,14 +526,14 @@ object workerThreadsMod {
       */
     def ref(): Unit = js.native
     
-    def removeListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def removeListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
     @JSName("removeListener")
-    def removeListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+    def removeListener_message(event: message, listener: js.Function1[/* value */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     @JSName("removeListener")
@@ -615,7 +615,7 @@ object workerThreadsMod {
     *   console.log(getEnvironmentData('Hello'));  // Prints 'World!'.
     * }
     * ```
-    * @since v15.12.0
+    * @since v15.12.0, v14.18.0
     * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     */
@@ -667,11 +667,11 @@ object workerThreadsMod {
     * takes its place.
     *
     * The returned `MessagePort` is an object in the target context and
-    * inherits from its global `Object` class. Objects passed to the[`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) listener are also created in the
+    * inherits from its global `Object` class. Objects passed to the [`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) listener are also created in the
     * target context
     * and inherit from its global `Object` class.
     *
-    * However, the created `MessagePort` no longer inherits from[`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and only
+    * However, the created `MessagePort` no longer inherits from [`EventTarget`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget), and only
     * [`port.onmessage()`](https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage) can be used to receive
     * events using it.
     * @since v11.13.0
@@ -679,7 +679,7 @@ object workerThreadsMod {
     * @param contextifiedSandbox A `contextified` object as returned by the `vm.createContext()` method.
     */
   @scala.inline
-  def moveMessagePortToContext(port: MessagePort, context: Context): MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], context.asInstanceOf[js.Any])).asInstanceOf[MessagePort]
+  def moveMessagePortToContext(port: MessagePort, contextifiedSandbox: Context): MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[MessagePort]
   
   @JSImport("worker_threads", "parentPort")
   @js.native
@@ -712,7 +712,7 @@ object workerThreadsMod {
   
   /**
     * The `worker.setEnvironmentData()` API sets the content of`worker.getEnvironmentData()` in the current thread and all new `Worker`instances spawned from the current context.
-    * @since v15.12.0
+    * @since v15.12.0, v14.18.0
     * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     * @param value Any arbitrary, cloneable JavaScript value that will be cloned and passed automatically to all new `Worker` instances. If `value` is passed as `undefined`, any previously set value
@@ -727,7 +727,7 @@ object workerThreadsMod {
   
   @JSImport("worker_threads", "workerData")
   @js.native
-  val workerData: js.Any = js.native
+  val workerData: Any = js.native
   
   trait ResourceLimits_ extends StObject {
     
@@ -789,7 +789,7 @@ object workerThreadsMod {
     }
   }
   
-  type Serializable = java.lang.String | js.Object | Double | Boolean | js.BigInt
+  type Serializable = String | js.Object | Double | Boolean | js.BigInt
   
   /* Rewritten from type alias, can be one of: 
     - js.typedarray.ArrayBuffer
@@ -808,13 +808,13 @@ object workerThreadsMod {
       * but the values will be available on the global `process.argv` as if they
       * were passed as CLI options to the script.
       */
-    var argv: js.UndefOr[js.Array[js.Any]] = js.undefined
+    var argv: js.UndefOr[js.Array[Any]] = js.undefined
     
-    var env: js.UndefOr[Dict[java.lang.String] | js.Symbol] = js.undefined
+    var env: js.UndefOr[Dict[String] | js.Symbol] = js.undefined
     
     var eval: js.UndefOr[Boolean] = js.undefined
     
-    var execArgv: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+    var execArgv: js.UndefOr[js.Array[String]] = js.undefined
     
     var resourceLimits: js.UndefOr[ResourceLimits_] = js.undefined
     
@@ -834,7 +834,7 @@ object workerThreadsMod {
       */
     var transferList: js.UndefOr[js.Array[TransferListItem]] = js.undefined
     
-    var workerData: js.UndefOr[js.Any] = js.undefined
+    var workerData: js.UndefOr[Any] = js.undefined
   }
   object WorkerOptions {
     
@@ -848,16 +848,16 @@ object workerThreadsMod {
     implicit class WorkerOptionsMutableBuilder[Self <: WorkerOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setArgv(value: js.Array[js.Any]): Self = StObject.set(x, "argv", value.asInstanceOf[js.Any])
+      def setArgv(value: js.Array[Any]): Self = StObject.set(x, "argv", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setArgvUndefined: Self = StObject.set(x, "argv", js.undefined)
       
       @scala.inline
-      def setArgvVarargs(value: js.Any*): Self = StObject.set(x, "argv", js.Array(value :_*))
+      def setArgvVarargs(value: Any*): Self = StObject.set(x, "argv", js.Array(value :_*))
       
       @scala.inline
-      def setEnv(value: Dict[java.lang.String] | js.Symbol): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
+      def setEnv(value: Dict[String] | js.Symbol): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
@@ -869,13 +869,13 @@ object workerThreadsMod {
       def setEvalUndefined: Self = StObject.set(x, "eval", js.undefined)
       
       @scala.inline
-      def setExecArgv(value: js.Array[java.lang.String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
+      def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
       
       @scala.inline
-      def setExecArgvVarargs(value: java.lang.String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
+      def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
       
       @scala.inline
       def setResourceLimits(value: ResourceLimits_): Self = StObject.set(x, "resourceLimits", value.asInstanceOf[js.Any])
@@ -917,7 +917,7 @@ object workerThreadsMod {
       def setTransferListVarargs(value: TransferListItem*): Self = StObject.set(x, "transferList", js.Array(value :_*))
       
       @scala.inline
-      def setWorkerData(value: js.Any): Self = StObject.set(x, "workerData", value.asInstanceOf[js.Any])
+      def setWorkerData(value: Any): Self = StObject.set(x, "workerData", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setWorkerDataUndefined: Self = StObject.set(x, "workerData", js.undefined)

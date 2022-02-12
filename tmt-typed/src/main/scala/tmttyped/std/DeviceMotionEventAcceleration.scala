@@ -5,12 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait DeviceMotionEventAcceleration extends StObject {
   
+  /* standard DOM */
   val x: Double | Null
   
+  /* standard DOM */
   val y: Double | Null
   
+  /* standard DOM */
   val z: Double | Null
 }
 object DeviceMotionEventAcceleration {

@@ -10,5 +10,6 @@ trait RadioNodeList
   extends StObject
      with NodeList {
   
+  /* standard DOM */
   var value: java.lang.String = js.native
 }

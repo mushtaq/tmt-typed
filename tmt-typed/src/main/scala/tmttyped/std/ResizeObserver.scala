@@ -8,10 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ResizeObserver extends StObject {
   
+  /* standard DOM */
   def disconnect(): Unit = js.native
   
-  def observe(target: org.scalajs.dom.raw.Element): Unit = js.native
-  def observe(target: org.scalajs.dom.raw.Element, options: ResizeObserverOptions): Unit = js.native
+  /* standard DOM */
+  def observe(target: org.scalajs.dom.Element): Unit = js.native
+  def observe(target: org.scalajs.dom.Element, options: ResizeObserverOptions): Unit = js.native
   
-  def unobserve(target: org.scalajs.dom.raw.Element): Unit = js.native
+  /* standard DOM */
+  def unobserve(target: org.scalajs.dom.Element): Unit = js.native
 }

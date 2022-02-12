@@ -8,24 +8,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** A single style sheet. CSS style sheets will further implement the more specialized CSSStyleSheet interface. */
 trait StyleSheet extends StObject {
   
+  /* standard DOM */
   var disabled: scala.Boolean
   
+  /* standard DOM */
   val href: java.lang.String | Null
   
-  val media: org.scalajs.dom.raw.MediaList
+  /* standard DOM */
+  val media: org.scalajs.dom.MediaList
   
-  val ownerNode: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.ProcessingInstruction | Null
+  /* standard DOM */
+  val ownerNode: org.scalajs.dom.Element | org.scalajs.dom.ProcessingInstruction | Null
   
-  val parentStyleSheet: org.scalajs.dom.raw.CSSStyleSheet | Null
+  /* standard DOM */
+  val parentStyleSheet: org.scalajs.dom.CSSStyleSheet | Null
   
+  /* standard DOM */
   val title: java.lang.String | Null
   
+  /* standard DOM */
   val `type`: java.lang.String
 }
 object StyleSheet {
   
   @scala.inline
-  def apply(disabled: scala.Boolean, media: org.scalajs.dom.raw.MediaList, `type`: java.lang.String): StyleSheet = {
+  def apply(disabled: scala.Boolean, media: org.scalajs.dom.MediaList, `type`: java.lang.String): StyleSheet = {
     val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], href = null, ownerNode = null, parentStyleSheet = null, title = null)
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[StyleSheet]
@@ -44,16 +51,16 @@ object StyleSheet {
     def setHrefNull: Self = StObject.set(x, "href", null)
     
     @scala.inline
-    def setMedia(value: org.scalajs.dom.raw.MediaList): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
+    def setMedia(value: org.scalajs.dom.MediaList): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOwnerNode(value: org.scalajs.dom.raw.Element | org.scalajs.dom.raw.ProcessingInstruction): Self = StObject.set(x, "ownerNode", value.asInstanceOf[js.Any])
+    def setOwnerNode(value: org.scalajs.dom.Element | org.scalajs.dom.ProcessingInstruction): Self = StObject.set(x, "ownerNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwnerNodeNull: Self = StObject.set(x, "ownerNode", null)
     
     @scala.inline
-    def setParentStyleSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = StObject.set(x, "parentStyleSheet", value.asInstanceOf[js.Any])
+    def setParentStyleSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "parentStyleSheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentStyleSheetNull: Self = StObject.set(x, "parentStyleSheet", null)

@@ -6,26 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - tmttyped.std.stdStrings.compact
-  - tmttyped.std.stdStrings.currency
+  - tmttyped.std.stdStrings.literal
+  - tmttyped.std.stdStrings.nan
+  - tmttyped.std.stdStrings.infinity
+  - tmttyped.std.stdStrings.percent
+  - tmttyped.std.stdStrings.integer
+  - tmttyped.std.stdStrings.group
   - tmttyped.std.stdStrings.decimal
+  - tmttyped.std.stdStrings.fraction
+  - tmttyped.std.stdStrings.plusSign
+  - tmttyped.std.stdStrings.minusSign
+  - tmttyped.std.stdStrings.percentSign
+  - tmttyped.std.stdStrings.currency
+  - tmttyped.std.stdStrings.code
+  - tmttyped.std.stdStrings.symbol
+  - tmttyped.std.stdStrings.name
+  - tmttyped.std.stdStrings.compact
   - tmttyped.std.stdStrings.exponentInteger
   - tmttyped.std.stdStrings.exponentMinusSign
   - tmttyped.std.stdStrings.exponentSeparator
-  - tmttyped.std.stdStrings.fraction
-  - tmttyped.std.stdStrings.group
-  - tmttyped.std.stdStrings.infinity
-  - tmttyped.std.stdStrings.integer
-  - tmttyped.std.stdStrings.literal
-  - tmttyped.std.stdStrings.minusSign
-  - tmttyped.std.stdStrings.nan
-  - tmttyped.std.stdStrings.plusSign
-  - tmttyped.std.stdStrings.percentSign
   - tmttyped.std.stdStrings.unit
   - tmttyped.std.stdStrings.unknown
 */
 trait NumberFormatPartTypes extends StObject
 object NumberFormatPartTypes {
+  
+  @scala.inline
+  def code: tmttyped.std.stdStrings.code = "code".asInstanceOf[tmttyped.std.stdStrings.code]
   
   @scala.inline
   def compact: tmttyped.std.stdStrings.compact = "compact".asInstanceOf[tmttyped.std.stdStrings.compact]
@@ -64,13 +71,22 @@ object NumberFormatPartTypes {
   def minusSign: tmttyped.std.stdStrings.minusSign = "minusSign".asInstanceOf[tmttyped.std.stdStrings.minusSign]
   
   @scala.inline
+  def name: tmttyped.std.stdStrings.name = "name".asInstanceOf[tmttyped.std.stdStrings.name]
+  
+  @scala.inline
   def nan: tmttyped.std.stdStrings.nan = "nan".asInstanceOf[tmttyped.std.stdStrings.nan]
+  
+  @scala.inline
+  def percent: tmttyped.std.stdStrings.percent = "percent".asInstanceOf[tmttyped.std.stdStrings.percent]
   
   @scala.inline
   def percentSign: tmttyped.std.stdStrings.percentSign = "percentSign".asInstanceOf[tmttyped.std.stdStrings.percentSign]
   
   @scala.inline
   def plusSign: tmttyped.std.stdStrings.plusSign = "plusSign".asInstanceOf[tmttyped.std.stdStrings.plusSign]
+  
+  @scala.inline
+  def symbol: tmttyped.std.stdStrings.symbol = "symbol".asInstanceOf[tmttyped.std.stdStrings.symbol]
   
   @scala.inline
   def unit: tmttyped.std.stdStrings.unit = "unit".asInstanceOf[tmttyped.std.stdStrings.unit]

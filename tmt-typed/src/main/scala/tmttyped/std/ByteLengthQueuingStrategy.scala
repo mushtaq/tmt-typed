@@ -10,9 +10,11 @@ trait ByteLengthQueuingStrategy
   extends StObject
      with QueuingStrategy[js.typedarray.ArrayBufferView] {
   
+  /* standard DOM */
   @JSName("highWaterMark")
   val highWaterMark_ByteLengthQueuingStrategy: Double
   
+  /* standard DOM */
   @JSName("size")
   def size_MByteLengthQueuingStrategy(chunk: js.typedarray.ArrayBufferView): Double
 }

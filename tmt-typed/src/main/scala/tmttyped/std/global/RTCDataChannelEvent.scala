@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.experimental.webrtc.RTCDataChannelEventInit
+import org.scalajs.dom.RTCDataChannelEventInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,5 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RTCDataChannelEvent protected ()
   extends StObject
      with tmttyped.std.RTCDataChannelEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String, eventInitDict: RTCDataChannelEventInit) = this()
 }

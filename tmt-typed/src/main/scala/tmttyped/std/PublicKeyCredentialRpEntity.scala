@@ -9,6 +9,7 @@ trait PublicKeyCredentialRpEntity
   extends StObject
      with PublicKeyCredentialEntity {
   
+  /* standard DOM */
   var id: js.UndefOr[java.lang.String] = js.undefined
 }
 object PublicKeyCredentialRpEntity {

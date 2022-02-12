@@ -12,12 +12,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ByteLengthQueuingStrategy protected ()
   extends StObject
      with tmttyped.std.ByteLengthQueuingStrategy {
+  /* standard DOM */
   def this(init: QueuingStrategyInit) = this()
   
+  /* standard DOM */
   /* CompleteClass */
   @JSName("highWaterMark")
   override val highWaterMark_ByteLengthQueuingStrategy: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   @JSName("size")
   override def size_MByteLengthQueuingStrategy(chunk: js.typedarray.ArrayBufferView): Double = js.native

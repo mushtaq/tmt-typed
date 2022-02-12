@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait TextTrackEventMap extends StObject {
   
-  var cuechange: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var cuechange: org.scalajs.dom.Event
 }
 object TextTrackEventMap {
   
   @scala.inline
-  def apply(cuechange: org.scalajs.dom.raw.Event): TextTrackEventMap = {
+  def apply(cuechange: org.scalajs.dom.Event): TextTrackEventMap = {
     val __obj = js.Dynamic.literal(cuechange = cuechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextTrackEventMap]
   }
@@ -21,6 +22,6 @@ object TextTrackEventMap {
   implicit class TextTrackEventMapMutableBuilder[Self <: TextTrackEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCuechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "cuechange", value.asInstanceOf[js.Any])
+    def setCuechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "cuechange", value.asInstanceOf[js.Any])
   }
 }

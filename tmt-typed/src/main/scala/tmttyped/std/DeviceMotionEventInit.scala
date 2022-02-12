@@ -9,12 +9,16 @@ trait DeviceMotionEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var acceleration: js.UndefOr[DeviceMotionEventAccelerationInit] = js.undefined
   
+  /* standard DOM */
   var accelerationIncludingGravity: js.UndefOr[DeviceMotionEventAccelerationInit] = js.undefined
   
+  /* standard DOM */
   var interval: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var rotationRate: js.UndefOr[DeviceMotionEventRotationRateInit] = js.undefined
 }
 object DeviceMotionEventInit {

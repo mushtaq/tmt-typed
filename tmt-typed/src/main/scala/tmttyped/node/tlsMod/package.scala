@@ -54,8 +54,8 @@ package object tlsMod {
   /**
     * Verifies the certificate `cert` is issued to `hostname`.
     *
-    * Returns [&lt;Error&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object, populating it with `reason`, `host`, and `cert` on
-    * failure. On success, returns [&lt;undefined&gt;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type).
+    * Returns [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object, populating it with `reason`, `host`, and `cert` on
+    * failure. On success, returns [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type).
     *
     * This function can be overwritten by providing alternative function as part of
     * the `options.checkServerIdentity` option passed to `tls.connect()`. The
@@ -69,7 +69,7 @@ package object tlsMod {
     * @param cert A `certificate object` representing the peer's certificate.
     */
   @scala.inline
-  def checkServerIdentity(host: java.lang.String, cert: tmttyped.node.tlsMod.PeerCertificate): js.UndefOr[js.Error] = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkServerIdentity")(host.asInstanceOf[js.Any], cert.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[js.Error]]
+  def checkServerIdentity(hostname: java.lang.String, cert: tmttyped.node.tlsMod.PeerCertificate): js.UndefOr[js.Error] = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("checkServerIdentity")(hostname.asInstanceOf[js.Any], cert.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[js.Error]]
   
   /**
     * The `callback` function, if specified, will be added as a listener for the `'secureConnect'` event.
@@ -181,7 +181,7 @@ package object tlsMod {
     *
     * A key is _required_ for ciphers that use certificates. Either `key` or`pfx` can be used to provide it.
     *
-    * If the `ca` option is not given, then Node.js will default to using[Mozilla's publicly trusted list of
+    * If the `ca` option is not given, then Node.js will default to using [Mozilla's publicly trusted list of
     * CAs](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt).
     * @since v0.11.13
     */
@@ -226,79 +226,75 @@ package object tlsMod {
   @scala.inline
   def createSecurePair(): tmttyped.node.tlsMod.SecurePair = tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")().asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: scala.Unit, isServer: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: scala.Unit, isServer: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: scala.Unit, isServer: scala.Boolean, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: scala.Unit, isServer: scala.Boolean, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: scala.Unit,
+    context: scala.Unit,
     isServer: scala.Boolean,
     requestCert: scala.Boolean,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: scala.Unit,
+    context: scala.Unit,
     isServer: scala.Boolean,
     requestCert: scala.Unit,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: scala.Unit, isServer: scala.Unit, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: scala.Unit, isServer: scala.Unit, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: scala.Unit,
+    context: scala.Unit,
     isServer: scala.Unit,
     requestCert: scala.Boolean,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: scala.Unit,
+    context: scala.Unit,
     isServer: scala.Unit,
     requestCert: scala.Unit,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: tmttyped.node.tlsMod.SecureContext): tmttyped.node.tlsMod.SecurePair = tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: tmttyped.node.tlsMod.SecureContext): tmttyped.node.tlsMod.SecurePair = tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: tmttyped.node.tlsMod.SecureContext, isServer: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: tmttyped.node.tlsMod.SecureContext, isServer: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(
-    credentials: tmttyped.node.tlsMod.SecureContext,
-    isServer: scala.Boolean,
-    requestCert: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: tmttyped.node.tlsMod.SecureContext, isServer: scala.Boolean, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: tmttyped.node.tlsMod.SecureContext,
+    context: tmttyped.node.tlsMod.SecureContext,
     isServer: scala.Boolean,
     requestCert: scala.Boolean,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: tmttyped.node.tlsMod.SecureContext,
+    context: tmttyped.node.tlsMod.SecureContext,
     isServer: scala.Boolean,
     requestCert: scala.Unit,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
-  def createSecurePair(credentials: tmttyped.node.tlsMod.SecureContext, isServer: scala.Unit, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  def createSecurePair(context: tmttyped.node.tlsMod.SecureContext, isServer: scala.Unit, requestCert: scala.Boolean): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: tmttyped.node.tlsMod.SecureContext,
+    context: tmttyped.node.tlsMod.SecureContext,
     isServer: scala.Unit,
     requestCert: scala.Boolean,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   @scala.inline
   def createSecurePair(
-    credentials: tmttyped.node.tlsMod.SecureContext,
+    context: tmttyped.node.tlsMod.SecureContext,
     isServer: scala.Unit,
     requestCert: scala.Unit,
     rejectUnauthorized: scala.Boolean
-  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(credentials.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
+  ): tmttyped.node.tlsMod.SecurePair = (tmttyped.node.tlsMod.^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.SecurePair]
   
   /**
     * Creates a new {@link Server}. The `secureConnectionListener`, if provided, is

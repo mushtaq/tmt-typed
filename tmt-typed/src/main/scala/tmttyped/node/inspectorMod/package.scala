@@ -21,9 +21,9 @@ package object inspectorMod {
     * and flow control has been passed to the debugger client.
     *
     * See the `security warning` regarding the `host`parameter usage.
-    * @param port Port to listen on for inspector connections. Optional.
-    * @param host Host to listen on for inspector connections. Optional.
-    * @param wait Block until a client has connected. Optional.
+    * @param [port='what was specified on the CLI'] Port to listen on for inspector connections. Optional.
+    * @param [host='what was specified on the CLI'] Host to listen on for inspector connections. Optional.
+    * @param [wait=false] Block until a client has connected. Optional.
     */
   @scala.inline
   def open(): scala.Unit = tmttyped.node.inspectorMod.^.asInstanceOf[js.Dynamic].applyDynamic("open")().asInstanceOf[scala.Unit]

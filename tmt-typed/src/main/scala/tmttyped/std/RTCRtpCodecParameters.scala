@@ -7,14 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCRtpCodecParameters extends StObject {
   
+  /* standard DOM */
   var channels: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var clockRate: Double
   
+  /* standard DOM */
   var mimeType: java.lang.String
   
+  /* standard DOM */
   var payloadType: Double
   
+  /* standard DOM */
   var sdpFmtpLine: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCRtpCodecParameters {

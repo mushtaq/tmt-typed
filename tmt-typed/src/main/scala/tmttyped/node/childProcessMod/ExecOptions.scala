@@ -1,5 +1,6 @@
 package tmttyped.node.childProcessMod
 
+import tmttyped.node.AbortSignal
 import tmttyped.node.processMod.global.NodeJS.Signals
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
@@ -15,6 +16,8 @@ trait ExecOptions
   var maxBuffer: js.UndefOr[Double] = js.undefined
   
   var shell: js.UndefOr[String] = js.undefined
+  
+  var signal: js.UndefOr[AbortSignal] = js.undefined
 }
 object ExecOptions {
   
@@ -44,5 +47,11 @@ object ExecOptions {
     
     @scala.inline
     def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
+    
+    @scala.inline
+    def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
   }
 }

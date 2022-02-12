@@ -5,10 +5,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait AuthenticatorAttestationResponse
   extends StObject
      with AuthenticatorResponse {
   
+  /* standard DOM */
   val attestationObject: js.typedarray.ArrayBuffer
 }
 object AuthenticatorAttestationResponse {

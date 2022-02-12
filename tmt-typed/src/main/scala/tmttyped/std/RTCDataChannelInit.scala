@@ -7,16 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCDataChannelInit extends StObject {
   
+  /* standard DOM */
   var id: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var maxPacketLifeTime: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var maxRetransmits: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var negotiated: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var ordered: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var protocol: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCDataChannelInit {

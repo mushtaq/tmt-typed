@@ -12,7 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Array[T] protected ()
   extends StObject
      with tmttyped.std.Array[T] {
+  /* standard es5 */
   def this(arrayLength: Double) = this()
+  /* standard es5 */
   def this(items: T*) = this()
 }
 object Array {

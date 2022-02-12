@@ -13,6 +13,7 @@ trait CanvasGradient extends StObject {
     *
     * Throws an "IndexSizeError" DOMException if the offset is out of range. Throws a "SyntaxError" DOMException if the color cannot be parsed.
     */
+  /* standard DOM */
   def addColorStop(offset: Double, color: java.lang.String): Unit
 }
 object CanvasGradient {

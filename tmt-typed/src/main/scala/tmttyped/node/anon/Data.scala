@@ -1,6 +1,5 @@
 package tmttyped.node.anon
 
-import tmttyped.node.nodeStrings.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +9,7 @@ trait Data extends StObject {
   
   var data: js.Array[Double]
   
-  var `type`: Buffer
+  var `type`: tmttyped.node.nodeStrings.Buffer
 }
 object Data {
   
@@ -31,6 +30,6 @@ object Data {
     def setDataVarargs(value: Double*): Self = StObject.set(x, "data", js.Array(value :_*))
     
     @scala.inline
-    def setType(value: Buffer): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    def setType(value: tmttyped.node.nodeStrings.Buffer): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

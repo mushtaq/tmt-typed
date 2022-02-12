@@ -10,14 +10,18 @@ trait DOMMatrix
   extends StObject
      with DOMMatrixReadOnly {
   
+  /* standard DOM */
   def invertSelf(): DOMMatrix = js.native
   
+  /* standard DOM */
   def multiplySelf(): DOMMatrix = js.native
   def multiplySelf(other: DOMMatrixInit): DOMMatrix = js.native
   
+  /* standard DOM */
   def preMultiplySelf(): DOMMatrix = js.native
   def preMultiplySelf(other: DOMMatrixInit): DOMMatrix = js.native
   
+  /* standard DOM */
   def rotateAxisAngleSelf(): DOMMatrix = js.native
   def rotateAxisAngleSelf(x: Double): DOMMatrix = js.native
   def rotateAxisAngleSelf(x: Double, y: Double): DOMMatrix = js.native
@@ -35,11 +39,13 @@ trait DOMMatrix
   def rotateAxisAngleSelf(x: Unit, y: Unit, z: Double, angle: Double): DOMMatrix = js.native
   def rotateAxisAngleSelf(x: Unit, y: Unit, z: Unit, angle: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def rotateFromVectorSelf(): DOMMatrix = js.native
   def rotateFromVectorSelf(x: Double): DOMMatrix = js.native
   def rotateFromVectorSelf(x: Double, y: Double): DOMMatrix = js.native
   def rotateFromVectorSelf(x: Unit, y: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def rotateSelf(): DOMMatrix = js.native
   def rotateSelf(rotX: Double): DOMMatrix = js.native
   def rotateSelf(rotX: Double, rotY: Double): DOMMatrix = js.native
@@ -49,6 +55,7 @@ trait DOMMatrix
   def rotateSelf(rotX: Unit, rotY: Double, rotZ: Double): DOMMatrix = js.native
   def rotateSelf(rotX: Unit, rotY: Unit, rotZ: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def scale3dSelf(): DOMMatrix = js.native
   def scale3dSelf(scale: Double): DOMMatrix = js.native
   def scale3dSelf(scale: Double, originX: Double): DOMMatrix = js.native
@@ -66,6 +73,7 @@ trait DOMMatrix
   def scale3dSelf(scale: Unit, originX: Unit, originY: Double, originZ: Double): DOMMatrix = js.native
   def scale3dSelf(scale: Unit, originX: Unit, originY: Unit, originZ: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def scaleSelf(
     scaleX: js.UndefOr[Double],
     scaleY: js.UndefOr[Double],
@@ -75,14 +83,18 @@ trait DOMMatrix
     originZ: js.UndefOr[Double]
   ): DOMMatrix = js.native
   
+  /* standard DOM */
   def setMatrixValue(transformList: java.lang.String): DOMMatrix = js.native
   
+  /* standard DOM */
   def skewXSelf(): DOMMatrix = js.native
   def skewXSelf(sx: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def skewYSelf(): DOMMatrix = js.native
   def skewYSelf(sy: Double): DOMMatrix = js.native
   
+  /* standard DOM */
   def translateSelf(): DOMMatrix = js.native
   def translateSelf(tx: Double): DOMMatrix = js.native
   def translateSelf(tx: Double, ty: Double): DOMMatrix = js.native

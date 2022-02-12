@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class File protected ()
   extends StObject
      with tmttyped.std.File {
+  /* standard DOM */
   def this(fileBits: js.Array[BlobPart], fileName: java.lang.String) = this()
   def this(fileBits: js.Array[BlobPart], fileName: java.lang.String, options: FilePropertyBag) = this()
 }

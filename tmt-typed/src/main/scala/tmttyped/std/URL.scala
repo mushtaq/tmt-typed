@@ -8,30 +8,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** The URL interface represents an object providing static methods used for creating object URLs. */
 trait URL extends StObject {
   
+  /* standard DOM */
   var hash: java.lang.String
   
+  /* standard DOM */
   var host: java.lang.String
   
+  /* standard DOM */
   var hostname: java.lang.String
   
+  /* standard DOM */
   var href: java.lang.String
   
+  /* standard DOM */
   val origin: java.lang.String
   
+  /* standard DOM */
   var password: java.lang.String
   
+  /* standard DOM */
   var pathname: java.lang.String
   
+  /* standard DOM */
   var port: java.lang.String
   
+  /* standard DOM */
   var protocol: java.lang.String
   
+  /* standard DOM */
   var search: java.lang.String
   
+  /* standard DOM */
   val searchParams: URLSearchParams
   
+  /* standard DOM */
   def toJSON(): java.lang.String
   
+  /* standard DOM */
   var username: java.lang.String
 }
 object URL {

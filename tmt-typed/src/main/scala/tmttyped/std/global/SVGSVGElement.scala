@@ -1,6 +1,6 @@
 package tmttyped.std.global
 
-import org.scalajs.dom.raw.EventListenerOptions
+import org.scalajs.dom.EventListenerOptions
 import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
@@ -11,19 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGSVGElement")
 @js.native
+/* standard DOM */
 class SVGSVGElement ()
   extends StObject
      with tmttyped.std.SVGSVGElement {
   
-  /* CompleteClass */
-  override val SVG_ZOOMANDPAN_DISABLE: Double = js.native
-  
-  /* CompleteClass */
-  override val SVG_ZOOMANDPAN_MAGNIFY: Double = js.native
-  
-  /* CompleteClass */
-  override val SVG_ZOOMANDPAN_UNKNOWN: Double = js.native
-  
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -35,27 +28,173 @@ class SVGSVGElement ()
     options: AddEventListenerOptions
   ): Unit = js.native
   
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaAtomic: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaAutoComplete: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaBusy: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaChecked: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaColCount: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaColIndex: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaColSpan: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaCurrent: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaDisabled: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaExpanded: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaHasPopup: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaHidden: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaKeyShortcuts: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaLabel: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaLevel: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaLive: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaModal: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaMultiLine: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaMultiSelectable: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaOrientation: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaPlaceholder: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaPosInSet: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaPressed: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaReadOnly: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaRequired: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaRoleDescription: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaRowCount: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaRowIndex: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaRowSpan: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaSelected: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaSetSize: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaSort: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaValueMax: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaValueMin: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaValueNow: java.lang.String = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  override var ariaValueText: java.lang.String = js.native
+  
+  /* standard DOM */
   /* CompleteClass */
   override val assignedSlot: tmttyped.std.HTMLSlotElement | Null = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override var innerHTML: java.lang.String = js.native
   
-  /**
-    * Returns the first following sibling that is an element, and null otherwise.
-    */
+  /** Returns the first following sibling that is an element, and null otherwise. */
+  /* standard DOM */
   /* CompleteClass */
-  override val nextElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  override val nextElementSibling: org.scalajs.dom.Element | Null = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val preserveAspectRatio: org.scalajs.dom.raw.SVGAnimatedPreserveAspectRatio = js.native
+  override val preserveAspectRatio: org.scalajs.dom.SVGAnimatedPreserveAspectRatio = js.native
   
-  /**
-    * Returns the first preceding sibling that is an element, and null otherwise.
-    */
+  /** Returns the first preceding sibling that is an element, and null otherwise. */
+  /* standard DOM */
   /* CompleteClass */
-  override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
+  override val previousElementSibling: org.scalajs.dom.Element | Null = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -67,32 +206,19 @@ class SVGSVGElement ()
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val requiredExtensions: org.scalajs.dom.raw.SVGStringList = js.native
+  override val requiredExtensions: org.scalajs.dom.SVGStringList = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val style: org.scalajs.dom.raw.CSSStyleDeclaration = js.native
+  override val style: org.scalajs.dom.CSSStyleDeclaration = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val systemLanguage: org.scalajs.dom.raw.SVGStringList = js.native
+  override val systemLanguage: org.scalajs.dom.SVGStringList = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override val viewBox: org.scalajs.dom.raw.SVGAnimatedRect = js.native
-  
-  /* CompleteClass */
-  override var zoomAndPan: Double = js.native
-}
-object SVGSVGElement {
-  
-  @JSGlobal("SVGSVGElement.SVG_ZOOMANDPAN_DISABLE")
-  @js.native
-  val SVG_ZOOMANDPAN_DISABLE: Double = js.native
-  
-  @JSGlobal("SVGSVGElement.SVG_ZOOMANDPAN_MAGNIFY")
-  @js.native
-  val SVG_ZOOMANDPAN_MAGNIFY: Double = js.native
-  
-  @JSGlobal("SVGSVGElement.SVG_ZOOMANDPAN_UNKNOWN")
-  @js.native
-  val SVG_ZOOMANDPAN_UNKNOWN: Double = js.native
+  override val viewBox: org.scalajs.dom.SVGAnimatedRect = js.native
 }

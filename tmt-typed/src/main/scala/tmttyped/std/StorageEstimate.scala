@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait StorageEstimate extends StObject {
   
+  /* standard DOM */
   var quota: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var usage: js.UndefOr[Double] = js.undefined
 }
 object StorageEstimate {

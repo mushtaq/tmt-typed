@@ -7,26 +7,88 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait HTMLHyperlinkElementUtils extends StObject {
   
+  /**
+    * Returns the hyperlink's URL's fragment (includes leading "#" if non-empty).
+    *
+    * Can be set, to change the URL's fragment (ignores leading "#").
+    */
+  /* standard DOM */
   var hash: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's host and port (if different from the default port for the scheme).
+    *
+    * Can be set, to change the URL's host and port.
+    */
+  /* standard DOM */
   var host: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's host.
+    *
+    * Can be set, to change the URL's host.
+    */
+  /* standard DOM */
   var hostname: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL.
+    *
+    * Can be set, to change the URL.
+    */
+  /* standard DOM */
   var href: java.lang.String
   
+  /** Returns the hyperlink's URL's origin. */
+  /* standard DOM */
   val origin: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's password.
+    *
+    * Can be set, to change the URL's password.
+    */
+  /* standard DOM */
   var password: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's path.
+    *
+    * Can be set, to change the URL's path.
+    */
+  /* standard DOM */
   var pathname: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's port.
+    *
+    * Can be set, to change the URL's port.
+    */
+  /* standard DOM */
   var port: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's scheme.
+    *
+    * Can be set, to change the URL's scheme.
+    */
+  /* standard DOM */
   var protocol: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's query (includes leading "?" if non-empty).
+    *
+    * Can be set, to change the URL's query (ignores leading "?").
+    */
+  /* standard DOM */
   var search: java.lang.String
   
+  /**
+    * Returns the hyperlink's URL's username.
+    *
+    * Can be set, to change the URL's username.
+    */
+  /* standard DOM */
   var username: java.lang.String
 }
 object HTMLHyperlinkElementUtils {

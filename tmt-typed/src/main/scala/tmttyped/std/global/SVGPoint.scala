@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGPoint")
 @js.native
+/* standard DOM */
 class SVGPoint ()
   extends StObject
      with tmttyped.std.DOMPoint {
@@ -35,6 +36,7 @@ object SVGPoint {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard DOM */
   @scala.inline
   def fromPoint(): tmttyped.std.DOMPoint = ^.asInstanceOf[js.Dynamic].applyDynamic("fromPoint")().asInstanceOf[tmttyped.std.DOMPoint]
   @scala.inline

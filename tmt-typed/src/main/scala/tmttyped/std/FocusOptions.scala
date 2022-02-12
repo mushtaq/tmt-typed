@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait FocusOptions extends StObject {
   
+  /* standard DOM */
   var preventScroll: js.UndefOr[scala.Boolean] = js.undefined
 }
 object FocusOptions {

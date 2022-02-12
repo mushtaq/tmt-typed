@@ -1,6 +1,6 @@
 package tmttyped.node.childProcessMod
 
-import tmttyped.node.bufferMod.global.BufferEncoding
+import tmttyped.node.nodeStrings.buffer_
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +11,13 @@ trait ExecFileSyncOptionsWithBufferEncoding
      with ExecFileSyncOptions {
   
   @JSName("encoding")
-  var encoding_ExecFileSyncOptionsWithBufferEncoding: BufferEncoding
+  var encoding_ExecFileSyncOptionsWithBufferEncoding: js.UndefOr[buffer_ | Null] = js.undefined
 }
 object ExecFileSyncOptionsWithBufferEncoding {
   
   @scala.inline
-  def apply(encoding: BufferEncoding): ExecFileSyncOptionsWithBufferEncoding = {
-    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+  def apply(): ExecFileSyncOptionsWithBufferEncoding = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ExecFileSyncOptionsWithBufferEncoding]
   }
   
@@ -25,6 +25,12 @@ object ExecFileSyncOptionsWithBufferEncoding {
   implicit class ExecFileSyncOptionsWithBufferEncodingMutableBuilder[Self <: ExecFileSyncOptionsWithBufferEncoding] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+    def setEncoding(value: buffer_): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEncodingNull: Self = StObject.set(x, "encoding", null)
+    
+    @scala.inline
+    def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
   }
 }

@@ -8,26 +8,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Used to represent a value that can be an <angle> or <number> value. An SVGAngle reflected through the animVal attribute is always read only. */
 trait SVGAngle extends StObject {
   
+  /* standard DOM */
   val SVG_ANGLETYPE_DEG: Double
   
+  /* standard DOM */
   val SVG_ANGLETYPE_GRAD: Double
   
+  /* standard DOM */
   val SVG_ANGLETYPE_RAD: Double
   
+  /* standard DOM */
   val SVG_ANGLETYPE_UNKNOWN: Double
   
+  /* standard DOM */
   val SVG_ANGLETYPE_UNSPECIFIED: Double
   
+  /* standard DOM */
   def convertToSpecifiedUnits(unitType: Double): Unit
   
+  /* standard DOM */
   def newValueSpecifiedUnits(unitType: Double, valueInSpecifiedUnits: Double): Unit
   
+  /* standard DOM */
   val unitType: Double
   
+  /* standard DOM */
   var value: Double
   
+  /* standard DOM */
   var valueAsString: java.lang.String
   
+  /* standard DOM */
   var valueInSpecifiedUnits: Double
 }
 object SVGAngle {

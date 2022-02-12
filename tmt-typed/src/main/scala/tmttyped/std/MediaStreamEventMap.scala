@@ -7,16 +7,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaStreamEventMap extends StObject {
   
-  var addtrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent
+  /* standard DOM */
+  var addtrack: org.scalajs.dom.MediaStreamTrackEvent
   
-  var removetrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent
+  /* standard DOM */
+  var removetrack: org.scalajs.dom.MediaStreamTrackEvent
 }
 object MediaStreamEventMap {
   
   @scala.inline
   def apply(
-    addtrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent,
-    removetrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent
+    addtrack: org.scalajs.dom.MediaStreamTrackEvent,
+    removetrack: org.scalajs.dom.MediaStreamTrackEvent
   ): MediaStreamEventMap = {
     val __obj = js.Dynamic.literal(addtrack = addtrack.asInstanceOf[js.Any], removetrack = removetrack.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaStreamEventMap]
@@ -26,9 +28,9 @@ object MediaStreamEventMap {
   implicit class MediaStreamEventMapMutableBuilder[Self <: MediaStreamEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setAddtrack(value: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent): Self = StObject.set(x, "addtrack", value.asInstanceOf[js.Any])
+    def setAddtrack(value: org.scalajs.dom.MediaStreamTrackEvent): Self = StObject.set(x, "addtrack", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemovetrack(value: org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent): Self = StObject.set(x, "removetrack", value.asInstanceOf[js.Any])
+    def setRemovetrack(value: org.scalajs.dom.MediaStreamTrackEvent): Self = StObject.set(x, "removetrack", value.asInstanceOf[js.Any])
   }
 }

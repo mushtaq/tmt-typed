@@ -9,8 +9,13 @@ trait RTCRtpSendParameters
   extends StObject
      with RTCRtpParameters {
   
+  /* standard DOM */
+  var degradationPreference: js.UndefOr[RTCDegradationPreference] = js.undefined
+  
+  /* standard DOM */
   var encodings: js.Array[RTCRtpEncodingParameters]
   
+  /* standard DOM */
   var transactionId: java.lang.String
 }
 object RTCRtpSendParameters {
@@ -29,6 +34,12 @@ object RTCRtpSendParameters {
   
   @scala.inline
   implicit class RTCRtpSendParametersMutableBuilder[Self <: RTCRtpSendParameters] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setDegradationPreference(value: RTCDegradationPreference): Self = StObject.set(x, "degradationPreference", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDegradationPreferenceUndefined: Self = StObject.set(x, "degradationPreference", js.undefined)
     
     @scala.inline
     def setEncodings(value: js.Array[RTCRtpEncodingParameters]): Self = StObject.set(x, "encodings", value.asInstanceOf[js.Any])

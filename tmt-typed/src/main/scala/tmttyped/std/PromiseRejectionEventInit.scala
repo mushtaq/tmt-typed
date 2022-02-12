@@ -9,14 +9,16 @@ trait PromiseRejectionEventInit
   extends StObject
      with EventInit {
   
-  var promise: js.Promise[js.Any]
+  /* standard DOM */
+  var promise: js.Promise[Any]
   
-  var reason: js.UndefOr[js.Any] = js.undefined
+  /* standard DOM */
+  var reason: js.UndefOr[Any] = js.undefined
 }
 object PromiseRejectionEventInit {
   
   @scala.inline
-  def apply(promise: js.Promise[js.Any]): PromiseRejectionEventInit = {
+  def apply(promise: js.Promise[Any]): PromiseRejectionEventInit = {
     val __obj = js.Dynamic.literal(promise = promise.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromiseRejectionEventInit]
   }
@@ -25,10 +27,10 @@ object PromiseRejectionEventInit {
   implicit class PromiseRejectionEventInitMutableBuilder[Self <: PromiseRejectionEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setPromise(value: js.Promise[js.Any]): Self = StObject.set(x, "promise", value.asInstanceOf[js.Any])
+    def setPromise(value: js.Promise[Any]): Self = StObject.set(x, "promise", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReason(value: js.Any): Self = StObject.set(x, "reason", value.asInstanceOf[js.Any])
+    def setReason(value: Any): Self = StObject.set(x, "reason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReasonUndefined: Self = StObject.set(x, "reason", js.undefined)

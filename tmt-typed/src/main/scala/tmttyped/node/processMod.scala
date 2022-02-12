@@ -82,7 +82,7 @@ object processMod extends Shortcut {
         /**
           * A unique identifier for the warning instance being emitted.
           */
-        var code: js.UndefOr[java.lang.String] = js.undefined
+        var code: js.UndefOr[String] = js.undefined
         
         /**
           * When `warning` is a `string`, `ctor` is an optional function used to limit the generated stack trace.
@@ -94,14 +94,14 @@ object processMod extends Shortcut {
         /**
           * Additional text to include with the error.
           */
-        var detail: js.UndefOr[java.lang.String] = js.undefined
+        var detail: js.UndefOr[String] = js.undefined
         
         /**
           * When `warning` is a `string`, `type` is the name to use for the _type_ of warning being emitted.
           *
           * @default 'Warning'
           */
-        var `type`: js.UndefOr[java.lang.String] = js.undefined
+        var `type`: js.UndefOr[String] = js.undefined
       }
       object EmitWarningOptions {
         
@@ -115,7 +115,7 @@ object processMod extends Shortcut {
         implicit class EmitWarningOptionsMutableBuilder[Self <: EmitWarningOptions] (val x: Self) extends AnyVal {
           
           @scala.inline
-          def setCode(value: java.lang.String): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])
+          def setCode(value: String): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setCodeUndefined: Self = StObject.set(x, "code", js.undefined)
@@ -127,13 +127,13 @@ object processMod extends Shortcut {
           def setCtorUndefined: Self = StObject.set(x, "ctor", js.undefined)
           
           @scala.inline
-          def setDetail(value: java.lang.String): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+          def setDetail(value: String): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
           
           @scala.inline
-          def setType(value: java.lang.String): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+          def setType(value: String): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
@@ -206,14 +206,9 @@ object processMod extends Shortcut {
         def rss(): Double = js.native
       }
       
-      type MessageListener = js.Function2[/* message */ js.Any, /* sendHandle */ js.Any, Unit]
+      type MessageListener = js.Function2[/* message */ Any, /* sendHandle */ Any, Unit]
       
-      type MultipleResolveListener = js.Function3[
-            /* type */ MultipleResolveType, 
-            /* promise */ js.Promise[js.Any], 
-            /* value */ js.Any, 
-            Unit
-          ]
+      type MultipleResolveListener = js.Function3[/* type */ MultipleResolveType, /* promise */ js.Promise[Any], /* value */ Any, Unit]
       
       /* Rewritten from type alias, can be one of: 
         - tmttyped.node.nodeStrings.resolve
@@ -342,7 +337,9 @@ object processMod extends Shortcut {
           * dashes:
           *
           * ```js
-          * process.allowedNodeEnvironmentFlags.forEach((flag) => {
+          * import { allowedNodeEnvironmentFlags } from 'process';
+          *
+          * allowedNodeEnvironmentFlags.forEach((flag) => {
           *   // -r
           *   // --inspect-brk
           *   // --abort_on_uncaught_exception
@@ -357,18 +354,20 @@ object processMod extends Shortcut {
           * contain what _would have_ been allowable.
           * @since v10.10.0
           */
-        var allowedNodeEnvironmentFlags: ReadonlySet[java.lang.String] = js.native
+        var allowedNodeEnvironmentFlags: ReadonlySet[String] = js.native
         
         /**
           * The operating system CPU architecture for which the Node.js binary was compiled.
           * Possible values are: `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,`'mipsel'`, `'ppc'`,`'ppc64'`, `'s390'`, `'s390x'`, `'x32'`, and `'x64'`.
           *
           * ```js
-          * console.log(`This processor architecture is ${process.arch}`);
+          * import { arch } from 'process';
+          *
+          * console.log(`This processor architecture is ${arch}`);
           * ```
           * @since v0.5.0
           */
-        val arch: java.lang.String = js.native
+        val arch: String = js.native
         
         /**
           * The `process.argv` property returns an array containing the command-line
@@ -381,8 +380,10 @@ object processMod extends Shortcut {
           * For example, assuming the following script for `process-args.js`:
           *
           * ```js
+          * import { argv } from 'process';
+          *
           * // print process.argv
-          * process.argv.forEach((val, index) => {
+          * argv.forEach((val, index) => {
           *   console.log(`${index}: ${val}`);
           * });
           * ```
@@ -404,7 +405,7 @@ object processMod extends Shortcut {
           * ```
           * @since v0.1.27
           */
-        var argv: js.Array[java.lang.String] = js.native
+        var argv: js.Array[String] = js.native
         
         /**
           * The `process.argv0` property stores a read-only copy of the original value of`argv[0]` passed when Node.js starts.
@@ -418,7 +419,7 @@ object processMod extends Shortcut {
           * ```
           * @since v6.4.0
           */
-        var argv0: java.lang.String = js.native
+        var argv0: String = js.native
         
         /**
           * The `process.chdir()` method changes the current working directory of the
@@ -426,10 +427,12 @@ object processMod extends Shortcut {
           * the specified `directory` does not exist).
           *
           * ```js
-          * console.log(`Starting directory: ${process.cwd()}`);
+          * import { chdir, cwd } from 'process';
+          *
+          * console.log(`Starting directory: ${cwd()}`);
           * try {
-          *   process.chdir('/tmp');
-          *   console.log(`New directory: ${process.cwd()}`);
+          *   chdir('/tmp');
+          *   console.log(`New directory: ${cwd()}`);
           * } catch (err) {
           *   console.error(`chdir: ${err}`);
           * }
@@ -438,7 +441,7 @@ object processMod extends Shortcut {
           * This feature is not available in `Worker` threads.
           * @since v0.1.17
           */
-        def chdir(directory: java.lang.String): Unit = js.native
+        def chdir(directory: String): Unit = js.native
         
         /**
           * The `process.config` property returns an `Object` containing the JavaScript
@@ -507,14 +510,16 @@ object processMod extends Shortcut {
           * argument to the function, to get a diff reading.
           *
           * ```js
-          * const startUsage = process.cpuUsage();
+          * import { cpuUsage } from 'process';
+          *
+          * const startUsage = cpuUsage();
           * // { user: 38579, system: 6986 }
           *
           * // spin the CPU for 500 milliseconds
           * const now = Date.now();
           * while (Date.now() - now < 500);
           *
-          * console.log(process.cpuUsage(startUsage));
+          * console.log(cpuUsage(startUsage));
           * // { user: 514883, system: 11226 }
           * ```
           * @since v6.1.0
@@ -528,16 +533,20 @@ object processMod extends Shortcut {
           * process.
           *
           * ```js
-          * console.log(`Current directory: ${process.cwd()}`);
+          * import { cwd } from 'process';
+          *
+          * console.log(`Current directory: ${cwd()}`);
           * ```
           * @since v0.1.8
           */
-        def cwd(): java.lang.String = js.native
+        def cwd(): String = js.native
         
         /**
           * The port used by the Node.js debugger when enabled.
           *
           * ```js
+          * import process from 'process';
+          *
           * process.debugPort = 5858;
           * ```
           * @since v0.7.2
@@ -563,8 +572,10 @@ object processMod extends Shortcut {
           * specific process warnings. These can be listened for by adding a handler to the `'warning'` event.
           *
           * ```js
+          * import { emitWarning } from 'process';
+          *
           * // Emit a warning with a code and additional detail.
-          * process.emitWarning('Something happened!', {
+          * emitWarning('Something happened!', {
           *   code: 'MY_WARNING',
           *   detail: 'This is some additional information'
           * });
@@ -576,6 +587,8 @@ object processMod extends Shortcut {
           * In this example, an `Error` object is generated internally by`process.emitWarning()` and passed through to the `'warning'` handler.
           *
           * ```js
+          * import process from 'process';
+          *
           * process.on('warning', (warning) => {
           *   console.warn(warning.name);    // 'Warning'
           *   console.warn(warning.message); // 'Something happened!'
@@ -589,28 +602,28 @@ object processMod extends Shortcut {
           * @since v8.0.0
           * @param warning The warning to emit.
           */
-        def emitWarning(warning: java.lang.String): Unit = js.native
-        def emitWarning(warning: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, options: EmitWarningOptions): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: java.lang.String): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: java.lang.String, code: java.lang.String): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: java.lang.String, code: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: java.lang.String, code: Unit, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: Unit, code: java.lang.String): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: Unit, code: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: Unit, code: Unit, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: java.lang.String, `type`: Unit, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String): Unit = js.native
+        def emitWarning(warning: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, options: EmitWarningOptions): Unit = js.native
+        def emitWarning(warning: String, `type`: String): Unit = js.native
+        def emitWarning(warning: String, `type`: String, code: String): Unit = js.native
+        def emitWarning(warning: String, `type`: String, code: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, `type`: String, code: Unit, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, `type`: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, `type`: Unit, code: String): Unit = js.native
+        def emitWarning(warning: String, `type`: Unit, code: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, `type`: Unit, code: Unit, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: String, `type`: Unit, ctor: js.Function): Unit = js.native
         def emitWarning(warning: js.Error): Unit = js.native
         def emitWarning(warning: js.Error, ctor: js.Function): Unit = js.native
         def emitWarning(warning: js.Error, options: EmitWarningOptions): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: java.lang.String): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: java.lang.String, code: java.lang.String): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: java.lang.String, code: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: java.lang.String, code: Unit, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: java.lang.String, ctor: js.Function): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: Unit, code: java.lang.String): Unit = js.native
-        def emitWarning(warning: js.Error, `type`: Unit, code: java.lang.String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: String): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: String, code: String): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: String, code: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: String, code: Unit, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: String, ctor: js.Function): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: Unit, code: String): Unit = js.native
+        def emitWarning(warning: js.Error, `type`: Unit, code: String, ctor: js.Function): Unit = js.native
         def emitWarning(warning: js.Error, `type`: Unit, code: Unit, ctor: js.Function): Unit = js.native
         def emitWarning(warning: js.Error, `type`: Unit, ctor: js.Function): Unit = js.native
         
@@ -621,17 +634,17 @@ object processMod extends Shortcut {
         @JSName("emit")
         def emit_exit(event: exit, code: Double): Boolean = js.native
         @JSName("emit")
-        def emit_message(event: message, message: js.Any, sendHandle: js.Any): this.type = js.native
+        def emit_message(event: message, message: Any, sendHandle: Any): this.type = js.native
         @JSName("emit")
-        def emit_multipleResolves(event: multipleResolves, `type`: MultipleResolveType, promise: js.Promise[js.Any], value: js.Any): this.type = js.native
+        def emit_multipleResolves(event: multipleResolves, `type`: MultipleResolveType, promise: js.Promise[Any], value: Any): this.type = js.native
         @JSName("emit")
-        def emit_rejectionHandled(event: rejectionHandled, promise: js.Promise[js.Any]): Boolean = js.native
+        def emit_rejectionHandled(event: rejectionHandled, promise: js.Promise[Any]): Boolean = js.native
         @JSName("emit")
         def emit_uncaughtException(event: uncaughtException, error: js.Error): Boolean = js.native
         @JSName("emit")
         def emit_uncaughtExceptionMonitor(event: uncaughtExceptionMonitor, error: js.Error): Boolean = js.native
         @JSName("emit")
-        def emit_unhandledRejection(event: unhandledRejection, reason: js.Any, promise: js.Promise[js.Any]): Boolean = js.native
+        def emit_unhandledRejection(event: unhandledRejection, reason: Any, promise: js.Promise[Any]): Boolean = js.native
         @JSName("emit")
         def emit_warning(event: warning, warning: js.Error): Boolean = js.native
         @JSName("emit")
@@ -670,8 +683,10 @@ object processMod extends Shortcut {
           * While the following will:
           *
           * ```js
-          * process.env.foo = 'bar';
-          * console.log(process.env.foo);
+          * import { env } from 'process';
+          *
+          * env.foo = 'bar';
+          * console.log(env.foo);
           * ```
           *
           * Assigning a property on `process.env` will implicitly convert the value
@@ -679,28 +694,34 @@ object processMod extends Shortcut {
           * throw an error when the value is not a string, number, or boolean.
           *
           * ```js
-          * process.env.test = null;
-          * console.log(process.env.test);
+          * import { env } from 'process';
+          *
+          * env.test = null;
+          * console.log(env.test);
           * // => 'null'
-          * process.env.test = undefined;
-          * console.log(process.env.test);
+          * env.test = undefined;
+          * console.log(env.test);
           * // => 'undefined'
           * ```
           *
           * Use `delete` to delete a property from `process.env`.
           *
           * ```js
-          * process.env.TEST = 1;
-          * delete process.env.TEST;
-          * console.log(process.env.TEST);
+          * import { env } from 'process';
+          *
+          * env.TEST = 1;
+          * delete env.TEST;
+          * console.log(env.TEST);
           * // => undefined
           * ```
           *
           * On Windows operating systems, environment variables are case-insensitive.
           *
           * ```js
-          * process.env.TEST = 1;
-          * console.log(process.env.test);
+          * import { env } from 'process';
+          *
+          * env.TEST = 1;
+          * console.log(env.test);
           * // => 1
           * ```
           *
@@ -742,7 +763,7 @@ object processMod extends Shortcut {
           * threads with this property.
           * @since v0.7.7
           */
-        var execArgv: js.Array[java.lang.String] = js.native
+        var execArgv: js.Array[String] = js.native
         
         /**
           * The `process.execPath` property returns the absolute pathname of the executable
@@ -753,7 +774,7 @@ object processMod extends Shortcut {
           * ```
           * @since v0.1.100
           */
-        var execPath: java.lang.String = js.native
+        var execPath: String = js.native
         
         /**
           * The `process.exit()` method instructs Node.js to terminate the process
@@ -765,7 +786,9 @@ object processMod extends Shortcut {
           * To exit with a 'failure' code:
           *
           * ```js
-          * process.exit(1);
+          * import { exit } from 'process';
+          *
+          * exit(1);
           * ```
           *
           * The shell that executed Node.js should see the exit code as `1`.
@@ -782,10 +805,12 @@ object processMod extends Shortcut {
           * truncated and lost:
           *
           * ```js
+          * import { exit } from 'process';
+          *
           * // This is an example of what *not* to do:
           * if (someConditionNotMet()) {
           *   printUsageToStdout();
-          *   process.exit(1);
+          *   exit(1);
           * }
           * ```
           *
@@ -797,6 +822,8 @@ object processMod extends Shortcut {
           * scheduling any additional work for the event loop:
           *
           * ```js
+          * import process from 'process';
+          *
           * // How to properly set the exit code while letting
           * // the process exit gracefully.
           * if (someConditionNotMet()) {
@@ -812,7 +839,7 @@ object processMod extends Shortcut {
           * In `Worker` threads, this function stops the current thread rather
           * than the current process.
           * @since v0.1.13
-          * @param code The exit code.
+          * @param [code=0] The exit code.
           */
         def exit(): scala.Nothing = js.native
         def exit(code: Double): scala.Nothing = js.native
@@ -835,6 +862,8 @@ object processMod extends Shortcut {
           * of the Node.js process. (See [`getegid(2)`](http://man7.org/linux/man-pages/man2/getegid.2.html).)
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getegid) {
           *   console.log(`Current gid: ${process.getegid()}`);
           * }
@@ -851,6 +880,8 @@ object processMod extends Shortcut {
           * the process. (See [`geteuid(2)`](http://man7.org/linux/man-pages/man2/geteuid.2.html).)
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.geteuid) {
           *   console.log(`Current uid: ${process.geteuid()}`);
           * }
@@ -867,6 +898,8 @@ object processMod extends Shortcut {
           * process. (See [`getgid(2)`](http://man7.org/linux/man-pages/man2/getgid.2.html).)
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getgid) {
           *   console.log(`Current gid: ${process.getgid()}`);
           * }
@@ -884,6 +917,8 @@ object processMod extends Shortcut {
           * Node.js ensures it always is.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getgroups) {
           *   console.log(process.getgroups()); // [ 16, 21, 297 ]
           * }
@@ -900,6 +935,8 @@ object processMod extends Shortcut {
           * (See [`getuid(2)`](http://man7.org/linux/man-pages/man2/getuid.2.html).)
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getuid) {
           *   console.log(`Current uid: ${process.getuid()}`);
           * }
@@ -937,6 +974,8 @@ object processMod extends Shortcut {
           * other than kill the target process.
           *
           * ```js
+          * import process, { kill } from 'process';
+          *
           * process.on('SIGHUP', () => {
           *   console.log('Got SIGHUP signal.');
           * });
@@ -946,17 +985,17 @@ object processMod extends Shortcut {
           *   process.exit(0);
           * }, 100);
           *
-          * process.kill(process.pid, 'SIGHUP');
+          * kill(process.pid, 'SIGHUP');
           * ```
           *
           * When `SIGUSR1` is received by a Node.js process, Node.js will start the
           * debugger. See `Signal Events`.
           * @since v0.0.6
           * @param pid A process ID
-          * @param signal The signal to send, either as a string or number.
+          * @param [signal='SIGTERM'] The signal to send, either as a string or number.
           */
         def kill(pid: Double): `true` = js.native
-        def kill(pid: Double, signal: java.lang.String): `true` = js.native
+        def kill(pid: Double, signal: String): `true` = js.native
         def kill(pid: Double, signal: Double): `true` = js.native
         
         def listeners(event: Signals): js.Array[SignalsListener] = js.native
@@ -1012,8 +1051,10 @@ object processMod extends Shortcut {
           * See the [Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#process-nexttick) guide for more background.
           *
           * ```js
+          * import { nextTick } from 'process';
+          *
           * console.log('start');
-          * process.nextTick(() => {
+          * nextTick(() => {
           *   console.log('nextTick callback');
           * });
           * console.log('scheduled');
@@ -1028,10 +1069,12 @@ object processMod extends Shortcut {
           * I/O has occurred:
           *
           * ```js
+          * import { nextTick } from 'process';
+          *
           * function MyThing(options) {
           *   this.setupOptions(options);
           *
-          *   process.nextTick(() => {
+          *   nextTick(() => {
           *     this.startDoingStuff();
           *   });
           * }
@@ -1074,9 +1117,11 @@ object processMod extends Shortcut {
           * The following approach is much better:
           *
           * ```js
+          * import { nextTick } from 'process';
+          *
           * function definitelyAsync(arg, cb) {
           *   if (arg) {
-          *     process.nextTick(cb);
+          *     nextTick(cb);
           *     return;
           *   }
           *
@@ -1084,9 +1129,9 @@ object processMod extends Shortcut {
           * }
           * ```
           * @since v0.1.26
-          * @param ...args Additional arguments to pass when invoking the `callback`
+          * @param args Additional arguments to pass when invoking the `callback`
           */
-        def nextTick(callback: js.Function, args: js.Any*): Unit = js.native
+        def nextTick(callback: js.Function, args: Any*): Unit = js.native
         
         def on(event: Signals, listener: SignalsListener): this.type = js.native
         @JSName("on")
@@ -1142,7 +1187,9 @@ object processMod extends Shortcut {
           * The `process.pid` property returns the PID of the process.
           *
           * ```js
-          * console.log(`This process is pid ${process.pid}`);
+          * import { pid } from 'process';
+          *
+          * console.log(`This process is pid ${pid}`);
           * ```
           * @since v0.1.15
           */
@@ -1163,11 +1210,13 @@ object processMod extends Shortcut {
           * * `'win32'`
           *
           * ```js
-          * console.log(`This platform is ${process.platform}`);
+          * import { platform } from 'process';
+          *
+          * console.log(`This platform is ${platform}`);
           * ```
           *
           * The value `'android'` may also be returned if the Node.js is built on the
-          * Android operating system. However, Android support in Node.js[is experimental](https://github.com/nodejs/node/blob/HEAD/BUILDING.md#androidandroid-based-devices-eg-firefox-os).
+          * Android operating system. However, Android support in Node.js [is experimental](https://github.com/nodejs/node/blob/HEAD/BUILDING.md#androidandroid-based-devices-eg-firefox-os).
           * @since v0.1.16
           */
         val platform: Platform = js.native
@@ -1177,7 +1226,9 @@ object processMod extends Shortcut {
           * current process.
           *
           * ```js
-          * console.log(`The parent process is pid ${process.ppid}`);
+          * import { ppid } from 'process';
+          *
+          * console.log(`The parent process is pid ${ppid}`);
           * ```
           * @since v9.2.0, v8.10.0, v6.13.0
           */
@@ -1263,7 +1314,9 @@ object processMod extends Shortcut {
         
         /**
           * ```js
-          * console.log(process.resourceUsage());
+          * import { resourceUsage } from 'process';
+          *
+          * console.log(resourceUsage());
           * / *
           *   Will output:
           *   {
@@ -1304,8 +1357,8 @@ object processMod extends Shortcut {
           */
         var send: js.UndefOr[
                 js.Function4[
-                  /* message */ js.Any, 
-                  /* sendHandle */ js.UndefOr[js.Any], 
+                  /* message */ Any, 
+                  /* sendHandle */ js.UndefOr[Any], 
                   /* options */ js.UndefOr[SwallowErrors], 
                   /* callback */ js.UndefOr[js.Function1[/* error */ js.Error | Null, Unit]], 
                   Boolean
@@ -1333,7 +1386,7 @@ object processMod extends Shortcut {
         def setUncaughtExceptionCaptureCallback(): Unit = js.native
         def setUncaughtExceptionCaptureCallback(cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
         
-        def setegid(id: java.lang.String): Unit = js.native
+        def setegid(id: String): Unit = js.native
         /**
           * The `process.setegid()` method sets the effective group identity of the process.
           * (See [`setegid(2)`](http://man7.org/linux/man-pages/man2/setegid.2.html).) The `id` can be passed as either a numeric ID or a group
@@ -1341,6 +1394,8 @@ object processMod extends Shortcut {
           * the associated a numeric ID.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getegid &#x26;&#x26; process.setegid) {
           *   console.log(`Current gid: ${process.getegid()}`);
           *   try {
@@ -1360,7 +1415,7 @@ object processMod extends Shortcut {
           */
         def setegid(id: Double): Unit = js.native
         
-        def seteuid(id: java.lang.String): Unit = js.native
+        def seteuid(id: String): Unit = js.native
         /**
           * The `process.seteuid()` method sets the effective user identity of the process.
           * (See [`seteuid(2)`](http://man7.org/linux/man-pages/man2/seteuid.2.html).) The `id` can be passed as either a numeric ID or a username
@@ -1368,6 +1423,8 @@ object processMod extends Shortcut {
           * associated numeric ID.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.geteuid &#x26;&#x26; process.seteuid) {
           *   console.log(`Current uid: ${process.geteuid()}`);
           *   try {
@@ -1387,14 +1444,16 @@ object processMod extends Shortcut {
           */
         def seteuid(id: Double): Unit = js.native
         
-        def setgid(id: java.lang.String): Unit = js.native
+        def setgid(id: String): Unit = js.native
         /**
-          * The `process.setgid()` method sets the group identity of the process. (See[`setgid(2)`](http://man7.org/linux/man-pages/man2/setgid.2.html).) The `id` can be passed as either a
+          * The `process.setgid()` method sets the group identity of the process. (See [`setgid(2)`](http://man7.org/linux/man-pages/man2/setgid.2.html).) The `id` can be passed as either a
           * numeric ID or a group name
           * string. If a group name is specified, this method blocks while resolving the
           * associated numeric ID.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getgid &#x26;&#x26; process.setgid) {
           *   console.log(`Current gid: ${process.getgid()}`);
           *   try {
@@ -1422,6 +1481,8 @@ object processMod extends Shortcut {
           * The `groups` array can contain numeric group IDs, group names, or both.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getgroups &#x26;&#x26; process.setgroups) {
           *   try {
           *     process.setgroups([501]);
@@ -1437,16 +1498,18 @@ object processMod extends Shortcut {
           * This feature is not available in `Worker` threads.
           * @since v0.9.4
           */
-        def setgroups(groups: js.Array[java.lang.String | Double]): Unit = js.native
+        def setgroups(groups: js.Array[String | Double]): Unit = js.native
         
-        def setuid(id: java.lang.String): Unit = js.native
+        def setuid(id: String): Unit = js.native
         /**
-          * The `process.setuid(id)` method sets the user identity of the process. (See[`setuid(2)`](http://man7.org/linux/man-pages/man2/setuid.2.html).) The `id` can be passed as either a
+          * The `process.setuid(id)` method sets the user identity of the process. (See [`setuid(2)`](http://man7.org/linux/man-pages/man2/setuid.2.html).) The `id` can be passed as either a
           * numeric ID or a username string.
           * If a username is specified, the method blocks while resolving the associated
           * numeric ID.
           *
           * ```js
+          * import process from 'process';
+          *
           * if (process.getuid &#x26;&#x26; process.setuid) {
           *   console.log(`Current uid: ${process.getuid()}`);
           *   try {
@@ -1495,7 +1558,9 @@ object processMod extends Shortcut {
           * For example, to copy `process.stdin` to `process.stdout`:
           *
           * ```js
-          * process.stdin.pipe(process.stdout);
+          * import { stdin, stdout } from 'process';
+          *
+          * stdin.pipe(stdout);
           * ```
           *
           * `process.stdout` differs from other Node.js streams in important ways. See `note on process I/O` for more information.
@@ -1519,7 +1584,7 @@ object processMod extends Shortcut {
           * Services Manager.
           * @since v0.1.104
           */
-        var title: java.lang.String = js.native
+        var title: String = js.native
         
         /**
           * The `process.traceDeprecation` property indicates whether the`--trace-deprecation` flag is set on the current Node.js process. See the
@@ -1533,14 +1598,14 @@ object processMod extends Shortcut {
           * `process.umask()` returns the Node.js process's file mode creation mask. Child
           * processes inherit the mask from the parent process.
           * @since v0.1.19
-          * @deprecated Deprecated. Calling `process.umask()` with no argument causes the process-wide umask to be written twice. This introduces a race condition between threads, and is a   *
-          * potential security vulnerability. There is no safe, cross-platform alternative API.
+          * @deprecated Calling `process.umask()` with no argument causes the process-wide umask to be written twice. This introduces a race condition between threads, and is a potential   *
+          * security vulnerability. There is no safe, cross-platform alternative API.
           */
         def umask(): Double = js.native
         /**
           * Can only be set if not in worker thread.
           */
-        def umask(mask: java.lang.String): Double = js.native
+        def umask(mask: String): Double = js.native
         def umask(mask: Double): Double = js.native
         
         /**
@@ -1557,14 +1622,16 @@ object processMod extends Shortcut {
           * The `process.version` property contains the Node.js version string.
           *
           * ```js
-          * console.log(`Version: ${process.version}`);
+          * import { version } from 'process';
+          *
+          * console.log(`Version: ${version}`);
           * // Version: v14.8.0
           * ```
           *
           * To get the version string without the prepended _v_, use`process.versions.node`.
           * @since v0.1.3
           */
-        val version: java.lang.String = js.native
+        val version: String = js.native
         
         /**
           * The `process.versions` property returns an object listing the version strings of
@@ -1573,7 +1640,9 @@ object processMod extends Shortcut {
           * to load modules that were compiled against a different module ABI version.
           *
           * ```js
-          * console.log(process.versions);
+          * import { versions } from 'process';
+          *
+          * console.log(versions);
           * ```
           *
           * Will generate an object similar to:
@@ -1628,12 +1697,12 @@ object processMod extends Shortcut {
       // Alias for compatibility
       trait ProcessEnv
         extends StObject
-           with Dict[java.lang.String] {
+           with Dict[String] {
         
         /**
           * Can be used to change the default timezone at runtime
           */
-        var TZ: js.UndefOr[java.lang.String] = js.undefined
+        var TZ: js.UndefOr[String] = js.undefined
       }
       object ProcessEnv {
         
@@ -1647,7 +1716,7 @@ object processMod extends Shortcut {
         implicit class ProcessEnvMutableBuilder[Self <: ProcessEnv] (val x: Self) extends AnyVal {
           
           @scala.inline
-          def setTZ(value: java.lang.String): Self = StObject.set(x, "TZ", value.asInstanceOf[js.Any])
+          def setTZ(value: String): Self = StObject.set(x, "TZ", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setTZUndefined: Self = StObject.set(x, "TZ", js.undefined)
@@ -1656,20 +1725,20 @@ object processMod extends Shortcut {
       
       trait ProcessRelease extends StObject {
         
-        var headersUrl: js.UndefOr[java.lang.String] = js.undefined
+        var headersUrl: js.UndefOr[String] = js.undefined
         
-        var libUrl: js.UndefOr[java.lang.String] = js.undefined
+        var libUrl: js.UndefOr[String] = js.undefined
         
-        var lts: js.UndefOr[java.lang.String] = js.undefined
+        var lts: js.UndefOr[String] = js.undefined
         
-        var name: java.lang.String
+        var name: String
         
-        var sourceUrl: js.UndefOr[java.lang.String] = js.undefined
+        var sourceUrl: js.UndefOr[String] = js.undefined
       }
       object ProcessRelease {
         
         @scala.inline
-        def apply(name: java.lang.String): ProcessRelease = {
+        def apply(name: String): ProcessRelease = {
           val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
           __obj.asInstanceOf[ProcessRelease]
         }
@@ -1678,28 +1747,28 @@ object processMod extends Shortcut {
         implicit class ProcessReleaseMutableBuilder[Self <: ProcessRelease] (val x: Self) extends AnyVal {
           
           @scala.inline
-          def setHeadersUrl(value: java.lang.String): Self = StObject.set(x, "headersUrl", value.asInstanceOf[js.Any])
+          def setHeadersUrl(value: String): Self = StObject.set(x, "headersUrl", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setHeadersUrlUndefined: Self = StObject.set(x, "headersUrl", js.undefined)
           
           @scala.inline
-          def setLibUrl(value: java.lang.String): Self = StObject.set(x, "libUrl", value.asInstanceOf[js.Any])
+          def setLibUrl(value: String): Self = StObject.set(x, "libUrl", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setLibUrlUndefined: Self = StObject.set(x, "libUrl", js.undefined)
           
           @scala.inline
-          def setLts(value: java.lang.String): Self = StObject.set(x, "lts", value.asInstanceOf[js.Any])
+          def setLts(value: String): Self = StObject.set(x, "lts", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setLtsUndefined: Self = StObject.set(x, "lts", js.undefined)
           
           @scala.inline
-          def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+          def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setSourceUrl(value: java.lang.String): Self = StObject.set(x, "sourceUrl", value.asInstanceOf[js.Any])
+          def setSourceUrl(value: String): Self = StObject.set(x, "sourceUrl", value.asInstanceOf[js.Any])
           
           @scala.inline
           def setSourceUrlUndefined: Self = StObject.set(x, "sourceUrl", js.undefined)
@@ -1714,7 +1783,7 @@ object processMod extends Shortcut {
           * working directory of the Node.js process.
           * @default '' indicating that reports are written to the current
           */
-        var directory: java.lang.String = js.native
+        var directory: String = js.native
         
         /**
           * Filename where the report is written.
@@ -1722,14 +1791,14 @@ object processMod extends Shortcut {
           * @default '' the output filename will be comprised of a timestamp,
           * PID, and sequence number.
           */
-        var filename: java.lang.String = js.native
+        var filename: String = js.native
         
         /**
           * Returns a JSON-formatted diagnostic report for the running process.
           * The report's JavaScript stack trace is taken from err, if present.
           */
-        def getReport(): java.lang.String = js.native
-        def getReport(err: js.Error): java.lang.String = js.native
+        def getReport(): String = js.native
+        def getReport(err: js.Error): String = js.native
         
         /**
           * If true, a diagnostic report is generated on fatal errors,
@@ -1741,7 +1810,7 @@ object processMod extends Shortcut {
         /**
           * If true, a diagnostic report is generated when the process
           * receives the signal specified by process.report.signal.
-          * @defaul false
+          * @default false
           */
         var reportOnSignal: Boolean = js.native
         
@@ -1769,45 +1838,45 @@ object processMod extends Shortcut {
           * @param error A custom error used for reporting the JavaScript stack.
           * @return Filename of the generated report.
           */
-        def writeReport(): java.lang.String = js.native
-        def writeReport(error: js.Error): java.lang.String = js.native
-        def writeReport(fileName: java.lang.String): java.lang.String = js.native
-        def writeReport(fileName: java.lang.String, err: js.Error): java.lang.String = js.native
-        def writeReport(fileName: Unit, err: js.Error): java.lang.String = js.native
+        def writeReport(): String = js.native
+        def writeReport(error: js.Error): String = js.native
+        def writeReport(fileName: String): String = js.native
+        def writeReport(fileName: String, err: js.Error): String = js.native
+        def writeReport(fileName: Unit, err: js.Error): String = js.native
       }
       
       trait ProcessVersions
         extends StObject
-           with Dict[java.lang.String] {
+           with Dict[String] {
         
-        var ares: java.lang.String
+        var ares: String
         
-        var http_parser: java.lang.String
+        var http_parser: String
         
-        var modules: java.lang.String
+        var modules: String
         
-        var node: java.lang.String
+        var node: String
         
-        var openssl: java.lang.String
+        var openssl: String
         
-        var uv: java.lang.String
+        var uv: String
         
-        var v8: java.lang.String
+        var v8: String
         
-        var zlib: java.lang.String
+        var zlib: String
       }
       object ProcessVersions {
         
         @scala.inline
         def apply(
-          ares: java.lang.String,
-          http_parser: java.lang.String,
-          modules: java.lang.String,
-          node: java.lang.String,
-          openssl: java.lang.String,
-          uv: java.lang.String,
-          v8: java.lang.String,
-          zlib: java.lang.String
+          ares: String,
+          http_parser: String,
+          modules: String,
+          node: String,
+          openssl: String,
+          uv: String,
+          v8: String,
+          zlib: String
         ): ProcessVersions = {
           val __obj = js.Dynamic.literal(ares = ares.asInstanceOf[js.Any], http_parser = http_parser.asInstanceOf[js.Any], modules = modules.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], openssl = openssl.asInstanceOf[js.Any], uv = uv.asInstanceOf[js.Any], v8 = v8.asInstanceOf[js.Any], zlib = zlib.asInstanceOf[js.Any])
           __obj.asInstanceOf[ProcessVersions]
@@ -1817,28 +1886,28 @@ object processMod extends Shortcut {
         implicit class ProcessVersionsMutableBuilder[Self <: ProcessVersions] (val x: Self) extends AnyVal {
           
           @scala.inline
-          def setAres(value: java.lang.String): Self = StObject.set(x, "ares", value.asInstanceOf[js.Any])
+          def setAres(value: String): Self = StObject.set(x, "ares", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setHttp_parser(value: java.lang.String): Self = StObject.set(x, "http_parser", value.asInstanceOf[js.Any])
+          def setHttp_parser(value: String): Self = StObject.set(x, "http_parser", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setModules(value: java.lang.String): Self = StObject.set(x, "modules", value.asInstanceOf[js.Any])
+          def setModules(value: String): Self = StObject.set(x, "modules", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setNode(value: java.lang.String): Self = StObject.set(x, "node", value.asInstanceOf[js.Any])
+          def setNode(value: String): Self = StObject.set(x, "node", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setOpenssl(value: java.lang.String): Self = StObject.set(x, "openssl", value.asInstanceOf[js.Any])
+          def setOpenssl(value: String): Self = StObject.set(x, "openssl", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setUv(value: java.lang.String): Self = StObject.set(x, "uv", value.asInstanceOf[js.Any])
+          def setUv(value: String): Self = StObject.set(x, "uv", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setV8(value: java.lang.String): Self = StObject.set(x, "v8", value.asInstanceOf[js.Any])
+          def setV8(value: String): Self = StObject.set(x, "v8", value.asInstanceOf[js.Any])
           
           @scala.inline
-          def setZlib(value: java.lang.String): Self = StObject.set(x, "zlib", value.asInstanceOf[js.Any])
+          def setZlib(value: String): Self = StObject.set(x, "zlib", value.asInstanceOf[js.Any])
         }
       }
       
@@ -1847,7 +1916,7 @@ object processMod extends Shortcut {
       // they can't live in tty.d.ts because we need to disambiguate the imported name.
       type ReadStream = tmttyped.node.nodeTtyMod.ReadStream
       
-      type RejectionHandledListener = js.Function1[/* promise */ js.Promise[js.Any], Unit]
+      type RejectionHandledListener = js.Function1[/* promise */ js.Promise[Any], Unit]
       
       trait ResourceUsage extends StObject {
         
@@ -2125,9 +2194,27 @@ object processMod extends Shortcut {
         var isTTY: js.UndefOr[`true`] = js.native
       }
       
-      type UncaughtExceptionListener = js.Function1[/* error */ js.Error, Unit]
+      type UncaughtExceptionListener = js.Function2[/* error */ js.Error, /* origin */ UncaughtExceptionOrigin, Unit]
       
-      type UnhandledRejectionListener = js.Function2[/* reason */ js.UndefOr[js.Object | Null], /* promise */ js.Promise[js.Any], Unit]
+      /* Rewritten from type alias, can be one of: 
+        - tmttyped.node.nodeStrings.uncaughtException
+        - tmttyped.node.nodeStrings.unhandledRejection
+      */
+      trait UncaughtExceptionOrigin extends StObject
+      object UncaughtExceptionOrigin {
+        
+        @scala.inline
+        def uncaughtException: tmttyped.node.nodeStrings.uncaughtException = "uncaughtException".asInstanceOf[tmttyped.node.nodeStrings.uncaughtException]
+        
+        @scala.inline
+        def unhandledRejection: tmttyped.node.nodeStrings.unhandledRejection = "unhandledRejection".asInstanceOf[tmttyped.node.nodeStrings.unhandledRejection]
+      }
+      
+      /**
+        * Most of the time the unhandledRejection will be an Error, but this should not be relied upon
+        * as *anything* can be thrown/rejected, it is therefore unsafe to assume the the value is an Error.
+        */
+      type UnhandledRejectionListener = js.Function2[/* reason */ Any, /* promise */ js.Promise[Any], Unit]
       
       type WarningListener = js.Function1[/* warning */ js.Error, Unit]
       

@@ -25,51 +25,75 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait DateTimeFormatOptions extends StObject {
   
+  /* standard es2020.intl */
   var calendar: js.UndefOr[String] = js.undefined
   
+  /* standard es2020.intl */
+  /* standard es2021.intl */
   var dateStyle: js.UndefOr[full | long | medium | short] = js.undefined
   
+  /* standard es5 */
   var day: js.UndefOr[numeric | `2-digit`] = js.undefined
   
+  /* standard es2020.intl */
+  /* standard es2021.intl */
   var dayPeriod: js.UndefOr[narrow | short | long] = js.undefined
   
+  /* standard es5 */
   var era: js.UndefOr[long | short | narrow] = js.undefined
   
-  var formatMatcher: js.UndefOr[(`best fit`) | basic] = js.undefined
+  /* standard es2021.intl */
+  /* standard es5 */
+  var formatMatcher: (js.UndefOr[basic | (`best fit`)]) with (js.UndefOr[(`best fit`) | basic])
   
+  /* standard es2021.intl */
   var fractionalSecondDigits: js.UndefOr[`0` | `1` | `2` | `3`] = js.undefined
   
+  /* standard es5 */
   var hour: js.UndefOr[numeric | `2-digit`] = js.undefined
   
+  /* standard es5 */
   var hour12: js.UndefOr[Boolean] = js.undefined
   
+  /* standard es2020.intl */
   var hourCycle: js.UndefOr[h11 | h12 | h23 | h24] = js.undefined
   
+  /* standard es5 */
   var localeMatcher: js.UndefOr[(`best fit`) | lookup] = js.undefined
   
+  /* standard es5 */
   var minute: js.UndefOr[numeric | `2-digit`] = js.undefined
   
+  /* standard es5 */
   var month: js.UndefOr[numeric | `2-digit` | long | short | narrow] = js.undefined
   
+  /* standard es2020.intl */
   var numberingSystem: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var second: js.UndefOr[numeric | `2-digit`] = js.undefined
   
+  /* standard es2020.intl */
+  /* standard es2021.intl */
   var timeStyle: js.UndefOr[full | long | medium | short] = js.undefined
   
+  /* standard es5 */
   var timeZone: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var timeZoneName: js.UndefOr[long | short] = js.undefined
   
+  /* standard es5 */
   var weekday: js.UndefOr[long | short | narrow] = js.undefined
   
+  /* standard es5 */
   var year: js.UndefOr[numeric | `2-digit`] = js.undefined
 }
 object DateTimeFormatOptions {
   
   @scala.inline
-  def apply(): DateTimeFormatOptions = {
-    val __obj = js.Dynamic.literal()
+  def apply(formatMatcher: (js.UndefOr[basic | (`best fit`)]) with (js.UndefOr[(`best fit`) | basic])): DateTimeFormatOptions = {
+    val __obj = js.Dynamic.literal(formatMatcher = formatMatcher.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateTimeFormatOptions]
   }
   
@@ -107,10 +131,7 @@ object DateTimeFormatOptions {
     def setEraUndefined: Self = StObject.set(x, "era", js.undefined)
     
     @scala.inline
-    def setFormatMatcher(value: (`best fit`) | basic): Self = StObject.set(x, "formatMatcher", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setFormatMatcherUndefined: Self = StObject.set(x, "formatMatcher", js.undefined)
+    def setFormatMatcher(value: (js.UndefOr[basic | (`best fit`)]) with (js.UndefOr[(`best fit`) | basic])): Self = StObject.set(x, "formatMatcher", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFractionalSecondDigits(value: `0` | `1` | `2` | `3`): Self = StObject.set(x, "fractionalSecondDigits", value.asInstanceOf[js.Any])

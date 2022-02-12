@@ -5,25 +5,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait ImageBitmap
-  extends StObject
-     with _CanvasImageSource
-     with _TexImageSource
-     with _Transferable {
+trait ImageBitmap extends StObject {
   
-  /**
-    * Releases imageBitmap's underlying bitmap data.
-    */
+  /** Releases imageBitmap's underlying bitmap data. */
+  /* standard DOM */
   def close(): Unit
   
-  /**
-    * Returns the intrinsic height of the image, in CSS pixels.
-    */
+  /** Returns the intrinsic height of the image, in CSS pixels. */
+  /* standard DOM */
   val height: Double
   
-  /**
-    * Returns the intrinsic width of the image, in CSS pixels.
-    */
+  /** Returns the intrinsic width of the image, in CSS pixels. */
+  /* standard DOM */
   val width: Double
 }
 object ImageBitmap {

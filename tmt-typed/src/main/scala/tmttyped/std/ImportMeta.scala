@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 trait ImportMeta extends StObject {
   
+  /* standard DOM */
   var url: java.lang.String
 }
 object ImportMeta {

@@ -18,31 +18,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * import assert from 'assert';
   *
   * const {
-  *   createDiffieHellman,
+  *   createDiffieHellman
   * } = await import('crypto');
-  *
-  * // Generate Alice's keys...
-  * const alice = createDiffieHellman(2048);
-  * const aliceKey = alice.generateKeys();
-  *
-  * // Generate Bob's keys...
-  * const bob = createDiffieHellman(alice.getPrime(), alice.getGenerator());
-  * const bobKey = bob.generateKeys();
-  *
-  * // Exchange and generate the secret...
-  * const aliceSecret = alice.computeSecret(bobKey);
-  * const bobSecret = bob.computeSecret(aliceKey);
-  *
-  * // OK
-  * assert.strictEqual(aliceSecret.toString('hex'), bobSecret.toString('hex'));
-  * ```
-  *
-  * ```js
-  * const assert = require('assert');
-  *
-  * const {
-  *   createDiffieHellman,
-  * } = require('crypto');
   *
   * // Generate Alice's keys...
   * const alice = createDiffieHellman(2048);
@@ -63,14 +40,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "DiffieHellman")
 @js.native
-class DiffieHellman_ protected () extends StObject {
+/* private */ class DiffieHellman_ () extends StObject {
   
-  def computeSecret(other_public_key: String, input_encoding: BinaryToTextEncoding): Buffer = js.native
-  def computeSecret(
-    other_public_key: String,
-    input_encoding: BinaryToTextEncoding,
-    output_encoding: BinaryToTextEncoding
-  ): String = js.native
+  def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding): Buffer = js.native
+  def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding, outputEncoding: BinaryToTextEncoding): String = js.native
   /**
     * Computes the shared secret using `otherPublicKey` as the other
     * party's public key and returns the computed shared secret. The supplied
@@ -84,8 +57,8 @@ class DiffieHellman_ protected () extends StObject {
     * @param inputEncoding The `encoding` of an `otherPublicKey` string.
     * @param outputEncoding The `encoding` of the return value.
     */
-  def computeSecret(other_public_key: ArrayBufferView): Buffer = js.native
-  def computeSecret(other_public_key: ArrayBufferView, output_encoding: BinaryToTextEncoding): String = js.native
+  def computeSecret(otherPublicKey: ArrayBufferView): Buffer = js.native
+  def computeSecret(otherPublicKey: ArrayBufferView, outputEncoding: BinaryToTextEncoding): String = js.native
   
   /**
     * Generates private and public Diffie-Hellman key values, and returns
@@ -138,7 +111,7 @@ class DiffieHellman_ protected () extends StObject {
   def getPublicKey(): Buffer = js.native
   def getPublicKey(encoding: BinaryToTextEncoding): String = js.native
   
-  def setPrivateKey(private_key: String, encoding: BufferEncoding): Unit = js.native
+  def setPrivateKey(privateKey: String, encoding: BufferEncoding): Unit = js.native
   /**
     * Sets the Diffie-Hellman private key. If the `encoding` argument is provided,`privateKey` is expected
     * to be a string. If no `encoding` is provided, `privateKey` is expected
@@ -146,9 +119,9 @@ class DiffieHellman_ protected () extends StObject {
     * @since v0.5.0
     * @param encoding The `encoding` of the `privateKey` string.
     */
-  def setPrivateKey(private_key: ArrayBufferView): Unit = js.native
+  def setPrivateKey(privateKey: ArrayBufferView): Unit = js.native
   
-  def setPublicKey(public_key: String, encoding: BufferEncoding): Unit = js.native
+  def setPublicKey(publicKey: String, encoding: BufferEncoding): Unit = js.native
   /**
     * Sets the Diffie-Hellman public key. If the `encoding` argument is provided,`publicKey` is expected
     * to be a string. If no `encoding` is provided, `publicKey` is expected
@@ -156,7 +129,7 @@ class DiffieHellman_ protected () extends StObject {
     * @since v0.5.0
     * @param encoding The `encoding` of the `publicKey` string.
     */
-  def setPublicKey(public_key: ArrayBufferView): Unit = js.native
+  def setPublicKey(publicKey: ArrayBufferView): Unit = js.native
   
   /**
     * A bit field containing any warnings and/or errors resulting from a check

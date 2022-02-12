@@ -9,9 +9,15 @@ trait UIEventInit
   extends StObject
      with EventInit {
   
+  /* standard DOM */
   var detail: js.UndefOr[Double] = js.undefined
   
-  var view: js.UndefOr[org.scalajs.dom.raw.Window | Null] = js.undefined
+  /* standard DOM */
+  var view: js.UndefOr[org.scalajs.dom.Window | Null] = js.undefined
+  
+  /** @deprecated */
+  /* standard DOM */
+  var which: js.UndefOr[Double] = js.undefined
 }
 object UIEventInit {
   
@@ -31,12 +37,18 @@ object UIEventInit {
     def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
     
     @scala.inline
-    def setView(value: org.scalajs.dom.raw.Window): Self = StObject.set(x, "view", value.asInstanceOf[js.Any])
+    def setView(value: org.scalajs.dom.Window): Self = StObject.set(x, "view", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setViewNull: Self = StObject.set(x, "view", null)
     
     @scala.inline
     def setViewUndefined: Self = StObject.set(x, "view", js.undefined)
+    
+    @scala.inline
+    def setWhich(value: Double): Self = StObject.set(x, "which", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setWhichUndefined: Self = StObject.set(x, "which", js.undefined)
   }
 }

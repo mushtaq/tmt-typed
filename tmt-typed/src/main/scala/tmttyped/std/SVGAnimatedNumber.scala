@@ -8,8 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Used for attributes of basic type <Number> which can be animated. */
 trait SVGAnimatedNumber extends StObject {
   
+  /* standard DOM */
   val animVal: Double
   
+  /* standard DOM */
   var baseVal: Double
 }
 object SVGAnimatedNumber {

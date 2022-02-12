@@ -9,6 +9,7 @@ trait EcKeyGenParams
   extends StObject
      with Algorithm {
   
+  /* standard DOM */
   var namedCurve: NamedCurve
 }
 object EcKeyGenParams {

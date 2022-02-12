@@ -63,7 +63,7 @@ object domainMod {
       * @param callback The callback function
       * @return The bound function
       */
-    def bind[T /* <: js.Function */](cb: T): T = js.native
+    def bind[T /* <: js.Function */](callback: T): T = js.native
     
     /**
       * The `enter()` method is plumbing used by the `run()`, `bind()`, and`intercept()` methods to set the active domain. It sets `domain.active` and`process.domain` to the domain, and implicitly
@@ -125,7 +125,7 @@ object domainMod {
       * @param callback The callback function
       * @return The intercepted function
       */
-    def intercept[T /* <: js.Function */](cb: T): T = js.native
+    def intercept[T /* <: js.Function */](callback: T): T = js.native
     
     /**
       * An array of timers and event emitters that have been explicitly added
@@ -171,7 +171,7 @@ object domainMod {
       * In this example, the `d.on('error')` handler will be triggered, rather
       * than crashing the program.
       */
-    def run[T](fn: js.Function1[/* repeated */ js.Any, T], args: js.Any*): T = js.native
+    def run[T](fn: js.Function1[/* repeated */ Any, T], args: Any*): T = js.native
   }
   
   @scala.inline

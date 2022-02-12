@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - tmttyped.std.stdStrings.failed
   - tmttyped.std.stdStrings.frozen
   - tmttyped.std.stdStrings.`in-progress`
+  - tmttyped.std.stdStrings.inprogress
   - tmttyped.std.stdStrings.succeeded
   - tmttyped.std.stdStrings.waiting
 */
@@ -23,6 +24,9 @@ object RTCStatsIceCandidatePairState {
   
   @scala.inline
   def `in-progress`: tmttyped.std.stdStrings.`in-progress` = "in-progress".asInstanceOf[tmttyped.std.stdStrings.`in-progress`]
+  
+  @scala.inline
+  def inprogress: tmttyped.std.stdStrings.inprogress = "inprogress".asInstanceOf[tmttyped.std.stdStrings.inprogress]
   
   @scala.inline
   def succeeded: tmttyped.std.stdStrings.succeeded = "succeeded".asInstanceOf[tmttyped.std.stdStrings.succeeded]

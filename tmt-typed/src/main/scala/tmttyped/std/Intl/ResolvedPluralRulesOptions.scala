@@ -7,20 +7,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResolvedPluralRulesOptions extends StObject {
   
+  /* standard es2018.intl */
   var locale: String
   
+  /* standard es2018.intl */
   var maximumFractionDigits: Double
   
+  /* standard es2018.intl */
   var maximumSignificantDigits: js.UndefOr[Double] = js.undefined
   
+  /* standard es2018.intl */
   var minimumFractionDigits: Double
   
+  /* standard es2018.intl */
   var minimumIntegerDigits: Double
   
+  /* standard es2018.intl */
   var minimumSignificantDigits: js.UndefOr[Double] = js.undefined
   
+  /* standard es2018.intl */
   var pluralCategories: js.Array[LDMLPluralRule]
   
+  /* standard es2018.intl */
   var `type`: PluralRuleType
 }
 object ResolvedPluralRulesOptions {

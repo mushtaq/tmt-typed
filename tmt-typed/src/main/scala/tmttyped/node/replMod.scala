@@ -55,7 +55,7 @@ object replMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  class REPLServer protected () extends StObject {
+  /* private */ class REPLServer () extends StObject {
     
     /**
       * events.EventEmitter
@@ -69,7 +69,7 @@ object replMod {
       * 8. exit
       * 9. reset
       */
-    def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
@@ -81,7 +81,7 @@ object replMod {
     @JSName("addListener")
     def addListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def addListener_line(event: line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
@@ -113,7 +113,7 @@ object replMod {
       */
     val context: Context = js.native
     
-    def defineCommand(keyword: java.lang.String, cmd: REPLCommand): Unit = js.native
+    def defineCommand(keyword: String, cmd: REPLCommand): Unit = js.native
     /**
       * The `replServer.defineCommand()` method is used to add new `.`\-prefixed commands
       * to the REPL instance. Such commands are invoked by typing a `.` followed by the`keyword`. The `cmd` is either a `Function` or an `Object` with the following
@@ -151,7 +151,7 @@ object replMod {
       * @param keyword The command keyword (*without* a leading `.` character).
       * @param cmd The function to invoke when the command is processed.
       */
-    def defineCommand(keyword: java.lang.String, cmd: REPLCommandAction): Unit = js.native
+    def defineCommand(keyword: String, cmd: REPLCommandAction): Unit = js.native
     
     /**
       * The `replServer.displayPrompt()` method readies the REPL instance for input
@@ -176,8 +176,8 @@ object replMod {
       */
     val editorMode: Boolean = js.native
     
-    def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-    def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_SIGCONT(event: SIGCONT): Boolean = js.native
     @JSName("emit")
@@ -189,7 +189,7 @@ object replMod {
     @JSName("emit")
     def emit_exit(event: exit): Boolean = js.native
     @JSName("emit")
-    def emit_line(event: line, input: java.lang.String): Boolean = js.native
+    def emit_line(event: line, input: String): Boolean = js.native
     @JSName("emit")
     def emit_pause(event: pause): Boolean = js.native
     @JSName("emit")
@@ -203,10 +203,10 @@ object replMod {
       * for the JavaScript `eval()` function.
       */
     def eval(
-      evalCmd: java.lang.String,
+      evalCmd: String,
       context: Context,
-      file: java.lang.String,
-      cb: js.Function2[/* err */ js.Error | Null, /* result */ js.Any, Unit]
+      file: String,
+      cb: js.Function2[/* err */ js.Error | Null, /* result */ Any, Unit]
     ): Unit = js.native
     
     /**
@@ -230,7 +230,7 @@ object replMod {
       *
       * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_assignment_of_the_underscore_variable
       */
-    val last: js.Any = js.native
+    val last: Any = js.native
     
     /**
       * The last error raised inside the REPL (assigned to the `_error` variable inside of the REPL).
@@ -238,9 +238,9 @@ object replMod {
       * @since v9.8.0
       * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_assignment_of_the_underscore_variable
       */
-    val lastError: js.Any = js.native
+    val lastError: Any = js.native
     
-    def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -252,7 +252,7 @@ object replMod {
     @JSName("on")
     def on_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
-    def on_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def on_line(event: line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("on")
     def on_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -260,7 +260,7 @@ object replMod {
     @JSName("on")
     def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -272,7 +272,7 @@ object replMod {
     @JSName("once")
     def once_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
-    def once_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def once_line(event: line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("once")
     def once_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -290,7 +290,7 @@ object replMod {
       */
     val outputStream: WritableStream = js.native
     
-    def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -302,7 +302,7 @@ object replMod {
     @JSName("prependListener")
     def prependListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def prependListener_line(event: line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -310,7 +310,7 @@ object replMod {
     @JSName("prependListener")
     def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
-    def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_SIGCONT(event: SIGCONT, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -322,7 +322,7 @@ object replMod {
     @JSName("prependOnceListener")
     def prependOnceListener_exit(event: exit, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_line(event: line, listener: js.Function1[/* input */ java.lang.String, Unit]): this.type = js.native
+    def prependOnceListener_line(event: line, listener: js.Function1[/* input */ String, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_pause(event: pause, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -350,7 +350,7 @@ object replMod {
       * @param historyPath the path to the history file
       * @param callback called when history writes are ready or upon error
       */
-    def setupHistory(path: java.lang.String, cb: js.Function2[/* err */ js.Error | Null, /* repl */ this.type, Unit]): Unit = js.native
+    def setupHistory(path: String, callback: js.Function2[/* err */ js.Error | Null, /* repl */ this.type, Unit]): Unit = js.native
     
     /**
       * A value indicating whether the `_` variable has been assigned.
@@ -385,7 +385,7 @@ object replMod {
       * each command before writing to `outputStream`. If not specified in the REPL options,
       * this will be a wrapper for `util.inspect`.
       */
-    def writer(obj: js.Any): java.lang.String = js.native
+    def writer(obj: Any): String = js.native
   }
   
   /**
@@ -417,11 +417,13 @@ object replMod {
     
     var err: js.Error = js.native
     
+    /* standard es5 */
     /* CompleteClass */
-    override var message: java.lang.String = js.native
+    override var message: String = js.native
     
+    /* standard es5 */
     /* CompleteClass */
-    override var name: java.lang.String = js.native
+    override var name: String = js.native
   }
   
   /**
@@ -440,7 +442,7 @@ object replMod {
   @scala.inline
   def start(): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[REPLServer]
   @scala.inline
-  def start(options: java.lang.String): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
+  def start(options: String): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
   @scala.inline
   def start(options: ReplOptions): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
   
@@ -457,7 +459,7 @@ object replMod {
     /**
       * The function to execute, optionally accepting a single string argument.
       */
-    def action(text: java.lang.String): Unit
+    def action(text: String): Unit
     /**
       * The function to execute, optionally accepting a single string argument.
       */
@@ -467,7 +469,7 @@ object replMod {
     /**
       * Help text to be displayed when `.help` is entered.
       */
-    var help: js.UndefOr[java.lang.String] = js.undefined
+    var help: js.UndefOr[String] = js.undefined
   }
   object REPLCommand {
     
@@ -484,25 +486,25 @@ object replMod {
       def setAction(value: REPLCommandAction): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setHelp(value: java.lang.String): Self = StObject.set(x, "help", value.asInstanceOf[js.Any])
+      def setHelp(value: String): Self = StObject.set(x, "help", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setHelpUndefined: Self = StObject.set(x, "help", js.undefined)
     }
   }
   
-  type REPLCommandAction = js.ThisFunction1[/* this */ REPLServer, /* text */ java.lang.String, Unit]
+  type REPLCommandAction = js.ThisFunction1[/* this */ REPLServer, /* text */ String, Unit]
   
   type REPLEval = js.ThisFunction4[
     /* this */ REPLServer, 
-    /* evalCmd */ java.lang.String, 
+    /* evalCmd */ String, 
     /* context */ Context, 
-    /* file */ java.lang.String, 
-    /* cb */ js.Function2[/* err */ js.Error | Null, /* result */ js.Any, Unit], 
+    /* file */ String, 
+    /* cb */ js.Function2[/* err */ js.Error | Null, /* result */ Any, Unit], 
     Unit
   ]
   
-  type REPLWriter = js.ThisFunction1[/* this */ REPLServer, /* obj */ js.Any, java.lang.String]
+  type REPLWriter = js.ThisFunction1[/* this */ REPLServer, /* obj */ Any, String]
   
   trait ReplOptions extends StObject {
     
@@ -560,7 +562,7 @@ object replMod {
       * The input prompt to display.
       * @default "> "
       */
-    var prompt: js.UndefOr[java.lang.String] = js.undefined
+    var prompt: js.UndefOr[String] = js.undefined
     
     /**
       * A flag that specifies whether the default evaluator executes all JavaScript commands in
@@ -625,11 +627,11 @@ object replMod {
       def setCompleter(value: Completer | AsyncCompleter): Self = StObject.set(x, "completer", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCompleterFunction1(value: /* line */ java.lang.String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
+      def setCompleterFunction1(value: /* line */ String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
       
       @scala.inline
       def setCompleterFunction2(
-        value: (/* line */ java.lang.String, /* callback */ js.Function2[
+        value: (/* line */ String, /* callback */ js.Function2[
               /* err */ js.UndefOr[Null | js.Error], 
               /* result */ js.UndefOr[CompleterResult], 
               Unit
@@ -670,7 +672,7 @@ object replMod {
       def setPreviewUndefined: Self = StObject.set(x, "preview", js.undefined)
       
       @scala.inline
-      def setPrompt(value: java.lang.String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
+      def setPrompt(value: String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setPromptUndefined: Self = StObject.set(x, "prompt", js.undefined)

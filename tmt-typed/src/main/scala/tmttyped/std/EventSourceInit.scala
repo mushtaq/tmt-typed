@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait EventSourceInit extends StObject {
   
+  /* standard DOM */
   var withCredentials: js.UndefOr[scala.Boolean] = js.undefined
 }
 object EventSourceInit {

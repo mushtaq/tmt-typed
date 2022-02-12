@@ -11,5 +11,6 @@ trait AudioDestinationNode
   extends StObject
      with AudioNode {
   
+  /* standard DOM */
   val maxChannelCount: Double = js.native
 }

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("DOMMatrix")
 @js.native
+/* standard DOM */
 class DOMMatrix ()
   extends StObject
      with tmttyped.std.DOMMatrix {
@@ -21,12 +22,15 @@ object DOMMatrix {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard DOM */
   @scala.inline
   def fromFloat32Array(array32: js.typedarray.Float32Array): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat32Array")(array32.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrix]
   
+  /* standard DOM */
   @scala.inline
   def fromFloat64Array(array64: js.typedarray.Float64Array): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromFloat64Array")(array64.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMMatrix]
   
+  /* standard DOM */
   @scala.inline
   def fromMatrix(): tmttyped.std.DOMMatrix = ^.asInstanceOf[js.Dynamic].applyDynamic("fromMatrix")().asInstanceOf[tmttyped.std.DOMMatrix]
   @scala.inline

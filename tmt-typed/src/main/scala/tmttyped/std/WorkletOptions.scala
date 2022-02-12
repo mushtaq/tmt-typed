@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait WorkletOptions extends StObject {
   
-  var credentials: js.UndefOr[org.scalajs.dom.experimental.RequestCredentials] = js.undefined
+  /* standard DOM */
+  var credentials: js.UndefOr[org.scalajs.dom.RequestCredentials] = js.undefined
 }
 object WorkletOptions {
   
@@ -21,7 +22,7 @@ object WorkletOptions {
   implicit class WorkletOptionsMutableBuilder[Self <: WorkletOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
+    def setCredentials(value: org.scalajs.dom.RequestCredentials): Self = StObject.set(x, "credentials", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCredentialsUndefined: Self = StObject.set(x, "credentials", js.undefined)

@@ -460,5 +460,8 @@ package object dnsMod {
   ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
   
   @scala.inline
+  def setDefaultResultOrder(order: tmttyped.node.nodeStrings.ipv4first | tmttyped.node.nodeStrings.verbatim): scala.Unit = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("setDefaultResultOrder")(order.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
+  
+  @scala.inline
   def setServers(servers: js.Array[java.lang.String]): scala.Unit = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
 }

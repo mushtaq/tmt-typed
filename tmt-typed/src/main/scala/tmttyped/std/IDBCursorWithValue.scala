@@ -11,8 +11,7 @@ trait IDBCursorWithValue
   extends StObject
      with IDBCursor {
   
-  /**
-    * Returns the cursor's current value.
-    */
-  val value: js.Any = js.native
+  /** Returns the cursor's current value. */
+  /* standard DOM */
+  val value: Any = js.native
 }

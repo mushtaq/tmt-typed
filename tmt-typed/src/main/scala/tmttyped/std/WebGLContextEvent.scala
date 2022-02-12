@@ -11,5 +11,6 @@ trait WebGLContextEvent
   extends StObject
      with Event {
   
+  /* standard DOM */
   val statusMessage: java.lang.String = js.native
 }

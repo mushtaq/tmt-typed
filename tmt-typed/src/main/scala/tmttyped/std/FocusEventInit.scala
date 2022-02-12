@@ -9,7 +9,8 @@ trait FocusEventInit
   extends StObject
      with UIEventInit {
   
-  var relatedTarget: js.UndefOr[org.scalajs.dom.raw.EventTarget | Null] = js.undefined
+  /* standard DOM */
+  var relatedTarget: js.UndefOr[org.scalajs.dom.EventTarget | Null] = js.undefined
 }
 object FocusEventInit {
   
@@ -23,7 +24,7 @@ object FocusEventInit {
   implicit class FocusEventInitMutableBuilder[Self <: FocusEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setRelatedTarget(value: org.scalajs.dom.raw.EventTarget): Self = StObject.set(x, "relatedTarget", value.asInstanceOf[js.Any])
+    def setRelatedTarget(value: org.scalajs.dom.EventTarget): Self = StObject.set(x, "relatedTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRelatedTargetNull: Self = StObject.set(x, "relatedTarget", null)

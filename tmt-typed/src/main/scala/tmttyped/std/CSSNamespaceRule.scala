@@ -10,8 +10,10 @@ trait CSSNamespaceRule
   extends StObject
      with CSSRule {
   
+  /* standard DOM */
   val namespaceURI: java.lang.String
   
+  /* standard DOM */
   val prefix: java.lang.String
 }
 object CSSNamespaceRule {

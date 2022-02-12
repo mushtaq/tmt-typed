@@ -5,20 +5,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait GeolocationCoordinates extends StObject {
   
+  /* standard DOM */
   val accuracy: Double
   
+  /* standard DOM */
   val altitude: Double | Null
   
+  /* standard DOM */
   val altitudeAccuracy: Double | Null
   
+  /* standard DOM */
   val heading: Double | Null
   
+  /* standard DOM */
   val latitude: Double
   
+  /* standard DOM */
   val longitude: Double
   
+  /* standard DOM */
   val speed: Double | Null
 }
 object GeolocationCoordinates {

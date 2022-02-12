@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PaymentItem extends StObject {
   
+  /* standard DOM */
   var amount: PaymentCurrencyAmount
   
+  /* standard DOM */
   var label: java.lang.String
   
+  /* standard DOM */
   var pending: js.UndefOr[scala.Boolean] = js.undefined
 }
 object PaymentItem {

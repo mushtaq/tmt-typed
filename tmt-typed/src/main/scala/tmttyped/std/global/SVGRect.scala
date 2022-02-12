@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGRect")
 @js.native
+/* standard DOM */
 class SVGRect ()
   extends StObject
      with tmttyped.std.DOMRect {
@@ -28,30 +29,39 @@ class SVGRect ()
   def this(x: Unit, y: Unit, width: Double, height: Double) = this()
   def this(x: Unit, y: Unit, width: Unit, height: Double) = this()
   
+  /* standard DOM */
   /* CompleteClass */
   override val bottom: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val height: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val left: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val right: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
-  override def toJSON(): js.Any = js.native
+  override def toJSON(): Any = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val top: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val width: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val x: Double = js.native
   
+  /* standard DOM */
   /* CompleteClass */
   override val y: Double = js.native
 }
@@ -62,8 +72,9 @@ object SVGRect {
   @js.native
   val ^ : js.Any = js.native
   
+  /* standard DOM */
   @scala.inline
-  def fromRect(): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMRect]
+  def fromRect(): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[org.scalajs.dom.DOMRect]
   @scala.inline
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMRect]
+  def fromRect(other: DOMRectInit): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.DOMRect]
 }

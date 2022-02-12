@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait SVGURIReference extends StObject {
   
-  val href: org.scalajs.dom.raw.SVGAnimatedString
+  /* standard DOM */
+  val href: org.scalajs.dom.SVGAnimatedString
 }
 object SVGURIReference {
   
   @scala.inline
-  def apply(href: org.scalajs.dom.raw.SVGAnimatedString): SVGURIReference = {
+  def apply(href: org.scalajs.dom.SVGAnimatedString): SVGURIReference = {
     val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
     __obj.asInstanceOf[SVGURIReference]
   }
@@ -21,6 +22,6 @@ object SVGURIReference {
   implicit class SVGURIReferenceMutableBuilder[Self <: SVGURIReference] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setHref(value: org.scalajs.dom.raw.SVGAnimatedString): Self = StObject.set(x, "href", value.asInstanceOf[js.Any])
+    def setHref(value: org.scalajs.dom.SVGAnimatedString): Self = StObject.set(x, "href", value.asInstanceOf[js.Any])
   }
 }

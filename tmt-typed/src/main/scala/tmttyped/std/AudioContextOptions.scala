@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AudioContextOptions extends StObject {
   
+  /* standard DOM */
   var latencyHint: js.UndefOr[AudioContextLatencyCategory | Double] = js.undefined
   
+  /* standard DOM */
   var sampleRate: js.UndefOr[Double] = js.undefined
 }
 object AudioContextOptions {

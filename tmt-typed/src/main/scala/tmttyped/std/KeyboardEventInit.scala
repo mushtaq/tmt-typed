@@ -10,19 +10,26 @@ trait KeyboardEventInit
      with EventModifierInit {
   
   /** @deprecated */
+  /* standard DOM */
   var charCode: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var code: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var isComposing: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var key: js.UndefOr[java.lang.String] = js.undefined
   
   /** @deprecated */
+  /* standard DOM */
   var keyCode: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var location: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var repeat: js.UndefOr[scala.Boolean] = js.undefined
 }
 object KeyboardEventInit {

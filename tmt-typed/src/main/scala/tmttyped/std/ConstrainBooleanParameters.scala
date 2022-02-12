@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ConstrainBooleanParameters extends StObject {
   
+  /* standard DOM */
   var exact: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var ideal: js.UndefOr[scala.Boolean] = js.undefined
 }
 object ConstrainBooleanParameters {

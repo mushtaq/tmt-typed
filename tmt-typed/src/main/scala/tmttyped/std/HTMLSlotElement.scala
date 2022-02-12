@@ -10,6 +10,7 @@ trait HTMLSlotElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -21,21 +22,28 @@ trait HTMLSlotElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  def assignedElements(): js.Array[org.scalajs.dom.raw.Element] = js.native
-  def assignedElements(options: AssignedNodesOptions): js.Array[org.scalajs.dom.raw.Element] = js.native
+  /* standard DOM */
+  def assign(nodes: (org.scalajs.dom.Element | org.scalajs.dom.Text)*): Unit = js.native
   
-  def assignedNodes(): js.Array[org.scalajs.dom.raw.Node] = js.native
-  def assignedNodes(options: AssignedNodesOptions): js.Array[org.scalajs.dom.raw.Node] = js.native
+  /* standard DOM */
+  def assignedElements(): js.Array[org.scalajs.dom.Element] = js.native
+  def assignedElements(options: AssignedNodesOptions): js.Array[org.scalajs.dom.Element] = js.native
   
+  /* standard DOM */
+  def assignedNodes(): js.Array[org.scalajs.dom.Node] = js.native
+  def assignedNodes(options: AssignedNodesOptions): js.Array[org.scalajs.dom.Node] = js.native
+  
+  /* standard DOM */
   var name: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native

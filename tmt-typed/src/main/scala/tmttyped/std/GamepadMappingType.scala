@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - tmttyped.std.stdStrings._empty
   - tmttyped.std.stdStrings.standard
+  - tmttyped.std.stdStrings.`xr-standard`
 */
 trait GamepadMappingType extends StObject
 object GamepadMappingType {
@@ -17,4 +18,7 @@ object GamepadMappingType {
   
   @scala.inline
   def standard: tmttyped.std.stdStrings.standard = "standard".asInstanceOf[tmttyped.std.stdStrings.standard]
+  
+  @scala.inline
+  def `xr-standard`: tmttyped.std.stdStrings.`xr-standard` = "xr-standard".asInstanceOf[tmttyped.std.stdStrings.`xr-standard`]
 }

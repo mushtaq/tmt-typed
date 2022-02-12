@@ -11,6 +11,7 @@ trait HTMLParamElement
   extends StObject
      with HTMLElement {
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -22,36 +23,37 @@ trait HTMLParamElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /**
-    * Sets or retrieves the name of an input parameter for an element.
-    */
+  /** Sets or retrieves the name of an input parameter for an element. */
+  /* standard DOM */
   var name: java.lang.String = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
   /**
     * Sets or retrieves the content type of the resource designated by the value attribute.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var `type`: java.lang.String = js.native
   
-  /**
-    * Sets or retrieves the value of an input parameter for an element.
-    */
+  /** Sets or retrieves the value of an input parameter for an element. */
+  /* standard DOM */
   var value: java.lang.String = js.native
   
   /**
     * Sets or retrieves the data type of the value attribute.
+    * @deprecated
     */
-  /** @deprecated */
+  /* standard DOM */
   var valueType: java.lang.String = js.native
 }

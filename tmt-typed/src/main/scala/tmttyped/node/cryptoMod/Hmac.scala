@@ -7,8 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * * Extends: `<stream.Transform>`
-  *
   * The `Hmac` class is a utility for creating cryptographic HMAC digests. It can
   * be used in one of two ways:
   *
@@ -23,30 +21,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * ```js
   * const {
-  *   createHmac,
+  *   createHmac
   * } = await import('crypto');
-  *
-  * const hmac = createHmac('sha256', 'a secret');
-  *
-  * hmac.on('readable', () => {
-  *   // Only one element is going to be produced by the
-  *   // hash stream.
-  *   const data = hmac.read();
-  *   if (data) {
-  *     console.log(data.toString('hex'));
-  *     // Prints:
-  *     //   7fd04df92f636fd450bc841c9418e5825c17f33ad9c87c518115a45971f7f77e
-  *   }
-  * });
-  *
-  * hmac.write('some data to hash');
-  * hmac.end();
-  * ```
-  *
-  * ```js
-  * const {
-  *   createHmac,
-  * } = require('crypto');
   *
   * const hmac = createHmac('sha256', 'a secret');
   *
@@ -69,51 +45,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * ```js
   * import { createReadStream } from 'fs';
-  *
+  * import { stdout } from 'process';
   * const {
-  *   createHmac,
+  *   createHmac
   * } = await import('crypto');
   *
   * const hmac = createHmac('sha256', 'a secret');
   *
   * const input = createReadStream('test.js');
-  * input.pipe(hmac).pipe(process.stdout);
-  * ```
-  *
-  * ```js
-  * const {
-  *   createReadStream,
-  * } = require('fs');
-  *
-  * const {
-  *   createHmac,
-  * } = require('crypto');
-  *
-  * const hmac = createHmac('sha256', 'a secret');
-  *
-  * const input = createReadStream('test.js');
-  * input.pipe(hmac).pipe(process.stdout);
+  * input.pipe(hmac).pipe(stdout);
   * ```
   *
   * Example: Using the `hmac.update()` and `hmac.digest()` methods:
   *
   * ```js
   * const {
-  *   createHmac,
+  *   createHmac
   * } = await import('crypto');
-  *
-  * const hmac = createHmac('sha256', 'a secret');
-  *
-  * hmac.update('some data to hash');
-  * console.log(hmac.digest('hex'));
-  * // Prints:
-  * //   7fd04df92f636fd450bc841c9418e5825c17f33ad9c87c518115a45971f7f77e
-  * ```
-  *
-  * ```js
-  * const {
-  *   createHmac,
-  * } = require('crypto');
   *
   * const hmac = createHmac('sha256', 'a secret');
   *
@@ -126,7 +74,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Hmac")
 @js.native
-class Hmac protected () extends StObject {
+/* private */ class Hmac () extends StObject {
   
   /**
     * Calculates the HMAC digest of all of the data passed using `hmac.update()`.
@@ -141,7 +89,7 @@ class Hmac protected () extends StObject {
   def digest(): Buffer = js.native
   def digest(encoding: BinaryToTextEncoding): String = js.native
   
-  def update(data: String, input_encoding: Encoding): Hmac = js.native
+  def update(data: String, inputEncoding: Encoding): Hmac = js.native
   /**
     * Updates the `Hmac` content with the given `data`, the encoding of which
     * is given in `inputEncoding`.

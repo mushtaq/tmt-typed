@@ -3,6 +3,7 @@ package tmttyped.node.cryptoMod
 import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.base64
+import tmttyped.node.nodeStrings.base64url
 import tmttyped.node.nodeStrings.compressed
 import tmttyped.node.nodeStrings.hex
 import tmttyped.node.nodeStrings.hybrid
@@ -23,31 +24,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * import assert from 'assert';
   *
   * const {
-  *   createECDH,
+  *   createECDH
   * } = await import('crypto');
-  *
-  * // Generate Alice's keys...
-  * const alice = createECDH('secp521r1');
-  * const aliceKey = alice.generateKeys();
-  *
-  * // Generate Bob's keys...
-  * const bob = createECDH('secp521r1');
-  * const bobKey = bob.generateKeys();
-  *
-  * // Exchange and generate the secret...
-  * const aliceSecret = alice.computeSecret(bobKey);
-  * const bobSecret = bob.computeSecret(aliceKey);
-  *
-  * assert.strictEqual(aliceSecret.toString('hex'), bobSecret.toString('hex'));
-  * // OK
-  * ```
-  *
-  * ```js
-  * const assert = require('assert');
-  *
-  * const {
-  *   createECDH,
-  * } = require('crypto');
   *
   * // Generate Alice's keys...
   * const alice = createECDH('secp521r1');
@@ -68,14 +46,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "ECDH")
 @js.native
-class ECDH protected () extends StObject {
+/* private */ class ECDH () extends StObject {
   
-  def computeSecret(other_public_key: String, input_encoding: BinaryToTextEncoding): Buffer = js.native
-  def computeSecret(
-    other_public_key: String,
-    input_encoding: BinaryToTextEncoding,
-    output_encoding: BinaryToTextEncoding
-  ): String = js.native
+  def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding): Buffer = js.native
+  def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding, outputEncoding: BinaryToTextEncoding): String = js.native
   /**
     * Computes the shared secret using `otherPublicKey` as the other
     * party's public key and returns the computed shared secret. The supplied
@@ -93,8 +67,8 @@ class ECDH protected () extends StObject {
     * @param inputEncoding The `encoding` of the `otherPublicKey` string.
     * @param outputEncoding The `encoding` of the return value.
     */
-  def computeSecret(other_public_key: ArrayBufferView): Buffer = js.native
-  def computeSecret(other_public_key: ArrayBufferView, output_encoding: BinaryToTextEncoding): String = js.native
+  def computeSecret(otherPublicKey: ArrayBufferView): Buffer = js.native
+  def computeSecret(otherPublicKey: ArrayBufferView, outputEncoding: BinaryToTextEncoding): String = js.native
   
   /**
     * Generates private and public EC Diffie-Hellman key values, and returns
@@ -106,6 +80,7 @@ class ECDH protected () extends StObject {
     * If `encoding` is provided a string is returned; otherwise a `Buffer` is returned.
     * @since v0.11.14
     * @param encoding The `encoding` of the return value.
+    * @param [format='uncompressed']
     */
   def generateKeys(): Buffer = js.native
   def generateKeys(encoding: BinaryToTextEncoding): String = js.native
@@ -128,13 +103,14 @@ class ECDH protected () extends StObject {
     * returned.
     * @since v0.11.14
     * @param encoding The `encoding` of the return value.
+    * @param [format='uncompressed']
     * @return The EC Diffie-Hellman public key in the specified `encoding` and `format`.
     */
   def getPublicKey(): Buffer = js.native
   def getPublicKey(encoding: BinaryToTextEncoding): String = js.native
   def getPublicKey(encoding: BinaryToTextEncoding, format: ECDHKeyFormat): String = js.native
   
-  def setPrivateKey(private_key: String, encoding: BinaryToTextEncoding): Unit = js.native
+  def setPrivateKey(privateKey: String, encoding: BinaryToTextEncoding): Unit = js.native
   /**
     * Sets the EC Diffie-Hellman private key.
     * If `encoding` is provided, `privateKey` is expected
@@ -146,7 +122,7 @@ class ECDH protected () extends StObject {
     * @since v0.11.14
     * @param encoding The `encoding` of the `privateKey` string.
     */
-  def setPrivateKey(private_key: ArrayBufferView): Unit = js.native
+  def setPrivateKey(privateKey: ArrayBufferView): Unit = js.native
 }
 object ECDH {
   
@@ -174,29 +150,8 @@ object ECDH {
     * ```js
     * const {
     *   createECDH,
-    *   ECDH,
+    *   ECDH
     * } = await import('crypto');
-    *
-    * const ecdh = createECDH('secp256k1');
-    * ecdh.generateKeys();
-    *
-    * const compressedKey = ecdh.getPublicKey('hex', 'compressed');
-    *
-    * const uncompressedKey = ECDH.convertKey(compressedKey,
-    *                                         'secp256k1',
-    *                                         'hex',
-    *                                         'hex',
-    *                                         'uncompressed');
-    *
-    * // The converted key and the uncompressed public key should be the same
-    * console.log(uncompressedKey === ecdh.getPublicKey('hex'));
-    * ```
-    *
-    * ```js
-    * const {
-    *   createECDH,
-    *   ECDH,
-    * } = require('crypto');
     *
     * const ecdh = createECDH('secp256k1');
     * ecdh.generateKeys();
@@ -215,28 +170,34 @@ object ECDH {
     * @since v10.0.0
     * @param inputEncoding The `encoding` of the `key` string.
     * @param outputEncoding The `encoding` of the return value.
+    * @param [format='uncompressed']
     */
   /* static member */
   @scala.inline
   def convertKey(key: BinaryLike, curve: String): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: base64, format: compressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
+  def convertKey(
+    key: BinaryLike,
+    curve: String,
+    inputEncoding: Unit,
+    outputEncoding: latin1 | hex | base64 | base64url
+  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: base64, format: hybrid): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
+  def convertKey(
+    key: BinaryLike,
+    curve: String,
+    inputEncoding: Unit,
+    outputEncoding: latin1 | hex | base64 | base64url,
+    format: uncompressed | compressed | hybrid
+  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: base64, format: uncompressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: hex, format: compressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: hex, format: hybrid): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: hex, format: uncompressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: latin1, format: compressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: latin1, format: hybrid): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: latin1, format: uncompressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
+  def convertKey(
+    key: BinaryLike,
+    curve: String,
+    inputEncoding: Unit,
+    outputEncoding: Unit,
+    format: uncompressed | compressed | hybrid
+  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
   def convertKey(key: BinaryLike, curve: String, inputEncoding: BinaryToTextEncoding): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
@@ -244,119 +205,22 @@ object ECDH {
     key: BinaryLike,
     curve: String,
     inputEncoding: BinaryToTextEncoding,
-    outputEncoding: base64,
-    format: compressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
+    outputEncoding: latin1 | hex | base64 | base64url
+  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
   def convertKey(
     key: BinaryLike,
     curve: String,
     inputEncoding: BinaryToTextEncoding,
-    outputEncoding: base64,
-    format: hybrid
+    outputEncoding: latin1 | hex | base64 | base64url,
+    format: uncompressed | compressed | hybrid
   ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
   @scala.inline
   def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: base64,
-    format: uncompressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: hex,
-    format: compressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: hex,
-    format: hybrid
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: hex,
-    format: uncompressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: latin1,
-    format: compressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: latin1,
-    format: hybrid
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: latin1,
-    format: uncompressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_base64(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: base64): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_base64(key: BinaryLike, curve: String, inputEncoding: BinaryToTextEncoding, outputEncoding: base64): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_compressed(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: Unit, format: compressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_compressed(
     key: BinaryLike,
     curve: String,
     inputEncoding: BinaryToTextEncoding,
     outputEncoding: Unit,
-    format: compressed
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_hex(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: hex): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_hex(key: BinaryLike, curve: String, inputEncoding: BinaryToTextEncoding, outputEncoding: hex): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_hybrid(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: Unit, format: hybrid): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_hybrid(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: Unit,
-    format: hybrid
-  ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_latin1(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: latin1): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_latin1(key: BinaryLike, curve: String, inputEncoding: BinaryToTextEncoding, outputEncoding: latin1): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  
-  @scala.inline
-  def convertKey_uncompressed(key: BinaryLike, curve: String, inputEncoding: Unit, outputEncoding: Unit, format: uncompressed): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
-  @scala.inline
-  def convertKey_uncompressed(
-    key: BinaryLike,
-    curve: String,
-    inputEncoding: BinaryToTextEncoding,
-    outputEncoding: Unit,
-    format: uncompressed
+    format: uncompressed | compressed | hybrid
   ): Buffer | String = (^.asInstanceOf[js.Dynamic].applyDynamic("convertKey")(key.asInstanceOf[js.Any], curve.asInstanceOf[js.Any], inputEncoding.asInstanceOf[js.Any], outputEncoding.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).asInstanceOf[Buffer | String]
 }

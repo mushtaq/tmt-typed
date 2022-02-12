@@ -11,17 +11,23 @@ trait AudioBufferSourceNode
   extends StObject
      with AudioScheduledSourceNode {
   
-  var buffer: org.scalajs.dom.raw.AudioBuffer | Null = js.native
+  /* standard DOM */
+  var buffer: org.scalajs.dom.AudioBuffer | Null = js.native
   
-  val detune: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val detune: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   var loop: scala.Boolean = js.native
   
+  /* standard DOM */
   var loopEnd: Double = js.native
   
+  /* standard DOM */
   var loopStart: Double = js.native
   
-  val playbackRate: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val playbackRate: org.scalajs.dom.AudioParam = js.native
   
   def start(when: Double, offset: Double): Unit = js.native
   def start(when: Double, offset: Double, duration: Double): Unit = js.native

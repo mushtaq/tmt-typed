@@ -12,18 +12,25 @@ trait SVGTextPathElement
      with SVGTextContentElement
      with SVGURIReference {
   
+  /* standard DOM */
   val TEXTPATH_METHODTYPE_ALIGN: Double = js.native
   
+  /* standard DOM */
   val TEXTPATH_METHODTYPE_STRETCH: Double = js.native
   
+  /* standard DOM */
   val TEXTPATH_METHODTYPE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   val TEXTPATH_SPACINGTYPE_AUTO: Double = js.native
   
+  /* standard DOM */
   val TEXTPATH_SPACINGTYPE_EXACT: Double = js.native
   
+  /* standard DOM */
   val TEXTPATH_SPACINGTYPE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -35,20 +42,24 @@ trait SVGTextPathElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val method: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val method: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val spacing: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val spacing: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
-  val startOffset: org.scalajs.dom.raw.SVGAnimatedLength = js.native
+  /* standard DOM */
+  val startOffset: org.scalajs.dom.SVGAnimatedLength = js.native
 }

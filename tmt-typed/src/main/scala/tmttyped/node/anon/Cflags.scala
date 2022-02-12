@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait Cflags extends StObject {
   
-  val cflags: js.Array[js.Any]
+  val cflags: js.Array[Any]
   
   val default_configuration: String
   
@@ -21,7 +21,7 @@ object Cflags {
   
   @scala.inline
   def apply(
-    cflags: js.Array[js.Any],
+    cflags: js.Array[Any],
     default_configuration: String,
     defines: js.Array[String],
     include_dirs: js.Array[String],
@@ -35,10 +35,10 @@ object Cflags {
   implicit class CflagsMutableBuilder[Self <: Cflags] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCflags(value: js.Array[js.Any]): Self = StObject.set(x, "cflags", value.asInstanceOf[js.Any])
+    def setCflags(value: js.Array[Any]): Self = StObject.set(x, "cflags", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCflagsVarargs(value: js.Any*): Self = StObject.set(x, "cflags", js.Array(value :_*))
+    def setCflagsVarargs(value: Any*): Self = StObject.set(x, "cflags", js.Array(value :_*))
     
     @scala.inline
     def setDefault_configuration(value: String): Self = StObject.set(x, "default_configuration", value.asInstanceOf[js.Any])

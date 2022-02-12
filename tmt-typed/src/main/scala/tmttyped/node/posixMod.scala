@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object posixMod extends Shortcut {
   
-  @JSImport("path/posix", JSImport.Namespace)
+  @JSImport("node:path/posix", JSImport.Namespace)
   @js.native
   val ^ : PlatformPath = js.native
   

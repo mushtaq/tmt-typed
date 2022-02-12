@@ -9,20 +9,21 @@ trait XMLHttpRequestEventMap
   extends StObject
      with XMLHttpRequestEventTargetEventMap {
   
-  var readystatechange: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var readystatechange: org.scalajs.dom.Event
 }
 object XMLHttpRequestEventMap {
   
   @scala.inline
   def apply(
-    abort: org.scalajs.dom.raw.ProgressEvent,
-    error: org.scalajs.dom.raw.ProgressEvent,
-    load: org.scalajs.dom.raw.ProgressEvent,
-    loadend: org.scalajs.dom.raw.ProgressEvent,
-    loadstart: org.scalajs.dom.raw.ProgressEvent,
-    progress: org.scalajs.dom.raw.ProgressEvent,
-    readystatechange: org.scalajs.dom.raw.Event,
-    timeout: org.scalajs.dom.raw.ProgressEvent
+    abort: org.scalajs.dom.ProgressEvent,
+    error: org.scalajs.dom.ProgressEvent,
+    load: org.scalajs.dom.ProgressEvent,
+    loadend: org.scalajs.dom.ProgressEvent,
+    loadstart: org.scalajs.dom.ProgressEvent,
+    progress: org.scalajs.dom.ProgressEvent,
+    readystatechange: org.scalajs.dom.Event,
+    timeout: org.scalajs.dom.ProgressEvent
   ): XMLHttpRequestEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadend = loadend.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], readystatechange = readystatechange.asInstanceOf[js.Any], timeout = timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[XMLHttpRequestEventMap]
@@ -32,6 +33,6 @@ object XMLHttpRequestEventMap {
   implicit class XMLHttpRequestEventMapMutableBuilder[Self <: XMLHttpRequestEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setReadystatechange(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
+    def setReadystatechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
   }
 }

@@ -9,12 +9,13 @@ trait OfflineAudioCompletionEventInit
   extends StObject
      with EventInit {
   
-  var renderedBuffer: org.scalajs.dom.raw.AudioBuffer
+  /* standard DOM */
+  var renderedBuffer: org.scalajs.dom.AudioBuffer
 }
 object OfflineAudioCompletionEventInit {
   
   @scala.inline
-  def apply(renderedBuffer: org.scalajs.dom.raw.AudioBuffer): OfflineAudioCompletionEventInit = {
+  def apply(renderedBuffer: org.scalajs.dom.AudioBuffer): OfflineAudioCompletionEventInit = {
     val __obj = js.Dynamic.literal(renderedBuffer = renderedBuffer.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineAudioCompletionEventInit]
   }
@@ -23,6 +24,6 @@ object OfflineAudioCompletionEventInit {
   implicit class OfflineAudioCompletionEventInitMutableBuilder[Self <: OfflineAudioCompletionEventInit] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setRenderedBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = StObject.set(x, "renderedBuffer", value.asInstanceOf[js.Any])
+    def setRenderedBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "renderedBuffer", value.asInstanceOf[js.Any])
   }
 }

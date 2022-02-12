@@ -10,10 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("VarDate")
 @js.native
-class VarDate protected ()
+/* standard ScriptHost */
+/* private */ class VarDate ()
   extends StObject
      with tmttyped.std.VarDate {
   
-  /* CompleteClass */
+  /* standard ScriptHost */
+  /* private */ /* CompleteClass */
   override var VarDate_typekey: tmttyped.std.VarDate = js.native
 }

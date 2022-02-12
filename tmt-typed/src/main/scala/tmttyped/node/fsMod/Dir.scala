@@ -32,15 +32,15 @@ class Dir ()
   def closeSync(): Unit = js.native
   
   /**
-    * The read-only path of this directory as was provided to {@link opendir},{@link opendirSync}, or {@link romises.opendir}.
+    * The read-only path of this directory as was provided to {@link opendir},{@link opendirSync}, or `fsPromises.opendir()`.
     * @since v12.12.0
     */
   val path: String = js.native
   
   /**
-    * Asynchronously read the next directory entry via [`readdir(3)`](http://man7.org/linux/man-pages/man3/readdir.3.html) as an `<fs.Dirent>`.
+    * Asynchronously read the next directory entry via [`readdir(3)`](http://man7.org/linux/man-pages/man3/readdir.3.html) as an `fs.Dirent`.
     *
-    * A promise is returned that will be resolved with an `<fs.Dirent>`, or `null`if there are no more directory entries to read.
+    * A promise is returned that will be resolved with an `fs.Dirent`, or `null`if there are no more directory entries to read.
     *
     * Directory entries returned by this function are in no particular order as
     * provided by the operating system's underlying directory mechanisms.
@@ -53,7 +53,7 @@ class Dir ()
   def read(cb: js.Function2[/* err */ ErrnoException | Null, /* dirEnt */ Dirent | Null, Unit]): Unit = js.native
   
   /**
-    * Synchronously read the next directory entry as an `<fs.Dirent>`. See the
+    * Synchronously read the next directory entry as an `fs.Dirent`. See the
     * POSIX [`readdir(3)`](http://man7.org/linux/man-pages/man3/readdir.3.html) documentation for more detail.
     *
     * If there are no more directory entries to read, `null` will be returned.

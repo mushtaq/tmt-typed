@@ -9,8 +9,10 @@ trait ConstrainDoubleRange
   extends StObject
      with DoubleRange {
   
+  /* standard DOM */
   var exact: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var ideal: js.UndefOr[Double] = js.undefined
 }
 object ConstrainDoubleRange {

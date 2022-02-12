@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait PerformanceObserverInit extends StObject {
   
+  /* standard DOM */
   var buffered: js.UndefOr[scala.Boolean] = js.undefined
   
+  /* standard DOM */
   var entryTypes: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var `type`: js.UndefOr[java.lang.String] = js.undefined
 }
 object PerformanceObserverInit {

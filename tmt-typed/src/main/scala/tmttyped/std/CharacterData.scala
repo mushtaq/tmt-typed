@@ -12,20 +12,28 @@ trait CharacterData
      with ChildNode
      with NonDocumentTypeChildNode {
   
+  /* standard DOM */
   def appendData(data: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   var data: java.lang.String = js.native
   
+  /* standard DOM */
   def deleteData(offset: Double, count: Double): Unit = js.native
   
+  /* standard DOM */
   def insertData(offset: Double, data: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   val length: Double = js.native
   
+  /* standard DOM */
   @JSName("ownerDocument")
-  val ownerDocument_CharacterData: org.scalajs.dom.raw.Document = js.native
+  val ownerDocument_CharacterData: org.scalajs.dom.Document = js.native
   
+  /* standard DOM */
   def replaceData(offset: Double, count: Double, data: java.lang.String): Unit = js.native
   
+  /* standard DOM */
   def substringData(offset: Double, count: Double): java.lang.String = js.native
 }

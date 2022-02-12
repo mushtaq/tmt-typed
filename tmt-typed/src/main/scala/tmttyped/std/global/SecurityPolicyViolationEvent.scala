@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SecurityPolicyViolationEvent protected ()
   extends StObject
      with tmttyped.std.SecurityPolicyViolationEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: SecurityPolicyViolationEventInit) = this()
 }

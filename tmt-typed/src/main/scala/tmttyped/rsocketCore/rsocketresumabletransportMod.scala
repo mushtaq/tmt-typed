@@ -19,7 +19,7 @@ object rsocketresumabletransportMod {
     extends StObject
        with RSocketResumableTransport {
     def this(source: js.Function0[DuplexConnection], options: Options) = this()
-    def this(source: js.Function0[DuplexConnection], options: Options, encoders: Encoders[js.Any]) = this()
+    def this(source: js.Function0[DuplexConnection], options: Options, encoders: Encoders[Any]) = this()
     
     /**
       * Close the underlying connection, emitting `onComplete` on the receive()

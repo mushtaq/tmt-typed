@@ -12,16 +12,22 @@ trait SVGFEColorMatrixElement
      with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
+  /* standard DOM */
   val SVG_FECOLORMATRIX_TYPE_HUEROTATE: Double = js.native
   
+  /* standard DOM */
   val SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA: Double = js.native
   
+  /* standard DOM */
   val SVG_FECOLORMATRIX_TYPE_MATRIX: Double = js.native
   
+  /* standard DOM */
   val SVG_FECOLORMATRIX_TYPE_SATURATE: Double = js.native
   
+  /* standard DOM */
   val SVG_FECOLORMATRIX_TYPE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -33,20 +39,24 @@ trait SVGFEColorMatrixElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val in1: org.scalajs.dom.raw.SVGAnimatedString = js.native
+  /* standard DOM */
+  val in1: org.scalajs.dom.SVGAnimatedString = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val `type`: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val `type`: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
-  val values: org.scalajs.dom.raw.SVGAnimatedNumberList = js.native
+  /* standard DOM */
+  val values: org.scalajs.dom.SVGAnimatedNumberList = js.native
 }

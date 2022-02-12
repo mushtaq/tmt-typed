@@ -7,15 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NonElementParentNode extends StObject {
   
-  /**
-    * Returns the first element within node's descendants whose ID is elementId.
-    */
-  def getElementById(elementId: java.lang.String): org.scalajs.dom.raw.Element | Null
+  /** Returns the first element within node's descendants whose ID is elementId. */
+  /* standard DOM */
+  def getElementById(elementId: java.lang.String): org.scalajs.dom.Element | Null
 }
 object NonElementParentNode {
   
   @scala.inline
-  def apply(getElementById: java.lang.String => org.scalajs.dom.raw.Element | Null): NonElementParentNode = {
+  def apply(getElementById: java.lang.String => org.scalajs.dom.Element | Null): NonElementParentNode = {
     val __obj = js.Dynamic.literal(getElementById = js.Any.fromFunction1(getElementById))
     __obj.asInstanceOf[NonElementParentNode]
   }
@@ -24,6 +23,6 @@ object NonElementParentNode {
   implicit class NonElementParentNodeMutableBuilder[Self <: NonElementParentNode] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setGetElementById(value: java.lang.String => org.scalajs.dom.raw.Element | Null): Self = StObject.set(x, "getElementById", js.Any.fromFunction1(value))
+    def setGetElementById(value: java.lang.String => org.scalajs.dom.Element | Null): Self = StObject.set(x, "getElementById", js.Any.fromFunction1(value))
   }
 }

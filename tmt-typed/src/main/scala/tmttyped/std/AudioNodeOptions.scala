@@ -7,10 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait AudioNodeOptions extends StObject {
   
+  /* standard DOM */
   var channelCount: js.UndefOr[Double] = js.undefined
   
+  /* standard DOM */
   var channelCountMode: js.UndefOr[ChannelCountMode] = js.undefined
   
+  /* standard DOM */
   var channelInterpretation: js.UndefOr[ChannelInterpretation] = js.undefined
 }
 object AudioNodeOptions {

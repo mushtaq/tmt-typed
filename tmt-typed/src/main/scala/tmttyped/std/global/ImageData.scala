@@ -1,5 +1,6 @@
 package tmttyped.std.global
 
+import tmttyped.std.ImageDataSettings
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,25 +12,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ImageData protected ()
   extends StObject
      with tmttyped.std.ImageData {
+  /* standard DOM */
   def this(data: js.typedarray.Uint8ClampedArray, sw: Double) = this()
+  /* standard DOM */
   def this(sw: Double, sh: Double) = this()
   def this(data: js.typedarray.Uint8ClampedArray, sw: Double, sh: Double) = this()
+  def this(sw: Double, sh: Double, settings: ImageDataSettings) = this()
+  def this(data: js.typedarray.Uint8ClampedArray, sw: Double, sh: Double, settings: ImageDataSettings) = this()
+  def this(data: js.typedarray.Uint8ClampedArray, sw: Double, sh: Unit, settings: ImageDataSettings) = this()
   
-  /**
-    * Returns the one-dimensional array containing the data in RGBA order, as integers in the range 0 to 255.
-    */
+  /** Returns the one-dimensional array containing the data in RGBA order, as integers in the range 0 to 255. */
+  /* standard DOM */
   /* CompleteClass */
   override val data: js.typedarray.Uint8ClampedArray = js.native
   
-  /**
-    * Returns the actual dimensions of the data in the ImageData object, in pixels.
-    */
+  /** Returns the actual dimensions of the data in the ImageData object, in pixels. */
+  /* standard DOM */
   /* CompleteClass */
   override val height: Double = js.native
   
-  /**
-    * Returns the actual dimensions of the data in the ImageData object, in pixels.
-    */
+  /** Returns the actual dimensions of the data in the ImageData object, in pixels. */
+  /* standard DOM */
   /* CompleteClass */
   override val width: Double = js.native
 }

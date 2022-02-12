@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait LinkStyle extends StObject {
   
-  val sheet: org.scalajs.dom.raw.CSSStyleSheet | Null
+  /* standard DOM */
+  val sheet: org.scalajs.dom.CSSStyleSheet | Null
 }
 object LinkStyle {
   
@@ -21,7 +22,7 @@ object LinkStyle {
   implicit class LinkStyleMutableBuilder[Self <: LinkStyle] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setSheet(value: org.scalajs.dom.raw.CSSStyleSheet): Self = StObject.set(x, "sheet", value.asInstanceOf[js.Any])
+    def setSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "sheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSheetNull: Self = StObject.set(x, "sheet", null)

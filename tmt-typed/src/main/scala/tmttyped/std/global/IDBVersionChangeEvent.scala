@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class IDBVersionChangeEvent protected ()
   extends StObject
      with tmttyped.std.IDBVersionChangeEvent {
+  /* standard DOM */
   def this(`type`: java.lang.String) = this()
   def this(`type`: java.lang.String, eventInitDict: IDBVersionChangeEventInit) = this()
 }

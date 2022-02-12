@@ -3,13 +3,16 @@ package tmttyped.node.anon
 import tmttyped.node.AbortSignal
 import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.fsMod.Mode
+import tmttyped.node.fsMod._WriteFileOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined node.fs.ObjectEncodingOptions & node.node:events.Abortable & {  mode :node.fs.Mode | undefined,   flag :string | undefined} */
-trait ObjectEncodingOptionsAborEncoding extends StObject {
+trait ObjectEncodingOptionsAborEncoding
+  extends StObject
+     with _WriteFileOptions {
   
   var encoding: js.UndefOr[BufferEncoding | Null] = js.undefined
   

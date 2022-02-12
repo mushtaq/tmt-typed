@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ConstrainDOMStringParameters extends StObject {
   
+  /* standard DOM */
   var exact: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var ideal: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.undefined
 }
 object ConstrainDOMStringParameters {

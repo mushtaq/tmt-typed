@@ -11,15 +11,21 @@ trait DynamicsCompressorNode
   extends StObject
      with AudioNode {
   
-  val attack: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val attack: org.scalajs.dom.AudioParam = js.native
   
-  val knee: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val knee: org.scalajs.dom.AudioParam = js.native
   
-  val ratio: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val ratio: org.scalajs.dom.AudioParam = js.native
   
+  /* standard DOM */
   val reduction: Double = js.native
   
-  val release: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val release: org.scalajs.dom.AudioParam = js.native
   
-  val threshold: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val threshold: org.scalajs.dom.AudioParam = js.native
 }

@@ -7,34 +7,58 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait MediaTrackCapabilities extends StObject {
   
+  /* standard DOM */
   var aspectRatio: js.UndefOr[DoubleRange] = js.undefined
   
+  /* standard DOM */
   var autoGainControl: js.UndefOr[js.Array[scala.Boolean]] = js.undefined
   
+  /* standard DOM */
   var channelCount: js.UndefOr[ULongRange] = js.undefined
   
+  /* standard DOM */
+  var cursor: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+  
+  /* standard DOM */
   var deviceId: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
+  var displaySurface: js.UndefOr[java.lang.String] = js.undefined
+  
+  /* standard DOM */
   var echoCancellation: js.UndefOr[js.Array[scala.Boolean]] = js.undefined
   
+  /* standard DOM */
   var facingMode: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var frameRate: js.UndefOr[DoubleRange] = js.undefined
   
+  /* standard DOM */
   var groupId: js.UndefOr[java.lang.String] = js.undefined
   
+  /* standard DOM */
   var height: js.UndefOr[ULongRange] = js.undefined
   
+  /* standard DOM */
   var latency: js.UndefOr[DoubleRange] = js.undefined
   
+  /* standard DOM */
+  var logicalSurface: js.UndefOr[scala.Boolean] = js.undefined
+  
+  /* standard DOM */
   var noiseSuppression: js.UndefOr[js.Array[scala.Boolean]] = js.undefined
   
+  /* standard DOM */
   var resizeMode: js.UndefOr[js.Array[java.lang.String]] = js.undefined
   
+  /* standard DOM */
   var sampleRate: js.UndefOr[ULongRange] = js.undefined
   
+  /* standard DOM */
   var sampleSize: js.UndefOr[ULongRange] = js.undefined
   
+  /* standard DOM */
   var width: js.UndefOr[ULongRange] = js.undefined
 }
 object MediaTrackCapabilities {
@@ -70,10 +94,25 @@ object MediaTrackCapabilities {
     def setChannelCountUndefined: Self = StObject.set(x, "channelCount", js.undefined)
     
     @scala.inline
+    def setCursor(value: js.Array[java.lang.String]): Self = StObject.set(x, "cursor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCursorUndefined: Self = StObject.set(x, "cursor", js.undefined)
+    
+    @scala.inline
+    def setCursorVarargs(value: java.lang.String*): Self = StObject.set(x, "cursor", js.Array(value :_*))
+    
+    @scala.inline
     def setDeviceId(value: java.lang.String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDeviceIdUndefined: Self = StObject.set(x, "deviceId", js.undefined)
+    
+    @scala.inline
+    def setDisplaySurface(value: java.lang.String): Self = StObject.set(x, "displaySurface", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisplaySurfaceUndefined: Self = StObject.set(x, "displaySurface", js.undefined)
     
     @scala.inline
     def setEchoCancellation(value: js.Array[scala.Boolean]): Self = StObject.set(x, "echoCancellation", value.asInstanceOf[js.Any])
@@ -116,6 +155,12 @@ object MediaTrackCapabilities {
     
     @scala.inline
     def setLatencyUndefined: Self = StObject.set(x, "latency", js.undefined)
+    
+    @scala.inline
+    def setLogicalSurface(value: scala.Boolean): Self = StObject.set(x, "logicalSurface", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLogicalSurfaceUndefined: Self = StObject.set(x, "logicalSurface", js.undefined)
     
     @scala.inline
     def setNoiseSuppression(value: js.Array[scala.Boolean]): Self = StObject.set(x, "noiseSuppression", value.asInstanceOf[js.Any])

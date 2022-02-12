@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class DataView protected ()
   extends StObject
      with tmttyped.std.DataView {
+  /* standard es5 */
   def this(buffer: ArrayBufferLike) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double) = this()
   def this(buffer: ArrayBufferLike, byteOffset: Double, byteLength: Double) = this()

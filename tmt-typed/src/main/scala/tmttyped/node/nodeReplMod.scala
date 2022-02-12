@@ -40,7 +40,7 @@ object nodeReplMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  class REPLServer protected () extends StObject
+  /* private */ class REPLServer () extends StObject
   
   /**
     * A flag passed in the REPL options. Evaluates expressions in sloppy mode.
@@ -85,7 +85,7 @@ object nodeReplMod {
   @scala.inline
   def start(): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[tmttyped.node.replMod.REPLServer]
   @scala.inline
-  def start(options: java.lang.String): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
+  def start(options: String): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
   @scala.inline
   def start(options: ReplOptions): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
   

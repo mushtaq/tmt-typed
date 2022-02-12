@@ -9,6 +9,7 @@ trait MultiCacheQueryOptions
   extends StObject
      with CacheQueryOptions {
   
+  /* standard DOM */
   var cacheName: js.UndefOr[java.lang.String] = js.undefined
 }
 object MultiCacheQueryOptions {

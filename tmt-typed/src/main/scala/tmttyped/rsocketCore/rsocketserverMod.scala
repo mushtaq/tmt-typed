@@ -60,7 +60,7 @@ object rsocketserverMod {
     
     def getRequestHandler(socket: ReactiveSocket[D, M], payload: Payload[D, M]): Partial[Responder[D, M]]
     
-    var leases: js.UndefOr[js.Function0[Leases[js.Any]]] = js.undefined
+    var leases: js.UndefOr[js.Function0[Leases[Any]]] = js.undefined
     
     var serializers: js.UndefOr[PayloadSerializers[D, M]] = js.undefined
     
@@ -90,7 +90,7 @@ object rsocketserverMod {
       def setGetRequestHandler(value: (ReactiveSocket[D, M], Payload[D, M]) => Partial[Responder[D, M]]): Self = StObject.set(x, "getRequestHandler", js.Any.fromFunction2(value))
       
       @scala.inline
-      def setLeases(value: () => Leases[js.Any]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
+      def setLeases(value: () => Leases[Any]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
       
       @scala.inline
       def setLeasesUndefined: Self = StObject.set(x, "leases", js.undefined)

@@ -11,9 +11,13 @@ trait RegExpMatchArray
   extends StObject
      with Array[java.lang.String] {
   
-  var groups: js.UndefOr[StringDictionary[java.lang.String]] = js.native
+  /* standard es2018.regexp */
+  var groups: js.UndefOr[/* standard es2018.regexp */
+  StringDictionary[java.lang.String]] = js.native
   
+  /* standard es5 */
   var index: js.UndefOr[Double] = js.native
   
+  /* standard es5 */
   var input: js.UndefOr[java.lang.String] = js.native
 }

@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * ```js
   * const path = require('path');
   * ```
-  * @see [source](https://github.com/nodejs/node/blob/v16.4.2/lib/path.js)
+  * @see [source](https://github.com/nodejs/node/blob/v17.0.0/lib/path.js)
   */
 object pathMod extends Shortcut {
   
@@ -26,27 +26,27 @@ object pathMod extends Shortcut {
     /**
       * The file name including extension (if any) such as 'index.html'
       */
-    var base: js.UndefOr[java.lang.String] = js.undefined
+    var base: js.UndefOr[String] = js.undefined
     
     /**
       * The full directory path such as '/home/user/dir' or 'c:\path\dir'
       */
-    var dir: js.UndefOr[java.lang.String] = js.undefined
+    var dir: js.UndefOr[String] = js.undefined
     
     /**
       * The file extension (if any) such as '.html'
       */
-    var ext: js.UndefOr[java.lang.String] = js.undefined
+    var ext: js.UndefOr[String] = js.undefined
     
     /**
       * The file name without extension (if any) such as 'index'
       */
-    var name: js.UndefOr[java.lang.String] = js.undefined
+    var name: js.UndefOr[String] = js.undefined
     
     /**
       * The root of the path such as '/' or 'c:\'
       */
-    var root: js.UndefOr[java.lang.String] = js.undefined
+    var root: js.UndefOr[String] = js.undefined
   }
   object FormatInputPathObject {
     
@@ -60,31 +60,31 @@ object pathMod extends Shortcut {
     implicit class FormatInputPathObjectMutableBuilder[Self <: FormatInputPathObject] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setBase(value: java.lang.String): Self = StObject.set(x, "base", value.asInstanceOf[js.Any])
+      def setBase(value: String): Self = StObject.set(x, "base", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setBaseUndefined: Self = StObject.set(x, "base", js.undefined)
       
       @scala.inline
-      def setDir(value: java.lang.String): Self = StObject.set(x, "dir", value.asInstanceOf[js.Any])
+      def setDir(value: String): Self = StObject.set(x, "dir", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setDirUndefined: Self = StObject.set(x, "dir", js.undefined)
       
       @scala.inline
-      def setExt(value: java.lang.String): Self = StObject.set(x, "ext", value.asInstanceOf[js.Any])
+      def setExt(value: String): Self = StObject.set(x, "ext", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setExtUndefined: Self = StObject.set(x, "ext", js.undefined)
       
       @scala.inline
-      def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
       
       @scala.inline
-      def setRoot(value: java.lang.String): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+      def setRoot(value: String): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setRootUndefined: Self = StObject.set(x, "root", js.undefined)
@@ -99,38 +99,32 @@ object pathMod extends Shortcut {
     /**
       * The file name including extension (if any) such as 'index.html'
       */
-    var base: java.lang.String
+    var base: String
     
     /**
       * The full directory path such as '/home/user/dir' or 'c:\path\dir'
       */
-    var dir: java.lang.String
+    var dir: String
     
     /**
       * The file extension (if any) such as '.html'
       */
-    var ext: java.lang.String
+    var ext: String
     
     /**
       * The file name without extension (if any) such as 'index'
       */
-    var name: java.lang.String
+    var name: String
     
     /**
       * The root of the path such as '/' or 'c:\'
       */
-    var root: java.lang.String
+    var root: String
   }
   object ParsedPath {
     
     @scala.inline
-    def apply(
-      base: java.lang.String,
-      dir: java.lang.String,
-      ext: java.lang.String,
-      name: java.lang.String,
-      root: java.lang.String
-    ): ParsedPath = {
+    def apply(base: String, dir: String, ext: String, name: String, root: String): ParsedPath = {
       val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], ext = ext.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
       __obj.asInstanceOf[ParsedPath]
     }
@@ -139,19 +133,19 @@ object pathMod extends Shortcut {
     implicit class ParsedPathMutableBuilder[Self <: ParsedPath] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setBase(value: java.lang.String): Self = StObject.set(x, "base", value.asInstanceOf[js.Any])
+      def setBase(value: String): Self = StObject.set(x, "base", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDir(value: java.lang.String): Self = StObject.set(x, "dir", value.asInstanceOf[js.Any])
+      def setDir(value: String): Self = StObject.set(x, "dir", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setExt(value: java.lang.String): Self = StObject.set(x, "ext", value.asInstanceOf[js.Any])
+      def setExt(value: String): Self = StObject.set(x, "ext", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRoot(value: java.lang.String): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+      def setRoot(value: String): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
     }
   }
   
@@ -165,20 +159,20 @@ object pathMod extends Shortcut {
       * @param p the path to evaluate.
       * @param ext optionally, an extension to remove from the result.
       */
-    def basename(p: java.lang.String): java.lang.String = js.native
-    def basename(p: java.lang.String, ext: java.lang.String): java.lang.String = js.native
+    def basename(p: String): String = js.native
+    def basename(p: String, ext: String): String = js.native
     
     /**
       * The platform-specific file delimiter. ';' or ':'.
       */
-    val delimiter: java.lang.String = js.native
+    val delimiter: String = js.native
     
     /**
       * Return the directory name of a path. Similar to the Unix dirname command.
       *
       * @param p the path to evaluate.
       */
-    def dirname(p: java.lang.String): java.lang.String = js.native
+    def dirname(p: String): String = js.native
     
     /**
       * Return the extension of the path, from the last '.' to end of string in the last portion of the path.
@@ -186,21 +180,21 @@ object pathMod extends Shortcut {
       *
       * @param p the path to evaluate.
       */
-    def extname(p: java.lang.String): java.lang.String = js.native
+    def extname(p: String): String = js.native
     
     /**
       * Returns a path string from an object - the opposite of parse().
       *
       * @param pathString path to evaluate.
       */
-    def format(pP: FormatInputPathObject): java.lang.String = js.native
+    def format(pP: FormatInputPathObject): String = js.native
     
     /**
       * Determines whether {path} is an absolute path. An absolute path will always resolve to the same location, regardless of the working directory.
       *
       * @param path path to test.
       */
-    def isAbsolute(p: java.lang.String): Boolean = js.native
+    def isAbsolute(p: String): Boolean = js.native
     
     /**
       * Join all arguments together and normalize the resulting path.
@@ -208,7 +202,7 @@ object pathMod extends Shortcut {
       *
       * @param paths paths to join.
       */
-    def join(paths: java.lang.String*): java.lang.String = js.native
+    def join(paths: String*): String = js.native
     
     /**
       * Normalize a string path, reducing '..' and '.' parts.
@@ -216,14 +210,14 @@ object pathMod extends Shortcut {
       *
       * @param p string path to normalize.
       */
-    def normalize(p: java.lang.String): java.lang.String = js.native
+    def normalize(p: String): String = js.native
     
     /**
       * Returns an object from a path string - the opposite of format().
       *
       * @param pathString path to evaluate.
       */
-    def parse(p: java.lang.String): ParsedPath = js.native
+    def parse(p: String): ParsedPath = js.native
     
     /**
       * Posix specific pathing.
@@ -235,7 +229,7 @@ object pathMod extends Shortcut {
       * Solve the relative path from {from} to {to}.
       * At times we have two absolute paths, and we need to derive the relative path from one to the other. This is actually the reverse transform of path.resolve.
       */
-    def relative(from: java.lang.String, to: java.lang.String): java.lang.String = js.native
+    def relative(from: String, to: String): String = js.native
     
     /**
       * The right-most parameter is considered {to}.  Other parameters are considered an array of {from}.
@@ -249,12 +243,12 @@ object pathMod extends Shortcut {
       *
       * @param pathSegments string paths to join.  Non-string arguments are ignored.
       */
-    def resolve(pathSegments: java.lang.String*): java.lang.String = js.native
+    def resolve(pathSegments: String*): String = js.native
     
     /**
       * The platform-specific file separator. '\\' or '/'.
       */
-    val sep: java.lang.String = js.native
+    val sep: String = js.native
     
     /**
       * On Windows systems only, returns an equivalent namespace-prefixed path for the given path.
@@ -262,7 +256,7 @@ object pathMod extends Shortcut {
       * This method is meaningful only on Windows system.
       * On POSIX systems, the method is non-operational and always returns path without modifications.
       */
-    def toNamespacedPath(path: java.lang.String): java.lang.String = js.native
+    def toNamespacedPath(path: String): String = js.native
     
     /**
       * Windows specific pathing.

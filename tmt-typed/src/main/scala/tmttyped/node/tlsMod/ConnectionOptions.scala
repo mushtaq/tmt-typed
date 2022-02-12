@@ -4,7 +4,7 @@ import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.netMod.LookupFunction
-import tmttyped.node.nodeNetMod.Socket
+import tmttyped.node.streamMod.Duplex
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait ConnectionOptions
   
   // Establish secure connection on a given socket rather than creating a new socket
   var checkServerIdentity: js.UndefOr[
-    js.Function2[/* host */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
+    js.Function2[/* hostname */ String, /* cert */ PeerCertificate, js.UndefOr[js.Error]]
   ] = js.undefined
   
   var host: js.UndefOr[String] = js.undefined
@@ -55,7 +55,7 @@ trait ConnectionOptions
   var session: js.UndefOr[Buffer] = js.undefined
   
   // Creates unix socket connection to path. If this option is specified, `host` and `port` are ignored.
-  var socket: js.UndefOr[Socket] = js.undefined
+  var socket: js.UndefOr[Duplex] = js.undefined
   
   var timeout: js.UndefOr[Double] = js.undefined
 }
@@ -71,7 +71,7 @@ object ConnectionOptions {
   implicit class ConnectionOptionsMutableBuilder[Self <: ConnectionOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCheckServerIdentity(value: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error]): Self = StObject.set(x, "checkServerIdentity", js.Any.fromFunction2(value))
+    def setCheckServerIdentity(value: (/* hostname */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error]): Self = StObject.set(x, "checkServerIdentity", js.Any.fromFunction2(value))
     
     @scala.inline
     def setCheckServerIdentityUndefined: Self = StObject.set(x, "checkServerIdentity", js.undefined)
@@ -127,7 +127,7 @@ object ConnectionOptions {
     def setSessionUndefined: Self = StObject.set(x, "session", js.undefined)
     
     @scala.inline
-    def setSocket(value: Socket): Self = StObject.set(x, "socket", value.asInstanceOf[js.Any])
+    def setSocket(value: Duplex): Self = StObject.set(x, "socket", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSocketUndefined: Self = StObject.set(x, "socket", js.undefined)

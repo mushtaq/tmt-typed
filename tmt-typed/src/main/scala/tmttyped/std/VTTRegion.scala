@@ -7,20 +7,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait VTTRegion extends StObject {
   
+  /* standard DOM */
   var id: java.lang.String
   
+  /* standard DOM */
   var lines: Double
   
+  /* standard DOM */
   var regionAnchorX: Double
   
+  /* standard DOM */
   var regionAnchorY: Double
   
+  /* standard DOM */
   var scroll: ScrollSetting
   
+  /* standard DOM */
   var viewportAnchorX: Double
   
+  /* standard DOM */
   var viewportAnchorY: Double
   
+  /* standard DOM */
   var width: Double
 }
 object VTTRegion {

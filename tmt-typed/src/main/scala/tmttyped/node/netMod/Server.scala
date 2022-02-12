@@ -28,7 +28,7 @@ class Server () extends StObject {
     *   3. error
     *   4. listening
     */
-  def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
@@ -81,8 +81,8 @@ class Server () extends StObject {
   
   var connections: Double = js.native
   
-  def emit(event: String, args: js.Any*): Boolean = js.native
-  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  def emit(event: String, args: Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: Any*): Boolean = js.native
   @JSName("emit")
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
@@ -143,11 +143,11 @@ class Server () extends StObject {
     * ```
     */
   def listen(): this.type = js.native
-  def listen(handle: js.Any): this.type = js.native
-  def listen(handle: js.Any, backlog: Double): this.type = js.native
-  def listen(handle: js.Any, backlog: Double, listeningListener: js.Function0[Unit]): this.type = js.native
-  def listen(handle: js.Any, backlog: Unit, listeningListener: js.Function0[Unit]): this.type = js.native
-  def listen(handle: js.Any, listeningListener: js.Function0[Unit]): this.type = js.native
+  def listen(handle: Any): this.type = js.native
+  def listen(handle: Any, backlog: Double): this.type = js.native
+  def listen(handle: Any, backlog: Double, listeningListener: js.Function0[Unit]): this.type = js.native
+  def listen(handle: Any, backlog: Unit, listeningListener: js.Function0[Unit]): this.type = js.native
+  def listen(handle: Any, listeningListener: js.Function0[Unit]): this.type = js.native
   def listen(options: ListenOptions): this.type = js.native
   def listen(options: ListenOptions, listeningListener: js.Function0[Unit]): this.type = js.native
   def listen(path: String): this.type = js.native
@@ -197,7 +197,7 @@ class Server () extends StObject {
     */
   var maxConnections: Double = js.native
   
-  def on(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
@@ -207,7 +207,7 @@ class Server () extends StObject {
   @JSName("on")
   def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   
-  def once(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -217,7 +217,7 @@ class Server () extends StObject {
   @JSName("once")
   def once_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -227,7 +227,7 @@ class Server () extends StObject {
   @JSName("prependListener")
   def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   
-  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")

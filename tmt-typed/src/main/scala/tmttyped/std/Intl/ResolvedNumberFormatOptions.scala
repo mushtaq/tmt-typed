@@ -1,5 +1,15 @@
 package tmttyped.std.Intl
 
+import tmttyped.std.stdStrings.always
+import tmttyped.std.stdStrings.auto
+import tmttyped.std.stdStrings.compact
+import tmttyped.std.stdStrings.engineering
+import tmttyped.std.stdStrings.long
+import tmttyped.std.stdStrings.narrow
+import tmttyped.std.stdStrings.never
+import tmttyped.std.stdStrings.scientific
+import tmttyped.std.stdStrings.short
+import tmttyped.std.stdStrings.standard
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,36 +17,52 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResolvedNumberFormatOptions extends StObject {
   
-  var compactDisplay: js.UndefOr[String] = js.undefined
+  /* standard es2020.intl */
+  var compactDisplay: js.UndefOr[short | long] = js.undefined
   
+  /* standard es5 */
   var currency: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var currencyDisplay: js.UndefOr[String] = js.undefined
   
+  /* standard es5 */
   var locale: String
   
+  /* standard es5 */
   var maximumFractionDigits: Double
   
+  /* standard es5 */
   var maximumSignificantDigits: js.UndefOr[Double] = js.undefined
   
+  /* standard es5 */
   var minimumFractionDigits: Double
   
+  /* standard es5 */
   var minimumIntegerDigits: Double
   
+  /* standard es5 */
   var minimumSignificantDigits: js.UndefOr[Double] = js.undefined
   
-  var notation: js.UndefOr[String] = js.undefined
+  /* standard es2020.intl */
+  var notation: js.UndefOr[standard | scientific | engineering | compact] = js.undefined
   
+  /* standard es5 */
   var numberingSystem: String
   
-  var signDisplay: js.UndefOr[String] = js.undefined
+  /* standard es2020.intl */
+  var signDisplay: js.UndefOr[auto | never | always] = js.undefined
   
+  /* standard es5 */
   var style: String
   
+  /* standard es2020.intl */
   var unit: js.UndefOr[String] = js.undefined
   
-  var unitDisplay: js.UndefOr[String] = js.undefined
+  /* standard es2020.intl */
+  var unitDisplay: js.UndefOr[short | long | narrow] = js.undefined
   
+  /* standard es5 */
   var useGrouping: Boolean
 }
 object ResolvedNumberFormatOptions {
@@ -59,7 +85,7 @@ object ResolvedNumberFormatOptions {
   implicit class ResolvedNumberFormatOptionsMutableBuilder[Self <: ResolvedNumberFormatOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setCompactDisplay(value: String): Self = StObject.set(x, "compactDisplay", value.asInstanceOf[js.Any])
+    def setCompactDisplay(value: short | long): Self = StObject.set(x, "compactDisplay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCompactDisplayUndefined: Self = StObject.set(x, "compactDisplay", js.undefined)
@@ -101,7 +127,7 @@ object ResolvedNumberFormatOptions {
     def setMinimumSignificantDigitsUndefined: Self = StObject.set(x, "minimumSignificantDigits", js.undefined)
     
     @scala.inline
-    def setNotation(value: String): Self = StObject.set(x, "notation", value.asInstanceOf[js.Any])
+    def setNotation(value: standard | scientific | engineering | compact): Self = StObject.set(x, "notation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNotationUndefined: Self = StObject.set(x, "notation", js.undefined)
@@ -110,7 +136,7 @@ object ResolvedNumberFormatOptions {
     def setNumberingSystem(value: String): Self = StObject.set(x, "numberingSystem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSignDisplay(value: String): Self = StObject.set(x, "signDisplay", value.asInstanceOf[js.Any])
+    def setSignDisplay(value: auto | never | always): Self = StObject.set(x, "signDisplay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSignDisplayUndefined: Self = StObject.set(x, "signDisplay", js.undefined)
@@ -122,7 +148,7 @@ object ResolvedNumberFormatOptions {
     def setUnit(value: String): Self = StObject.set(x, "unit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUnitDisplay(value: String): Self = StObject.set(x, "unitDisplay", value.asInstanceOf[js.Any])
+    def setUnitDisplay(value: short | long | narrow): Self = StObject.set(x, "unitDisplay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUnitDisplayUndefined: Self = StObject.set(x, "unitDisplay", js.undefined)

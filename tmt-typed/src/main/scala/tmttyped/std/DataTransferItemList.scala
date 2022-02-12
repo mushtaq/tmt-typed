@@ -10,31 +10,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DataTransferItemList
   extends StObject
-     with /* name */ NumberDictionary[DataTransferItem] {
+     with /* standard DOM */
+/* index */ NumberDictionary[DataTransferItem] {
   
-  /**
-    * Adds a new entry for the given data to the drag data store. If the data is plain text then a type string has to be provided also.
-    */
+  /** Adds a new entry for the given data to the drag data store. If the data is plain text then a type string has to be provided also. */
+  /* standard DOM */
   def add(data: java.lang.String, `type`: java.lang.String): DataTransferItem | Null = js.native
-  def add(data: org.scalajs.dom.raw.File): DataTransferItem | Null = js.native
+  /* standard DOM */
+  def add(data: org.scalajs.dom.File): DataTransferItem | Null = js.native
   
-  /**
-    * Removes all the entries in the drag data store.
-    */
+  /** Removes all the entries in the drag data store. */
+  /* standard DOM */
   def clear(): Unit = js.native
   
-  def item(index: Double): DataTransferItem = js.native
-  
+  /* standard DOM.Iterable */
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[DataTransferItem]] = js.native
   
-  /**
-    * Returns the number of items in the drag data store.
-    */
+  /** Returns the number of items in the drag data store. */
+  /* standard DOM */
   val length: Double = js.native
   
-  /**
-    * Removes the indexth entry in the drag data store.
-    */
+  /** Removes the indexth entry in the drag data store. */
+  /* standard DOM */
   def remove(index: Double): Unit = js.native
 }

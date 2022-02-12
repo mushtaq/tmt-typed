@@ -5,21 +5,64 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
 trait RTCRtpTransceiver extends StObject {
   
-  val currentDirection: RTCRtpTransceiverDirection | Null = js.native
+  /* standard DOM */
+  val currentDirection: RTCRtpTransceiverDirection | Null
   
-  var direction: RTCRtpTransceiverDirection = js.native
+  /* standard DOM */
+  var direction: RTCRtpTransceiverDirection
   
-  val mid: java.lang.String | Null = js.native
+  /* standard DOM */
+  val mid: java.lang.String | Null
   
-  val receiver: RTCRtpReceiver = js.native
+  /* standard DOM */
+  val receiver: RTCRtpReceiver
   
-  val sender: RTCRtpSender = js.native
+  /* standard DOM */
+  val sender: RTCRtpSender
   
-  def setCodecPreferences(codecs: js.Array[RTCRtpCodecCapability]): Unit = js.native
-  def setCodecPreferences(codecs: js.Iterable[RTCRtpCodecCapability]): Unit = js.native
+  /* standard DOM */
+  def stop(): Unit
+}
+object RTCRtpTransceiver {
   
-  def stop(): Unit = js.native
+  @scala.inline
+  def apply(
+    direction: RTCRtpTransceiverDirection,
+    receiver: RTCRtpReceiver,
+    sender: RTCRtpSender,
+    stop: () => Unit
+  ): RTCRtpTransceiver = {
+    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], receiver = receiver.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), currentDirection = null, mid = null)
+    __obj.asInstanceOf[RTCRtpTransceiver]
+  }
+  
+  @scala.inline
+  implicit class RTCRtpTransceiverMutableBuilder[Self <: RTCRtpTransceiver] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def setCurrentDirection(value: RTCRtpTransceiverDirection): Self = StObject.set(x, "currentDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCurrentDirectionNull: Self = StObject.set(x, "currentDirection", null)
+    
+    @scala.inline
+    def setDirection(value: RTCRtpTransceiverDirection): Self = StObject.set(x, "direction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMid(value: java.lang.String): Self = StObject.set(x, "mid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMidNull: Self = StObject.set(x, "mid", null)
+    
+    @scala.inline
+    def setReceiver(value: RTCRtpReceiver): Self = StObject.set(x, "receiver", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSender(value: RTCRtpSender): Self = StObject.set(x, "sender", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStop(value: () => Unit): Self = StObject.set(x, "stop", js.Any.fromFunction0(value))
+  }
 }

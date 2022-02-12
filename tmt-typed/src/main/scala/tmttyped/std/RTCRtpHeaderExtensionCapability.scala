@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait RTCRtpHeaderExtensionCapability extends StObject {
   
+  /* standard DOM */
   var uri: js.UndefOr[java.lang.String] = js.undefined
 }
 object RTCRtpHeaderExtensionCapability {

@@ -9,7 +9,8 @@ trait MediaTrackConstraints
   extends StObject
      with MediaTrackConstraintSet {
   
-  var advanced: js.UndefOr[js.Array[org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet]] = js.undefined
+  /* standard DOM */
+  var advanced: js.UndefOr[js.Array[org.scalajs.dom.MediaTrackConstraintSet]] = js.undefined
 }
 object MediaTrackConstraints {
   
@@ -23,12 +24,12 @@ object MediaTrackConstraints {
   implicit class MediaTrackConstraintsMutableBuilder[Self <: MediaTrackConstraints] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setAdvanced(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet]): Self = StObject.set(x, "advanced", value.asInstanceOf[js.Any])
+    def setAdvanced(value: js.Array[org.scalajs.dom.MediaTrackConstraintSet]): Self = StObject.set(x, "advanced", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAdvancedUndefined: Self = StObject.set(x, "advanced", js.undefined)
     
     @scala.inline
-    def setAdvancedVarargs(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet*): Self = StObject.set(x, "advanced", js.Array(value :_*))
+    def setAdvancedVarargs(value: org.scalajs.dom.MediaTrackConstraintSet*): Self = StObject.set(x, "advanced", js.Array(value :_*))
   }
 }

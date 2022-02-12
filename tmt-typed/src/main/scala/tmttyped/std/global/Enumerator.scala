@@ -13,20 +13,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Enumerator[T] protected ()
   extends StObject
      with tmttyped.std.Enumerator[T] {
-  def this(collection: js.Any) = this()
+  /* standard ScriptHost */
+  def this(collection: Any) = this()
+  /* standard ScriptHost */
   def this(collection: Item[T]) = this()
+  /* standard ScriptHost */
   def this(safearray: tmttyped.std.SafeArray[T]) = this()
   
   /**
     * Returns true if the current item is the last one in the collection, or the collection is empty,
     * or the current item is undefined.
     */
+  /* standard ScriptHost */
   /* CompleteClass */
   override def atEnd(): scala.Boolean = js.native
   
   /**
     * Returns the current item in the collection
     */
+  /* standard ScriptHost */
   /* CompleteClass */
   override def item(): T = js.native
   
@@ -34,6 +39,7 @@ class Enumerator[T] protected ()
     * Resets the current item in the collection to the first item. If there are no items in the collection,
     * the current item is set to undefined.
     */
+  /* standard ScriptHost */
   /* CompleteClass */
   override def moveFirst(): Unit = js.native
   
@@ -41,6 +47,7 @@ class Enumerator[T] protected ()
     * Moves the current item to the next item in the collection. If the enumerator is at the end of
     * the collection or the collection is empty, the current item is set to undefined.
     */
+  /* standard ScriptHost */
   /* CompleteClass */
   override def moveNext(): Unit = js.native
 }

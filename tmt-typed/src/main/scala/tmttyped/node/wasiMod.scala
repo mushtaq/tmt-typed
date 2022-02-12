@@ -51,7 +51,7 @@ object wasiMod {
       * of a [`WebAssembly.Instance`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance).
       * @since v13.3.0, v12.16.0
       */
-    val wasiImport: Dict[js.Any] = js.native
+    val wasiImport: Dict[Any] = js.native
   }
   
   trait WASIOptions extends StObject {
@@ -61,7 +61,7 @@ object wasiMod {
       * see as command line arguments. The first argument is the virtual path to the
       * WASI command itself.
       */
-    var args: js.UndefOr[js.Array[java.lang.String]] = js.undefined
+    var args: js.UndefOr[js.Array[String]] = js.undefined
     
     /**
       * An object similar to `process.env` that the WebAssembly
@@ -75,7 +75,7 @@ object wasiMod {
       * directories within the sandbox. The corresponding values in `preopens` are
       * the real paths to those directories on the host machine.
       */
-    var preopens: js.UndefOr[Dict[java.lang.String]] = js.undefined
+    var preopens: js.UndefOr[Dict[String]] = js.undefined
     
     /**
       * By default, WASI applications terminate the Node.js
@@ -116,13 +116,13 @@ object wasiMod {
     implicit class WASIOptionsMutableBuilder[Self <: WASIOptions] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setArgs(value: js.Array[java.lang.String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
+      def setArgs(value: js.Array[String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
       
       @scala.inline
-      def setArgsVarargs(value: java.lang.String*): Self = StObject.set(x, "args", js.Array(value :_*))
+      def setArgsVarargs(value: String*): Self = StObject.set(x, "args", js.Array(value :_*))
       
       @scala.inline
       def setEnv(value: js.Object): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
@@ -131,7 +131,7 @@ object wasiMod {
       def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
       
       @scala.inline
-      def setPreopens(value: Dict[java.lang.String]): Self = StObject.set(x, "preopens", value.asInstanceOf[js.Any])
+      def setPreopens(value: Dict[String]): Self = StObject.set(x, "preopens", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setPreopensUndefined: Self = StObject.set(x, "preopens", js.undefined)

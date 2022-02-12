@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BigIntConstructor extends StObject {
   
   def apply(value: java.lang.String): js.BigInt = js.native
+  /* standard es2020.bigint */
   def apply(value: js.BigInt): js.BigInt = js.native
   def apply(value: scala.Boolean): js.BigInt = js.native
   def apply(value: Double): js.BigInt = js.native
@@ -19,6 +20,7 @@ trait BigIntConstructor extends StObject {
     * @param bits The number of low bits to use
     * @param int The BigInt whose bits to extract
     */
+  /* standard es2020.bigint */
   def asIntN(bits: Double, int: js.BigInt): js.BigInt = js.native
   
   /**
@@ -27,5 +29,6 @@ trait BigIntConstructor extends StObject {
     * @param bits The number of low bits to use
     * @param int The BigInt whose bits to extract
     */
+  /* standard es2020.bigint */
   def asUintN(bits: Double, int: js.BigInt): js.BigInt = js.native
 }

@@ -95,49 +95,253 @@ object eventsMod {
     val errorMonitor: js.Symbol = js.native
     
     /**
-      * Returns a list listener for a specific emitter event name.
+      * Returns a copy of the array of listeners for the event named `eventName`.
+      *
+      * For `EventEmitter`s this behaves exactly the same as calling `.listeners` on
+      * the emitter.
+      *
+      * For `EventTarget`s this is the only way to get the event listeners for the
+      * event target. This is useful for debugging and diagnostic purposes.
+      *
+      * ```js
+      * const { getEventListeners, EventEmitter } = require('events');
+      *
+      * {
+      *   const ee = new EventEmitter();
+      *   const listener = () => console.log('Events are fun');
+      *   ee.on('foo', listener);
+      *   getEventListeners(ee, 'foo'); // [listener]
+      * }
+      * {
+      *   const et = new EventTarget();
+      *   const listener = () => console.log('Events are fun');
+      *   et.addEventListener('foo', listener);
+      *   getEventListeners(et, 'foo'); // [listener]
+      * }
+      * ```
+      * @since v15.2.0, v14.17.0
       */
     /* static member */
     @scala.inline
-    def getEventListener(emitter: DOMEventTarget, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+    def getEventListeners(emitter: DOMEventTarget, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
     @scala.inline
-    def getEventListener(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+    def getEventListeners(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
     @scala.inline
-    def getEventListener(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+    def getEventListeners(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
     @scala.inline
-    def getEventListener(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+    def getEventListeners(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
     
-    /** @deprecated since v4.0.0 */
+    /**
+      * A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
+      *
+      * ```js
+      * const { EventEmitter, listenerCount } = require('events');
+      * const myEmitter = new EventEmitter();
+      * myEmitter.on('event', () => {});
+      * myEmitter.on('event', () => {});
+      * console.log(listenerCount(myEmitter, 'event'));
+      * // Prints: 2
+      * ```
+      * @since v0.9.12
+      * @deprecated Since v3.2.0 - Use `listenerCount` instead.
+      * @param emitter The emitter to query
+      * @param eventName The event name
+      */
     /* static member */
     @scala.inline
-    def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
+    def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
     @scala.inline
-    def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
+    def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
     
+    /**
+      * ```js
+      * const { on, EventEmitter } = require('events');
+      *
+      * (async () => {
+      *   const ee = new EventEmitter();
+      *
+      *   // Emit later on
+      *   process.nextTick(() => {
+      *     ee.emit('foo', 'bar');
+      *     ee.emit('foo', 42);
+      *   });
+      *
+      *   for await (const event of on(ee, 'foo')) {
+      *     // The execution of this inner block is synchronous and it
+      *     // processes one event at a time (even with await). Do not use
+      *     // if concurrent execution is required.
+      *     console.log(event); // prints ['bar'] [42]
+      *   }
+      *   // Unreachable here
+      * })();
+      * ```
+      *
+      * Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+      * if the `EventEmitter` emits `'error'`. It removes all listeners when
+      * exiting the loop. The `value` returned by each iteration is an array
+      * composed of the emitted event arguments.
+      *
+      * An `AbortSignal` can be used to cancel waiting on events:
+      *
+      * ```js
+      * const { on, EventEmitter } = require('events');
+      * const ac = new AbortController();
+      *
+      * (async () => {
+      *   const ee = new EventEmitter();
+      *
+      *   // Emit later on
+      *   process.nextTick(() => {
+      *     ee.emit('foo', 'bar');
+      *     ee.emit('foo', 42);
+      *   });
+      *
+      *   for await (const event of on(ee, 'foo', { signal: ac.signal })) {
+      *     // The execution of this inner block is synchronous and it
+      *     // processes one event at a time (even with await). Do not use
+      *     // if concurrent execution is required.
+      *     console.log(event); // prints ['bar'] [42]
+      *   }
+      *   // Unreachable here
+      * })();
+      *
+      * process.nextTick(() => ac.abort());
+      * ```
+      * @since v13.6.0, v12.16.0
+      * @param eventName The name of the event being listened for
+      * @return that iterates `eventName` events emitted by the `emitter`
+      */
     /* static member */
     @scala.inline
-    def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
+    def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: String): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
     @scala.inline
     def on(
       emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter,
-      event: java.lang.String,
+      eventName: String,
       options: StaticEventEmitterOptions
-    ): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
+    ): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
     
     /* static member */
     @scala.inline
-    def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: DOMEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
     @scala.inline
-    def once(emitter: DOMEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: DOMEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+    /**
+      * Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
+      * event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
+      * The `Promise` will resolve with an array of all the arguments emitted to the
+      * given event.
+      *
+      * This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
+      * semantics and does not listen to the `'error'` event.
+      *
+      * ```js
+      * const { once, EventEmitter } = require('events');
+      *
+      * async function run() {
+      *   const ee = new EventEmitter();
+      *
+      *   process.nextTick(() => {
+      *     ee.emit('myevent', 42);
+      *   });
+      *
+      *   const [value] = await once(ee, 'myevent');
+      *   console.log(value);
+      *
+      *   const err = new Error('kaboom');
+      *   process.nextTick(() => {
+      *     ee.emit('error', err);
+      *   });
+      *
+      *   try {
+      *     await once(ee, 'myevent');
+      *   } catch (err) {
+      *     console.log('error happened', err);
+      *   }
+      * }
+      *
+      * run();
+      * ```
+      *
+      * The special handling of the `'error'` event is only used when `events.once()`is used to wait for another event. If `events.once()` is used to wait for the
+      * '`error'` event itself, then it is treated as any other kind of event without
+      * special handling:
+      *
+      * ```js
+      * const { EventEmitter, once } = require('events');
+      *
+      * const ee = new EventEmitter();
+      *
+      * once(ee, 'error')
+      *   .then(([err]) => console.log('ok', err.message))
+      *   .catch((err) => console.log('error', err.message));
+      *
+      * ee.emit('error', new Error('boom'));
+      *
+      * // Prints: ok boom
+      * ```
+      *
+      * An `AbortSignal` can be used to cancel waiting for the event:
+      *
+      * ```js
+      * const { EventEmitter, once } = require('events');
+      *
+      * const ee = new EventEmitter();
+      * const ac = new AbortController();
+      *
+      * async function foo(emitter, event, signal) {
+      *   try {
+      *     await once(emitter, event, { signal });
+      *     console.log('event emitted!');
+      *   } catch (error) {
+      *     if (error.name === 'AbortError') {
+      *       console.error('Waiting for the event was canceled!');
+      *     } else {
+      *       console.error('There was an error', error.message);
+      *     }
+      *   }
+      * }
+      *
+      * foo(ee, 'foo', ac.signal);
+      * ac.abort(); // Abort waiting for the event
+      * ee.emit('foo'); // Prints: Waiting for the event was canceled!
+      * ```
+      * @since v11.13.0, v10.16.0
+      */
     /* static member */
     @scala.inline
-    def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: NodeEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
     @scala.inline
-    def once(emitter: NodeEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: NodeEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
     @scala.inline
-    def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: NodeEventTarget, eventName: js.Symbol): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
     @scala.inline
-    def once(emitter: NodeEventTarget, event: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+    def once(emitter: NodeEventTarget, eventName: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+    
+    /**
+      * By default `EventEmitter`s will print a warning if more than `10` listeners are
+      * added for a particular event. This is a useful default that helps finding
+      * memory leaks. The `EventEmitter.setMaxListeners()` method allows the default limit to be
+      * modified (if eventTargets is empty) or modify the limit specified in every `EventTarget` | `EventEmitter` passed as arguments.
+      * The value can be set to`Infinity` (or `0`) to indicate an unlimited number of listeners.
+      *
+      * ```js
+      * EventEmitter.setMaxListeners(20);
+      * // Equivalent to
+      * EventEmitter.defaultMaxListeners = 20;
+      *
+      * const eventTarget = new EventTarget();
+      * // Only way to increase limit for `EventTarget` instances
+      * // as these doesn't expose its own `setMaxListeners` method
+      * EventEmitter.setMaxListeners(20, eventTarget);
+      * ```
+      * @since v15.3.0, v14.17.0
+      */
+    /* static member */
+    @scala.inline
+    def setMaxListeners(n: Double, eventTargets: (DOMEventTarget | tmttyped.node.eventsMod.global.NodeJS.EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
+    @scala.inline
+    def setMaxListeners(n: Unit, eventTargets: (DOMEventTarget | tmttyped.node.eventsMod.global.NodeJS.EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
   }
   
   /* static member */
@@ -178,49 +382,253 @@ object eventsMod {
   val errorMonitor: js.Symbol = js.native
   
   /**
-    * Returns a list listener for a specific emitter event name.
+    * Returns a copy of the array of listeners for the event named `eventName`.
+    *
+    * For `EventEmitter`s this behaves exactly the same as calling `.listeners` on
+    * the emitter.
+    *
+    * For `EventTarget`s this is the only way to get the event listeners for the
+    * event target. This is useful for debugging and diagnostic purposes.
+    *
+    * ```js
+    * const { getEventListeners, EventEmitter } = require('events');
+    *
+    * {
+    *   const ee = new EventEmitter();
+    *   const listener = () => console.log('Events are fun');
+    *   ee.on('foo', listener);
+    *   getEventListeners(ee, 'foo'); // [listener]
+    * }
+    * {
+    *   const et = new EventTarget();
+    *   const listener = () => console.log('Events are fun');
+    *   et.addEventListener('foo', listener);
+    *   getEventListeners(et, 'foo'); // [listener]
+    * }
+    * ```
+    * @since v15.2.0, v14.17.0
     */
   /* static member */
   @scala.inline
-  def getEventListener(emitter: DOMEventTarget, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  def getEventListeners(emitter: DOMEventTarget, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
   @scala.inline
-  def getEventListener(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  def getEventListeners(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
   @scala.inline
-  def getEventListener(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: java.lang.String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  def getEventListeners(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
   @scala.inline
-  def getEventListener(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListener")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  def getEventListeners(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
   
-  /** @deprecated since v4.0.0 */
+  /**
+    * A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
+    *
+    * ```js
+    * const { EventEmitter, listenerCount } = require('events');
+    * const myEmitter = new EventEmitter();
+    * myEmitter.on('event', () => {});
+    * myEmitter.on('event', () => {});
+    * console.log(listenerCount(myEmitter, 'event'));
+    * // Prints: 2
+    * ```
+    * @since v0.9.12
+    * @deprecated Since v3.2.0 - Use `listenerCount` instead.
+    * @param emitter The emitter to query
+    * @param eventName The event name
+    */
   /* static member */
   @scala.inline
-  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
+  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
   @scala.inline
-  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[Double]
+  def listenerCount(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
   
+  /**
+    * ```js
+    * const { on, EventEmitter } = require('events');
+    *
+    * (async () => {
+    *   const ee = new EventEmitter();
+    *
+    *   // Emit later on
+    *   process.nextTick(() => {
+    *     ee.emit('foo', 'bar');
+    *     ee.emit('foo', 42);
+    *   });
+    *
+    *   for await (const event of on(ee, 'foo')) {
+    *     // The execution of this inner block is synchronous and it
+    *     // processes one event at a time (even with await). Do not use
+    *     // if concurrent execution is required.
+    *     console.log(event); // prints ['bar'] [42]
+    *   }
+    *   // Unreachable here
+    * })();
+    * ```
+    *
+    * Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+    * if the `EventEmitter` emits `'error'`. It removes all listeners when
+    * exiting the loop. The `value` returned by each iteration is an array
+    * composed of the emitted event arguments.
+    *
+    * An `AbortSignal` can be used to cancel waiting on events:
+    *
+    * ```js
+    * const { on, EventEmitter } = require('events');
+    * const ac = new AbortController();
+    *
+    * (async () => {
+    *   const ee = new EventEmitter();
+    *
+    *   // Emit later on
+    *   process.nextTick(() => {
+    *     ee.emit('foo', 'bar');
+    *     ee.emit('foo', 42);
+    *   });
+    *
+    *   for await (const event of on(ee, 'foo', { signal: ac.signal })) {
+    *     // The execution of this inner block is synchronous and it
+    *     // processes one event at a time (even with await). Do not use
+    *     // if concurrent execution is required.
+    *     console.log(event); // prints ['bar'] [42]
+    *   }
+    *   // Unreachable here
+    * })();
+    *
+    * process.nextTick(() => ac.abort());
+    * ```
+    * @since v13.6.0, v12.16.0
+    * @param eventName The name of the event being listened for
+    * @return that iterates `eventName` events emitted by the `emitter`
+    */
   /* static member */
   @scala.inline
-  def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, event: java.lang.String): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
+  def on(emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter, eventName: String): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
   @scala.inline
   def on(
     emitter: tmttyped.node.eventsMod.global.NodeJS.EventEmitter,
-    event: java.lang.String,
+    eventName: String,
     options: StaticEventEmitterOptions
-  ): AsyncIterableIterator[js.Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[js.Any]]
+  ): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
   
   /* static member */
   @scala.inline
-  def once(emitter: DOMEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: DOMEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   @scala.inline
-  def once(emitter: DOMEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: DOMEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  /**
+    * Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
+    * event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
+    * The `Promise` will resolve with an array of all the arguments emitted to the
+    * given event.
+    *
+    * This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
+    * semantics and does not listen to the `'error'` event.
+    *
+    * ```js
+    * const { once, EventEmitter } = require('events');
+    *
+    * async function run() {
+    *   const ee = new EventEmitter();
+    *
+    *   process.nextTick(() => {
+    *     ee.emit('myevent', 42);
+    *   });
+    *
+    *   const [value] = await once(ee, 'myevent');
+    *   console.log(value);
+    *
+    *   const err = new Error('kaboom');
+    *   process.nextTick(() => {
+    *     ee.emit('error', err);
+    *   });
+    *
+    *   try {
+    *     await once(ee, 'myevent');
+    *   } catch (err) {
+    *     console.log('error happened', err);
+    *   }
+    * }
+    *
+    * run();
+    * ```
+    *
+    * The special handling of the `'error'` event is only used when `events.once()`is used to wait for another event. If `events.once()` is used to wait for the
+    * '`error'` event itself, then it is treated as any other kind of event without
+    * special handling:
+    *
+    * ```js
+    * const { EventEmitter, once } = require('events');
+    *
+    * const ee = new EventEmitter();
+    *
+    * once(ee, 'error')
+    *   .then(([err]) => console.log('ok', err.message))
+    *   .catch((err) => console.log('error', err.message));
+    *
+    * ee.emit('error', new Error('boom'));
+    *
+    * // Prints: ok boom
+    * ```
+    *
+    * An `AbortSignal` can be used to cancel waiting for the event:
+    *
+    * ```js
+    * const { EventEmitter, once } = require('events');
+    *
+    * const ee = new EventEmitter();
+    * const ac = new AbortController();
+    *
+    * async function foo(emitter, event, signal) {
+    *   try {
+    *     await once(emitter, event, { signal });
+    *     console.log('event emitted!');
+    *   } catch (error) {
+    *     if (error.name === 'AbortError') {
+    *       console.error('Waiting for the event was canceled!');
+    *     } else {
+    *       console.error('There was an error', error.message);
+    *     }
+    *   }
+    * }
+    *
+    * foo(ee, 'foo', ac.signal);
+    * ac.abort(); // Abort waiting for the event
+    * ee.emit('foo'); // Prints: Waiting for the event was canceled!
+    * ```
+    * @since v11.13.0, v10.16.0
+    */
   /* static member */
   @scala.inline
-  def once(emitter: NodeEventTarget, event: java.lang.String): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: NodeEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   @scala.inline
-  def once(emitter: NodeEventTarget, event: java.lang.String, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: NodeEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   @scala.inline
-  def once(emitter: NodeEventTarget, event: js.Symbol): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: NodeEventTarget, eventName: js.Symbol): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   @scala.inline
-  def once(emitter: NodeEventTarget, event: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[js.Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], event.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Any]]]
+  def once(emitter: NodeEventTarget, eventName: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  
+  /**
+    * By default `EventEmitter`s will print a warning if more than `10` listeners are
+    * added for a particular event. This is a useful default that helps finding
+    * memory leaks. The `EventEmitter.setMaxListeners()` method allows the default limit to be
+    * modified (if eventTargets is empty) or modify the limit specified in every `EventTarget` | `EventEmitter` passed as arguments.
+    * The value can be set to`Infinity` (or `0`) to indicate an unlimited number of listeners.
+    *
+    * ```js
+    * EventEmitter.setMaxListeners(20);
+    * // Equivalent to
+    * EventEmitter.defaultMaxListeners = 20;
+    *
+    * const eventTarget = new EventTarget();
+    * // Only way to increase limit for `EventTarget` instances
+    * // as these doesn't expose its own `setMaxListeners` method
+    * EventEmitter.setMaxListeners(20, eventTarget);
+    * ```
+    * @since v15.3.0, v14.17.0
+    */
+  /* static member */
+  @scala.inline
+  def setMaxListeners(n: Double, eventTargets: (DOMEventTarget | tmttyped.node.eventsMod.global.NodeJS.EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
+  @scala.inline
+  def setMaxListeners(n: Unit, eventTargets: (DOMEventTarget | tmttyped.node.eventsMod.global.NodeJS.EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
   
   trait Abortable extends StObject {
     
@@ -251,8 +659,8 @@ object eventsMod {
   @js.native
   trait DOMEventTarget extends StObject {
     
-    def addEventListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): js.Any = js.native
-    def addEventListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit], opts: Once): js.Any = js.native
+    def addEventListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): Any = js.native
+    def addEventListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit], opts: Once): Any = js.native
   }
   
   trait EventEmitterOptions extends StObject {
@@ -284,8 +692,8 @@ object eventsMod {
   @js.native
   trait NodeEventTarget extends StObject {
     
-    def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-    def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+    def once(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def once(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   }
   
   trait StaticEventEmitterOptions extends StObject {
@@ -322,8 +730,8 @@ object eventsMod {
           * Alias for `emitter.on(eventName, listener)`.
           * @since v0.1.26
           */
-        def addListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def addListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def addListener(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Synchronously calls each of the listeners registered for the event named`eventName`, in the order they were registered, passing the supplied arguments
@@ -365,8 +773,8 @@ object eventsMod {
           * ```
           * @since v0.1.26
           */
-        def emit(event: java.lang.String, args: js.Any*): Boolean = js.native
-        def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+        def emit(eventName: String, args: Any*): Boolean = js.native
+        def emit(eventName: js.Symbol, args: Any*): Boolean = js.native
         
         /**
           * Returns an array listing the events for which the emitter has registered
@@ -386,7 +794,7 @@ object eventsMod {
           * ```
           * @since v6.0.0
           */
-        def eventNames(): js.Array[java.lang.String | js.Symbol] = js.native
+        def eventNames(): js.Array[String | js.Symbol] = js.native
         
         /**
           * Returns the current max listener value for the `EventEmitter` which is either
@@ -400,8 +808,8 @@ object eventsMod {
           * @since v3.2.0
           * @param eventName The name of the event being listened for
           */
-        def listenerCount(event: java.lang.String): Double = js.native
-        def listenerCount(event: js.Symbol): Double = js.native
+        def listenerCount(eventName: String): Double = js.native
+        def listenerCount(eventName: js.Symbol): Double = js.native
         
         /**
           * Returns a copy of the array of listeners for the event named `eventName`.
@@ -415,15 +823,15 @@ object eventsMod {
           * ```
           * @since v0.1.26
           */
-        def listeners(event: java.lang.String): js.Array[js.Function] = js.native
-        def listeners(event: js.Symbol): js.Array[js.Function] = js.native
+        def listeners(eventName: String): js.Array[js.Function] = js.native
+        def listeners(eventName: js.Symbol): js.Array[js.Function] = js.native
         
         /**
           * Alias for `emitter.removeListener()`.
           * @since v10.0.0
           */
-        def off(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def off(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def off(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def off(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Adds the `listener` function to the end of the listeners array for the
@@ -455,8 +863,8 @@ object eventsMod {
           * @param eventName The name of the event.
           * @param listener The callback function
           */
-        def on(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def on(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def on(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def on(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Adds a **one-time**`listener` function for the event named `eventName`. The
@@ -486,8 +894,8 @@ object eventsMod {
           * @param eventName The name of the event.
           * @param listener The callback function
           */
-        def once(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def once(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def once(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def once(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Adds the `listener` function to the _beginning_ of the listeners array for the
@@ -506,8 +914,8 @@ object eventsMod {
           * @param eventName The name of the event.
           * @param listener The callback function
           */
-        def prependListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def prependListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def prependListener(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Adds a **one-time**`listener` function for the event named `eventName` to the_beginning_ of the listeners array. The next time `eventName` is triggered, this
@@ -524,8 +932,8 @@ object eventsMod {
           * @param eventName The name of the event.
           * @param listener The callback function
           */
-        def prependOnceListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def prependOnceListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def prependOnceListener(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * Returns a copy of the array of listeners for the event named `eventName`,
@@ -556,8 +964,8 @@ object eventsMod {
           * ```
           * @since v9.4.0
           */
-        def rawListeners(event: java.lang.String): js.Array[js.Function] = js.native
-        def rawListeners(event: js.Symbol): js.Array[js.Function] = js.native
+        def rawListeners(eventName: String): js.Array[js.Function] = js.native
+        def rawListeners(eventName: js.Symbol): js.Array[js.Function] = js.native
         
         /**
           * Removes all listeners, or those of the specified `eventName`.
@@ -570,7 +978,7 @@ object eventsMod {
           * @since v0.1.26
           */
         def removeAllListeners(): this.type = js.native
-        def removeAllListeners(event: java.lang.String): this.type = js.native
+        def removeAllListeners(event: String): this.type = js.native
         def removeAllListeners(event: js.Symbol): this.type = js.native
         
         /**
@@ -652,8 +1060,8 @@ object eventsMod {
           * Returns a reference to the `EventEmitter`, so that calls can be chained.
           * @since v0.1.26
           */
-        def removeListener(event: java.lang.String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
-        def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+        def removeListener(eventName: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+        def removeListener(eventName: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
         
         /**
           * By default `EventEmitter`s will print a warning if more than `10` listeners are

@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MutationObserver extends StObject {
   
-  /**
-    * Stops observer from observing any mutations. Until the observe() method is used again, observer's callback will not be invoked.
-    */
+  /** Stops observer from observing any mutations. Until the observe() method is used again, observer's callback will not be invoked. */
+  /* standard DOM */
   def disconnect(): Unit = js.native
   
   /**
@@ -19,11 +18,11 @@ trait MutationObserver extends StObject {
     *
     * The options argument allows for setting mutation observation options via object members.
     */
-  def observe(target: org.scalajs.dom.raw.Node): Unit = js.native
-  def observe(target: org.scalajs.dom.raw.Node, options: org.scalajs.dom.raw.MutationObserverInit): Unit = js.native
+  /* standard DOM */
+  def observe(target: org.scalajs.dom.Node): Unit = js.native
+  def observe(target: org.scalajs.dom.Node, options: org.scalajs.dom.MutationObserverInit): Unit = js.native
   
-  /**
-    * Empties the record queue and returns what was in there.
-    */
-  def takeRecords(): js.Array[org.scalajs.dom.raw.MutationRecord] = js.native
+  /** Empties the record queue and returns what was in there. */
+  /* standard DOM */
+  def takeRecords(): js.Array[org.scalajs.dom.MutationRecord] = js.native
 }

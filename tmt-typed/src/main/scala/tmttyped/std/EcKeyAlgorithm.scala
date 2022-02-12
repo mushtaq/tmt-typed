@@ -9,6 +9,7 @@ trait EcKeyAlgorithm
   extends StObject
      with KeyAlgorithm {
   
+  /* standard DOM */
   var namedCurve: NamedCurve
 }
 object EcKeyAlgorithm {

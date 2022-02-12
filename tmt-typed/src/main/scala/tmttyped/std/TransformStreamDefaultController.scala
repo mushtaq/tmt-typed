@@ -8,12 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TransformStreamDefaultController[O] extends StObject {
   
+  /* standard DOM */
   val desiredSize: Double | Null = js.native
   
+  /* standard DOM */
+  def enqueue(): Unit = js.native
   def enqueue(chunk: O): Unit = js.native
   
+  /* standard DOM */
   def error(): Unit = js.native
-  def error(reason: js.Any): Unit = js.native
+  def error(reason: Any): Unit = js.native
   
+  /* standard DOM */
   def terminate(): Unit = js.native
 }

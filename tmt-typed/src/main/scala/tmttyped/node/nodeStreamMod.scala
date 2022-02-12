@@ -4,6 +4,7 @@ import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.NodeJS.ReadWriteStream
 import tmttyped.node.NodeJS.ReadableStream
 import tmttyped.node.NodeJS.WritableStream
+import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.childProcessMod.StdioNull
 import tmttyped.node.streamMod.DuplexOptions
 import tmttyped.node.streamMod.FinishedOptions
@@ -16,7 +17,9 @@ import tmttyped.node.streamMod.PipelineTransform
 import tmttyped.node.streamMod.ReadableOptions
 import tmttyped.node.streamMod.TransformOptions
 import tmttyped.node.streamMod.WritableOptions
+import tmttyped.std.AsyncGeneratorFunction
 import tmttyped.std.AsyncIterable
+import tmttyped.std.AsyncIterator
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,6 +48,53 @@ object nodeStreamMod {
   @js.native
   class Duplex () extends StObject {
     def this(opts: DuplexOptions) = this()
+  }
+  object Duplex {
+    
+    @JSImport("node:stream", "Duplex")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def from(src: String): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: js.Iterable[Any]): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: js.Object): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: js.Promise[Any]): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: js.typedarray.ArrayBuffer): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: Blob): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    /**
+      * A utility method for creating duplex streams.
+      *
+      * - `Stream` converts writable stream into writable `Duplex` and readable stream
+      *   to `Duplex`.
+      * - `Blob` converts into readable `Duplex`.
+      * - `string` converts into readable `Duplex`.
+      * - `ArrayBuffer` converts into readable `Duplex`.
+      * - `AsyncIterable` converts into a readable `Duplex`. Cannot yield `null`.
+      * - `AsyncGeneratorFunction` converts into a readable/writable transform
+      *   `Duplex`. Must take a source `AsyncIterable` as first parameter. Cannot yield
+      *   `null`.
+      * - `AsyncFunction` converts into a writable `Duplex`. Must return
+      *   either `null` or `undefined`
+      * - `Object ({ writable, readable })` converts `readable` and
+      *   `writable` into `Stream` and then combines them into `Duplex` where the
+      *   `Duplex` will write to the `writable` and read from the `readable`.
+      * - `Promise` converts into readable `Duplex`. Value `null` is ignored.
+      *
+      * @since v16.8.0
+      */
+    /* static member */
+    @scala.inline
+    def from(src: tmttyped.node.streamMod.Stream): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: AsyncGeneratorFunction): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
+    @scala.inline
+    def from(src: AsyncIterable[Any]): tmttyped.node.streamMod.Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Duplex]
   }
   
   /**
@@ -76,13 +126,23 @@ object nodeStreamMod {
       */
     /* static member */
     @scala.inline
-    def from(iterable: js.Iterable[js.Any]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
+    def from(iterable: js.Iterable[Any]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
     @scala.inline
-    def from(iterable: js.Iterable[js.Any], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
+    def from(iterable: js.Iterable[Any], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
     @scala.inline
-    def from(iterable: AsyncIterable[js.Any]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
+    def from(iterable: AsyncIterable[Any]): tmttyped.node.streamMod.Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamMod.Readable]
     @scala.inline
-    def from(iterable: AsyncIterable[js.Any], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
+    def from(iterable: AsyncIterable[Any], options: ReadableOptions): tmttyped.node.streamMod.Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.streamMod.Readable]
+    
+    @scala.inline
+    def isDisturbed(stream: ReadableStream): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    /**
+      * Returns whether the stream has been read from or cancelled.
+      * @since v16.8.0
+      */
+    /* static member */
+    @scala.inline
+    def isDisturbed(stream: tmttyped.node.streamMod.Readable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   }
   
   @JSImport("node:stream", "Stream")
@@ -166,6 +226,48 @@ object nodeStreamMod {
     */
   @scala.inline
   def addAbortSignal[T /* <: tmttyped.node.streamMod.Stream */](signal: AbortSignal, stream: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("addAbortSignal")(signal.asInstanceOf[js.Any], stream.asInstanceOf[js.Any])).asInstanceOf[T]
+  
+  object consumers {
+    
+    @JSImport("node:stream", "consumers")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    @scala.inline
+    def arrayBuffer(stream: ReadableStream): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    @scala.inline
+    def arrayBuffer(stream: Readable): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    @scala.inline
+    def arrayBuffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    
+    @scala.inline
+    def blob(stream: ReadableStream): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    @scala.inline
+    def blob(stream: Readable): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    @scala.inline
+    def blob(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    
+    @scala.inline
+    def buffer(stream: ReadableStream): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    @scala.inline
+    def buffer(stream: Readable): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    @scala.inline
+    def buffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    
+    @scala.inline
+    def json(stream: ReadableStream): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    @scala.inline
+    def json(stream: Readable): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    @scala.inline
+    def json(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    
+    @scala.inline
+    def text(stream: ReadableStream): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    @scala.inline
+    def text(stream: Readable): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    @scala.inline
+    def text(stream: AsyncIterator[Any, Any, Unit]): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+  }
   
   @scala.inline
   def finished(stream: ReadWriteStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
@@ -253,13 +355,13 @@ object nodeStreamMod {
     stream1: ReadableStream,
     stream2: ReadWriteStream,
     streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[WritableStream]
   @scala.inline
   def pipeline(
     stream1: ReadableStream,
     stream2: WritableStream,
     streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[WritableStream]
   @scala.inline
   def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): WritableStream = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[WritableStream]
   @scala.inline
@@ -296,7 +398,7 @@ object nodeStreamMod {
     * ```
     *
     * The `pipeline` API provides a promise version, which can also
-    * receive an options argument as the last parameter with a`signal` `<AbortSignal>` property. When the signal is aborted,`destroy` will be called on the underlying pipeline, with
+    * receive an options argument as the last parameter with a`signal` `AbortSignal` property. When the signal is aborted,`destroy` will be called on the underlying pipeline, with
     * an`AbortError`.
     *
     * ```js
@@ -322,16 +424,14 @@ object nodeStreamMod {
     *
     * async function run() {
     *   const ac = new AbortController();
-    *   const options = {
-    *     signal: ac.signal,
-    *   };
+    *   const signal = ac.signal;
     *
     *   setTimeout(() => ac.abort(), 1);
     *   await pipeline(
     *     fs.createReadStream('archive.tar'),
     *     zlib.createGzip(),
     *     fs.createWriteStream('archive.tar.gz'),
-    *     options,
+    *     { signal },
     *   );
     * }
     *
@@ -347,11 +447,33 @@ object nodeStreamMod {
     * async function run() {
     *   await pipeline(
     *     fs.createReadStream('lowercase.txt'),
-    *     async function* (source) {
+    *     async function* (source, signal) {
     *       source.setEncoding('utf8');  // Work with strings rather than `Buffer`s.
     *       for await (const chunk of source) {
-    *         yield chunk.toUpperCase();
+    *         yield await processChunk(chunk, { signal });
     *       }
+    *     },
+    *     fs.createWriteStream('uppercase.txt')
+    *   );
+    *   console.log('Pipeline succeeded.');
+    * }
+    *
+    * run().catch(console.error);
+    * ```
+    *
+    * Remember to handle the `signal` argument passed into the async generator.
+    * Especially in the case where the async generator is the source for the
+    * pipeline (i.e. first argument) or the pipeline will never complete.
+    *
+    * ```js
+    * const { pipeline } = require('stream/promises');
+    * const fs = require('fs');
+    *
+    * async function run() {
+    *   await pipeline(
+    *     async function * (signal) {
+    *       await someLongRunningfn({ signal });
+    *       yield 'asd';
     *     },
     *     fs.createWriteStream('uppercase.txt')
     *   );
@@ -373,21 +495,21 @@ object nodeStreamMod {
     * @param callback Called when the pipeline is fully done.
     */
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, B /* <: PipelineDestination[A, js.Any] */](source: A, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, B /* <: PipelineDestination[A, js.Any] */](source: A, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, B /* <: PipelineDestination[T1, js.Any] */](source: A, transform1: T1, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, B /* <: PipelineDestination[T1, js.Any] */](source: A, transform1: T1, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, B /* <: PipelineDestination[T2, js.Any] */](source: A, transform1: T1, transform2: T2, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, B /* <: PipelineDestination[T2, js.Any] */](source: A, transform1: T1, transform2: T2, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, B /* <: PipelineDestination[T3, js.Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, B /* <: PipelineDestination[T3, js.Any] */](
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
     source: A,
     transform1: T1,
     transform2: T2,
@@ -396,9 +518,9 @@ object nodeStreamMod {
     callback: PipelineCallback[B]
   ): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, T4 /* <: PipelineTransform[T3, js.Any] */, B /* <: PipelineDestination[T4, js.Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
   @scala.inline
-  def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, T4 /* <: PipelineTransform[T3, js.Any] */, B /* <: PipelineDestination[T4, js.Any] */](
+  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
     source: A,
     transform1: T1,
     transform2: T2,
@@ -432,33 +554,33 @@ object nodeStreamMod {
       stream1: ReadableStream,
       stream2: ReadWriteStream,
       streams: (ReadWriteStream | WritableStream | PipelineOptions)*
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[js.Promise[Unit]]
     @scala.inline
     def pipeline(
       stream1: ReadableStream,
       stream2: WritableStream,
       streams: (ReadWriteStream | WritableStream | PipelineOptions)*
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any], streams.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[js.Promise[Unit]]
     @scala.inline
     def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     @scala.inline
     def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream], options: PipelineOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, B /* <: PipelineDestination[A, js.Any] */](source: A, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, B /* <: PipelineDestination[A, js.Any] */](source: A, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, B /* <: PipelineDestination[T1, js.Any] */](source: A, transform1: T1, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, B /* <: PipelineDestination[T1, js.Any] */](source: A, transform1: T1, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, B /* <: PipelineDestination[T2, js.Any] */](source: A, transform1: T1, transform2: T2, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, B /* <: PipelineDestination[T2, js.Any] */](source: A, transform1: T1, transform2: T2, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, B /* <: PipelineDestination[T3, js.Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, B /* <: PipelineDestination[T3, js.Any] */](
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
       source: A,
       transform1: T1,
       transform2: T2,
@@ -467,9 +589,9 @@ object nodeStreamMod {
       options: PipelineOptions
     ): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, T4 /* <: PipelineTransform[T3, js.Any] */, B /* <: PipelineDestination[T4, js.Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
     @scala.inline
-    def pipeline[A /* <: PipelineSource[js.Any] */, T1 /* <: PipelineTransform[A, js.Any] */, T2 /* <: PipelineTransform[T1, js.Any] */, T3 /* <: PipelineTransform[T2, js.Any] */, T4 /* <: PipelineTransform[T3, js.Any] */, B /* <: PipelineDestination[T4, js.Any] */](
+    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
       source: A,
       transform1: T1,
       transform2: T2,

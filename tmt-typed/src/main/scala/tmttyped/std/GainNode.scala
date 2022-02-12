@@ -11,5 +11,6 @@ trait GainNode
   extends StObject
      with AudioNode {
   
-  val gain: org.scalajs.dom.raw.AudioParam = js.native
+  /* standard DOM */
+  val gain: org.scalajs.dom.AudioParam = js.native
 }

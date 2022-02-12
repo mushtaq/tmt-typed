@@ -7,12 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ServiceWorkerRegistrationEventMap extends StObject {
   
-  var updatefound: org.scalajs.dom.raw.Event
+  /* standard DOM */
+  var updatefound: org.scalajs.dom.Event
 }
 object ServiceWorkerRegistrationEventMap {
   
   @scala.inline
-  def apply(updatefound: org.scalajs.dom.raw.Event): ServiceWorkerRegistrationEventMap = {
+  def apply(updatefound: org.scalajs.dom.Event): ServiceWorkerRegistrationEventMap = {
     val __obj = js.Dynamic.literal(updatefound = updatefound.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceWorkerRegistrationEventMap]
   }
@@ -21,6 +22,6 @@ object ServiceWorkerRegistrationEventMap {
   implicit class ServiceWorkerRegistrationEventMapMutableBuilder[Self <: ServiceWorkerRegistrationEventMap] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setUpdatefound(value: org.scalajs.dom.raw.Event): Self = StObject.set(x, "updatefound", value.asInstanceOf[js.Any])
+    def setUpdatefound(value: org.scalajs.dom.Event): Self = StObject.set(x, "updatefound", value.asInstanceOf[js.Any])
   }
 }

@@ -28,6 +28,8 @@ import tmttyped.node.nodeStrings.PTR
 import tmttyped.node.nodeStrings.SOA
 import tmttyped.node.nodeStrings.SRV
 import tmttyped.node.nodeStrings.TXT
+import tmttyped.node.nodeStrings.ipv4first
+import tmttyped.node.nodeStrings.verbatim
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,7 +47,7 @@ object nodeDnsMod {
   
   @JSImport("node:dns", "ADDRGETNETWORKPARAMS")
   @js.native
-  val ADDRGETNETWORKPARAMS: java.lang.String = js.native
+  val ADDRGETNETWORKPARAMS: String = js.native
   
   @JSImport("node:dns", "ALL")
   @js.native
@@ -53,87 +55,87 @@ object nodeDnsMod {
   
   @JSImport("node:dns", "BADFAMILY")
   @js.native
-  val BADFAMILY: java.lang.String = js.native
+  val BADFAMILY: String = js.native
   
   @JSImport("node:dns", "BADFLAGS")
   @js.native
-  val BADFLAGS: java.lang.String = js.native
+  val BADFLAGS: String = js.native
   
   @JSImport("node:dns", "BADHINTS")
   @js.native
-  val BADHINTS: java.lang.String = js.native
+  val BADHINTS: String = js.native
   
   @JSImport("node:dns", "BADNAME")
   @js.native
-  val BADNAME: java.lang.String = js.native
+  val BADNAME: String = js.native
   
   @JSImport("node:dns", "BADQUERY")
   @js.native
-  val BADQUERY: java.lang.String = js.native
+  val BADQUERY: String = js.native
   
   @JSImport("node:dns", "BADRESP")
   @js.native
-  val BADRESP: java.lang.String = js.native
+  val BADRESP: String = js.native
   
   @JSImport("node:dns", "BADSTR")
   @js.native
-  val BADSTR: java.lang.String = js.native
+  val BADSTR: String = js.native
   
   @JSImport("node:dns", "CANCELLED")
   @js.native
-  val CANCELLED: java.lang.String = js.native
+  val CANCELLED: String = js.native
   
   @JSImport("node:dns", "CONNREFUSED")
   @js.native
-  val CONNREFUSED: java.lang.String = js.native
+  val CONNREFUSED: String = js.native
   
   @JSImport("node:dns", "DESTRUCTION")
   @js.native
-  val DESTRUCTION: java.lang.String = js.native
+  val DESTRUCTION: String = js.native
   
   @JSImport("node:dns", "EOF")
   @js.native
-  val EOF: java.lang.String = js.native
+  val EOF: String = js.native
   
   @JSImport("node:dns", "FILE")
   @js.native
-  val FILE: java.lang.String = js.native
+  val FILE: String = js.native
   
   @JSImport("node:dns", "FORMERR")
   @js.native
-  val FORMERR: java.lang.String = js.native
+  val FORMERR: String = js.native
   
   @JSImport("node:dns", "LOADIPHLPAPI")
   @js.native
-  val LOADIPHLPAPI: java.lang.String = js.native
+  val LOADIPHLPAPI: String = js.native
   
   @JSImport("node:dns", "NODATA")
   @js.native
-  val NODATA: java.lang.String = js.native
+  val NODATA: String = js.native
   
   @JSImport("node:dns", "NOMEM")
   @js.native
-  val NOMEM: java.lang.String = js.native
+  val NOMEM: String = js.native
   
   @JSImport("node:dns", "NONAME")
   @js.native
-  val NONAME: java.lang.String = js.native
+  val NONAME: String = js.native
   
   @JSImport("node:dns", "NOTFOUND")
   @js.native
-  val NOTFOUND: java.lang.String = js.native
+  val NOTFOUND: String = js.native
   
   @JSImport("node:dns", "NOTIMP")
   @js.native
-  val NOTIMP: java.lang.String = js.native
+  val NOTIMP: String = js.native
   
   @JSImport("node:dns", "NOTINITIALIZED")
   @js.native
-  val NOTINITIALIZED: java.lang.String = js.native
+  val NOTINITIALIZED: String = js.native
   
   @JSImport("node:dns", "REFUSED")
   @js.native
-  val REFUSED: java.lang.String = js.native
+  val REFUSED: String = js.native
   
   @JSImport("node:dns", "Resolver")
   @js.native
@@ -144,64 +146,49 @@ object nodeDnsMod {
   
   @JSImport("node:dns", "SERVFAIL")
   @js.native
-  val SERVFAIL: java.lang.String = js.native
+  val SERVFAIL: String = js.native
   
   @JSImport("node:dns", "TIMEOUT")
   @js.native
-  val TIMEOUT: java.lang.String = js.native
+  val TIMEOUT: String = js.native
   
   @JSImport("node:dns", "V4MAPPED")
   @js.native
   val V4MAPPED: Double = js.native
   
   @scala.inline
-  def getServers(): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[java.lang.String]]
+  def getServers(): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[String]]
   
   @scala.inline
   def lookup(
-    hostname: java.lang.String,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String, 
-      /* family */ Double, 
-      Unit
-    ]
+    hostname: String,
+    callback: js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def lookup(
-    hostname: java.lang.String,
+    hostname: String,
     family: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String, 
-      /* family */ Double, 
-      Unit
-    ]
+    callback: js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def lookup(
-    hostname: java.lang.String,
+    hostname: String,
     options: LookupAllOptions,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[LookupAddress], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def lookup(
-    hostname: java.lang.String,
+    hostname: String,
     options: LookupOneOptions,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String, 
-      /* family */ Double, 
-      Unit
-    ]
+    callback: js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def lookup(
-    hostname: java.lang.String,
+    hostname: String,
     options: LookupOptions,
     callback: js.Function3[
       /* err */ ErrnoException | Null, 
-      /* address */ java.lang.String | js.Array[LookupAddress], 
+      /* address */ String | js.Array[LookupAddress], 
       /* family */ Double, 
       Unit
     ]
@@ -209,14 +196,9 @@ object nodeDnsMod {
   
   @scala.inline
   def lookupService(
-    address: java.lang.String,
+    address: String,
     port: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* hostname */ java.lang.String, 
-      /* service */ java.lang.String, 
-      Unit
-    ]
+    callback: js.Function3[/* err */ ErrnoException | Null, /* hostname */ String, /* service */ String, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   object promises {
@@ -248,10 +230,10 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def getServers(): js.Array[java.lang.String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[java.lang.String]]
+    def getServers(): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[String]]
     
     @scala.inline
-    def lookup(hostname: java.lang.String): js.Promise[LookupAddress] = ^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[LookupAddress]]
+    def lookup(hostname: String): js.Promise[LookupAddress] = ^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[LookupAddress]]
     /**
       * Resolves a host name (e.g. `'nodejs.org'`) into the first found A (IPv4) or
       * AAAA (IPv6) record. All `option` properties are optional. If `options` is an
@@ -297,13 +279,13 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def lookup(hostname: java.lang.String, family: Double): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
+    def lookup(hostname: String, family: Double): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
     @scala.inline
-    def lookup(hostname: java.lang.String, options: LookupAllOptions): js.Promise[js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[LookupAddress]]]
+    def lookup(hostname: String, options: LookupAllOptions): js.Promise[js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[LookupAddress]]]
     @scala.inline
-    def lookup(hostname: java.lang.String, options: LookupOneOptions): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
+    def lookup(hostname: String, options: LookupOneOptions): js.Promise[LookupAddress] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress]]
     @scala.inline
-    def lookup(hostname: java.lang.String, options: LookupOptions): js.Promise[LookupAddress | js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress | js.Array[LookupAddress]]]
+    def lookup(hostname: String, options: LookupOptions): js.Promise[LookupAddress | js.Array[LookupAddress]] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[LookupAddress | js.Array[LookupAddress]]]
     
     /**
       * Resolves the given `address` and `port` into a host name and service using
@@ -324,7 +306,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def lookupService(address: java.lang.String, port: Double): js.Promise[Hostname] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Hostname]]
+    def lookupService(address: String, port: Double): js.Promise[Hostname] = (^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Hostname]]
     
     /**
       * Uses the DNS protocol to resolve a host name (e.g. `'nodejs.org'`) into an array
@@ -334,22 +316,18 @@ object nodeDnsMod {
       *
       * <omitted>
       *
-      * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the `DNS error codes`.
+      * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the DNS error codes.
       * @since v10.6.0
       * @param hostname Host name to resolve.
-      * @param rrtype Resource record type.
+      * @param [rrtype='A'] Resource record type.
       */
     @scala.inline
-    def resolve(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     @scala.inline
-    def resolve(hostname: java.lang.String, rrtype: java.lang.String): js.Promise[
-        (js.Array[
-          AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
-        ]) | SoaRecord
+    def resolve(hostname: String, rrtype: String): js.Promise[
+        (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord
       ] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[
-        (js.Array[
-          AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
-        ]) | SoaRecord
+        (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord
       ]]
     
     /**
@@ -359,11 +337,11 @@ object nodeDnsMod {
       * @param hostname Host name to resolve.
       */
     @scala.inline
-    def resolve4(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve4(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     @scala.inline
-    def resolve4(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | java.lang.String]]]
+    def resolve4(hostname: String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | String]]]
     @scala.inline
-    def resolve4(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
+    def resolve4(hostname: String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
     
     /**
       * Uses the DNS protocol to resolve IPv6 addresses (`AAAA` records) for the`hostname`. On success, the `Promise` is resolved with an array of IPv6
@@ -372,11 +350,11 @@ object nodeDnsMod {
       * @param hostname Host name to resolve.
       */
     @scala.inline
-    def resolve6(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve6(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     @scala.inline
-    def resolve6(hostname: java.lang.String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | java.lang.String]]]
+    def resolve6(hostname: String, options: ResolveOptions): js.Promise[js.Array[RecordWithTtl | String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl | String]]]
     @scala.inline
-    def resolve6(hostname: java.lang.String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
+    def resolve6(hostname: String, options: ResolveWithTtlOptions): js.Promise[js.Array[RecordWithTtl]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[RecordWithTtl]]]
     
     /**
       * Uses the DNS protocol to resolve all records (also known as `ANY` or `*` query).
@@ -407,16 +385,16 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveAny(hostname: java.lang.String): js.Promise[js.Array[AnyRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
+    def resolveAny(hostname: String): js.Promise[js.Array[AnyRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
     
     /**
       * Uses the DNS protocol to resolve `CAA` records for the `hostname`. On success,
       * the `Promise` is resolved with an array of objects containing available
       * certification authority authorization records available for the `hostname`(e.g. `[{critical: 0, iodef: 'mailto:pki@example.com'},{critical: 128, issue: 'pki.example.com'}]`).
-      * @since v15.0.0
+      * @since v15.0.0, v14.17.0
       */
     @scala.inline
-    def resolveCaa(hostname: java.lang.String): js.Promise[js.Array[CaaRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
+    def resolveCaa(hostname: String): js.Promise[js.Array[CaaRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
     
     /**
       * Uses the DNS protocol to resolve `CNAME` records for the `hostname`. On success,
@@ -425,7 +403,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveCname(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolveCname(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     
     /**
       * Uses the DNS protocol to resolve mail exchange records (`MX` records) for the`hostname`. On success, the `Promise` is resolved with an array of objects
@@ -433,7 +411,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveMx(hostname: java.lang.String): js.Promise[js.Array[MxRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[MxRecord]]]
+    def resolveMx(hostname: String): js.Promise[js.Array[MxRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[MxRecord]]]
     
     /**
       * Uses the DNS protocol to resolve regular expression based records (`NAPTR`records) for the `hostname`. On success, the `Promise` is resolved with an array
@@ -459,7 +437,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveNaptr(hostname: java.lang.String): js.Promise[js.Array[NaptrRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
+    def resolveNaptr(hostname: String): js.Promise[js.Array[NaptrRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
     
     /**
       * Uses the DNS protocol to resolve name server records (`NS` records) for the`hostname`. On success, the `Promise` is resolved with an array of name server
@@ -467,7 +445,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveNs(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolveNs(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     
     /**
       * Uses the DNS protocol to resolve pointer records (`PTR` records) for the`hostname`. On success, the `Promise` is resolved with an array of strings
@@ -475,7 +453,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolvePtr(hostname: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolvePtr(hostname: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     
     /**
       * Uses the DNS protocol to resolve a start of authority record (`SOA` record) for
@@ -504,7 +482,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveSoa(hostname: java.lang.String): js.Promise[SoaRecord] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[SoaRecord]]
+    def resolveSoa(hostname: String): js.Promise[SoaRecord] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[SoaRecord]]
     
     /**
       * Uses the DNS protocol to resolve service records (`SRV` records) for the`hostname`. On success, the `Promise` is resolved with an array of objects with
@@ -526,7 +504,7 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveSrv(hostname: java.lang.String): js.Promise[js.Array[SrvRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
+    def resolveSrv(hostname: String): js.Promise[js.Array[SrvRecord]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
     
     /**
       * Uses the DNS protocol to resolve text queries (`TXT` records) for the`hostname`. On success, the `Promise` is resolved with a two-dimensional array
@@ -536,53 +514,68 @@ object nodeDnsMod {
       * @since v10.6.0
       */
     @scala.inline
-    def resolveTxt(hostname: java.lang.String): js.Promise[js.Array[js.Array[java.lang.String]]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[js.Array[java.lang.String]]]]
+    def resolveTxt(hostname: String): js.Promise[js.Array[js.Array[String]]] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[js.Array[String]]]]
     
     @scala.inline
-    def resolve_A(hostname: java.lang.String, rrtype: A): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve_A(hostname: String, rrtype: A): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
     @scala.inline
-    def resolve_AAAA(hostname: java.lang.String, rrtype: AAAA): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve_AAAA(hostname: String, rrtype: AAAA): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
     @scala.inline
-    def resolve_ANY(hostname: java.lang.String, rrtype: ANY): js.Promise[js.Array[AnyRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
+    def resolve_ANY(hostname: String, rrtype: ANY): js.Promise[js.Array[AnyRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[AnyRecord]]]
     
     @scala.inline
-    def resolve_CAA(hostname: java.lang.String, rrtype: CAA): js.Promise[js.Array[CaaRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
+    def resolve_CAA(hostname: String, rrtype: CAA): js.Promise[js.Array[CaaRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[CaaRecord]]]
     
     @scala.inline
-    def resolve_CNAME(hostname: java.lang.String, rrtype: CNAME): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve_CNAME(hostname: String, rrtype: CNAME): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
     @scala.inline
-    def resolve_MX(hostname: java.lang.String, rrtype: MX): js.Promise[js.Array[MxRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[MxRecord]]]
+    def resolve_MX(hostname: String, rrtype: MX): js.Promise[js.Array[MxRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[MxRecord]]]
     
     @scala.inline
-    def resolve_NAPTR(hostname: java.lang.String, rrtype: NAPTR): js.Promise[js.Array[NaptrRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
+    def resolve_NAPTR(hostname: String, rrtype: NAPTR): js.Promise[js.Array[NaptrRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[NaptrRecord]]]
     
     @scala.inline
-    def resolve_NS(hostname: java.lang.String, rrtype: NS): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve_NS(hostname: String, rrtype: NS): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
     @scala.inline
-    def resolve_PTR(hostname: java.lang.String, rrtype: PTR): js.Promise[js.Array[java.lang.String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def resolve_PTR(hostname: String, rrtype: PTR): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
     @scala.inline
-    def resolve_SOA(hostname: java.lang.String, rrtype: SOA): js.Promise[SoaRecord] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[SoaRecord]]
+    def resolve_SOA(hostname: String, rrtype: SOA): js.Promise[SoaRecord] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[SoaRecord]]
     
     @scala.inline
-    def resolve_SRV(hostname: java.lang.String, rrtype: SRV): js.Promise[js.Array[SrvRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
+    def resolve_SRV(hostname: String, rrtype: SRV): js.Promise[js.Array[SrvRecord]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[SrvRecord]]]
     
     @scala.inline
-    def resolve_TXT(hostname: java.lang.String, rrtype: TXT): js.Promise[js.Array[js.Array[java.lang.String]]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Array[java.lang.String]]]]
+    def resolve_TXT(hostname: String, rrtype: TXT): js.Promise[js.Array[js.Array[String]]] = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[js.Array[String]]]]
     
     /**
       * Performs a reverse DNS query that resolves an IPv4 or IPv6 address to an
       * array of host names.
       *
-      * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the `DNS error codes`.
+      * On error, the `Promise` is rejected with an `Error` object, where `err.code`is one of the DNS error codes.
       * @since v10.6.0
       */
     @scala.inline
-    def reverse(ip: java.lang.String): js.Promise[js.Array[java.lang.String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[java.lang.String]]]
+    def reverse(ip: String): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
+    
+    /**
+      * Set the default value of `verbatim` in `dns.lookup()` and `dnsPromises.lookup()`. The value could be:
+      *
+      * * `ipv4first`: sets default `verbatim` `false`.
+      * * `verbatim`: sets default `verbatim` `true`.
+      *
+      * The default is `ipv4first` and `dnsPromises.setDefaultResultOrder()` have
+      * higher priority than `--dns-result-order`. When using `worker threads`,`dnsPromises.setDefaultResultOrder()` from the main thread won't affect the
+      * default dns orders in workers.
+      * @since v16.4.0, v14.18.0
+      * @param order must be `'ipv4first'` or `'verbatim'`.
+      */
+    @scala.inline
+    def setDefaultResultOrder(order: ipv4first | verbatim): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setDefaultResultOrder")(order.asInstanceOf[js.Any]).asInstanceOf[Unit]
     
     /**
       * Sets the IP address and port of servers to be used when performing DNS
@@ -603,7 +596,7 @@ object nodeDnsMod {
       * The `dnsPromises.setServers()` method must not be called while a DNS query is in
       * progress.
       *
-      * This method works much like[resolve.conf](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
+      * This method works much like [resolve.conf](https://man7.org/linux/man-pages/man5/resolv.conf.5.html).
       * That is, if attempting to resolve with the first server provided results in a`NOTFOUND` error, the `resolve()` method will _not_ attempt to resolve with
       * subsequent servers provided. Fallback DNS servers will only be used if the
       * earlier ones time out or result in some other error.
@@ -611,211 +604,204 @@ object nodeDnsMod {
       * @param servers array of `RFC 5952` formatted addresses
       */
     @scala.inline
-    def setServers(servers: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]
+    def setServers(servers: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]
   }
   
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
-    rrtype: java.lang.String,
+    hostname: String,
+    rrtype: String,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
-      /* addresses */ (js.Array[
-        AnyRecord | js.Array[java.lang.String] | MxRecord | NaptrRecord | SrvRecord | java.lang.String
-      ]) | SoaRecord, 
+      /* addresses */ (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord, 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: AAAA,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: ANY,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[AnyRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: A,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: CNAME,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: MX,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[MxRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: NAPTR,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[NaptrRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: NS,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: PTR,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: SOA,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ SoaRecord, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: SRV,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[SrvRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve(
-    hostname: java.lang.String,
+    hostname: String,
     rrtype: TXT,
-    callback: js.Function2[
-      /* err */ ErrnoException | Null, 
-      /* addresses */ js.Array[js.Array[java.lang.String]], 
-      Unit
-    ]
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[js.Array[String]], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolve4(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve4(
-    hostname: java.lang.String,
+    hostname: String,
     options: ResolveOptions,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
-      /* addresses */ js.Array[RecordWithTtl | java.lang.String], 
+      /* addresses */ js.Array[RecordWithTtl | String], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve4(
-    hostname: java.lang.String,
+    hostname: String,
     options: ResolveWithTtlOptions,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[RecordWithTtl], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolve6(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve6(
-    hostname: java.lang.String,
+    hostname: String,
     options: ResolveOptions,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
-      /* addresses */ js.Array[RecordWithTtl | java.lang.String], 
+      /* addresses */ js.Array[RecordWithTtl | String], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   @scala.inline
   def resolve6(
-    hostname: java.lang.String,
+    hostname: String,
     options: ResolveWithTtlOptions,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[RecordWithTtl], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveAny(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[AnyRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveCaa(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* records */ js.Array[CaaRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveCname(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveMx(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[MxRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveNaptr(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[NaptrRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveNs(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolvePtr(
-    hostname: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[java.lang.String], Unit]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveSoa(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* address */ SoaRecord, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveSrv(
-    hostname: java.lang.String,
+    hostname: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[SrvRecord], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def resolveTxt(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ ErrnoException | Null, 
-      /* addresses */ js.Array[js.Array[java.lang.String]], 
-      Unit
-    ]
+    hostname: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* addresses */ js.Array[js.Array[String]], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
   def reverse(
-    ip: java.lang.String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* hostnames */ js.Array[java.lang.String], Unit]
+    ip: String,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* hostnames */ js.Array[String], Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @scala.inline
-  def setServers(servers: js.Array[java.lang.String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  def setDefaultResultOrder(order: ipv4first | verbatim): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setDefaultResultOrder")(order.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  @scala.inline
+  def setServers(servers: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]
 }

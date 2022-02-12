@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait NavigatorAutomationInformation extends StObject {
   
+  /* standard DOM */
   val webdriver: scala.Boolean
 }
 object NavigatorAutomationInformation {

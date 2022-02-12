@@ -9,8 +9,10 @@ trait ConvolverOptions
   extends StObject
      with AudioNodeOptions {
   
-  var buffer: js.UndefOr[org.scalajs.dom.raw.AudioBuffer | Null] = js.undefined
+  /* standard DOM */
+  var buffer: js.UndefOr[org.scalajs.dom.AudioBuffer | Null] = js.undefined
   
+  /* standard DOM */
   var disableNormalization: js.UndefOr[scala.Boolean] = js.undefined
 }
 object ConvolverOptions {
@@ -25,7 +27,7 @@ object ConvolverOptions {
   implicit class ConvolverOptionsMutableBuilder[Self <: ConvolverOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
-    def setBuffer(value: org.scalajs.dom.raw.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+    def setBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBufferNull: Self = StObject.set(x, "buffer", null)

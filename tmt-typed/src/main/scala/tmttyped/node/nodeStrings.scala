@@ -20,12 +20,14 @@ import tmttyped.node.cryptoMod.KeyType
 import tmttyped.node.cryptoMod.LegacyCharacterEncoding
 import tmttyped.node.dgramMod.SocketType
 import tmttyped.node.fsMod.BufferEncodingOption
+import tmttyped.node.fsMod.WatchEventType
 import tmttyped.node.fsMod.symlink.Type
 import tmttyped.node.netMod.IPVersion
 import tmttyped.node.perfHooksMod.EntryType
 import tmttyped.node.processMod.global.NodeJS.MultipleResolveType
 import tmttyped.node.processMod.global.NodeJS.Platform
 import tmttyped.node.processMod.global.NodeJS.Signals
+import tmttyped.node.processMod.global.NodeJS.UncaughtExceptionOrigin
 import tmttyped.node.tlsMod.SecureVersion
 import tmttyped.node.utilMod.Style
 import tmttyped.node.vmMod.MeasureMemoryMode
@@ -1073,7 +1075,9 @@ object nodeStrings {
   @js.native
   sealed trait base64url
     extends StObject
+       with BinaryToTextEncoding
        with BufferEncoding
+       with Encoding
   @scala.inline
   def base64url: base64url = "base64url".asInstanceOf[base64url]
   
@@ -1092,6 +1096,7 @@ object nodeStrings {
   @js.native
   sealed trait binary
     extends StObject
+       with BinaryToTextEncoding
        with BufferEncoding
        with Encoding
        with LegacyCharacterEncoding
@@ -1112,6 +1117,11 @@ object nodeStrings {
        with BufferEncodingOption
   @scala.inline
   def buffer_ : buffer_ = "buffer".asInstanceOf[buffer_]
+  
+  @js.native
+  sealed trait bytes extends StObject
+  @scala.inline
+  def bytes: bytes = "bytes".asInstanceOf[bytes]
   
   @js.native
   sealed trait cbc
@@ -1142,7 +1152,9 @@ object nodeStrings {
   def `chacha20-poly1305`: `chacha20-poly1305` = "chacha20-poly1305".asInstanceOf[`chacha20-poly1305`]
   
   @js.native
-  sealed trait change extends StObject
+  sealed trait change
+    extends StObject
+       with WatchEventType
   @scala.inline
   def change: change = "change".asInstanceOf[change]
   
@@ -1150,6 +1162,16 @@ object nodeStrings {
   sealed trait checkContinue extends StObject
   @scala.inline
   def checkContinue: checkContinue = "checkContinue".asInstanceOf[checkContinue]
+  
+  @js.native
+  sealed trait checkExpectation extends StObject
+  @scala.inline
+  def checkExpectation: checkExpectation = "checkExpectation".asInstanceOf[checkExpectation]
+  
+  @js.native
+  sealed trait clientError extends StObject
+  @scala.inline
+  def clientError: clientError = "clientError".asInstanceOf[clientError]
   
   @js.native
   sealed trait close extends StObject
@@ -1486,6 +1508,11 @@ object nodeStrings {
   def ipv4_ : ipv4_ = "ipv4".asInstanceOf[ipv4_]
   
   @js.native
+  sealed trait ipv4first extends StObject
+  @scala.inline
+  def ipv4first: ipv4first = "ipv4first".asInstanceOf[ipv4first]
+  
+  @js.native
   sealed trait ipv6_
     extends StObject
        with IPVersion
@@ -1780,7 +1807,9 @@ object nodeStrings {
   def remoteSettings: remoteSettings = "remoteSettings".asInstanceOf[remoteSettings]
   
   @js.native
-  sealed trait rename extends StObject
+  sealed trait rename
+    extends StObject
+       with WatchEventType
   @scala.inline
   def rename: rename = "rename".asInstanceOf[rename]
   
@@ -1827,6 +1856,13 @@ object nodeStrings {
        with KeyType
   @scala.inline
   def rsa: rsa = "rsa".asInstanceOf[rsa]
+  
+  @js.native
+  sealed trait `rsa-pss`
+    extends StObject
+       with KeyType
+  @scala.inline
+  def `rsa-pss`: `rsa-pss` = "rsa-pss".asInstanceOf[`rsa-pss`]
   
   @js.native
   sealed trait sec1 extends StObject
@@ -1991,7 +2027,9 @@ object nodeStrings {
   def udp6: udp6 = "udp6".asInstanceOf[udp6]
   
   @js.native
-  sealed trait uncaughtException extends StObject
+  sealed trait uncaughtException
+    extends StObject
+       with UncaughtExceptionOrigin
   @scala.inline
   def uncaughtException: uncaughtException = "uncaughtException".asInstanceOf[uncaughtException]
   
@@ -2015,7 +2053,9 @@ object nodeStrings {
   def undefined: undefined = "undefined".asInstanceOf[undefined]
   
   @js.native
-  sealed trait unhandledRejection extends StObject
+  sealed trait unhandledRejection
+    extends StObject
+       with UncaughtExceptionOrigin
   @scala.inline
   def unhandledRejection: unhandledRejection = "unhandledRejection".asInstanceOf[unhandledRejection]
   
@@ -2062,6 +2102,11 @@ object nodeStrings {
        with TranscodeEncoding
   @scala.inline
   def utf8: utf8 = "utf8".asInstanceOf[utf8]
+  
+  @js.native
+  sealed trait verbatim extends StObject
+  @scala.inline
+  def verbatim: verbatim = "verbatim".asInstanceOf[verbatim]
   
   @js.native
   sealed trait wantTrailers extends StObject

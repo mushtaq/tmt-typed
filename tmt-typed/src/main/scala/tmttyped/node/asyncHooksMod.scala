@@ -23,8 +23,8 @@ object asyncHooksMod {
     * logged within each request.
     *
     * ```js
-    * const http = require('http');
-    * const { AsyncLocalStorage } = require('async_hooks');
+    * import http from 'http';
+    * import { AsyncLocalStorage } from 'async_hooks';
     *
     * const asyncLocalStorage = new AsyncLocalStorage();
     *
@@ -151,7 +151,7 @@ object asyncHooksMod {
       * @since v13.10.0, v12.17.0
       * @experimental
       */
-    def exit[R, TArgs /* <: js.Array[js.Any] */](
+    def exit[R, TArgs /* <: js.Array[Any] */](
       callback: js.Function1[/* args */ TArgs, R],
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
     ): R = js.native
@@ -167,8 +167,9 @@ object asyncHooksMod {
     
     /**
       * Runs a function synchronously within a context and returns its
-      * return value. The store is not accessible outside of the callback function or
-      * the asynchronous operations created within the callback.
+      * return value. The store is not accessible outside of the callback function.
+      * The store is accessible to any asynchronous operations created within the
+      * callback.
       *
       * The optional `args` are passed to the callback function.
       *
@@ -182,6 +183,9 @@ object asyncHooksMod {
       * try {
       *   asyncLocalStorage.run(store, () => {
       *     asyncLocalStorage.getStore(); // Returns the store object
+      *     setTimeout(() => {
+      *       asyncLocalStorage.getStore(); // Returns the store object
+      *     }, 200);
       *     throw new Error();
       *   });
       * } catch (e) {
@@ -191,7 +195,7 @@ object asyncHooksMod {
       * ```
       * @since v13.10.0, v12.17.0
       */
-    def run[R, TArgs /* <: js.Array[js.Any] */](
+    def run[R, TArgs /* <: js.Array[Any] */](
       store: T,
       callback: js.Function1[/* args */ TArgs, R],
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
@@ -208,7 +212,7 @@ object asyncHooksMod {
     * The following is an overview of the `AsyncResource` API.
     *
     * ```js
-    * const { AsyncResource, executionAsyncId } = require('async_hooks');
+    * import { AsyncResource, executionAsyncId } from 'async_hooks';
     *
     * // AsyncResource() is meant to be extended. Instantiating a
     * // new AsyncResource() also triggers init. If triggerAsyncId is omitted then
@@ -247,9 +251,9 @@ object asyncHooksMod {
       *   this async event (default: `executionAsyncId()`), or an
       *   AsyncResourceOptions object (since 9.3)
       */
-    def this(`type`: java.lang.String) = this()
-    def this(`type`: java.lang.String, triggerAsyncId: Double) = this()
-    def this(`type`: java.lang.String, triggerAsyncId: AsyncResourceOptions) = this()
+    def this(`type`: String) = this()
+    def this(`type`: String, triggerAsyncId: Double) = this()
+    def this(`type`: String, triggerAsyncId: AsyncResourceOptions) = this()
     
     /**
       * @return The unique `asyncId` assigned to the resource.
@@ -264,7 +268,7 @@ object asyncHooksMod {
       * @since v14.8.0, v12.19.0
       * @param fn The function to bind to the current `AsyncResource`.
       */
-    def bind[Func /* <: js.Function1[/* repeated */ js.Any, js.Any] */](fn: Func): Func with tmttyped.node.anon.AsyncResource = js.native
+    def bind[Func /* <: js.Function1[/* repeated */ Any, Any] */](fn: Func): Func with tmttyped.node.anon.AsyncResource = js.native
     
     /**
       * Call all `destroy` hooks. This should only ever be called once. An error will
@@ -283,10 +287,10 @@ object asyncHooksMod {
       * @since v9.6.0
       * @param fn The function to call in the execution context of this async resource.
       * @param thisArg The receiver to be used for the function call.
-      * @param ...args Optional arguments to pass to the function.
+      * @param args Optional arguments to pass to the function.
       */
-    def runInAsyncScope[This, Result](fn: js.ThisFunction1[/* this */ This, /* repeated */ js.Any, Result], thisArg: This, args: js.Any*): Result = js.native
-    def runInAsyncScope[This, Result](fn: js.ThisFunction1[/* this */ This, /* repeated */ js.Any, Result], thisArg: Unit, args: js.Any*): Result = js.native
+    def runInAsyncScope[This, Result](fn: js.ThisFunction1[/* this */ This, /* repeated */ Any, Result], thisArg: This, args: Any*): Result = js.native
+    def runInAsyncScope[This, Result](fn: js.ThisFunction1[/* this */ This, /* repeated */ Any, Result], thisArg: Unit, args: Any*): Result = js.native
     
     /**
       *
@@ -311,13 +315,13 @@ object asyncHooksMod {
       */
     /* static member */
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func): Func with tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func): Func with tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: java.lang.String): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: java.lang.String, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
     @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ js.Any, js.Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
   }
   
   /**
@@ -332,9 +336,9 @@ object asyncHooksMod {
     * specifics of all functions that can be passed to `callbacks` is in the `Hook Callbacks` section.
     *
     * ```js
-    * const async_hooks = require('async_hooks');
+    * import { createHook } from 'async_hooks';
     *
-    * const asyncHook = async_hooks.createHook({
+    * const asyncHook = createHook({
     *   init(asyncId, type, triggerAsyncId, resource) { },
     *   destroy(asyncId) { }
     * });
@@ -363,15 +367,15 @@ object asyncHooksMod {
     * @return Instance used for disabling and enabling hooks
     */
   @scala.inline
-  def createHook(options: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(options.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
+  def createHook(callbacks: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(callbacks.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
   
   /**
     * ```js
-    * const async_hooks = require('async_hooks');
+    * import { executionAsyncId } from 'async_hooks';
     *
-    * console.log(async_hooks.executionAsyncId());  // 1 - bootstrap
+    * console.log(executionAsyncId());  // 1 - bootstrap
     * fs.open(path, 'r', (err, fd) => {
-    *   console.log(async_hooks.executionAsyncId());  // 6 - open()
+    *   console.log(executionAsyncId());  // 6 - open()
     * });
     * ```
     *
@@ -409,11 +413,11 @@ object asyncHooksMod {
     * but having an object representing the top-level can be helpful.
     *
     * ```js
-    * const { open } = require('fs');
-    * const { executionAsyncId, executionAsyncResource } = require('async_hooks');
+    * import { open } from 'fs';
+    * import { executionAsyncId, executionAsyncResource } from 'async_hooks';
     *
     * console.log(executionAsyncId(), executionAsyncResource());  // 1 {}
-    * open(__filename, 'r', (err, fd) => {
+    * open(new URL(import.meta.url), 'r', (err, fd) => {
     *   console.log(executionAsyncId(), executionAsyncResource());  // 7 FSReqWrap
     * });
     * ```
@@ -422,12 +426,12 @@ object asyncHooksMod {
     * use of a tracking `Map` to store the metadata:
     *
     * ```js
-    * const { createServer } = require('http');
-    * const {
+    * import { createServer } from 'http';
+    * import {
     *   executionAsyncId,
     *   executionAsyncResource,
     *   createHook
-    * } = require('async_hooks');
+    * } from 'async_hooks';
     * const sym = Symbol('state'); // Private symbol to avoid pollution
     *
     * createHook({
@@ -579,7 +583,7 @@ object asyncHooksMod {
     var init: js.UndefOr[
         js.Function4[
           /* asyncId */ Double, 
-          /* type */ java.lang.String, 
+          /* type */ String, 
           /* triggerAsyncId */ Double, 
           /* resource */ js.Object, 
           Unit
@@ -624,7 +628,7 @@ object asyncHooksMod {
       
       @scala.inline
       def setInit(
-        value: (/* asyncId */ Double, /* type */ java.lang.String, /* triggerAsyncId */ Double, /* resource */ js.Object) => Unit
+        value: (/* asyncId */ Double, /* type */ String, /* triggerAsyncId */ Double, /* resource */ js.Object) => Unit
       ): Self = StObject.set(x, "init", js.Any.fromFunction4(value))
       
       @scala.inline

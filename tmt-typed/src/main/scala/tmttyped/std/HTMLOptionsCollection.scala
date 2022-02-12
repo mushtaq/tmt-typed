@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HTMLOptionsCollection
   extends StObject
-     with HTMLCollectionOf[org.scalajs.dom.raw.HTMLOptionElement] {
+     with HTMLCollectionOf[org.scalajs.dom.HTMLOptionElement] {
   
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptGroupElement, before: Double): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement, before: org.scalajs.dom.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptGroupElement, before: Double): Unit = js.native
   /**
     * Inserts element before the node given by before.
     *
@@ -23,9 +23,10 @@ trait HTMLOptionsCollection
     *
     * This method will throw a "HierarchyRequestError" DOMException if element is an ancestor of the element into which it is to be inserted.
     */
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: org.scalajs.dom.raw.HTMLElement): Unit = js.native
-  def add(element: org.scalajs.dom.raw.HTMLOptionElement, before: Double): Unit = js.native
+  /* standard DOM */
+  def add(element: org.scalajs.dom.HTMLOptionElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptionElement, before: org.scalajs.dom.HTMLElement): Unit = js.native
+  def add(element: org.scalajs.dom.HTMLOptionElement, before: Double): Unit = js.native
   
   /**
     * Returns the number of elements in the collection.
@@ -34,11 +35,11 @@ trait HTMLOptionsCollection
     *
     * When set to a greater number, adds new blank option elements to that container.
     */
+  /* standard DOM */
   var length: Double = js.native
   
-  /**
-    * Removes the item with index index from the collection.
-    */
+  /** Removes the item with index index from the collection. */
+  /* standard DOM */
   def remove(index: Double): Unit = js.native
   
   /**
@@ -46,5 +47,6 @@ trait HTMLOptionsCollection
     *
     * Can be set, to change the selection.
     */
+  /* standard DOM */
   var selectedIndex: Double = js.native
 }

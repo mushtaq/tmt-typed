@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 trait ResizeObserverSize extends StObject {
   
+  /* standard DOM */
   val blockSize: Double
   
+  /* standard DOM */
   val inlineSize: Double
 }
 object ResizeObserverSize {

@@ -24,6 +24,7 @@ trait TextDecoder
     *
     * If the error mode is "fatal" and encoding's decoder returns error, throws a TypeError.
     */
+  /* standard DOM */
   def decode(): java.lang.String = js.native
   def decode(input: Unit, options: TextDecodeOptions): java.lang.String = js.native
   def decode(input: BufferSource): java.lang.String = js.native

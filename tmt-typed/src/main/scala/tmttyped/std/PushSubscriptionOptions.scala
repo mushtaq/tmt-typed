@@ -5,17 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait PushSubscriptionOptions extends StObject {
   
+  /* standard DOM */
   val applicationServerKey: js.typedarray.ArrayBuffer | Null
-  
-  val userVisibleOnly: scala.Boolean
 }
 object PushSubscriptionOptions {
   
   @scala.inline
-  def apply(userVisibleOnly: scala.Boolean): PushSubscriptionOptions = {
-    val __obj = js.Dynamic.literal(userVisibleOnly = userVisibleOnly.asInstanceOf[js.Any], applicationServerKey = null)
+  def apply(): PushSubscriptionOptions = {
+    val __obj = js.Dynamic.literal(applicationServerKey = null)
     __obj.asInstanceOf[PushSubscriptionOptions]
   }
   
@@ -27,8 +27,5 @@ object PushSubscriptionOptions {
     
     @scala.inline
     def setApplicationServerKeyNull: Self = StObject.set(x, "applicationServerKey", null)
-    
-    @scala.inline
-    def setUserVisibleOnly(value: scala.Boolean): Self = StObject.set(x, "userVisibleOnly", value.asInstanceOf[js.Any])
   }
 }

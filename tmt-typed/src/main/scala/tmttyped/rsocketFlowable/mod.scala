@@ -30,7 +30,7 @@ object mod {
     def error(error: js.Error): tmttyped.rsocketFlowable.flowableMod.Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("error")(error.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketFlowable.flowableMod.Flowable[scala.Nothing]]
     
     @scala.inline
-    def just[U](values: U*): tmttyped.rsocketFlowable.flowableMod.Flowable[U] = ^.asInstanceOf[js.Dynamic].applyDynamic("just")(values.asInstanceOf[js.Any]).asInstanceOf[tmttyped.rsocketFlowable.flowableMod.Flowable[U]]
+    def just[U](values: U*): tmttyped.rsocketFlowable.flowableMod.Flowable[U] = (^.asInstanceOf[js.Dynamic].applyDynamic("just")(values.asInstanceOf[Seq[js.Any]] :_*)).asInstanceOf[tmttyped.rsocketFlowable.flowableMod.Flowable[U]]
     
     @scala.inline
     def never(): tmttyped.rsocketFlowable.flowableMod.Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("never")().asInstanceOf[tmttyped.rsocketFlowable.flowableMod.Flowable[scala.Nothing]]
@@ -40,9 +40,9 @@ object mod {
   @js.native
   class FlowableProcessor[T, R] protected ()
     extends tmttyped.rsocketFlowable.flowableProcessorMod.default[T, R] {
-    def this(source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ js.Any) = this()
+    def this(source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ Any) = this()
     def this(
-      source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ js.Any,
+      source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ Any,
       fn: js.Function1[/* a */ T, R]
     ) = this()
   }

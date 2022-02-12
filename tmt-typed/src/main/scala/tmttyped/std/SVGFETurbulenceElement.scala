@@ -12,18 +12,25 @@ trait SVGFETurbulenceElement
      with SVGElement
      with SVGFilterPrimitiveStandardAttributes {
   
+  /* standard DOM */
   val SVG_STITCHTYPE_NOSTITCH: Double = js.native
   
+  /* standard DOM */
   val SVG_STITCHTYPE_STITCH: Double = js.native
   
+  /* standard DOM */
   val SVG_STITCHTYPE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   val SVG_TURBULENCE_TYPE_FRACTALNOISE: Double = js.native
   
+  /* standard DOM */
   val SVG_TURBULENCE_TYPE_TURBULENCE: Double = js.native
   
+  /* standard DOM */
   val SVG_TURBULENCE_TYPE_UNKNOWN: Double = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -35,26 +42,33 @@ trait SVGFETurbulenceElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  val baseFrequencyX: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val baseFrequencyX: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val baseFrequencyY: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val baseFrequencyY: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val numOctaves: org.scalajs.dom.raw.SVGAnimatedInteger = js.native
+  /* standard DOM */
+  val numOctaves: org.scalajs.dom.SVGAnimatedInteger = js.native
   
+  /* standard DOM */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(
     `type`: java.lang.String,
     listener: EventListenerOrEventListenerObject,
-    options: org.scalajs.dom.raw.EventListenerOptions
+    options: org.scalajs.dom.EventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   
-  val seed: org.scalajs.dom.raw.SVGAnimatedNumber = js.native
+  /* standard DOM */
+  val seed: org.scalajs.dom.SVGAnimatedNumber = js.native
   
-  val stitchTiles: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val stitchTiles: org.scalajs.dom.SVGAnimatedEnumeration = js.native
   
-  val `type`: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
+  /* standard DOM */
+  val `type`: org.scalajs.dom.SVGAnimatedEnumeration = js.native
 }
