@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ConnectOpts extends StObject {
@@ -16,19 +15,15 @@ trait ConnectOpts extends StObject {
 }
 object ConnectOpts {
   
-  @scala.inline
-  def apply(): ConnectOpts = {
+  inline def apply(): ConnectOpts = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ConnectOpts]
   }
   
-  @scala.inline
-  implicit class ConnectOptsMutableBuilder[Self <: ConnectOpts] (val x: Self) extends AnyVal {
+  extension [Self <: ConnectOpts](x: Self) {
     
-    @scala.inline
-    def setOnread(value: OnReadOpts): Self = StObject.set(x, "onread", value.asInstanceOf[js.Any])
+    inline def setOnread(value: OnReadOpts): Self = StObject.set(x, "onread", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOnreadUndefined: Self = StObject.set(x, "onread", js.undefined)
+    inline def setOnreadUndefined: Self = StObject.set(x, "onread", js.undefined)
   }
 }

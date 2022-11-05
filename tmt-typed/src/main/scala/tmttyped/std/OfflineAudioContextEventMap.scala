@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait OfflineAudioContextEventMap
@@ -14,16 +13,13 @@ trait OfflineAudioContextEventMap
 }
 object OfflineAudioContextEventMap {
   
-  @scala.inline
-  def apply(complete: org.scalajs.dom.OfflineAudioCompletionEvent, statechange: org.scalajs.dom.Event): OfflineAudioContextEventMap = {
+  inline def apply(complete: org.scalajs.dom.OfflineAudioCompletionEvent, statechange: org.scalajs.dom.Event): OfflineAudioContextEventMap = {
     val __obj = js.Dynamic.literal(complete = complete.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineAudioContextEventMap]
   }
   
-  @scala.inline
-  implicit class OfflineAudioContextEventMapMutableBuilder[Self <: OfflineAudioContextEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: OfflineAudioContextEventMap](x: Self) {
     
-    @scala.inline
-    def setComplete(value: org.scalajs.dom.OfflineAudioCompletionEvent): Self = StObject.set(x, "complete", value.asInstanceOf[js.Any])
+    inline def setComplete(value: org.scalajs.dom.OfflineAudioCompletionEvent): Self = StObject.set(x, "complete", value.asInstanceOf[js.Any])
   }
 }

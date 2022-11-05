@@ -1,5 +1,6 @@
 package tmttyped.node
 
+import org.scalablytyped.runtime.Instantiable1
 import tmttyped.node.httpMod.AgentOptions
 import tmttyped.node.httpMod.ClientRequestArgs
 import tmttyped.node.httpMod.RequestListener
@@ -9,7 +10,6 @@ import tmttyped.node.nodeNetMod.Socket
 import tmttyped.node.nodeUrlMod.URL
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeHttpMod {
@@ -75,7 +75,7 @@ object nodeHttpMod {
     */
   @JSImport("node:http", "Agent")
   @js.native
-  class Agent ()
+  open class Agent ()
     extends tmttyped.node.httpMod.Agent {
     def this(opts: AgentOptions) = this()
   }
@@ -110,7 +110,7 @@ object nodeHttpMod {
     */
   @JSImport("node:http", "ClientRequest")
   @js.native
-  class ClientRequest protected () extends StObject {
+  open class ClientRequest protected () extends StObject {
     def this(url: String) = this()
     def this(url: ClientRequestArgs) = this()
     def this(url: URL) = this()
@@ -131,7 +131,7 @@ object nodeHttpMod {
     */
   @JSImport("node:http", "IncomingMessage")
   @js.native
-  class IncomingMessage protected () extends StObject {
+  open class IncomingMessage protected () extends StObject {
     def this(socket: Socket) = this()
   }
   
@@ -146,17 +146,20 @@ object nodeHttpMod {
     */
   @JSImport("node:http", "OutgoingMessage")
   @js.native
-  class OutgoingMessage () extends StObject
+  open class OutgoingMessage[Request /* <: tmttyped.node.httpMod.IncomingMessage */] () extends StObject
   
   /**
     * @since v0.1.17
     */
   @JSImport("node:http", "Server")
   @js.native
-  class Server () extends StObject {
-    def this(options: ServerOptions) = this()
-    def this(requestListener: RequestListener) = this()
-    def this(options: ServerOptions, requestListener: RequestListener) = this()
+  open class Server[Request /* <: Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    tmttyped.node.httpMod.ServerResponse[tmttyped.node.httpMod.IncomingMessage]
+  ] */] () extends StObject {
+    def this(options: ServerOptions[Request, Response]) = this()
+    def this(requestListener: RequestListener[Request, Response]) = this()
+    def this(options: ServerOptions[Request, Response], requestListener: RequestListener[Request, Response]) = this()
   }
   
   /**
@@ -166,8 +169,8 @@ object nodeHttpMod {
     */
   @JSImport("node:http", "ServerResponse")
   @js.native
-  class ServerResponse protected () extends StObject {
-    def this(req: tmttyped.node.httpMod.IncomingMessage) = this()
+  open class ServerResponse[Request /* <: tmttyped.node.httpMod.IncomingMessage */] protected () extends StObject {
+    def this(req: Request) = this()
   }
   
   /**
@@ -177,19 +180,25 @@ object nodeHttpMod {
     * added to the `'request'` event.
     * @since v0.1.13
     */
-  @scala.inline
-  def createServer(): tmttyped.node.httpMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.httpMod.Server]
-  @scala.inline
-  def createServer(options: ServerOptions): tmttyped.node.httpMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.Server]
-  @scala.inline
-  def createServer(options: ServerOptions, requestListener: RequestListener): tmttyped.node.httpMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.Server]
-  @scala.inline
-  def createServer(requestListener: RequestListener): tmttyped.node.httpMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.Server]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    tmttyped.node.httpMod.ServerResponse[tmttyped.node.httpMod.IncomingMessage]
+  ] */](): tmttyped.node.httpMod.Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.httpMod.Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    tmttyped.node.httpMod.ServerResponse[tmttyped.node.httpMod.IncomingMessage]
+  ] */](options: ServerOptions[Request, Response]): tmttyped.node.httpMod.Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    tmttyped.node.httpMod.ServerResponse[tmttyped.node.httpMod.IncomingMessage]
+  ] */](options: ServerOptions[Request, Response], requestListener: RequestListener[Request, Response]): tmttyped.node.httpMod.Server[Request, Response] = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    tmttyped.node.httpMod.ServerResponse[tmttyped.node.httpMod.IncomingMessage]
+  ] */](requestListener: RequestListener[Request, Response]): tmttyped.node.httpMod.Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.Server[Request, Response]]
   
-  @scala.inline
-  def get(options: String): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(options: String, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(options: String): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(options: String, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
   /**
     * Since most requests are GET requests without bodies, Node.js provides this
     * convenience method. The only difference between this method and {@link request} is that it sets the method to GET and calls `req.end()`automatically. The callback must take care to consume the
@@ -250,29 +259,21 @@ object nodeHttpMod {
     * @since v0.3.6
     * @param options Accepts the same `options` as {@link request}, with the `method` always set to `GET`. Properties that are inherited from the prototype are ignored.
     */
-  @scala.inline
-  def get(options: RequestOptions): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(
+  inline def get(options: RequestOptions): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
   ): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(options: URL): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(options: URL, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(url: String, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(
+  inline def get(options: URL): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(options: URL, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(url: String, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(
     url: String,
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
   ): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(url: URL, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def get(
+  inline def get(url: URL, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def get(
     url: URL,
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
@@ -281,8 +282,7 @@ object nodeHttpMod {
   @JSImport("node:http", "globalAgent")
   @js.native
   def globalAgent: tmttyped.node.httpMod.Agent = js.native
-  @scala.inline
-  def globalAgent_=(x: tmttyped.node.httpMod.Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
+  inline def globalAgent_=(x: tmttyped.node.httpMod.Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
   
   /**
     * Read-only property specifying the maximum allowed size of HTTP headers in bytes.
@@ -292,11 +292,11 @@ object nodeHttpMod {
   @js.native
   val maxHeaderSize: Double = js.native
   
-  @scala.inline
-  def request(options: String): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(options: String, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(options: String): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(options: String, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
   /**
+    * `options` in `socket.connect()` are also supported.
+    *
     * Node.js maintains several connections per server to make HTTP requests.
     * This function allows one to transparently issue requests.
     *
@@ -480,31 +480,49 @@ object nodeHttpMod {
     * request itself.
     * @since v0.3.6
     */
-  @scala.inline
-  def request(options: RequestOptions): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(
+  inline def request(options: RequestOptions): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
   ): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(options: URL): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(options: URL, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(url: String, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(
+  inline def request(options: URL): tmttyped.node.httpMod.ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(options: URL, callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(url: String, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(
     url: String,
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
   ): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(url: URL, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
-  @scala.inline
-  def request(
+  inline def request(url: URL, options: RequestOptions): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  inline def request(
     url: URL,
     options: RequestOptions,
     callback: js.Function1[/* res */ tmttyped.node.httpMod.IncomingMessage, Unit]
   ): tmttyped.node.httpMod.ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.httpMod.ClientRequest]
+  
+  /**
+    * Set the maximum number of idle HTTP parsers. Default: 1000.
+    * @param count
+    * @since v18.8.0, v16.18.0
+    */
+  inline def setMaxIdleHTTPParsers(count: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setMaxIdleHTTPParsers")(count.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  /**
+    * Performs the low-level validations on the provided name that are done when `res.setHeader(name, value)` is called.
+    * Passing illegal value as name will result in a TypeError being thrown, identified by `code: 'ERR_INVALID_HTTP_TOKEN'`.
+    * @param name Header name
+    * @since v14.3.0
+    */
+  inline def validateHeaderName(name: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("validateHeaderName")(name.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  /**
+    * Performs the low-level validations on the provided value that are done when `res.setHeader(name, value)` is called.
+    * Passing illegal value as value will result in a TypeError being thrown.
+    * - Undefined value error is identified by `code: 'ERR_HTTP_INVALID_HEADER_VALUE'`.
+    * - Invalid value character error is identified by `code: 'ERR_INVALID_CHAR'`.
+    * @param name Header name
+    * @param value Header value
+    * @since v14.3.0
+    */
+  inline def validateHeaderValue(name: String, value: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("validateHeaderValue")(name.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
 }

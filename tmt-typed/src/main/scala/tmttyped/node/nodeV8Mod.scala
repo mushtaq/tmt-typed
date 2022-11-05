@@ -1,6 +1,5 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.TypedArray
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.v8Mod.HeapCodeStatistics
@@ -8,7 +7,6 @@ import tmttyped.node.v8Mod.HeapInfo
 import tmttyped.node.v8Mod.HeapSpaceInfo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeV8Mod {
@@ -23,9 +21,9 @@ object nodeV8Mod {
     */
   @JSImport("node:v8", "DefaultDeserializer")
   @js.native
-  class DefaultDeserializer protected ()
+  open class DefaultDeserializer protected ()
     extends tmttyped.node.v8Mod.DefaultDeserializer {
-    def this(data: TypedArray) = this()
+    def this(data: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) = this()
   }
   
   /**
@@ -35,7 +33,7 @@ object nodeV8Mod {
     */
   @JSImport("node:v8", "DefaultSerializer")
   @js.native
-  class DefaultSerializer ()
+  open class DefaultSerializer ()
     extends tmttyped.node.v8Mod.DefaultSerializer
   
   /**
@@ -43,9 +41,9 @@ object nodeV8Mod {
     */
   @JSImport("node:v8", "Deserializer")
   @js.native
-  class Deserializer protected ()
+  open class Deserializer protected ()
     extends tmttyped.node.v8Mod.Deserializer {
-    def this(data: TypedArray) = this()
+    def this(data: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) = this()
   }
   
   /**
@@ -53,7 +51,7 @@ object nodeV8Mod {
     */
   @JSImport("node:v8", "Serializer")
   @js.native
-  class Serializer ()
+  open class Serializer ()
     extends tmttyped.node.v8Mod.Serializer
   
   /**
@@ -72,8 +70,7 @@ object nodeV8Mod {
     * ```
     * @since v8.0.0
     */
-  @scala.inline
-  def cachedDataVersionTag(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("cachedDataVersionTag")().asInstanceOf[Double]
+  inline def cachedDataVersionTag(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("cachedDataVersionTag")().asInstanceOf[Double]
   
   /**
     * Uses a `DefaultDeserializer` with default options to read a JS value
@@ -81,8 +78,9 @@ object nodeV8Mod {
     * @since v8.0.0
     * @param buffer A buffer returned by {@link serialize}.
     */
-  @scala.inline
-  def deserialize(buffer: TypedArray): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(buffer.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def deserialize(
+    buffer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any
+  ): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(buffer.asInstanceOf[js.Any]).asInstanceOf[Any]
   
   /**
     * Returns an object with the following properties:
@@ -96,8 +94,7 @@ object nodeV8Mod {
     * ```
     * @since v12.8.0
     */
-  @scala.inline
-  def getHeapCodeStatistics(): HeapCodeStatistics = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapCodeStatistics")().asInstanceOf[HeapCodeStatistics]
+  inline def getHeapCodeStatistics(): HeapCodeStatistics = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapCodeStatistics")().asInstanceOf[HeapCodeStatistics]
   
   /**
     * Generates a snapshot of the current V8 heap and returns a Readable
@@ -105,6 +102,13 @@ object nodeV8Mod {
     * This JSON stream format is intended to be used with tools such as
     * Chrome DevTools. The JSON schema is undocumented and specific to the
     * V8 engine. Therefore, the schema may change from one version of V8 to the next.
+    *
+    * Creating a heap snapshot requires memory about twice the size of the heap at
+    * the time the snapshot is created. This results in the risk of OOM killers
+    * terminating the process.
+    *
+    * Generating a snapshot is a synchronous operation which blocks the event loop
+    * for a duration depending on the heap size.
     *
     * ```js
     * // Print heap snapshot to the console
@@ -115,8 +119,7 @@ object nodeV8Mod {
     * @since v11.13.0
     * @return A Readable Stream containing the V8 heap snapshot
     */
-  @scala.inline
-  def getHeapSnapshot(): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSnapshot")().asInstanceOf[Readable]
+  inline def getHeapSnapshot(): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSnapshot")().asInstanceOf[Readable]
   
   /**
     * Returns statistics about the V8 heap spaces, i.e. the segments which make up
@@ -168,8 +171,7 @@ object nodeV8Mod {
     * ```
     * @since v6.0.0
     */
-  @scala.inline
-  def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSpaceStatistics")().asInstanceOf[js.Array[HeapSpaceInfo]]
+  inline def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSpaceStatistics")().asInstanceOf[js.Array[HeapSpaceInfo]]
   
   /**
     * Returns an object with the following properties:
@@ -204,15 +206,17 @@ object nodeV8Mod {
     * ```
     * @since v1.0.0
     */
-  @scala.inline
-  def getHeapStatistics(): HeapInfo = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapStatistics")().asInstanceOf[HeapInfo]
+  inline def getHeapStatistics(): HeapInfo = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapStatistics")().asInstanceOf[HeapInfo]
   
   /**
     * Uses a `DefaultSerializer` to serialize `value` into a buffer.
+    *
+    * `ERR_BUFFER_TOO_LARGE` will be thrown when trying to
+    * serialize a huge object which requires buffer
+    * larger than `buffer.constants.MAX_LENGTH`.
     * @since v8.0.0
     */
-  @scala.inline
-  def serialize(value: Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def serialize(value: Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
   /**
     * The `v8.setFlagsFromString()` method can be used to programmatically set
@@ -232,8 +236,7 @@ object nodeV8Mod {
     * ```
     * @since v1.0.0
     */
-  @scala.inline
-  def setFlagsFromString(flags: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def setFlagsFromString(flags: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * The `v8.stopCoverage()` method allows the user to stop the coverage collection
@@ -241,8 +244,7 @@ object nodeV8Mod {
     * records and optimize code. This can be used in conjunction with {@link takeCoverage} if the user wants to collect the coverage on demand.
     * @since v15.1.0, v14.18.0, v12.22.0
     */
-  @scala.inline
-  def stopCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("stopCoverage")().asInstanceOf[Unit]
+  inline def stopCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("stopCoverage")().asInstanceOf[Unit]
   
   /**
     * The `v8.takeCoverage()` method allows the user to write the coverage started by `NODE_V8_COVERAGE` to disk on demand. This method can be invoked multiple
@@ -254,8 +256,7 @@ object nodeV8Mod {
     * disk unless {@link stopCoverage} is invoked before the process exits.
     * @since v15.1.0, v14.18.0, v12.22.0
     */
-  @scala.inline
-  def takeCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("takeCoverage")().asInstanceOf[Unit]
+  inline def takeCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("takeCoverage")().asInstanceOf[Unit]
   
   /**
     * Generates a snapshot of the current V8 heap and writes it to a JSON
@@ -265,6 +266,13 @@ object nodeV8Mod {
     *
     * A heap snapshot is specific to a single V8 isolate. When using `worker threads`, a heap snapshot generated from the main thread will
     * not contain any information about the workers, and vice versa.
+    *
+    * Creating a heap snapshot requires memory about twice the size of the heap at
+    * the time the snapshot is created. This results in the risk of OOM killers
+    * terminating the process.
+    *
+    * Generating a snapshot is a synchronous operation which blocks the event loop
+    * for a duration depending on the heap size.
     *
     * ```js
     * const { writeHeapSnapshot } = require('v8');
@@ -301,8 +309,6 @@ object nodeV8Mod {
     * worker thread.
     * @return The filename where the snapshot was saved.
     */
-  @scala.inline
-  def writeHeapSnapshot(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[String]
-  @scala.inline
-  def writeHeapSnapshot(filename: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(filename.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def writeHeapSnapshot(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[String]
+  inline def writeHeapSnapshot(filename: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(filename.asInstanceOf[js.Any]).asInstanceOf[String]
 }

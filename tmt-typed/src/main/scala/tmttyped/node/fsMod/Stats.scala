@@ -2,47 +2,46 @@ package tmttyped.node.fsMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs", "Stats")
 @js.native
-class Stats ()
+open class Stats ()
   extends StObject
      with StatsBase[Double] {
   
   /* CompleteClass */
-  override var atime: js.Date = js.native
+  var atime: js.Date = js.native
   
   /* CompleteClass */
-  override var atimeMs: Double = js.native
+  var atimeMs: Double = js.native
   
   /* CompleteClass */
-  override var birthtime: js.Date = js.native
+  var birthtime: js.Date = js.native
   
   /* CompleteClass */
-  override var birthtimeMs: Double = js.native
+  var birthtimeMs: Double = js.native
   
   /* CompleteClass */
-  override var blksize: Double = js.native
+  var blksize: Double = js.native
   
   /* CompleteClass */
-  override var blocks: Double = js.native
+  var blocks: Double = js.native
   
   /* CompleteClass */
-  override var ctime: js.Date = js.native
+  var ctime: js.Date = js.native
   
   /* CompleteClass */
-  override var ctimeMs: Double = js.native
+  var ctimeMs: Double = js.native
   
   /* CompleteClass */
-  override var dev: Double = js.native
+  var dev: Double = js.native
   
   /* CompleteClass */
-  override var gid: Double = js.native
+  var gid: Double = js.native
   
   /* CompleteClass */
-  override var ino: Double = js.native
+  var ino: Double = js.native
   
   /* CompleteClass */
   override def isBlockDevice(): Boolean = js.native
@@ -66,23 +65,23 @@ class Stats ()
   override def isSymbolicLink(): Boolean = js.native
   
   /* CompleteClass */
-  override var mode: Double = js.native
+  var mode: Double = js.native
   
   /* CompleteClass */
-  override var mtime: js.Date = js.native
+  var mtime: js.Date = js.native
   
   /* CompleteClass */
-  override var mtimeMs: Double = js.native
+  var mtimeMs: Double = js.native
   
   /* CompleteClass */
-  override var nlink: Double = js.native
+  var nlink: Double = js.native
   
   /* CompleteClass */
-  override var rdev: Double = js.native
+  var rdev: Double = js.native
   
   /* CompleteClass */
-  override var size: Double = js.native
+  var size: Double = js.native
   
   /* CompleteClass */
-  override var uid: Double = js.native
+  var uid: Double = js.native
 }

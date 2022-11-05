@@ -5,14 +5,13 @@ import tmttyped.std.ArrayLike
 import tmttyped.std.Int8ArrayConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Int8Array")
 @js.native
 /* standard es2017.typedarrays */
-class Int8Array ()
+open class Int8Array ()
   extends StObject
      with tmttyped.std.Int8Array {
   /* standard es5 */
@@ -29,6 +28,5 @@ class Int8Array ()
 }
 object Int8Array {
   
-  @scala.inline
-  def apply: Int8ArrayConstructor = js.Dynamic.global.selectDynamic("Int8Array").asInstanceOf[Int8ArrayConstructor]
+  inline def apply: Int8ArrayConstructor = js.Dynamic.global.selectDynamic("Int8Array").asInstanceOf[Int8ArrayConstructor]
 }

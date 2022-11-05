@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object diagnosticsChannelMod {
@@ -22,7 +21,7 @@ object diagnosticsChannelMod {
     */
   @JSImport("diagnostics_channel", "Channel")
   @js.native
-  class Channel_ protected () extends StObject {
+  open class Channel_ protected () extends StObject {
     /* private */ def this(name: String) = this()
     
     /**
@@ -46,6 +45,25 @@ object diagnosticsChannelMod {
     val hasSubscribers: Boolean = js.native
     
     val name: String = js.native
+    
+    /**
+      * Publish a message to any subscribers to the channel. This will
+      * trigger message handlers synchronously so they will execute within
+      * the same context.
+      *
+      * ```js
+      * import diagnostics_channel from 'diagnostics_channel';
+      *
+      * const channel = diagnostics_channel.channel('my-channel');
+      *
+      * channel.publish({
+      *   some: 'message'
+      * });
+      * ```
+      * @since v15.1.0, v14.17.0
+      * @param message The message to send to the channel subscribers
+      */
+    def publish(message: Any): Unit = js.native
     
     /**
       * Register a message handler to subscribe to this channel. This message handler
@@ -84,6 +102,7 @@ object diagnosticsChannelMod {
       * ```
       * @since v15.1.0, v14.17.0
       * @param onMessage The previous subscribed handler to remove
+      * @return `true` if the handler was found, `false` otherwise.
       */
     def unsubscribe(onMessage: ChannelListener): Unit = js.native
   }
@@ -102,8 +121,7 @@ object diagnosticsChannelMod {
     * @param name The channel name
     * @return The named channel object
     */
-  @scala.inline
-  def channel(name: String): Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[Channel_]
+  inline def channel(name: String): Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[Channel_]
   
   /**
     * Check if there are active subscribers to the named channel. This is helpful if
@@ -123,8 +141,7 @@ object diagnosticsChannelMod {
     * @param name The channel name
     * @return If there are active subscribers
     */
-  @scala.inline
-  def hasSubscribers(name: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def hasSubscribers(name: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  type ChannelListener = js.Function2[/* name */ String, /* message */ Any, Unit]
+  type ChannelListener = js.Function2[/* message */ Any, /* name */ String, Unit]
 }

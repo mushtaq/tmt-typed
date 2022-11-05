@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait FontFace extends StObject {
@@ -54,8 +53,7 @@ trait FontFace extends StObject {
 }
 object FontFace {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     ascentOverride: java.lang.String,
     descentOverride: java.lang.String,
     display: java.lang.String,
@@ -76,52 +74,36 @@ object FontFace {
     __obj.asInstanceOf[FontFace]
   }
   
-  @scala.inline
-  implicit class FontFaceMutableBuilder[Self <: FontFace] (val x: Self) extends AnyVal {
+  extension [Self <: FontFace](x: Self) {
     
-    @scala.inline
-    def setAscentOverride(value: java.lang.String): Self = StObject.set(x, "ascentOverride", value.asInstanceOf[js.Any])
+    inline def setAscentOverride(value: java.lang.String): Self = StObject.set(x, "ascentOverride", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDescentOverride(value: java.lang.String): Self = StObject.set(x, "descentOverride", value.asInstanceOf[js.Any])
+    inline def setDescentOverride(value: java.lang.String): Self = StObject.set(x, "descentOverride", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDisplay(value: java.lang.String): Self = StObject.set(x, "display", value.asInstanceOf[js.Any])
+    inline def setDisplay(value: java.lang.String): Self = StObject.set(x, "display", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFamily(value: java.lang.String): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+    inline def setFamily(value: java.lang.String): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFeatureSettings(value: java.lang.String): Self = StObject.set(x, "featureSettings", value.asInstanceOf[js.Any])
+    inline def setFeatureSettings(value: java.lang.String): Self = StObject.set(x, "featureSettings", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLineGapOverride(value: java.lang.String): Self = StObject.set(x, "lineGapOverride", value.asInstanceOf[js.Any])
+    inline def setLineGapOverride(value: java.lang.String): Self = StObject.set(x, "lineGapOverride", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoad(value: () => js.Promise[FontFace]): Self = StObject.set(x, "load", js.Any.fromFunction0(value))
+    inline def setLoad(value: () => js.Promise[FontFace]): Self = StObject.set(x, "load", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setLoaded(value: js.Promise[FontFace]): Self = StObject.set(x, "loaded", value.asInstanceOf[js.Any])
+    inline def setLoaded(value: js.Promise[FontFace]): Self = StObject.set(x, "loaded", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStatus(value: FontFaceLoadStatus): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
+    inline def setStatus(value: FontFaceLoadStatus): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStretch(value: java.lang.String): Self = StObject.set(x, "stretch", value.asInstanceOf[js.Any])
+    inline def setStretch(value: java.lang.String): Self = StObject.set(x, "stretch", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStyle(value: java.lang.String): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    inline def setStyle(value: java.lang.String): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUnicodeRange(value: java.lang.String): Self = StObject.set(x, "unicodeRange", value.asInstanceOf[js.Any])
+    inline def setUnicodeRange(value: java.lang.String): Self = StObject.set(x, "unicodeRange", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setVariant(value: java.lang.String): Self = StObject.set(x, "variant", value.asInstanceOf[js.Any])
+    inline def setVariant(value: java.lang.String): Self = StObject.set(x, "variant", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setVariationSettings(value: java.lang.String): Self = StObject.set(x, "variationSettings", value.asInstanceOf[js.Any])
+    inline def setVariationSettings(value: java.lang.String): Self = StObject.set(x, "variationSettings", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWeight(value: java.lang.String): Self = StObject.set(x, "weight", value.asInstanceOf[js.Any])
+    inline def setWeight(value: java.lang.String): Self = StObject.set(x, "weight", value.asInstanceOf[js.Any])
   }
 }

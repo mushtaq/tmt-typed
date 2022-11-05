@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -15,18 +14,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TextTrackKind extends StObject
 object TextTrackKind {
   
-  @scala.inline
-  def captions: tmttyped.std.stdStrings.captions = "captions".asInstanceOf[tmttyped.std.stdStrings.captions]
+  inline def captions: tmttyped.std.stdStrings.captions = "captions".asInstanceOf[tmttyped.std.stdStrings.captions]
   
-  @scala.inline
-  def chapters: tmttyped.std.stdStrings.chapters = "chapters".asInstanceOf[tmttyped.std.stdStrings.chapters]
+  inline def chapters: tmttyped.std.stdStrings.chapters = "chapters".asInstanceOf[tmttyped.std.stdStrings.chapters]
   
-  @scala.inline
-  def descriptions: tmttyped.std.stdStrings.descriptions = "descriptions".asInstanceOf[tmttyped.std.stdStrings.descriptions]
+  inline def descriptions: tmttyped.std.stdStrings.descriptions = "descriptions".asInstanceOf[tmttyped.std.stdStrings.descriptions]
   
-  @scala.inline
-  def metadata: tmttyped.std.stdStrings.metadata = "metadata".asInstanceOf[tmttyped.std.stdStrings.metadata]
+  inline def metadata: tmttyped.std.stdStrings.metadata = "metadata".asInstanceOf[tmttyped.std.stdStrings.metadata]
   
-  @scala.inline
-  def subtitles: tmttyped.std.stdStrings.subtitles = "subtitles".asInstanceOf[tmttyped.std.stdStrings.subtitles]
+  inline def subtitles: tmttyped.std.stdStrings.subtitles = "subtitles".asInstanceOf[tmttyped.std.stdStrings.subtitles]
 }

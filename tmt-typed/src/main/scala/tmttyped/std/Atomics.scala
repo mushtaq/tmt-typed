@@ -1,11 +1,12 @@
 package tmttyped.std
 
+import tmttyped.std.anon.Async
+import tmttyped.std.anon.Value
 import tmttyped.std.stdStrings.`not-equal`
 import tmttyped.std.stdStrings.`timed-out`
 import tmttyped.std.stdStrings.ok
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -256,6 +257,16 @@ trait Atomics extends StObject {
   /* standard es2020.sharedmemory */
   def wait(typedArray: BigInt64Array, index: Double, value: js.BigInt): ok | `not-equal` | `timed-out` = js.native
   def wait(typedArray: BigInt64Array, index: Double, value: js.BigInt, timeout: Double): ok | `not-equal` | `timed-out` = js.native
+  
+  def waitAsync(typedArray: js.typedarray.Int32Array, index: Double, value: js.BigInt): Async | Value = js.native
+  def waitAsync(typedArray: js.typedarray.Int32Array, index: Double, value: js.BigInt, timeout: Double): Async | Value = js.native
+  /**
+    * A non-blocking, asynchronous version of wait which is usable on the main thread.
+    * Waits asynchronously on a shared memory location and returns a Promise
+    */
+  /* standard es2022.sharedmemory */
+  def waitAsync(typedArray: BigInt64Array, index: Double, value: js.BigInt): Async | Value = js.native
+  def waitAsync(typedArray: BigInt64Array, index: Double, value: js.BigInt, timeout: Double): Async | Value = js.native
   
   def xor(typedArray: js.typedarray.Int16Array, index: Double, value: Double): Double = js.native
   def xor(typedArray: js.typedarray.Int32Array, index: Double, value: Double): Double = js.native

@@ -2,7 +2,6 @@ package tmttyped.node.fsMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait BigIntStats
@@ -19,8 +18,7 @@ trait BigIntStats
 }
 object BigIntStats {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     atime: js.Date,
     atimeMs: js.BigInt,
     atimeNs: js.BigInt,
@@ -55,19 +53,14 @@ object BigIntStats {
     __obj.asInstanceOf[BigIntStats]
   }
   
-  @scala.inline
-  implicit class BigIntStatsMutableBuilder[Self <: BigIntStats] (val x: Self) extends AnyVal {
+  extension [Self <: BigIntStats](x: Self) {
     
-    @scala.inline
-    def setAtimeNs(value: js.BigInt): Self = StObject.set(x, "atimeNs", value.asInstanceOf[js.Any])
+    inline def setAtimeNs(value: js.BigInt): Self = StObject.set(x, "atimeNs", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBirthtimeNs(value: js.BigInt): Self = StObject.set(x, "birthtimeNs", value.asInstanceOf[js.Any])
+    inline def setBirthtimeNs(value: js.BigInt): Self = StObject.set(x, "birthtimeNs", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCtimeNs(value: js.BigInt): Self = StObject.set(x, "ctimeNs", value.asInstanceOf[js.Any])
+    inline def setCtimeNs(value: js.BigInt): Self = StObject.set(x, "ctimeNs", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMtimeNs(value: js.BigInt): Self = StObject.set(x, "mtimeNs", value.asInstanceOf[js.Any])
+    inline def setMtimeNs(value: js.BigInt): Self = StObject.set(x, "mtimeNs", value.asInstanceOf[js.Any])
   }
 }

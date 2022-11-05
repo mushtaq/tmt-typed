@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AesCtrParams
@@ -17,19 +16,15 @@ trait AesCtrParams
 }
 object AesCtrParams {
   
-  @scala.inline
-  def apply(counter: BufferSource, length: Double, name: java.lang.String): AesCtrParams = {
+  inline def apply(counter: BufferSource, length: Double, name: java.lang.String): AesCtrParams = {
     val __obj = js.Dynamic.literal(counter = counter.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AesCtrParams]
   }
   
-  @scala.inline
-  implicit class AesCtrParamsMutableBuilder[Self <: AesCtrParams] (val x: Self) extends AnyVal {
+  extension [Self <: AesCtrParams](x: Self) {
     
-    @scala.inline
-    def setCounter(value: BufferSource): Self = StObject.set(x, "counter", value.asInstanceOf[js.Any])
+    inline def setCounter(value: BufferSource): Self = StObject.set(x, "counter", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
+    inline def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
   }
 }

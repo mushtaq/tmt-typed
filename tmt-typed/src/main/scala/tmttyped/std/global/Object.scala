@@ -4,14 +4,13 @@ import tmttyped.std.ObjectConstructor
 import tmttyped.std.PropertyKey
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Object")
 @js.native
 /* standard es5 */
-class Object ()
+open class Object ()
   extends StObject
      with tmttyped.std.Object {
   def this(value: Any) = this()
@@ -19,7 +18,7 @@ class Object ()
   /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
   /* standard es5 */
   /* CompleteClass */
-  override var constructor: js.Function = js.native
+  var constructor: js.Function = js.native
   
   /**
     * Determines whether an object has a property with the specified name.
@@ -42,6 +41,5 @@ object Object {
   /**
     * Provides functionality common to all JavaScript objects.
     */
-  @scala.inline
-  def apply: ObjectConstructor = js.Dynamic.global.selectDynamic("Object").asInstanceOf[ObjectConstructor]
+  inline def apply: ObjectConstructor = js.Dynamic.global.selectDynamic("Object").asInstanceOf[ObjectConstructor]
 }

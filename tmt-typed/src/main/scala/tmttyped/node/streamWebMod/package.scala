@@ -1,68 +1,47 @@
-package tmttyped.node
+package tmttyped.node.streamWebMod
 
+import tmttyped.node.streamWebMod.^
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-package object streamWebMod {
-  
-  @scala.inline
-  def ReadableStreamBYOBReader: scala.Any = tmttyped.node.streamWebMod.^.asInstanceOf[js.Dynamic].selectDynamic("ReadableStreamBYOBReader").asInstanceOf[scala.Any]
-  
-  @scala.inline
-  def ReadableStreamBYOBRequest: scala.Any = tmttyped.node.streamWebMod.^.asInstanceOf[js.Dynamic].selectDynamic("ReadableStreamBYOBRequest").asInstanceOf[scala.Any]
-  
-  type BufferSource = js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer
-  
-  type QueuingStrategySize[T] = js.Function1[/* chunk */ js.UndefOr[T], scala.Double]
-  
-  type ReadableByteStreamControllerCallback = js.Function1[
-    /* controller */ tmttyped.node.streamWebMod.ReadableByteStreamController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type ReadableStreamController[T] = tmttyped.node.streamWebMod.ReadableStreamDefaultController[T]
-  
-  type ReadableStreamErrorCallback = js.Function1[/* reason */ scala.Any, scala.Unit | js.Thenable[scala.Unit]]
-  
-  type TransformerFlushCallback[O] = js.Function1[
-    /* controller */ tmttyped.node.streamWebMod.TransformStreamDefaultController[O], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type TransformerStartCallback[O] = js.Function1[
-    /* controller */ tmttyped.node.streamWebMod.TransformStreamDefaultController[O], 
-    scala.Any
-  ]
-  
-  type TransformerTransformCallback[I, O] = js.Function2[
-    /* chunk */ I, 
-    /* controller */ tmttyped.node.streamWebMod.TransformStreamDefaultController[O], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type UnderlyingSinkAbortCallback = js.Function1[/* reason */ js.UndefOr[scala.Any], scala.Unit | js.Thenable[scala.Unit]]
-  
-  type UnderlyingSinkCloseCallback = js.Function0[scala.Unit | js.Thenable[scala.Unit]]
-  
-  type UnderlyingSinkStartCallback = js.Function1[
-    /* controller */ tmttyped.node.streamWebMod.WritableStreamDefaultController, 
-    scala.Any
-  ]
-  
-  type UnderlyingSinkWriteCallback[W] = js.Function2[
-    /* chunk */ W, 
-    /* controller */ tmttyped.node.streamWebMod.WritableStreamDefaultController, 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type UnderlyingSourceCancelCallback = js.Function1[/* reason */ js.UndefOr[scala.Any], scala.Unit | js.Thenable[scala.Unit]]
-  
-  type UnderlyingSourcePullCallback[R] = js.Function1[
-    /* controller */ tmttyped.node.streamWebMod.ReadableStreamController[R], 
-    scala.Unit | js.Thenable[scala.Unit]
-  ]
-  
-  type UnderlyingSourceStartCallback[R] = js.Function1[/* controller */ tmttyped.node.streamWebMod.ReadableStreamController[R], scala.Any]
-}
+
+inline def ReadableStreamBYOBReader: Any = ^.asInstanceOf[js.Dynamic].selectDynamic("ReadableStreamBYOBReader").asInstanceOf[Any]
+
+inline def ReadableStreamBYOBRequest: Any = ^.asInstanceOf[js.Dynamic].selectDynamic("ReadableStreamBYOBRequest").asInstanceOf[Any]
+
+type BufferSource = js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer
+
+type QueuingStrategySize[T] = js.Function1[/* chunk */ js.UndefOr[T], Double]
+
+type ReadableByteStreamControllerCallback = js.Function1[/* controller */ ReadableByteStreamController, Unit | js.Thenable[Unit]]
+
+type ReadableStreamController[T] = ReadableStreamDefaultController[T]
+
+type ReadableStreamErrorCallback = js.Function1[/* reason */ Any, Unit | js.Thenable[Unit]]
+
+type TransformerFlushCallback[O] = js.Function1[/* controller */ TransformStreamDefaultController[O], Unit | js.Thenable[Unit]]
+
+type TransformerStartCallback[O] = js.Function1[/* controller */ TransformStreamDefaultController[O], Any]
+
+type TransformerTransformCallback[I, O] = js.Function2[
+/* chunk */ I, 
+/* controller */ TransformStreamDefaultController[O], 
+Unit | js.Thenable[Unit]]
+
+type UnderlyingSinkAbortCallback = js.Function1[/* reason */ js.UndefOr[Any], Unit | js.Thenable[Unit]]
+
+type UnderlyingSinkCloseCallback = js.Function0[Unit | js.Thenable[Unit]]
+
+type UnderlyingSinkStartCallback = js.Function1[/* controller */ WritableStreamDefaultController, Any]
+
+type UnderlyingSinkWriteCallback[W] = js.Function2[
+/* chunk */ W, 
+/* controller */ WritableStreamDefaultController, 
+Unit | js.Thenable[Unit]]
+
+type UnderlyingSourceCancelCallback = js.Function1[/* reason */ js.UndefOr[Any], Unit | js.Thenable[Unit]]
+
+type UnderlyingSourcePullCallback[R] = js.Function1[/* controller */ ReadableStreamController[R], Unit | js.Thenable[Unit]]
+
+type UnderlyingSourceStartCallback[R] = js.Function1[/* controller */ ReadableStreamController[R], Any]

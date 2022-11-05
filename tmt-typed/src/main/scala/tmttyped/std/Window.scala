@@ -1,12 +1,12 @@
 package tmttyped.std
 
 import org.scalablytyped.runtime.NumberDictionary
+import tmttyped.std.stdStrings.DOMContentLoaded
 import tmttyped.std.stdStrings.devicemotion
 import tmttyped.std.stdStrings.deviceorientation
 import tmttyped.std.stdStrings.orientationchange
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A window containing a DOM document; the document property points to the DOM document loaded in that window. */
@@ -35,6 +35,23 @@ trait Window
     options: AddEventListenerOptions
   ): Unit = js.native
   /* standard DOM */
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: AddEventListenerOptions
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_devicemotion(
     `type`: devicemotion,
@@ -295,6 +312,23 @@ trait Window
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   /* standard DOM */
   @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
   def removeEventListener_devicemotion(
     `type`: devicemotion,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.DeviceMotionEvent, Any]
@@ -400,7 +434,7 @@ trait Window
   val scrollbars: BarProp = js.native
   
   /* standard DOM */
-  val self: org.scalajs.dom.Window with (/* globalThis */ Any) = js.native
+  val self: org.scalajs.dom.Window & (/* globalThis */ Any) = js.native
   
   /* standard DOM */
   val speechSynthesis: SpeechSynthesis = js.native
@@ -425,8 +459,8 @@ trait Window
   val top: org.scalajs.dom.Window | Null = js.native
   
   /* standard DOM */
-  val visualViewport: VisualViewport = js.native
+  val visualViewport: VisualViewport | Null = js.native
   
   /* standard DOM */
-  val window: org.scalajs.dom.Window with (/* globalThis */ Any) = js.native
+  val window: org.scalajs.dom.Window & (/* globalThis */ Any) = js.native
 }

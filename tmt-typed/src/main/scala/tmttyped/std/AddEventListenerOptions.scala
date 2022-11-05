@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /////////////////////////////
@@ -23,31 +22,23 @@ trait AddEventListenerOptions
 }
 object AddEventListenerOptions {
   
-  @scala.inline
-  def apply(): AddEventListenerOptions = {
+  inline def apply(): AddEventListenerOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AddEventListenerOptions]
   }
   
-  @scala.inline
-  implicit class AddEventListenerOptionsMutableBuilder[Self <: AddEventListenerOptions] (val x: Self) extends AnyVal {
+  extension [Self <: AddEventListenerOptions](x: Self) {
     
-    @scala.inline
-    def setOnce(value: scala.Boolean): Self = StObject.set(x, "once", value.asInstanceOf[js.Any])
+    inline def setOnce(value: scala.Boolean): Self = StObject.set(x, "once", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOnceUndefined: Self = StObject.set(x, "once", js.undefined)
+    inline def setOnceUndefined: Self = StObject.set(x, "once", js.undefined)
     
-    @scala.inline
-    def setPassive(value: scala.Boolean): Self = StObject.set(x, "passive", value.asInstanceOf[js.Any])
+    inline def setPassive(value: scala.Boolean): Self = StObject.set(x, "passive", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPassiveUndefined: Self = StObject.set(x, "passive", js.undefined)
+    inline def setPassiveUndefined: Self = StObject.set(x, "passive", js.undefined)
     
-    @scala.inline
-    def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+    inline def setSignal(value: org.scalajs.dom.AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
+    inline def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
   }
 }

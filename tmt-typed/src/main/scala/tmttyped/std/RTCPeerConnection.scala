@@ -11,7 +11,6 @@ import tmttyped.std.stdStrings.signalingstatechange
 import tmttyped.std.stdStrings.track
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed. */
@@ -448,6 +447,9 @@ trait RTCPeerConnection
   
   /* standard DOM */
   def restartIce(): Unit = js.native
+  
+  /* standard DOM */
+  val sctp: RTCSctpTransport | Null = js.native
   
   /* standard DOM */
   def setConfiguration(): Unit = js.native

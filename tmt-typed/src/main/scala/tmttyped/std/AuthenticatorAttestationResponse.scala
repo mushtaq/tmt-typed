@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Available only in secure contexts. */
@@ -15,16 +14,13 @@ trait AuthenticatorAttestationResponse
 }
 object AuthenticatorAttestationResponse {
   
-  @scala.inline
-  def apply(attestationObject: js.typedarray.ArrayBuffer, clientDataJSON: js.typedarray.ArrayBuffer): AuthenticatorAttestationResponse = {
+  inline def apply(attestationObject: js.typedarray.ArrayBuffer, clientDataJSON: js.typedarray.ArrayBuffer): AuthenticatorAttestationResponse = {
     val __obj = js.Dynamic.literal(attestationObject = attestationObject.asInstanceOf[js.Any], clientDataJSON = clientDataJSON.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthenticatorAttestationResponse]
   }
   
-  @scala.inline
-  implicit class AuthenticatorAttestationResponseMutableBuilder[Self <: AuthenticatorAttestationResponse] (val x: Self) extends AnyVal {
+  extension [Self <: AuthenticatorAttestationResponse](x: Self) {
     
-    @scala.inline
-    def setAttestationObject(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "attestationObject", value.asInstanceOf[js.Any])
+    inline def setAttestationObject(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "attestationObject", value.asInstanceOf[js.Any])
   }
 }

@@ -1,17 +1,16 @@
 package tmttyped.std.global
 
 import tmttyped.std.DOMHighResTimeStamp
-import tmttyped.std.NavigationType
+import tmttyped.std.NavigationTimingType
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("PerformanceNavigationTiming")
 @js.native
 /* standard DOM */
-class PerformanceNavigationTiming ()
+open class PerformanceNavigationTiming ()
   extends StObject
      with tmttyped.std.PerformanceNavigationTiming {
   
@@ -133,7 +132,7 @@ class PerformanceNavigationTiming ()
   
   /* standard DOM */
   /* CompleteClass */
-  override val `type`: NavigationType = js.native
+  override val `type`: NavigationTimingType = js.native
   
   /* standard DOM */
   /* CompleteClass */

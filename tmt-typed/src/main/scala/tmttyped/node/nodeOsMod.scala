@@ -1,19 +1,16 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Dict
 import tmttyped.node.anon.`2`
 import tmttyped.node.anon.`4`
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.BE
 import tmttyped.node.nodeStrings.LE
 import tmttyped.node.osMod.CpuInfo
-import tmttyped.node.osMod.NetworkInterfaceInfo
 import tmttyped.node.osMod.SignalConstants
 import tmttyped.node.osMod.UserInfo_
 import tmttyped.node.processMod.global.NodeJS.Platform
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeOsMod {
@@ -28,13 +25,12 @@ object nodeOsMod {
   
   /**
     * Returns the operating system CPU architecture for which the Node.js binary was
-    * compiled. Possible values are `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,`'mipsel'`, `'ppc'`, `'ppc64'`, `'s390'`, `'s390x'`, `'x32'`, and `'x64'`.
+    * compiled. Possible values are `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,`'mipsel'`, `'ppc'`, `'ppc64'`, `'s390'`, `'s390x'`, and `'x64'`.
     *
     * The return value is equivalent to `process.arch`.
     * @since v0.5.0
     */
-  @scala.inline
-  def arch(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("arch")().asInstanceOf[String]
+  inline def arch(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("arch")().asInstanceOf[String]
   
   object constants {
     
@@ -683,8 +679,7 @@ object nodeOsMod {
     * are always 0.
     * @since v0.3.3
     */
-  @scala.inline
-  def cpus(): js.Array[CpuInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("cpus")().asInstanceOf[js.Array[CpuInfo]]
+  inline def cpus(): js.Array[CpuInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("cpus")().asInstanceOf[js.Array[CpuInfo]]
   
   @JSImport("node:os", "devNull")
   @js.native
@@ -697,15 +692,13 @@ object nodeOsMod {
     * Possible values are `'BE'` for big endian and `'LE'` for little endian.
     * @since v0.9.4
     */
-  @scala.inline
-  def endianness(): BE | LE = ^.asInstanceOf[js.Dynamic].applyDynamic("endianness")().asInstanceOf[BE | LE]
+  inline def endianness(): BE | LE = ^.asInstanceOf[js.Dynamic].applyDynamic("endianness")().asInstanceOf[BE | LE]
   
   /**
     * Returns the amount of free system memory in bytes as an integer.
     * @since v0.3.3
     */
-  @scala.inline
-  def freemem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("freemem")().asInstanceOf[Double]
+  inline def freemem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("freemem")().asInstanceOf[Double]
   
   /**
     * Returns the scheduling priority for the process specified by `pid`. If `pid` is
@@ -713,10 +706,8 @@ object nodeOsMod {
     * @since v10.10.0
     * @param [pid=0] The process ID to retrieve scheduling priority for.
     */
-  @scala.inline
-  def getPriority(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")().asInstanceOf[Double]
-  @scala.inline
-  def getPriority(pid: Double): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")(pid.asInstanceOf[js.Any]).asInstanceOf[Double]
+  inline def getPriority(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")().asInstanceOf[Double]
+  inline def getPriority(pid: Double): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")(pid.asInstanceOf[js.Any]).asInstanceOf[Double]
   
   /**
     * Returns the string path of the current user's home directory.
@@ -728,15 +719,13 @@ object nodeOsMod {
     * Otherwise it uses the path to the profile directory of the current user.
     * @since v2.3.0
     */
-  @scala.inline
-  def homedir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("homedir")().asInstanceOf[String]
+  inline def homedir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("homedir")().asInstanceOf[String]
   
   /**
     * Returns the host name of the operating system as a string.
     * @since v0.3.3
     */
-  @scala.inline
-  def hostname(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("hostname")().asInstanceOf[String]
+  inline def hostname(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("hostname")().asInstanceOf[String]
   
   /**
     * Returns an array containing the 1, 5, and 15 minute load averages.
@@ -748,8 +737,17 @@ object nodeOsMod {
     * always `[0, 0, 0]`.
     * @since v0.3.3
     */
-  @scala.inline
-  def loadavg(): js.Array[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("loadavg")().asInstanceOf[js.Array[Double]]
+  inline def loadavg(): js.Array[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("loadavg")().asInstanceOf[js.Array[Double]]
+  
+  /**
+    * Returns the machine type as a string, such as arm, aarch64, mips, mips64, ppc64, ppc64le, s390, s390x, i386, i686, x86_64.
+    *
+    * On POSIX systems, the machine type is determined by calling [`uname(3)`](https://linux.die.net/man/3/uname).
+    * On Windows, `RtlGetVersion()` is used, and if it is not available, `GetVersionExW()` will be used.
+    * See [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
+    * @since v18.9.0
+    */
+  inline def machine(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("machine")().asInstanceOf[String]
   
   /**
     * Returns an object containing network interfaces that have been assigned a
@@ -804,12 +802,12 @@ object nodeOsMod {
     * ```
     * @since v0.6.0
     */
-  @scala.inline
-  def networkInterfaces(): Dict[js.Array[NetworkInterfaceInfo]] = ^.asInstanceOf[js.Dynamic].applyDynamic("networkInterfaces")().asInstanceOf[Dict[js.Array[NetworkInterfaceInfo]]]
+  inline def networkInterfaces(): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("networkInterfaces")().asInstanceOf[Any]
   
   /**
-    * Returns a string identifying the operating system platform. The value is set
-    * at compile time. Possible values are `'aix'`, `'darwin'`, `'freebsd'`,`'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+    * Returns a string identifying the operating system platform for which
+    * the Node.js binary was compiled. The value is set at compile time.
+    * Possible values are `'aix'`, `'darwin'`, `'freebsd'`,`'linux'`,`'openbsd'`, `'sunos'`, and `'win32'`.
     *
     * The return value is equivalent to `process.platform`.
     *
@@ -817,8 +815,7 @@ object nodeOsMod {
     * operating system. [Android support is experimental](https://github.com/nodejs/node/blob/HEAD/BUILDING.md#androidandroid-based-devices-eg-firefox-os).
     * @since v0.5.0
     */
-  @scala.inline
-  def platform(): Platform = ^.asInstanceOf[js.Dynamic].applyDynamic("platform")().asInstanceOf[Platform]
+  inline def platform(): Platform = ^.asInstanceOf[js.Dynamic].applyDynamic("platform")().asInstanceOf[Platform]
   
   /**
     * Returns the operating system as a string.
@@ -827,11 +824,9 @@ object nodeOsMod {
     * [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
     * @since v0.3.3
     */
-  @scala.inline
-  def release(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("release")().asInstanceOf[String]
+  inline def release(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("release")().asInstanceOf[String]
   
-  @scala.inline
-  def setPriority(pid: Double, priority: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(pid.asInstanceOf[js.Any], priority.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def setPriority(pid: Double, priority: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(pid.asInstanceOf[js.Any], priority.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * Attempts to set the scheduling priority for the process specified by `pid`. If`pid` is not provided or is `0`, the process ID of the current process is used.
     *
@@ -846,23 +841,20 @@ object nodeOsMod {
     * @param [pid=0] The process ID to set scheduling priority for.
     * @param priority The scheduling priority to assign to the process.
     */
-  @scala.inline
-  def setPriority(priority: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(priority.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def setPriority(priority: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(priority.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Returns the operating system's default directory for temporary files as a
     * string.
     * @since v0.9.9
     */
-  @scala.inline
-  def tmpdir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("tmpdir")().asInstanceOf[String]
+  inline def tmpdir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("tmpdir")().asInstanceOf[String]
   
   /**
     * Returns the total amount of system memory in bytes as an integer.
     * @since v0.3.3
     */
-  @scala.inline
-  def totalmem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("totalmem")().asInstanceOf[Double]
+  inline def totalmem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("totalmem")().asInstanceOf[Double]
   
   /**
     * Returns the operating system name as returned by [`uname(3)`](https://linux.die.net/man/3/uname). For example, it
@@ -872,18 +864,15 @@ object nodeOsMod {
     * about the output of running [`uname(3)`](https://linux.die.net/man/3/uname) on various operating systems.
     * @since v0.3.3
     */
-  @scala.inline
-  def `type`(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("type")().asInstanceOf[String]
+  inline def `type`(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("type")().asInstanceOf[String]
   
   /**
     * Returns the system uptime in number of seconds.
     * @since v0.3.3
     */
-  @scala.inline
-  def uptime(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("uptime")().asInstanceOf[Double]
+  inline def uptime(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("uptime")().asInstanceOf[Double]
   
-  @scala.inline
-  def userInfo(): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")().asInstanceOf[UserInfo_[String]]
+  inline def userInfo(): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")().asInstanceOf[UserInfo_[String]]
   /**
     * Returns information about the currently effective user. On POSIX platforms,
     * this is typically a subset of the password file. The returned object includes
@@ -897,10 +886,8 @@ object nodeOsMod {
     * Throws a `SystemError` if a user has no `username` or `homedir`.
     * @since v6.0.0
     */
-  @scala.inline
-  def userInfo(options: `2`): UserInfo_[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[Buffer]]
-  @scala.inline
-  def userInfo(options: `4`): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[String]]
+  inline def userInfo(options: `2`): UserInfo_[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[Buffer]]
+  inline def userInfo(options: `4`): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[String]]
   
   /**
     * Returns a string identifying the kernel version.
@@ -909,6 +896,5 @@ object nodeOsMod {
     * available, `GetVersionExW()` will be used. See [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
     * @since v13.11.0, v12.17.0
     */
-  @scala.inline
-  def version(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("version")().asInstanceOf[String]
+  inline def version(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("version")().asInstanceOf[String]
 }

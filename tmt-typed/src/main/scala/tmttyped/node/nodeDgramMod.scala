@@ -6,7 +6,6 @@ import tmttyped.node.dgramMod.SocketOptions
 import tmttyped.node.dgramMod.SocketType
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeDgramMod {
@@ -24,12 +23,10 @@ object nodeDgramMod {
     */
   @JSImport("node:dgram", "Socket")
   @js.native
-  class Socket () extends StObject
+  open class Socket () extends StObject
   
-  @scala.inline
-  def createSocket(options: SocketOptions): tmttyped.node.dgramMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.dgramMod.Socket]
-  @scala.inline
-  def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): tmttyped.node.dgramMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.dgramMod.Socket]
+  inline def createSocket(options: SocketOptions): tmttyped.node.dgramMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.dgramMod.Socket]
+  inline def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): tmttyped.node.dgramMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.dgramMod.Socket]
   /**
     * Creates a `dgram.Socket` object. Once the socket is created, calling `socket.bind()` will instruct the socket to begin listening for datagram
     * messages. When `address` and `port` are not passed to `socket.bind()` the
@@ -53,8 +50,6 @@ object nodeDgramMod {
     * @param options Available options are:
     * @param callback Attached as a listener for `'message'` events. Optional.
     */
-  @scala.inline
-  def createSocket(`type`: SocketType): tmttyped.node.dgramMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.dgramMod.Socket]
-  @scala.inline
-  def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): tmttyped.node.dgramMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.dgramMod.Socket]
+  inline def createSocket(`type`: SocketType): tmttyped.node.dgramMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.dgramMod.Socket]
+  inline def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): tmttyped.node.dgramMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.dgramMod.Socket]
 }

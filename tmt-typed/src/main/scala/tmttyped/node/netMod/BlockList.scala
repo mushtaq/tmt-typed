@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("net", "BlockList")
 @js.native
-class BlockList () extends StObject {
+open class BlockList () extends StObject {
   
   /**
     * Adds a rule to block the given IP address.

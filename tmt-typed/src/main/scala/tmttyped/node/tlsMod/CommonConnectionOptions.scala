@@ -2,7 +2,6 @@ package tmttyped.node.tlsMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait CommonConnectionOptions extends StObject {
@@ -59,54 +58,39 @@ trait CommonConnectionOptions extends StObject {
 }
 object CommonConnectionOptions {
   
-  @scala.inline
-  def apply(): CommonConnectionOptions = {
+  inline def apply(): CommonConnectionOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CommonConnectionOptions]
   }
   
-  @scala.inline
-  implicit class CommonConnectionOptionsMutableBuilder[Self <: CommonConnectionOptions] (val x: Self) extends AnyVal {
+  extension [Self <: CommonConnectionOptions](x: Self) {
     
-    @scala.inline
-    def setALPNProtocols(value: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array): Self = StObject.set(x, "ALPNProtocols", value.asInstanceOf[js.Any])
+    inline def setALPNProtocols(value: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array): Self = StObject.set(x, "ALPNProtocols", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setALPNProtocolsUndefined: Self = StObject.set(x, "ALPNProtocols", js.undefined)
+    inline def setALPNProtocolsUndefined: Self = StObject.set(x, "ALPNProtocols", js.undefined)
     
-    @scala.inline
-    def setALPNProtocolsVarargs(value: (String | js.typedarray.Uint8Array)*): Self = StObject.set(x, "ALPNProtocols", js.Array(value :_*))
+    inline def setALPNProtocolsVarargs(value: (String | js.typedarray.Uint8Array)*): Self = StObject.set(x, "ALPNProtocols", js.Array(value*))
     
-    @scala.inline
-    def setEnableTrace(value: Boolean): Self = StObject.set(x, "enableTrace", value.asInstanceOf[js.Any])
+    inline def setEnableTrace(value: Boolean): Self = StObject.set(x, "enableTrace", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEnableTraceUndefined: Self = StObject.set(x, "enableTrace", js.undefined)
+    inline def setEnableTraceUndefined: Self = StObject.set(x, "enableTrace", js.undefined)
     
-    @scala.inline
-    def setRejectUnauthorized(value: Boolean): Self = StObject.set(x, "rejectUnauthorized", value.asInstanceOf[js.Any])
+    inline def setRejectUnauthorized(value: Boolean): Self = StObject.set(x, "rejectUnauthorized", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRejectUnauthorizedUndefined: Self = StObject.set(x, "rejectUnauthorized", js.undefined)
+    inline def setRejectUnauthorizedUndefined: Self = StObject.set(x, "rejectUnauthorized", js.undefined)
     
-    @scala.inline
-    def setRequestCert(value: Boolean): Self = StObject.set(x, "requestCert", value.asInstanceOf[js.Any])
+    inline def setRequestCert(value: Boolean): Self = StObject.set(x, "requestCert", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRequestCertUndefined: Self = StObject.set(x, "requestCert", js.undefined)
+    inline def setRequestCertUndefined: Self = StObject.set(x, "requestCert", js.undefined)
     
-    @scala.inline
-    def setSNICallback(
+    inline def setSNICallback(
       value: (/* servername */ String, /* cb */ js.Function2[/* err */ js.Error | Null, /* ctx */ js.UndefOr[SecureContext], Unit]) => Unit
     ): Self = StObject.set(x, "SNICallback", js.Any.fromFunction2(value))
     
-    @scala.inline
-    def setSNICallbackUndefined: Self = StObject.set(x, "SNICallback", js.undefined)
+    inline def setSNICallbackUndefined: Self = StObject.set(x, "SNICallback", js.undefined)
     
-    @scala.inline
-    def setSecureContext(value: SecureContext): Self = StObject.set(x, "secureContext", value.asInstanceOf[js.Any])
+    inline def setSecureContext(value: SecureContext): Self = StObject.set(x, "secureContext", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSecureContextUndefined: Self = StObject.set(x, "secureContext", js.undefined)
+    inline def setSecureContextUndefined: Self = StObject.set(x, "secureContext", js.undefined)
   }
 }

@@ -6,7 +6,6 @@ import tmttyped.std.stdStrings.error
 import tmttyped.std.stdStrings.versionchange
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This IndexedDB API interface provides a connection to a database; you can use an IDBDatabase object to open a transaction on your database then create, manipulate, and delete objects (data) in that database. The interface provides the only way to get and manage versions of the database. */
@@ -199,11 +198,21 @@ trait IDBDatabase
   /** Returns a new transaction with the given mode ("readonly" or "readwrite") and scope which can be a single object store name or an array of names. */
   /* standard DOM.Iterable */
   def transaction(storeNames: java.lang.String): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(storeNames: java.lang.String, mode: Unit, options: IDBTransactionOptions): org.scalajs.dom.IDBTransaction = js.native
   def transaction(storeNames: java.lang.String, mode: IDBTransactionMode): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(storeNames: java.lang.String, mode: IDBTransactionMode, options: IDBTransactionOptions): org.scalajs.dom.IDBTransaction = js.native
   def transaction(storeNames: js.Array[java.lang.String]): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(storeNames: js.Array[java.lang.String], mode: Unit, options: IDBTransactionOptions): org.scalajs.dom.IDBTransaction = js.native
   def transaction(storeNames: js.Array[java.lang.String], mode: IDBTransactionMode): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(storeNames: js.Array[java.lang.String], mode: IDBTransactionMode, options: IDBTransactionOptions): org.scalajs.dom.IDBTransaction = js.native
   def transaction(storeNames: js.Iterable[java.lang.String]): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(storeNames: js.Iterable[java.lang.String], mode: Unit, options: IDBTransactionOptions): org.scalajs.dom.IDBTransaction = js.native
   def transaction(storeNames: js.Iterable[java.lang.String], mode: IDBTransactionMode): org.scalajs.dom.IDBTransaction = js.native
+  def transaction(
+    storeNames: js.Iterable[java.lang.String],
+    mode: IDBTransactionMode,
+    options: IDBTransactionOptions
+  ): org.scalajs.dom.IDBTransaction = js.native
   
   /** Returns the version of the database. */
   /* standard DOM */

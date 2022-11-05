@@ -2,14 +2,13 @@ package tmttyped.rsocketFlowable
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object flowableRequestOperatorMod {
   
   @JSImport("rsocket-flowable/FlowableRequestOperator", JSImport.Default)
   @js.native
-  class default[T] protected ()
+  open class default[T] protected ()
     extends StObject
        with FlowableRequestOperator[T] {
     def this(
@@ -47,8 +46,7 @@ object flowableRequestOperatorMod {
   }
   object FlowableRequestOperator {
     
-    @scala.inline
-    def apply[T](
+    inline def apply[T](
       onComplete: () => Unit,
       onError: js.Error => Unit,
       onNext: T => Unit,
@@ -58,20 +56,15 @@ object flowableRequestOperatorMod {
       __obj.asInstanceOf[FlowableRequestOperator[T]]
     }
     
-    @scala.inline
-    implicit class FlowableRequestOperatorMutableBuilder[Self <: FlowableRequestOperator[_], T] (val x: Self with FlowableRequestOperator[T]) extends AnyVal {
+    extension [Self <: FlowableRequestOperator[?], T](x: Self & FlowableRequestOperator[T]) {
       
-      @scala.inline
-      def setOnComplete(value: () => Unit): Self = StObject.set(x, "onComplete", js.Any.fromFunction0(value))
+      inline def setOnComplete(value: () => Unit): Self = StObject.set(x, "onComplete", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setOnError(value: js.Error => Unit): Self = StObject.set(x, "onError", js.Any.fromFunction1(value))
+      inline def setOnError(value: js.Error => Unit): Self = StObject.set(x, "onError", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnNext(value: T => Unit): Self = StObject.set(x, "onNext", js.Any.fromFunction1(value))
+      inline def setOnNext(value: T => Unit): Self = StObject.set(x, "onNext", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnSubscribe(
+      inline def setOnSubscribe(
         value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ISubscription */ Any => Unit
       ): Self = StObject.set(x, "onSubscribe", js.Any.fromFunction1(value))
     }

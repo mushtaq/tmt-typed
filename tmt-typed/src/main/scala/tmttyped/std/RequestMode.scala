@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -14,15 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RequestMode extends StObject
 object RequestMode {
   
-  @scala.inline
-  def cors: tmttyped.std.stdStrings.cors = "cors".asInstanceOf[tmttyped.std.stdStrings.cors]
+  inline def cors: tmttyped.std.stdStrings.cors = "cors".asInstanceOf[tmttyped.std.stdStrings.cors]
   
-  @scala.inline
-  def navigate: tmttyped.std.stdStrings.navigate = "navigate".asInstanceOf[tmttyped.std.stdStrings.navigate]
+  inline def navigate: tmttyped.std.stdStrings.navigate = "navigate".asInstanceOf[tmttyped.std.stdStrings.navigate]
   
-  @scala.inline
-  def `no-cors`: tmttyped.std.stdStrings.`no-cors` = "no-cors".asInstanceOf[tmttyped.std.stdStrings.`no-cors`]
+  inline def `no-cors`: tmttyped.std.stdStrings.`no-cors` = "no-cors".asInstanceOf[tmttyped.std.stdStrings.`no-cors`]
   
-  @scala.inline
-  def `same-origin`: tmttyped.std.stdStrings.`same-origin` = "same-origin".asInstanceOf[tmttyped.std.stdStrings.`same-origin`]
+  inline def `same-origin`: tmttyped.std.stdStrings.`same-origin` = "same-origin".asInstanceOf[tmttyped.std.stdStrings.`same-origin`]
 }

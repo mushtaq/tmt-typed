@@ -4,7 +4,6 @@ import tmttyped.node.eventsMod.Abortable
 import tmttyped.node.processMod.global.NodeJS.Signals
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MessagingOptions
@@ -30,31 +29,23 @@ trait MessagingOptions
 }
 object MessagingOptions {
   
-  @scala.inline
-  def apply(): MessagingOptions = {
+  inline def apply(): MessagingOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[MessagingOptions]
   }
   
-  @scala.inline
-  implicit class MessagingOptionsMutableBuilder[Self <: MessagingOptions] (val x: Self) extends AnyVal {
+  extension [Self <: MessagingOptions](x: Self) {
     
-    @scala.inline
-    def setKillSignal(value: Signals | Double): Self = StObject.set(x, "killSignal", value.asInstanceOf[js.Any])
+    inline def setKillSignal(value: Signals | Double): Self = StObject.set(x, "killSignal", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKillSignalUndefined: Self = StObject.set(x, "killSignal", js.undefined)
+    inline def setKillSignalUndefined: Self = StObject.set(x, "killSignal", js.undefined)
     
-    @scala.inline
-    def setSerialization(value: SerializationType): Self = StObject.set(x, "serialization", value.asInstanceOf[js.Any])
+    inline def setSerialization(value: SerializationType): Self = StObject.set(x, "serialization", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSerializationUndefined: Self = StObject.set(x, "serialization", js.undefined)
+    inline def setSerializationUndefined: Self = StObject.set(x, "serialization", js.undefined)
     
-    @scala.inline
-    def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+    inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+    inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
   }
 }

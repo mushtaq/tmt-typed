@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RTCPeerConnectionIceErrorEventInit
@@ -26,46 +25,33 @@ trait RTCPeerConnectionIceErrorEventInit
 }
 object RTCPeerConnectionIceErrorEventInit {
   
-  @scala.inline
-  def apply(errorCode: Double): RTCPeerConnectionIceErrorEventInit = {
+  inline def apply(errorCode: Double): RTCPeerConnectionIceErrorEventInit = {
     val __obj = js.Dynamic.literal(errorCode = errorCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCPeerConnectionIceErrorEventInit]
   }
   
-  @scala.inline
-  implicit class RTCPeerConnectionIceErrorEventInitMutableBuilder[Self <: RTCPeerConnectionIceErrorEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: RTCPeerConnectionIceErrorEventInit](x: Self) {
     
-    @scala.inline
-    def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+    inline def setAddress(value: java.lang.String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAddressNull: Self = StObject.set(x, "address", null)
+    inline def setAddressNull: Self = StObject.set(x, "address", null)
     
-    @scala.inline
-    def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
+    inline def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
     
-    @scala.inline
-    def setErrorCode(value: Double): Self = StObject.set(x, "errorCode", value.asInstanceOf[js.Any])
+    inline def setErrorCode(value: Double): Self = StObject.set(x, "errorCode", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setErrorText(value: java.lang.String): Self = StObject.set(x, "errorText", value.asInstanceOf[js.Any])
+    inline def setErrorText(value: java.lang.String): Self = StObject.set(x, "errorText", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setErrorTextUndefined: Self = StObject.set(x, "errorText", js.undefined)
+    inline def setErrorTextUndefined: Self = StObject.set(x, "errorText", js.undefined)
     
-    @scala.inline
-    def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+    inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPortNull: Self = StObject.set(x, "port", null)
+    inline def setPortNull: Self = StObject.set(x, "port", null)
     
-    @scala.inline
-    def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
+    inline def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
     
-    @scala.inline
-    def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
+    inline def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUrlUndefined: Self = StObject.set(x, "url", js.undefined)
+    inline def setUrlUndefined: Self = StObject.set(x, "url", js.undefined)
   }
 }

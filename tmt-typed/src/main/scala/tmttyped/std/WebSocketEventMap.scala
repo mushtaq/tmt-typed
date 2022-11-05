@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WebSocketEventMap extends StObject {
@@ -21,8 +20,7 @@ trait WebSocketEventMap extends StObject {
 }
 object WebSocketEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     close: org.scalajs.dom.CloseEvent,
     error: org.scalajs.dom.Event,
     message: org.scalajs.dom.MessageEvent,
@@ -32,19 +30,14 @@ object WebSocketEventMap {
     __obj.asInstanceOf[WebSocketEventMap]
   }
   
-  @scala.inline
-  implicit class WebSocketEventMapMutableBuilder[Self <: WebSocketEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: WebSocketEventMap](x: Self) {
     
-    @scala.inline
-    def setClose(value: org.scalajs.dom.CloseEvent): Self = StObject.set(x, "close", value.asInstanceOf[js.Any])
+    inline def setClose(value: org.scalajs.dom.CloseEvent): Self = StObject.set(x, "close", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    inline def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    inline def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOpen(value: org.scalajs.dom.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
+    inline def setOpen(value: org.scalajs.dom.Event): Self = StObject.set(x, "open", value.asInstanceOf[js.Any])
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A <style> element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle. */
@@ -23,6 +22,10 @@ trait HTMLStyleElement
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  /** Enables or disables the style sheet. */
+  /* standard DOM */
+  var disabled: scala.Boolean = js.native
   
   /** Sets or retrieves the media type. */
   /* standard DOM */

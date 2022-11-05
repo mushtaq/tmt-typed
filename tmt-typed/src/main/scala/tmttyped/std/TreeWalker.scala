@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The nodes of a document subtree and a position within them. */
@@ -43,8 +42,7 @@ trait TreeWalker extends StObject {
 }
 object TreeWalker {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     currentNode: org.scalajs.dom.Node,
     firstChild: () => org.scalajs.dom.Node | Null,
     lastChild: () => org.scalajs.dom.Node | Null,
@@ -60,43 +58,30 @@ object TreeWalker {
     __obj.asInstanceOf[TreeWalker]
   }
   
-  @scala.inline
-  implicit class TreeWalkerMutableBuilder[Self <: TreeWalker] (val x: Self) extends AnyVal {
+  extension [Self <: TreeWalker](x: Self) {
     
-    @scala.inline
-    def setCurrentNode(value: org.scalajs.dom.Node): Self = StObject.set(x, "currentNode", value.asInstanceOf[js.Any])
+    inline def setCurrentNode(value: org.scalajs.dom.Node): Self = StObject.set(x, "currentNode", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFilter(value: org.scalajs.dom.NodeFilter): Self = StObject.set(x, "filter", value.asInstanceOf[js.Any])
+    inline def setFilter(value: org.scalajs.dom.NodeFilter): Self = StObject.set(x, "filter", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFilterNull: Self = StObject.set(x, "filter", null)
+    inline def setFilterNull: Self = StObject.set(x, "filter", null)
     
-    @scala.inline
-    def setFirstChild(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "firstChild", js.Any.fromFunction0(value))
+    inline def setFirstChild(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "firstChild", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setLastChild(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "lastChild", js.Any.fromFunction0(value))
+    inline def setLastChild(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "lastChild", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setNextNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "nextNode", js.Any.fromFunction0(value))
+    inline def setNextNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "nextNode", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setNextSibling(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "nextSibling", js.Any.fromFunction0(value))
+    inline def setNextSibling(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "nextSibling", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setParentNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "parentNode", js.Any.fromFunction0(value))
+    inline def setParentNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "parentNode", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setPreviousNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "previousNode", js.Any.fromFunction0(value))
+    inline def setPreviousNode(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "previousNode", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setPreviousSibling(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "previousSibling", js.Any.fromFunction0(value))
+    inline def setPreviousSibling(value: () => org.scalajs.dom.Node | Null): Self = StObject.set(x, "previousSibling", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setRoot(value: org.scalajs.dom.Node): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
+    inline def setRoot(value: org.scalajs.dom.Node): Self = StObject.set(x, "root", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWhatToShow(value: Double): Self = StObject.set(x, "whatToShow", value.asInstanceOf[js.Any])
+    inline def setWhatToShow(value: Double): Self = StObject.set(x, "whatToShow", value.asInstanceOf[js.Any])
   }
 }

@@ -7,7 +7,6 @@ import tmttyped.node.netMod.SocketAddressInitOptions
 import tmttyped.node.netMod.SocketConstructorOpts
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeNetMod {
@@ -24,7 +23,7 @@ object nodeNetMod {
     */
   @JSImport("node:net", "BlockList")
   @js.native
-  class BlockList ()
+  open class BlockList ()
     extends tmttyped.node.netMod.BlockList
   
   /**
@@ -33,7 +32,7 @@ object nodeNetMod {
     */
   @JSImport("node:net", "Server")
   @js.native
-  class Server ()
+  open class Server ()
     extends StObject
        with SendHandle {
     def this(connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]) = this()
@@ -61,7 +60,7 @@ object nodeNetMod {
     */
   @JSImport("node:net", "Socket")
   @js.native
-  class Socket ()
+  open class Socket ()
     extends StObject
        with SendHandle {
     def this(options: SocketConstructorOpts) = this()
@@ -72,7 +71,7 @@ object nodeNetMod {
     */
   @JSImport("node:net", "SocketAddress")
   @js.native
-  class SocketAddress protected ()
+  open class SocketAddress protected ()
     extends tmttyped.node.netMod.SocketAddress {
     def this(options: SocketAddressInitOptions) = this()
   }
@@ -86,22 +85,14 @@ object nodeNetMod {
     * * {@link connect} for `IPC` connections.
     * * {@link connect} for TCP connections.
     */
-  @scala.inline
-  def connect(options: NetConnectOpts): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(options: NetConnectOpts, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(path: String): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(path: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(port: Double): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(port: Double, host: String): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(port: Double, host: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def connect(port: Double, host: Unit, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(options: NetConnectOpts): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(options: NetConnectOpts, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(path: String): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(path: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(port: Double): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(port: Double, host: String): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(port: Double, host: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def connect(port: Double, host: Unit, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
   
   /**
     * A factory function, which creates a new {@link Socket},
@@ -120,22 +111,14 @@ object nodeNetMod {
     *
     * The {@link connect} function is an alias to this function.
     */
-  @scala.inline
-  def createConnection(options: NetConnectOpts): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(options: NetConnectOpts, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(path: String): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(path: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(port: Double): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(port: Double, host: String): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(port: Double, host: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
-  @scala.inline
-  def createConnection(port: Double, host: Unit, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(options: NetConnectOpts): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(options: NetConnectOpts, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(path: String): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(path: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(path.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(port: Double): tmttyped.node.netMod.Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(port: Double, host: String): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(port: Double, host: String, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
+  inline def createConnection(port: Double, host: Unit, connectionListener: js.Function0[Unit]): tmttyped.node.netMod.Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createConnection")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Socket]
   
   /**
     * Creates a new TCP or `IPC` server.
@@ -154,7 +137,7 @@ object nodeNetMod {
     *
     * The server can be a TCP server or an `IPC` server, depending on what it `listen()` to.
     *
-    * Here is an example of an TCP echo server which listens for connections
+    * Here is an example of a TCP echo server which listens for connections
     * on port 8124:
     *
     * ```js
@@ -198,40 +181,52 @@ object nodeNetMod {
     * @since v0.5.0
     * @param connectionListener Automatically set as a listener for the {@link 'connection'} event.
     */
-  @scala.inline
-  def createServer(): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.netMod.Server]
-  @scala.inline
-  def createServer(connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(connectionListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Server]
-  @scala.inline
-  def createServer(options: Unit, connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]): tmttyped.node.netMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Server]
-  @scala.inline
-  def createServer(options: ServerOpts): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Server]
-  @scala.inline
-  def createServer(
+  inline def createServer(): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.netMod.Server]
+  inline def createServer(connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(connectionListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Server]
+  inline def createServer(options: Unit, connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]): tmttyped.node.netMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Server]
+  inline def createServer(options: ServerOpts): tmttyped.node.netMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.netMod.Server]
+  inline def createServer(
     options: ServerOpts,
     connectionListener: js.Function1[/* socket */ tmttyped.node.netMod.Socket, Unit]
   ): tmttyped.node.netMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], connectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.netMod.Server]
   
   /**
-    * Tests if input is an IP address. Returns `0` for invalid strings,
-    * returns `4` for IP version 4 addresses, and returns `6` for IP version 6
-    * addresses.
+    * Returns `6` if `input` is an IPv6 address. Returns `4` if `input` is an IPv4
+    * address in [dot-decimal notation](https://en.wikipedia.org/wiki/Dot-decimal_notation) with no leading zeroes. Otherwise, returns`0`.
+    *
+    * ```js
+    * net.isIP('::1'); // returns 6
+    * net.isIP('127.0.0.1'); // returns 4
+    * net.isIP('127.000.000.001'); // returns 0
+    * net.isIP('127.0.0.1/24'); // returns 0
+    * net.isIP('fhqwhgads'); // returns 0
+    * ```
     * @since v0.3.0
     */
-  @scala.inline
-  def isIP(input: String): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("isIP")(input.asInstanceOf[js.Any]).asInstanceOf[Double]
+  inline def isIP(input: String): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("isIP")(input.asInstanceOf[js.Any]).asInstanceOf[Double]
   
   /**
-    * Returns `true` if input is a version 4 IP address, otherwise returns `false`.
+    * Returns `true` if `input` is an IPv4 address in [dot-decimal notation](https://en.wikipedia.org/wiki/Dot-decimal_notation) with no
+    * leading zeroes. Otherwise, returns `false`.
+    *
+    * ```js
+    * net.isIPv4('127.0.0.1'); // returns true
+    * net.isIPv4('127.000.000.001'); // returns false
+    * net.isIPv4('127.0.0.1/24'); // returns false
+    * net.isIPv4('fhqwhgads'); // returns false
+    * ```
     * @since v0.3.0
     */
-  @scala.inline
-  def isIPv4(input: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv4")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isIPv4(input: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv4")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /**
-    * Returns `true` if input is a version 6 IP address, otherwise returns `false`.
+    * Returns `true` if `input` is an IPv6 address. Otherwise, returns `false`.
+    *
+    * ```js
+    * net.isIPv6('::1'); // returns true
+    * net.isIPv6('fhqwhgads'); // returns false
+    * ```
     * @since v0.3.0
     */
-  @scala.inline
-  def isIPv6(input: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv6")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isIPv6(input: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isIPv6")(input.asInstanceOf[js.Any]).asInstanceOf[Boolean]
 }

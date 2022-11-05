@@ -2,9 +2,9 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** Available only in secure contexts. */
 trait ClipboardItem extends StObject {
   
   /* standard DOM */
@@ -15,22 +15,17 @@ trait ClipboardItem extends StObject {
 }
 object ClipboardItem {
   
-  @scala.inline
-  def apply(getType: java.lang.String => js.Promise[org.scalajs.dom.Blob], types: js.Array[java.lang.String]): ClipboardItem = {
+  inline def apply(getType: java.lang.String => js.Promise[org.scalajs.dom.Blob], types: js.Array[java.lang.String]): ClipboardItem = {
     val __obj = js.Dynamic.literal(getType = js.Any.fromFunction1(getType), types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClipboardItem]
   }
   
-  @scala.inline
-  implicit class ClipboardItemMutableBuilder[Self <: ClipboardItem] (val x: Self) extends AnyVal {
+  extension [Self <: ClipboardItem](x: Self) {
     
-    @scala.inline
-    def setGetType(value: java.lang.String => js.Promise[org.scalajs.dom.Blob]): Self = StObject.set(x, "getType", js.Any.fromFunction1(value))
+    inline def setGetType(value: java.lang.String => js.Promise[org.scalajs.dom.Blob]): Self = StObject.set(x, "getType", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setTypes(value: js.Array[java.lang.String]): Self = StObject.set(x, "types", value.asInstanceOf[js.Any])
+    inline def setTypes(value: js.Array[java.lang.String]): Self = StObject.set(x, "types", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTypesVarargs(value: java.lang.String*): Self = StObject.set(x, "types", js.Array(value :_*))
+    inline def setTypesVarargs(value: java.lang.String*): Self = StObject.set(x, "types", js.Array(value*))
   }
 }

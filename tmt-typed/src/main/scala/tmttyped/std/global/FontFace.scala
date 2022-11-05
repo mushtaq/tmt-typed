@@ -5,13 +5,12 @@ import tmttyped.std.FontFaceDescriptors
 import tmttyped.std.FontFaceLoadStatus
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("FontFace")
 @js.native
-class FontFace protected ()
+open class FontFace protected ()
   extends StObject
      with tmttyped.std.FontFace {
   /* standard DOM */
@@ -22,27 +21,27 @@ class FontFace protected ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var ascentOverride: java.lang.String = js.native
+  var ascentOverride: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var descentOverride: java.lang.String = js.native
+  var descentOverride: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var display: java.lang.String = js.native
+  var display: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var family: java.lang.String = js.native
+  var family: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var featureSettings: java.lang.String = js.native
+  var featureSettings: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var lineGapOverride: java.lang.String = js.native
+  var lineGapOverride: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
@@ -58,25 +57,25 @@ class FontFace protected ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var stretch: java.lang.String = js.native
+  var stretch: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var style: java.lang.String = js.native
+  var style: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var unicodeRange: java.lang.String = js.native
+  var unicodeRange: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var variant: java.lang.String = js.native
+  var variant: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var variationSettings: java.lang.String = js.native
+  var variationSettings: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var weight: java.lang.String = js.native
+  var weight: java.lang.String = js.native
 }

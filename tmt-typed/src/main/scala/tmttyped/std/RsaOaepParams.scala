@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RsaOaepParams
@@ -14,19 +13,15 @@ trait RsaOaepParams
 }
 object RsaOaepParams {
   
-  @scala.inline
-  def apply(name: java.lang.String): RsaOaepParams = {
+  inline def apply(name: java.lang.String): RsaOaepParams = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RsaOaepParams]
   }
   
-  @scala.inline
-  implicit class RsaOaepParamsMutableBuilder[Self <: RsaOaepParams] (val x: Self) extends AnyVal {
+  extension [Self <: RsaOaepParams](x: Self) {
     
-    @scala.inline
-    def setLabel(value: BufferSource): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
+    inline def setLabel(value: BufferSource): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
+    inline def setLabelUndefined: Self = StObject.set(x, "label", js.undefined)
   }
 }

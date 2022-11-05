@@ -4,7 +4,6 @@ import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.processMod.global.NodeJS.ProcessEnv
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ProcessEnvOptions extends StObject {
@@ -19,37 +18,27 @@ trait ProcessEnvOptions extends StObject {
 }
 object ProcessEnvOptions {
   
-  @scala.inline
-  def apply(): ProcessEnvOptions = {
+  inline def apply(): ProcessEnvOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ProcessEnvOptions]
   }
   
-  @scala.inline
-  implicit class ProcessEnvOptionsMutableBuilder[Self <: ProcessEnvOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ProcessEnvOptions](x: Self) {
     
-    @scala.inline
-    def setCwd(value: String | URL): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
+    inline def setCwd(value: String | URL): Self = StObject.set(x, "cwd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCwdUndefined: Self = StObject.set(x, "cwd", js.undefined)
+    inline def setCwdUndefined: Self = StObject.set(x, "cwd", js.undefined)
     
-    @scala.inline
-    def setEnv(value: ProcessEnv): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
+    inline def setEnv(value: ProcessEnv): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
+    inline def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
     
-    @scala.inline
-    def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
+    inline def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setGidUndefined: Self = StObject.set(x, "gid", js.undefined)
+    inline def setGidUndefined: Self = StObject.set(x, "gid", js.undefined)
     
-    @scala.inline
-    def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
+    inline def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUidUndefined: Self = StObject.set(x, "uid", js.undefined)
+    inline def setUidUndefined: Self = StObject.set(x, "uid", js.undefined)
   }
 }

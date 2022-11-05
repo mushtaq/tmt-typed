@@ -4,7 +4,6 @@ import tmttyped.node.anon.Format
 import tmttyped.node.anon.`1`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ECKeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] extends StObject {
@@ -14,32 +13,27 @@ trait ECKeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] extend
     */
   var namedCurve: String
   
-  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1`
+  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] & `1`
   
   var publicKeyEncoding: Format[PubF]
 }
 object ECKeyPairOptions {
   
-  @scala.inline
-  def apply[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */](
+  inline def apply[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */](
     namedCurve: String,
-    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1`,
+    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] & `1`,
     publicKeyEncoding: Format[PubF]
   ): ECKeyPairOptions[PubF, PrivF] = {
     val __obj = js.Dynamic.literal(namedCurve = namedCurve.asInstanceOf[js.Any], privateKeyEncoding = privateKeyEncoding.asInstanceOf[js.Any], publicKeyEncoding = publicKeyEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ECKeyPairOptions[PubF, PrivF]]
   }
   
-  @scala.inline
-  implicit class ECKeyPairOptionsMutableBuilder[Self <: ECKeyPairOptions[_, _], PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] (val x: Self with (ECKeyPairOptions[PubF, PrivF])) extends AnyVal {
+  extension [Self <: ECKeyPairOptions[?, ?], PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */](x: Self & (ECKeyPairOptions[PubF, PrivF])) {
     
-    @scala.inline
-    def setNamedCurve(value: String): Self = StObject.set(x, "namedCurve", value.asInstanceOf[js.Any])
+    inline def setNamedCurve(value: String): Self = StObject.set(x, "namedCurve", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with `1`): Self = StObject.set(x, "privateKeyEncoding", value.asInstanceOf[js.Any])
+    inline def setPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] & `1`): Self = StObject.set(x, "privateKeyEncoding", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPublicKeyEncoding(value: Format[PubF]): Self = StObject.set(x, "publicKeyEncoding", value.asInstanceOf[js.Any])
+    inline def setPublicKeyEncoding(value: Format[PubF]): Self = StObject.set(x, "publicKeyEncoding", value.asInstanceOf[js.Any])
   }
 }

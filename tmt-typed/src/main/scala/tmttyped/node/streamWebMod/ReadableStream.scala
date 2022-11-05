@@ -1,8 +1,9 @@
 package tmttyped.node.streamWebMod
 
+import tmttyped.node.anon.PreventCancel
+import tmttyped.std.AsyncIterableIterator
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Streams API interface represents a readable stream of byte data. */
@@ -23,4 +24,7 @@ trait ReadableStream[R] extends StObject {
   def pipeTo(destination: WritableStream[R], options: StreamPipeOptions): js.Promise[Unit] = js.native
   
   def tee(): js.Tuple2[ReadableStream[R], ReadableStream[R]] = js.native
+  
+  def values(): AsyncIterableIterator[R] = js.native
+  def values(options: PreventCancel): AsyncIterableIterator[R] = js.native
 }

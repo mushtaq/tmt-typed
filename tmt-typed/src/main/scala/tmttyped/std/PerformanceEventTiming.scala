@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PerformanceEventTiming
@@ -23,8 +22,7 @@ trait PerformanceEventTiming
 }
 object PerformanceEventTiming {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     cancelable: scala.Boolean,
     duration: DOMHighResTimeStamp,
     entryType: java.lang.String,
@@ -38,22 +36,16 @@ object PerformanceEventTiming {
     __obj.asInstanceOf[PerformanceEventTiming]
   }
   
-  @scala.inline
-  implicit class PerformanceEventTimingMutableBuilder[Self <: PerformanceEventTiming] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceEventTiming](x: Self) {
     
-    @scala.inline
-    def setCancelable(value: scala.Boolean): Self = StObject.set(x, "cancelable", value.asInstanceOf[js.Any])
+    inline def setCancelable(value: scala.Boolean): Self = StObject.set(x, "cancelable", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProcessingEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "processingEnd", value.asInstanceOf[js.Any])
+    inline def setProcessingEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "processingEnd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProcessingStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "processingStart", value.asInstanceOf[js.Any])
+    inline def setProcessingStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "processingStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTarget(value: org.scalajs.dom.Node): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
+    inline def setTarget(value: org.scalajs.dom.Node): Self = StObject.set(x, "target", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTargetNull: Self = StObject.set(x, "target", null)
+    inline def setTargetNull: Self = StObject.set(x, "target", null)
   }
 }

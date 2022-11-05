@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GainOptions
@@ -14,19 +13,15 @@ trait GainOptions
 }
 object GainOptions {
   
-  @scala.inline
-  def apply(): GainOptions = {
+  inline def apply(): GainOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[GainOptions]
   }
   
-  @scala.inline
-  implicit class GainOptionsMutableBuilder[Self <: GainOptions] (val x: Self) extends AnyVal {
+  extension [Self <: GainOptions](x: Self) {
     
-    @scala.inline
-    def setGain(value: Double): Self = StObject.set(x, "gain", value.asInstanceOf[js.Any])
+    inline def setGain(value: Double): Self = StObject.set(x, "gain", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setGainUndefined: Self = StObject.set(x, "gain", js.undefined)
+    inline def setGainUndefined: Self = StObject.set(x, "gain", js.undefined)
   }
 }

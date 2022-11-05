@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait DocumentOrShadowRoot extends StObject {
@@ -16,6 +15,9 @@ trait DocumentOrShadowRoot extends StObject {
     */
   /* standard DOM */
   val activeElement: org.scalajs.dom.Element | Null
+  
+  /* standard DOM */
+  var adoptedStyleSheets: js.Array[org.scalajs.dom.CSSStyleSheet]
   
   /**
     * Returns the element for the specified x coordinate and the specified y coordinate.
@@ -47,54 +49,45 @@ trait DocumentOrShadowRoot extends StObject {
 }
 object DocumentOrShadowRoot {
   
-  @scala.inline
-  def apply(
+  inline def apply(
+    adoptedStyleSheets: js.Array[org.scalajs.dom.CSSStyleSheet],
     elementFromPoint: (Double, Double) => org.scalajs.dom.Element | Null,
     elementsFromPoint: (Double, Double) => js.Array[org.scalajs.dom.Element],
     getAnimations: () => js.Array[Animation],
     styleSheets: org.scalajs.dom.StyleSheetList
   ): DocumentOrShadowRoot = {
-    val __obj = js.Dynamic.literal(elementFromPoint = js.Any.fromFunction2(elementFromPoint), elementsFromPoint = js.Any.fromFunction2(elementsFromPoint), getAnimations = js.Any.fromFunction0(getAnimations), styleSheets = styleSheets.asInstanceOf[js.Any], activeElement = null, fullscreenElement = null, pictureInPictureElement = null, pointerLockElement = null)
+    val __obj = js.Dynamic.literal(adoptedStyleSheets = adoptedStyleSheets.asInstanceOf[js.Any], elementFromPoint = js.Any.fromFunction2(elementFromPoint), elementsFromPoint = js.Any.fromFunction2(elementsFromPoint), getAnimations = js.Any.fromFunction0(getAnimations), styleSheets = styleSheets.asInstanceOf[js.Any], activeElement = null, fullscreenElement = null, pictureInPictureElement = null, pointerLockElement = null)
     __obj.asInstanceOf[DocumentOrShadowRoot]
   }
   
-  @scala.inline
-  implicit class DocumentOrShadowRootMutableBuilder[Self <: DocumentOrShadowRoot] (val x: Self) extends AnyVal {
+  extension [Self <: DocumentOrShadowRoot](x: Self) {
     
-    @scala.inline
-    def setActiveElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "activeElement", value.asInstanceOf[js.Any])
+    inline def setActiveElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "activeElement", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setActiveElementNull: Self = StObject.set(x, "activeElement", null)
+    inline def setActiveElementNull: Self = StObject.set(x, "activeElement", null)
     
-    @scala.inline
-    def setElementFromPoint(value: (Double, Double) => org.scalajs.dom.Element | Null): Self = StObject.set(x, "elementFromPoint", js.Any.fromFunction2(value))
+    inline def setAdoptedStyleSheets(value: js.Array[org.scalajs.dom.CSSStyleSheet]): Self = StObject.set(x, "adoptedStyleSheets", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setElementsFromPoint(value: (Double, Double) => js.Array[org.scalajs.dom.Element]): Self = StObject.set(x, "elementsFromPoint", js.Any.fromFunction2(value))
+    inline def setAdoptedStyleSheetsVarargs(value: org.scalajs.dom.CSSStyleSheet*): Self = StObject.set(x, "adoptedStyleSheets", js.Array(value*))
     
-    @scala.inline
-    def setFullscreenElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "fullscreenElement", value.asInstanceOf[js.Any])
+    inline def setElementFromPoint(value: (Double, Double) => org.scalajs.dom.Element | Null): Self = StObject.set(x, "elementFromPoint", js.Any.fromFunction2(value))
     
-    @scala.inline
-    def setFullscreenElementNull: Self = StObject.set(x, "fullscreenElement", null)
+    inline def setElementsFromPoint(value: (Double, Double) => js.Array[org.scalajs.dom.Element]): Self = StObject.set(x, "elementsFromPoint", js.Any.fromFunction2(value))
     
-    @scala.inline
-    def setGetAnimations(value: () => js.Array[Animation]): Self = StObject.set(x, "getAnimations", js.Any.fromFunction0(value))
+    inline def setFullscreenElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "fullscreenElement", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPictureInPictureElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pictureInPictureElement", value.asInstanceOf[js.Any])
+    inline def setFullscreenElementNull: Self = StObject.set(x, "fullscreenElement", null)
     
-    @scala.inline
-    def setPictureInPictureElementNull: Self = StObject.set(x, "pictureInPictureElement", null)
+    inline def setGetAnimations(value: () => js.Array[Animation]): Self = StObject.set(x, "getAnimations", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setPointerLockElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pointerLockElement", value.asInstanceOf[js.Any])
+    inline def setPictureInPictureElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pictureInPictureElement", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPointerLockElementNull: Self = StObject.set(x, "pointerLockElement", null)
+    inline def setPictureInPictureElementNull: Self = StObject.set(x, "pictureInPictureElement", null)
     
-    @scala.inline
-    def setStyleSheets(value: org.scalajs.dom.StyleSheetList): Self = StObject.set(x, "styleSheets", value.asInstanceOf[js.Any])
+    inline def setPointerLockElement(value: org.scalajs.dom.Element): Self = StObject.set(x, "pointerLockElement", value.asInstanceOf[js.Any])
+    
+    inline def setPointerLockElementNull: Self = StObject.set(x, "pointerLockElement", null)
+    
+    inline def setStyleSheets(value: org.scalajs.dom.StyleSheetList): Self = StObject.set(x, "styleSheets", value.asInstanceOf[js.Any])
   }
 }

@@ -3,13 +3,12 @@ package tmttyped.node.anon
 import tmttyped.node.nodeBooleans.`true`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined node.fs.WatchFileOptions & {  bigint :true} */
 trait WatchFileOptionsbiginttru extends StObject {
   
-  var bigint: js.UndefOr[Boolean] with `true`
+  var bigint: js.UndefOr[Boolean] & `true`
   
   var interval: js.UndefOr[Double] = js.undefined
   
@@ -17,28 +16,21 @@ trait WatchFileOptionsbiginttru extends StObject {
 }
 object WatchFileOptionsbiginttru {
   
-  @scala.inline
-  def apply(bigint: js.UndefOr[Boolean] with `true`): WatchFileOptionsbiginttru = {
+  inline def apply(bigint: js.UndefOr[Boolean] & `true`): WatchFileOptionsbiginttru = {
     val __obj = js.Dynamic.literal(bigint = bigint.asInstanceOf[js.Any])
     __obj.asInstanceOf[WatchFileOptionsbiginttru]
   }
   
-  @scala.inline
-  implicit class WatchFileOptionsbiginttruMutableBuilder[Self <: WatchFileOptionsbiginttru] (val x: Self) extends AnyVal {
+  extension [Self <: WatchFileOptionsbiginttru](x: Self) {
     
-    @scala.inline
-    def setBigint(value: js.UndefOr[Boolean] with `true`): Self = StObject.set(x, "bigint", value.asInstanceOf[js.Any])
+    inline def setBigint(value: js.UndefOr[Boolean] & `true`): Self = StObject.set(x, "bigint", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setInterval(value: Double): Self = StObject.set(x, "interval", value.asInstanceOf[js.Any])
+    inline def setInterval(value: Double): Self = StObject.set(x, "interval", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setIntervalUndefined: Self = StObject.set(x, "interval", js.undefined)
+    inline def setIntervalUndefined: Self = StObject.set(x, "interval", js.undefined)
     
-    @scala.inline
-    def setPersistent(value: Boolean): Self = StObject.set(x, "persistent", value.asInstanceOf[js.Any])
+    inline def setPersistent(value: Boolean): Self = StObject.set(x, "persistent", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPersistentUndefined: Self = StObject.set(x, "persistent", js.undefined)
+    inline def setPersistentUndefined: Self = StObject.set(x, "persistent", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait FilePropertyBag
@@ -14,19 +13,15 @@ trait FilePropertyBag
 }
 object FilePropertyBag {
   
-  @scala.inline
-  def apply(): FilePropertyBag = {
+  inline def apply(): FilePropertyBag = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[FilePropertyBag]
   }
   
-  @scala.inline
-  implicit class FilePropertyBagMutableBuilder[Self <: FilePropertyBag] (val x: Self) extends AnyVal {
+  extension [Self <: FilePropertyBag](x: Self) {
     
-    @scala.inline
-    def setLastModified(value: Double): Self = StObject.set(x, "lastModified", value.asInstanceOf[js.Any])
+    inline def setLastModified(value: Double): Self = StObject.set(x, "lastModified", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLastModifiedUndefined: Self = StObject.set(x, "lastModified", js.undefined)
+    inline def setLastModifiedUndefined: Self = StObject.set(x, "lastModified", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.node.anon
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PreventCancel extends StObject {
@@ -11,19 +10,15 @@ trait PreventCancel extends StObject {
 }
 object PreventCancel {
   
-  @scala.inline
-  def apply(): PreventCancel = {
+  inline def apply(): PreventCancel = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PreventCancel]
   }
   
-  @scala.inline
-  implicit class PreventCancelMutableBuilder[Self <: PreventCancel] (val x: Self) extends AnyVal {
+  extension [Self <: PreventCancel](x: Self) {
     
-    @scala.inline
-    def setPreventCancel(value: Boolean): Self = StObject.set(x, "preventCancel", value.asInstanceOf[js.Any])
+    inline def setPreventCancel(value: Boolean): Self = StObject.set(x, "preventCancel", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPreventCancelUndefined: Self = StObject.set(x, "preventCancel", js.undefined)
+    inline def setPreventCancelUndefined: Self = StObject.set(x, "preventCancel", js.undefined)
   }
 }

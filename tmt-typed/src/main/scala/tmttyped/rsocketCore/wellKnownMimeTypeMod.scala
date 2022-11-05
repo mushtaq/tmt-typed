@@ -3,14 +3,13 @@ package tmttyped.rsocketCore
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object wellKnownMimeTypeMod {
   
   @JSImport("rsocket-core/WellKnownMimeType", JSImport.Default)
   @js.native
-  class default protected ()
+  open class default protected ()
     extends StObject
        with WellKnownMimeType {
     def this(str: String, identifier: Double) = this()
@@ -47,8 +46,7 @@ object wellKnownMimeTypeMod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_MIME_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @scala.inline
-    def fromIdentifier(id: Double): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
+    inline def fromIdentifier(id: Double): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
     
     /**
       * Find the {@link WellKnownMimeType} for the given {@link String} representation. If the
@@ -58,8 +56,7 @@ object wellKnownMimeTypeMod {
       * @param mimeType the looked up mime type
       * @return the matching {@link WellKnownMimeType}, or {@link #UNPARSEABLE_MIME_TYPE} if none matches
       */
-    @scala.inline
-    def fromString(mimeType: String): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(mimeType.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
+    inline def fromString(mimeType: String): WellKnownMimeType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(mimeType.asInstanceOf[js.Any]).asInstanceOf[WellKnownMimeType]
   }
   
   @JSImport("rsocket-core/WellKnownMimeType", "APPLICATION_AVRO")
@@ -279,20 +276,16 @@ object wellKnownMimeTypeMod {
   }
   object WellKnownMimeType {
     
-    @scala.inline
-    def apply(identifier: Double, string: String): WellKnownMimeType = {
+    inline def apply(identifier: Double, string: String): WellKnownMimeType = {
       val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
       __obj.asInstanceOf[WellKnownMimeType]
     }
     
-    @scala.inline
-    implicit class WellKnownMimeTypeMutableBuilder[Self <: WellKnownMimeType] (val x: Self) extends AnyVal {
+    extension [Self <: WellKnownMimeType](x: Self) {
       
-      @scala.inline
-      def setIdentifier(value: Double): Self = StObject.set(x, "identifier", value.asInstanceOf[js.Any])
+      inline def setIdentifier(value: Double): Self = StObject.set(x, "identifier", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setString(value: String): Self = StObject.set(x, "string", value.asInstanceOf[js.Any])
+      inline def setString(value: String): Self = StObject.set(x, "string", value.asInstanceOf[js.Any])
     }
   }
 }

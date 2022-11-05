@@ -3,7 +3,6 @@ package tmttyped.node.cryptoMod
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -74,7 +73,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Hmac")
 @js.native
-/* private */ class Hmac () extends StObject {
+/* private */ open class Hmac () extends StObject {
   
   /**
     * Calculates the HMAC digest of all of the data passed using `hmac.update()`.

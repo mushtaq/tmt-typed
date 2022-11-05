@@ -1,9 +1,7 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.NodeJS.ArrayBufferView
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -22,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Verify")
 @js.native
-/* private */ class Verify_ () extends StObject {
+/* private */ open class Verify_ () extends StObject {
   
   def update(data: String, inputEncoding: Encoding): Verify_ = js.native
   /**
@@ -58,11 +56,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
     * be passed instead of a public key.
     * @since v0.1.92
     */
-  def verify(`object`: KeyLike, signature: ArrayBufferView): Boolean = js.native
+  def verify(`object`: KeyLike, signature: js.typedarray.ArrayBufferView): Boolean = js.native
   def verify(`object`: VerifyKeyObjectInput, signature: String): Boolean = js.native
   def verify(`object`: VerifyKeyObjectInput, signature: String, signature_format: BinaryToTextEncoding): Boolean = js.native
-  def verify(`object`: VerifyKeyObjectInput, signature: ArrayBufferView): Boolean = js.native
+  def verify(`object`: VerifyKeyObjectInput, signature: js.typedarray.ArrayBufferView): Boolean = js.native
   def verify(`object`: VerifyPublicKeyInput, signature: String): Boolean = js.native
   def verify(`object`: VerifyPublicKeyInput, signature: String, signature_format: BinaryToTextEncoding): Boolean = js.native
-  def verify(`object`: VerifyPublicKeyInput, signature: ArrayBufferView): Boolean = js.native
+  def verify(`object`: VerifyPublicKeyInput, signature: js.typedarray.ArrayBufferView): Boolean = js.native
 }

@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -18,12 +17,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RelativeTimeFormatStyle extends StObject
 object RelativeTimeFormatStyle {
   
-  @scala.inline
-  def long: tmttyped.std.stdStrings.long = "long".asInstanceOf[tmttyped.std.stdStrings.long]
+  inline def long: tmttyped.std.stdStrings.long = "long".asInstanceOf[tmttyped.std.stdStrings.long]
   
-  @scala.inline
-  def narrow: tmttyped.std.stdStrings.narrow = "narrow".asInstanceOf[tmttyped.std.stdStrings.narrow]
+  inline def narrow: tmttyped.std.stdStrings.narrow = "narrow".asInstanceOf[tmttyped.std.stdStrings.narrow]
   
-  @scala.inline
-  def short: tmttyped.std.stdStrings.short = "short".asInstanceOf[tmttyped.std.stdStrings.short]
+  inline def short: tmttyped.std.stdStrings.short = "short".asInstanceOf[tmttyped.std.stdStrings.short]
 }

@@ -3,7 +3,6 @@ package tmttyped.node.fsMod
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ObjectEncodingOptions
@@ -14,22 +13,17 @@ trait ObjectEncodingOptions
 }
 object ObjectEncodingOptions {
   
-  @scala.inline
-  def apply(): ObjectEncodingOptions = {
+  inline def apply(): ObjectEncodingOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ObjectEncodingOptions]
   }
   
-  @scala.inline
-  implicit class ObjectEncodingOptionsMutableBuilder[Self <: ObjectEncodingOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ObjectEncodingOptions](x: Self) {
     
-    @scala.inline
-    def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+    inline def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEncodingNull: Self = StObject.set(x, "encoding", null)
+    inline def setEncodingNull: Self = StObject.set(x, "encoding", null)
     
-    @scala.inline
-    def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
+    inline def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
   }
 }

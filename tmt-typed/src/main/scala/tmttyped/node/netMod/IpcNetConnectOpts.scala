@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IpcNetConnectOpts
@@ -15,19 +14,15 @@ trait IpcNetConnectOpts
 }
 object IpcNetConnectOpts {
   
-  @scala.inline
-  def apply(path: String): IpcNetConnectOpts = {
+  inline def apply(path: String): IpcNetConnectOpts = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpcNetConnectOpts]
   }
   
-  @scala.inline
-  implicit class IpcNetConnectOptsMutableBuilder[Self <: IpcNetConnectOpts] (val x: Self) extends AnyVal {
+  extension [Self <: IpcNetConnectOpts](x: Self) {
     
-    @scala.inline
-    def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+    inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+    inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
   }
 }

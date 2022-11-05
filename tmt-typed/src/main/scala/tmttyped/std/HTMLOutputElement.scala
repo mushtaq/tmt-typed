@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of <output> elements. */
@@ -36,7 +35,7 @@ trait HTMLOutputElement
   val htmlFor: org.scalajs.dom.DOMTokenList = js.native
   
   /* standard DOM */
-  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node] = js.native
   
   /* standard DOM */
   var name: java.lang.String = js.native

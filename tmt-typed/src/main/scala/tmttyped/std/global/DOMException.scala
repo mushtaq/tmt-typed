@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("DOMException")
 @js.native
 /* standard DOM */
-class DOMException ()
+open class DOMException ()
   extends StObject
      with tmttyped.std.DOMException {
   def this(message: java.lang.String) = this()
@@ -116,17 +115,18 @@ class DOMException ()
   /* CompleteClass */
   override val WRONG_DOCUMENT_ERR: Double = js.native
   
+  /** @deprecated */
   /* standard DOM */
   /* CompleteClass */
   override val code: Double = js.native
   
   /* standard es5 */
   /* CompleteClass */
-  override var message: java.lang.String = js.native
+  var message: java.lang.String = js.native
   
   /* standard es5 */
   /* CompleteClass */
-  override var name: java.lang.String = js.native
+  var name: java.lang.String = js.native
 }
 object DOMException {
   

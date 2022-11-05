@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RsaHashedKeyGenParams
@@ -14,8 +13,7 @@ trait RsaHashedKeyGenParams
 }
 object RsaHashedKeyGenParams {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     hash: HashAlgorithmIdentifier,
     modulusLength: Double,
     name: java.lang.String,
@@ -25,10 +23,8 @@ object RsaHashedKeyGenParams {
     __obj.asInstanceOf[RsaHashedKeyGenParams]
   }
   
-  @scala.inline
-  implicit class RsaHashedKeyGenParamsMutableBuilder[Self <: RsaHashedKeyGenParams] (val x: Self) extends AnyVal {
+  extension [Self <: RsaHashedKeyGenParams](x: Self) {
     
-    @scala.inline
-    def setHash(value: HashAlgorithmIdentifier): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
+    inline def setHash(value: HashAlgorithmIdentifier): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
   }
 }

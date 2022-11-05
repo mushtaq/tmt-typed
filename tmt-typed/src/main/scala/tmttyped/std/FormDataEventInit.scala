@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait FormDataEventInit
@@ -14,16 +13,13 @@ trait FormDataEventInit
 }
 object FormDataEventInit {
   
-  @scala.inline
-  def apply(formData: org.scalajs.dom.FormData): FormDataEventInit = {
+  inline def apply(formData: org.scalajs.dom.FormData): FormDataEventInit = {
     val __obj = js.Dynamic.literal(formData = formData.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormDataEventInit]
   }
   
-  @scala.inline
-  implicit class FormDataEventInitMutableBuilder[Self <: FormDataEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: FormDataEventInit](x: Self) {
     
-    @scala.inline
-    def setFormData(value: org.scalajs.dom.FormData): Self = StObject.set(x, "formData", value.asInstanceOf[js.Any])
+    inline def setFormData(value: org.scalajs.dom.FormData): Self = StObject.set(x, "formData", value.asInstanceOf[js.Any])
   }
 }

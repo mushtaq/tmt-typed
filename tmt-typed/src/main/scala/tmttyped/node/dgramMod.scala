@@ -1,6 +1,5 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.eventsMod.Abortable
@@ -14,7 +13,6 @@ import tmttyped.node.nodeStrings.listening
 import tmttyped.node.nodeStrings.message
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object dgramMod {
@@ -32,7 +30,7 @@ object dgramMod {
     */
   @JSImport("dgram", "Socket")
   @js.native
-  class Socket () extends StObject {
+  open class Socket () extends StObject {
     
     /**
       * events.EventEmitter
@@ -765,7 +763,7 @@ object dgramMod {
       * TTL. If the TTL is decremented to 0 by a router, it will not be forwarded.
       * Changing TTL values is typically done for network probes or when multicasting.
       *
-      * The `ttl` argument may be between between 1 and 255\. The default on most systems
+      * The `ttl` argument may be between 1 and 255\. The default on most systems
       * is 64.
       *
       * This method throws `EBADF` if called on an unbound socket.
@@ -789,10 +787,8 @@ object dgramMod {
     def unref(): this.type = js.native
   }
   
-  @scala.inline
-  def createSocket(options: SocketOptions): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any]).asInstanceOf[Socket]
-  @scala.inline
-  def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  inline def createSocket(options: SocketOptions): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  inline def createSocket(options: SocketOptions, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
   /**
     * Creates a `dgram.Socket` object. Once the socket is created, calling `socket.bind()` will instruct the socket to begin listening for datagram
     * messages. When `address` and `port` are not passed to `socket.bind()` the
@@ -816,10 +812,8 @@ object dgramMod {
     * @param options Available options are:
     * @param callback Attached as a listener for `'message'` events. Optional.
     */
-  @scala.inline
-  def createSocket(`type`: SocketType): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any]).asInstanceOf[Socket]
-  @scala.inline
-  def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
+  inline def createSocket(`type`: SocketType): Socket = ^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any]).asInstanceOf[Socket]
+  inline def createSocket(`type`: SocketType, callback: js.Function2[/* msg */ Buffer, /* rinfo */ RemoteInfo, Unit]): Socket = (^.asInstanceOf[js.Dynamic].applyDynamic("createSocket")(`type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Socket]
   
   trait BindOptions extends StObject {
     
@@ -833,38 +827,28 @@ object dgramMod {
   }
   object BindOptions {
     
-    @scala.inline
-    def apply(): BindOptions = {
+    inline def apply(): BindOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[BindOptions]
     }
     
-    @scala.inline
-    implicit class BindOptionsMutableBuilder[Self <: BindOptions] (val x: Self) extends AnyVal {
+    extension [Self <: BindOptions](x: Self) {
       
-      @scala.inline
-      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      inline def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
+      inline def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
       
-      @scala.inline
-      def setExclusive(value: Boolean): Self = StObject.set(x, "exclusive", value.asInstanceOf[js.Any])
+      inline def setExclusive(value: Boolean): Self = StObject.set(x, "exclusive", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExclusiveUndefined: Self = StObject.set(x, "exclusive", js.undefined)
+      inline def setExclusiveUndefined: Self = StObject.set(x, "exclusive", js.undefined)
       
-      @scala.inline
-      def setFd(value: Double): Self = StObject.set(x, "fd", value.asInstanceOf[js.Any])
+      inline def setFd(value: Double): Self = StObject.set(x, "fd", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFdUndefined: Self = StObject.set(x, "fd", js.undefined)
+      inline def setFdUndefined: Self = StObject.set(x, "fd", js.undefined)
       
-      @scala.inline
-      def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+      inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
+      inline def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
     }
   }
   
@@ -880,26 +864,20 @@ object dgramMod {
   }
   object RemoteInfo {
     
-    @scala.inline
-    def apply(address: String, family: IPv4 | IPv6, port: Double, size: Double): RemoteInfo = {
+    inline def apply(address: String, family: IPv4 | IPv6, port: Double, size: Double): RemoteInfo = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
       __obj.asInstanceOf[RemoteInfo]
     }
     
-    @scala.inline
-    implicit class RemoteInfoMutableBuilder[Self <: RemoteInfo] (val x: Self) extends AnyVal {
+    extension [Self <: RemoteInfo](x: Self) {
       
-      @scala.inline
-      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      inline def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFamily(value: IPv4 | IPv6): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      inline def setFamily(value: IPv4 | IPv6): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+      inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSize(value: Double): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
+      inline def setSize(value: Double): Self = StObject.set(x, "size", value.asInstanceOf[js.Any])
     }
   }
   
@@ -916,7 +894,12 @@ object dgramMod {
         js.Function3[
           /* hostname */ String, 
           /* options */ LookupOneOptions, 
-          /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit], 
+          /* callback */ js.Function3[
+            /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+            /* address */ String, 
+            /* family */ Double, 
+            Unit
+          ], 
           Unit
         ]
       ] = js.undefined
@@ -931,50 +914,42 @@ object dgramMod {
   }
   object SocketOptions {
     
-    @scala.inline
-    def apply(`type`: SocketType): SocketOptions = {
+    inline def apply(`type`: SocketType): SocketOptions = {
       val __obj = js.Dynamic.literal()
       __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
       __obj.asInstanceOf[SocketOptions]
     }
     
-    @scala.inline
-    implicit class SocketOptionsMutableBuilder[Self <: SocketOptions] (val x: Self) extends AnyVal {
+    extension [Self <: SocketOptions](x: Self) {
       
-      @scala.inline
-      def setIpv6Only(value: Boolean): Self = StObject.set(x, "ipv6Only", value.asInstanceOf[js.Any])
+      inline def setIpv6Only(value: Boolean): Self = StObject.set(x, "ipv6Only", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setIpv6OnlyUndefined: Self = StObject.set(x, "ipv6Only", js.undefined)
+      inline def setIpv6OnlyUndefined: Self = StObject.set(x, "ipv6Only", js.undefined)
       
-      @scala.inline
-      def setLookup(
-        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
+      inline def setLookup(
+        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[
+              /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+              /* address */ String, 
+              /* family */ Double, 
+              Unit
+            ]) => Unit
       ): Self = StObject.set(x, "lookup", js.Any.fromFunction3(value))
       
-      @scala.inline
-      def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
+      inline def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
       
-      @scala.inline
-      def setRecvBufferSize(value: Double): Self = StObject.set(x, "recvBufferSize", value.asInstanceOf[js.Any])
+      inline def setRecvBufferSize(value: Double): Self = StObject.set(x, "recvBufferSize", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setRecvBufferSizeUndefined: Self = StObject.set(x, "recvBufferSize", js.undefined)
+      inline def setRecvBufferSizeUndefined: Self = StObject.set(x, "recvBufferSize", js.undefined)
       
-      @scala.inline
-      def setReuseAddr(value: Boolean): Self = StObject.set(x, "reuseAddr", value.asInstanceOf[js.Any])
+      inline def setReuseAddr(value: Boolean): Self = StObject.set(x, "reuseAddr", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReuseAddrUndefined: Self = StObject.set(x, "reuseAddr", js.undefined)
+      inline def setReuseAddrUndefined: Self = StObject.set(x, "reuseAddr", js.undefined)
       
-      @scala.inline
-      def setSendBufferSize(value: Double): Self = StObject.set(x, "sendBufferSize", value.asInstanceOf[js.Any])
+      inline def setSendBufferSize(value: Double): Self = StObject.set(x, "sendBufferSize", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSendBufferSizeUndefined: Self = StObject.set(x, "sendBufferSize", js.undefined)
+      inline def setSendBufferSizeUndefined: Self = StObject.set(x, "sendBufferSize", js.undefined)
       
-      @scala.inline
-      def setType(value: SocketType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+      inline def setType(value: SocketType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     }
   }
   
@@ -985,10 +960,8 @@ object dgramMod {
   trait SocketType extends StObject
   object SocketType {
     
-    @scala.inline
-    def udp4: tmttyped.node.nodeStrings.udp4 = "udp4".asInstanceOf[tmttyped.node.nodeStrings.udp4]
+    inline def udp4: tmttyped.node.nodeStrings.udp4 = "udp4".asInstanceOf[tmttyped.node.nodeStrings.udp4]
     
-    @scala.inline
-    def udp6: tmttyped.node.nodeStrings.udp6 = "udp6".asInstanceOf[tmttyped.node.nodeStrings.udp6]
+    inline def udp6: tmttyped.node.nodeStrings.udp6 = "udp6".asInstanceOf[tmttyped.node.nodeStrings.udp6]
   }
 }

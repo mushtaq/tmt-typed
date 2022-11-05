@@ -4,7 +4,6 @@ import tmttyped.microsoftFetchEventSource.fetchMod.FetchEventSourceInit
 import tmttyped.std.RequestInfo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -17,8 +16,7 @@ object mod {
   @js.native
   val EventStreamContentType: /* "text/event-stream" */ String = js.native
   
-  @scala.inline
-  def fetchEventSource(
+  inline def fetchEventSource(
     input: RequestInfo,
     hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest: FetchEventSourceInit
   ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]

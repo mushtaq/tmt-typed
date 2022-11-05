@@ -8,7 +8,6 @@ import tmttyped.node.workerThreadsMod.Serializable
 import tmttyped.node.workerThreadsMod.WorkerOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeWorkerThreadsMod {
@@ -46,11 +45,10 @@ object nodeWorkerThreadsMod {
     * }
     * ```
     * @since v15.4.0
-    * @experimental
     */
   @JSImport("node:worker_threads", "BroadcastChannel")
   @js.native
-  class BroadcastChannel protected ()
+  open class BroadcastChannel protected ()
     extends tmttyped.node.workerThreadsMod.BroadcastChannel {
     def this(name: String) = this()
   }
@@ -72,7 +70,7 @@ object nodeWorkerThreadsMod {
     */
   @JSImport("node:worker_threads", "MessageChannel")
   @js.native
-  class MessageChannel ()
+  open class MessageChannel ()
     extends tmttyped.node.workerThreadsMod.MessageChannel
   
   /**
@@ -85,7 +83,7 @@ object nodeWorkerThreadsMod {
     */
   @JSImport("node:worker_threads", "MessagePort")
   @js.native
-  class MessagePort () extends StObject
+  open class MessagePort () extends StObject
   
   @JSImport("node:worker_threads", "SHARE_ENV")
   @js.native
@@ -156,7 +154,7 @@ object nodeWorkerThreadsMod {
     */
   @JSImport("node:worker_threads", "Worker")
   @js.native
-  class Worker protected () extends StObject {
+  open class Worker protected () extends StObject {
     /**
       * @param filename  The path to the Worker’s main script or module.
       *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
@@ -190,11 +188,9 @@ object nodeWorkerThreadsMod {
     * }
     * ```
     * @since v15.12.0, v14.18.0
-    * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     */
-  @scala.inline
-  def getEnvironmentData(key: Serializable): Serializable = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnvironmentData")(key.asInstanceOf[js.Any]).asInstanceOf[Serializable]
+  inline def getEnvironmentData(key: Serializable): Serializable = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnvironmentData")(key.asInstanceOf[js.Any]).asInstanceOf[Serializable]
   
   @JSImport("node:worker_threads", "isMainThread")
   @js.native
@@ -233,8 +229,7 @@ object nodeWorkerThreadsMod {
     * There is no equivalent to this API in browsers.
     * @since v14.5.0, v12.19.0
     */
-  @scala.inline
-  def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Transfer a `MessagePort` to a different `vm` Context. The original `port`object is rendered unusable, and the returned `MessagePort` instance
@@ -252,8 +247,7 @@ object nodeWorkerThreadsMod {
     * @param port The message port to transfer.
     * @param contextifiedSandbox A `contextified` object as returned by the `vm.createContext()` method.
     */
-  @scala.inline
-  def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, contextifiedSandbox: Context): tmttyped.node.workerThreadsMod.MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.workerThreadsMod.MessagePort]
+  inline def moveMessagePortToContext(port: tmttyped.node.workerThreadsMod.MessagePort, contextifiedSandbox: Context): tmttyped.node.workerThreadsMod.MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.workerThreadsMod.MessagePort]
   
   @JSImport("node:worker_threads", "parentPort")
   @js.native
@@ -277,8 +271,7 @@ object nodeWorkerThreadsMod {
     * When this function is used, no `'message'` event is emitted and the`onmessage` listener is not invoked.
     * @since v12.3.0
     */
-  @scala.inline
-  def receiveMessageOnPort(port: tmttyped.node.workerThreadsMod.MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
+  inline def receiveMessageOnPort(port: tmttyped.node.workerThreadsMod.MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
   
   @JSImport("node:worker_threads", "resourceLimits")
   @js.native
@@ -287,13 +280,11 @@ object nodeWorkerThreadsMod {
   /**
     * The `worker.setEnvironmentData()` API sets the content of`worker.getEnvironmentData()` in the current thread and all new `Worker`instances spawned from the current context.
     * @since v15.12.0, v14.18.0
-    * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     * @param value Any arbitrary, cloneable JavaScript value that will be cloned and passed automatically to all new `Worker` instances. If `value` is passed as `undefined`, any previously set value
     * for the `key` will be deleted.
     */
-  @scala.inline
-  def setEnvironmentData(key: Serializable, value: Serializable): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setEnvironmentData")(key.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def setEnvironmentData(key: Serializable, value: Serializable): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setEnvironmentData")(key.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @JSImport("node:worker_threads", "threadId")
   @js.native

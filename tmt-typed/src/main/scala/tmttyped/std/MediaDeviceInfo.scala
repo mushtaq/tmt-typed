@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -28,8 +27,7 @@ trait MediaDeviceInfo extends StObject {
 }
 object MediaDeviceInfo {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     deviceId: java.lang.String,
     groupId: java.lang.String,
     kind: org.scalajs.dom.MediaDeviceKind,
@@ -40,22 +38,16 @@ object MediaDeviceInfo {
     __obj.asInstanceOf[MediaDeviceInfo]
   }
   
-  @scala.inline
-  implicit class MediaDeviceInfoMutableBuilder[Self <: MediaDeviceInfo] (val x: Self) extends AnyVal {
+  extension [Self <: MediaDeviceInfo](x: Self) {
     
-    @scala.inline
-    def setDeviceId(value: java.lang.String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
+    inline def setDeviceId(value: java.lang.String): Self = StObject.set(x, "deviceId", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setGroupId(value: java.lang.String): Self = StObject.set(x, "groupId", value.asInstanceOf[js.Any])
+    inline def setGroupId(value: java.lang.String): Self = StObject.set(x, "groupId", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKind(value: org.scalajs.dom.MediaDeviceKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
+    inline def setKind(value: org.scalajs.dom.MediaDeviceKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLabel(value: java.lang.String): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
+    inline def setLabel(value: java.lang.String): Self = StObject.set(x, "label", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
+    inline def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
   }
 }

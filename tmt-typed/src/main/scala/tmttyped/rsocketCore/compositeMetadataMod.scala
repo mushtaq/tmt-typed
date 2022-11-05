@@ -6,7 +6,6 @@ import tmttyped.std.Iterable
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object compositeMetadataMod {
@@ -17,7 +16,7 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "CompositeMetadata")
   @js.native
-  class CompositeMetadata protected ()
+  open class CompositeMetadata protected ()
     extends StObject
        with Iterable[Entry] {
     def this(buffer: Buffer) = this()
@@ -25,7 +24,7 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "ExplicitMimeTimeEntry")
   @js.native
-  class ExplicitMimeTimeEntry protected ()
+  open class ExplicitMimeTimeEntry protected ()
     extends StObject
        with Entry {
     def this(content: Buffer, `type`: String) = this()
@@ -44,7 +43,7 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "ReservedMimeTypeEntry")
   @js.native
-  class ReservedMimeTypeEntry protected ()
+  open class ReservedMimeTypeEntry protected ()
     extends StObject
        with Entry {
     def this(content: Buffer, `type`: Double) = this()
@@ -75,7 +74,7 @@ object compositeMetadataMod {
   
   @JSImport("rsocket-core/CompositeMetadata", "WellKnownMimeTypeEntry")
   @js.native
-  class WellKnownMimeTypeEntry protected ()
+  open class WellKnownMimeTypeEntry protected ()
     extends StObject
        with Entry {
     def this(content: Buffer, `type`: default) = this()
@@ -99,33 +98,23 @@ object compositeMetadataMod {
     val `type`: default = js.native
   }
   
-  @scala.inline
-  def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeCompositeMetadata")(buffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[Entry]]
+  inline def decodeCompositeMetadata(buffer: Buffer): js.Iterator[Entry] = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeCompositeMetadata")(buffer.asInstanceOf[js.Any]).asInstanceOf[js.Iterator[Entry]]
   
-  @scala.inline
-  def decodeMimeAndContentBuffersSlices(compositeMetadata: Buffer, entryIndex: Double): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeAndContentBuffersSlices")(compositeMetadata.asInstanceOf[js.Any], entryIndex.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
+  inline def decodeMimeAndContentBuffersSlices(compositeMetadata: Buffer, entryIndex: Double): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeAndContentBuffersSlices")(compositeMetadata.asInstanceOf[js.Any], entryIndex.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
   
-  @scala.inline
-  def decodeMimeTypeFromMimeBuffer(flyweightMimeBuffer: Buffer): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeTypeFromMimeBuffer")(flyweightMimeBuffer.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def decodeMimeTypeFromMimeBuffer(flyweightMimeBuffer: Buffer): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decodeMimeTypeFromMimeBuffer")(flyweightMimeBuffer.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @scala.inline
-  def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddCustomMetadata")(compositeMetaData.asInstanceOf[js.Any], customMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def encodeAndAddCustomMetadata(compositeMetaData: Buffer, customMimeType: String, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddCustomMetadata")(compositeMetaData.asInstanceOf[js.Any], customMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @scala.inline
-  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: default, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: Double, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def encodeAndAddWellKnownMetadata(compositeMetaData: Buffer, knownMimeType: default, metadata: Buffer): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeAndAddWellKnownMetadata")(compositeMetaData.asInstanceOf[js.Any], knownMimeType.asInstanceOf[js.Any], metadata.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @scala.inline
-  def encodeCompositeMetadata(metadata: js.Array[js.Tuple2[String | default | Double, Buffer | js.Function0[Buffer]]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def encodeCompositeMetadata(metadata: Map[String | default | Double, Buffer | js.Function0[Buffer]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def encodeCompositeMetadata(metadata: js.Array[js.Tuple2[String | default | Double, Buffer | js.Function0[Buffer]]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def encodeCompositeMetadata(metadata: Map[String | default | Double, Buffer | js.Function0[Buffer]]): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("encodeCompositeMetadata")(metadata.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @scala.inline
-  def encodeCustomMetadataHeader(customMime: String, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeCustomMetadataHeader")(customMime.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def encodeCustomMetadataHeader(customMime: String, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeCustomMetadataHeader")(customMime.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @scala.inline
-  def encodeWellKnownMetadataHeader(mimeType: Double, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeWellKnownMetadataHeader")(mimeType.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def encodeWellKnownMetadataHeader(mimeType: Double, metadataLength: Double): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("encodeWellKnownMetadataHeader")(mimeType.asInstanceOf[js.Any], metadataLength.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   trait Entry extends StObject {
     
@@ -145,23 +134,18 @@ object compositeMetadataMod {
   }
   object Entry {
     
-    @scala.inline
-    def apply(content: Buffer): Entry = {
+    inline def apply(content: Buffer): Entry = {
       val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
       __obj.asInstanceOf[Entry]
     }
     
-    @scala.inline
-    implicit class EntryMutableBuilder[Self <: Entry] (val x: Self) extends AnyVal {
+    extension [Self <: Entry](x: Self) {
       
-      @scala.inline
-      def setContent(value: Buffer): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
+      inline def setContent(value: Buffer): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMimeType(value: String): Self = StObject.set(x, "mimeType", value.asInstanceOf[js.Any])
+      inline def setMimeType(value: String): Self = StObject.set(x, "mimeType", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMimeTypeUndefined: Self = StObject.set(x, "mimeType", js.undefined)
+      inline def setMimeTypeUndefined: Self = StObject.set(x, "mimeType", js.undefined)
     }
   }
 }

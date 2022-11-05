@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -17,9 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RelativeTimeFormatLocaleMatcher extends StObject
 object RelativeTimeFormatLocaleMatcher {
   
-  @scala.inline
-  def `best fit`: tmttyped.std.stdStrings.`best fit` = ("best fit").asInstanceOf[tmttyped.std.stdStrings.`best fit`]
+  inline def `best fit`: tmttyped.std.stdStrings.`best fit` = ("best fit").asInstanceOf[tmttyped.std.stdStrings.`best fit`]
   
-  @scala.inline
-  def lookup: tmttyped.std.stdStrings.lookup = "lookup".asInstanceOf[tmttyped.std.stdStrings.lookup]
+  inline def lookup: tmttyped.std.stdStrings.lookup = "lookup".asInstanceOf[tmttyped.std.stdStrings.lookup]
 }

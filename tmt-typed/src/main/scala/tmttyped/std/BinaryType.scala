@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -12,9 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BinaryType extends StObject
 object BinaryType {
   
-  @scala.inline
-  def arraybuffer: tmttyped.std.stdStrings.arraybuffer = "arraybuffer".asInstanceOf[tmttyped.std.stdStrings.arraybuffer]
+  inline def arraybuffer: tmttyped.std.stdStrings.arraybuffer = "arraybuffer".asInstanceOf[tmttyped.std.stdStrings.arraybuffer]
   
-  @scala.inline
-  def blob: tmttyped.std.stdStrings.blob = "blob".asInstanceOf[tmttyped.std.stdStrings.blob]
+  inline def blob: tmttyped.std.stdStrings.blob = "blob".asInstanceOf[tmttyped.std.stdStrings.blob]
 }

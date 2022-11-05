@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ServiceWorkerContainerEventMap extends StObject {
@@ -18,8 +17,7 @@ trait ServiceWorkerContainerEventMap extends StObject {
 }
 object ServiceWorkerContainerEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     controllerchange: org.scalajs.dom.Event,
     message: org.scalajs.dom.MessageEvent,
     messageerror: org.scalajs.dom.MessageEvent
@@ -28,16 +26,12 @@ object ServiceWorkerContainerEventMap {
     __obj.asInstanceOf[ServiceWorkerContainerEventMap]
   }
   
-  @scala.inline
-  implicit class ServiceWorkerContainerEventMapMutableBuilder[Self <: ServiceWorkerContainerEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: ServiceWorkerContainerEventMap](x: Self) {
     
-    @scala.inline
-    def setControllerchange(value: org.scalajs.dom.Event): Self = StObject.set(x, "controllerchange", value.asInstanceOf[js.Any])
+    inline def setControllerchange(value: org.scalajs.dom.Event): Self = StObject.set(x, "controllerchange", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    inline def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    inline def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

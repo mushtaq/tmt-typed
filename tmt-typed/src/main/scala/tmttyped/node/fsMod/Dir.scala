@@ -1,15 +1,13 @@
 package tmttyped.node.fsMod
 
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.std.AsyncIterable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs", "Dir")
 @js.native
-class Dir ()
+open class Dir ()
   extends StObject
      with AsyncIterable[Dirent] {
   
@@ -50,7 +48,13 @@ class Dir ()
     * @return containing {fs.Dirent|null}
     */
   def read(): js.Promise[Dirent | Null] = js.native
-  def read(cb: js.Function2[/* err */ ErrnoException | Null, /* dirEnt */ Dirent | Null, Unit]): Unit = js.native
+  def read(
+    cb: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* dirEnt */ Dirent | Null, 
+      Unit
+    ]
+  ): Unit = js.native
   
   /**
     * Synchronously read the next directory entry as an `fs.Dirent`. See the

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GeolocationPositionError extends StObject {
@@ -24,8 +23,7 @@ trait GeolocationPositionError extends StObject {
 }
 object GeolocationPositionError {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     PERMISSION_DENIED: Double,
     POSITION_UNAVAILABLE: Double,
     TIMEOUT: Double,
@@ -36,22 +34,16 @@ object GeolocationPositionError {
     __obj.asInstanceOf[GeolocationPositionError]
   }
   
-  @scala.inline
-  implicit class GeolocationPositionErrorMutableBuilder[Self <: GeolocationPositionError] (val x: Self) extends AnyVal {
+  extension [Self <: GeolocationPositionError](x: Self) {
     
-    @scala.inline
-    def setCode(value: Double): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])
+    inline def setCode(value: Double): Self = StObject.set(x, "code", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessage(value: java.lang.String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    inline def setMessage(value: java.lang.String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPERMISSION_DENIED(value: Double): Self = StObject.set(x, "PERMISSION_DENIED", value.asInstanceOf[js.Any])
+    inline def setPERMISSION_DENIED(value: Double): Self = StObject.set(x, "PERMISSION_DENIED", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPOSITION_UNAVAILABLE(value: Double): Self = StObject.set(x, "POSITION_UNAVAILABLE", value.asInstanceOf[js.Any])
+    inline def setPOSITION_UNAVAILABLE(value: Double): Self = StObject.set(x, "POSITION_UNAVAILABLE", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTIMEOUT(value: Double): Self = StObject.set(x, "TIMEOUT", value.asInstanceOf[js.Any])
+    inline def setTIMEOUT(value: Double): Self = StObject.set(x, "TIMEOUT", value.asInstanceOf[js.Any])
   }
 }

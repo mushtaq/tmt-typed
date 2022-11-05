@@ -2,7 +2,6 @@ package tmttyped.node.childProcessMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MessageOptions extends StObject {
@@ -11,19 +10,15 @@ trait MessageOptions extends StObject {
 }
 object MessageOptions {
   
-  @scala.inline
-  def apply(): MessageOptions = {
+  inline def apply(): MessageOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[MessageOptions]
   }
   
-  @scala.inline
-  implicit class MessageOptionsMutableBuilder[Self <: MessageOptions] (val x: Self) extends AnyVal {
+  extension [Self <: MessageOptions](x: Self) {
     
-    @scala.inline
-    def setKeepOpen(value: Boolean): Self = StObject.set(x, "keepOpen", value.asInstanceOf[js.Any])
+    inline def setKeepOpen(value: Boolean): Self = StObject.set(x, "keepOpen", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKeepOpenUndefined: Self = StObject.set(x, "keepOpen", js.undefined)
+    inline def setKeepOpenUndefined: Self = StObject.set(x, "keepOpen", js.undefined)
   }
 }

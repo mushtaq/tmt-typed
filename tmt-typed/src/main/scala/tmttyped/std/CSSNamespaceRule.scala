@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** An object representing a single CSS @namespace at-rule. It implements the CSSRule interface, with a type value of 10 (CSSRule.NAMESPACE_RULE). */
@@ -18,8 +17,7 @@ trait CSSNamespaceRule
 }
 object CSSNamespaceRule {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     CHARSET_RULE: Double,
     FONT_FACE_RULE: Double,
     IMPORT_RULE: Double,
@@ -40,13 +38,10 @@ object CSSNamespaceRule {
     __obj.asInstanceOf[CSSNamespaceRule]
   }
   
-  @scala.inline
-  implicit class CSSNamespaceRuleMutableBuilder[Self <: CSSNamespaceRule] (val x: Self) extends AnyVal {
+  extension [Self <: CSSNamespaceRule](x: Self) {
     
-    @scala.inline
-    def setNamespaceURI(value: java.lang.String): Self = StObject.set(x, "namespaceURI", value.asInstanceOf[js.Any])
+    inline def setNamespaceURI(value: java.lang.String): Self = StObject.set(x, "namespaceURI", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPrefix(value: java.lang.String): Self = StObject.set(x, "prefix", value.asInstanceOf[js.Any])
+    inline def setPrefix(value: java.lang.String): Self = StObject.set(x, "prefix", value.asInstanceOf[js.Any])
   }
 }

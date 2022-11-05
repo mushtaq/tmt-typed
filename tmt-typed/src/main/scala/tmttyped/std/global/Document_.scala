@@ -6,14 +6,13 @@ import tmttyped.std.Document
 import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Document")
 @js.native
 /* standard DOM */
-class Document_ ()
+open class Document_ ()
   extends StObject
      with Document {
   
@@ -39,6 +38,10 @@ class Document_ ()
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  var adoptedStyleSheets: js.Array[org.scalajs.dom.CSSStyleSheet] = js.native
   
   /**
     * Returns the element for the specified x coordinate and the specified y coordinate.

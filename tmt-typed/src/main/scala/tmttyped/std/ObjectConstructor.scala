@@ -6,7 +6,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -36,7 +35,7 @@ Instantiable0[js.Object]
     * @param source The source object from which to copy properties.
     */
   /* standard es2015.core */
-  def assign[T, U](target: T, source: U): T with U = js.native
+  def assign[T /* <: js.Object */, U](target: T, source: U): T & U = js.native
   /**
     * Copy the values of all of the enumerable own properties from one or more source objects to a
     * target object. Returns the target object.
@@ -45,7 +44,7 @@ Instantiable0[js.Object]
     * @param source2 The second source object from which to copy properties.
     */
   /* standard es2015.core */
-  def assign[T, U, V](target: T, source1: U, source2: V): T with U with V = js.native
+  def assign[T /* <: js.Object */, U, V](target: T, source1: U, source2: V): T & U & V = js.native
   /**
     * Copy the values of all of the enumerable own properties from one or more source objects to a
     * target object. Returns the target object.
@@ -55,7 +54,7 @@ Instantiable0[js.Object]
     * @param source3 The third source object from which to copy properties.
     */
   /* standard es2015.core */
-  def assign[T, U, V, W](target: T, source1: U, source2: V, source3: W): T with U with V with W = js.native
+  def assign[T /* <: js.Object */, U, V, W](target: T, source1: U, source2: V, source3: W): T & U & V & W = js.native
   
   /**
     * Creates an object that has the specified prototype or that has null prototype.
@@ -70,8 +69,8 @@ Instantiable0[js.Object]
     * @param properties JavaScript object that contains one or more property descriptors.
     */
   /* standard es5 */
-  def create(o: js.Object, properties: PropertyDescriptorMap with ThisType[Any]): Any = js.native
-  def create(o: Null, properties: PropertyDescriptorMap with ThisType[Any]): Any = js.native
+  def create(o: js.Object, properties: PropertyDescriptorMap & ThisType[Any]): Any = js.native
+  def create(o: Null, properties: PropertyDescriptorMap & ThisType[Any]): Any = js.native
   
   /**
     * Adds one or more properties to an object, and/or modifies attributes of existing properties.
@@ -79,7 +78,7 @@ Instantiable0[js.Object]
     * @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
     */
   /* standard es5 */
-  def defineProperties[T](o: T, properties: PropertyDescriptorMap with ThisType[Any]): T = js.native
+  def defineProperties[T](o: T, properties: PropertyDescriptorMap & ThisType[Any]): T = js.native
   
   /**
     * Adds a property to an object, or modifies attributes of an existing property.
@@ -88,7 +87,7 @@ Instantiable0[js.Object]
     * @param attributes Descriptor for the property. It can be for a data property or an accessor property.
     */
   /* standard es5 */
-  def defineProperty[T](o: T, p: PropertyKey, attributes: js.PropertyDescriptor with ThisType[Any]): T = js.native
+  def defineProperty[T](o: T, p: PropertyKey, attributes: js.PropertyDescriptor & ThisType[Any]): T = js.native
   
   /**
     * Returns an array of key/values of the enumerable properties of an object
@@ -124,6 +123,14 @@ Instantiable0[js.Object]
   /* standard es5 */
   @JSName("freeze")
   def freeze_T[T](o: T): T = js.native
+  /**
+    * Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+    * @param o Object on which to lock the attributes.
+    */
+  /* standard es5 */
+  @JSName("freeze")
+  def `freeze_T_StringDictionaryUnionUNull<undefined>ObjectU_UnionStringBigIntDoubleBooleanSymbol`[T /* <: /* standard es5 */
+  StringDictionary[js.UndefOr[U | Null | js.Object]] */, U /* <: java.lang.String | js.BigInt | Double | scala.Boolean | js.Symbol */](o: T): T = js.native
   
   /**
     * Returns an object created by key-value entries for properties and methods
@@ -154,7 +161,7 @@ Instantiable0[js.Object]
     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
     */
   /* standard es2017.object */
-  def getOwnPropertyDescriptors[T](o: T): tmttyped.std.stdStrings.ObjectConstructor with TopLevel[T] with (/* standard es2017.object */
+  def getOwnPropertyDescriptors[T](o: T): tmttyped.std.stdStrings.ObjectConstructor & TopLevel[T] & (/* standard es2017.object */
   StringDictionary[js.PropertyDescriptor]) = js.native
   
   /**
@@ -178,6 +185,14 @@ Instantiable0[js.Object]
     */
   /* standard es5 */
   def getPrototypeOf(o: Any): Any = js.native
+  
+  /**
+    * Determines whether an object has a property with the specified name.
+    * @param o An object.
+    * @param v A property name.
+    */
+  /* standard es2022.object */
+  def hasOwn(o: js.Object, v: PropertyKey): scala.Boolean = js.native
   
   /**
     * Returns true if the values are the same value, false otherwise.

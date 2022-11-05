@@ -5,7 +5,6 @@ import tmttyped.std.stdStrings.forward
 import tmttyped.std.stdStrings.none
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides special properties and methods for manipulating the options, layout, and presentation of <input> elements. */
@@ -107,7 +106,7 @@ trait HTMLInputElement
   var indeterminate: scala.Boolean = js.native
   
   /* standard DOM */
-  val labels: (org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node]) | Null = js.native
+  val labels: (org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node]) | Null = js.native
   
   /** Specifies the ID of a pre-defined datalist of options for an input element. */
   /* standard DOM */
@@ -209,6 +208,9 @@ trait HTMLInputElement
   def setSelectionRange(start: Null, end: Double): Unit = js.native
   def setSelectionRange(start: Null, end: Double, direction: forward | backward | none): Unit = js.native
   def setSelectionRange(start: Null, end: Null, direction: forward | backward | none): Unit = js.native
+  
+  /* standard DOM */
+  def showPicker(): Unit = js.native
   
   /* standard DOM */
   var size: Double = js.native

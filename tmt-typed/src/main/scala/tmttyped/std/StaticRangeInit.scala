@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait StaticRangeInit extends StObject {
@@ -21,8 +20,7 @@ trait StaticRangeInit extends StObject {
 }
 object StaticRangeInit {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     endContainer: org.scalajs.dom.Node,
     endOffset: Double,
     startContainer: org.scalajs.dom.Node,
@@ -32,19 +30,14 @@ object StaticRangeInit {
     __obj.asInstanceOf[StaticRangeInit]
   }
   
-  @scala.inline
-  implicit class StaticRangeInitMutableBuilder[Self <: StaticRangeInit] (val x: Self) extends AnyVal {
+  extension [Self <: StaticRangeInit](x: Self) {
     
-    @scala.inline
-    def setEndContainer(value: org.scalajs.dom.Node): Self = StObject.set(x, "endContainer", value.asInstanceOf[js.Any])
+    inline def setEndContainer(value: org.scalajs.dom.Node): Self = StObject.set(x, "endContainer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEndOffset(value: Double): Self = StObject.set(x, "endOffset", value.asInstanceOf[js.Any])
+    inline def setEndOffset(value: Double): Self = StObject.set(x, "endOffset", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStartContainer(value: org.scalajs.dom.Node): Self = StObject.set(x, "startContainer", value.asInstanceOf[js.Any])
+    inline def setStartContainer(value: org.scalajs.dom.Node): Self = StObject.set(x, "startContainer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStartOffset(value: Double): Self = StObject.set(x, "startOffset", value.asInstanceOf[js.Any])
+    inline def setStartOffset(value: Double): Self = StObject.set(x, "startOffset", value.asInstanceOf[js.Any])
   }
 }

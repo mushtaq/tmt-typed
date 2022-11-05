@@ -3,7 +3,6 @@ package tmttyped.node.inspectorMod.Debugger
 import tmttyped.node.inspectorMod.Runtime.StackTraceId
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GetStackTraceParameterType extends StObject {
@@ -12,16 +11,13 @@ trait GetStackTraceParameterType extends StObject {
 }
 object GetStackTraceParameterType {
   
-  @scala.inline
-  def apply(stackTraceId: StackTraceId): GetStackTraceParameterType = {
+  inline def apply(stackTraceId: StackTraceId): GetStackTraceParameterType = {
     val __obj = js.Dynamic.literal(stackTraceId = stackTraceId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetStackTraceParameterType]
   }
   
-  @scala.inline
-  implicit class GetStackTraceParameterTypeMutableBuilder[Self <: GetStackTraceParameterType] (val x: Self) extends AnyVal {
+  extension [Self <: GetStackTraceParameterType](x: Self) {
     
-    @scala.inline
-    def setStackTraceId(value: StackTraceId): Self = StObject.set(x, "stackTraceId", value.asInstanceOf[js.Any])
+    inline def setStackTraceId(value: StackTraceId): Self = StObject.set(x, "stackTraceId", value.asInstanceOf[js.Any])
   }
 }

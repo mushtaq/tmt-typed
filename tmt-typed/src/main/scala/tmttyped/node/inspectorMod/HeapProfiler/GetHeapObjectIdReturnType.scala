@@ -2,7 +2,6 @@ package tmttyped.node.inspectorMod.HeapProfiler
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GetHeapObjectIdReturnType extends StObject {
@@ -14,16 +13,13 @@ trait GetHeapObjectIdReturnType extends StObject {
 }
 object GetHeapObjectIdReturnType {
   
-  @scala.inline
-  def apply(heapSnapshotObjectId: HeapSnapshotObjectId): GetHeapObjectIdReturnType = {
+  inline def apply(heapSnapshotObjectId: HeapSnapshotObjectId): GetHeapObjectIdReturnType = {
     val __obj = js.Dynamic.literal(heapSnapshotObjectId = heapSnapshotObjectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetHeapObjectIdReturnType]
   }
   
-  @scala.inline
-  implicit class GetHeapObjectIdReturnTypeMutableBuilder[Self <: GetHeapObjectIdReturnType] (val x: Self) extends AnyVal {
+  extension [Self <: GetHeapObjectIdReturnType](x: Self) {
     
-    @scala.inline
-    def setHeapSnapshotObjectId(value: HeapSnapshotObjectId): Self = StObject.set(x, "heapSnapshotObjectId", value.asInstanceOf[js.Any])
+    inline def setHeapSnapshotObjectId(value: HeapSnapshotObjectId): Self = StObject.set(x, "heapSnapshotObjectId", value.asInstanceOf[js.Any])
   }
 }

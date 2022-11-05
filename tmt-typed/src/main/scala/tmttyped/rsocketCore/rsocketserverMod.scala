@@ -10,14 +10,13 @@ import tmttyped.rsocketTypes.reactiveSocketTypesMod.Responder
 import tmttyped.std.Partial
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object rsocketserverMod {
   
   @JSImport("rsocket-core/RSocketServer", JSImport.Default)
   @js.native
-  class default[D, M] protected ()
+  open class default[D, M] protected ()
     extends StObject
        with RSocketServer[D, M] {
     def this(config: ServerConfig[D, M]) = this()
@@ -37,20 +36,16 @@ object rsocketserverMod {
   }
   object RSocketServer {
     
-    @scala.inline
-    def apply[D, M](start: () => Unit, stop: () => Unit): RSocketServer[D, M] = {
+    inline def apply[D, M](start: () => Unit, stop: () => Unit): RSocketServer[D, M] = {
       val __obj = js.Dynamic.literal(start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
       __obj.asInstanceOf[RSocketServer[D, M]]
     }
     
-    @scala.inline
-    implicit class RSocketServerMutableBuilder[Self <: RSocketServer[_, _], D, M] (val x: Self with (RSocketServer[D, M])) extends AnyVal {
+    extension [Self <: RSocketServer[?, ?], D, M](x: Self & (RSocketServer[D, M])) {
       
-      @scala.inline
-      def setStart(value: () => Unit): Self = StObject.set(x, "start", js.Any.fromFunction0(value))
+      inline def setStart(value: () => Unit): Self = StObject.set(x, "start", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setStop(value: () => Unit): Self = StObject.set(x, "stop", js.Any.fromFunction0(value))
+      inline def setStop(value: () => Unit): Self = StObject.set(x, "stop", js.Any.fromFunction0(value))
     }
   }
   
@@ -68,8 +63,7 @@ object rsocketserverMod {
   }
   object ServerConfig {
     
-    @scala.inline
-    def apply[D, M](
+    inline def apply[D, M](
       getRequestHandler: (ReactiveSocket[D, M], Payload[D, M]) => Partial[Responder[D, M]],
       transport: TransportServer
     ): ServerConfig[D, M] = {
@@ -77,32 +71,23 @@ object rsocketserverMod {
       __obj.asInstanceOf[ServerConfig[D, M]]
     }
     
-    @scala.inline
-    implicit class ServerConfigMutableBuilder[Self <: ServerConfig[_, _], D, M] (val x: Self with (ServerConfig[D, M])) extends AnyVal {
+    extension [Self <: ServerConfig[?, ?], D, M](x: Self & (ServerConfig[D, M])) {
       
-      @scala.inline
-      def setErrorHandler(value: /* e */ js.Error => Unit): Self = StObject.set(x, "errorHandler", js.Any.fromFunction1(value))
+      inline def setErrorHandler(value: /* e */ js.Error => Unit): Self = StObject.set(x, "errorHandler", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setErrorHandlerUndefined: Self = StObject.set(x, "errorHandler", js.undefined)
+      inline def setErrorHandlerUndefined: Self = StObject.set(x, "errorHandler", js.undefined)
       
-      @scala.inline
-      def setGetRequestHandler(value: (ReactiveSocket[D, M], Payload[D, M]) => Partial[Responder[D, M]]): Self = StObject.set(x, "getRequestHandler", js.Any.fromFunction2(value))
+      inline def setGetRequestHandler(value: (ReactiveSocket[D, M], Payload[D, M]) => Partial[Responder[D, M]]): Self = StObject.set(x, "getRequestHandler", js.Any.fromFunction2(value))
       
-      @scala.inline
-      def setLeases(value: () => Leases[Any]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
+      inline def setLeases(value: () => Leases[Any]): Self = StObject.set(x, "leases", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setLeasesUndefined: Self = StObject.set(x, "leases", js.undefined)
+      inline def setLeasesUndefined: Self = StObject.set(x, "leases", js.undefined)
       
-      @scala.inline
-      def setSerializers(value: PayloadSerializers[D, M]): Self = StObject.set(x, "serializers", value.asInstanceOf[js.Any])
+      inline def setSerializers(value: PayloadSerializers[D, M]): Self = StObject.set(x, "serializers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSerializersUndefined: Self = StObject.set(x, "serializers", js.undefined)
+      inline def setSerializersUndefined: Self = StObject.set(x, "serializers", js.undefined)
       
-      @scala.inline
-      def setTransport(value: TransportServer): Self = StObject.set(x, "transport", value.asInstanceOf[js.Any])
+      inline def setTransport(value: TransportServer): Self = StObject.set(x, "transport", value.asInstanceOf[js.Any])
     }
   }
   
@@ -114,20 +99,16 @@ object rsocketserverMod {
   }
   object TransportServer {
     
-    @scala.inline
-    def apply(start: () => Flowable[DuplexConnection], stop: () => Unit): TransportServer = {
+    inline def apply(start: () => Flowable[DuplexConnection], stop: () => Unit): TransportServer = {
       val __obj = js.Dynamic.literal(start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
       __obj.asInstanceOf[TransportServer]
     }
     
-    @scala.inline
-    implicit class TransportServerMutableBuilder[Self <: TransportServer] (val x: Self) extends AnyVal {
+    extension [Self <: TransportServer](x: Self) {
       
-      @scala.inline
-      def setStart(value: () => Flowable[DuplexConnection]): Self = StObject.set(x, "start", js.Any.fromFunction0(value))
+      inline def setStart(value: () => Flowable[DuplexConnection]): Self = StObject.set(x, "start", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setStop(value: () => Unit): Self = StObject.set(x, "stop", js.Any.fromFunction0(value))
+      inline def setStop(value: () => Unit): Self = StObject.set(x, "stop", js.Any.fromFunction0(value))
     }
   }
 }

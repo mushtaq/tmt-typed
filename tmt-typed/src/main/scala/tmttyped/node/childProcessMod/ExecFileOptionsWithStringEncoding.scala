@@ -3,7 +3,6 @@ package tmttyped.node.childProcessMod
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ExecFileOptionsWithStringEncoding
@@ -14,16 +13,13 @@ trait ExecFileOptionsWithStringEncoding
 }
 object ExecFileOptionsWithStringEncoding {
   
-  @scala.inline
-  def apply(encoding: BufferEncoding): ExecFileOptionsWithStringEncoding = {
+  inline def apply(encoding: BufferEncoding): ExecFileOptionsWithStringEncoding = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExecFileOptionsWithStringEncoding]
   }
   
-  @scala.inline
-  implicit class ExecFileOptionsWithStringEncodingMutableBuilder[Self <: ExecFileOptionsWithStringEncoding] (val x: Self) extends AnyVal {
+  extension [Self <: ExecFileOptionsWithStringEncoding](x: Self) {
     
-    @scala.inline
-    def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+    inline def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
   }
 }

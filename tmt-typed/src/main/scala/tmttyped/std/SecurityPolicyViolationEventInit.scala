@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SecurityPolicyViolationEventInit
@@ -47,8 +46,7 @@ trait SecurityPolicyViolationEventInit
 }
 object SecurityPolicyViolationEventInit {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     disposition: SecurityPolicyViolationEventDisposition,
     documentURI: java.lang.String,
     effectiveDirective: java.lang.String,
@@ -60,61 +58,42 @@ object SecurityPolicyViolationEventInit {
     __obj.asInstanceOf[SecurityPolicyViolationEventInit]
   }
   
-  @scala.inline
-  implicit class SecurityPolicyViolationEventInitMutableBuilder[Self <: SecurityPolicyViolationEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: SecurityPolicyViolationEventInit](x: Self) {
     
-    @scala.inline
-    def setBlockedURI(value: java.lang.String): Self = StObject.set(x, "blockedURI", value.asInstanceOf[js.Any])
+    inline def setBlockedURI(value: java.lang.String): Self = StObject.set(x, "blockedURI", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBlockedURIUndefined: Self = StObject.set(x, "blockedURI", js.undefined)
+    inline def setBlockedURIUndefined: Self = StObject.set(x, "blockedURI", js.undefined)
     
-    @scala.inline
-    def setColumnNumber(value: Double): Self = StObject.set(x, "columnNumber", value.asInstanceOf[js.Any])
+    inline def setColumnNumber(value: Double): Self = StObject.set(x, "columnNumber", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setColumnNumberUndefined: Self = StObject.set(x, "columnNumber", js.undefined)
+    inline def setColumnNumberUndefined: Self = StObject.set(x, "columnNumber", js.undefined)
     
-    @scala.inline
-    def setDisposition(value: SecurityPolicyViolationEventDisposition): Self = StObject.set(x, "disposition", value.asInstanceOf[js.Any])
+    inline def setDisposition(value: SecurityPolicyViolationEventDisposition): Self = StObject.set(x, "disposition", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDocumentURI(value: java.lang.String): Self = StObject.set(x, "documentURI", value.asInstanceOf[js.Any])
+    inline def setDocumentURI(value: java.lang.String): Self = StObject.set(x, "documentURI", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEffectiveDirective(value: java.lang.String): Self = StObject.set(x, "effectiveDirective", value.asInstanceOf[js.Any])
+    inline def setEffectiveDirective(value: java.lang.String): Self = StObject.set(x, "effectiveDirective", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLineNumber(value: Double): Self = StObject.set(x, "lineNumber", value.asInstanceOf[js.Any])
+    inline def setLineNumber(value: Double): Self = StObject.set(x, "lineNumber", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLineNumberUndefined: Self = StObject.set(x, "lineNumber", js.undefined)
+    inline def setLineNumberUndefined: Self = StObject.set(x, "lineNumber", js.undefined)
     
-    @scala.inline
-    def setOriginalPolicy(value: java.lang.String): Self = StObject.set(x, "originalPolicy", value.asInstanceOf[js.Any])
+    inline def setOriginalPolicy(value: java.lang.String): Self = StObject.set(x, "originalPolicy", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setReferrer(value: java.lang.String): Self = StObject.set(x, "referrer", value.asInstanceOf[js.Any])
+    inline def setReferrer(value: java.lang.String): Self = StObject.set(x, "referrer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setReferrerUndefined: Self = StObject.set(x, "referrer", js.undefined)
+    inline def setReferrerUndefined: Self = StObject.set(x, "referrer", js.undefined)
     
-    @scala.inline
-    def setSample(value: java.lang.String): Self = StObject.set(x, "sample", value.asInstanceOf[js.Any])
+    inline def setSample(value: java.lang.String): Self = StObject.set(x, "sample", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSampleUndefined: Self = StObject.set(x, "sample", js.undefined)
+    inline def setSampleUndefined: Self = StObject.set(x, "sample", js.undefined)
     
-    @scala.inline
-    def setSourceFile(value: java.lang.String): Self = StObject.set(x, "sourceFile", value.asInstanceOf[js.Any])
+    inline def setSourceFile(value: java.lang.String): Self = StObject.set(x, "sourceFile", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSourceFileUndefined: Self = StObject.set(x, "sourceFile", js.undefined)
+    inline def setSourceFileUndefined: Self = StObject.set(x, "sourceFile", js.undefined)
     
-    @scala.inline
-    def setStatusCode(value: Double): Self = StObject.set(x, "statusCode", value.asInstanceOf[js.Any])
+    inline def setStatusCode(value: Double): Self = StObject.set(x, "statusCode", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setViolatedDirective(value: java.lang.String): Self = StObject.set(x, "violatedDirective", value.asInstanceOf[js.Any])
+    inline def setViolatedDirective(value: java.lang.String): Self = StObject.set(x, "violatedDirective", value.asInstanceOf[js.Any])
   }
 }

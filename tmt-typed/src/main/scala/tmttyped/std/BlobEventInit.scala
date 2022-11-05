@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait BlobEventInit extends StObject {
@@ -15,22 +14,17 @@ trait BlobEventInit extends StObject {
 }
 object BlobEventInit {
   
-  @scala.inline
-  def apply(data: org.scalajs.dom.Blob): BlobEventInit = {
+  inline def apply(data: org.scalajs.dom.Blob): BlobEventInit = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlobEventInit]
   }
   
-  @scala.inline
-  implicit class BlobEventInitMutableBuilder[Self <: BlobEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: BlobEventInit](x: Self) {
     
-    @scala.inline
-    def setData(value: org.scalajs.dom.Blob): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
+    inline def setData(value: org.scalajs.dom.Blob): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimecode(value: DOMHighResTimeStamp): Self = StObject.set(x, "timecode", value.asInstanceOf[js.Any])
+    inline def setTimecode(value: DOMHighResTimeStamp): Self = StObject.set(x, "timecode", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimecodeUndefined: Self = StObject.set(x, "timecode", js.undefined)
+    inline def setTimecodeUndefined: Self = StObject.set(x, "timecode", js.undefined)
   }
 }

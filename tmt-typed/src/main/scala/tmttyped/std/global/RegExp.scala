@@ -3,13 +3,12 @@ package tmttyped.std.global
 import tmttyped.std.RegExpConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("RegExp")
 @js.native
-class RegExp protected ()
+open class RegExp protected ()
   extends StObject
      with tmttyped.std.RegExp {
   def this(pattern: java.lang.String) = this()
@@ -20,6 +19,5 @@ class RegExp protected ()
 }
 object RegExp {
   
-  @scala.inline
-  def apply: RegExpConstructor = js.Dynamic.global.selectDynamic("RegExp").asInstanceOf[RegExpConstructor]
+  inline def apply: RegExpConstructor = js.Dynamic.global.selectDynamic("RegExp").asInstanceOf[RegExpConstructor]
 }

@@ -1,9 +1,8 @@
 package tmttyped.node
 
 import org.scalablytyped.runtime.Instantiable1
-import tmttyped.node.NodeJS.Dict
-import tmttyped.node.NodeJS.ErrnoException
-import tmttyped.node.NodeJS.ReadOnlyDict
+import org.scalajs.dom.AbortSignal
+import tmttyped.node.anon.Req
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.dnsMod.LookupOneOptions
 import tmttyped.node.netMod.LookupFunction
@@ -34,9 +33,10 @@ import tmttyped.node.nodeStrings.timeout
 import tmttyped.node.nodeStrings.unpipe
 import tmttyped.node.nodeStrings.upgrade
 import tmttyped.node.nodeUrlMod.URL
+import tmttyped.std.InstanceType
+import tmttyped.std.Record
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object httpMod {
@@ -102,7 +102,7 @@ object httpMod {
     */
   @JSImport("http", "Agent")
   @js.native
-  class Agent () extends StObject {
+  open class Agent () extends StObject {
     def this(opts: AgentOptions) = this()
     
     /**
@@ -125,7 +125,7 @@ object httpMod {
       * removed from the array on `'timeout'`.
       * @since v0.11.4
       */
-    val freeSockets: ReadOnlyDict[js.Array[Socket]] = js.native
+    val freeSockets: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadOnlyDict<Array<Socket>> */ Any = js.native
     
     /**
       * By default set to 256\. For agents with `keepAlive` enabled, this
@@ -154,14 +154,14 @@ object httpMod {
       * sockets. Do not modify.
       * @since v0.5.9
       */
-    val requests: ReadOnlyDict[js.Array[IncomingMessage]] = js.native
+    val requests: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadOnlyDict<Array<IncomingMessage>> */ Any = js.native
     
     /**
       * An object which contains arrays of sockets currently in use by the
       * agent. Do not modify.
       * @since v0.3.6
       */
-    val sockets: ReadOnlyDict[js.Array[Socket]] = js.native
+    val sockets: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadOnlyDict<Array<Socket>> */ Any = js.native
   }
   
   /**
@@ -194,7 +194,7 @@ object httpMod {
     */
   @JSImport("http", "ClientRequest")
   @js.native
-  class ClientRequest protected () extends StObject {
+  open class ClientRequest protected () extends StObject {
     def this(url: String) = this()
     def this(url: ClientRequestArgs) = this()
     def this(url: URL) = this()
@@ -214,7 +214,7 @@ object httpMod {
       * The `request.aborted` property will be `true` if the request has
       * been aborted.
       * @since v0.11.14
-      * @deprecated Since v17.0.0 - Check `destroyed` instead.
+      * @deprecated Since v17.0.0,v16.12.0 - Check `destroyed` instead.
       */
     var aborted: Boolean = js.native
     
@@ -281,7 +281,6 @@ object httpMod {
     
     /**
       * Limits maximum response headers count. If set to 0, no limit will be applied.
-      * @default 2000
       */
     var maxHeadersCount: Double = js.native
     
@@ -467,7 +466,53 @@ object httpMod {
     var protocol: String = js.native
     
     /**
-      * Whether the request is send through a reused socket.
+      * When sending request through a keep-alive enabled agent, the underlying socket
+      * might be reused. But if server closes connection at unfortunate time, client
+      * may run into a 'ECONNRESET' error.
+      *
+      * ```js
+      * const http = require('http');
+      *
+      * // Server has a 5 seconds keep-alive timeout by default
+      * http
+      *   .createServer((req, res) => {
+      *     res.write('hello\n');
+      *     res.end();
+      *   })
+      *   .listen(3000);
+      *
+      * setInterval(() => {
+      *   // Adapting a keep-alive agent
+      *   http.get('http://localhost:3000', { agent }, (res) => {
+      *     res.on('data', (data) => {
+      *       // Do nothing
+      *     });
+      *   });
+      * }, 5000); // Sending request on 5s interval so it's easy to hit idle timeout
+      * ```
+      *
+      * By marking a request whether it reused socket or not, we can do
+      * automatic error retry base on it.
+      *
+      * ```js
+      * const http = require('http');
+      * const agent = new http.Agent({ keepAlive: true });
+      *
+      * function retriableRequest() {
+      *   const req = http
+      *     .get('http://localhost:3000', { agent }, (res) => {
+      *       // ...
+      *     })
+      *     .on('error', (err) => {
+      *       // Check if retry is needed
+      *       if (req.reusedSocket &#x26;&#x26; err.code === 'ECONNRESET') {
+      *         retriableRequest();
+      *       }
+      *     });
+      * }
+      *
+      * retriableRequest();
+      * ```
       * @since v13.0.0, v12.16.0
       */
     var reusedSocket: Boolean = js.native
@@ -510,14 +555,14 @@ object httpMod {
     */
   @JSImport("http", "IncomingMessage")
   @js.native
-  class IncomingMessage protected () extends StObject {
+  open class IncomingMessage protected () extends StObject {
     def this(socket: Socket) = this()
     
     /**
       * The `message.aborted` property will be `true` if the request has
       * been aborted.
       * @since v10.1.0
-      * @deprecated Since v17.0.0 - Check `message.destroyed` from [stream.Readable](https://nodejs.org/dist/latest-v17.x/docs/api/stream.html#class-streamreadable).
+      * @deprecated Since v17.0.0,v16.12.0 - Check `message.destroyed` from <a href="stream.html#class-streamreadable" class="type">stream.Readable</a>.
       */
     var aborted: Boolean = js.native
     
@@ -572,7 +617,7 @@ object httpMod {
       * // { 'user-agent': 'curl/7.22.0',
       * //   host: '127.0.0.1:8000',
       * //   accept: '*' }
-      * console.log(request.headers);
+      * console.log(request.getHeaders());
       * ```
       *
       * Duplicates in raw headers are handled in the following ways, depending on the
@@ -657,7 +702,7 @@ object httpMod {
       *
       * This property is guaranteed to be an instance of the `net.Socket` class,
       * a subclass of `stream.Duplex`, unless the user specified a socket
-      * type other than `net.Socket`.
+      * type other than `net.Socket` or internally nulled.
       * @since v0.3.0
       */
     var socket: Socket = js.native
@@ -682,7 +727,7 @@ object httpMod {
       * The request/response trailers object. Only populated at the `'end'` event.
       * @since v0.3.0
       */
-    var trailers: Dict[String] = js.native
+    var trailers: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string> */ Any = js.native
     
     /**
       * **Only valid for request obtained from {@link Server}.**
@@ -698,14 +743,14 @@ object httpMod {
       * To parse the URL into its parts:
       *
       * ```js
-      * new URL(request.url, `http://${request.headers.host}`);
+      * new URL(request.url, `http://${request.getHeaders().host}`);
       * ```
       *
-      * When `request.url` is `'/status?name=ryan'` and`request.headers.host` is `'localhost:3000'`:
+      * When `request.url` is `'/status?name=ryan'` and`request.getHeaders().host` is `'localhost:3000'`:
       *
       * ```console
       * $ node
-      * > new URL(request.url, `http://${request.headers.host}`)
+      * > new URL(request.url, `http://${request.getHeaders().host}`)
       * URL {
       *   href: 'http://localhost:3000/status?name=ryan',
       *   origin: 'http://localhost:3000',
@@ -737,7 +782,7 @@ object httpMod {
     */
   @JSImport("http", "OutgoingMessage")
   @js.native
-  class OutgoingMessage () extends StObject {
+  open class OutgoingMessage[Request /* <: IncomingMessage */] () extends StObject {
     
     def addTrailers(headers: js.Array[js.Tuple2[String, String]]): Unit = js.native
     /**
@@ -802,7 +847,7 @@ object httpMod {
     /**
       * Returns an array of names of headers of the outgoing outgoingMessage. All
       * names are lowercase.
-      * @since v8.0.0
+      * @since v7.7.0
       */
     def getHeaderNames(): js.Array[String] = js.native
     
@@ -825,7 +870,7 @@ object httpMod {
       * const headers = outgoingMessage.getHeaders();
       * // headers === { foo: 'bar', 'set-cookie': ['foo=bar', 'bar=baz'] }
       * ```
-      * @since v8.0.0
+      * @since v7.7.0
       */
     def getHeaders(): OutgoingHttpHeaders = js.native
     
@@ -836,7 +881,7 @@ object httpMod {
       * ```js
       * const hasContentType = outgoingMessage.hasHeader('content-type');
       * ```
-      * @since v8.0.0
+      * @since v7.7.0
       */
     def hasHeader(name: String): Boolean = js.native
     
@@ -853,10 +898,11 @@ object httpMod {
       * outgoingMessage.removeHeader('Content-Encoding');
       * ```
       * @since v0.4.0
+      * @param name Header name
       */
     def removeHeader(name: String): Unit = js.native
     
-    val req: IncomingMessage = js.native
+    val req: Request = js.native
     
     var sendDate: Boolean = js.native
     
@@ -897,16 +943,19 @@ object httpMod {
     */
   @JSImport("http", "Server")
   @js.native
-  class Server () extends StObject {
-    def this(options: ServerOptions) = this()
-    def this(requestListener: RequestListener) = this()
-    def this(options: ServerOptions, requestListener: RequestListener) = this()
+  open class Server[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */] () extends StObject {
+    def this(options: ServerOptions[Request, Response]) = this()
+    def this(requestListener: RequestListener[Request, Response]) = this()
+    def this(options: ServerOptions[Request, Response], requestListener: RequestListener[Request, Response]) = this()
     
     def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    def addListener_checkContinue(event: checkContinue, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("addListener")
-    def addListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    def addListener_checkExpectation(event: checkExpectation, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("addListener")
     def addListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
     @JSName("addListener")
@@ -914,7 +963,7 @@ object httpMod {
     @JSName("addListener")
     def addListener_connect(
       event: connect,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     @JSName("addListener")
     def addListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
@@ -923,24 +972,36 @@ object httpMod {
     @JSName("addListener")
     def addListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
     @JSName("addListener")
-    def addListener_request(event: request, listener: RequestListener): this.type = js.native
+    def addListener_request(event: request, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("addListener")
     def addListener_upgrade(
       event: upgrade,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
+    
+    /**
+      * Closes all connections connected to this server.
+      * @since v18.2.0
+      */
+    def closeAllConnections(): Unit = js.native
+    
+    /**
+      * Closes all connections connected to this server which are not sending a request or waiting for a response.
+      * @since v18.2.0
+      */
+    def closeIdleConnections(): Unit = js.native
     
     def emit(event: String, args: Any*): Boolean = js.native
     @JSName("emit")
-    def emit_checkContinue(event: checkContinue, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    def emit_checkContinue(event: checkContinue, req: InstanceType[Request], res: InstanceType[Response] & Req[Request]): Boolean = js.native
     @JSName("emit")
-    def emit_checkExpectation(event: checkExpectation, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    def emit_checkExpectation(event: checkExpectation, req: InstanceType[Request], res: InstanceType[Response] & Req[Request]): Boolean = js.native
     @JSName("emit")
     def emit_clientError(event: clientError, err: js.Error, socket: Duplex): Boolean = js.native
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
-    def emit_connect(event: connect, req: IncomingMessage, socket: Duplex, head: Buffer): Boolean = js.native
+    def emit_connect(event: connect, req: InstanceType[Request], socket: Duplex, head: Buffer): Boolean = js.native
     @JSName("emit")
     def emit_connection(event: connection, socket: Socket): Boolean = js.native
     @JSName("emit")
@@ -948,22 +1009,20 @@ object httpMod {
     @JSName("emit")
     def emit_listening(event: listening): Boolean = js.native
     @JSName("emit")
-    def emit_request(event: request, req: IncomingMessage, res: ServerResponse): Boolean = js.native
+    def emit_request(event: request, req: InstanceType[Request], res: InstanceType[Response] & Req[Request]): Boolean = js.native
     @JSName("emit")
-    def emit_upgrade(event: upgrade, req: IncomingMessage, socket: Duplex, head: Buffer): Boolean = js.native
+    def emit_upgrade(event: upgrade, req: InstanceType[Request], socket: Duplex, head: Buffer): Boolean = js.native
     
     /**
       * Limit the amount of time the parser will wait to receive the complete HTTP
       * headers.
       *
-      * In case of inactivity, the rules defined in `server.timeout` apply. However,
-      * that inactivity based timeout would still allow the connection to be kept open
-      * if the headers are being sent very slowly (by default, up to a byte per 2
-      * minutes). In order to prevent this, whenever header data arrives an additional
-      * check is made that more than `server.headersTimeout` milliseconds has not
-      * passed since the connection was established. If the check fails, a `'timeout'`event is emitted on the server object, and (by default) the socket is destroyed.
-      * See `server.timeout` for more information on how timeout behavior can be
-      * customized.
+      * If the timeout expires, the server responds with status 408 without
+      * forwarding the request to the request listener and then closes the connection.
+      *
+      * It must be set to a non-zero value (e.g. 120 seconds) to protect against
+      * potential Denial-of-Service attacks in case the server is deployed without a
+      * reverse proxy in front.
       * @since v11.3.0, v10.14.0
       */
     var headersTimeout: Double = js.native
@@ -1006,9 +1065,9 @@ object httpMod {
     
     def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
-    def on_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    def on_checkContinue(event: checkContinue, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("on")
-    def on_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    def on_checkExpectation(event: checkExpectation, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("on")
     def on_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
     @JSName("on")
@@ -1016,7 +1075,7 @@ object httpMod {
     @JSName("on")
     def on_connect(
       event: connect,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     @JSName("on")
     def on_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
@@ -1025,18 +1084,18 @@ object httpMod {
     @JSName("on")
     def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
-    def on_request(event: request, listener: RequestListener): this.type = js.native
+    def on_request(event: request, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("on")
     def on_upgrade(
       event: upgrade,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     
     def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
-    def once_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    def once_checkContinue(event: checkContinue, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("once")
-    def once_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    def once_checkExpectation(event: checkExpectation, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("once")
     def once_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
     @JSName("once")
@@ -1044,7 +1103,7 @@ object httpMod {
     @JSName("once")
     def once_connect(
       event: connect,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     @JSName("once")
     def once_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
@@ -1053,18 +1112,18 @@ object httpMod {
     @JSName("once")
     def once_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
-    def once_request(event: request, listener: RequestListener): this.type = js.native
+    def once_request(event: request, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("once")
     def once_upgrade(
       event: upgrade,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     
     def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    def prependListener_checkContinue(event: checkContinue, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    def prependListener_checkExpectation(event: checkExpectation, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependListener")
     def prependListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
     @JSName("prependListener")
@@ -1072,7 +1131,7 @@ object httpMod {
     @JSName("prependListener")
     def prependListener_connect(
       event: connect,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     @JSName("prependListener")
     def prependListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
@@ -1081,18 +1140,18 @@ object httpMod {
     @JSName("prependListener")
     def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
-    def prependListener_request(event: request, listener: RequestListener): this.type = js.native
+    def prependListener_request(event: request, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependListener")
     def prependListener_upgrade(
       event: upgrade,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     
     def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_checkContinue(event: checkContinue, listener: RequestListener): this.type = js.native
+    def prependOnceListener_checkContinue(event: checkContinue, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_checkExpectation(event: checkExpectation, listener: RequestListener): this.type = js.native
+    def prependOnceListener_checkExpectation(event: checkExpectation, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_clientError(event: clientError, listener: js.Function2[/* err */ js.Error, /* socket */ Duplex, Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -1100,7 +1159,7 @@ object httpMod {
     @JSName("prependOnceListener")
     def prependOnceListener_connect(
       event: connect,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
@@ -1109,11 +1168,11 @@ object httpMod {
     @JSName("prependOnceListener")
     def prependOnceListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
-    def prependOnceListener_request(event: request, listener: RequestListener): this.type = js.native
+    def prependOnceListener_request(event: request, listener: RequestListener[Request, Response]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_upgrade(
       event: upgrade,
-      listener: js.Function3[/* req */ IncomingMessage, /* socket */ Duplex, /* head */ Buffer, Unit]
+      listener: js.Function3[/* req */ InstanceType[Request], /* socket */ Duplex, /* head */ Buffer, Unit]
     ): this.type = js.native
     
     /**
@@ -1170,8 +1229,8 @@ object httpMod {
     */
   @JSImport("http", "ServerResponse")
   @js.native
-  class ServerResponse protected () extends StObject {
-    def this(req: IncomingMessage) = this()
+  open class ServerResponse[Request /* <: IncomingMessage */] protected () extends StObject {
+    def this(req: Request) = this()
     
     def assignSocket(socket: Socket): Unit = js.native
     
@@ -1209,12 +1268,49 @@ object httpMod {
     var statusMessage: String = js.native
     
     /**
-      * Sends a HTTP/1.1 100 Continue message to the client, indicating that
+      * Sends an HTTP/1.1 100 Continue message to the client, indicating that
       * the request body should be sent. See the `'checkContinue'` event on`Server`.
       * @since v0.3.0
       */
     def writeContinue(): Unit = js.native
     def writeContinue(callback: js.Function0[Unit]): Unit = js.native
+    
+    /**
+      * Sends an HTTP/1.1 103 Early Hints message to the client with a Link header,
+      * indicating that the user agent can preload/preconnect the linked resources.
+      * The `hints` is an object containing the values of headers to be sent with
+      * early hints message. The optional `callback` argument will be called when
+      * the response message has been written.
+      *
+      * Example:
+      *
+      * ```js
+      * const earlyHintsLink = '</styles.css>; rel=preload; as=style';
+      * response.writeEarlyHints({
+      *   'link': earlyHintsLink,
+      * });
+      *
+      * const earlyHintsLinks = [
+      *   '</styles.css>; rel=preload; as=style',
+      *   '</scripts.js>; rel=preload; as=script',
+      * ];
+      * response.writeEarlyHints({
+      *   'link': earlyHintsLinks,
+      *   'x-trace-id': 'id for diagnostics'
+      * });
+      *
+      * const earlyHintsCallback = () => console.log('early hints message sent');
+      * response.writeEarlyHints({
+      *   'link': earlyHintsLinks
+      * }, earlyHintsCallback);
+      * ```
+      *
+      * @since v18.11.0
+      * @param hints An object containing the values of headers
+      * @param callback Will be called when the response message has been written
+      */
+    def writeEarlyHints(hints: Record[String, String | js.Array[String]]): Unit = js.native
+    def writeEarlyHints(hints: Record[String, String | js.Array[String]], callback: js.Function0[Unit]): Unit = js.native
     
     /**
       * Sends a response header to the request. The status code is a 3-digit HTTP
@@ -1283,7 +1379,7 @@ object httpMod {
     def writeHead(statusCode: Double, statusMessage: Unit, headers: OutgoingHttpHeaders): this.type = js.native
     
     /**
-      * Sends a HTTP/1.1 102 Processing message to the client, indicating that
+      * Sends an HTTP/1.1 102 Processing message to the client, indicating that
       * the request body should be sent.
       * @since v10.0.0
       */
@@ -1297,19 +1393,25 @@ object httpMod {
     * added to the `'request'` event.
     * @since v0.1.13
     */
-  @scala.inline
-  def createServer(): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Server]
-  @scala.inline
-  def createServer(options: ServerOptions): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[Server]
-  @scala.inline
-  def createServer(options: ServerOptions, requestListener: RequestListener): Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[Server]
-  @scala.inline
-  def createServer(requestListener: RequestListener): Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[Server]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */](): Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */](options: ServerOptions[Request, Response]): Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */](options: ServerOptions[Request, Response], requestListener: RequestListener[Request, Response]): Server[Request, Response] = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], requestListener.asInstanceOf[js.Any])).asInstanceOf[Server[Request, Response]]
+  inline def createServer[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */](requestListener: RequestListener[Request, Response]): Server[Request, Response] = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(requestListener.asInstanceOf[js.Any]).asInstanceOf[Server[Request, Response]]
   
-  @scala.inline
-  def get(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def get(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   /**
     * Since most requests are GET requests without bodies, Node.js provides this
     * convenience method. The only difference between this method and {@link request} is that it sets the method to GET and calls `req.end()`automatically. The callback must take care to consume the
@@ -1370,28 +1472,19 @@ object httpMod {
     * @since v0.3.6
     * @param options Accepts the same `options` as {@link request}, with the `method` always set to `GET`. Properties that are inherited from the prototype are ignored.
     */
-  @scala.inline
-  def get(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def get(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def get(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def get(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("get")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   
   @JSImport("http", "globalAgent")
   @js.native
   def globalAgent: Agent = js.native
-  @scala.inline
-  def globalAgent_=(x: Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
+  inline def globalAgent_=(x: Agent): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("globalAgent")(x.asInstanceOf[js.Any])
   
   /**
     * Read-only property specifying the maximum allowed size of HTTP headers in bytes.
@@ -1401,11 +1494,11 @@ object httpMod {
   @js.native
   val maxHeaderSize: Double = js.native
   
-  @scala.inline
-  def request(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(options: String): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def request(options: String, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
   /**
+    * `options` in `socket.connect()` are also supported.
+    *
     * Node.js maintains several connections per server to make HTTP requests.
     * This function allows one to transparently issue requests.
     *
@@ -1589,22 +1682,40 @@ object httpMod {
     * request itself.
     * @since v0.3.6
     */
-  @scala.inline
-  def request(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
-  @scala.inline
-  def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(options: RequestOptions): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def request(options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(options: URL): ClientRequest = ^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any]).asInstanceOf[ClientRequest]
+  inline def request(options: URL, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(url: String, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(url: String, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(url: URL, options: RequestOptions): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  inline def request(url: URL, options: RequestOptions, callback: js.Function1[/* res */ IncomingMessage, Unit]): ClientRequest = (^.asInstanceOf[js.Dynamic].applyDynamic("request")(url.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[ClientRequest]
+  
+  /**
+    * Set the maximum number of idle HTTP parsers. Default: 1000.
+    * @param count
+    * @since v18.8.0, v16.18.0
+    */
+  inline def setMaxIdleHTTPParsers(count: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setMaxIdleHTTPParsers")(count.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  /**
+    * Performs the low-level validations on the provided name that are done when `res.setHeader(name, value)` is called.
+    * Passing illegal value as name will result in a TypeError being thrown, identified by `code: 'ERR_INVALID_HTTP_TOKEN'`.
+    * @param name Header name
+    * @since v14.3.0
+    */
+  inline def validateHeaderName(name: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("validateHeaderName")(name.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  /**
+    * Performs the low-level validations on the provided value that are done when `res.setHeader(name, value)` is called.
+    * Passing illegal value as value will result in a TypeError being thrown.
+    * - Undefined value error is identified by `code: 'ERR_HTTP_INVALID_HEADER_VALUE'`.
+    * - Invalid value character error is identified by `code: 'ERR_INVALID_CHAR'`.
+    * @param name Header name
+    * @param value Header value
+    * @since v14.3.0
+    */
+  inline def validateHeaderValue(name: String, value: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("validateHeaderValue")(name.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /* Inlined parent std.Partial<node.node:net.TcpSocketConnectOpts> */
   trait AgentOptions extends StObject {
@@ -1619,6 +1730,8 @@ object httpMod {
       * Keep sockets around in a pool to be used by other requests in the future. Default = false
       */
     var keepAlive: js.UndefOr[Boolean] = js.undefined
+    
+    var keepAliveInitialDelay: js.UndefOr[Double] = js.undefined
     
     /**
       * When using HTTP KeepAlive, how often to send TCP KeepAlive packets over sockets being kept alive. Default = 1000.
@@ -1647,6 +1760,8 @@ object httpMod {
       */
     var maxTotalSockets: js.UndefOr[Double] = js.undefined
     
+    var noDelay: js.UndefOr[Boolean] = js.undefined
+    
     var onread: js.UndefOr[OnReadOpts] = js.undefined
     
     var port: js.UndefOr[Double] = js.undefined
@@ -1664,106 +1779,87 @@ object httpMod {
   }
   object AgentOptions {
     
-    @scala.inline
-    def apply(): AgentOptions = {
+    inline def apply(): AgentOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[AgentOptions]
     }
     
-    @scala.inline
-    implicit class AgentOptionsMutableBuilder[Self <: AgentOptions] (val x: Self) extends AnyVal {
+    extension [Self <: AgentOptions](x: Self) {
       
-      @scala.inline
-      def setFamily(value: Double): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      inline def setFamily(value: Double): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
+      inline def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
       
-      @scala.inline
-      def setHints(value: Double): Self = StObject.set(x, "hints", value.asInstanceOf[js.Any])
+      inline def setHints(value: Double): Self = StObject.set(x, "hints", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHintsUndefined: Self = StObject.set(x, "hints", js.undefined)
+      inline def setHintsUndefined: Self = StObject.set(x, "hints", js.undefined)
       
-      @scala.inline
-      def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
+      inline def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
+      inline def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
       
-      @scala.inline
-      def setKeepAlive(value: Boolean): Self = StObject.set(x, "keepAlive", value.asInstanceOf[js.Any])
+      inline def setKeepAlive(value: Boolean): Self = StObject.set(x, "keepAlive", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setKeepAliveMsecs(value: Double): Self = StObject.set(x, "keepAliveMsecs", value.asInstanceOf[js.Any])
+      inline def setKeepAliveInitialDelay(value: Double): Self = StObject.set(x, "keepAliveInitialDelay", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setKeepAliveMsecsUndefined: Self = StObject.set(x, "keepAliveMsecs", js.undefined)
+      inline def setKeepAliveInitialDelayUndefined: Self = StObject.set(x, "keepAliveInitialDelay", js.undefined)
       
-      @scala.inline
-      def setKeepAliveUndefined: Self = StObject.set(x, "keepAlive", js.undefined)
+      inline def setKeepAliveMsecs(value: Double): Self = StObject.set(x, "keepAliveMsecs", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLocalAddress(value: String): Self = StObject.set(x, "localAddress", value.asInstanceOf[js.Any])
+      inline def setKeepAliveMsecsUndefined: Self = StObject.set(x, "keepAliveMsecs", js.undefined)
       
-      @scala.inline
-      def setLocalAddressUndefined: Self = StObject.set(x, "localAddress", js.undefined)
+      inline def setKeepAliveUndefined: Self = StObject.set(x, "keepAlive", js.undefined)
       
-      @scala.inline
-      def setLocalPort(value: Double): Self = StObject.set(x, "localPort", value.asInstanceOf[js.Any])
+      inline def setLocalAddress(value: String): Self = StObject.set(x, "localAddress", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLocalPortUndefined: Self = StObject.set(x, "localPort", js.undefined)
+      inline def setLocalAddressUndefined: Self = StObject.set(x, "localAddress", js.undefined)
       
-      @scala.inline
-      def setLookup(
-        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
+      inline def setLocalPort(value: Double): Self = StObject.set(x, "localPort", value.asInstanceOf[js.Any])
+      
+      inline def setLocalPortUndefined: Self = StObject.set(x, "localPort", js.undefined)
+      
+      inline def setLookup(
+        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[
+              /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+              /* address */ String, 
+              /* family */ Double, 
+              Unit
+            ]) => Unit
       ): Self = StObject.set(x, "lookup", js.Any.fromFunction3(value))
       
-      @scala.inline
-      def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
+      inline def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
       
-      @scala.inline
-      def setMaxFreeSockets(value: Double): Self = StObject.set(x, "maxFreeSockets", value.asInstanceOf[js.Any])
+      inline def setMaxFreeSockets(value: Double): Self = StObject.set(x, "maxFreeSockets", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxFreeSocketsUndefined: Self = StObject.set(x, "maxFreeSockets", js.undefined)
+      inline def setMaxFreeSocketsUndefined: Self = StObject.set(x, "maxFreeSockets", js.undefined)
       
-      @scala.inline
-      def setMaxSockets(value: Double): Self = StObject.set(x, "maxSockets", value.asInstanceOf[js.Any])
+      inline def setMaxSockets(value: Double): Self = StObject.set(x, "maxSockets", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxSocketsUndefined: Self = StObject.set(x, "maxSockets", js.undefined)
+      inline def setMaxSocketsUndefined: Self = StObject.set(x, "maxSockets", js.undefined)
       
-      @scala.inline
-      def setMaxTotalSockets(value: Double): Self = StObject.set(x, "maxTotalSockets", value.asInstanceOf[js.Any])
+      inline def setMaxTotalSockets(value: Double): Self = StObject.set(x, "maxTotalSockets", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxTotalSocketsUndefined: Self = StObject.set(x, "maxTotalSockets", js.undefined)
+      inline def setMaxTotalSocketsUndefined: Self = StObject.set(x, "maxTotalSockets", js.undefined)
       
-      @scala.inline
-      def setOnread(value: OnReadOpts): Self = StObject.set(x, "onread", value.asInstanceOf[js.Any])
+      inline def setNoDelay(value: Boolean): Self = StObject.set(x, "noDelay", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setOnreadUndefined: Self = StObject.set(x, "onread", js.undefined)
+      inline def setNoDelayUndefined: Self = StObject.set(x, "noDelay", js.undefined)
       
-      @scala.inline
-      def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+      inline def setOnread(value: OnReadOpts): Self = StObject.set(x, "onread", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
+      inline def setOnreadUndefined: Self = StObject.set(x, "onread", js.undefined)
       
-      @scala.inline
-      def setScheduling(value: fifo | lifo): Self = StObject.set(x, "scheduling", value.asInstanceOf[js.Any])
+      inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSchedulingUndefined: Self = StObject.set(x, "scheduling", js.undefined)
+      inline def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
       
-      @scala.inline
-      def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+      inline def setScheduling(value: fifo | lifo): Self = StObject.set(x, "scheduling", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+      inline def setSchedulingUndefined: Self = StObject.set(x, "scheduling", js.undefined)
+      
+      inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+      
+      inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
     }
   }
   
@@ -1821,163 +1917,119 @@ object httpMod {
   }
   object ClientRequestArgs {
     
-    @scala.inline
-    def apply(): ClientRequestArgs = {
+    inline def apply(): ClientRequestArgs = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ClientRequestArgs]
     }
     
-    @scala.inline
-    implicit class ClientRequestArgsMutableBuilder[Self <: ClientRequestArgs] (val x: Self) extends AnyVal {
+    extension [Self <: ClientRequestArgs](x: Self) {
       
-      @scala.inline
-      def setAgent(value: Agent | Boolean): Self = StObject.set(x, "agent", value.asInstanceOf[js.Any])
+      inline def setAgent(value: Agent | Boolean): Self = StObject.set(x, "agent", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAgentUndefined: Self = StObject.set(x, "agent", js.undefined)
+      inline def setAgentUndefined: Self = StObject.set(x, "agent", js.undefined)
       
-      @scala.inline
-      def setAuth(value: String): Self = StObject.set(x, "auth", value.asInstanceOf[js.Any])
+      inline def setAuth(value: String): Self = StObject.set(x, "auth", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAuthNull: Self = StObject.set(x, "auth", null)
+      inline def setAuthNull: Self = StObject.set(x, "auth", null)
       
-      @scala.inline
-      def setAuthUndefined: Self = StObject.set(x, "auth", js.undefined)
+      inline def setAuthUndefined: Self = StObject.set(x, "auth", js.undefined)
       
-      @scala.inline
-      def setCreateConnection(
+      inline def setCreateConnection(
         value: (ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket
       ): Self = StObject.set(x, "createConnection", js.Any.fromFunction2(value))
       
-      @scala.inline
-      def setCreateConnectionUndefined: Self = StObject.set(x, "createConnection", js.undefined)
+      inline def setCreateConnectionUndefined: Self = StObject.set(x, "createConnection", js.undefined)
       
-      @scala.inline
-      def setDefaultPort(value: Double | String): Self = StObject.set(x, "defaultPort", value.asInstanceOf[js.Any])
+      inline def setDefaultPort(value: Double | String): Self = StObject.set(x, "defaultPort", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDefaultPortUndefined: Self = StObject.set(x, "defaultPort", js.undefined)
+      inline def setDefaultPortUndefined: Self = StObject.set(x, "defaultPort", js.undefined)
       
-      @scala.inline
-      def setFamily(value: Double): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      inline def setFamily(value: Double): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
+      inline def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
       
-      @scala.inline
-      def setHeaders(value: OutgoingHttpHeaders): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+      inline def setHeaders(value: OutgoingHttpHeaders): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
+      inline def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
       
-      @scala.inline
-      def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
+      inline def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHostNull: Self = StObject.set(x, "host", null)
+      inline def setHostNull: Self = StObject.set(x, "host", null)
       
-      @scala.inline
-      def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
+      inline def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
       
-      @scala.inline
-      def setHostname(value: String): Self = StObject.set(x, "hostname", value.asInstanceOf[js.Any])
+      inline def setHostname(value: String): Self = StObject.set(x, "hostname", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHostnameNull: Self = StObject.set(x, "hostname", null)
+      inline def setHostnameNull: Self = StObject.set(x, "hostname", null)
       
-      @scala.inline
-      def setHostnameUndefined: Self = StObject.set(x, "hostname", js.undefined)
+      inline def setHostnameUndefined: Self = StObject.set(x, "hostname", js.undefined)
       
-      @scala.inline
-      def setLocalAddress(value: String): Self = StObject.set(x, "localAddress", value.asInstanceOf[js.Any])
+      inline def setLocalAddress(value: String): Self = StObject.set(x, "localAddress", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLocalAddressUndefined: Self = StObject.set(x, "localAddress", js.undefined)
+      inline def setLocalAddressUndefined: Self = StObject.set(x, "localAddress", js.undefined)
       
-      @scala.inline
-      def setLookup(
-        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[/* err */ ErrnoException | Null, /* address */ String, /* family */ Double, Unit]) => Unit
+      inline def setLookup(
+        value: (/* hostname */ String, /* options */ LookupOneOptions, /* callback */ js.Function3[
+              /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+              /* address */ String, 
+              /* family */ Double, 
+              Unit
+            ]) => Unit
       ): Self = StObject.set(x, "lookup", js.Any.fromFunction3(value))
       
-      @scala.inline
-      def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
+      inline def setLookupUndefined: Self = StObject.set(x, "lookup", js.undefined)
       
-      @scala.inline
-      def setMaxHeaderSize(value: Double): Self = StObject.set(x, "maxHeaderSize", value.asInstanceOf[js.Any])
+      inline def setMaxHeaderSize(value: Double): Self = StObject.set(x, "maxHeaderSize", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxHeaderSizeUndefined: Self = StObject.set(x, "maxHeaderSize", js.undefined)
+      inline def setMaxHeaderSizeUndefined: Self = StObject.set(x, "maxHeaderSize", js.undefined)
       
-      @scala.inline
-      def setMethod(value: String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
+      inline def setMethod(value: String): Self = StObject.set(x, "method", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMethodUndefined: Self = StObject.set(x, "method", js.undefined)
+      inline def setMethodUndefined: Self = StObject.set(x, "method", js.undefined)
       
-      @scala.inline
-      def setPath(value: String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
+      inline def setPath(value: String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPathNull: Self = StObject.set(x, "path", null)
+      inline def setPathNull: Self = StObject.set(x, "path", null)
       
-      @scala.inline
-      def setPathUndefined: Self = StObject.set(x, "path", js.undefined)
+      inline def setPathUndefined: Self = StObject.set(x, "path", js.undefined)
       
-      @scala.inline
-      def setPort(value: Double | String): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+      inline def setPort(value: Double | String): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPortNull: Self = StObject.set(x, "port", null)
+      inline def setPortNull: Self = StObject.set(x, "port", null)
       
-      @scala.inline
-      def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
+      inline def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
       
-      @scala.inline
-      def setProtocol(value: String): Self = StObject.set(x, "protocol", value.asInstanceOf[js.Any])
+      inline def setProtocol(value: String): Self = StObject.set(x, "protocol", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setProtocolNull: Self = StObject.set(x, "protocol", null)
+      inline def setProtocolNull: Self = StObject.set(x, "protocol", null)
       
-      @scala.inline
-      def setProtocolUndefined: Self = StObject.set(x, "protocol", js.undefined)
+      inline def setProtocolUndefined: Self = StObject.set(x, "protocol", js.undefined)
       
-      @scala.inline
-      def setSetHost(value: Boolean): Self = StObject.set(x, "setHost", value.asInstanceOf[js.Any])
+      inline def setSetHost(value: Boolean): Self = StObject.set(x, "setHost", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSetHostUndefined: Self = StObject.set(x, "setHost", js.undefined)
+      inline def setSetHostUndefined: Self = StObject.set(x, "setHost", js.undefined)
       
-      @scala.inline
-      def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+      inline def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
+      inline def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
       
-      @scala.inline
-      def setSocketPath(value: String): Self = StObject.set(x, "socketPath", value.asInstanceOf[js.Any])
+      inline def setSocketPath(value: String): Self = StObject.set(x, "socketPath", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSocketPathUndefined: Self = StObject.set(x, "socketPath", js.undefined)
+      inline def setSocketPathUndefined: Self = StObject.set(x, "socketPath", js.undefined)
       
-      @scala.inline
-      def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+      inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+      inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
       
-      @scala.inline
-      def set_defaultAgent(value: Agent): Self = StObject.set(x, "_defaultAgent", value.asInstanceOf[js.Any])
+      inline def set_defaultAgent(value: Agent): Self = StObject.set(x, "_defaultAgent", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def set_defaultAgentUndefined: Self = StObject.set(x, "_defaultAgent", js.undefined)
+      inline def set_defaultAgentUndefined: Self = StObject.set(x, "_defaultAgent", js.undefined)
     }
   }
   
   // incoming headers will never contain number
-  trait IncomingHttpHeaders
-    extends StObject
-       with Dict[String | js.Array[String]] {
+  /* import warning: RemoveDifficultInheritance.summarizeChanges 
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string | Array<string>> * / any */ trait IncomingHttpHeaders extends StObject {
     
     var accept: js.UndefOr[String] = js.undefined
     
@@ -2107,395 +2159,266 @@ object httpMod {
   }
   object IncomingHttpHeaders {
     
-    @scala.inline
-    def apply(): IncomingHttpHeaders = {
+    inline def apply(): IncomingHttpHeaders = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[IncomingHttpHeaders]
     }
     
-    @scala.inline
-    implicit class IncomingHttpHeadersMutableBuilder[Self <: IncomingHttpHeaders] (val x: Self) extends AnyVal {
+    extension [Self <: IncomingHttpHeaders](x: Self) {
       
-      @scala.inline
-      def setAccept(value: String): Self = StObject.set(x, "accept", value.asInstanceOf[js.Any])
+      inline def setAccept(value: String): Self = StObject.set(x, "accept", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccept-language`(value: String): Self = StObject.set(x, "accept-language", value.asInstanceOf[js.Any])
+      inline def `setAccept-language`(value: String): Self = StObject.set(x, "accept-language", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccept-languageUndefined`: Self = StObject.set(x, "accept-language", js.undefined)
+      inline def `setAccept-languageUndefined`: Self = StObject.set(x, "accept-language", js.undefined)
       
-      @scala.inline
-      def `setAccept-patch`(value: String): Self = StObject.set(x, "accept-patch", value.asInstanceOf[js.Any])
+      inline def `setAccept-patch`(value: String): Self = StObject.set(x, "accept-patch", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccept-patchUndefined`: Self = StObject.set(x, "accept-patch", js.undefined)
+      inline def `setAccept-patchUndefined`: Self = StObject.set(x, "accept-patch", js.undefined)
       
-      @scala.inline
-      def `setAccept-ranges`(value: String): Self = StObject.set(x, "accept-ranges", value.asInstanceOf[js.Any])
+      inline def `setAccept-ranges`(value: String): Self = StObject.set(x, "accept-ranges", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccept-rangesUndefined`: Self = StObject.set(x, "accept-ranges", js.undefined)
+      inline def `setAccept-rangesUndefined`: Self = StObject.set(x, "accept-ranges", js.undefined)
       
-      @scala.inline
-      def setAcceptUndefined: Self = StObject.set(x, "accept", js.undefined)
+      inline def setAcceptUndefined: Self = StObject.set(x, "accept", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-allow-credentials`(value: String): Self = StObject.set(x, "access-control-allow-credentials", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-allow-credentials`(value: String): Self = StObject.set(x, "access-control-allow-credentials", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-allow-credentialsUndefined`: Self = StObject.set(x, "access-control-allow-credentials", js.undefined)
+      inline def `setAccess-control-allow-credentialsUndefined`: Self = StObject.set(x, "access-control-allow-credentials", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-allow-headers`(value: String): Self = StObject.set(x, "access-control-allow-headers", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-allow-headers`(value: String): Self = StObject.set(x, "access-control-allow-headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-allow-headersUndefined`: Self = StObject.set(x, "access-control-allow-headers", js.undefined)
+      inline def `setAccess-control-allow-headersUndefined`: Self = StObject.set(x, "access-control-allow-headers", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-allow-methods`(value: String): Self = StObject.set(x, "access-control-allow-methods", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-allow-methods`(value: String): Self = StObject.set(x, "access-control-allow-methods", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-allow-methodsUndefined`: Self = StObject.set(x, "access-control-allow-methods", js.undefined)
+      inline def `setAccess-control-allow-methodsUndefined`: Self = StObject.set(x, "access-control-allow-methods", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-allow-origin`(value: String): Self = StObject.set(x, "access-control-allow-origin", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-allow-origin`(value: String): Self = StObject.set(x, "access-control-allow-origin", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-allow-originUndefined`: Self = StObject.set(x, "access-control-allow-origin", js.undefined)
+      inline def `setAccess-control-allow-originUndefined`: Self = StObject.set(x, "access-control-allow-origin", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-expose-headers`(value: String): Self = StObject.set(x, "access-control-expose-headers", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-expose-headers`(value: String): Self = StObject.set(x, "access-control-expose-headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-expose-headersUndefined`: Self = StObject.set(x, "access-control-expose-headers", js.undefined)
+      inline def `setAccess-control-expose-headersUndefined`: Self = StObject.set(x, "access-control-expose-headers", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-max-age`(value: String): Self = StObject.set(x, "access-control-max-age", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-max-age`(value: String): Self = StObject.set(x, "access-control-max-age", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-max-ageUndefined`: Self = StObject.set(x, "access-control-max-age", js.undefined)
+      inline def `setAccess-control-max-ageUndefined`: Self = StObject.set(x, "access-control-max-age", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-request-headers`(value: String): Self = StObject.set(x, "access-control-request-headers", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-request-headers`(value: String): Self = StObject.set(x, "access-control-request-headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-request-headersUndefined`: Self = StObject.set(x, "access-control-request-headers", js.undefined)
+      inline def `setAccess-control-request-headersUndefined`: Self = StObject.set(x, "access-control-request-headers", js.undefined)
       
-      @scala.inline
-      def `setAccess-control-request-method`(value: String): Self = StObject.set(x, "access-control-request-method", value.asInstanceOf[js.Any])
+      inline def `setAccess-control-request-method`(value: String): Self = StObject.set(x, "access-control-request-method", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAccess-control-request-methodUndefined`: Self = StObject.set(x, "access-control-request-method", js.undefined)
+      inline def `setAccess-control-request-methodUndefined`: Self = StObject.set(x, "access-control-request-method", js.undefined)
       
-      @scala.inline
-      def setAge(value: String): Self = StObject.set(x, "age", value.asInstanceOf[js.Any])
+      inline def setAge(value: String): Self = StObject.set(x, "age", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAgeUndefined: Self = StObject.set(x, "age", js.undefined)
+      inline def setAgeUndefined: Self = StObject.set(x, "age", js.undefined)
       
-      @scala.inline
-      def setAllow(value: String): Self = StObject.set(x, "allow", value.asInstanceOf[js.Any])
+      inline def setAllow(value: String): Self = StObject.set(x, "allow", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAllowUndefined: Self = StObject.set(x, "allow", js.undefined)
+      inline def setAllowUndefined: Self = StObject.set(x, "allow", js.undefined)
       
-      @scala.inline
-      def `setAlt-svc`(value: String): Self = StObject.set(x, "alt-svc", value.asInstanceOf[js.Any])
+      inline def `setAlt-svc`(value: String): Self = StObject.set(x, "alt-svc", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setAlt-svcUndefined`: Self = StObject.set(x, "alt-svc", js.undefined)
+      inline def `setAlt-svcUndefined`: Self = StObject.set(x, "alt-svc", js.undefined)
       
-      @scala.inline
-      def setAuthorization(value: String): Self = StObject.set(x, "authorization", value.asInstanceOf[js.Any])
+      inline def setAuthorization(value: String): Self = StObject.set(x, "authorization", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAuthorizationUndefined: Self = StObject.set(x, "authorization", js.undefined)
+      inline def setAuthorizationUndefined: Self = StObject.set(x, "authorization", js.undefined)
       
-      @scala.inline
-      def `setCache-control`(value: String): Self = StObject.set(x, "cache-control", value.asInstanceOf[js.Any])
+      inline def `setCache-control`(value: String): Self = StObject.set(x, "cache-control", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setCache-controlUndefined`: Self = StObject.set(x, "cache-control", js.undefined)
+      inline def `setCache-controlUndefined`: Self = StObject.set(x, "cache-control", js.undefined)
       
-      @scala.inline
-      def setConnection(value: String): Self = StObject.set(x, "connection", value.asInstanceOf[js.Any])
+      inline def setConnection(value: String): Self = StObject.set(x, "connection", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setConnectionUndefined: Self = StObject.set(x, "connection", js.undefined)
+      inline def setConnectionUndefined: Self = StObject.set(x, "connection", js.undefined)
       
-      @scala.inline
-      def `setContent-disposition`(value: String): Self = StObject.set(x, "content-disposition", value.asInstanceOf[js.Any])
+      inline def `setContent-disposition`(value: String): Self = StObject.set(x, "content-disposition", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-dispositionUndefined`: Self = StObject.set(x, "content-disposition", js.undefined)
+      inline def `setContent-dispositionUndefined`: Self = StObject.set(x, "content-disposition", js.undefined)
       
-      @scala.inline
-      def `setContent-encoding`(value: String): Self = StObject.set(x, "content-encoding", value.asInstanceOf[js.Any])
+      inline def `setContent-encoding`(value: String): Self = StObject.set(x, "content-encoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-encodingUndefined`: Self = StObject.set(x, "content-encoding", js.undefined)
+      inline def `setContent-encodingUndefined`: Self = StObject.set(x, "content-encoding", js.undefined)
       
-      @scala.inline
-      def `setContent-language`(value: String): Self = StObject.set(x, "content-language", value.asInstanceOf[js.Any])
+      inline def `setContent-language`(value: String): Self = StObject.set(x, "content-language", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-languageUndefined`: Self = StObject.set(x, "content-language", js.undefined)
+      inline def `setContent-languageUndefined`: Self = StObject.set(x, "content-language", js.undefined)
       
-      @scala.inline
-      def `setContent-length`(value: String): Self = StObject.set(x, "content-length", value.asInstanceOf[js.Any])
+      inline def `setContent-length`(value: String): Self = StObject.set(x, "content-length", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-lengthUndefined`: Self = StObject.set(x, "content-length", js.undefined)
+      inline def `setContent-lengthUndefined`: Self = StObject.set(x, "content-length", js.undefined)
       
-      @scala.inline
-      def `setContent-location`(value: String): Self = StObject.set(x, "content-location", value.asInstanceOf[js.Any])
+      inline def `setContent-location`(value: String): Self = StObject.set(x, "content-location", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-locationUndefined`: Self = StObject.set(x, "content-location", js.undefined)
+      inline def `setContent-locationUndefined`: Self = StObject.set(x, "content-location", js.undefined)
       
-      @scala.inline
-      def `setContent-range`(value: String): Self = StObject.set(x, "content-range", value.asInstanceOf[js.Any])
+      inline def `setContent-range`(value: String): Self = StObject.set(x, "content-range", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-rangeUndefined`: Self = StObject.set(x, "content-range", js.undefined)
+      inline def `setContent-rangeUndefined`: Self = StObject.set(x, "content-range", js.undefined)
       
-      @scala.inline
-      def `setContent-type`(value: String): Self = StObject.set(x, "content-type", value.asInstanceOf[js.Any])
+      inline def `setContent-type`(value: String): Self = StObject.set(x, "content-type", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setContent-typeUndefined`: Self = StObject.set(x, "content-type", js.undefined)
+      inline def `setContent-typeUndefined`: Self = StObject.set(x, "content-type", js.undefined)
       
-      @scala.inline
-      def setCookie(value: String): Self = StObject.set(x, "cookie", value.asInstanceOf[js.Any])
+      inline def setCookie(value: String): Self = StObject.set(x, "cookie", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCookieUndefined: Self = StObject.set(x, "cookie", js.undefined)
+      inline def setCookieUndefined: Self = StObject.set(x, "cookie", js.undefined)
       
-      @scala.inline
-      def setDate(value: String): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
+      inline def setDate(value: String): Self = StObject.set(x, "date", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDateUndefined: Self = StObject.set(x, "date", js.undefined)
+      inline def setDateUndefined: Self = StObject.set(x, "date", js.undefined)
       
-      @scala.inline
-      def setEtag(value: String): Self = StObject.set(x, "etag", value.asInstanceOf[js.Any])
+      inline def setEtag(value: String): Self = StObject.set(x, "etag", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEtagUndefined: Self = StObject.set(x, "etag", js.undefined)
+      inline def setEtagUndefined: Self = StObject.set(x, "etag", js.undefined)
       
-      @scala.inline
-      def setExpect(value: String): Self = StObject.set(x, "expect", value.asInstanceOf[js.Any])
+      inline def setExpect(value: String): Self = StObject.set(x, "expect", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExpectUndefined: Self = StObject.set(x, "expect", js.undefined)
+      inline def setExpectUndefined: Self = StObject.set(x, "expect", js.undefined)
       
-      @scala.inline
-      def setExpires(value: String): Self = StObject.set(x, "expires", value.asInstanceOf[js.Any])
+      inline def setExpires(value: String): Self = StObject.set(x, "expires", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExpiresUndefined: Self = StObject.set(x, "expires", js.undefined)
+      inline def setExpiresUndefined: Self = StObject.set(x, "expires", js.undefined)
       
-      @scala.inline
-      def setForwarded(value: String): Self = StObject.set(x, "forwarded", value.asInstanceOf[js.Any])
+      inline def setForwarded(value: String): Self = StObject.set(x, "forwarded", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setForwardedUndefined: Self = StObject.set(x, "forwarded", js.undefined)
+      inline def setForwardedUndefined: Self = StObject.set(x, "forwarded", js.undefined)
       
-      @scala.inline
-      def setFrom(value: String): Self = StObject.set(x, "from", value.asInstanceOf[js.Any])
+      inline def setFrom(value: String): Self = StObject.set(x, "from", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFromUndefined: Self = StObject.set(x, "from", js.undefined)
+      inline def setFromUndefined: Self = StObject.set(x, "from", js.undefined)
       
-      @scala.inline
-      def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
+      inline def setHost(value: String): Self = StObject.set(x, "host", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
+      inline def setHostUndefined: Self = StObject.set(x, "host", js.undefined)
       
-      @scala.inline
-      def `setIf-match`(value: String): Self = StObject.set(x, "if-match", value.asInstanceOf[js.Any])
+      inline def `setIf-match`(value: String): Self = StObject.set(x, "if-match", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setIf-matchUndefined`: Self = StObject.set(x, "if-match", js.undefined)
+      inline def `setIf-matchUndefined`: Self = StObject.set(x, "if-match", js.undefined)
       
-      @scala.inline
-      def `setIf-modified-since`(value: String): Self = StObject.set(x, "if-modified-since", value.asInstanceOf[js.Any])
+      inline def `setIf-modified-since`(value: String): Self = StObject.set(x, "if-modified-since", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setIf-modified-sinceUndefined`: Self = StObject.set(x, "if-modified-since", js.undefined)
+      inline def `setIf-modified-sinceUndefined`: Self = StObject.set(x, "if-modified-since", js.undefined)
       
-      @scala.inline
-      def `setIf-none-match`(value: String): Self = StObject.set(x, "if-none-match", value.asInstanceOf[js.Any])
+      inline def `setIf-none-match`(value: String): Self = StObject.set(x, "if-none-match", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setIf-none-matchUndefined`: Self = StObject.set(x, "if-none-match", js.undefined)
+      inline def `setIf-none-matchUndefined`: Self = StObject.set(x, "if-none-match", js.undefined)
       
-      @scala.inline
-      def `setIf-unmodified-since`(value: String): Self = StObject.set(x, "if-unmodified-since", value.asInstanceOf[js.Any])
+      inline def `setIf-unmodified-since`(value: String): Self = StObject.set(x, "if-unmodified-since", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setIf-unmodified-sinceUndefined`: Self = StObject.set(x, "if-unmodified-since", js.undefined)
+      inline def `setIf-unmodified-sinceUndefined`: Self = StObject.set(x, "if-unmodified-since", js.undefined)
       
-      @scala.inline
-      def `setLast-modified`(value: String): Self = StObject.set(x, "last-modified", value.asInstanceOf[js.Any])
+      inline def `setLast-modified`(value: String): Self = StObject.set(x, "last-modified", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setLast-modifiedUndefined`: Self = StObject.set(x, "last-modified", js.undefined)
+      inline def `setLast-modifiedUndefined`: Self = StObject.set(x, "last-modified", js.undefined)
       
-      @scala.inline
-      def setLocation(value: String): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
+      inline def setLocation(value: String): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLocationUndefined: Self = StObject.set(x, "location", js.undefined)
+      inline def setLocationUndefined: Self = StObject.set(x, "location", js.undefined)
       
-      @scala.inline
-      def setOrigin(value: String): Self = StObject.set(x, "origin", value.asInstanceOf[js.Any])
+      inline def setOrigin(value: String): Self = StObject.set(x, "origin", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
+      inline def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
       
-      @scala.inline
-      def setPragma(value: String): Self = StObject.set(x, "pragma", value.asInstanceOf[js.Any])
+      inline def setPragma(value: String): Self = StObject.set(x, "pragma", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPragmaUndefined: Self = StObject.set(x, "pragma", js.undefined)
+      inline def setPragmaUndefined: Self = StObject.set(x, "pragma", js.undefined)
       
-      @scala.inline
-      def `setProxy-authenticate`(value: String): Self = StObject.set(x, "proxy-authenticate", value.asInstanceOf[js.Any])
+      inline def `setProxy-authenticate`(value: String): Self = StObject.set(x, "proxy-authenticate", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setProxy-authenticateUndefined`: Self = StObject.set(x, "proxy-authenticate", js.undefined)
+      inline def `setProxy-authenticateUndefined`: Self = StObject.set(x, "proxy-authenticate", js.undefined)
       
-      @scala.inline
-      def `setProxy-authorization`(value: String): Self = StObject.set(x, "proxy-authorization", value.asInstanceOf[js.Any])
+      inline def `setProxy-authorization`(value: String): Self = StObject.set(x, "proxy-authorization", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setProxy-authorizationUndefined`: Self = StObject.set(x, "proxy-authorization", js.undefined)
+      inline def `setProxy-authorizationUndefined`: Self = StObject.set(x, "proxy-authorization", js.undefined)
       
-      @scala.inline
-      def `setPublic-key-pins`(value: String): Self = StObject.set(x, "public-key-pins", value.asInstanceOf[js.Any])
+      inline def `setPublic-key-pins`(value: String): Self = StObject.set(x, "public-key-pins", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setPublic-key-pinsUndefined`: Self = StObject.set(x, "public-key-pins", js.undefined)
+      inline def `setPublic-key-pinsUndefined`: Self = StObject.set(x, "public-key-pins", js.undefined)
       
-      @scala.inline
-      def setRange(value: String): Self = StObject.set(x, "range", value.asInstanceOf[js.Any])
+      inline def setRange(value: String): Self = StObject.set(x, "range", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setRangeUndefined: Self = StObject.set(x, "range", js.undefined)
+      inline def setRangeUndefined: Self = StObject.set(x, "range", js.undefined)
       
-      @scala.inline
-      def setReferer(value: String): Self = StObject.set(x, "referer", value.asInstanceOf[js.Any])
+      inline def setReferer(value: String): Self = StObject.set(x, "referer", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setRefererUndefined: Self = StObject.set(x, "referer", js.undefined)
+      inline def setRefererUndefined: Self = StObject.set(x, "referer", js.undefined)
       
-      @scala.inline
-      def `setRetry-after`(value: String): Self = StObject.set(x, "retry-after", value.asInstanceOf[js.Any])
+      inline def `setRetry-after`(value: String): Self = StObject.set(x, "retry-after", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setRetry-afterUndefined`: Self = StObject.set(x, "retry-after", js.undefined)
+      inline def `setRetry-afterUndefined`: Self = StObject.set(x, "retry-after", js.undefined)
       
-      @scala.inline
-      def `setSec-websocket-accept`(value: String): Self = StObject.set(x, "sec-websocket-accept", value.asInstanceOf[js.Any])
+      inline def `setSec-websocket-accept`(value: String): Self = StObject.set(x, "sec-websocket-accept", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSec-websocket-acceptUndefined`: Self = StObject.set(x, "sec-websocket-accept", js.undefined)
+      inline def `setSec-websocket-acceptUndefined`: Self = StObject.set(x, "sec-websocket-accept", js.undefined)
       
-      @scala.inline
-      def `setSec-websocket-extensions`(value: String): Self = StObject.set(x, "sec-websocket-extensions", value.asInstanceOf[js.Any])
+      inline def `setSec-websocket-extensions`(value: String): Self = StObject.set(x, "sec-websocket-extensions", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSec-websocket-extensionsUndefined`: Self = StObject.set(x, "sec-websocket-extensions", js.undefined)
+      inline def `setSec-websocket-extensionsUndefined`: Self = StObject.set(x, "sec-websocket-extensions", js.undefined)
       
-      @scala.inline
-      def `setSec-websocket-key`(value: String): Self = StObject.set(x, "sec-websocket-key", value.asInstanceOf[js.Any])
+      inline def `setSec-websocket-key`(value: String): Self = StObject.set(x, "sec-websocket-key", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSec-websocket-keyUndefined`: Self = StObject.set(x, "sec-websocket-key", js.undefined)
+      inline def `setSec-websocket-keyUndefined`: Self = StObject.set(x, "sec-websocket-key", js.undefined)
       
-      @scala.inline
-      def `setSec-websocket-protocol`(value: String): Self = StObject.set(x, "sec-websocket-protocol", value.asInstanceOf[js.Any])
+      inline def `setSec-websocket-protocol`(value: String): Self = StObject.set(x, "sec-websocket-protocol", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSec-websocket-protocolUndefined`: Self = StObject.set(x, "sec-websocket-protocol", js.undefined)
+      inline def `setSec-websocket-protocolUndefined`: Self = StObject.set(x, "sec-websocket-protocol", js.undefined)
       
-      @scala.inline
-      def `setSec-websocket-version`(value: String): Self = StObject.set(x, "sec-websocket-version", value.asInstanceOf[js.Any])
+      inline def `setSec-websocket-version`(value: String): Self = StObject.set(x, "sec-websocket-version", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSec-websocket-versionUndefined`: Self = StObject.set(x, "sec-websocket-version", js.undefined)
+      inline def `setSec-websocket-versionUndefined`: Self = StObject.set(x, "sec-websocket-version", js.undefined)
       
-      @scala.inline
-      def `setSet-cookie`(value: js.Array[String]): Self = StObject.set(x, "set-cookie", value.asInstanceOf[js.Any])
+      inline def `setSet-cookie`(value: js.Array[String]): Self = StObject.set(x, "set-cookie", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setSet-cookieUndefined`: Self = StObject.set(x, "set-cookie", js.undefined)
+      inline def `setSet-cookieUndefined`: Self = StObject.set(x, "set-cookie", js.undefined)
       
-      @scala.inline
-      def `setSet-cookieVarargs`(value: String*): Self = StObject.set(x, "set-cookie", js.Array(value :_*))
+      inline def `setSet-cookieVarargs`(value: String*): Self = StObject.set(x, "set-cookie", js.Array(value*))
       
-      @scala.inline
-      def `setStrict-transport-security`(value: String): Self = StObject.set(x, "strict-transport-security", value.asInstanceOf[js.Any])
+      inline def `setStrict-transport-security`(value: String): Self = StObject.set(x, "strict-transport-security", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setStrict-transport-securityUndefined`: Self = StObject.set(x, "strict-transport-security", js.undefined)
+      inline def `setStrict-transport-securityUndefined`: Self = StObject.set(x, "strict-transport-security", js.undefined)
       
-      @scala.inline
-      def setTk(value: String): Self = StObject.set(x, "tk", value.asInstanceOf[js.Any])
+      inline def setTk(value: String): Self = StObject.set(x, "tk", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTkUndefined: Self = StObject.set(x, "tk", js.undefined)
+      inline def setTkUndefined: Self = StObject.set(x, "tk", js.undefined)
       
-      @scala.inline
-      def setTrailer(value: String): Self = StObject.set(x, "trailer", value.asInstanceOf[js.Any])
+      inline def setTrailer(value: String): Self = StObject.set(x, "trailer", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTrailerUndefined: Self = StObject.set(x, "trailer", js.undefined)
+      inline def setTrailerUndefined: Self = StObject.set(x, "trailer", js.undefined)
       
-      @scala.inline
-      def `setTransfer-encoding`(value: String): Self = StObject.set(x, "transfer-encoding", value.asInstanceOf[js.Any])
+      inline def `setTransfer-encoding`(value: String): Self = StObject.set(x, "transfer-encoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setTransfer-encodingUndefined`: Self = StObject.set(x, "transfer-encoding", js.undefined)
+      inline def `setTransfer-encodingUndefined`: Self = StObject.set(x, "transfer-encoding", js.undefined)
       
-      @scala.inline
-      def setUpgrade(value: String): Self = StObject.set(x, "upgrade", value.asInstanceOf[js.Any])
+      inline def setUpgrade(value: String): Self = StObject.set(x, "upgrade", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUpgradeUndefined: Self = StObject.set(x, "upgrade", js.undefined)
+      inline def setUpgradeUndefined: Self = StObject.set(x, "upgrade", js.undefined)
       
-      @scala.inline
-      def `setUser-agent`(value: String): Self = StObject.set(x, "user-agent", value.asInstanceOf[js.Any])
+      inline def `setUser-agent`(value: String): Self = StObject.set(x, "user-agent", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setUser-agentUndefined`: Self = StObject.set(x, "user-agent", js.undefined)
+      inline def `setUser-agentUndefined`: Self = StObject.set(x, "user-agent", js.undefined)
       
-      @scala.inline
-      def setVary(value: String): Self = StObject.set(x, "vary", value.asInstanceOf[js.Any])
+      inline def setVary(value: String): Self = StObject.set(x, "vary", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setVaryUndefined: Self = StObject.set(x, "vary", js.undefined)
+      inline def setVaryUndefined: Self = StObject.set(x, "vary", js.undefined)
       
-      @scala.inline
-      def setVia(value: String): Self = StObject.set(x, "via", value.asInstanceOf[js.Any])
+      inline def setVia(value: String): Self = StObject.set(x, "via", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setViaUndefined: Self = StObject.set(x, "via", js.undefined)
+      inline def setViaUndefined: Self = StObject.set(x, "via", js.undefined)
       
-      @scala.inline
-      def setWarning(value: String): Self = StObject.set(x, "warning", value.asInstanceOf[js.Any])
+      inline def setWarning(value: String): Self = StObject.set(x, "warning", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWarningUndefined: Self = StObject.set(x, "warning", js.undefined)
+      inline def setWarningUndefined: Self = StObject.set(x, "warning", js.undefined)
       
-      @scala.inline
-      def `setWww-authenticate`(value: String): Self = StObject.set(x, "www-authenticate", value.asInstanceOf[js.Any])
+      inline def `setWww-authenticate`(value: String): Self = StObject.set(x, "www-authenticate", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def `setWww-authenticateUndefined`: Self = StObject.set(x, "www-authenticate", js.undefined)
+      inline def `setWww-authenticateUndefined`: Self = StObject.set(x, "www-authenticate", js.undefined)
     }
   }
   
@@ -2517,8 +2440,7 @@ object httpMod {
   }
   object InformationEvent {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       headers: IncomingHttpHeaders,
       httpVersion: String,
       httpVersionMajor: Double,
@@ -2531,51 +2453,52 @@ object httpMod {
       __obj.asInstanceOf[InformationEvent]
     }
     
-    @scala.inline
-    implicit class InformationEventMutableBuilder[Self <: InformationEvent] (val x: Self) extends AnyVal {
+    extension [Self <: InformationEvent](x: Self) {
       
-      @scala.inline
-      def setHeaders(value: IncomingHttpHeaders): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+      inline def setHeaders(value: IncomingHttpHeaders): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHttpVersion(value: String): Self = StObject.set(x, "httpVersion", value.asInstanceOf[js.Any])
+      inline def setHttpVersion(value: String): Self = StObject.set(x, "httpVersion", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHttpVersionMajor(value: Double): Self = StObject.set(x, "httpVersionMajor", value.asInstanceOf[js.Any])
+      inline def setHttpVersionMajor(value: Double): Self = StObject.set(x, "httpVersionMajor", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHttpVersionMinor(value: Double): Self = StObject.set(x, "httpVersionMinor", value.asInstanceOf[js.Any])
+      inline def setHttpVersionMinor(value: Double): Self = StObject.set(x, "httpVersionMinor", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setRawHeaders(value: js.Array[String]): Self = StObject.set(x, "rawHeaders", value.asInstanceOf[js.Any])
+      inline def setRawHeaders(value: js.Array[String]): Self = StObject.set(x, "rawHeaders", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setRawHeadersVarargs(value: String*): Self = StObject.set(x, "rawHeaders", js.Array(value :_*))
+      inline def setRawHeadersVarargs(value: String*): Self = StObject.set(x, "rawHeaders", js.Array(value*))
       
-      @scala.inline
-      def setStatusCode(value: Double): Self = StObject.set(x, "statusCode", value.asInstanceOf[js.Any])
+      inline def setStatusCode(value: Double): Self = StObject.set(x, "statusCode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStatusMessage(value: String): Self = StObject.set(x, "statusMessage", value.asInstanceOf[js.Any])
+      inline def setStatusMessage(value: String): Self = StObject.set(x, "statusMessage", value.asInstanceOf[js.Any])
     }
   }
   
   // outgoing headers allows numbers (as they are converted internally to strings)
   type OutgoingHttpHeader = Double | String | js.Array[String]
   
-  type OutgoingHttpHeaders = Dict[OutgoingHttpHeader]
+  type OutgoingHttpHeaders = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<OutgoingHttpHeader> */ Any
   
-  type RequestListener = js.Function2[/* req */ IncomingMessage, /* res */ ServerResponse, Unit]
+  type RequestListener[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */] = js.Function2[
+    /* req */ InstanceType[Request], 
+    /* res */ InstanceType[Response] & Req[Request], 
+    Unit
+  ]
   
   // although RequestOptions are passed as ClientRequestArgs to ClientRequest directly,
   // create interface RequestOptions would make the naming more clear to developers
   type RequestOptions = ClientRequestArgs
   
-  trait ServerOptions extends StObject {
+  trait ServerOptions[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+    ServerResponse[IncomingMessage]
+  ] */] extends StObject {
     
-    var IncomingMessage: js.UndefOr[Instantiable1[/* socket */ Socket, tmttyped.node.httpMod.IncomingMessage]] = js.undefined
+    var IncomingMessage: js.UndefOr[Request] = js.undefined
     
-    var ServerResponse: js.UndefOr[Instantiable1[/* req */ IncomingMessage, tmttyped.node.httpMod.ServerResponse]] = js.undefined
+    var ServerResponse: js.UndefOr[Response] = js.undefined
     
     /**
       * Use an insecure HTTP parser that accepts invalid HTTP headers when true.
@@ -2586,47 +2509,77 @@ object httpMod {
     var insecureHTTPParser: js.UndefOr[Boolean] = js.undefined
     
     /**
+      * If set to `true`, it enables keep-alive functionality on the socket immediately after a new incoming connection is received,
+      * similarly on what is done in `socket.setKeepAlive([enable][, initialDelay])`.
+      * @default false
+      * @since v16.5.0
+      */
+    var keepAlive: js.UndefOr[Boolean] = js.undefined
+    
+    /**
+      * If set to a positive number, it sets the initial delay before the first keepalive probe is sent on an idle socket.
+      * @default 0
+      * @since v16.5.0
+      */
+    var keepAliveInitialDelay: js.UndefOr[Double] = js.undefined
+    
+    /**
       * Optionally overrides the value of
       * `--max-http-header-size` for requests received by this server, i.e.
       * the maximum length of request headers in bytes.
       * @default 8192
       */
     var maxHeaderSize: js.UndefOr[Double] = js.undefined
+    
+    /**
+      * If set to `true`, it disables the use of Nagle's algorithm immediately after a new incoming connection is received.
+      * @default false
+      * @since v16.5.0
+      */
+    var noDelay: js.UndefOr[Boolean] = js.undefined
   }
   object ServerOptions {
     
-    @scala.inline
-    def apply(): ServerOptions = {
+    inline def apply[Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+        /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+        ServerResponse[IncomingMessage]
+      ] */](): ServerOptions[Request, Response] = {
       val __obj = js.Dynamic.literal()
-      __obj.asInstanceOf[ServerOptions]
+      __obj.asInstanceOf[ServerOptions[Request, Response]]
     }
     
-    @scala.inline
-    implicit class ServerOptionsMutableBuilder[Self <: ServerOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ServerOptions[?, ?], Request /* <: Instantiable1[/* socket */ Socket, IncomingMessage] */, Response /* <: Instantiable1[
+        /* import warning: RewrittenClass.unapply cls was tparam Request */ /* req */ Any, 
+        ServerResponse[IncomingMessage]
+      ] */](x: Self & (ServerOptions[Request, Response])) {
       
-      @scala.inline
-      def setIncomingMessage(value: Instantiable1[/* socket */ Socket, IncomingMessage]): Self = StObject.set(x, "IncomingMessage", value.asInstanceOf[js.Any])
+      inline def setIncomingMessage(value: Request): Self = StObject.set(x, "IncomingMessage", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setIncomingMessageUndefined: Self = StObject.set(x, "IncomingMessage", js.undefined)
+      inline def setIncomingMessageUndefined: Self = StObject.set(x, "IncomingMessage", js.undefined)
       
-      @scala.inline
-      def setInsecureHTTPParser(value: Boolean): Self = StObject.set(x, "insecureHTTPParser", value.asInstanceOf[js.Any])
+      inline def setInsecureHTTPParser(value: Boolean): Self = StObject.set(x, "insecureHTTPParser", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setInsecureHTTPParserUndefined: Self = StObject.set(x, "insecureHTTPParser", js.undefined)
+      inline def setInsecureHTTPParserUndefined: Self = StObject.set(x, "insecureHTTPParser", js.undefined)
       
-      @scala.inline
-      def setMaxHeaderSize(value: Double): Self = StObject.set(x, "maxHeaderSize", value.asInstanceOf[js.Any])
+      inline def setKeepAlive(value: Boolean): Self = StObject.set(x, "keepAlive", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxHeaderSizeUndefined: Self = StObject.set(x, "maxHeaderSize", js.undefined)
+      inline def setKeepAliveInitialDelay(value: Double): Self = StObject.set(x, "keepAliveInitialDelay", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setServerResponse(value: Instantiable1[/* req */ IncomingMessage, ServerResponse]): Self = StObject.set(x, "ServerResponse", value.asInstanceOf[js.Any])
+      inline def setKeepAliveInitialDelayUndefined: Self = StObject.set(x, "keepAliveInitialDelay", js.undefined)
       
-      @scala.inline
-      def setServerResponseUndefined: Self = StObject.set(x, "ServerResponse", js.undefined)
+      inline def setKeepAliveUndefined: Self = StObject.set(x, "keepAlive", js.undefined)
+      
+      inline def setMaxHeaderSize(value: Double): Self = StObject.set(x, "maxHeaderSize", value.asInstanceOf[js.Any])
+      
+      inline def setMaxHeaderSizeUndefined: Self = StObject.set(x, "maxHeaderSize", js.undefined)
+      
+      inline def setNoDelay(value: Boolean): Self = StObject.set(x, "noDelay", value.asInstanceOf[js.Any])
+      
+      inline def setNoDelayUndefined: Self = StObject.set(x, "noDelay", js.undefined)
+      
+      inline def setServerResponse(value: Response): Self = StObject.set(x, "ServerResponse", value.asInstanceOf[js.Any])
+      
+      inline def setServerResponseUndefined: Self = StObject.set(x, "ServerResponse", js.undefined)
     }
   }
 }

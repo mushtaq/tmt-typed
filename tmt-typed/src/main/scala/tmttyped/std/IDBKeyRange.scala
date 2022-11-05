@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is bounded; if it has no bounds, it is unbounded. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs: */
@@ -30,8 +29,7 @@ trait IDBKeyRange extends StObject {
 }
 object IDBKeyRange {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     includes: Any => scala.Boolean,
     lower: Any,
     lowerOpen: scala.Boolean,
@@ -42,22 +40,16 @@ object IDBKeyRange {
     __obj.asInstanceOf[IDBKeyRange]
   }
   
-  @scala.inline
-  implicit class IDBKeyRangeMutableBuilder[Self <: IDBKeyRange] (val x: Self) extends AnyVal {
+  extension [Self <: IDBKeyRange](x: Self) {
     
-    @scala.inline
-    def setIncludes(value: Any => scala.Boolean): Self = StObject.set(x, "includes", js.Any.fromFunction1(value))
+    inline def setIncludes(value: Any => scala.Boolean): Self = StObject.set(x, "includes", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setLower(value: Any): Self = StObject.set(x, "lower", value.asInstanceOf[js.Any])
+    inline def setLower(value: Any): Self = StObject.set(x, "lower", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLowerOpen(value: scala.Boolean): Self = StObject.set(x, "lowerOpen", value.asInstanceOf[js.Any])
+    inline def setLowerOpen(value: scala.Boolean): Self = StObject.set(x, "lowerOpen", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpper(value: Any): Self = StObject.set(x, "upper", value.asInstanceOf[js.Any])
+    inline def setUpper(value: Any): Self = StObject.set(x, "upper", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpperOpen(value: scala.Boolean): Self = StObject.set(x, "upperOpen", value.asInstanceOf[js.Any])
+    inline def setUpperOpen(value: scala.Boolean): Self = StObject.set(x, "upperOpen", value.asInstanceOf[js.Any])
   }
 }

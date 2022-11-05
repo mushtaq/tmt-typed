@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SVGFitToViewBox extends StObject {
@@ -15,8 +14,7 @@ trait SVGFitToViewBox extends StObject {
 }
 object SVGFitToViewBox {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     preserveAspectRatio: org.scalajs.dom.SVGAnimatedPreserveAspectRatio,
     viewBox: org.scalajs.dom.SVGAnimatedRect
   ): SVGFitToViewBox = {
@@ -24,13 +22,10 @@ object SVGFitToViewBox {
     __obj.asInstanceOf[SVGFitToViewBox]
   }
   
-  @scala.inline
-  implicit class SVGFitToViewBoxMutableBuilder[Self <: SVGFitToViewBox] (val x: Self) extends AnyVal {
+  extension [Self <: SVGFitToViewBox](x: Self) {
     
-    @scala.inline
-    def setPreserveAspectRatio(value: org.scalajs.dom.SVGAnimatedPreserveAspectRatio): Self = StObject.set(x, "preserveAspectRatio", value.asInstanceOf[js.Any])
+    inline def setPreserveAspectRatio(value: org.scalajs.dom.SVGAnimatedPreserveAspectRatio): Self = StObject.set(x, "preserveAspectRatio", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setViewBox(value: org.scalajs.dom.SVGAnimatedRect): Self = StObject.set(x, "viewBox", value.asInstanceOf[js.Any])
+    inline def setViewBox(value: org.scalajs.dom.SVGAnimatedRect): Self = StObject.set(x, "viewBox", value.asInstanceOf[js.Any])
   }
 }

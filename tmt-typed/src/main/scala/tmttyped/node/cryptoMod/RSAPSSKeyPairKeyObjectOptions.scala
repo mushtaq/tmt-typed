@@ -2,7 +2,6 @@ package tmttyped.node.cryptoMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RSAPSSKeyPairKeyObjectOptions extends StObject {
@@ -35,40 +34,29 @@ trait RSAPSSKeyPairKeyObjectOptions extends StObject {
 }
 object RSAPSSKeyPairKeyObjectOptions {
   
-  @scala.inline
-  def apply(modulusLength: Double): RSAPSSKeyPairKeyObjectOptions = {
+  inline def apply(modulusLength: Double): RSAPSSKeyPairKeyObjectOptions = {
     val __obj = js.Dynamic.literal(modulusLength = modulusLength.asInstanceOf[js.Any])
     __obj.asInstanceOf[RSAPSSKeyPairKeyObjectOptions]
   }
   
-  @scala.inline
-  implicit class RSAPSSKeyPairKeyObjectOptionsMutableBuilder[Self <: RSAPSSKeyPairKeyObjectOptions] (val x: Self) extends AnyVal {
+  extension [Self <: RSAPSSKeyPairKeyObjectOptions](x: Self) {
     
-    @scala.inline
-    def setHashAlgorithm(value: String): Self = StObject.set(x, "hashAlgorithm", value.asInstanceOf[js.Any])
+    inline def setHashAlgorithm(value: String): Self = StObject.set(x, "hashAlgorithm", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHashAlgorithmUndefined: Self = StObject.set(x, "hashAlgorithm", js.undefined)
+    inline def setHashAlgorithmUndefined: Self = StObject.set(x, "hashAlgorithm", js.undefined)
     
-    @scala.inline
-    def setMgf1HashAlgorithm(value: String): Self = StObject.set(x, "mgf1HashAlgorithm", value.asInstanceOf[js.Any])
+    inline def setMgf1HashAlgorithm(value: String): Self = StObject.set(x, "mgf1HashAlgorithm", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMgf1HashAlgorithmUndefined: Self = StObject.set(x, "mgf1HashAlgorithm", js.undefined)
+    inline def setMgf1HashAlgorithmUndefined: Self = StObject.set(x, "mgf1HashAlgorithm", js.undefined)
     
-    @scala.inline
-    def setModulusLength(value: Double): Self = StObject.set(x, "modulusLength", value.asInstanceOf[js.Any])
+    inline def setModulusLength(value: Double): Self = StObject.set(x, "modulusLength", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPublicExponent(value: Double): Self = StObject.set(x, "publicExponent", value.asInstanceOf[js.Any])
+    inline def setPublicExponent(value: Double): Self = StObject.set(x, "publicExponent", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPublicExponentUndefined: Self = StObject.set(x, "publicExponent", js.undefined)
+    inline def setPublicExponentUndefined: Self = StObject.set(x, "publicExponent", js.undefined)
     
-    @scala.inline
-    def setSaltLength(value: String): Self = StObject.set(x, "saltLength", value.asInstanceOf[js.Any])
+    inline def setSaltLength(value: String): Self = StObject.set(x, "saltLength", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSaltLengthUndefined: Self = StObject.set(x, "saltLength", js.undefined)
+    inline def setSaltLengthUndefined: Self = StObject.set(x, "saltLength", js.undefined)
   }
 }

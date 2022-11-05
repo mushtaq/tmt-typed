@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities. */
@@ -15,7 +14,7 @@ trait Navigator
      with NavigatorCookies
      with NavigatorID
      with NavigatorLanguage
-     with NavigatorNetworkInformation
+     with NavigatorLocks
      with NavigatorOnLine
      with NavigatorPlugins
      with NavigatorStorage {

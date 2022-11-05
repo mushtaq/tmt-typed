@@ -2,20 +2,19 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("TreeWalker")
 @js.native
 /* standard DOM */
-class TreeWalker ()
+open class TreeWalker ()
   extends StObject
      with tmttyped.std.TreeWalker {
   
   /* standard DOM */
   /* CompleteClass */
-  override var currentNode: org.scalajs.dom.Node = js.native
+  var currentNode: org.scalajs.dom.Node = js.native
   
   /* standard DOM */
   /* CompleteClass */

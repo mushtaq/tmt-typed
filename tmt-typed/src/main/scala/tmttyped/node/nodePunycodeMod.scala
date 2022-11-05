@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodePunycodeMod {
@@ -21,8 +20,7 @@ object nodePunycodeMod {
     * ```
     * @since v0.5.1
     */
-  @scala.inline
-  def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.encode()` method converts a string of Unicode codepoints to a [Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
@@ -33,8 +31,7 @@ object nodePunycodeMod {
     * ```
     * @since v0.5.1
     */
-  @scala.inline
-  def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toASCII()` method converts a Unicode string representing an
@@ -50,8 +47,7 @@ object nodePunycodeMod {
     * ```
     * @since v0.6.1
     */
-  @scala.inline
-  def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toUnicode()` method converts a string representing a domain name
@@ -66,8 +62,7 @@ object nodePunycodeMod {
     * ```
     * @since v0.6.1
     */
-  @scala.inline
-  def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * @deprecated since v7.0.0

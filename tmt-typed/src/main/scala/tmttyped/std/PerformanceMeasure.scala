@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of "measure". Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline. */
@@ -15,8 +14,7 @@ trait PerformanceMeasure
 }
 object PerformanceMeasure {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     detail: Any,
     duration: DOMHighResTimeStamp,
     entryType: java.lang.String,
@@ -28,10 +26,8 @@ object PerformanceMeasure {
     __obj.asInstanceOf[PerformanceMeasure]
   }
   
-  @scala.inline
-  implicit class PerformanceMeasureMutableBuilder[Self <: PerformanceMeasure] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceMeasure](x: Self) {
     
-    @scala.inline
-    def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+    inline def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
   }
 }

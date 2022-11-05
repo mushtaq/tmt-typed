@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait InnerHTML extends StObject {
@@ -12,16 +11,13 @@ trait InnerHTML extends StObject {
 }
 object InnerHTML {
   
-  @scala.inline
-  def apply(innerHTML: java.lang.String): InnerHTML = {
+  inline def apply(innerHTML: java.lang.String): InnerHTML = {
     val __obj = js.Dynamic.literal(innerHTML = innerHTML.asInstanceOf[js.Any])
     __obj.asInstanceOf[InnerHTML]
   }
   
-  @scala.inline
-  implicit class InnerHTMLMutableBuilder[Self <: InnerHTML] (val x: Self) extends AnyVal {
+  extension [Self <: InnerHTML](x: Self) {
     
-    @scala.inline
-    def setInnerHTML(value: java.lang.String): Self = StObject.set(x, "innerHTML", value.asInstanceOf[js.Any])
+    inline def setInnerHTML(value: java.lang.String): Self = StObject.set(x, "innerHTML", value.asInstanceOf[js.Any])
   }
 }

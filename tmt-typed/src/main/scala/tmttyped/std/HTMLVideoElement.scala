@@ -4,7 +4,6 @@ import tmttyped.std.stdStrings.enterpictureinpicture
 import tmttyped.std.stdStrings.leavepictureinpicture
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement. */
@@ -48,6 +47,9 @@ trait HTMLVideoElement
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  /* standard DOM */
+  def cancelVideoFrameCallback(handle: Double): Unit = js.native
   
   /* standard DOM */
   var disablePictureInPicture: scala.Boolean = js.native
@@ -111,6 +113,9 @@ trait HTMLVideoElement
   
   /* standard DOM */
   def requestPictureInPicture(): js.Promise[PictureInPictureWindow] = js.native
+  
+  /* standard DOM */
+  def requestVideoFrameCallback(callback: VideoFrameRequestCallback): Double = js.native
   
   /** Gets the intrinsic height of a video in CSS pixels, or zero if the dimensions are not known. */
   /* standard DOM */

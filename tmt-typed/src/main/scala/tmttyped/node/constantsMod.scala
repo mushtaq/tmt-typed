@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined { readonly E2BIG :number,  readonly EACCES :number,  readonly EADDRINUSE :number,  readonly EADDRNOTAVAIL :number,  readonly EAFNOSUPPORT :number,  readonly EAGAIN :number,  readonly EALREADY :number,  readonly EBADF :number,  readonly EBADMSG :number,  readonly EBUSY :number,  readonly ECANCELED :number,  readonly ECHILD :number,  readonly ECONNABORTED :number,  readonly ECONNREFUSED :number,  readonly ECONNRESET :number,  readonly EDEADLK :number,  readonly EDESTADDRREQ :number,  readonly EDOM :number,  readonly EDQUOT :number,  readonly EEXIST :number,  readonly EFAULT :number,  readonly EFBIG :number,  readonly EHOSTUNREACH :number,  readonly EIDRM :number,  readonly EILSEQ :number,  readonly EINPROGRESS :number,  readonly EINTR :number,  readonly EINVAL :number,  readonly EIO :number,  readonly EISCONN :number,  readonly EISDIR :number,  readonly ELOOP :number,  readonly EMFILE :number,  readonly EMLINK :number,  readonly EMSGSIZE :number,  readonly EMULTIHOP :number,  readonly ENAMETOOLONG :number,  readonly ENETDOWN :number,  readonly ENETRESET :number,  readonly ENETUNREACH :number,  readonly ENFILE :number,  readonly ENOBUFS :number,  readonly ENODATA :number,  readonly ENODEV :number,  readonly ENOENT :number,  readonly ENOEXEC :number,  readonly ENOLCK :number,  readonly ENOLINK :number,  readonly ENOMEM :number,  readonly ENOMSG :number,  readonly ENOPROTOOPT :number,  readonly ENOSPC :number,  readonly ENOSR :number,  readonly ENOSTR :number,  readonly ENOSYS :number,  readonly ENOTCONN :number,  readonly ENOTDIR :number,  readonly ENOTEMPTY :number,  readonly ENOTSOCK :number,  readonly ENOTSUP :number,  readonly ENOTTY :number,  readonly ENXIO :number,  readonly EOPNOTSUPP :number,  readonly EOVERFLOW :number,  readonly EPERM :number,  readonly EPIPE :number,  readonly EPROTO :number,  readonly EPROTONOSUPPORT :number,  readonly EPROTOTYPE :number,  readonly ERANGE :number,  readonly EROFS :number,  readonly ESPIPE :number,  readonly ESRCH :number,  readonly ESTALE :number,  readonly ETIME :number,  readonly ETIMEDOUT :number,  readonly ETXTBSY :number,  readonly EWOULDBLOCK :number,  readonly EXDEV :number,  readonly WSAEINTR :number,  readonly WSAEBADF :number,  readonly WSAEACCES :number,  readonly WSAEFAULT :number,  readonly WSAEINVAL :number,  readonly WSAEMFILE :number,  readonly WSAEWOULDBLOCK :number,  readonly WSAEINPROGRESS :number,  readonly WSAEALREADY :number,  readonly WSAENOTSOCK :number,  readonly WSAEDESTADDRREQ :number,  readonly WSAEMSGSIZE :number,  readonly WSAEPROTOTYPE :number,  readonly WSAENOPROTOOPT :number,  readonly WSAEPROTONOSUPPORT :number,  readonly WSAESOCKTNOSUPPORT :number,  readonly WSAEOPNOTSUPP :number,  readonly WSAEPFNOSUPPORT :number,  readonly WSAEAFNOSUPPORT :number,  readonly WSAEADDRINUSE :number,  readonly WSAEADDRNOTAVAIL :number,  readonly WSAENETDOWN :number,  readonly WSAENETUNREACH :number,  readonly WSAENETRESET :number,  readonly WSAECONNABORTED :number,  readonly WSAECONNRESET :number,  readonly WSAENOBUFS :number,  readonly WSAEISCONN :number,  readonly WSAENOTCONN :number,  readonly WSAESHUTDOWN :number,  readonly WSAETOOMANYREFS :number,  readonly WSAETIMEDOUT :number,  readonly WSAECONNREFUSED :number,  readonly WSAELOOP :number,  readonly WSAENAMETOOLONG :number,  readonly WSAEHOSTDOWN :number,  readonly WSAEHOSTUNREACH :number,  readonly WSAENOTEMPTY :number,  readonly WSAEPROCLIM :number,  readonly WSAEUSERS :number,  readonly WSAEDQUOT :number,  readonly WSAESTALE :number,  readonly WSAEREMOTE :number,  readonly WSASYSNOTREADY :number,  readonly WSAVERNOTSUPPORTED :number,  readonly WSANOTINITIALISED :number,  readonly WSAEDISCON :number,  readonly WSAENOMORE :number,  readonly WSAECANCELLED :number,  readonly WSAEINVALIDPROCTABLE :number,  readonly WSAEINVALIDPROVIDER :number,  readonly WSAEPROVIDERFAILEDINIT :number,  readonly WSASYSCALLFAILURE :number,  readonly WSASERVICE_NOT_FOUND :number,  readonly WSATYPE_NOT_FOUND :number,  readonly WSA_E_NO_MORE :number,  readonly WSA_E_CANCELLED :number,  readonly WSAEREFUSED :number} & { readonly PRIORITY_LOW :number,  readonly PRIORITY_BELOW_NORMAL :number,  readonly PRIORITY_NORMAL :number,  readonly PRIORITY_ABOVE_NORMAL :number,  readonly PRIORITY_HIGH :number,  readonly PRIORITY_HIGHEST :number} & node.node:os.SignalConstants & { readonly OPENSSL_VERSION_NUMBER :number,  readonly SSL_OP_ALL :number,  readonly SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION :number,  readonly SSL_OP_CIPHER_SERVER_PREFERENCE :number,  readonly SSL_OP_CISCO_ANYCONNECT :number,  readonly SSL_OP_COOKIE_EXCHANGE :number,  readonly SSL_OP_CRYPTOPRO_TLSEXT_BUG :number,  readonly SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS :number,  readonly SSL_OP_EPHEMERAL_RSA :number,  readonly SSL_OP_LEGACY_SERVER_CONNECT :number,  readonly SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER :number,  readonly SSL_OP_MICROSOFT_SESS_ID_BUG :number,  readonly SSL_OP_MSIE_SSLV2_RSA_PADDING :number,  readonly SSL_OP_NETSCAPE_CA_DN_BUG :number,  readonly SSL_OP_NETSCAPE_CHALLENGE_BUG :number,  readonly SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG :number,  readonly SSL_OP_NETSCAPE_REUSE_CIPHER_CHANGE_BUG :number,  readonly SSL_OP_NO_COMPRESSION :number,  readonly SSL_OP_NO_QUERY_MTU :number,  readonly SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION :number,  readonly SSL_OP_NO_SSLv2 :number,  readonly SSL_OP_NO_SSLv3 :number,  readonly SSL_OP_NO_TICKET :number,  readonly SSL_OP_NO_TLSv1 :number,  readonly SSL_OP_NO_TLSv1_1 :number,  readonly SSL_OP_NO_TLSv1_2 :number,  readonly SSL_OP_PKCS1_CHECK_1 :number,  readonly SSL_OP_PKCS1_CHECK_2 :number,  readonly SSL_OP_SINGLE_DH_USE :number,  readonly SSL_OP_SINGLE_ECDH_USE :number,  readonly SSL_OP_SSLEAY_080_CLIENT_DH_BUG :number,  readonly SSL_OP_SSLREF2_REUSE_CERT_TYPE_BUG :number,  readonly SSL_OP_TLS_BLOCK_PADDING_BUG :number,  readonly SSL_OP_TLS_D5_BUG :number,  readonly SSL_OP_TLS_ROLLBACK_BUG :number,  readonly ENGINE_METHOD_RSA :number,  readonly ENGINE_METHOD_DSA :number,  readonly ENGINE_METHOD_DH :number,  readonly ENGINE_METHOD_RAND :number,  readonly ENGINE_METHOD_EC :number,  readonly ENGINE_METHOD_CIPHERS :number,  readonly ENGINE_METHOD_DIGESTS :number,  readonly ENGINE_METHOD_PKEY_METHS :number,  readonly ENGINE_METHOD_PKEY_ASN1_METHS :number,  readonly ENGINE_METHOD_ALL :number,  readonly ENGINE_METHOD_NONE :number,  readonly DH_CHECK_P_NOT_SAFE_PRIME :number,  readonly DH_CHECK_P_NOT_PRIME :number,  readonly DH_UNABLE_TO_CHECK_GENERATOR :number,  readonly DH_NOT_SUITABLE_GENERATOR :number,  readonly ALPN_ENABLED :number,  readonly RSA_PKCS1_PADDING :number,  readonly RSA_SSLV23_PADDING :number,  readonly RSA_NO_PADDING :number,  readonly RSA_PKCS1_OAEP_PADDING :number,  readonly RSA_X931_PADDING :number,  readonly RSA_PKCS1_PSS_PADDING :number,  readonly RSA_PSS_SALTLEN_DIGEST :number,  readonly RSA_PSS_SALTLEN_MAX_SIGN :number,  readonly RSA_PSS_SALTLEN_AUTO :number,  readonly POINT_CONVERSION_COMPRESSED :number,  readonly POINT_CONVERSION_UNCOMPRESSED :number,  readonly POINT_CONVERSION_HYBRID :number,  readonly defaultCoreCipherList :string,  readonly defaultCipherList :string} & { readonly F_OK :number,  readonly R_OK :number,  readonly W_OK :number,  readonly X_OK :number,  readonly COPYFILE_EXCL :number,  readonly COPYFILE_FICLONE :number,  readonly COPYFILE_FICLONE_FORCE :number,  readonly O_RDONLY :number,  readonly O_WRONLY :number,  readonly O_RDWR :number,  readonly O_CREAT :number,  readonly O_EXCL :number,  readonly O_NOCTTY :number,  readonly O_TRUNC :number,  readonly O_APPEND :number,  readonly O_DIRECTORY :number,  readonly O_NOATIME :number,  readonly O_NOFOLLOW :number,  readonly O_SYNC :number,  readonly O_DSYNC :number,  readonly O_SYMLINK :number,  readonly O_DIRECT :number,  readonly O_NONBLOCK :number,  readonly S_IFMT :number,  readonly S_IFREG :number,  readonly S_IFDIR :number,  readonly S_IFCHR :number,  readonly S_IFBLK :number,  readonly S_IFIFO :number,  readonly S_IFLNK :number,  readonly S_IFSOCK :number,  readonly S_IRWXU :number,  readonly S_IRUSR :number,  readonly S_IWUSR :number,  readonly S_IXUSR :number,  readonly S_IRWXG :number,  readonly S_IRGRP :number,  readonly S_IWGRP :number,  readonly S_IXGRP :number,  readonly S_IRWXO :number,  readonly S_IROTH :number,  readonly S_IWOTH :number,  readonly S_IXOTH :number,  readonly UV_FS_O_FILEMAP :number} */
@@ -598,68 +597,57 @@ object constantsMod {
   @JSImport("constants", "SIGABRT")
   @js.native
   def SIGABRT: Double = js.native
-  @scala.inline
-  def SIGABRT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGABRT")(x.asInstanceOf[js.Any])
+  inline def SIGABRT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGABRT")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGALRM")
   @js.native
   def SIGALRM: Double = js.native
-  @scala.inline
-  def SIGALRM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGALRM")(x.asInstanceOf[js.Any])
+  inline def SIGALRM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGALRM")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGBREAK")
   @js.native
   def SIGBREAK: Double = js.native
-  @scala.inline
-  def SIGBREAK_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGBREAK")(x.asInstanceOf[js.Any])
+  inline def SIGBREAK_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGBREAK")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGBUS")
   @js.native
   def SIGBUS: Double = js.native
-  @scala.inline
-  def SIGBUS_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGBUS")(x.asInstanceOf[js.Any])
+  inline def SIGBUS_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGBUS")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGCHLD")
   @js.native
   def SIGCHLD: Double = js.native
-  @scala.inline
-  def SIGCHLD_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGCHLD")(x.asInstanceOf[js.Any])
+  inline def SIGCHLD_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGCHLD")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGCONT")
   @js.native
   def SIGCONT: Double = js.native
-  @scala.inline
-  def SIGCONT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGCONT")(x.asInstanceOf[js.Any])
+  inline def SIGCONT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGCONT")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGFPE")
   @js.native
   def SIGFPE: Double = js.native
-  @scala.inline
-  def SIGFPE_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGFPE")(x.asInstanceOf[js.Any])
+  inline def SIGFPE_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGFPE")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGHUP")
   @js.native
   def SIGHUP: Double = js.native
-  @scala.inline
-  def SIGHUP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGHUP")(x.asInstanceOf[js.Any])
+  inline def SIGHUP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGHUP")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGILL")
   @js.native
   def SIGILL: Double = js.native
-  @scala.inline
-  def SIGILL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGILL")(x.asInstanceOf[js.Any])
+  inline def SIGILL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGILL")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGINFO")
   @js.native
   def SIGINFO: Double = js.native
-  @scala.inline
-  def SIGINFO_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGINFO")(x.asInstanceOf[js.Any])
+  inline def SIGINFO_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGINFO")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGINT")
   @js.native
   def SIGINT: Double = js.native
-  @scala.inline
-  def SIGINT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGINT")(x.asInstanceOf[js.Any])
+  inline def SIGINT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGINT")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGIO")
   @js.native
@@ -668,155 +656,129 @@ object constantsMod {
   @JSImport("constants", "SIGIOT")
   @js.native
   def SIGIOT: Double = js.native
-  @scala.inline
-  def SIGIOT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGIOT")(x.asInstanceOf[js.Any])
+  inline def SIGIOT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGIOT")(x.asInstanceOf[js.Any])
   
-  @scala.inline
-  def SIGIO_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGIO")(x.asInstanceOf[js.Any])
+  inline def SIGIO_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGIO")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGKILL")
   @js.native
   def SIGKILL: Double = js.native
-  @scala.inline
-  def SIGKILL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGKILL")(x.asInstanceOf[js.Any])
+  inline def SIGKILL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGKILL")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGLOST")
   @js.native
   def SIGLOST: Double = js.native
-  @scala.inline
-  def SIGLOST_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGLOST")(x.asInstanceOf[js.Any])
+  inline def SIGLOST_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGLOST")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGPIPE")
   @js.native
   def SIGPIPE: Double = js.native
-  @scala.inline
-  def SIGPIPE_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPIPE")(x.asInstanceOf[js.Any])
+  inline def SIGPIPE_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPIPE")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGPOLL")
   @js.native
   def SIGPOLL: Double = js.native
-  @scala.inline
-  def SIGPOLL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPOLL")(x.asInstanceOf[js.Any])
+  inline def SIGPOLL_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPOLL")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGPROF")
   @js.native
   def SIGPROF: Double = js.native
-  @scala.inline
-  def SIGPROF_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPROF")(x.asInstanceOf[js.Any])
+  inline def SIGPROF_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPROF")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGPWR")
   @js.native
   def SIGPWR: Double = js.native
-  @scala.inline
-  def SIGPWR_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPWR")(x.asInstanceOf[js.Any])
+  inline def SIGPWR_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGPWR")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGQUIT")
   @js.native
   def SIGQUIT: Double = js.native
-  @scala.inline
-  def SIGQUIT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGQUIT")(x.asInstanceOf[js.Any])
+  inline def SIGQUIT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGQUIT")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGSEGV")
   @js.native
   def SIGSEGV: Double = js.native
-  @scala.inline
-  def SIGSEGV_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSEGV")(x.asInstanceOf[js.Any])
+  inline def SIGSEGV_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSEGV")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGSTKFLT")
   @js.native
   def SIGSTKFLT: Double = js.native
-  @scala.inline
-  def SIGSTKFLT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSTKFLT")(x.asInstanceOf[js.Any])
+  inline def SIGSTKFLT_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSTKFLT")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGSTOP")
   @js.native
   def SIGSTOP: Double = js.native
-  @scala.inline
-  def SIGSTOP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSTOP")(x.asInstanceOf[js.Any])
+  inline def SIGSTOP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSTOP")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGSYS")
   @js.native
   def SIGSYS: Double = js.native
-  @scala.inline
-  def SIGSYS_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSYS")(x.asInstanceOf[js.Any])
+  inline def SIGSYS_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGSYS")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGTERM")
   @js.native
   def SIGTERM: Double = js.native
-  @scala.inline
-  def SIGTERM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTERM")(x.asInstanceOf[js.Any])
+  inline def SIGTERM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTERM")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGTRAP")
   @js.native
   def SIGTRAP: Double = js.native
-  @scala.inline
-  def SIGTRAP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTRAP")(x.asInstanceOf[js.Any])
+  inline def SIGTRAP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTRAP")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGTSTP")
   @js.native
   def SIGTSTP: Double = js.native
-  @scala.inline
-  def SIGTSTP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTSTP")(x.asInstanceOf[js.Any])
+  inline def SIGTSTP_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTSTP")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGTTIN")
   @js.native
   def SIGTTIN: Double = js.native
-  @scala.inline
-  def SIGTTIN_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTTIN")(x.asInstanceOf[js.Any])
+  inline def SIGTTIN_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTTIN")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGTTOU")
   @js.native
   def SIGTTOU: Double = js.native
-  @scala.inline
-  def SIGTTOU_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTTOU")(x.asInstanceOf[js.Any])
+  inline def SIGTTOU_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGTTOU")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGUNUSED")
   @js.native
   def SIGUNUSED: Double = js.native
-  @scala.inline
-  def SIGUNUSED_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUNUSED")(x.asInstanceOf[js.Any])
+  inline def SIGUNUSED_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUNUSED")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGURG")
   @js.native
   def SIGURG: Double = js.native
-  @scala.inline
-  def SIGURG_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGURG")(x.asInstanceOf[js.Any])
+  inline def SIGURG_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGURG")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGUSR1")
   @js.native
   def SIGUSR1: Double = js.native
-  @scala.inline
-  def SIGUSR1_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUSR1")(x.asInstanceOf[js.Any])
+  inline def SIGUSR1_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUSR1")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGUSR2")
   @js.native
   def SIGUSR2: Double = js.native
-  @scala.inline
-  def SIGUSR2_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUSR2")(x.asInstanceOf[js.Any])
+  inline def SIGUSR2_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGUSR2")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGVTALRM")
   @js.native
   def SIGVTALRM: Double = js.native
-  @scala.inline
-  def SIGVTALRM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGVTALRM")(x.asInstanceOf[js.Any])
+  inline def SIGVTALRM_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGVTALRM")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGWINCH")
   @js.native
   def SIGWINCH: Double = js.native
-  @scala.inline
-  def SIGWINCH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGWINCH")(x.asInstanceOf[js.Any])
+  inline def SIGWINCH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGWINCH")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGXCPU")
   @js.native
   def SIGXCPU: Double = js.native
-  @scala.inline
-  def SIGXCPU_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGXCPU")(x.asInstanceOf[js.Any])
+  inline def SIGXCPU_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGXCPU")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SIGXFSZ")
   @js.native
   def SIGXFSZ: Double = js.native
-  @scala.inline
-  def SIGXFSZ_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGXFSZ")(x.asInstanceOf[js.Any])
+  inline def SIGXFSZ_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("SIGXFSZ")(x.asInstanceOf[js.Any])
   
   @JSImport("constants", "SSL_OP_NO_SSLv2")
   @js.native

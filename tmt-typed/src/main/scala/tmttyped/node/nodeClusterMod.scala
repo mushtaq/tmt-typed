@@ -5,7 +5,6 @@ import tmttyped.node.clusterMod.Cluster
 import tmttyped.node.eventsMod.EventEmitterOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeClusterMod extends Shortcut {
@@ -16,7 +15,7 @@ object nodeClusterMod extends Shortcut {
   
   @JSImport("node:cluster", "Worker")
   @js.native
-  class Worker () extends StObject {
+  open class Worker () extends StObject {
     def this(options: EventEmitterOptions) = this()
   }
   

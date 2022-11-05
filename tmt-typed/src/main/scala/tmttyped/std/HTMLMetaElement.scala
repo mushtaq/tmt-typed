@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Contains descriptive metadata about a document. It inherits all of the properties and methods described in the HTMLElement interface. */
@@ -30,6 +29,9 @@ trait HTMLMetaElement
   /** Gets or sets information used to bind the value of a content attribute of a meta element to an HTTP response header. */
   /* standard DOM */
   var httpEquiv: java.lang.String = js.native
+  
+  /* standard DOM */
+  var media: java.lang.String = js.native
   
   /** Sets or retrieves the value specified in the content attribute of the meta object. */
   /* standard DOM */

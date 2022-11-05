@@ -3,7 +3,6 @@ package tmttyped.std
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -21,6 +20,13 @@ trait Uint16Array
     */
   /* standard es5 */
   val BYTES_PER_ELEMENT: Double = js.native
+  
+  /**
+    * Returns the item located at the specified index.
+    * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+    */
+  /* standard es2022.array */
+  def at(index: Double): js.UndefOr[Double] = js.native
   
   /**
     * The ArrayBuffer instance referenced by the array.

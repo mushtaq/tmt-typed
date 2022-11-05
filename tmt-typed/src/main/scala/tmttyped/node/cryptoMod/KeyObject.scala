@@ -6,7 +6,6 @@ import tmttyped.node.nodeStrings.der
 import tmttyped.node.nodeStrings.pem
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -24,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "KeyObject")
 @js.native
-/* private */ class KeyObject ()
+/* private */ open class KeyObject ()
   extends StObject
      with _KeyLike {
   
@@ -141,6 +140,5 @@ object KeyObject {
     * @since v15.0.0
     */
   /* static member */
-  @scala.inline
-  def from(key: CryptoKey): KeyObject = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(key.asInstanceOf[js.Any]).asInstanceOf[KeyObject]
+  inline def from(key: CryptoKey): KeyObject = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(key.asInstanceOf[js.Any]).asInstanceOf[KeyObject]
 }

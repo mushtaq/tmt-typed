@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait XMLHttpRequestEventTargetEventMap extends StObject {
@@ -30,8 +29,7 @@ trait XMLHttpRequestEventTargetEventMap extends StObject {
 }
 object XMLHttpRequestEventTargetEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     abort: org.scalajs.dom.ProgressEvent,
     error: org.scalajs.dom.ProgressEvent,
     load: org.scalajs.dom.ProgressEvent,
@@ -44,28 +42,20 @@ object XMLHttpRequestEventTargetEventMap {
     __obj.asInstanceOf[XMLHttpRequestEventTargetEventMap]
   }
   
-  @scala.inline
-  implicit class XMLHttpRequestEventTargetEventMapMutableBuilder[Self <: XMLHttpRequestEventTargetEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: XMLHttpRequestEventTargetEventMap](x: Self) {
     
-    @scala.inline
-    def setAbort(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
+    inline def setAbort(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setError(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    inline def setError(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoad(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "load", value.asInstanceOf[js.Any])
+    inline def setLoad(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "load", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoadend(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "loadend", value.asInstanceOf[js.Any])
+    inline def setLoadend(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "loadend", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoadstart(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "loadstart", value.asInstanceOf[js.Any])
+    inline def setLoadstart(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "loadstart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProgress(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "progress", value.asInstanceOf[js.Any])
+    inline def setProgress(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "progress", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimeout(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+    inline def setTimeout(value: org.scalajs.dom.ProgressEvent): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
   }
 }

@@ -5,7 +5,6 @@ import tmttyped.std.stdStrings.message
 import tmttyped.std.stdStrings.open
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -22,6 +21,21 @@ trait EventSource
   /* standard DOM */
   val OPEN: Double = js.native
   
+  /* standard DOM */
+  def addEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any]
+  ): Unit = js.native
+  def addEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  def addEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any],
+    options: AddEventListenerOptions
+  ): Unit = js.native
   /* standard DOM */
   @JSName("addEventListener")
   def addEventListener_error(
@@ -92,6 +106,21 @@ trait EventSource
   /* standard DOM */
   val readyState: Double = js.native
   
+  /* standard DOM */
+  def removeEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any]
+  ): Unit = js.native
+  def removeEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any],
+    options: org.scalajs.dom.EventListenerOptions
+  ): Unit = js.native
+  def removeEventListener(
+    `type`: java.lang.String,
+    listener: js.ThisFunction1[/* this */ this.type, /* event */ org.scalajs.dom.MessageEvent, Any],
+    options: scala.Boolean
+  ): Unit = js.native
   /* standard DOM */
   @JSName("removeEventListener")
   def removeEventListener_error(

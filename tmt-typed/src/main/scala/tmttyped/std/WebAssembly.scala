@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object WebAssembly {
@@ -28,17 +27,14 @@ object WebAssembly {
   }
   object Global {
     
-    @scala.inline
-    def apply(value: Any): Global = {
+    inline def apply(value: Any): Global = {
       val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
       __obj.asInstanceOf[Global]
     }
     
-    @scala.inline
-    implicit class GlobalMutableBuilder[Self <: Global] (val x: Self) extends AnyVal {
+    extension [Self <: Global](x: Self) {
       
-      @scala.inline
-      def setValue(value: Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+      inline def setValue(value: Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     }
   }
   
@@ -52,23 +48,18 @@ object WebAssembly {
   }
   object GlobalDescriptor {
     
-    @scala.inline
-    def apply(value: ValueType): GlobalDescriptor = {
+    inline def apply(value: ValueType): GlobalDescriptor = {
       val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
       __obj.asInstanceOf[GlobalDescriptor]
     }
     
-    @scala.inline
-    implicit class GlobalDescriptorMutableBuilder[Self <: GlobalDescriptor] (val x: Self) extends AnyVal {
+    extension [Self <: GlobalDescriptor](x: Self) {
       
-      @scala.inline
-      def setMutable(value: scala.Boolean): Self = StObject.set(x, "mutable", value.asInstanceOf[js.Any])
+      inline def setMutable(value: scala.Boolean): Self = StObject.set(x, "mutable", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMutableUndefined: Self = StObject.set(x, "mutable", js.undefined)
+      inline def setMutableUndefined: Self = StObject.set(x, "mutable", js.undefined)
       
-      @scala.inline
-      def setValue(value: ValueType): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+      inline def setValue(value: ValueType): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
     }
   }
   
@@ -81,17 +72,13 @@ object WebAssembly {
   trait ImportExportKind extends StObject
   object ImportExportKind {
     
-    @scala.inline
-    def function: tmttyped.std.stdStrings.function = "function".asInstanceOf[tmttyped.std.stdStrings.function]
+    inline def function: tmttyped.std.stdStrings.function = "function".asInstanceOf[tmttyped.std.stdStrings.function]
     
-    @scala.inline
-    def global: tmttyped.std.stdStrings.global = "global".asInstanceOf[tmttyped.std.stdStrings.global]
+    inline def global: tmttyped.std.stdStrings.global = "global".asInstanceOf[tmttyped.std.stdStrings.global]
     
-    @scala.inline
-    def memory: tmttyped.std.stdStrings.memory = "memory".asInstanceOf[tmttyped.std.stdStrings.memory]
+    inline def memory: tmttyped.std.stdStrings.memory = "memory".asInstanceOf[tmttyped.std.stdStrings.memory]
     
-    @scala.inline
-    def table: tmttyped.std.stdStrings.table = "table".asInstanceOf[tmttyped.std.stdStrings.table]
+    inline def table: tmttyped.std.stdStrings.table = "table".asInstanceOf[tmttyped.std.stdStrings.table]
   }
   
   type ImportValue = ExportValue | Double
@@ -105,17 +92,14 @@ object WebAssembly {
   }
   object Instance {
     
-    @scala.inline
-    def apply(exports: Exports): Instance = {
+    inline def apply(exports: Exports): Instance = {
       val __obj = js.Dynamic.literal(exports = exports.asInstanceOf[js.Any])
       __obj.asInstanceOf[Instance]
     }
     
-    @scala.inline
-    implicit class InstanceMutableBuilder[Self <: Instance] (val x: Self) extends AnyVal {
+    extension [Self <: Instance](x: Self) {
       
-      @scala.inline
-      def setExports(value: Exports): Self = StObject.set(x, "exports", value.asInstanceOf[js.Any])
+      inline def setExports(value: Exports): Self = StObject.set(x, "exports", value.asInstanceOf[js.Any])
     }
   }
   
@@ -133,20 +117,16 @@ object WebAssembly {
   }
   object Memory {
     
-    @scala.inline
-    def apply(buffer: js.typedarray.ArrayBuffer, grow: Double => Double): Memory = {
+    inline def apply(buffer: js.typedarray.ArrayBuffer, grow: Double => Double): Memory = {
       val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], grow = js.Any.fromFunction1(grow))
       __obj.asInstanceOf[Memory]
     }
     
-    @scala.inline
-    implicit class MemoryMutableBuilder[Self <: Memory] (val x: Self) extends AnyVal {
+    extension [Self <: Memory](x: Self) {
       
-      @scala.inline
-      def setBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+      inline def setBuffer(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setGrow(value: Double => Double): Self = StObject.set(x, "grow", js.Any.fromFunction1(value))
+      inline def setGrow(value: Double => Double): Self = StObject.set(x, "grow", js.Any.fromFunction1(value))
     }
   }
   
@@ -163,29 +143,22 @@ object WebAssembly {
   }
   object MemoryDescriptor {
     
-    @scala.inline
-    def apply(initial: Double): MemoryDescriptor = {
+    inline def apply(initial: Double): MemoryDescriptor = {
       val __obj = js.Dynamic.literal(initial = initial.asInstanceOf[js.Any])
       __obj.asInstanceOf[MemoryDescriptor]
     }
     
-    @scala.inline
-    implicit class MemoryDescriptorMutableBuilder[Self <: MemoryDescriptor] (val x: Self) extends AnyVal {
+    extension [Self <: MemoryDescriptor](x: Self) {
       
-      @scala.inline
-      def setInitial(value: Double): Self = StObject.set(x, "initial", value.asInstanceOf[js.Any])
+      inline def setInitial(value: Double): Self = StObject.set(x, "initial", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaximum(value: Double): Self = StObject.set(x, "maximum", value.asInstanceOf[js.Any])
+      inline def setMaximum(value: Double): Self = StObject.set(x, "maximum", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaximumUndefined: Self = StObject.set(x, "maximum", js.undefined)
+      inline def setMaximumUndefined: Self = StObject.set(x, "maximum", js.undefined)
       
-      @scala.inline
-      def setShared(value: scala.Boolean): Self = StObject.set(x, "shared", value.asInstanceOf[js.Any])
+      inline def setShared(value: scala.Boolean): Self = StObject.set(x, "shared", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSharedUndefined: Self = StObject.set(x, "shared", js.undefined)
+      inline def setSharedUndefined: Self = StObject.set(x, "shared", js.undefined)
     }
   }
   
@@ -201,20 +174,16 @@ object WebAssembly {
   }
   object ModuleExportDescriptor {
     
-    @scala.inline
-    def apply(kind: ImportExportKind, name: java.lang.String): ModuleExportDescriptor = {
+    inline def apply(kind: ImportExportKind, name: java.lang.String): ModuleExportDescriptor = {
       val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
       __obj.asInstanceOf[ModuleExportDescriptor]
     }
     
-    @scala.inline
-    implicit class ModuleExportDescriptorMutableBuilder[Self <: ModuleExportDescriptor] (val x: Self) extends AnyVal {
+    extension [Self <: ModuleExportDescriptor](x: Self) {
       
-      @scala.inline
-      def setKind(value: ImportExportKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
+      inline def setKind(value: ImportExportKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     }
   }
   
@@ -231,23 +200,18 @@ object WebAssembly {
   }
   object ModuleImportDescriptor {
     
-    @scala.inline
-    def apply(kind: ImportExportKind, module: java.lang.String, name: java.lang.String): ModuleImportDescriptor = {
+    inline def apply(kind: ImportExportKind, module: java.lang.String, name: java.lang.String): ModuleImportDescriptor = {
       val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
       __obj.asInstanceOf[ModuleImportDescriptor]
     }
     
-    @scala.inline
-    implicit class ModuleImportDescriptorMutableBuilder[Self <: ModuleImportDescriptor] (val x: Self) extends AnyVal {
+    extension [Self <: ModuleImportDescriptor](x: Self) {
       
-      @scala.inline
-      def setKind(value: ImportExportKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
+      inline def setKind(value: ImportExportKind): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setModule(value: java.lang.String): Self = StObject.set(x, "module", value.asInstanceOf[js.Any])
+      inline def setModule(value: java.lang.String): Self = StObject.set(x, "module", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     }
   }
   
@@ -288,26 +252,20 @@ object WebAssembly {
   }
   object TableDescriptor {
     
-    @scala.inline
-    def apply(element: TableKind, initial: Double): TableDescriptor = {
+    inline def apply(element: TableKind, initial: Double): TableDescriptor = {
       val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any])
       __obj.asInstanceOf[TableDescriptor]
     }
     
-    @scala.inline
-    implicit class TableDescriptorMutableBuilder[Self <: TableDescriptor] (val x: Self) extends AnyVal {
+    extension [Self <: TableDescriptor](x: Self) {
       
-      @scala.inline
-      def setElement(value: TableKind): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
+      inline def setElement(value: TableKind): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setInitial(value: Double): Self = StObject.set(x, "initial", value.asInstanceOf[js.Any])
+      inline def setInitial(value: Double): Self = StObject.set(x, "initial", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaximum(value: Double): Self = StObject.set(x, "maximum", value.asInstanceOf[js.Any])
+      inline def setMaximum(value: Double): Self = StObject.set(x, "maximum", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaximumUndefined: Self = StObject.set(x, "maximum", js.undefined)
+      inline def setMaximumUndefined: Self = StObject.set(x, "maximum", js.undefined)
     }
   }
   
@@ -318,11 +276,9 @@ object WebAssembly {
   trait TableKind extends StObject
   object TableKind {
     
-    @scala.inline
-    def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
+    inline def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
     
-    @scala.inline
-    def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
+    inline def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
   }
   
   /* Rewritten from type alias, can be one of: 
@@ -332,27 +288,24 @@ object WebAssembly {
     - tmttyped.std.stdStrings.f64
     - tmttyped.std.stdStrings.i32
     - tmttyped.std.stdStrings.i64
+    - tmttyped.std.stdStrings.v128
   */
   trait ValueType extends StObject
   object ValueType {
     
-    @scala.inline
-    def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
+    inline def anyfunc: tmttyped.std.stdStrings.anyfunc = "anyfunc".asInstanceOf[tmttyped.std.stdStrings.anyfunc]
     
-    @scala.inline
-    def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
+    inline def externref: tmttyped.std.stdStrings.externref = "externref".asInstanceOf[tmttyped.std.stdStrings.externref]
     
-    @scala.inline
-    def f32: tmttyped.std.stdStrings.f32 = "f32".asInstanceOf[tmttyped.std.stdStrings.f32]
+    inline def f32: tmttyped.std.stdStrings.f32 = "f32".asInstanceOf[tmttyped.std.stdStrings.f32]
     
-    @scala.inline
-    def f64: tmttyped.std.stdStrings.f64 = "f64".asInstanceOf[tmttyped.std.stdStrings.f64]
+    inline def f64: tmttyped.std.stdStrings.f64 = "f64".asInstanceOf[tmttyped.std.stdStrings.f64]
     
-    @scala.inline
-    def i32: tmttyped.std.stdStrings.i32 = "i32".asInstanceOf[tmttyped.std.stdStrings.i32]
+    inline def i32: tmttyped.std.stdStrings.i32 = "i32".asInstanceOf[tmttyped.std.stdStrings.i32]
     
-    @scala.inline
-    def i64: tmttyped.std.stdStrings.i64 = "i64".asInstanceOf[tmttyped.std.stdStrings.i64]
+    inline def i64: tmttyped.std.stdStrings.i64 = "i64".asInstanceOf[tmttyped.std.stdStrings.i64]
+    
+    inline def v128: tmttyped.std.stdStrings.v128 = "v128".asInstanceOf[tmttyped.std.stdStrings.v128]
   }
   
   trait WebAssemblyInstantiatedSource extends StObject {
@@ -365,20 +318,16 @@ object WebAssembly {
   }
   object WebAssemblyInstantiatedSource {
     
-    @scala.inline
-    def apply(instance: Instance, module: Module): WebAssemblyInstantiatedSource = {
+    inline def apply(instance: Instance, module: Module): WebAssemblyInstantiatedSource = {
       val __obj = js.Dynamic.literal(instance = instance.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any])
       __obj.asInstanceOf[WebAssemblyInstantiatedSource]
     }
     
-    @scala.inline
-    implicit class WebAssemblyInstantiatedSourceMutableBuilder[Self <: WebAssemblyInstantiatedSource] (val x: Self) extends AnyVal {
+    extension [Self <: WebAssemblyInstantiatedSource](x: Self) {
       
-      @scala.inline
-      def setInstance(value: Instance): Self = StObject.set(x, "instance", value.asInstanceOf[js.Any])
+      inline def setInstance(value: Instance): Self = StObject.set(x, "instance", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setModule(value: Module): Self = StObject.set(x, "module", value.asInstanceOf[js.Any])
+      inline def setModule(value: Module): Self = StObject.set(x, "module", value.asInstanceOf[js.Any])
     }
   }
   

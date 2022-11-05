@@ -3,7 +3,6 @@ package tmttyped.node.streamWebMod
 import tmttyped.node.nodeBooleans.`false`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ReadableStreamDefaultReadValueResult[T]
@@ -16,19 +15,15 @@ trait ReadableStreamDefaultReadValueResult[T]
 }
 object ReadableStreamDefaultReadValueResult {
   
-  @scala.inline
-  def apply[T](value: T): ReadableStreamDefaultReadValueResult[T] = {
+  inline def apply[T](value: T): ReadableStreamDefaultReadValueResult[T] = {
     val __obj = js.Dynamic.literal(done = false, value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReadableStreamDefaultReadValueResult[T]]
   }
   
-  @scala.inline
-  implicit class ReadableStreamDefaultReadValueResultMutableBuilder[Self <: ReadableStreamDefaultReadValueResult[_], T] (val x: Self with ReadableStreamDefaultReadValueResult[T]) extends AnyVal {
+  extension [Self <: ReadableStreamDefaultReadValueResult[?], T](x: Self & ReadableStreamDefaultReadValueResult[T]) {
     
-    @scala.inline
-    def setDone(value: `false`): Self = StObject.set(x, "done", value.asInstanceOf[js.Any])
+    inline def setDone(value: `false`): Self = StObject.set(x, "done", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setValue(value: T): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+    inline def setValue(value: T): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

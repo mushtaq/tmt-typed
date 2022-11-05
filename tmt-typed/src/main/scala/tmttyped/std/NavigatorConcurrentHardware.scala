@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait NavigatorConcurrentHardware extends StObject {
@@ -12,16 +11,13 @@ trait NavigatorConcurrentHardware extends StObject {
 }
 object NavigatorConcurrentHardware {
   
-  @scala.inline
-  def apply(hardwareConcurrency: Double): NavigatorConcurrentHardware = {
+  inline def apply(hardwareConcurrency: Double): NavigatorConcurrentHardware = {
     val __obj = js.Dynamic.literal(hardwareConcurrency = hardwareConcurrency.asInstanceOf[js.Any])
     __obj.asInstanceOf[NavigatorConcurrentHardware]
   }
   
-  @scala.inline
-  implicit class NavigatorConcurrentHardwareMutableBuilder[Self <: NavigatorConcurrentHardware] (val x: Self) extends AnyVal {
+  extension [Self <: NavigatorConcurrentHardware](x: Self) {
     
-    @scala.inline
-    def setHardwareConcurrency(value: Double): Self = StObject.set(x, "hardwareConcurrency", value.asInstanceOf[js.Any])
+    inline def setHardwareConcurrency(value: Double): Self = StObject.set(x, "hardwareConcurrency", value.asInstanceOf[js.Any])
   }
 }

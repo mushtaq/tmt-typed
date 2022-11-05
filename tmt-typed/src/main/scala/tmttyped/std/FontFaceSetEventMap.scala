@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait FontFaceSetEventMap extends StObject {
@@ -18,8 +17,7 @@ trait FontFaceSetEventMap extends StObject {
 }
 object FontFaceSetEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     loading: org.scalajs.dom.Event,
     loadingdone: org.scalajs.dom.Event,
     loadingerror: org.scalajs.dom.Event
@@ -28,16 +26,12 @@ object FontFaceSetEventMap {
     __obj.asInstanceOf[FontFaceSetEventMap]
   }
   
-  @scala.inline
-  implicit class FontFaceSetEventMapMutableBuilder[Self <: FontFaceSetEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: FontFaceSetEventMap](x: Self) {
     
-    @scala.inline
-    def setLoading(value: org.scalajs.dom.Event): Self = StObject.set(x, "loading", value.asInstanceOf[js.Any])
+    inline def setLoading(value: org.scalajs.dom.Event): Self = StObject.set(x, "loading", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoadingdone(value: org.scalajs.dom.Event): Self = StObject.set(x, "loadingdone", value.asInstanceOf[js.Any])
+    inline def setLoadingdone(value: org.scalajs.dom.Event): Self = StObject.set(x, "loadingdone", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLoadingerror(value: org.scalajs.dom.Event): Self = StObject.set(x, "loadingerror", value.asInstanceOf[js.Any])
+    inline def setLoadingerror(value: org.scalajs.dom.Event): Self = StObject.set(x, "loadingerror", value.asInstanceOf[js.Any])
   }
 }

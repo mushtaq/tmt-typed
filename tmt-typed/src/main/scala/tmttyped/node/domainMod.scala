@@ -4,7 +4,6 @@ import tmttyped.node.eventsMod.EventEmitterOptions
 import tmttyped.node.timersMod.global.NodeJS.Timer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object domainMod {
@@ -21,7 +20,7 @@ object domainMod {
     */
   @JSImport("domain", "Domain")
   @js.native
-  class Domain () extends StObject {
+  open class Domain () extends StObject {
     def this(options: EventEmitterOptions) = this()
     
     /**
@@ -174,6 +173,5 @@ object domainMod {
     def run[T](fn: js.Function1[/* repeated */ Any, T], args: Any*): T = js.native
   }
   
-  @scala.inline
-  def create(): Domain = ^.asInstanceOf[js.Dynamic].applyDynamic("create")().asInstanceOf[Domain]
+  inline def create(): Domain = ^.asInstanceOf[js.Dynamic].applyDynamic("create")().asInstanceOf[Domain]
 }

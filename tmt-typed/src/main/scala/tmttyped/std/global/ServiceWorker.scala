@@ -5,14 +5,13 @@ import tmttyped.std.AddEventListenerOptions
 import tmttyped.std.EventListenerOrEventListenerObject
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("ServiceWorker")
 @js.native
 /* standard DOM */
-class ServiceWorker ()
+open class ServiceWorker ()
   extends StObject
      with tmttyped.std.ServiceWorker {
   

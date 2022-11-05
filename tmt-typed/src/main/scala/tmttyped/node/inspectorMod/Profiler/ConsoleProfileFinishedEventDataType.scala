@@ -3,7 +3,6 @@ package tmttyped.node.inspectorMod.Profiler
 import tmttyped.node.inspectorMod.Debugger.Location
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ConsoleProfileFinishedEventDataType extends StObject {
@@ -24,28 +23,21 @@ trait ConsoleProfileFinishedEventDataType extends StObject {
 }
 object ConsoleProfileFinishedEventDataType {
   
-  @scala.inline
-  def apply(id: String, location: Location, profile: Profile): ConsoleProfileFinishedEventDataType = {
+  inline def apply(id: String, location: Location, profile: Profile): ConsoleProfileFinishedEventDataType = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], profile = profile.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsoleProfileFinishedEventDataType]
   }
   
-  @scala.inline
-  implicit class ConsoleProfileFinishedEventDataTypeMutableBuilder[Self <: ConsoleProfileFinishedEventDataType] (val x: Self) extends AnyVal {
+  extension [Self <: ConsoleProfileFinishedEventDataType](x: Self) {
     
-    @scala.inline
-    def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
+    inline def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLocation(value: Location): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
+    inline def setLocation(value: Location): Self = StObject.set(x, "location", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProfile(value: Profile): Self = StObject.set(x, "profile", value.asInstanceOf[js.Any])
+    inline def setProfile(value: Profile): Self = StObject.set(x, "profile", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTitle(value: String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
+    inline def setTitle(value: String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
+    inline def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
   }
 }

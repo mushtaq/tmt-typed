@@ -2,7 +2,6 @@ package tmttyped.node.cryptoMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RandomUUIDOptions extends StObject {
@@ -19,19 +18,15 @@ trait RandomUUIDOptions extends StObject {
 }
 object RandomUUIDOptions {
   
-  @scala.inline
-  def apply(): RandomUUIDOptions = {
+  inline def apply(): RandomUUIDOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RandomUUIDOptions]
   }
   
-  @scala.inline
-  implicit class RandomUUIDOptionsMutableBuilder[Self <: RandomUUIDOptions] (val x: Self) extends AnyVal {
+  extension [Self <: RandomUUIDOptions](x: Self) {
     
-    @scala.inline
-    def setDisableEntropyCache(value: Boolean): Self = StObject.set(x, "disableEntropyCache", value.asInstanceOf[js.Any])
+    inline def setDisableEntropyCache(value: Boolean): Self = StObject.set(x, "disableEntropyCache", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDisableEntropyCacheUndefined: Self = StObject.set(x, "disableEntropyCache", js.undefined)
+    inline def setDisableEntropyCacheUndefined: Self = StObject.set(x, "disableEntropyCache", js.undefined)
   }
 }

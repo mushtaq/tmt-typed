@@ -2,7 +2,6 @@ package tmttyped.node.inspectorMod.Debugger
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SetSkipAllPausesParameterType extends StObject {
@@ -14,16 +13,13 @@ trait SetSkipAllPausesParameterType extends StObject {
 }
 object SetSkipAllPausesParameterType {
   
-  @scala.inline
-  def apply(skip: Boolean): SetSkipAllPausesParameterType = {
+  inline def apply(skip: Boolean): SetSkipAllPausesParameterType = {
     val __obj = js.Dynamic.literal(skip = skip.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetSkipAllPausesParameterType]
   }
   
-  @scala.inline
-  implicit class SetSkipAllPausesParameterTypeMutableBuilder[Self <: SetSkipAllPausesParameterType] (val x: Self) extends AnyVal {
+  extension [Self <: SetSkipAllPausesParameterType](x: Self) {
     
-    @scala.inline
-    def setSkip(value: Boolean): Self = StObject.set(x, "skip", value.asInstanceOf[js.Any])
+    inline def setSkip(value: Boolean): Self = StObject.set(x, "skip", value.asInstanceOf[js.Any])
   }
 }

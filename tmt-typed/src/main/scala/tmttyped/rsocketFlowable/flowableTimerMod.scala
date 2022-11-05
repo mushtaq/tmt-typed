@@ -3,7 +3,6 @@ package tmttyped.rsocketFlowable
 import tmttyped.rsocketFlowable.flowableMod.default
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object flowableTimerMod {
@@ -12,6 +11,5 @@ object flowableTimerMod {
   @js.native
   val ^ : js.Any = js.native
   
-  @scala.inline
-  def every(ms: Double): default[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("every")(ms.asInstanceOf[js.Any]).asInstanceOf[default[Double]]
+  inline def every(ms: Double): default[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("every")(ms.asInstanceOf[js.Any]).asInstanceOf[default[Double]]
 }

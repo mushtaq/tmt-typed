@@ -3,14 +3,13 @@ package tmttyped.rsocketFlowable
 import tmttyped.std.Partial
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object flowableProcessorMod {
   
   @JSImport("rsocket-flowable/FlowableProcessor", JSImport.Default)
   @js.native
-  class default[T, R] protected ()
+  open class default[T, R] protected ()
     extends StObject
        with FlowableProcessor[T, R] {
     def this(source: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IPublisher<T> */ Any) = this()

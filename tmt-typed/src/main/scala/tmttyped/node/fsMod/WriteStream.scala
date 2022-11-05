@@ -1,6 +1,5 @@
 package tmttyped.node.fsMod
 
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.nodeStrings.drain
@@ -12,12 +11,11 @@ import tmttyped.node.nodeStrings.unpipe
 import tmttyped.node.streamMod.WritableOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("fs", "WriteStream")
 @js.native
-class WriteStream () extends StObject {
+open class WriteStream () extends StObject {
   def this(opts: WritableOptions) = this()
   
   def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
@@ -58,7 +56,14 @@ class WriteStream () extends StObject {
     * @since v0.9.4
     */
   def close(): Unit = js.native
-  def close(callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): Unit = js.native
+  def close(
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
+  ): Unit = js.native
   
   def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native

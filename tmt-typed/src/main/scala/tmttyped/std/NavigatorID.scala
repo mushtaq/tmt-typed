@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait NavigatorID extends StObject {
@@ -19,7 +18,6 @@ trait NavigatorID extends StObject {
   /* standard DOM */
   val appVersion: java.lang.String
   
-  /** @deprecated */
   /* standard DOM */
   val platform: java.lang.String
   
@@ -43,8 +41,7 @@ trait NavigatorID extends StObject {
 }
 object NavigatorID {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     appCodeName: java.lang.String,
     appName: java.lang.String,
     appVersion: java.lang.String,
@@ -59,34 +56,24 @@ object NavigatorID {
     __obj.asInstanceOf[NavigatorID]
   }
   
-  @scala.inline
-  implicit class NavigatorIDMutableBuilder[Self <: NavigatorID] (val x: Self) extends AnyVal {
+  extension [Self <: NavigatorID](x: Self) {
     
-    @scala.inline
-    def setAppCodeName(value: java.lang.String): Self = StObject.set(x, "appCodeName", value.asInstanceOf[js.Any])
+    inline def setAppCodeName(value: java.lang.String): Self = StObject.set(x, "appCodeName", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAppName(value: java.lang.String): Self = StObject.set(x, "appName", value.asInstanceOf[js.Any])
+    inline def setAppName(value: java.lang.String): Self = StObject.set(x, "appName", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAppVersion(value: java.lang.String): Self = StObject.set(x, "appVersion", value.asInstanceOf[js.Any])
+    inline def setAppVersion(value: java.lang.String): Self = StObject.set(x, "appVersion", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPlatform(value: java.lang.String): Self = StObject.set(x, "platform", value.asInstanceOf[js.Any])
+    inline def setPlatform(value: java.lang.String): Self = StObject.set(x, "platform", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProduct(value: java.lang.String): Self = StObject.set(x, "product", value.asInstanceOf[js.Any])
+    inline def setProduct(value: java.lang.String): Self = StObject.set(x, "product", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setProductSub(value: java.lang.String): Self = StObject.set(x, "productSub", value.asInstanceOf[js.Any])
+    inline def setProductSub(value: java.lang.String): Self = StObject.set(x, "productSub", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUserAgent(value: java.lang.String): Self = StObject.set(x, "userAgent", value.asInstanceOf[js.Any])
+    inline def setUserAgent(value: java.lang.String): Self = StObject.set(x, "userAgent", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setVendor(value: java.lang.String): Self = StObject.set(x, "vendor", value.asInstanceOf[js.Any])
+    inline def setVendor(value: java.lang.String): Self = StObject.set(x, "vendor", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setVendorSub(value: java.lang.String): Self = StObject.set(x, "vendorSub", value.asInstanceOf[js.Any])
+    inline def setVendorSub(value: java.lang.String): Self = StObject.set(x, "vendorSub", value.asInstanceOf[js.Any])
   }
 }

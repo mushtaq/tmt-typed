@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AudioConfiguration extends StObject {
@@ -24,40 +23,29 @@ trait AudioConfiguration extends StObject {
 }
 object AudioConfiguration {
   
-  @scala.inline
-  def apply(contentType: java.lang.String): AudioConfiguration = {
+  inline def apply(contentType: java.lang.String): AudioConfiguration = {
     val __obj = js.Dynamic.literal(contentType = contentType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AudioConfiguration]
   }
   
-  @scala.inline
-  implicit class AudioConfigurationMutableBuilder[Self <: AudioConfiguration] (val x: Self) extends AnyVal {
+  extension [Self <: AudioConfiguration](x: Self) {
     
-    @scala.inline
-    def setBitrate(value: Double): Self = StObject.set(x, "bitrate", value.asInstanceOf[js.Any])
+    inline def setBitrate(value: Double): Self = StObject.set(x, "bitrate", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBitrateUndefined: Self = StObject.set(x, "bitrate", js.undefined)
+    inline def setBitrateUndefined: Self = StObject.set(x, "bitrate", js.undefined)
     
-    @scala.inline
-    def setChannels(value: java.lang.String): Self = StObject.set(x, "channels", value.asInstanceOf[js.Any])
+    inline def setChannels(value: java.lang.String): Self = StObject.set(x, "channels", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setChannelsUndefined: Self = StObject.set(x, "channels", js.undefined)
+    inline def setChannelsUndefined: Self = StObject.set(x, "channels", js.undefined)
     
-    @scala.inline
-    def setContentType(value: java.lang.String): Self = StObject.set(x, "contentType", value.asInstanceOf[js.Any])
+    inline def setContentType(value: java.lang.String): Self = StObject.set(x, "contentType", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSamplerate(value: Double): Self = StObject.set(x, "samplerate", value.asInstanceOf[js.Any])
+    inline def setSamplerate(value: Double): Self = StObject.set(x, "samplerate", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSamplerateUndefined: Self = StObject.set(x, "samplerate", js.undefined)
+    inline def setSamplerateUndefined: Self = StObject.set(x, "samplerate", js.undefined)
     
-    @scala.inline
-    def setSpatialRendering(value: scala.Boolean): Self = StObject.set(x, "spatialRendering", value.asInstanceOf[js.Any])
+    inline def setSpatialRendering(value: scala.Boolean): Self = StObject.set(x, "spatialRendering", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSpatialRenderingUndefined: Self = StObject.set(x, "spatialRendering", js.undefined)
+    inline def setSpatialRenderingUndefined: Self = StObject.set(x, "spatialRendering", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Returned by the HTMLVideoElement.getVideoPlaybackQuality() method and contains metrics that can be used to determine the playback quality of a video. */
@@ -23,8 +22,7 @@ trait VideoPlaybackQuality extends StObject {
 }
 object VideoPlaybackQuality {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     corruptedVideoFrames: Double,
     creationTime: DOMHighResTimeStamp,
     droppedVideoFrames: Double,
@@ -34,19 +32,14 @@ object VideoPlaybackQuality {
     __obj.asInstanceOf[VideoPlaybackQuality]
   }
   
-  @scala.inline
-  implicit class VideoPlaybackQualityMutableBuilder[Self <: VideoPlaybackQuality] (val x: Self) extends AnyVal {
+  extension [Self <: VideoPlaybackQuality](x: Self) {
     
-    @scala.inline
-    def setCorruptedVideoFrames(value: Double): Self = StObject.set(x, "corruptedVideoFrames", value.asInstanceOf[js.Any])
+    inline def setCorruptedVideoFrames(value: Double): Self = StObject.set(x, "corruptedVideoFrames", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCreationTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "creationTime", value.asInstanceOf[js.Any])
+    inline def setCreationTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "creationTime", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDroppedVideoFrames(value: Double): Self = StObject.set(x, "droppedVideoFrames", value.asInstanceOf[js.Any])
+    inline def setDroppedVideoFrames(value: Double): Self = StObject.set(x, "droppedVideoFrames", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTotalVideoFrames(value: Double): Self = StObject.set(x, "totalVideoFrames", value.asInstanceOf[js.Any])
+    inline def setTotalVideoFrames(value: Double): Self = StObject.set(x, "totalVideoFrames", value.asInstanceOf[js.Any])
   }
 }

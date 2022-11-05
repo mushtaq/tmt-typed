@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait XMLHttpRequestEventMap
@@ -14,8 +13,7 @@ trait XMLHttpRequestEventMap
 }
 object XMLHttpRequestEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     abort: org.scalajs.dom.ProgressEvent,
     error: org.scalajs.dom.ProgressEvent,
     load: org.scalajs.dom.ProgressEvent,
@@ -29,10 +27,8 @@ object XMLHttpRequestEventMap {
     __obj.asInstanceOf[XMLHttpRequestEventMap]
   }
   
-  @scala.inline
-  implicit class XMLHttpRequestEventMapMutableBuilder[Self <: XMLHttpRequestEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: XMLHttpRequestEventMap](x: Self) {
     
-    @scala.inline
-    def setReadystatechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
+    inline def setReadystatechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "readystatechange", value.asInstanceOf[js.Any])
   }
 }

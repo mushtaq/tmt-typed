@@ -2,7 +2,6 @@ package tmttyped.node.cryptoMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -14,15 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LegacyCharacterEncoding extends StObject
 object LegacyCharacterEncoding {
   
-  @scala.inline
-  def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
+  inline def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
   
-  @scala.inline
-  def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
+  inline def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
   
-  @scala.inline
-  def `ucs-2`: tmttyped.node.nodeStrings.`ucs-2` = "ucs-2".asInstanceOf[tmttyped.node.nodeStrings.`ucs-2`]
+  inline def `ucs-2`: tmttyped.node.nodeStrings.`ucs-2` = "ucs-2".asInstanceOf[tmttyped.node.nodeStrings.`ucs-2`]
   
-  @scala.inline
-  def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
+  inline def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
 }

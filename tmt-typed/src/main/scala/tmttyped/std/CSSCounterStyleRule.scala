@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait CSSCounterStyleRule
@@ -44,8 +43,7 @@ trait CSSCounterStyleRule
 }
 object CSSCounterStyleRule {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     CHARSET_RULE: Double,
     FONT_FACE_RULE: Double,
     IMPORT_RULE: Double,
@@ -75,40 +73,28 @@ object CSSCounterStyleRule {
     __obj.asInstanceOf[CSSCounterStyleRule]
   }
   
-  @scala.inline
-  implicit class CSSCounterStyleRuleMutableBuilder[Self <: CSSCounterStyleRule] (val x: Self) extends AnyVal {
+  extension [Self <: CSSCounterStyleRule](x: Self) {
     
-    @scala.inline
-    def setAdditiveSymbols(value: java.lang.String): Self = StObject.set(x, "additiveSymbols", value.asInstanceOf[js.Any])
+    inline def setAdditiveSymbols(value: java.lang.String): Self = StObject.set(x, "additiveSymbols", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFallback(value: java.lang.String): Self = StObject.set(x, "fallback", value.asInstanceOf[js.Any])
+    inline def setFallback(value: java.lang.String): Self = StObject.set(x, "fallback", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+    inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setNegative(value: java.lang.String): Self = StObject.set(x, "negative", value.asInstanceOf[js.Any])
+    inline def setNegative(value: java.lang.String): Self = StObject.set(x, "negative", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPad(value: java.lang.String): Self = StObject.set(x, "pad", value.asInstanceOf[js.Any])
+    inline def setPad(value: java.lang.String): Self = StObject.set(x, "pad", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPrefix(value: java.lang.String): Self = StObject.set(x, "prefix", value.asInstanceOf[js.Any])
+    inline def setPrefix(value: java.lang.String): Self = StObject.set(x, "prefix", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRange(value: java.lang.String): Self = StObject.set(x, "range", value.asInstanceOf[js.Any])
+    inline def setRange(value: java.lang.String): Self = StObject.set(x, "range", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSpeakAs(value: java.lang.String): Self = StObject.set(x, "speakAs", value.asInstanceOf[js.Any])
+    inline def setSpeakAs(value: java.lang.String): Self = StObject.set(x, "speakAs", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSuffix(value: java.lang.String): Self = StObject.set(x, "suffix", value.asInstanceOf[js.Any])
+    inline def setSuffix(value: java.lang.String): Self = StObject.set(x, "suffix", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSymbols(value: java.lang.String): Self = StObject.set(x, "symbols", value.asInstanceOf[js.Any])
+    inline def setSymbols(value: java.lang.String): Self = StObject.set(x, "symbols", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSystem(value: java.lang.String): Self = StObject.set(x, "system", value.asInstanceOf[js.Any])
+    inline def setSystem(value: java.lang.String): Self = StObject.set(x, "system", value.asInstanceOf[js.Any])
   }
 }

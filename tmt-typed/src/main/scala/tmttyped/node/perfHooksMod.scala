@@ -3,10 +3,12 @@ package tmttyped.node
 import tmttyped.node.anon.Buffered
 import tmttyped.node.anon.BufferedType
 import tmttyped.node.nodeAsyncHooksMod.AsyncResource
+import tmttyped.node.nodeNumbers.`0`
+import tmttyped.node.nodeStrings.mark
+import tmttyped.node.nodeStrings.measure
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object perfHooksMod {
@@ -20,7 +22,7 @@ object perfHooksMod {
     */
   @JSImport("perf_hooks", "PerformanceEntry")
   @js.native
-  /* protected */ class PerformanceEntry () extends StObject {
+  /* protected */ open class PerformanceEntry () extends StObject {
     
     /**
       * Additional detail specific to the `entryType`.
@@ -61,6 +63,28 @@ object perfHooksMod {
       * @since v8.5.0
       */
     val startTime: Double = js.native
+    
+    // TODO: Narrow this based on entry type.
+    def toJSON(): Any = js.native
+  }
+  
+  @JSImport("perf_hooks", "PerformanceMark")
+  @js.native
+  /* protected */ open class PerformanceMark () extends PerformanceEntry {
+    
+    @JSName("duration")
+    val duration_PerformanceMark: `0` = js.native
+    
+    @JSName("entryType")
+    val entryType_PerformanceMark: mark = js.native
+  }
+  
+  @JSImport("perf_hooks", "PerformanceMeasure")
+  @js.native
+  /* protected */ open class PerformanceMeasure () extends PerformanceEntry {
+    
+    @JSName("entryType")
+    val entryType_PerformanceMeasure: measure = js.native
   }
   
   /**
@@ -72,7 +96,7 @@ object perfHooksMod {
     */
   @JSImport("perf_hooks", "PerformanceNodeTiming")
   @js.native
-  /* protected */ class PerformanceNodeTiming () extends PerformanceEntry {
+  /* protected */ open class PerformanceNodeTiming () extends PerformanceEntry {
     
     /**
       * The high resolution millisecond timestamp at which the Node.js process
@@ -125,7 +149,7 @@ object perfHooksMod {
   
   @JSImport("perf_hooks", "PerformanceObserver")
   @js.native
-  class PerformanceObserver protected () extends AsyncResource {
+  open class PerformanceObserver protected () extends AsyncResource {
     def this(callback: PerformanceObserverCallback) = this()
     
     /**
@@ -144,7 +168,7 @@ object perfHooksMod {
       * } = require('perf_hooks');
       *
       * const obs = new PerformanceObserver((list, observer) => {
-      *   // Called three times synchronously. `list` contains one item.
+      *   // Called once asynchronously. `list` contains three items.
       * });
       * obs.observe({ type: 'mark' });
       *
@@ -208,10 +232,21 @@ object perfHooksMod {
     * Returns a `RecordableHistogram`.
     * @since v15.9.0, v14.18.0
     */
-  @scala.inline
-  def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]
-  @scala.inline
-  def createHistogram(options: CreateHistogramOptions): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")(options.asInstanceOf[js.Any]).asInstanceOf[RecordableHistogram]
+  inline def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]
+  inline def createHistogram(options: CreateHistogramOptions): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")(options.asInstanceOf[js.Any]).asInstanceOf[RecordableHistogram]
+  
+  object global {
+    
+    /**
+      * `performance` is a global reference for `require('perf_hooks').performance`
+      * https://nodejs.org/api/globals.html#performance
+      * @since v16.0.0
+      */
+    @JSGlobal("performance")
+    @js.native
+    def performance: Performance_ = js.native
+    inline def performance_=(x: Performance_): Unit = js.Dynamic.global.updateDynamic("performance")(x.asInstanceOf[js.Any])
+  }
   
   /**
     * _This property is an extension by Node.js. It is not available in Web browsers._
@@ -241,10 +276,8 @@ object perfHooksMod {
     * ```
     * @since v11.10.0
     */
-  @scala.inline
-  def monitorEventLoopDelay(): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")().asInstanceOf[IntervalHistogram]
-  @scala.inline
-  def monitorEventLoopDelay(options: EventLoopMonitorOptions): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")(options.asInstanceOf[js.Any]).asInstanceOf[IntervalHistogram]
+  inline def monitorEventLoopDelay(): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")().asInstanceOf[IntervalHistogram]
+  inline def monitorEventLoopDelay(options: EventLoopMonitorOptions): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")(options.asInstanceOf[js.Any]).asInstanceOf[IntervalHistogram]
   
   @JSImport("perf_hooks", "performance")
   @js.native
@@ -272,32 +305,24 @@ object perfHooksMod {
   }
   object CreateHistogramOptions {
     
-    @scala.inline
-    def apply(): CreateHistogramOptions = {
+    inline def apply(): CreateHistogramOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[CreateHistogramOptions]
     }
     
-    @scala.inline
-    implicit class CreateHistogramOptionsMutableBuilder[Self <: CreateHistogramOptions] (val x: Self) extends AnyVal {
+    extension [Self <: CreateHistogramOptions](x: Self) {
       
-      @scala.inline
-      def setFigures(value: Double): Self = StObject.set(x, "figures", value.asInstanceOf[js.Any])
+      inline def setFigures(value: Double): Self = StObject.set(x, "figures", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFiguresUndefined: Self = StObject.set(x, "figures", js.undefined)
+      inline def setFiguresUndefined: Self = StObject.set(x, "figures", js.undefined)
       
-      @scala.inline
-      def setMax(value: Double | js.BigInt): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
+      inline def setMax(value: Double | js.BigInt): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxUndefined: Self = StObject.set(x, "max", js.undefined)
+      inline def setMaxUndefined: Self = StObject.set(x, "max", js.undefined)
       
-      @scala.inline
-      def setMin(value: Double | js.BigInt): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
+      inline def setMin(value: Double | js.BigInt): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMinUndefined: Self = StObject.set(x, "min", js.undefined)
+      inline def setMinUndefined: Self = StObject.set(x, "min", js.undefined)
     }
   }
   
@@ -313,26 +338,19 @@ object perfHooksMod {
   trait EntryType extends StObject
   object EntryType {
     
-    @scala.inline
-    def function: tmttyped.node.nodeStrings.function = "function".asInstanceOf[tmttyped.node.nodeStrings.function]
+    inline def function: tmttyped.node.nodeStrings.function = "function".asInstanceOf[tmttyped.node.nodeStrings.function]
     
-    @scala.inline
-    def gc: tmttyped.node.nodeStrings.gc = "gc".asInstanceOf[tmttyped.node.nodeStrings.gc]
+    inline def gc: tmttyped.node.nodeStrings.gc = "gc".asInstanceOf[tmttyped.node.nodeStrings.gc]
     
-    @scala.inline
-    def http: tmttyped.node.nodeStrings.http = "http".asInstanceOf[tmttyped.node.nodeStrings.http]
+    inline def http: tmttyped.node.nodeStrings.http = "http".asInstanceOf[tmttyped.node.nodeStrings.http]
     
-    @scala.inline
-    def http2: tmttyped.node.nodeStrings.http2 = "http2".asInstanceOf[tmttyped.node.nodeStrings.http2]
+    inline def http2: tmttyped.node.nodeStrings.http2 = "http2".asInstanceOf[tmttyped.node.nodeStrings.http2]
     
-    @scala.inline
-    def mark: tmttyped.node.nodeStrings.mark = "mark".asInstanceOf[tmttyped.node.nodeStrings.mark]
+    inline def mark: tmttyped.node.nodeStrings.mark = "mark".asInstanceOf[tmttyped.node.nodeStrings.mark]
     
-    @scala.inline
-    def measure: tmttyped.node.nodeStrings.measure = "measure".asInstanceOf[tmttyped.node.nodeStrings.measure]
+    inline def measure: tmttyped.node.nodeStrings.measure = "measure".asInstanceOf[tmttyped.node.nodeStrings.measure]
     
-    @scala.inline
-    def node: tmttyped.node.nodeStrings.node = "node".asInstanceOf[tmttyped.node.nodeStrings.node]
+    inline def node: tmttyped.node.nodeStrings.node = "node".asInstanceOf[tmttyped.node.nodeStrings.node]
   }
   
   trait EventLoopMonitorOptions extends StObject {
@@ -346,20 +364,16 @@ object perfHooksMod {
   }
   object EventLoopMonitorOptions {
     
-    @scala.inline
-    def apply(): EventLoopMonitorOptions = {
+    inline def apply(): EventLoopMonitorOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[EventLoopMonitorOptions]
     }
     
-    @scala.inline
-    implicit class EventLoopMonitorOptionsMutableBuilder[Self <: EventLoopMonitorOptions] (val x: Self) extends AnyVal {
+    extension [Self <: EventLoopMonitorOptions](x: Self) {
       
-      @scala.inline
-      def setResolution(value: Double): Self = StObject.set(x, "resolution", value.asInstanceOf[js.Any])
+      inline def setResolution(value: Double): Self = StObject.set(x, "resolution", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setResolutionUndefined: Self = StObject.set(x, "resolution", js.undefined)
+      inline def setResolutionUndefined: Self = StObject.set(x, "resolution", js.undefined)
     }
   }
   
@@ -383,23 +397,18 @@ object perfHooksMod {
   }
   object EventLoopUtilization {
     
-    @scala.inline
-    def apply(active: Double, idle: Double, utilization: Double): EventLoopUtilization = {
+    inline def apply(active: Double, idle: Double, utilization: Double): EventLoopUtilization = {
       val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], idle = idle.asInstanceOf[js.Any], utilization = utilization.asInstanceOf[js.Any])
       __obj.asInstanceOf[EventLoopUtilization]
     }
     
-    @scala.inline
-    implicit class EventLoopUtilizationMutableBuilder[Self <: EventLoopUtilization] (val x: Self) extends AnyVal {
+    extension [Self <: EventLoopUtilization](x: Self) {
       
-      @scala.inline
-      def setActive(value: Double): Self = StObject.set(x, "active", value.asInstanceOf[js.Any])
+      inline def setActive(value: Double): Self = StObject.set(x, "active", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setIdle(value: Double): Self = StObject.set(x, "idle", value.asInstanceOf[js.Any])
+      inline def setIdle(value: Double): Self = StObject.set(x, "idle", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUtilization(value: Double): Self = StObject.set(x, "utilization", value.asInstanceOf[js.Any])
+      inline def setUtilization(value: Double): Self = StObject.set(x, "utilization", value.asInstanceOf[js.Any])
     }
   }
   
@@ -457,8 +466,7 @@ object perfHooksMod {
   }
   object Histogram {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       exceeds: Double,
       max: Double,
       mean: Double,
@@ -472,32 +480,23 @@ object perfHooksMod {
       __obj.asInstanceOf[Histogram]
     }
     
-    @scala.inline
-    implicit class HistogramMutableBuilder[Self <: Histogram] (val x: Self) extends AnyVal {
+    extension [Self <: Histogram](x: Self) {
       
-      @scala.inline
-      def setExceeds(value: Double): Self = StObject.set(x, "exceeds", value.asInstanceOf[js.Any])
+      inline def setExceeds(value: Double): Self = StObject.set(x, "exceeds", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMax(value: Double): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
+      inline def setMax(value: Double): Self = StObject.set(x, "max", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMean(value: Double): Self = StObject.set(x, "mean", value.asInstanceOf[js.Any])
+      inline def setMean(value: Double): Self = StObject.set(x, "mean", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMin(value: Double): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
+      inline def setMin(value: Double): Self = StObject.set(x, "min", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPercentile(value: Double => Double): Self = StObject.set(x, "percentile", js.Any.fromFunction1(value))
+      inline def setPercentile(value: Double => Double): Self = StObject.set(x, "percentile", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setPercentiles(value: Map[Double, Double]): Self = StObject.set(x, "percentiles", value.asInstanceOf[js.Any])
+      inline def setPercentiles(value: Map[Double, Double]): Self = StObject.set(x, "percentiles", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReset(value: () => Unit): Self = StObject.set(x, "reset", js.Any.fromFunction0(value))
+      inline def setReset(value: () => Unit): Self = StObject.set(x, "reset", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setStddev(value: Double): Self = StObject.set(x, "stddev", value.asInstanceOf[js.Any])
+      inline def setStddev(value: Double): Self = StObject.set(x, "stddev", value.asInstanceOf[js.Any])
     }
   }
   
@@ -521,8 +520,7 @@ object perfHooksMod {
   }
   object IntervalHistogram {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       disable: () => Boolean,
       enable: () => Boolean,
       exceeds: Double,
@@ -538,14 +536,11 @@ object perfHooksMod {
       __obj.asInstanceOf[IntervalHistogram]
     }
     
-    @scala.inline
-    implicit class IntervalHistogramMutableBuilder[Self <: IntervalHistogram] (val x: Self) extends AnyVal {
+    extension [Self <: IntervalHistogram](x: Self) {
       
-      @scala.inline
-      def setDisable(value: () => Boolean): Self = StObject.set(x, "disable", js.Any.fromFunction0(value))
+      inline def setDisable(value: () => Boolean): Self = StObject.set(x, "disable", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setEnable(value: () => Boolean): Self = StObject.set(x, "enable", js.Any.fromFunction0(value))
+      inline def setEnable(value: () => Boolean): Self = StObject.set(x, "enable", js.Any.fromFunction0(value))
     }
   }
   
@@ -564,26 +559,20 @@ object perfHooksMod {
   }
   object MarkOptions {
     
-    @scala.inline
-    def apply(): MarkOptions = {
+    inline def apply(): MarkOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[MarkOptions]
     }
     
-    @scala.inline
-    implicit class MarkOptionsMutableBuilder[Self <: MarkOptions] (val x: Self) extends AnyVal {
+    extension [Self <: MarkOptions](x: Self) {
       
-      @scala.inline
-      def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+      inline def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
+      inline def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
       
-      @scala.inline
-      def setStartTime(value: Double): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
+      inline def setStartTime(value: Double): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStartTimeUndefined: Self = StObject.set(x, "startTime", js.undefined)
+      inline def setStartTimeUndefined: Self = StObject.set(x, "startTime", js.undefined)
     }
   }
   
@@ -611,38 +600,28 @@ object perfHooksMod {
   }
   object MeasureOptions {
     
-    @scala.inline
-    def apply(): MeasureOptions = {
+    inline def apply(): MeasureOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[MeasureOptions]
     }
     
-    @scala.inline
-    implicit class MeasureOptionsMutableBuilder[Self <: MeasureOptions] (val x: Self) extends AnyVal {
+    extension [Self <: MeasureOptions](x: Self) {
       
-      @scala.inline
-      def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+      inline def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
+      inline def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
       
-      @scala.inline
-      def setDuration(value: Double): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
+      inline def setDuration(value: Double): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
+      inline def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
       
-      @scala.inline
-      def setEnd(value: Double | String): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
+      inline def setEnd(value: Double | String): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEndUndefined: Self = StObject.set(x, "end", js.undefined)
+      inline def setEndUndefined: Self = StObject.set(x, "end", js.undefined)
       
-      @scala.inline
-      def setStart(value: Double | String): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
+      inline def setStart(value: Double | String): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
+      inline def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
     }
   }
   
@@ -664,26 +643,20 @@ object perfHooksMod {
   }
   object NodeGCPerformanceDetail {
     
-    @scala.inline
-    def apply(): NodeGCPerformanceDetail = {
+    inline def apply(): NodeGCPerformanceDetail = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[NodeGCPerformanceDetail]
     }
     
-    @scala.inline
-    implicit class NodeGCPerformanceDetailMutableBuilder[Self <: NodeGCPerformanceDetail] (val x: Self) extends AnyVal {
+    extension [Self <: NodeGCPerformanceDetail](x: Self) {
       
-      @scala.inline
-      def setFlags(value: Double): Self = StObject.set(x, "flags", value.asInstanceOf[js.Any])
+      inline def setFlags(value: Double): Self = StObject.set(x, "flags", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFlagsUndefined: Self = StObject.set(x, "flags", js.undefined)
+      inline def setFlagsUndefined: Self = StObject.set(x, "flags", js.undefined)
       
-      @scala.inline
-      def setKind(value: Double): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
+      inline def setKind(value: Double): Self = StObject.set(x, "kind", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setKindUndefined: Self = StObject.set(x, "kind", js.undefined)
+      inline def setKindUndefined: Self = StObject.set(x, "kind", js.undefined)
     }
   }
   
@@ -720,6 +693,9 @@ object perfHooksMod {
       *    *   }
       *    * ]
       *
+      *
+      *   performance.clearMarks();
+      *   performance.clearMeasures();
       *   observer.disconnect();
       * });
       * obs.observe({ type: 'mark' });
@@ -768,6 +744,9 @@ object perfHooksMod {
       *    * ]
       *
       *   console.log(perfObserverList.getEntriesByName('test', 'measure')); // []
+      *
+      *   performance.clearMarks();
+      *   performance.clearMeasures();
       *   observer.disconnect();
       * });
       * obs.observe({ entryTypes: ['mark', 'measure'] });
@@ -808,6 +787,8 @@ object perfHooksMod {
       *    *   }
       *    * ]
       *
+      *   performance.clearMarks();
+      *   performance.clearMeasures();
       *   observer.disconnect();
       * });
       * obs.observe({ type: 'mark' });
@@ -832,6 +813,15 @@ object perfHooksMod {
     def clearMarks(name: String): Unit = js.native
     
     /**
+      * If name is not provided, removes all PerformanceMeasure objects from the Performance Timeline.
+      * If name is provided, removes only the named measure.
+      * @param name
+      * @since v16.7.0
+      */
+    def clearMeasures(): Unit = js.native
+    def clearMeasures(name: String): Unit = js.native
+    
+    /**
       * eventLoopUtilization is similar to CPU utilization except that it is calculated using high precision wall-clock time.
       * It represents the percentage of time the event loop has spent outside the event loop's event provider (e.g. epoll_wait).
       * No other CPU idle time is taken into consideration.
@@ -849,16 +839,43 @@ object perfHooksMod {
     var eventLoopUtilization_Original: EventLoopUtilityFunction = js.native
     
     /**
+      * Returns a list of `PerformanceEntry` objects in chronological order with respect to `performanceEntry.startTime`.
+      * If you are only interested in performance entries of certain types or that have certain names, see
+      * `performance.getEntriesByType()` and `performance.getEntriesByName()`.
+      * @since v16.7.0
+      */
+    def getEntries(): js.Array[PerformanceEntry] = js.native
+    
+    /**
+      * Returns a list of `PerformanceEntry` objects in chronological order with respect to `performanceEntry.startTime`
+      * whose `performanceEntry.name` is equal to `name`, and optionally, whose `performanceEntry.entryType` is equal to `type`.
+      * @param name
+      * @param type
+      * @since v16.7.0
+      */
+    def getEntriesByName(name: String): js.Array[PerformanceEntry] = js.native
+    def getEntriesByName(name: String, `type`: EntryType): js.Array[PerformanceEntry] = js.native
+    
+    /**
+      * Returns a list of `PerformanceEntry` objects in chronological order with respect to `performanceEntry.startTime`
+      * whose `performanceEntry.entryType` is equal to `type`.
+      * @param type
+      * @since v16.7.0
+      */
+    def getEntriesByType(`type`: EntryType): js.Array[PerformanceEntry] = js.native
+    
+    /**
       * Creates a new PerformanceMark entry in the Performance Timeline.
       * A PerformanceMark is a subclass of PerformanceEntry whose performanceEntry.entryType is always 'mark',
       * and whose performanceEntry.duration is always 0.
       * Performance marks are used to mark specific significant moments in the Performance Timeline.
       * @param name
+      * @return The PerformanceMark entry that was created
       */
-    def mark(): Unit = js.native
-    def mark(name: String): Unit = js.native
-    def mark(name: String, options: MarkOptions): Unit = js.native
-    def mark(name: Unit, options: MarkOptions): Unit = js.native
+    def mark(): PerformanceMark = js.native
+    def mark(name: String): PerformanceMark = js.native
+    def mark(name: String, options: MarkOptions): PerformanceMark = js.native
+    def mark(name: Unit, options: MarkOptions): PerformanceMark = js.native
     
     /**
       * Creates a new PerformanceMeasure entry in the Performance Timeline.
@@ -874,12 +891,13 @@ object perfHooksMod {
       * @param name
       * @param startMark
       * @param endMark
+      * @return The PerformanceMeasure entry that was created
       */
-    def measure(name: String): Unit = js.native
-    def measure(name: String, options: MeasureOptions): Unit = js.native
-    def measure(name: String, startMark: String): Unit = js.native
-    def measure(name: String, startMark: String, endMark: String): Unit = js.native
-    def measure(name: String, startMark: Unit, endMark: String): Unit = js.native
+    def measure(name: String): PerformanceMeasure = js.native
+    def measure(name: String, options: MeasureOptions): PerformanceMeasure = js.native
+    def measure(name: String, startMark: String): PerformanceMeasure = js.native
+    def measure(name: String, startMark: String, endMark: String): PerformanceMeasure = js.native
+    def measure(name: String, startMark: Unit, endMark: String): PerformanceMeasure = js.native
     
     /**
       * An instance of the PerformanceNodeTiming class that provides performance metrics for specific Node.js operational milestones.
@@ -910,6 +928,13 @@ object perfHooksMod {
     extends StObject
        with Histogram {
     
+    /**
+      * Adds the values from other to this histogram.
+      * @since v17.4.0, v16.14.0
+      * @param other Recordable Histogram to combine with
+      */
+    def add(other: RecordableHistogram): Unit = js.native
+    
     def record(`val`: js.BigInt): Unit = js.native
     /**
       * @since v15.9.0, v14.18.0
@@ -938,20 +963,16 @@ object perfHooksMod {
   }
   object TimerifyOptions {
     
-    @scala.inline
-    def apply(): TimerifyOptions = {
+    inline def apply(): TimerifyOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[TimerifyOptions]
     }
     
-    @scala.inline
-    implicit class TimerifyOptionsMutableBuilder[Self <: TimerifyOptions] (val x: Self) extends AnyVal {
+    extension [Self <: TimerifyOptions](x: Self) {
       
-      @scala.inline
-      def setHistogram(value: RecordableHistogram): Self = StObject.set(x, "histogram", value.asInstanceOf[js.Any])
+      inline def setHistogram(value: RecordableHistogram): Self = StObject.set(x, "histogram", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHistogramUndefined: Self = StObject.set(x, "histogram", js.undefined)
+      inline def setHistogramUndefined: Self = StObject.set(x, "histogram", js.undefined)
     }
   }
 }

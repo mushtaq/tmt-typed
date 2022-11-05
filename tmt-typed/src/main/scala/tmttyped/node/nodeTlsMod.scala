@@ -11,7 +11,6 @@ import tmttyped.node.tlsMod.TLSSocketOptions
 import tmttyped.node.tlsMod.TlsOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeTlsMod {
@@ -36,8 +35,7 @@ object nodeTlsMod {
   @JSImport("node:tls", "DEFAULT_ECDH_CURVE")
   @js.native
   def DEFAULT_ECDH_CURVE: String = js.native
-  @scala.inline
-  def DEFAULT_ECDH_CURVE_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_ECDH_CURVE")(x.asInstanceOf[js.Any])
+  inline def DEFAULT_ECDH_CURVE_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_ECDH_CURVE")(x.asInstanceOf[js.Any])
   
   /**
     * The default value of the maxVersion option of
@@ -51,8 +49,7 @@ object nodeTlsMod {
   @JSImport("node:tls", "DEFAULT_MAX_VERSION")
   @js.native
   def DEFAULT_MAX_VERSION: SecureVersion = js.native
-  @scala.inline
-  def DEFAULT_MAX_VERSION_=(x: SecureVersion): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_MAX_VERSION")(x.asInstanceOf[js.Any])
+  inline def DEFAULT_MAX_VERSION_=(x: SecureVersion): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_MAX_VERSION")(x.asInstanceOf[js.Any])
   
   /**
     * The default value of the minVersion option of tls.createSecureContext().
@@ -66,8 +63,7 @@ object nodeTlsMod {
   @JSImport("node:tls", "DEFAULT_MIN_VERSION")
   @js.native
   def DEFAULT_MIN_VERSION: SecureVersion = js.native
-  @scala.inline
-  def DEFAULT_MIN_VERSION_=(x: SecureVersion): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_MIN_VERSION")(x.asInstanceOf[js.Any])
+  inline def DEFAULT_MIN_VERSION_=(x: SecureVersion): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("DEFAULT_MIN_VERSION")(x.asInstanceOf[js.Any])
   
   /**
     * Accepts encrypted connections using TLS or SSL.
@@ -75,7 +71,7 @@ object nodeTlsMod {
     */
   @JSImport("node:tls", "Server")
   @js.native
-  class Server () extends StObject {
+  open class Server () extends StObject {
     def this(options: TlsOptions) = this()
     def this(secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]) = this()
     def this(
@@ -96,7 +92,7 @@ object nodeTlsMod {
     */
   @JSImport("node:tls", "TLSSocket")
   @js.native
-  class TLSSocket protected () extends StObject {
+  open class TLSSocket protected () extends StObject {
     /**
       * Construct a new tls.TLSSocket object from an existing TCP socket.
       */
@@ -110,19 +106,24 @@ object nodeTlsMod {
     * Returns [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) object, populating it with `reason`, `host`, and `cert` on
     * failure. On success, returns [undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type).
     *
-    * This function can be overwritten by providing alternative function as part of
-    * the `options.checkServerIdentity` option passed to `tls.connect()`. The
+    * This function is intended to be used in combination with the`checkServerIdentity` option that can be passed to {@link connect} and as
+    * such operates on a `certificate object`. For other purposes, consider using `x509.checkHost()` instead.
+    *
+    * This function can be overwritten by providing an alternative function as the`options.checkServerIdentity` option that is passed to `tls.connect()`. The
     * overwriting function can call `tls.checkServerIdentity()` of course, to augment
     * the checks done with additional verification.
     *
     * This function is only called if the certificate passed all other checks, such as
     * being issued by trusted CA (`options.ca`).
+    *
+    * Earlier versions of Node.js incorrectly accepted certificates for a given`hostname` if a matching `uniformResourceIdentifier` subject alternative name
+    * was present (see [CVE-2021-44531](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44531)). Applications that wish to accept`uniformResourceIdentifier` subject alternative names can use
+    * a custom`options.checkServerIdentity` function that implements the desired behavior.
     * @since v0.8.4
     * @param hostname The host name or IP address to verify the certificate against.
     * @param cert A `certificate object` representing the peer's certificate.
     */
-  @scala.inline
-  def checkServerIdentity(hostname: String, cert: PeerCertificate): js.UndefOr[js.Error] = (^.asInstanceOf[js.Dynamic].applyDynamic("checkServerIdentity")(hostname.asInstanceOf[js.Any], cert.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[js.Error]]
+  inline def checkServerIdentity(hostname: String, cert: PeerCertificate): js.UndefOr[js.Error] = (^.asInstanceOf[js.Dynamic].applyDynamic("checkServerIdentity")(hostname.asInstanceOf[js.Any], cert.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[js.Error]]
   
   /**
     * The `callback` function, if specified, will be added as a listener for the `'secureConnect'` event.
@@ -170,32 +171,19 @@ object nodeTlsMod {
     * ```
     * @since v0.11.3
     */
-  @scala.inline
-  def connect(options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: String): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: String, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: String, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: String, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: Unit, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: Unit, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, host: Unit, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
-  @scala.inline
-  def connect(port: Double, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double): tmttyped.node.tlsMod.TLSSocket = ^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: String): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: String, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: String, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: String, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: Unit, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: Unit, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, host: Unit, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], host.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, options: Unit, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, options: ConnectionOptions): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
+  inline def connect(port: Double, options: ConnectionOptions, secureConnectListener: js.Function0[Unit]): tmttyped.node.tlsMod.TLSSocket = (^.asInstanceOf[js.Dynamic].applyDynamic("connect")(port.asInstanceOf[js.Any], options.asInstanceOf[js.Any], secureConnectListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.TLSSocket]
   
   /**
     * {@link createServer} sets the default value of the `honorCipherOrder` option
@@ -214,10 +202,8 @@ object nodeTlsMod {
     * CAs](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt).
     * @since v0.11.13
     */
-  @scala.inline
-  def createSecureContext(): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")().asInstanceOf[SecureContext]
-  @scala.inline
-  def createSecureContext(options: SecureContextOptions): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")(options.asInstanceOf[js.Any]).asInstanceOf[SecureContext]
+  inline def createSecureContext(): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")().asInstanceOf[SecureContext]
+  inline def createSecureContext(options: SecureContextOptions): SecureContext = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecureContext")(options.asInstanceOf[js.Any]).asInstanceOf[SecureContext]
   
   /**
     * Creates a new secure pair object with two streams, one of which reads and writes
@@ -252,38 +238,22 @@ object nodeTlsMod {
     * @param requestCert `true` to specify whether a server should request a certificate from a connecting client. Only applies when `isServer` is `true`.
     * @param rejectUnauthorized If not `false` a server automatically reject clients with invalid certificates. Only applies when `isServer` is `true`.
     */
-  @scala.inline
-  def createSecurePair(): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")().asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Boolean, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Unit, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Unit, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: Unit, isServer: Unit, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any]).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
-  @scala.inline
-  def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")().asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Boolean, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Unit, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Unit, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: Unit, isServer: Unit, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext): SecurePair = ^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any]).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Boolean, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Boolean, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
+  inline def createSecurePair(context: SecureContext, isServer: Unit, requestCert: Unit, rejectUnauthorized: Boolean): SecurePair = (^.asInstanceOf[js.Dynamic].applyDynamic("createSecurePair")(context.asInstanceOf[js.Any], isServer.asInstanceOf[js.Any], requestCert.asInstanceOf[js.Any], rejectUnauthorized.asInstanceOf[js.Any])).asInstanceOf[SecurePair]
   
   /**
     * Creates a new {@link Server}. The `secureConnectionListener`, if provided, is
@@ -324,22 +294,20 @@ object nodeTlsMod {
     * The server can be tested by connecting to it using the example client from {@link connect}.
     * @since v0.3.2
     */
-  @scala.inline
-  def createServer(): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.tlsMod.Server]
-  @scala.inline
-  def createServer(options: TlsOptions): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
-  @scala.inline
-  def createServer(
+  inline def createServer(): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")().asInstanceOf[tmttyped.node.tlsMod.Server]
+  inline def createServer(options: TlsOptions): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
+  inline def createServer(
     options: TlsOptions,
     secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]
   ): tmttyped.node.tlsMod.Server = (^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(options.asInstanceOf[js.Any], secureConnectionListener.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.tlsMod.Server]
-  @scala.inline
-  def createServer(secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(secureConnectionListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
+  inline def createServer(secureConnectionListener: js.Function1[/* socket */ tmttyped.node.tlsMod.TLSSocket, Unit]): tmttyped.node.tlsMod.Server = ^.asInstanceOf[js.Dynamic].applyDynamic("createServer")(secureConnectionListener.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.tlsMod.Server]
   
   /**
     * Returns an array with the names of the supported TLS ciphers. The names are
     * lower-case for historical reasons, but must be uppercased to be used in
     * the `ciphers` option of {@link createSecureContext}.
+    *
+    * Not all supported ciphers are enabled by default. See `Modifying the default TLS cipher suite`.
     *
     * Cipher names that start with `'tls_'` are for TLSv1.3, all the others are for
     * TLSv1.2 and below.
@@ -349,8 +317,7 @@ object nodeTlsMod {
     * ```
     * @since v0.10.2
     */
-  @scala.inline
-  def getCiphers(): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getCiphers")().asInstanceOf[js.Array[String]]
+  inline def getCiphers(): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getCiphers")().asInstanceOf[js.Array[String]]
   
   /**
     * An immutable array of strings representing the root certificates (in PEM

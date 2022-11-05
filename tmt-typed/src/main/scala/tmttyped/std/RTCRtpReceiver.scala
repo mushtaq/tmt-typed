@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This WebRTC API interface manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection. */
@@ -28,8 +27,7 @@ trait RTCRtpReceiver extends StObject {
 }
 object RTCRtpReceiver {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     getContributingSources: () => js.Array[RTCRtpContributingSource],
     getParameters: () => RTCRtpReceiveParameters,
     getStats: () => js.Promise[org.scalajs.dom.RTCStatsReport],
@@ -40,28 +38,20 @@ object RTCRtpReceiver {
     __obj.asInstanceOf[RTCRtpReceiver]
   }
   
-  @scala.inline
-  implicit class RTCRtpReceiverMutableBuilder[Self <: RTCRtpReceiver] (val x: Self) extends AnyVal {
+  extension [Self <: RTCRtpReceiver](x: Self) {
     
-    @scala.inline
-    def setGetContributingSources(value: () => js.Array[RTCRtpContributingSource]): Self = StObject.set(x, "getContributingSources", js.Any.fromFunction0(value))
+    inline def setGetContributingSources(value: () => js.Array[RTCRtpContributingSource]): Self = StObject.set(x, "getContributingSources", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setGetParameters(value: () => RTCRtpReceiveParameters): Self = StObject.set(x, "getParameters", js.Any.fromFunction0(value))
+    inline def setGetParameters(value: () => RTCRtpReceiveParameters): Self = StObject.set(x, "getParameters", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setGetStats(value: () => js.Promise[org.scalajs.dom.RTCStatsReport]): Self = StObject.set(x, "getStats", js.Any.fromFunction0(value))
+    inline def setGetStats(value: () => js.Promise[org.scalajs.dom.RTCStatsReport]): Self = StObject.set(x, "getStats", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setGetSynchronizationSources(value: () => js.Array[RTCRtpSynchronizationSource]): Self = StObject.set(x, "getSynchronizationSources", js.Any.fromFunction0(value))
+    inline def setGetSynchronizationSources(value: () => js.Array[RTCRtpSynchronizationSource]): Self = StObject.set(x, "getSynchronizationSources", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setTrack(value: org.scalajs.dom.MediaStreamTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
+    inline def setTrack(value: org.scalajs.dom.MediaStreamTrack): Self = StObject.set(x, "track", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTransport(value: RTCDtlsTransport): Self = StObject.set(x, "transport", value.asInstanceOf[js.Any])
+    inline def setTransport(value: RTCDtlsTransport): Self = StObject.set(x, "transport", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTransportNull: Self = StObject.set(x, "transport", null)
+    inline def setTransportNull: Self = StObject.set(x, "transport", null)
   }
 }

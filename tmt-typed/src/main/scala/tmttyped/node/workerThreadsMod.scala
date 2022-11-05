@@ -1,7 +1,7 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Dict
-import tmttyped.node.NodeJS.RefCounted
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import tmttyped.node.anon.Message
 import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.nodeStreamMod.Writable
@@ -17,7 +17,6 @@ import tmttyped.node.perfHooksMod.EventLoopUtilization
 import tmttyped.node.vmMod.Context
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object workerThreadsMod {
@@ -55,13 +54,11 @@ object workerThreadsMod {
     * }
     * ```
     * @since v15.4.0
-    * @experimental
     */
-  @JSImport("worker_threads", "BroadcastChannel")
+  /* import warning: RemoveDifficultInheritance.summarizeChanges 
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.RefCounted * / any */ @JSImport("worker_threads", "BroadcastChannel")
   @js.native
-  class BroadcastChannel protected ()
-    extends StObject
-       with RefCounted {
+  open class BroadcastChannel protected () extends StObject {
     def this(name: String) = this()
     
     /**
@@ -89,12 +86,6 @@ object workerThreadsMod {
       * @param message Any cloneable JavaScript value.
       */
     def postMessage(message: Any): Unit = js.native
-    
-    /* CompleteClass */
-    override def ref(): this.type = js.native
-    
-    /* CompleteClass */
-    override def unref(): this.type = js.native
   }
   
   /**
@@ -114,7 +105,7 @@ object workerThreadsMod {
     */
   @JSImport("worker_threads", "MessageChannel")
   @js.native
-  class MessageChannel () extends StObject {
+  open class MessageChannel () extends StObject {
     
     val port1: MessagePort = js.native
     
@@ -131,7 +122,7 @@ object workerThreadsMod {
     */
   @JSImport("worker_threads", "MessagePort")
   @js.native
-  class MessagePort ()
+  open class MessagePort ()
     extends StObject
        with _TransferListItem {
     
@@ -278,7 +269,7 @@ object workerThreadsMod {
     def prependOnceListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
     
     /**
-      * Opposite of `unref()`. Calling `ref()` on a previously `unref()`ed port does_not_ let the program exit if it's the only active handle left (the default
+      * Opposite of `unref()`. Calling `ref()` on a previously `unref()`ed port does _not_ let the program exit if it's the only active handle left (the default
       * behavior). If the port is `ref()`ed, calling `ref()` again has no effect.
       *
       * If listeners are attached or removed using `.on('message')`, the port
@@ -390,7 +381,7 @@ object workerThreadsMod {
     */
   @JSImport("worker_threads", "Worker")
   @js.native
-  class Worker protected () extends StObject {
+  open class Worker protected () extends StObject {
     /**
       * @param filename  The path to the Worker’s main script or module.
       *                  Must be either an absolute path or a relative path (i.e. relative to the current working directory) starting with ./ or ../,
@@ -519,7 +510,7 @@ object workerThreadsMod {
     def prependOnceListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
     
     /**
-      * Opposite of `unref()`, calling `ref()` on a previously `unref()`ed worker does_not_ let the program exit if it's the only active handle left (the default
+      * Opposite of `unref()`, calling `ref()` on a previously `unref()`ed worker does _not_ let the program exit if it's the only active handle left (the default
       * behavior). If the worker is `ref()`ed, calling `ref()` again has
       * no effect.
       * @since v10.5.0
@@ -616,11 +607,42 @@ object workerThreadsMod {
     * }
     * ```
     * @since v15.12.0, v14.18.0
-    * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     */
-  @scala.inline
-  def getEnvironmentData(key: Serializable): Serializable = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnvironmentData")(key.asInstanceOf[js.Any]).asInstanceOf[Serializable]
+  inline def getEnvironmentData(key: Serializable): Serializable = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnvironmentData")(key.asInstanceOf[js.Any]).asInstanceOf[Serializable]
+  
+  object global {
+    
+    /**
+      * `BroadcastChannel` class is a global reference for `require('worker_threads').BroadcastChannel`
+      * https://nodejs.org/api/globals.html#broadcastchannel
+      * @since v18.0.0
+      */
+    @JSGlobal("BroadcastChannel")
+    @js.native
+    def BroadcastChannel: Instantiable1[/* name */ String, tmttyped.node.workerThreadsMod.BroadcastChannel] = js.native
+    inline def BroadcastChannel_=(x: Instantiable1[/* name */ String, BroadcastChannel]): Unit = js.Dynamic.global.updateDynamic("BroadcastChannel")(x.asInstanceOf[js.Any])
+    
+    /**
+      * `MessageChannel` class is a global reference for `require('worker_threads').MessageChannel`
+      * https://nodejs.org/api/globals.html#messagechannel
+      * @since v15.0.0
+      */
+    @JSGlobal("MessageChannel")
+    @js.native
+    def MessageChannel: Instantiable0[tmttyped.node.workerThreadsMod.MessageChannel] = js.native
+    inline def MessageChannel_=(x: Instantiable0[MessageChannel]): Unit = js.Dynamic.global.updateDynamic("MessageChannel")(x.asInstanceOf[js.Any])
+    
+    /**
+      * `MessagePort` class is a global reference for `require('worker_threads').MessagePort`
+      * https://nodejs.org/api/globals.html#messageport
+      * @since v15.0.0
+      */
+    @JSGlobal("MessagePort")
+    @js.native
+    def MessagePort: Instantiable0[tmttyped.node.workerThreadsMod.MessagePort] = js.native
+    inline def MessagePort_=(x: Instantiable0[MessagePort]): Unit = js.Dynamic.global.updateDynamic("MessagePort")(x.asInstanceOf[js.Any])
+  }
   
   @JSImport("worker_threads", "isMainThread")
   @js.native
@@ -659,8 +681,7 @@ object workerThreadsMod {
     * There is no equivalent to this API in browsers.
     * @since v14.5.0, v12.19.0
     */
-  @scala.inline
-  def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def markAsUntransferable(`object`: js.Object): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("markAsUntransferable")(`object`.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Transfer a `MessagePort` to a different `vm` Context. The original `port`object is rendered unusable, and the returned `MessagePort` instance
@@ -678,8 +699,7 @@ object workerThreadsMod {
     * @param port The message port to transfer.
     * @param contextifiedSandbox A `contextified` object as returned by the `vm.createContext()` method.
     */
-  @scala.inline
-  def moveMessagePortToContext(port: MessagePort, contextifiedSandbox: Context): MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[MessagePort]
+  inline def moveMessagePortToContext(port: MessagePort, contextifiedSandbox: Context): MessagePort = (^.asInstanceOf[js.Dynamic].applyDynamic("moveMessagePortToContext")(port.asInstanceOf[js.Any], contextifiedSandbox.asInstanceOf[js.Any])).asInstanceOf[MessagePort]
   
   @JSImport("worker_threads", "parentPort")
   @js.native
@@ -703,8 +723,7 @@ object workerThreadsMod {
     * When this function is used, no `'message'` event is emitted and the`onmessage` listener is not invoked.
     * @since v12.3.0
     */
-  @scala.inline
-  def receiveMessageOnPort(port: MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
+  inline def receiveMessageOnPort(port: MessagePort): js.UndefOr[Message] = ^.asInstanceOf[js.Dynamic].applyDynamic("receiveMessageOnPort")(port.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Message]]
   
   @JSImport("worker_threads", "resourceLimits")
   @js.native
@@ -713,13 +732,11 @@ object workerThreadsMod {
   /**
     * The `worker.setEnvironmentData()` API sets the content of`worker.getEnvironmentData()` in the current thread and all new `Worker`instances spawned from the current context.
     * @since v15.12.0, v14.18.0
-    * @experimental
     * @param key Any arbitrary, cloneable JavaScript value that can be used as a {Map} key.
     * @param value Any arbitrary, cloneable JavaScript value that will be cloned and passed automatically to all new `Worker` instances. If `value` is passed as `undefined`, any previously set value
     * for the `key` will be deleted.
     */
-  @scala.inline
-  def setEnvironmentData(key: Serializable, value: Serializable): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setEnvironmentData")(key.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def setEnvironmentData(key: Serializable, value: Serializable): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setEnvironmentData")(key.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @JSImport("worker_threads", "threadId")
   @js.native
@@ -754,38 +771,28 @@ object workerThreadsMod {
   }
   object ResourceLimits_ {
     
-    @scala.inline
-    def apply(): ResourceLimits_ = {
+    inline def apply(): ResourceLimits_ = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ResourceLimits_]
     }
     
-    @scala.inline
-    implicit class ResourceLimits_MutableBuilder[Self <: ResourceLimits_] (val x: Self) extends AnyVal {
+    extension [Self <: ResourceLimits_](x: Self) {
       
-      @scala.inline
-      def setCodeRangeSizeMb(value: Double): Self = StObject.set(x, "codeRangeSizeMb", value.asInstanceOf[js.Any])
+      inline def setCodeRangeSizeMb(value: Double): Self = StObject.set(x, "codeRangeSizeMb", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCodeRangeSizeMbUndefined: Self = StObject.set(x, "codeRangeSizeMb", js.undefined)
+      inline def setCodeRangeSizeMbUndefined: Self = StObject.set(x, "codeRangeSizeMb", js.undefined)
       
-      @scala.inline
-      def setMaxOldGenerationSizeMb(value: Double): Self = StObject.set(x, "maxOldGenerationSizeMb", value.asInstanceOf[js.Any])
+      inline def setMaxOldGenerationSizeMb(value: Double): Self = StObject.set(x, "maxOldGenerationSizeMb", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxOldGenerationSizeMbUndefined: Self = StObject.set(x, "maxOldGenerationSizeMb", js.undefined)
+      inline def setMaxOldGenerationSizeMbUndefined: Self = StObject.set(x, "maxOldGenerationSizeMb", js.undefined)
       
-      @scala.inline
-      def setMaxYoungGenerationSizeMb(value: Double): Self = StObject.set(x, "maxYoungGenerationSizeMb", value.asInstanceOf[js.Any])
+      inline def setMaxYoungGenerationSizeMb(value: Double): Self = StObject.set(x, "maxYoungGenerationSizeMb", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxYoungGenerationSizeMbUndefined: Self = StObject.set(x, "maxYoungGenerationSizeMb", js.undefined)
+      inline def setMaxYoungGenerationSizeMbUndefined: Self = StObject.set(x, "maxYoungGenerationSizeMb", js.undefined)
       
-      @scala.inline
-      def setStackSizeMb(value: Double): Self = StObject.set(x, "stackSizeMb", value.asInstanceOf[js.Any])
+      inline def setStackSizeMb(value: Double): Self = StObject.set(x, "stackSizeMb", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStackSizeMbUndefined: Self = StObject.set(x, "stackSizeMb", js.undefined)
+      inline def setStackSizeMbUndefined: Self = StObject.set(x, "stackSizeMb", js.undefined)
     }
   }
   
@@ -810,7 +817,9 @@ object workerThreadsMod {
       */
     var argv: js.UndefOr[js.Array[Any]] = js.undefined
     
-    var env: js.UndefOr[Dict[String] | js.Symbol] = js.undefined
+    var env: js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string> */ Any) | js.Symbol
+      ] = js.undefined
     
     var eval: js.UndefOr[Boolean] = js.undefined
     
@@ -838,89 +847,64 @@ object workerThreadsMod {
   }
   object WorkerOptions {
     
-    @scala.inline
-    def apply(): WorkerOptions = {
+    inline def apply(): WorkerOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[WorkerOptions]
     }
     
-    @scala.inline
-    implicit class WorkerOptionsMutableBuilder[Self <: WorkerOptions] (val x: Self) extends AnyVal {
+    extension [Self <: WorkerOptions](x: Self) {
       
-      @scala.inline
-      def setArgv(value: js.Array[Any]): Self = StObject.set(x, "argv", value.asInstanceOf[js.Any])
+      inline def setArgv(value: js.Array[Any]): Self = StObject.set(x, "argv", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setArgvUndefined: Self = StObject.set(x, "argv", js.undefined)
+      inline def setArgvUndefined: Self = StObject.set(x, "argv", js.undefined)
       
-      @scala.inline
-      def setArgvVarargs(value: Any*): Self = StObject.set(x, "argv", js.Array(value :_*))
+      inline def setArgvVarargs(value: Any*): Self = StObject.set(x, "argv", js.Array(value*))
       
-      @scala.inline
-      def setEnv(value: Dict[String] | js.Symbol): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
+      inline def setEnv(
+        value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string> */ Any) | js.Symbol
+      ): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
+      inline def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
       
-      @scala.inline
-      def setEval(value: Boolean): Self = StObject.set(x, "eval", value.asInstanceOf[js.Any])
+      inline def setEval(value: Boolean): Self = StObject.set(x, "eval", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEvalUndefined: Self = StObject.set(x, "eval", js.undefined)
+      inline def setEvalUndefined: Self = StObject.set(x, "eval", js.undefined)
       
-      @scala.inline
-      def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
+      inline def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
+      inline def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
       
-      @scala.inline
-      def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
+      inline def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value*))
       
-      @scala.inline
-      def setResourceLimits(value: ResourceLimits_): Self = StObject.set(x, "resourceLimits", value.asInstanceOf[js.Any])
+      inline def setResourceLimits(value: ResourceLimits_): Self = StObject.set(x, "resourceLimits", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setResourceLimitsUndefined: Self = StObject.set(x, "resourceLimits", js.undefined)
+      inline def setResourceLimitsUndefined: Self = StObject.set(x, "resourceLimits", js.undefined)
       
-      @scala.inline
-      def setStderr(value: Boolean): Self = StObject.set(x, "stderr", value.asInstanceOf[js.Any])
+      inline def setStderr(value: Boolean): Self = StObject.set(x, "stderr", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStderrUndefined: Self = StObject.set(x, "stderr", js.undefined)
+      inline def setStderrUndefined: Self = StObject.set(x, "stderr", js.undefined)
       
-      @scala.inline
-      def setStdin(value: Boolean): Self = StObject.set(x, "stdin", value.asInstanceOf[js.Any])
+      inline def setStdin(value: Boolean): Self = StObject.set(x, "stdin", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStdinUndefined: Self = StObject.set(x, "stdin", js.undefined)
+      inline def setStdinUndefined: Self = StObject.set(x, "stdin", js.undefined)
       
-      @scala.inline
-      def setStdout(value: Boolean): Self = StObject.set(x, "stdout", value.asInstanceOf[js.Any])
+      inline def setStdout(value: Boolean): Self = StObject.set(x, "stdout", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStdoutUndefined: Self = StObject.set(x, "stdout", js.undefined)
+      inline def setStdoutUndefined: Self = StObject.set(x, "stdout", js.undefined)
       
-      @scala.inline
-      def setTrackUnmanagedFds(value: Boolean): Self = StObject.set(x, "trackUnmanagedFds", value.asInstanceOf[js.Any])
+      inline def setTrackUnmanagedFds(value: Boolean): Self = StObject.set(x, "trackUnmanagedFds", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTrackUnmanagedFdsUndefined: Self = StObject.set(x, "trackUnmanagedFds", js.undefined)
+      inline def setTrackUnmanagedFdsUndefined: Self = StObject.set(x, "trackUnmanagedFds", js.undefined)
       
-      @scala.inline
-      def setTransferList(value: js.Array[TransferListItem]): Self = StObject.set(x, "transferList", value.asInstanceOf[js.Any])
+      inline def setTransferList(value: js.Array[TransferListItem]): Self = StObject.set(x, "transferList", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTransferListUndefined: Self = StObject.set(x, "transferList", js.undefined)
+      inline def setTransferListUndefined: Self = StObject.set(x, "transferList", js.undefined)
       
-      @scala.inline
-      def setTransferListVarargs(value: TransferListItem*): Self = StObject.set(x, "transferList", js.Array(value :_*))
+      inline def setTransferListVarargs(value: TransferListItem*): Self = StObject.set(x, "transferList", js.Array(value*))
       
-      @scala.inline
-      def setWorkerData(value: Any): Self = StObject.set(x, "workerData", value.asInstanceOf[js.Any])
+      inline def setWorkerData(value: Any): Self = StObject.set(x, "workerData", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWorkerDataUndefined: Self = StObject.set(x, "workerData", js.undefined)
+      inline def setWorkerDataUndefined: Self = StObject.set(x, "workerData", js.undefined)
     }
   }
   
@@ -935,19 +919,16 @@ object workerThreadsMod {
   }
   object WorkerPerformance {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       eventLoopUtilization: (/* util1 */ js.UndefOr[EventLoopUtilization], /* util2 */ js.UndefOr[EventLoopUtilization]) => EventLoopUtilization
     ): WorkerPerformance = {
       val __obj = js.Dynamic.literal(eventLoopUtilization = js.Any.fromFunction2(eventLoopUtilization))
       __obj.asInstanceOf[WorkerPerformance]
     }
     
-    @scala.inline
-    implicit class WorkerPerformanceMutableBuilder[Self <: WorkerPerformance] (val x: Self) extends AnyVal {
+    extension [Self <: WorkerPerformance](x: Self) {
       
-      @scala.inline
-      def setEventLoopUtilization(
+      inline def setEventLoopUtilization(
         value: (/* util1 */ js.UndefOr[EventLoopUtilization], /* util2 */ js.UndefOr[EventLoopUtilization]) => EventLoopUtilization
       ): Self = StObject.set(x, "eventLoopUtilization", js.Any.fromFunction2(value))
     }

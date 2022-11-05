@@ -4,14 +4,13 @@ import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object stringDecoderMod {
   
   @JSImport("string_decoder", "StringDecoder")
   @js.native
-  class StringDecoder () extends StObject {
+  open class StringDecoder () extends StObject {
     def this(encoding: BufferEncoding) = this()
     
     /**

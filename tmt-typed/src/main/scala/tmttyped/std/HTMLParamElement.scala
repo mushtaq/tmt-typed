@@ -2,10 +2,12 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <param> elements, representing a pair of a key and a value that acts as a parameter for an <object> element. */
+/**
+  * Provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating <param> elements, representing a pair of a key and a value that acts as a parameter for an <object> element.
+  * @deprecated
+  */
 @js.native
 trait HTMLParamElement
   extends StObject
@@ -23,7 +25,10 @@ trait HTMLParamElement
     options: AddEventListenerOptions
   ): Unit = js.native
   
-  /** Sets or retrieves the name of an input parameter for an element. */
+  /**
+    * Sets or retrieves the name of an input parameter for an element.
+    * @deprecated
+    */
   /* standard DOM */
   var name: java.lang.String = js.native
   
@@ -46,7 +51,10 @@ trait HTMLParamElement
   /* standard DOM */
   var `type`: java.lang.String = js.native
   
-  /** Sets or retrieves the value of an input parameter for an element. */
+  /**
+    * Sets or retrieves the value of an input parameter for an element.
+    * @deprecated
+    */
   /* standard DOM */
   var value: java.lang.String = js.native
   

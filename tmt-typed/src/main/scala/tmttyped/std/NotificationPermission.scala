@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -13,12 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NotificationPermission extends StObject
 object NotificationPermission {
   
-  @scala.inline
-  def default: tmttyped.std.stdStrings.default = "default".asInstanceOf[tmttyped.std.stdStrings.default]
+  inline def default: tmttyped.std.stdStrings.default = "default".asInstanceOf[tmttyped.std.stdStrings.default]
   
-  @scala.inline
-  def denied: tmttyped.std.stdStrings.denied = "denied".asInstanceOf[tmttyped.std.stdStrings.denied]
+  inline def denied: tmttyped.std.stdStrings.denied = "denied".asInstanceOf[tmttyped.std.stdStrings.denied]
   
-  @scala.inline
-  def granted: tmttyped.std.stdStrings.granted = "granted".asInstanceOf[tmttyped.std.stdStrings.granted]
+  inline def granted: tmttyped.std.stdStrings.granted = "granted".asInstanceOf[tmttyped.std.stdStrings.granted]
 }

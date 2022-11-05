@@ -2,7 +2,6 @@ package tmttyped.node.childProcessMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ExecFileSyncOptions
@@ -13,19 +12,15 @@ trait ExecFileSyncOptions
 }
 object ExecFileSyncOptions {
   
-  @scala.inline
-  def apply(): ExecFileSyncOptions = {
+  inline def apply(): ExecFileSyncOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ExecFileSyncOptions]
   }
   
-  @scala.inline
-  implicit class ExecFileSyncOptionsMutableBuilder[Self <: ExecFileSyncOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ExecFileSyncOptions](x: Self) {
     
-    @scala.inline
-    def setShell(value: Boolean | String): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
+    inline def setShell(value: Boolean | String): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
+    inline def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
   }
 }

@@ -1,12 +1,12 @@
 package tmttyped.std
 
 import tmttyped.std.Intl.DateTimeFormatOptions
+import tmttyped.std.Intl.LocalesArgument
 import tmttyped.std.stdStrings.default
 import tmttyped.std.stdStrings.number
 import tmttyped.std.stdStrings.string
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Enables basic storage and retrieval of dates and times. */
@@ -254,29 +254,43 @@ trait Date extends StObject {
   def toJSON(): java.lang.String = js.native
   def toJSON(key: Any): java.lang.String = js.native
   
-  /** Returns a date as a string value appropriate to the host environment's current locale. */
-  /* standard es5 */
+  /**
+    * Converts a date to a string by using the current or specified locale.
+    * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+    * @param options An object that contains one or more properties that specify comparison options.
+    */
+  /* standard es2020.date */
   def toLocaleDateString(): java.lang.String = js.native
   def toLocaleDateString(locales: java.lang.String): java.lang.String = js.native
   def toLocaleDateString(locales: java.lang.String, options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleDateString(locales: js.Array[java.lang.String]): java.lang.String = js.native
   def toLocaleDateString(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleDateString(locales: Unit, options: DateTimeFormatOptions): java.lang.String = js.native
+  def toLocaleDateString(locales: LocalesArgument): java.lang.String = js.native
+  def toLocaleDateString(locales: LocalesArgument, options: DateTimeFormatOptions): java.lang.String = js.native
   
   def toLocaleString(locales: java.lang.String): java.lang.String = js.native
   def toLocaleString(locales: java.lang.String, options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleString(locales: js.Array[java.lang.String]): java.lang.String = js.native
   def toLocaleString(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleString(locales: Unit, options: DateTimeFormatOptions): java.lang.String = js.native
+  def toLocaleString(locales: LocalesArgument): java.lang.String = js.native
+  def toLocaleString(locales: LocalesArgument, options: DateTimeFormatOptions): java.lang.String = js.native
   
-  /** Returns a time as a string value appropriate to the host environment's current locale. */
-  /* standard es5 */
+  /**
+    * Converts a time to a string by using the current or specified locale.
+    * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+    * @param options An object that contains one or more properties that specify comparison options.
+    */
+  /* standard es2020.date */
   def toLocaleTimeString(): java.lang.String = js.native
   def toLocaleTimeString(locales: java.lang.String): java.lang.String = js.native
   def toLocaleTimeString(locales: java.lang.String, options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleTimeString(locales: js.Array[java.lang.String]): java.lang.String = js.native
   def toLocaleTimeString(locales: js.Array[java.lang.String], options: DateTimeFormatOptions): java.lang.String = js.native
   def toLocaleTimeString(locales: Unit, options: DateTimeFormatOptions): java.lang.String = js.native
+  def toLocaleTimeString(locales: LocalesArgument): java.lang.String = js.native
+  def toLocaleTimeString(locales: LocalesArgument, options: DateTimeFormatOptions): java.lang.String = js.native
   
   /**
     * Converts a Date object to a string.
@@ -296,7 +310,7 @@ trait Date extends StObject {
     */
   /* standard es2015.symbol.wellknown */
   @JSName(js.Symbol.toPrimitive)
-  var toPrimitive: (js.Function1[default, java.lang.String]) with (js.Function1[string, java.lang.String]) with (js.Function1[number, Double]) with (js.Function1[/* hint */ java.lang.String, java.lang.String | Double]) = js.native
+  var toPrimitive: (js.Function1[default, java.lang.String]) & (js.Function1[string, java.lang.String]) & (js.Function1[number, Double]) & (js.Function1[/* hint */ java.lang.String, java.lang.String | Double]) = js.native
   
   /** Returns a time as a string value. */
   /* standard es5 */

@@ -3,14 +3,13 @@ package tmttyped.std.global
 import tmttyped.std.DOMRectInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGRect")
 @js.native
 /* standard DOM */
-class SVGRect ()
+open class SVGRect ()
   extends StObject
      with tmttyped.std.DOMRect {
   def this(x: Double) = this()
@@ -73,8 +72,6 @@ object SVGRect {
   val ^ : js.Any = js.native
   
   /* standard DOM */
-  @scala.inline
-  def fromRect(): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[org.scalajs.dom.DOMRect]
-  @scala.inline
-  def fromRect(other: DOMRectInit): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.DOMRect]
+  inline def fromRect(): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[org.scalajs.dom.DOMRect]
+  inline def fromRect(other: DOMRectInit): org.scalajs.dom.DOMRect = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[org.scalajs.dom.DOMRect]
 }

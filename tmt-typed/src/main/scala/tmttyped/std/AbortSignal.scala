@@ -3,7 +3,6 @@ package tmttyped.std
 import tmttyped.std.stdStrings.abort
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A signal object that allows you to communicate with a DOM request (such as a Fetch) and abort it if required via an AbortController object. */
@@ -39,6 +38,9 @@ trait AbortSignal
   var onabort: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
   /* standard DOM */
+  val reason: Any = js.native
+  
+  /* standard DOM */
   @JSName("removeEventListener")
   def removeEventListener_abort(
     `type`: abort,
@@ -56,4 +58,7 @@ trait AbortSignal
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native
+  
+  /* standard DOM */
+  def throwIfAborted(): Unit = js.native
 }

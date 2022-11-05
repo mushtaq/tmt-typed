@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WorkerEventMap
@@ -17,8 +16,7 @@ trait WorkerEventMap
 }
 object WorkerEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     error: org.scalajs.dom.ErrorEvent,
     message: org.scalajs.dom.MessageEvent,
     messageerror: org.scalajs.dom.MessageEvent
@@ -27,13 +25,10 @@ object WorkerEventMap {
     __obj.asInstanceOf[WorkerEventMap]
   }
   
-  @scala.inline
-  implicit class WorkerEventMapMutableBuilder[Self <: WorkerEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: WorkerEventMap](x: Self) {
     
-    @scala.inline
-    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    inline def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    inline def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
   }
 }

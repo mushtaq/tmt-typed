@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -847,25 +846,19 @@ trait WebGL2RenderingContextBase extends StObject {
   def clearBufferfi(buffer: GLenum, drawbuffer: GLint, depth: GLfloat, stencil: GLint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLfloat]): Unit = js.native
-  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   /* standard DOM */
-  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: Float32List): Unit = js.native
-  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: Float32List, srcOffset: GLuint): Unit = js.native
+  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: Float32List | js.Iterable[GLfloat]): Unit = js.native
+  def clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLint]): Unit = js.native
-  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLint], srcOffset: GLuint): Unit = js.native
   /* standard DOM */
-  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: Int32List): Unit = js.native
-  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: Int32List, srcOffset: GLuint): Unit = js.native
+  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: Int32List | js.Iterable[GLint]): Unit = js.native
+  def clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: Int32List | js.Iterable[GLint], srcOffset: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLuint]): Unit = js.native
-  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
   /* standard DOM */
-  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: Uint32List): Unit = js.native
-  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: Uint32List, srcOffset: GLuint): Unit = js.native
+  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLuint] | Uint32List): Unit = js.native
+  def clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint): Unit = js.native
   
   /* standard DOM */
   def clientWaitSync(sync: WebGLSync, flags: GLbitfield, timeout: GLuint64): GLenum = js.native
@@ -1377,565 +1370,383 @@ trait WebGL2RenderingContextBase extends StObject {
   def uniform1ui(location: Null, v0: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniform1uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform1uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniform1uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform1uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniform1uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List): Unit = js.native
+  def uniform1uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
   def uniform1uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform1uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List, srcOffset: GLuint): Unit = js.native
   def uniform1uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
+    srcOffset: GLuint
+  ): Unit = js.native
+  def uniform1uiv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform1uiv(location: Null, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform1uiv(location: Null, data: js.Iterable[GLuint], srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform1uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform1uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint, srcLength: GLuint): Unit = js.native
-  def uniform1uiv(location: Null, data: Uint32List): Unit = js.native
-  def uniform1uiv(location: Null, data: Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform1uiv(location: Null, data: Uint32List, srcOffset: GLuint): Unit = js.native
-  def uniform1uiv(location: Null, data: Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
+  def uniform1uiv(location: Null, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
+  def uniform1uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
+  def uniform1uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint): Unit = js.native
+  def uniform1uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM */
   def uniform2ui(location: org.scalajs.dom.WebGLUniformLocation, v0: GLuint, v1: GLuint): Unit = js.native
   def uniform2ui(location: Null, v0: GLuint, v1: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniform2uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform2uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniform2uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform2uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniform2uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List): Unit = js.native
+  def uniform2uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
   def uniform2uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform2uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List, srcOffset: GLuint): Unit = js.native
   def uniform2uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
+    srcOffset: GLuint
+  ): Unit = js.native
+  def uniform2uiv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform2uiv(location: Null, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform2uiv(location: Null, data: js.Iterable[GLuint], srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform2uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform2uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint, srcLength: GLuint): Unit = js.native
-  def uniform2uiv(location: Null, data: Uint32List): Unit = js.native
-  def uniform2uiv(location: Null, data: Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform2uiv(location: Null, data: Uint32List, srcOffset: GLuint): Unit = js.native
-  def uniform2uiv(location: Null, data: Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
+  def uniform2uiv(location: Null, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
+  def uniform2uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
+  def uniform2uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint): Unit = js.native
+  def uniform2uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM */
   def uniform3ui(location: org.scalajs.dom.WebGLUniformLocation, v0: GLuint, v1: GLuint, v2: GLuint): Unit = js.native
   def uniform3ui(location: Null, v0: GLuint, v1: GLuint, v2: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniform3uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform3uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniform3uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform3uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniform3uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List): Unit = js.native
+  def uniform3uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
   def uniform3uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform3uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List, srcOffset: GLuint): Unit = js.native
   def uniform3uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
+    srcOffset: GLuint
+  ): Unit = js.native
+  def uniform3uiv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform3uiv(location: Null, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform3uiv(location: Null, data: js.Iterable[GLuint], srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform3uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform3uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint, srcLength: GLuint): Unit = js.native
-  def uniform3uiv(location: Null, data: Uint32List): Unit = js.native
-  def uniform3uiv(location: Null, data: Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform3uiv(location: Null, data: Uint32List, srcOffset: GLuint): Unit = js.native
-  def uniform3uiv(location: Null, data: Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
+  def uniform3uiv(location: Null, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
+  def uniform3uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
+  def uniform3uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint): Unit = js.native
+  def uniform3uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM */
   def uniform4ui(location: org.scalajs.dom.WebGLUniformLocation, v0: GLuint, v1: GLuint, v2: GLuint, v3: GLuint): Unit = js.native
   def uniform4ui(location: Null, v0: GLuint, v1: GLuint, v2: GLuint, v3: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniform4uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform4uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniform4uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform4uiv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    data: js.Iterable[GLuint],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniform4uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List): Unit = js.native
+  def uniform4uiv(location: org.scalajs.dom.WebGLUniformLocation, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
   def uniform4uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform4uiv(location: org.scalajs.dom.WebGLUniformLocation, data: Uint32List, srcOffset: GLuint): Unit = js.native
   def uniform4uiv(
     location: org.scalajs.dom.WebGLUniformLocation,
-    data: Uint32List,
+    data: js.Iterable[GLuint] | Uint32List,
+    srcOffset: GLuint
+  ): Unit = js.native
+  def uniform4uiv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    data: js.Iterable[GLuint] | Uint32List,
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniform4uiv(location: Null, data: js.Iterable[GLuint]): Unit = js.native
-  def uniform4uiv(location: Null, data: js.Iterable[GLuint], srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform4uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint): Unit = js.native
-  def uniform4uiv(location: Null, data: js.Iterable[GLuint], srcOffset: GLuint, srcLength: GLuint): Unit = js.native
-  def uniform4uiv(location: Null, data: Uint32List): Unit = js.native
-  def uniform4uiv(location: Null, data: Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniform4uiv(location: Null, data: Uint32List, srcOffset: GLuint): Unit = js.native
-  def uniform4uiv(location: Null, data: Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
+  def uniform4uiv(location: Null, data: js.Iterable[GLuint] | Uint32List): Unit = js.native
+  def uniform4uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
+  def uniform4uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint): Unit = js.native
+  def uniform4uiv(location: Null, data: js.Iterable[GLuint] | Uint32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM */
   def uniformBlockBinding(program: org.scalajs.dom.WebGLProgram, uniformBlockIndex: GLuint, uniformBlockBinding: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix2x3fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix2x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix2x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix2x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix2x3fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix2x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix2x3fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix2x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix2x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix2x3fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix2x3fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix2x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix2x4fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix2x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix2x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix2x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix2x4fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix2x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix2x4fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix2x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix2x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix2x4fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix2x4fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix2x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix3x2fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix3x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix3x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix3x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix3x2fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix3x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix3x2fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix3x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix3x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix3x2fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix3x2fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix3x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix3x4fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix3x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix3x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix3x4fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix3x4fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix3x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix3x4fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix3x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix3x4fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix3x4fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix3x4fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix3x4fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix4x2fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix4x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix4x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix4x2fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix4x2fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix4x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix4x2fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix4x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix4x2fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix4x2fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix4x2fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix4x2fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def uniformMatrix4x3fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
-  def uniformMatrix4x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: Unit,
-    srcLength: GLuint
-  ): Unit = js.native
-  def uniformMatrix4x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint
-  ): Unit = js.native
-  def uniformMatrix4x3fv(
-    location: org.scalajs.dom.WebGLUniformLocation,
-    transpose: GLboolean,
-    data: js.Iterable[GLfloat],
-    srcOffset: GLuint,
-    srcLength: GLuint
-  ): Unit = js.native
   /* standard DOM */
-  def uniformMatrix4x3fv(location: org.scalajs.dom.WebGLUniformLocation, transpose: GLboolean, data: Float32List): Unit = js.native
   def uniformMatrix4x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat]
+  ): Unit = js.native
+  def uniformMatrix4x3fv(
+    location: org.scalajs.dom.WebGLUniformLocation,
+    transpose: GLboolean,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
   def uniformMatrix4x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint
   ): Unit = js.native
   def uniformMatrix4x3fv(
     location: org.scalajs.dom.WebGLUniformLocation,
     transpose: GLboolean,
-    data: Float32List,
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat]): Unit = js.native
+  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat]): Unit = js.native
   def uniformMatrix4x3fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: Unit,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
+  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List | js.Iterable[GLfloat], srcOffset: GLuint): Unit = js.native
   def uniformMatrix4x3fv(
     location: Null,
     transpose: GLboolean,
-    data: js.Iterable[GLfloat],
+    data: Float32List | js.Iterable[GLfloat],
     srcOffset: GLuint,
     srcLength: GLuint
   ): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: Unit, srcLength: GLuint): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint): Unit = js.native
-  def uniformMatrix4x3fv(location: Null, transpose: GLboolean, data: Float32List, srcOffset: GLuint, srcLength: GLuint): Unit = js.native
   
   /* standard DOM */
   def vertexAttribDivisor(index: GLuint, divisor: GLuint): Unit = js.native
@@ -1944,17 +1755,15 @@ trait WebGL2RenderingContextBase extends StObject {
   def vertexAttribI4i(index: GLuint, x: GLint, y: GLint, z: GLint, w: GLint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttribI4iv(index: GLuint, values: js.Iterable[GLint]): Unit = js.native
   /* standard DOM */
-  def vertexAttribI4iv(index: GLuint, values: Int32List): Unit = js.native
+  def vertexAttribI4iv(index: GLuint, values: Int32List | js.Iterable[GLint]): Unit = js.native
   
   /* standard DOM */
   def vertexAttribI4ui(index: GLuint, x: GLuint, y: GLuint, z: GLuint, w: GLuint): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttribI4uiv(index: GLuint, values: js.Iterable[GLuint]): Unit = js.native
   /* standard DOM */
-  def vertexAttribI4uiv(index: GLuint, values: Uint32List): Unit = js.native
+  def vertexAttribI4uiv(index: GLuint, values: js.Iterable[GLuint] | Uint32List): Unit = js.native
   
   /* standard DOM */
   def vertexAttribIPointer(index: GLuint, size: GLint, `type`: GLenum, stride: GLsizei, offset: GLintptr): Unit = js.native

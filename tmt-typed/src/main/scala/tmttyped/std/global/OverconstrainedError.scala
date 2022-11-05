@@ -2,13 +2,12 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("OverconstrainedError")
 @js.native
-class OverconstrainedError protected ()
+open class OverconstrainedError protected ()
   extends StObject
      with tmttyped.std.OverconstrainedError {
   /* standard DOM */
@@ -21,9 +20,9 @@ class OverconstrainedError protected ()
   
   /* standard es5 */
   /* CompleteClass */
-  override var message: java.lang.String = js.native
+  var message: java.lang.String = js.native
   
   /* standard es5 */
   /* CompleteClass */
-  override var name: java.lang.String = js.native
+  var name: java.lang.String = js.native
 }

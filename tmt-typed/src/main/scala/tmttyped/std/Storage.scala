@@ -3,7 +3,6 @@ package tmttyped.std
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Web Storage API interface provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items. */
@@ -52,8 +51,7 @@ trait Storage
 }
 object Storage {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     clear: () => Unit,
     getItem: java.lang.String => java.lang.String | Null,
     key: Double => java.lang.String | Null,
@@ -65,25 +63,18 @@ object Storage {
     __obj.asInstanceOf[Storage]
   }
   
-  @scala.inline
-  implicit class StorageMutableBuilder[Self <: Storage] (val x: Self) extends AnyVal {
+  extension [Self <: Storage](x: Self) {
     
-    @scala.inline
-    def setClear(value: () => Unit): Self = StObject.set(x, "clear", js.Any.fromFunction0(value))
+    inline def setClear(value: () => Unit): Self = StObject.set(x, "clear", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setGetItem(value: java.lang.String => java.lang.String | Null): Self = StObject.set(x, "getItem", js.Any.fromFunction1(value))
+    inline def setGetItem(value: java.lang.String => java.lang.String | Null): Self = StObject.set(x, "getItem", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setKey(value: Double => java.lang.String | Null): Self = StObject.set(x, "key", js.Any.fromFunction1(value))
+    inline def setKey(value: Double => java.lang.String | Null): Self = StObject.set(x, "key", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
+    inline def setLength(value: Double): Self = StObject.set(x, "length", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRemoveItem(value: java.lang.String => Unit): Self = StObject.set(x, "removeItem", js.Any.fromFunction1(value))
+    inline def setRemoveItem(value: java.lang.String => Unit): Self = StObject.set(x, "removeItem", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setSetItem(value: (java.lang.String, java.lang.String) => Unit): Self = StObject.set(x, "setItem", js.Any.fromFunction2(value))
+    inline def setSetItem(value: (java.lang.String, java.lang.String) => Unit): Self = StObject.set(x, "setItem", js.Any.fromFunction2(value))
   }
 }

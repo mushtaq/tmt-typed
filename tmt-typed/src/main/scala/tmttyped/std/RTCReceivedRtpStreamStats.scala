@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RTCReceivedRtpStreamStats
@@ -23,8 +22,7 @@ trait RTCReceivedRtpStreamStats
 }
 object RTCReceivedRtpStreamStats {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     id: java.lang.String,
     kind: java.lang.String,
     ssrc: Double,
@@ -36,31 +34,22 @@ object RTCReceivedRtpStreamStats {
     __obj.asInstanceOf[RTCReceivedRtpStreamStats]
   }
   
-  @scala.inline
-  implicit class RTCReceivedRtpStreamStatsMutableBuilder[Self <: RTCReceivedRtpStreamStats] (val x: Self) extends AnyVal {
+  extension [Self <: RTCReceivedRtpStreamStats](x: Self) {
     
-    @scala.inline
-    def setJitter(value: Double): Self = StObject.set(x, "jitter", value.asInstanceOf[js.Any])
+    inline def setJitter(value: Double): Self = StObject.set(x, "jitter", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setJitterUndefined: Self = StObject.set(x, "jitter", js.undefined)
+    inline def setJitterUndefined: Self = StObject.set(x, "jitter", js.undefined)
     
-    @scala.inline
-    def setPacketsDiscarded(value: Double): Self = StObject.set(x, "packetsDiscarded", value.asInstanceOf[js.Any])
+    inline def setPacketsDiscarded(value: Double): Self = StObject.set(x, "packetsDiscarded", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPacketsDiscardedUndefined: Self = StObject.set(x, "packetsDiscarded", js.undefined)
+    inline def setPacketsDiscardedUndefined: Self = StObject.set(x, "packetsDiscarded", js.undefined)
     
-    @scala.inline
-    def setPacketsLost(value: Double): Self = StObject.set(x, "packetsLost", value.asInstanceOf[js.Any])
+    inline def setPacketsLost(value: Double): Self = StObject.set(x, "packetsLost", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPacketsLostUndefined: Self = StObject.set(x, "packetsLost", js.undefined)
+    inline def setPacketsLostUndefined: Self = StObject.set(x, "packetsLost", js.undefined)
     
-    @scala.inline
-    def setPacketsReceived(value: Double): Self = StObject.set(x, "packetsReceived", value.asInstanceOf[js.Any])
+    inline def setPacketsReceived(value: Double): Self = StObject.set(x, "packetsReceived", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPacketsReceivedUndefined: Self = StObject.set(x, "packetsReceived", js.undefined)
+    inline def setPacketsReceivedUndefined: Self = StObject.set(x, "packetsReceived", js.undefined)
   }
 }

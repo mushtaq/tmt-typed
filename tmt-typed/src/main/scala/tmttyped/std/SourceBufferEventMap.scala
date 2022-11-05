@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SourceBufferEventMap extends StObject {
@@ -24,8 +23,7 @@ trait SourceBufferEventMap extends StObject {
 }
 object SourceBufferEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     abort: org.scalajs.dom.Event,
     error: org.scalajs.dom.Event,
     update: org.scalajs.dom.Event,
@@ -36,22 +34,16 @@ object SourceBufferEventMap {
     __obj.asInstanceOf[SourceBufferEventMap]
   }
   
-  @scala.inline
-  implicit class SourceBufferEventMapMutableBuilder[Self <: SourceBufferEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: SourceBufferEventMap](x: Self) {
     
-    @scala.inline
-    def setAbort(value: org.scalajs.dom.Event): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
+    inline def setAbort(value: org.scalajs.dom.Event): Self = StObject.set(x, "abort", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    inline def setError(value: org.scalajs.dom.Event): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpdate(value: org.scalajs.dom.Event): Self = StObject.set(x, "update", value.asInstanceOf[js.Any])
+    inline def setUpdate(value: org.scalajs.dom.Event): Self = StObject.set(x, "update", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpdateend(value: org.scalajs.dom.Event): Self = StObject.set(x, "updateend", value.asInstanceOf[js.Any])
+    inline def setUpdateend(value: org.scalajs.dom.Event): Self = StObject.set(x, "updateend", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpdatestart(value: org.scalajs.dom.Event): Self = StObject.set(x, "updatestart", value.asInstanceOf[js.Any])
+    inline def setUpdatestart(value: org.scalajs.dom.Event): Self = StObject.set(x, "updatestart", value.asInstanceOf[js.Any])
   }
 }

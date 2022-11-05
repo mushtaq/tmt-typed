@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE). */
@@ -18,8 +17,7 @@ trait CSSStyleRule
 }
 object CSSStyleRule {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     CHARSET_RULE: Double,
     FONT_FACE_RULE: Double,
     IMPORT_RULE: Double,
@@ -40,13 +38,10 @@ object CSSStyleRule {
     __obj.asInstanceOf[CSSStyleRule]
   }
   
-  @scala.inline
-  implicit class CSSStyleRuleMutableBuilder[Self <: CSSStyleRule] (val x: Self) extends AnyVal {
+  extension [Self <: CSSStyleRule](x: Self) {
     
-    @scala.inline
-    def setSelectorText(value: java.lang.String): Self = StObject.set(x, "selectorText", value.asInstanceOf[js.Any])
+    inline def setSelectorText(value: java.lang.String): Self = StObject.set(x, "selectorText", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    inline def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

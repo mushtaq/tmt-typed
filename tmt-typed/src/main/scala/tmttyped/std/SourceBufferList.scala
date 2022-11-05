@@ -5,7 +5,6 @@ import tmttyped.std.stdStrings.addsourcebuffer
 import tmttyped.std.stdStrings.removesourcebuffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A simple container list for multiple SourceBuffer objects. */

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -20,11 +19,11 @@ trait WindowOrWorkerGlobalScope extends StObject {
   
   /* standard DOM */
   def clearInterval(): Unit = js.native
-  def clearInterval(handle: Double): Unit = js.native
+  def clearInterval(id: Double): Unit = js.native
   
   /* standard DOM */
   def clearTimeout(): Unit = js.native
-  def clearTimeout(handle: Double): Unit = js.native
+  def clearTimeout(id: Double): Unit = js.native
   
   /* standard DOM */
   def createImageBitmap(image: ImageBitmapSource): js.Promise[ImageBitmap] = js.native
@@ -46,6 +45,8 @@ trait WindowOrWorkerGlobalScope extends StObject {
   /* standard DOM */
   val crypto: org.scalajs.dom.Crypto = js.native
   
+  def fetch(input: org.scalajs.dom.URL): js.Promise[org.scalajs.dom.Response] = js.native
+  def fetch(input: org.scalajs.dom.URL, init: org.scalajs.dom.RequestInit): js.Promise[org.scalajs.dom.Response] = js.native
   /* standard DOM */
   def fetch(input: RequestInfo): js.Promise[org.scalajs.dom.Response] = js.native
   def fetch(input: RequestInfo, init: org.scalajs.dom.RequestInit): js.Promise[org.scalajs.dom.Response] = js.native
@@ -66,10 +67,17 @@ trait WindowOrWorkerGlobalScope extends StObject {
   def queueMicrotask(callback: VoidFunction): Unit = js.native
   
   /* standard DOM */
+  def reportError(e: Any): Unit = js.native
+  
+  /* standard DOM */
   def setInterval(handler: TimerHandler, timeout: Double, arguments: Any*): Double = js.native
   def setInterval(handler: TimerHandler, timeout: Unit, arguments: Any*): Double = js.native
   
   /* standard DOM */
   def setTimeout(handler: TimerHandler, timeout: Double, arguments: Any*): Double = js.native
   def setTimeout(handler: TimerHandler, timeout: Unit, arguments: Any*): Double = js.native
+  
+  /* standard DOM */
+  def structuredClone(value: Any): Any = js.native
+  def structuredClone(value: Any, options: StructuredSerializeOptions): Any = js.native
 }

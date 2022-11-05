@@ -8,7 +8,6 @@ import tmttyped.std.stdStrings.none
 import tmttyped.std.stdStrings.waitingforkey
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video. */
@@ -198,6 +197,9 @@ trait HTMLMediaElement
   /** Gets or sets a value indicating what data should be preloaded, if any. */
   /* standard DOM */
   var preload: none | metadata | auto | _empty = js.native
+  
+  /* standard DOM */
+  var preservesPitch: scala.Boolean = js.native
   
   /* standard DOM */
   val readyState: Double = js.native

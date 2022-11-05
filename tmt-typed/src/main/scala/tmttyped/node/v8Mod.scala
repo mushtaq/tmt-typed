@@ -1,11 +1,9 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.TypedArray
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStreamMod.Readable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object v8Mod {
@@ -20,8 +18,8 @@ object v8Mod {
     */
   @JSImport("v8", "DefaultDeserializer")
   @js.native
-  class DefaultDeserializer protected () extends Deserializer {
-    def this(data: TypedArray) = this()
+  open class DefaultDeserializer protected () extends Deserializer {
+    def this(data: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) = this()
   }
   
   /**
@@ -31,15 +29,15 @@ object v8Mod {
     */
   @JSImport("v8", "DefaultSerializer")
   @js.native
-  class DefaultSerializer () extends Serializer
+  open class DefaultSerializer () extends Serializer
   
   /**
     * @since v8.0.0
     */
   @JSImport("v8", "Deserializer")
   @js.native
-  class Deserializer protected () extends StObject {
-    def this(data: TypedArray) = this()
+  open class Deserializer protected () extends StObject {
+    def this(data: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) = this()
     
     /**
       * Reads the underlying wire format version. Likely mostly to be useful to
@@ -99,7 +97,7 @@ object v8Mod {
     */
   @JSImport("v8", "Serializer")
   @js.native
-  class Serializer () extends StObject {
+  open class Serializer () extends StObject {
     
     /**
       * Returns the stored internal buffer. This serializer should not be used once
@@ -132,7 +130,9 @@ object v8Mod {
       * will require a way to compute the length of the buffer.
       * For use inside of a custom `serializer._writeHostObject()`.
       */
-    def writeRawBytes(buffer: TypedArray): Unit = js.native
+    def writeRawBytes(
+      buffer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any
+    ): Unit = js.native
     
     /**
       * Write a raw 32-bit unsigned integer.
@@ -171,8 +171,7 @@ object v8Mod {
     * ```
     * @since v8.0.0
     */
-  @scala.inline
-  def cachedDataVersionTag(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("cachedDataVersionTag")().asInstanceOf[Double]
+  inline def cachedDataVersionTag(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("cachedDataVersionTag")().asInstanceOf[Double]
   
   /**
     * Uses a `DefaultDeserializer` with default options to read a JS value
@@ -180,8 +179,9 @@ object v8Mod {
     * @since v8.0.0
     * @param buffer A buffer returned by {@link serialize}.
     */
-  @scala.inline
-  def deserialize(buffer: TypedArray): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(buffer.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def deserialize(
+    buffer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any
+  ): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("deserialize")(buffer.asInstanceOf[js.Any]).asInstanceOf[Any]
   
   /**
     * Returns an object with the following properties:
@@ -195,8 +195,7 @@ object v8Mod {
     * ```
     * @since v12.8.0
     */
-  @scala.inline
-  def getHeapCodeStatistics(): HeapCodeStatistics = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapCodeStatistics")().asInstanceOf[HeapCodeStatistics]
+  inline def getHeapCodeStatistics(): HeapCodeStatistics = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapCodeStatistics")().asInstanceOf[HeapCodeStatistics]
   
   /**
     * Generates a snapshot of the current V8 heap and returns a Readable
@@ -204,6 +203,13 @@ object v8Mod {
     * This JSON stream format is intended to be used with tools such as
     * Chrome DevTools. The JSON schema is undocumented and specific to the
     * V8 engine. Therefore, the schema may change from one version of V8 to the next.
+    *
+    * Creating a heap snapshot requires memory about twice the size of the heap at
+    * the time the snapshot is created. This results in the risk of OOM killers
+    * terminating the process.
+    *
+    * Generating a snapshot is a synchronous operation which blocks the event loop
+    * for a duration depending on the heap size.
     *
     * ```js
     * // Print heap snapshot to the console
@@ -214,8 +220,7 @@ object v8Mod {
     * @since v11.13.0
     * @return A Readable Stream containing the V8 heap snapshot
     */
-  @scala.inline
-  def getHeapSnapshot(): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSnapshot")().asInstanceOf[Readable]
+  inline def getHeapSnapshot(): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSnapshot")().asInstanceOf[Readable]
   
   /**
     * Returns statistics about the V8 heap spaces, i.e. the segments which make up
@@ -267,8 +272,7 @@ object v8Mod {
     * ```
     * @since v6.0.0
     */
-  @scala.inline
-  def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSpaceStatistics")().asInstanceOf[js.Array[HeapSpaceInfo]]
+  inline def getHeapSpaceStatistics(): js.Array[HeapSpaceInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapSpaceStatistics")().asInstanceOf[js.Array[HeapSpaceInfo]]
   
   /**
     * Returns an object with the following properties:
@@ -303,15 +307,17 @@ object v8Mod {
     * ```
     * @since v1.0.0
     */
-  @scala.inline
-  def getHeapStatistics(): HeapInfo = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapStatistics")().asInstanceOf[HeapInfo]
+  inline def getHeapStatistics(): HeapInfo = ^.asInstanceOf[js.Dynamic].applyDynamic("getHeapStatistics")().asInstanceOf[HeapInfo]
   
   /**
     * Uses a `DefaultSerializer` to serialize `value` into a buffer.
+    *
+    * `ERR_BUFFER_TOO_LARGE` will be thrown when trying to
+    * serialize a huge object which requires buffer
+    * larger than `buffer.constants.MAX_LENGTH`.
     * @since v8.0.0
     */
-  @scala.inline
-  def serialize(value: Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def serialize(value: Any): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("serialize")(value.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
   /**
     * The `v8.setFlagsFromString()` method can be used to programmatically set
@@ -331,8 +337,7 @@ object v8Mod {
     * ```
     * @since v1.0.0
     */
-  @scala.inline
-  def setFlagsFromString(flags: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def setFlagsFromString(flags: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setFlagsFromString")(flags.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * The `v8.stopCoverage()` method allows the user to stop the coverage collection
@@ -340,8 +345,7 @@ object v8Mod {
     * records and optimize code. This can be used in conjunction with {@link takeCoverage} if the user wants to collect the coverage on demand.
     * @since v15.1.0, v14.18.0, v12.22.0
     */
-  @scala.inline
-  def stopCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("stopCoverage")().asInstanceOf[Unit]
+  inline def stopCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("stopCoverage")().asInstanceOf[Unit]
   
   /**
     * The `v8.takeCoverage()` method allows the user to write the coverage started by `NODE_V8_COVERAGE` to disk on demand. This method can be invoked multiple
@@ -353,8 +357,7 @@ object v8Mod {
     * disk unless {@link stopCoverage} is invoked before the process exits.
     * @since v15.1.0, v14.18.0, v12.22.0
     */
-  @scala.inline
-  def takeCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("takeCoverage")().asInstanceOf[Unit]
+  inline def takeCoverage(): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("takeCoverage")().asInstanceOf[Unit]
   
   /**
     * Generates a snapshot of the current V8 heap and writes it to a JSON
@@ -364,6 +367,13 @@ object v8Mod {
     *
     * A heap snapshot is specific to a single V8 isolate. When using `worker threads`, a heap snapshot generated from the main thread will
     * not contain any information about the workers, and vice versa.
+    *
+    * Creating a heap snapshot requires memory about twice the size of the heap at
+    * the time the snapshot is created. This results in the risk of OOM killers
+    * terminating the process.
+    *
+    * Generating a snapshot is a synchronous operation which blocks the event loop
+    * for a duration depending on the heap size.
     *
     * ```js
     * const { writeHeapSnapshot } = require('v8');
@@ -400,10 +410,8 @@ object v8Mod {
     * worker thread.
     * @return The filename where the snapshot was saved.
     */
-  @scala.inline
-  def writeHeapSnapshot(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[String]
-  @scala.inline
-  def writeHeapSnapshot(filename: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(filename.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def writeHeapSnapshot(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")().asInstanceOf[String]
+  inline def writeHeapSnapshot(filename: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("writeHeapSnapshot")(filename.asInstanceOf[js.Any]).asInstanceOf[String]
   
   // ** Signifies if the --zap_code_space option is enabled or not.  1 == enabled, 0 == disabled. */
   /* Rewritten from type alias, can be one of: 
@@ -413,11 +421,9 @@ object v8Mod {
   trait DoesZapCodeSpaceFlag extends StObject
   object DoesZapCodeSpaceFlag {
     
-    @scala.inline
-    def `0`: tmttyped.node.nodeNumbers.`0` = 0.asInstanceOf[tmttyped.node.nodeNumbers.`0`]
+    inline def `0`: tmttyped.node.nodeNumbers.`0` = 0.asInstanceOf[tmttyped.node.nodeNumbers.`0`]
     
-    @scala.inline
-    def `1`: tmttyped.node.nodeNumbers.`1` = 1.asInstanceOf[tmttyped.node.nodeNumbers.`1`]
+    inline def `1`: tmttyped.node.nodeNumbers.`1` = 1.asInstanceOf[tmttyped.node.nodeNumbers.`1`]
   }
   
   trait HeapCodeStatistics extends StObject {
@@ -430,8 +436,7 @@ object v8Mod {
   }
   object HeapCodeStatistics {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       bytecode_and_metadata_size: Double,
       code_and_metadata_size: Double,
       external_script_source_size: Double
@@ -440,17 +445,13 @@ object v8Mod {
       __obj.asInstanceOf[HeapCodeStatistics]
     }
     
-    @scala.inline
-    implicit class HeapCodeStatisticsMutableBuilder[Self <: HeapCodeStatistics] (val x: Self) extends AnyVal {
+    extension [Self <: HeapCodeStatistics](x: Self) {
       
-      @scala.inline
-      def setBytecode_and_metadata_size(value: Double): Self = StObject.set(x, "bytecode_and_metadata_size", value.asInstanceOf[js.Any])
+      inline def setBytecode_and_metadata_size(value: Double): Self = StObject.set(x, "bytecode_and_metadata_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCode_and_metadata_size(value: Double): Self = StObject.set(x, "code_and_metadata_size", value.asInstanceOf[js.Any])
+      inline def setCode_and_metadata_size(value: Double): Self = StObject.set(x, "code_and_metadata_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExternal_script_source_size(value: Double): Self = StObject.set(x, "external_script_source_size", value.asInstanceOf[js.Any])
+      inline def setExternal_script_source_size(value: Double): Self = StObject.set(x, "external_script_source_size", value.asInstanceOf[js.Any])
     }
   }
   
@@ -480,8 +481,7 @@ object v8Mod {
   }
   object HeapInfo {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       does_zap_garbage: DoesZapCodeSpaceFlag,
       heap_size_limit: Double,
       malloced_memory: Double,
@@ -498,41 +498,29 @@ object v8Mod {
       __obj.asInstanceOf[HeapInfo]
     }
     
-    @scala.inline
-    implicit class HeapInfoMutableBuilder[Self <: HeapInfo] (val x: Self) extends AnyVal {
+    extension [Self <: HeapInfo](x: Self) {
       
-      @scala.inline
-      def setDoes_zap_garbage(value: DoesZapCodeSpaceFlag): Self = StObject.set(x, "does_zap_garbage", value.asInstanceOf[js.Any])
+      inline def setDoes_zap_garbage(value: DoesZapCodeSpaceFlag): Self = StObject.set(x, "does_zap_garbage", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHeap_size_limit(value: Double): Self = StObject.set(x, "heap_size_limit", value.asInstanceOf[js.Any])
+      inline def setHeap_size_limit(value: Double): Self = StObject.set(x, "heap_size_limit", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMalloced_memory(value: Double): Self = StObject.set(x, "malloced_memory", value.asInstanceOf[js.Any])
+      inline def setMalloced_memory(value: Double): Self = StObject.set(x, "malloced_memory", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setNumber_of_detached_contexts(value: Double): Self = StObject.set(x, "number_of_detached_contexts", value.asInstanceOf[js.Any])
+      inline def setNumber_of_detached_contexts(value: Double): Self = StObject.set(x, "number_of_detached_contexts", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setNumber_of_native_contexts(value: Double): Self = StObject.set(x, "number_of_native_contexts", value.asInstanceOf[js.Any])
+      inline def setNumber_of_native_contexts(value: Double): Self = StObject.set(x, "number_of_native_contexts", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPeak_malloced_memory(value: Double): Self = StObject.set(x, "peak_malloced_memory", value.asInstanceOf[js.Any])
+      inline def setPeak_malloced_memory(value: Double): Self = StObject.set(x, "peak_malloced_memory", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTotal_available_size(value: Double): Self = StObject.set(x, "total_available_size", value.asInstanceOf[js.Any])
+      inline def setTotal_available_size(value: Double): Self = StObject.set(x, "total_available_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTotal_heap_size(value: Double): Self = StObject.set(x, "total_heap_size", value.asInstanceOf[js.Any])
+      inline def setTotal_heap_size(value: Double): Self = StObject.set(x, "total_heap_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTotal_heap_size_executable(value: Double): Self = StObject.set(x, "total_heap_size_executable", value.asInstanceOf[js.Any])
+      inline def setTotal_heap_size_executable(value: Double): Self = StObject.set(x, "total_heap_size_executable", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTotal_physical_size(value: Double): Self = StObject.set(x, "total_physical_size", value.asInstanceOf[js.Any])
+      inline def setTotal_physical_size(value: Double): Self = StObject.set(x, "total_physical_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUsed_heap_size(value: Double): Self = StObject.set(x, "used_heap_size", value.asInstanceOf[js.Any])
+      inline def setUsed_heap_size(value: Double): Self = StObject.set(x, "used_heap_size", value.asInstanceOf[js.Any])
     }
   }
   
@@ -550,8 +538,7 @@ object v8Mod {
   }
   object HeapSpaceInfo {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       physical_space_size: Double,
       space_available_size: Double,
       space_name: String,
@@ -562,23 +549,17 @@ object v8Mod {
       __obj.asInstanceOf[HeapSpaceInfo]
     }
     
-    @scala.inline
-    implicit class HeapSpaceInfoMutableBuilder[Self <: HeapSpaceInfo] (val x: Self) extends AnyVal {
+    extension [Self <: HeapSpaceInfo](x: Self) {
       
-      @scala.inline
-      def setPhysical_space_size(value: Double): Self = StObject.set(x, "physical_space_size", value.asInstanceOf[js.Any])
+      inline def setPhysical_space_size(value: Double): Self = StObject.set(x, "physical_space_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSpace_available_size(value: Double): Self = StObject.set(x, "space_available_size", value.asInstanceOf[js.Any])
+      inline def setSpace_available_size(value: Double): Self = StObject.set(x, "space_available_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSpace_name(value: String): Self = StObject.set(x, "space_name", value.asInstanceOf[js.Any])
+      inline def setSpace_name(value: String): Self = StObject.set(x, "space_name", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSpace_size(value: Double): Self = StObject.set(x, "space_size", value.asInstanceOf[js.Any])
+      inline def setSpace_size(value: Double): Self = StObject.set(x, "space_size", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSpace_used_size(value: Double): Self = StObject.set(x, "space_used_size", value.asInstanceOf[js.Any])
+      inline def setSpace_used_size(value: Double): Self = StObject.set(x, "space_used_size", value.asInstanceOf[js.Any])
     }
   }
 }

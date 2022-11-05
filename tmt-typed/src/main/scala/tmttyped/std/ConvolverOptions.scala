@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ConvolverOptions
@@ -17,28 +16,21 @@ trait ConvolverOptions
 }
 object ConvolverOptions {
   
-  @scala.inline
-  def apply(): ConvolverOptions = {
+  inline def apply(): ConvolverOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ConvolverOptions]
   }
   
-  @scala.inline
-  implicit class ConvolverOptionsMutableBuilder[Self <: ConvolverOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ConvolverOptions](x: Self) {
     
-    @scala.inline
-    def setBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+    inline def setBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBufferNull: Self = StObject.set(x, "buffer", null)
+    inline def setBufferNull: Self = StObject.set(x, "buffer", null)
     
-    @scala.inline
-    def setBufferUndefined: Self = StObject.set(x, "buffer", js.undefined)
+    inline def setBufferUndefined: Self = StObject.set(x, "buffer", js.undefined)
     
-    @scala.inline
-    def setDisableNormalization(value: scala.Boolean): Self = StObject.set(x, "disableNormalization", value.asInstanceOf[js.Any])
+    inline def setDisableNormalization(value: scala.Boolean): Self = StObject.set(x, "disableNormalization", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDisableNormalizationUndefined: Self = StObject.set(x, "disableNormalization", js.undefined)
+    inline def setDisableNormalizationUndefined: Self = StObject.set(x, "disableNormalization", js.undefined)
   }
 }

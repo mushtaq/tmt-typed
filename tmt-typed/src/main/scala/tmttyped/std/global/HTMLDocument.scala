@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("HTMLDocument")
 @js.native
 /* standard DOM */
-class HTMLDocument ()
+open class HTMLDocument ()
   extends StObject
      with tmttyped.std.HTMLDocument {
   
@@ -23,6 +22,10 @@ class HTMLDocument ()
   /* standard DOM */
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.Element | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  var adoptedStyleSheets: js.Array[org.scalajs.dom.CSSStyleSheet] = js.native
   
   /**
     * Returns the element for the specified x coordinate and the specified y coordinate.

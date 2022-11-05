@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait NumberFormatPart extends StObject {
@@ -15,20 +14,16 @@ trait NumberFormatPart extends StObject {
 }
 object NumberFormatPart {
   
-  @scala.inline
-  def apply(`type`: NumberFormatPartTypes, value: String): NumberFormatPart = {
+  inline def apply(`type`: NumberFormatPartTypes, value: String): NumberFormatPart = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberFormatPart]
   }
   
-  @scala.inline
-  implicit class NumberFormatPartMutableBuilder[Self <: NumberFormatPart] (val x: Self) extends AnyVal {
+  extension [Self <: NumberFormatPart](x: Self) {
     
-    @scala.inline
-    def setType(value: NumberFormatPartTypes): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    inline def setType(value: NumberFormatPartTypes): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setValue(value: String): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+    inline def setValue(value: String): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
   }
 }

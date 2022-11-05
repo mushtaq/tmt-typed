@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WindowEventHandlersEventMap extends StObject {
@@ -63,8 +62,7 @@ trait WindowEventHandlersEventMap extends StObject {
 }
 object WindowEventHandlersEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     afterprint: org.scalajs.dom.Event,
     beforeprint: org.scalajs.dom.Event,
     beforeunload: org.scalajs.dom.BeforeUnloadEvent,
@@ -88,61 +86,42 @@ object WindowEventHandlersEventMap {
     __obj.asInstanceOf[WindowEventHandlersEventMap]
   }
   
-  @scala.inline
-  implicit class WindowEventHandlersEventMapMutableBuilder[Self <: WindowEventHandlersEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: WindowEventHandlersEventMap](x: Self) {
     
-    @scala.inline
-    def setAfterprint(value: org.scalajs.dom.Event): Self = StObject.set(x, "afterprint", value.asInstanceOf[js.Any])
+    inline def setAfterprint(value: org.scalajs.dom.Event): Self = StObject.set(x, "afterprint", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBeforeprint(value: org.scalajs.dom.Event): Self = StObject.set(x, "beforeprint", value.asInstanceOf[js.Any])
+    inline def setBeforeprint(value: org.scalajs.dom.Event): Self = StObject.set(x, "beforeprint", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBeforeunload(value: org.scalajs.dom.BeforeUnloadEvent): Self = StObject.set(x, "beforeunload", value.asInstanceOf[js.Any])
+    inline def setBeforeunload(value: org.scalajs.dom.BeforeUnloadEvent): Self = StObject.set(x, "beforeunload", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setGamepadconnected(value: org.scalajs.dom.GamepadEvent): Self = StObject.set(x, "gamepadconnected", value.asInstanceOf[js.Any])
+    inline def setGamepadconnected(value: org.scalajs.dom.GamepadEvent): Self = StObject.set(x, "gamepadconnected", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setGamepaddisconnected(value: org.scalajs.dom.GamepadEvent): Self = StObject.set(x, "gamepaddisconnected", value.asInstanceOf[js.Any])
+    inline def setGamepaddisconnected(value: org.scalajs.dom.GamepadEvent): Self = StObject.set(x, "gamepaddisconnected", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHashchange(value: org.scalajs.dom.HashChangeEvent): Self = StObject.set(x, "hashchange", value.asInstanceOf[js.Any])
+    inline def setHashchange(value: org.scalajs.dom.HashChangeEvent): Self = StObject.set(x, "hashchange", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLanguagechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "languagechange", value.asInstanceOf[js.Any])
+    inline def setLanguagechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "languagechange", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+    inline def setMessage(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
+    inline def setMessageerror(value: org.scalajs.dom.MessageEvent): Self = StObject.set(x, "messageerror", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOffline(value: org.scalajs.dom.Event): Self = StObject.set(x, "offline", value.asInstanceOf[js.Any])
+    inline def setOffline(value: org.scalajs.dom.Event): Self = StObject.set(x, "offline", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOnline(value: org.scalajs.dom.Event): Self = StObject.set(x, "online", value.asInstanceOf[js.Any])
+    inline def setOnline(value: org.scalajs.dom.Event): Self = StObject.set(x, "online", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPagehide(value: PageTransitionEvent): Self = StObject.set(x, "pagehide", value.asInstanceOf[js.Any])
+    inline def setPagehide(value: PageTransitionEvent): Self = StObject.set(x, "pagehide", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPageshow(value: PageTransitionEvent): Self = StObject.set(x, "pageshow", value.asInstanceOf[js.Any])
+    inline def setPageshow(value: PageTransitionEvent): Self = StObject.set(x, "pageshow", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPopstate(value: org.scalajs.dom.PopStateEvent): Self = StObject.set(x, "popstate", value.asInstanceOf[js.Any])
+    inline def setPopstate(value: org.scalajs.dom.PopStateEvent): Self = StObject.set(x, "popstate", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRejectionhandled(value: PromiseRejectionEvent): Self = StObject.set(x, "rejectionhandled", value.asInstanceOf[js.Any])
+    inline def setRejectionhandled(value: PromiseRejectionEvent): Self = StObject.set(x, "rejectionhandled", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStorage(value: org.scalajs.dom.StorageEvent): Self = StObject.set(x, "storage", value.asInstanceOf[js.Any])
+    inline def setStorage(value: org.scalajs.dom.StorageEvent): Self = StObject.set(x, "storage", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUnhandledrejection(value: PromiseRejectionEvent): Self = StObject.set(x, "unhandledrejection", value.asInstanceOf[js.Any])
+    inline def setUnhandledrejection(value: PromiseRejectionEvent): Self = StObject.set(x, "unhandledrejection", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUnload(value: org.scalajs.dom.Event): Self = StObject.set(x, "unload", value.asInstanceOf[js.Any])
+    inline def setUnload(value: org.scalajs.dom.Event): Self = StObject.set(x, "unload", value.asInstanceOf[js.Any])
   }
 }

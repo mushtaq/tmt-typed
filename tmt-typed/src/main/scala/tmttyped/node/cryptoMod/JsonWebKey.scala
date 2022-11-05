@@ -3,7 +3,6 @@ package tmttyped.node.cryptoMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait JsonWebKey
@@ -38,91 +37,63 @@ trait JsonWebKey
 }
 object JsonWebKey {
   
-  @scala.inline
-  def apply(): JsonWebKey = {
+  inline def apply(): JsonWebKey = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[JsonWebKey]
   }
   
-  @scala.inline
-  implicit class JsonWebKeyMutableBuilder[Self <: JsonWebKey] (val x: Self) extends AnyVal {
+  extension [Self <: JsonWebKey](x: Self) {
     
-    @scala.inline
-    def setCrv(value: String): Self = StObject.set(x, "crv", value.asInstanceOf[js.Any])
+    inline def setCrv(value: String): Self = StObject.set(x, "crv", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCrvUndefined: Self = StObject.set(x, "crv", js.undefined)
+    inline def setCrvUndefined: Self = StObject.set(x, "crv", js.undefined)
     
-    @scala.inline
-    def setD(value: String): Self = StObject.set(x, "d", value.asInstanceOf[js.Any])
+    inline def setD(value: String): Self = StObject.set(x, "d", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDUndefined: Self = StObject.set(x, "d", js.undefined)
+    inline def setDUndefined: Self = StObject.set(x, "d", js.undefined)
     
-    @scala.inline
-    def setDp(value: String): Self = StObject.set(x, "dp", value.asInstanceOf[js.Any])
+    inline def setDp(value: String): Self = StObject.set(x, "dp", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDpUndefined: Self = StObject.set(x, "dp", js.undefined)
+    inline def setDpUndefined: Self = StObject.set(x, "dp", js.undefined)
     
-    @scala.inline
-    def setDq(value: String): Self = StObject.set(x, "dq", value.asInstanceOf[js.Any])
+    inline def setDq(value: String): Self = StObject.set(x, "dq", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDqUndefined: Self = StObject.set(x, "dq", js.undefined)
+    inline def setDqUndefined: Self = StObject.set(x, "dq", js.undefined)
     
-    @scala.inline
-    def setE(value: String): Self = StObject.set(x, "e", value.asInstanceOf[js.Any])
+    inline def setE(value: String): Self = StObject.set(x, "e", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEUndefined: Self = StObject.set(x, "e", js.undefined)
+    inline def setEUndefined: Self = StObject.set(x, "e", js.undefined)
     
-    @scala.inline
-    def setK(value: String): Self = StObject.set(x, "k", value.asInstanceOf[js.Any])
+    inline def setK(value: String): Self = StObject.set(x, "k", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKUndefined: Self = StObject.set(x, "k", js.undefined)
+    inline def setKUndefined: Self = StObject.set(x, "k", js.undefined)
     
-    @scala.inline
-    def setKty(value: String): Self = StObject.set(x, "kty", value.asInstanceOf[js.Any])
+    inline def setKty(value: String): Self = StObject.set(x, "kty", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKtyUndefined: Self = StObject.set(x, "kty", js.undefined)
+    inline def setKtyUndefined: Self = StObject.set(x, "kty", js.undefined)
     
-    @scala.inline
-    def setN(value: String): Self = StObject.set(x, "n", value.asInstanceOf[js.Any])
+    inline def setN(value: String): Self = StObject.set(x, "n", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setNUndefined: Self = StObject.set(x, "n", js.undefined)
+    inline def setNUndefined: Self = StObject.set(x, "n", js.undefined)
     
-    @scala.inline
-    def setP(value: String): Self = StObject.set(x, "p", value.asInstanceOf[js.Any])
+    inline def setP(value: String): Self = StObject.set(x, "p", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPUndefined: Self = StObject.set(x, "p", js.undefined)
+    inline def setPUndefined: Self = StObject.set(x, "p", js.undefined)
     
-    @scala.inline
-    def setQ(value: String): Self = StObject.set(x, "q", value.asInstanceOf[js.Any])
+    inline def setQ(value: String): Self = StObject.set(x, "q", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setQUndefined: Self = StObject.set(x, "q", js.undefined)
+    inline def setQUndefined: Self = StObject.set(x, "q", js.undefined)
     
-    @scala.inline
-    def setQi(value: String): Self = StObject.set(x, "qi", value.asInstanceOf[js.Any])
+    inline def setQi(value: String): Self = StObject.set(x, "qi", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setQiUndefined: Self = StObject.set(x, "qi", js.undefined)
+    inline def setQiUndefined: Self = StObject.set(x, "qi", js.undefined)
     
-    @scala.inline
-    def setX(value: String): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
+    inline def setX(value: String): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setXUndefined: Self = StObject.set(x, "x", js.undefined)
+    inline def setXUndefined: Self = StObject.set(x, "x", js.undefined)
     
-    @scala.inline
-    def setY(value: String): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
+    inline def setY(value: String): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setYUndefined: Self = StObject.set(x, "y", js.undefined)
+    inline def setYUndefined: Self = StObject.set(x, "y", js.undefined)
   }
 }

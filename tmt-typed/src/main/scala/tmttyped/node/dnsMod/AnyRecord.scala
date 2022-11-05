@@ -2,7 +2,6 @@ package tmttyped.node.dnsMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -20,36 +19,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AnyRecord extends StObject
 object AnyRecord {
   
-  @scala.inline
-  def AnyARecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyARecord = {
+  inline def AnyARecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyARecord = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("A")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyARecord]
   }
   
-  @scala.inline
-  def AnyAaaaRecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyAaaaRecord = {
+  inline def AnyAaaaRecord(address: String, ttl: Double): tmttyped.node.dnsMod.AnyAaaaRecord = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("AAAA")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyAaaaRecord]
   }
   
-  @scala.inline
-  def AnyCnameRecord(value: String): tmttyped.node.dnsMod.AnyCnameRecord = {
+  inline def AnyCnameRecord(value: String): tmttyped.node.dnsMod.AnyCnameRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("CNAME")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyCnameRecord]
   }
   
-  @scala.inline
-  def AnyMxRecord(exchange: String, priority: Double): tmttyped.node.dnsMod.AnyMxRecord = {
+  inline def AnyMxRecord(exchange: String, priority: Double): tmttyped.node.dnsMod.AnyMxRecord = {
     val __obj = js.Dynamic.literal(exchange = exchange.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("MX")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyMxRecord]
   }
   
-  @scala.inline
-  def AnyNaptrRecord(
+  inline def AnyNaptrRecord(
     flags: String,
     order: Double,
     preference: Double,
@@ -62,22 +56,19 @@ object AnyRecord {
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyNaptrRecord]
   }
   
-  @scala.inline
-  def AnyNsRecord(value: String): tmttyped.node.dnsMod.AnyNsRecord = {
+  inline def AnyNsRecord(value: String): tmttyped.node.dnsMod.AnyNsRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("NS")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyNsRecord]
   }
   
-  @scala.inline
-  def AnyPtrRecord(value: String): tmttyped.node.dnsMod.AnyPtrRecord = {
+  inline def AnyPtrRecord(value: String): tmttyped.node.dnsMod.AnyPtrRecord = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("PTR")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyPtrRecord]
   }
   
-  @scala.inline
-  def AnySoaRecord(
+  inline def AnySoaRecord(
     expire: Double,
     hostmaster: String,
     minttl: Double,
@@ -91,15 +82,13 @@ object AnyRecord {
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnySoaRecord]
   }
   
-  @scala.inline
-  def AnySrvRecord(name: String, port: Double, priority: Double, weight: Double): tmttyped.node.dnsMod.AnySrvRecord = {
+  inline def AnySrvRecord(name: String, port: Double, priority: Double, weight: Double): tmttyped.node.dnsMod.AnySrvRecord = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("SRV")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnySrvRecord]
   }
   
-  @scala.inline
-  def AnyTxtRecord(entries: js.Array[String]): tmttyped.node.dnsMod.AnyTxtRecord = {
+  inline def AnyTxtRecord(entries: js.Array[String]): tmttyped.node.dnsMod.AnyTxtRecord = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any])
     __obj.updateDynamic("type")("TXT")
     __obj.asInstanceOf[tmttyped.node.dnsMod.AnyTxtRecord]

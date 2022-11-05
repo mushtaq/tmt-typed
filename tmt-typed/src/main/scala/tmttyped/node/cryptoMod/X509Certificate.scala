@@ -1,10 +1,10 @@
 package tmttyped.node.cryptoMod
 
+import tmttyped.node.anon.PickX509CheckOptionssubje
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.tlsMod.PeerCertificate
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -22,38 +22,69 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "X509Certificate")
 @js.native
-class X509Certificate protected () extends StObject {
+open class X509Certificate protected () extends StObject {
   def this(buffer: BinaryLike) = this()
   
   /**
-    * Will be \`true\` if this is a Certificate Authority (ca) certificate.
+    * Will be \`true\` if this is a Certificate Authority (CA) certificate.
     * @since v15.6.0
     */
   val ca: Boolean = js.native
   
   /**
     * Checks whether the certificate matches the given email address.
+    *
+    * If the `'subject'` option is undefined or set to `'default'`, the certificate
+    * subject is only considered if the subject alternative name extension either does
+    * not exist or does not contain any email addresses.
+    *
+    * If the `'subject'` option is set to `'always'` and if the subject alternative
+    * name extension either does not exist or does not contain a matching email
+    * address, the certificate subject is considered.
+    *
+    * If the `'subject'` option is set to `'never'`, the certificate subject is never
+    * considered, even if the certificate contains no subject alternative names.
     * @since v15.6.0
     * @return Returns `email` if the certificate matches, `undefined` if it does not.
     */
   def checkEmail(email: String): js.UndefOr[String] = js.native
-  def checkEmail(email: String, options: X509CheckOptions): js.UndefOr[String] = js.native
+  def checkEmail(email: String, options: PickX509CheckOptionssubje): js.UndefOr[String] = js.native
   
   /**
     * Checks whether the certificate matches the given host name.
+    *
+    * If the certificate matches the given host name, the matching subject name is
+    * returned. The returned name might be an exact match (e.g., `foo.example.com`)
+    * or it might contain wildcards (e.g., `*.example.com`). Because host name
+    * comparisons are case-insensitive, the returned subject name might also differ
+    * from the given `name` in capitalization.
+    *
+    * If the `'subject'` option is undefined or set to `'default'`, the certificate
+    * subject is only considered if the subject alternative name extension either does
+    * not exist or does not contain any DNS names. This behavior is consistent with [RFC 2818](https://www.rfc-editor.org/rfc/rfc2818.txt) ("HTTP Over TLS").
+    *
+    * If the `'subject'` option is set to `'always'` and if the subject alternative
+    * name extension either does not exist or does not contain a matching DNS name,
+    * the certificate subject is considered.
+    *
+    * If the `'subject'` option is set to `'never'`, the certificate subject is never
+    * considered, even if the certificate contains no subject alternative names.
     * @since v15.6.0
-    * @return Returns `name` if the certificate matches, `undefined` if it does not.
+    * @return Returns a subject name that matches `name`, or `undefined` if no subject name matches `name`.
     */
   def checkHost(name: String): js.UndefOr[String] = js.native
   def checkHost(name: String, options: X509CheckOptions): js.UndefOr[String] = js.native
   
   /**
     * Checks whether the certificate matches the given IP address (IPv4 or IPv6).
+    *
+    * Only [RFC 5280](https://www.rfc-editor.org/rfc/rfc5280.txt) `iPAddress` subject alternative names are considered, and they
+    * must match the given `ip` address exactly. Other subject alternative names as
+    * well as the subject field of the certificate are ignored.
     * @since v15.6.0
     * @return Returns `ip` if the certificate matches, `undefined` if it does not.
     */
   def checkIP(ip: String): js.UndefOr[String] = js.native
-  def checkIP(ip: String, options: X509CheckOptions): js.UndefOr[String] = js.native
   
   /**
     * Checks whether this certificate was issued by the given `otherCert`.
@@ -71,6 +102,10 @@ class X509Certificate protected () extends StObject {
   
   /**
     * The SHA-1 fingerprint of this certificate.
+    *
+    * Because SHA-1 is cryptographically broken and because the security of SHA-1 is
+    * significantly worse than that of algorithms that are commonly used to sign
+    * certificates, consider using `x509.fingerprint256` instead.
     * @since v15.6.0
     */
   val fingerprint: String = js.native
@@ -82,10 +117,17 @@ class X509Certificate protected () extends StObject {
   val fingerprint256: String = js.native
   
   /**
-    * The information access content of this certificate.
+    * The SHA-512 fingerprint of this certificate.
+    * @since v16.14.0
+    */
+  val fingerprint512: String = js.native
+  
+  /**
+    * The information access content of this certificate or `undefined` if not
+    * available.
     * @since v15.6.0
     */
-  val infoAccess: String = js.native
+  val infoAccess: js.UndefOr[String] = js.native
   
   /**
     * The issuer identification included in this certificate.
@@ -120,6 +162,10 @@ class X509Certificate protected () extends StObject {
   
   /**
     * The serial number of this certificate.
+    *
+    * Serial numbers are assigned by certificate authorities and do not uniquely
+    * identify certificates. Consider using `x509.fingerprint256` as a unique
+    * identifier instead.
     * @since v15.6.0
     */
   val serialNumber: String = js.native
@@ -131,10 +177,11 @@ class X509Certificate protected () extends StObject {
   val subject: String = js.native
   
   /**
-    * The subject alternative name specified for this certificate.
+    * The subject alternative name specified for this certificate or `undefined`
+    * if not available.
     * @since v15.6.0
     */
-  val subjectAltName: String = js.native
+  val subjectAltName: js.UndefOr[String] = js.native
   
   /**
     * There is no standard JSON encoding for X509 certificates. The`toJSON()` method returns a string containing the PEM encoded

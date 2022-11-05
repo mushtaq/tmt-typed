@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -13,12 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CanvasLineCap extends StObject
 object CanvasLineCap {
   
-  @scala.inline
-  def butt: tmttyped.std.stdStrings.butt = "butt".asInstanceOf[tmttyped.std.stdStrings.butt]
+  inline def butt: tmttyped.std.stdStrings.butt = "butt".asInstanceOf[tmttyped.std.stdStrings.butt]
   
-  @scala.inline
-  def round: tmttyped.std.stdStrings.round = "round".asInstanceOf[tmttyped.std.stdStrings.round]
+  inline def round: tmttyped.std.stdStrings.round = "round".asInstanceOf[tmttyped.std.stdStrings.round]
   
-  @scala.inline
-  def square: tmttyped.std.stdStrings.square = "square".asInstanceOf[tmttyped.std.stdStrings.square]
+  inline def square: tmttyped.std.stdStrings.square = "square".asInstanceOf[tmttyped.std.stdStrings.square]
 }

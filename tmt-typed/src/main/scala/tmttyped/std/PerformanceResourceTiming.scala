@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an XMLHttpRequest, <SVG>, image, or script. */
@@ -66,8 +65,7 @@ trait PerformanceResourceTiming
 }
 object PerformanceResourceTiming {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     connectEnd: DOMHighResTimeStamp,
     connectStart: DOMHighResTimeStamp,
     decodedBodySize: Double,
@@ -96,64 +94,44 @@ object PerformanceResourceTiming {
     __obj.asInstanceOf[PerformanceResourceTiming]
   }
   
-  @scala.inline
-  implicit class PerformanceResourceTimingMutableBuilder[Self <: PerformanceResourceTiming] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceResourceTiming](x: Self) {
     
-    @scala.inline
-    def setConnectEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "connectEnd", value.asInstanceOf[js.Any])
+    inline def setConnectEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "connectEnd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setConnectStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "connectStart", value.asInstanceOf[js.Any])
+    inline def setConnectStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "connectStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDecodedBodySize(value: Double): Self = StObject.set(x, "decodedBodySize", value.asInstanceOf[js.Any])
+    inline def setDecodedBodySize(value: Double): Self = StObject.set(x, "decodedBodySize", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDomainLookupEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "domainLookupEnd", value.asInstanceOf[js.Any])
+    inline def setDomainLookupEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "domainLookupEnd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDomainLookupStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "domainLookupStart", value.asInstanceOf[js.Any])
+    inline def setDomainLookupStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "domainLookupStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEncodedBodySize(value: Double): Self = StObject.set(x, "encodedBodySize", value.asInstanceOf[js.Any])
+    inline def setEncodedBodySize(value: Double): Self = StObject.set(x, "encodedBodySize", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFetchStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "fetchStart", value.asInstanceOf[js.Any])
+    inline def setFetchStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "fetchStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setInitiatorType(value: java.lang.String): Self = StObject.set(x, "initiatorType", value.asInstanceOf[js.Any])
+    inline def setInitiatorType(value: java.lang.String): Self = StObject.set(x, "initiatorType", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setNextHopProtocol(value: java.lang.String): Self = StObject.set(x, "nextHopProtocol", value.asInstanceOf[js.Any])
+    inline def setNextHopProtocol(value: java.lang.String): Self = StObject.set(x, "nextHopProtocol", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRedirectEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "redirectEnd", value.asInstanceOf[js.Any])
+    inline def setRedirectEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "redirectEnd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRedirectStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "redirectStart", value.asInstanceOf[js.Any])
+    inline def setRedirectStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "redirectStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRequestStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "requestStart", value.asInstanceOf[js.Any])
+    inline def setRequestStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "requestStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setResponseEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "responseEnd", value.asInstanceOf[js.Any])
+    inline def setResponseEnd(value: DOMHighResTimeStamp): Self = StObject.set(x, "responseEnd", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setResponseStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "responseStart", value.asInstanceOf[js.Any])
+    inline def setResponseStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "responseStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSecureConnectionStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "secureConnectionStart", value.asInstanceOf[js.Any])
+    inline def setSecureConnectionStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "secureConnectionStart", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setServerTiming(value: js.Array[PerformanceServerTiming]): Self = StObject.set(x, "serverTiming", value.asInstanceOf[js.Any])
+    inline def setServerTiming(value: js.Array[PerformanceServerTiming]): Self = StObject.set(x, "serverTiming", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setServerTimingVarargs(value: PerformanceServerTiming*): Self = StObject.set(x, "serverTiming", js.Array(value :_*))
+    inline def setServerTimingVarargs(value: PerformanceServerTiming*): Self = StObject.set(x, "serverTiming", js.Array(value*))
     
-    @scala.inline
-    def setTransferSize(value: Double): Self = StObject.set(x, "transferSize", value.asInstanceOf[js.Any])
+    inline def setTransferSize(value: Double): Self = StObject.set(x, "transferSize", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWorkerStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "workerStart", value.asInstanceOf[js.Any])
+    inline def setWorkerStart(value: DOMHighResTimeStamp): Self = StObject.set(x, "workerStart", value.asInstanceOf[js.Any])
   }
 }

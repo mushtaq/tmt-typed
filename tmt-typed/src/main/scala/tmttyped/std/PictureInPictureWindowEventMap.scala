@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PictureInPictureWindowEventMap extends StObject {
@@ -12,16 +11,13 @@ trait PictureInPictureWindowEventMap extends StObject {
 }
 object PictureInPictureWindowEventMap {
   
-  @scala.inline
-  def apply(resize: org.scalajs.dom.Event): PictureInPictureWindowEventMap = {
+  inline def apply(resize: org.scalajs.dom.Event): PictureInPictureWindowEventMap = {
     val __obj = js.Dynamic.literal(resize = resize.asInstanceOf[js.Any])
     __obj.asInstanceOf[PictureInPictureWindowEventMap]
   }
   
-  @scala.inline
-  implicit class PictureInPictureWindowEventMapMutableBuilder[Self <: PictureInPictureWindowEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: PictureInPictureWindowEventMap](x: Self) {
     
-    @scala.inline
-    def setResize(value: org.scalajs.dom.Event): Self = StObject.set(x, "resize", value.asInstanceOf[js.Any])
+    inline def setResize(value: org.scalajs.dom.Event): Self = StObject.set(x, "resize", value.asInstanceOf[js.Any])
   }
 }

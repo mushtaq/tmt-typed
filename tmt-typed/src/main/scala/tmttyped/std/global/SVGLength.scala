@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGLength")
 @js.native
 /* standard DOM */
-class SVGLength ()
+open class SVGLength ()
   extends StObject
      with tmttyped.std.SVGLength {
   
@@ -71,15 +70,15 @@ class SVGLength ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var value: Double = js.native
+  var value: Double = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var valueAsString: java.lang.String = js.native
+  var valueAsString: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var valueInSpecifiedUnits: Double = js.native
+  var valueInSpecifiedUnits: Double = js.native
 }
 object SVGLength {
   

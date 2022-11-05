@@ -1,10 +1,8 @@
 package tmttyped.node.tlsMod
 
-import tmttyped.node.NodeJS.Dict
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait DetailedPeerCertificate
@@ -15,13 +13,12 @@ trait DetailedPeerCertificate
 }
 object DetailedPeerCertificate {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     exponent: String,
     ext_key_usage: js.Array[String],
     fingerprint: String,
     fingerprint256: String,
-    infoAccess: Dict[js.Array[String]],
+    infoAccess: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<Array<string>> */ Any,
     issuer: Certificate,
     issuerCertificate: DetailedPeerCertificate,
     modulus: String,
@@ -36,10 +33,8 @@ object DetailedPeerCertificate {
     __obj.asInstanceOf[DetailedPeerCertificate]
   }
   
-  @scala.inline
-  implicit class DetailedPeerCertificateMutableBuilder[Self <: DetailedPeerCertificate] (val x: Self) extends AnyVal {
+  extension [Self <: DetailedPeerCertificate](x: Self) {
     
-    @scala.inline
-    def setIssuerCertificate(value: DetailedPeerCertificate): Self = StObject.set(x, "issuerCertificate", value.asInstanceOf[js.Any])
+    inline def setIssuerCertificate(value: DetailedPeerCertificate): Self = StObject.set(x, "issuerCertificate", value.asInstanceOf[js.Any])
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -10,11 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("net", "SocketAddress")
 @js.native
-class SocketAddress protected () extends StObject {
+open class SocketAddress protected () extends StObject {
   def this(options: SocketAddressInitOptions) = this()
   
   /**
-    * Either \`'ipv4'\` or \`'ipv6'\`.
     * @since v15.14.0, v14.18.0
     */
   val address: String = js.native

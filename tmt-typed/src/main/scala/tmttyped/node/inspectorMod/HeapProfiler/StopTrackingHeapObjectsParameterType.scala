@@ -2,7 +2,6 @@ package tmttyped.node.inspectorMod.HeapProfiler
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait StopTrackingHeapObjectsParameterType extends StObject {
@@ -14,19 +13,15 @@ trait StopTrackingHeapObjectsParameterType extends StObject {
 }
 object StopTrackingHeapObjectsParameterType {
   
-  @scala.inline
-  def apply(): StopTrackingHeapObjectsParameterType = {
+  inline def apply(): StopTrackingHeapObjectsParameterType = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[StopTrackingHeapObjectsParameterType]
   }
   
-  @scala.inline
-  implicit class StopTrackingHeapObjectsParameterTypeMutableBuilder[Self <: StopTrackingHeapObjectsParameterType] (val x: Self) extends AnyVal {
+  extension [Self <: StopTrackingHeapObjectsParameterType](x: Self) {
     
-    @scala.inline
-    def setReportProgress(value: Boolean): Self = StObject.set(x, "reportProgress", value.asInstanceOf[js.Any])
+    inline def setReportProgress(value: Boolean): Self = StObject.set(x, "reportProgress", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setReportProgressUndefined: Self = StObject.set(x, "reportProgress", js.undefined)
+    inline def setReportProgressUndefined: Self = StObject.set(x, "reportProgress", js.undefined)
   }
 }

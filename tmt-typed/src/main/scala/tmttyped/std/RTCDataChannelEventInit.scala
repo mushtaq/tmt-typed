@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RTCDataChannelEventInit
@@ -14,16 +13,13 @@ trait RTCDataChannelEventInit
 }
 object RTCDataChannelEventInit {
   
-  @scala.inline
-  def apply(channel: org.scalajs.dom.RTCDataChannel): RTCDataChannelEventInit = {
+  inline def apply(channel: org.scalajs.dom.RTCDataChannel): RTCDataChannelEventInit = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDataChannelEventInit]
   }
   
-  @scala.inline
-  implicit class RTCDataChannelEventInitMutableBuilder[Self <: RTCDataChannelEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: RTCDataChannelEventInit](x: Self) {
     
-    @scala.inline
-    def setChannel(value: org.scalajs.dom.RTCDataChannel): Self = StObject.set(x, "channel", value.asInstanceOf[js.Any])
+    inline def setChannel(value: org.scalajs.dom.RTCDataChannel): Self = StObject.set(x, "channel", value.asInstanceOf[js.Any])
   }
 }

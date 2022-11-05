@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SVGFilterPrimitiveStandardAttributes extends StObject {
@@ -24,8 +23,7 @@ trait SVGFilterPrimitiveStandardAttributes extends StObject {
 }
 object SVGFilterPrimitiveStandardAttributes {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     height: org.scalajs.dom.SVGAnimatedLength,
     result: org.scalajs.dom.SVGAnimatedString,
     width: org.scalajs.dom.SVGAnimatedLength,
@@ -36,22 +34,16 @@ object SVGFilterPrimitiveStandardAttributes {
     __obj.asInstanceOf[SVGFilterPrimitiveStandardAttributes]
   }
   
-  @scala.inline
-  implicit class SVGFilterPrimitiveStandardAttributesMutableBuilder[Self <: SVGFilterPrimitiveStandardAttributes] (val x: Self) extends AnyVal {
+  extension [Self <: SVGFilterPrimitiveStandardAttributes](x: Self) {
     
-    @scala.inline
-    def setHeight(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
+    inline def setHeight(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "height", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setResult(value: org.scalajs.dom.SVGAnimatedString): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
+    inline def setResult(value: org.scalajs.dom.SVGAnimatedString): Self = StObject.set(x, "result", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWidth(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])
+    inline def setWidth(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "width", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setX(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
+    inline def setX(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setY(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
+    inline def setY(value: org.scalajs.dom.SVGAnimatedLength): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
   }
 }

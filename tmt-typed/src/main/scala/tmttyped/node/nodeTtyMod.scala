@@ -3,7 +3,6 @@ package tmttyped.node
 import tmttyped.node.netMod.SocketConstructorOpts
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeTtyMod {
@@ -19,7 +18,7 @@ object nodeTtyMod {
     */
   @JSImport("node:tty", "ReadStream")
   @js.native
-  class ReadStream protected () extends StObject {
+  open class ReadStream protected () extends StObject {
     def this(fd: Double) = this()
     def this(fd: Double, options: SocketConstructorOpts) = this()
   }
@@ -31,7 +30,7 @@ object nodeTtyMod {
     */
   @JSImport("node:tty", "WriteStream")
   @js.native
-  class WriteStream protected () extends StObject {
+  open class WriteStream protected () extends StObject {
     def this(fd: Double) = this()
   }
   
@@ -42,6 +41,5 @@ object nodeTtyMod {
     * @since v0.5.8
     * @param fd A numeric file descriptor
     */
-  @scala.inline
-  def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
 }

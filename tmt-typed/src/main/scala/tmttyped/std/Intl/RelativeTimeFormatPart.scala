@@ -1,8 +1,9 @@
 package tmttyped.std.Intl
 
+import tmttyped.std.Exclude
+import tmttyped.std.stdStrings.literal
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -11,39 +12,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts#Using_formatToParts).
   */
-trait RelativeTimeFormatPart extends StObject {
-  
-  /* standard es2020.intl */
-  var `type`: String
-  
-  /* standard es2020.intl */
-  var unit: js.UndefOr[RelativeTimeFormatUnit] = js.undefined
-  
-  /* standard es2020.intl */
-  var value: String
-}
+/* Rewritten from type alias, can be one of: 
+  - tmttyped.std.anon.Type
+  - tmttyped.std.anon.Unit
+*/
+trait RelativeTimeFormatPart extends StObject
 object RelativeTimeFormatPart {
   
-  @scala.inline
-  def apply(`type`: String, value: String): RelativeTimeFormatPart = {
+  inline def Type(value: String): tmttyped.std.anon.Type = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RelativeTimeFormatPart]
+    __obj.updateDynamic("type")("literal")
+    __obj.asInstanceOf[tmttyped.std.anon.Type]
   }
   
-  @scala.inline
-  implicit class RelativeTimeFormatPartMutableBuilder[Self <: RelativeTimeFormatPart] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def setType(value: String): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUnit(value: RelativeTimeFormatUnit): Self = StObject.set(x, "unit", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUnitUndefined: Self = StObject.set(x, "unit", js.undefined)
-    
-    @scala.inline
-    def setValue(value: String): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
+  inline def Unit(
+    `type`: Exclude[NumberFormatPartTypes, literal],
+    unit: RelativeTimeFormatUnitSingular,
+    value: String
+  ): tmttyped.std.anon.Unit = {
+    val __obj = js.Dynamic.literal(unit = unit.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[tmttyped.std.anon.Unit]
   }
 }

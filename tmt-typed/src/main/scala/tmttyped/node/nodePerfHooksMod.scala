@@ -8,7 +8,6 @@ import tmttyped.node.perfHooksMod.Performance_
 import tmttyped.node.perfHooksMod.RecordableHistogram
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodePerfHooksMod {
@@ -22,8 +21,18 @@ object nodePerfHooksMod {
     */
   @JSImport("node:perf_hooks", "PerformanceEntry")
   @js.native
-  /* protected */ class PerformanceEntry ()
+  /* protected */ open class PerformanceEntry ()
     extends tmttyped.node.perfHooksMod.PerformanceEntry
+  
+  @JSImport("node:perf_hooks", "PerformanceMark")
+  @js.native
+  /* protected */ open class PerformanceMark ()
+    extends tmttyped.node.perfHooksMod.PerformanceMark
+  
+  @JSImport("node:perf_hooks", "PerformanceMeasure")
+  @js.native
+  /* protected */ open class PerformanceMeasure ()
+    extends tmttyped.node.perfHooksMod.PerformanceMeasure
   
   /**
     * _This property is an extension by Node.js. It is not available in Web browsers._
@@ -34,12 +43,12 @@ object nodePerfHooksMod {
     */
   @JSImport("node:perf_hooks", "PerformanceNodeTiming")
   @js.native
-  /* protected */ class PerformanceNodeTiming ()
+  /* protected */ open class PerformanceNodeTiming ()
     extends tmttyped.node.perfHooksMod.PerformanceNodeTiming
   
   @JSImport("node:perf_hooks", "PerformanceObserver")
   @js.native
-  class PerformanceObserver protected ()
+  open class PerformanceObserver protected ()
     extends tmttyped.node.perfHooksMod.PerformanceObserver {
     def this(callback: PerformanceObserverCallback) = this()
   }
@@ -95,10 +104,8 @@ object nodePerfHooksMod {
     * Returns a `RecordableHistogram`.
     * @since v15.9.0, v14.18.0
     */
-  @scala.inline
-  def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]
-  @scala.inline
-  def createHistogram(options: CreateHistogramOptions): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")(options.asInstanceOf[js.Any]).asInstanceOf[RecordableHistogram]
+  inline def createHistogram(): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")().asInstanceOf[RecordableHistogram]
+  inline def createHistogram(options: CreateHistogramOptions): RecordableHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("createHistogram")(options.asInstanceOf[js.Any]).asInstanceOf[RecordableHistogram]
   
   /**
     * _This property is an extension by Node.js. It is not available in Web browsers._
@@ -128,10 +135,8 @@ object nodePerfHooksMod {
     * ```
     * @since v11.10.0
     */
-  @scala.inline
-  def monitorEventLoopDelay(): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")().asInstanceOf[IntervalHistogram]
-  @scala.inline
-  def monitorEventLoopDelay(options: EventLoopMonitorOptions): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")(options.asInstanceOf[js.Any]).asInstanceOf[IntervalHistogram]
+  inline def monitorEventLoopDelay(): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")().asInstanceOf[IntervalHistogram]
+  inline def monitorEventLoopDelay(options: EventLoopMonitorOptions): IntervalHistogram = ^.asInstanceOf[js.Dynamic].applyDynamic("monitorEventLoopDelay")(options.asInstanceOf[js.Any]).asInstanceOf[IntervalHistogram]
   
   @JSImport("node:perf_hooks", "performance")
   @js.native

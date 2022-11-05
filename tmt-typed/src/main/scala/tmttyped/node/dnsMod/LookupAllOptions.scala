@@ -3,7 +3,6 @@ package tmttyped.node.dnsMod
 import tmttyped.node.nodeBooleans.`true`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait LookupAllOptions
@@ -15,16 +14,13 @@ trait LookupAllOptions
 }
 object LookupAllOptions {
   
-  @scala.inline
-  def apply(): LookupAllOptions = {
+  inline def apply(): LookupAllOptions = {
     val __obj = js.Dynamic.literal(all = true)
     __obj.asInstanceOf[LookupAllOptions]
   }
   
-  @scala.inline
-  implicit class LookupAllOptionsMutableBuilder[Self <: LookupAllOptions] (val x: Self) extends AnyVal {
+  extension [Self <: LookupAllOptions](x: Self) {
     
-    @scala.inline
-    def setAll(value: `true`): Self = StObject.set(x, "all", value.asInstanceOf[js.Any])
+    inline def setAll(value: `true`): Self = StObject.set(x, "all", value.asInstanceOf[js.Any])
   }
 }

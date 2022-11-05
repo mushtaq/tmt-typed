@@ -2,38 +2,27 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait CryptoKeyPair extends StObject {
   
   /* standard DOM */
-  var privateKey: js.UndefOr[org.scalajs.dom.CryptoKey] = js.undefined
+  var privateKey: org.scalajs.dom.CryptoKey
   
   /* standard DOM */
-  var publicKey: js.UndefOr[org.scalajs.dom.CryptoKey] = js.undefined
+  var publicKey: org.scalajs.dom.CryptoKey
 }
 object CryptoKeyPair {
   
-  @scala.inline
-  def apply(): CryptoKeyPair = {
-    val __obj = js.Dynamic.literal()
+  inline def apply(privateKey: org.scalajs.dom.CryptoKey, publicKey: org.scalajs.dom.CryptoKey): CryptoKeyPair = {
+    val __obj = js.Dynamic.literal(privateKey = privateKey.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[CryptoKeyPair]
   }
   
-  @scala.inline
-  implicit class CryptoKeyPairMutableBuilder[Self <: CryptoKeyPair] (val x: Self) extends AnyVal {
+  extension [Self <: CryptoKeyPair](x: Self) {
     
-    @scala.inline
-    def setPrivateKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
+    inline def setPrivateKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "privateKey", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPrivateKeyUndefined: Self = StObject.set(x, "privateKey", js.undefined)
-    
-    @scala.inline
-    def setPublicKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPublicKeyUndefined: Self = StObject.set(x, "publicKey", js.undefined)
+    inline def setPublicKey(value: org.scalajs.dom.CryptoKey): Self = StObject.set(x, "publicKey", value.asInstanceOf[js.Any])
   }
 }

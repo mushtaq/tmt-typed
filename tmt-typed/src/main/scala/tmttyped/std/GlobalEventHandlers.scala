@@ -74,6 +74,7 @@ import tmttyped.std.stdStrings.seeking
 import tmttyped.std.stdStrings.select
 import tmttyped.std.stdStrings.selectionchange
 import tmttyped.std.stdStrings.selectstart
+import tmttyped.std.stdStrings.slotchange
 import tmttyped.std.stdStrings.stalled
 import tmttyped.std.stdStrings.submit
 import tmttyped.std.stdStrings.suspend
@@ -96,7 +97,6 @@ import tmttyped.std.stdStrings.webkittransitionend
 import tmttyped.std.stdStrings.wheel
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -1364,6 +1364,23 @@ trait GlobalEventHandlers extends StObject {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
+  def addEventListener_slotchange(
+    `type`: slotchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_slotchange(
+    `type`: slotchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_slotchange(
+    `type`: slotchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: AddEventListenerOptions
+  ): Unit = js.native
+  @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
@@ -2036,6 +2053,9 @@ trait GlobalEventHandlers extends StObject {
   /* standard DOM */
   var onscroll: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
+  /* standard DOM */
+  var onsecuritypolicyviolation: (js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, Any]) | Null = js.native
+  
   /**
     * Occurs when the seek operation ends.
     * @param ev The event.
@@ -2062,6 +2082,9 @@ trait GlobalEventHandlers extends StObject {
   
   /* standard DOM */
   var onselectstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
+  
+  /* standard DOM */
+  var onslotchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native
   
   /**
     * Occurs when the download has stopped.
@@ -3413,6 +3436,23 @@ trait GlobalEventHandlers extends StObject {
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_slotchange(
+    `type`: slotchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_slotchange(
+    `type`: slotchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_slotchange(
+    `type`: slotchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
     options: scala.Boolean
   ): Unit = js.native

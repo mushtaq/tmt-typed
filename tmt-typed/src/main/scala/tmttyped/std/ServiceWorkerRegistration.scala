@@ -3,7 +3,6 @@ package tmttyped.std
 import tmttyped.std.stdStrings.updatefound
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -43,6 +42,9 @@ trait ServiceWorkerRegistration
   
   /* standard DOM */
   val installing: org.scalajs.dom.ServiceWorker | Null = js.native
+  
+  /* standard DOM */
+  val navigationPreload: NavigationPreloadManager = js.native
   
   /* standard DOM */
   var onupdatefound: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]) | Null = js.native

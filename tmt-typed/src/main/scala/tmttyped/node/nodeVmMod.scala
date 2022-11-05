@@ -9,7 +9,6 @@ import tmttyped.node.vmMod.RunningScriptOptions
 import tmttyped.node.vmMod.ScriptOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeVmMod {
@@ -25,7 +24,7 @@ object nodeVmMod {
     */
   @JSImport("node:vm", "Script")
   @js.native
-  class Script protected ()
+  open class Script protected ()
     extends tmttyped.node.vmMod.Script {
     def this(code: String) = this()
     def this(code: String, options: ScriptOptions) = this()
@@ -39,14 +38,10 @@ object nodeVmMod {
     * @param code The body of the function to compile.
     * @param params An array of strings containing all parameters for the function.
     */
-  @scala.inline
-  def compileFunction(code: String): js.Function = ^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any]).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: js.Array[String]): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any])).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: js.Array[String], options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: Unit, options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String): js.Function = ^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any]).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: js.Array[String]): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: js.Array[String], options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: Unit, options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
   
   /**
     * If given a `contextObject`, the `vm.createContext()` method will `prepare
@@ -86,21 +81,16 @@ object nodeVmMod {
     * @since v0.3.1
     * @return contextified object.
     */
-  @scala.inline
-  def createContext(): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")().asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Unit, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Context): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Context, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
+  inline def createContext(): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")().asInstanceOf[Context]
+  inline def createContext(sandbox: Unit, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
+  inline def createContext(sandbox: Context): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Context]
+  inline def createContext(sandbox: Context, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
   
   /**
     * Returns `true` if the given `object` object has been `contextified` using {@link createContext}.
     * @since v0.11.7
     */
-  @scala.inline
-  def isContext(sandbox: Context): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isContext(sandbox: Context): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /**
     * Measure the memory known to V8 and used by all contexts known to the
@@ -157,10 +147,8 @@ object nodeVmMod {
     * @since v13.10.0
     * @experimental
     */
-  @scala.inline
-  def measureMemory(): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")().asInstanceOf[js.Promise[MemoryMeasurement]]
-  @scala.inline
-  def measureMemory(options: MeasureMemoryOptions): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")(options.asInstanceOf[js.Any]).asInstanceOf[js.Promise[MemoryMeasurement]]
+  inline def measureMemory(): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")().asInstanceOf[js.Promise[MemoryMeasurement]]
+  inline def measureMemory(options: MeasureMemoryOptions): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")(options.asInstanceOf[js.Any]).asInstanceOf[js.Promise[MemoryMeasurement]]
   
   /**
     * The `vm.runInContext()` method compiles `code`, runs it within the context of
@@ -189,12 +177,9 @@ object nodeVmMod {
     * @param contextifiedObject The `contextified` object that will be used as the `global` when the `code` is compiled and run.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * The `vm.runInNewContext()` first contextifies the given `contextObject` (or
@@ -224,18 +209,12 @@ object nodeVmMod {
     * @param contextObject An object that will be `contextified`. If `undefined`, a new object will be created.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInNewContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Unit, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Unit, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Unit, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Unit, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * `vm.runInThisContext()` compiles `code`, runs it within the context of the
@@ -299,10 +278,7 @@ object nodeVmMod {
     * @param code The JavaScript code to compile and run.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInThisContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
-  @scala.inline
-  def runInThisContext(code: String, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInThisContext(code: String, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInThisContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def runInThisContext(code: String, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInThisContext(code: String, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
 }

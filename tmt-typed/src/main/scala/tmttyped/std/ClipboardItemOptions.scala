@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ClipboardItemOptions extends StObject {
@@ -12,19 +11,15 @@ trait ClipboardItemOptions extends StObject {
 }
 object ClipboardItemOptions {
   
-  @scala.inline
-  def apply(): ClipboardItemOptions = {
+  inline def apply(): ClipboardItemOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ClipboardItemOptions]
   }
   
-  @scala.inline
-  implicit class ClipboardItemOptionsMutableBuilder[Self <: ClipboardItemOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ClipboardItemOptions](x: Self) {
     
-    @scala.inline
-    def setPresentationStyle(value: PresentationStyle): Self = StObject.set(x, "presentationStyle", value.asInstanceOf[js.Any])
+    inline def setPresentationStyle(value: PresentationStyle): Self = StObject.set(x, "presentationStyle", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPresentationStyleUndefined: Self = StObject.set(x, "presentationStyle", js.undefined)
+    inline def setPresentationStyleUndefined: Self = StObject.set(x, "presentationStyle", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Available only in secure contexts. */
@@ -21,8 +20,7 @@ trait AuthenticatorAssertionResponse
 }
 object AuthenticatorAssertionResponse {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     authenticatorData: js.typedarray.ArrayBuffer,
     clientDataJSON: js.typedarray.ArrayBuffer,
     signature: js.typedarray.ArrayBuffer
@@ -31,19 +29,14 @@ object AuthenticatorAssertionResponse {
     __obj.asInstanceOf[AuthenticatorAssertionResponse]
   }
   
-  @scala.inline
-  implicit class AuthenticatorAssertionResponseMutableBuilder[Self <: AuthenticatorAssertionResponse] (val x: Self) extends AnyVal {
+  extension [Self <: AuthenticatorAssertionResponse](x: Self) {
     
-    @scala.inline
-    def setAuthenticatorData(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "authenticatorData", value.asInstanceOf[js.Any])
+    inline def setAuthenticatorData(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "authenticatorData", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSignature(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "signature", value.asInstanceOf[js.Any])
+    inline def setSignature(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "signature", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUserHandle(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "userHandle", value.asInstanceOf[js.Any])
+    inline def setUserHandle(value: js.typedarray.ArrayBuffer): Self = StObject.set(x, "userHandle", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUserHandleNull: Self = StObject.set(x, "userHandle", null)
+    inline def setUserHandleNull: Self = StObject.set(x, "userHandle", null)
   }
 }

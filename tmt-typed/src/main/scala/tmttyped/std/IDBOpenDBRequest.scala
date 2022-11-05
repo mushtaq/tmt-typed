@@ -4,7 +4,6 @@ import tmttyped.std.stdStrings.blocked
 import tmttyped.std.stdStrings.upgradeneeded
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Also inherits methods from its parents IDBRequest and EventTarget. */

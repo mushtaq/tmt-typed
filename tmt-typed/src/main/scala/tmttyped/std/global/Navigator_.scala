@@ -3,14 +3,13 @@ package tmttyped.std.global
 import tmttyped.std.Navigator
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Navigator")
 @js.native
 /* standard DOM */
-class Navigator_ ()
+open class Navigator_ ()
   extends StObject
      with Navigator {
   
@@ -28,10 +27,6 @@ class Navigator_ ()
   /* standard DOM */
   /* CompleteClass */
   override val appVersion: java.lang.String = js.native
-  
-  /* standard DOM */
-  /* CompleteClass */
-  override val connection: tmttyped.std.NetworkInformation = js.native
   
   /* standard DOM */
   /* CompleteClass */
@@ -54,6 +49,10 @@ class Navigator_ ()
   /* CompleteClass */
   override val languages: js.Array[java.lang.String] = js.native
   
+  /* standard DOM */
+  /* CompleteClass */
+  override val locks: tmttyped.std.LockManager = js.native
+  
   /** @deprecated */
   /* standard DOM */
   /* CompleteClass */
@@ -63,7 +62,10 @@ class Navigator_ ()
   /* CompleteClass */
   override val onLine: scala.Boolean = js.native
   
-  /** @deprecated */
+  /* standard DOM */
+  /* CompleteClass */
+  override val pdfViewerEnabled: scala.Boolean = js.native
+  
   /* standard DOM */
   /* CompleteClass */
   override val platform: java.lang.String = js.native

@@ -1,11 +1,9 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -129,7 +127,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Cipher")
 @js.native
-/* private */ class Cipher () extends StObject {
+/* private */ open class Cipher () extends StObject {
   
   /**
     * Once the `cipher.final()` method has been called, the `Cipher` object can no
@@ -163,7 +161,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   def update(data: String, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
   def update(data: String, inputEncoding: Encoding): Buffer = js.native
   def update(data: String, inputEncoding: Encoding, outputEncoding: Encoding): String = js.native
-  def update(data: ArrayBufferView, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
+  def update(data: js.typedarray.ArrayBufferView, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
   /**
     * Updates the cipher with `data`. If the `inputEncoding` argument is given,
     * the `data`argument is a string using the specified encoding. If the `inputEncoding`argument is not given, `data` must be a `Buffer`, `TypedArray`, or`DataView`. If `data` is a `Buffer`,

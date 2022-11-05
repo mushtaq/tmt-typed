@@ -1,13 +1,11 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Dict
 import tmttyped.node.anon.JsMemoryEstimate
 import tmttyped.node.anon.Strings
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeStrings.afterEvaluate
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object vmMod {
@@ -23,7 +21,7 @@ object vmMod {
     */
   @JSImport("vm", "Script")
   @js.native
-  class Script protected () extends StObject {
+  open class Script protected () extends StObject {
     def this(code: String) = this()
     def this(code: String, options: ScriptOptions) = this()
     
@@ -127,7 +125,7 @@ object vmMod {
     
     /**
       * Runs the compiled code contained by the `vm.Script` within the context of the
-      * current `global` object. Running code does not have access to local scope, but_does_ have access to the current `global` object.
+      * current `global` object. Running code does not have access to local scope, but _does_ have access to the current `global` object.
       *
       * The following example compiles code that increments a `global` variable then
       * executes that code multiple times:
@@ -162,14 +160,10 @@ object vmMod {
     * @param code The body of the function to compile.
     * @param params An array of strings containing all parameters for the function.
     */
-  @scala.inline
-  def compileFunction(code: String): js.Function = ^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any]).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: js.Array[String]): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any])).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: js.Array[String], options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
-  @scala.inline
-  def compileFunction(code: String, params: Unit, options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String): js.Function = ^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any]).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: js.Array[String]): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: js.Array[String], options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
+  inline def compileFunction(code: String, params: Unit, options: CompileFunctionOptions): js.Function = (^.asInstanceOf[js.Dynamic].applyDynamic("compileFunction")(code.asInstanceOf[js.Any], params.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Function]
   
   /**
     * If given a `contextObject`, the `vm.createContext()` method will `prepare
@@ -209,21 +203,16 @@ object vmMod {
     * @since v0.3.1
     * @return contextified object.
     */
-  @scala.inline
-  def createContext(): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")().asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Unit, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Context): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Context]
-  @scala.inline
-  def createContext(sandbox: Context, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
+  inline def createContext(): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")().asInstanceOf[Context]
+  inline def createContext(sandbox: Unit, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
+  inline def createContext(sandbox: Context): Context = ^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Context]
+  inline def createContext(sandbox: Context, options: CreateContextOptions): Context = (^.asInstanceOf[js.Dynamic].applyDynamic("createContext")(sandbox.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Context]
   
   /**
     * Returns `true` if the given `object` object has been `contextified` using {@link createContext}.
     * @since v0.11.7
     */
-  @scala.inline
-  def isContext(sandbox: Context): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isContext(sandbox: Context): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isContext")(sandbox.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /**
     * Measure the memory known to V8 and used by all contexts known to the
@@ -280,10 +269,8 @@ object vmMod {
     * @since v13.10.0
     * @experimental
     */
-  @scala.inline
-  def measureMemory(): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")().asInstanceOf[js.Promise[MemoryMeasurement]]
-  @scala.inline
-  def measureMemory(options: MeasureMemoryOptions): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")(options.asInstanceOf[js.Any]).asInstanceOf[js.Promise[MemoryMeasurement]]
+  inline def measureMemory(): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")().asInstanceOf[js.Promise[MemoryMeasurement]]
+  inline def measureMemory(options: MeasureMemoryOptions): js.Promise[MemoryMeasurement] = ^.asInstanceOf[js.Dynamic].applyDynamic("measureMemory")(options.asInstanceOf[js.Any]).asInstanceOf[js.Promise[MemoryMeasurement]]
   
   /**
     * The `vm.runInContext()` method compiles `code`, runs it within the context of
@@ -312,12 +299,9 @@ object vmMod {
     * @param contextifiedObject The `contextified` object that will be used as the `global` when the `code` is compiled and run.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInContext(code: String, contextifiedObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInContext(code: String, contextifiedObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInContext")(code.asInstanceOf[js.Any], contextifiedObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * The `vm.runInNewContext()` first contextifies the given `contextObject` (or
@@ -347,18 +331,12 @@ object vmMod {
     * @param contextObject An object that will be `contextified`. If `undefined`, a new object will be created.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInNewContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Unit, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Unit, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInNewContext(code: String, contextObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Unit, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Unit, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInNewContext(code: String, contextObject: Context, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInNewContext")(code.asInstanceOf[js.Any], contextObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   /**
     * `vm.runInThisContext()` compiles `code`, runs it within the context of the
@@ -422,12 +400,9 @@ object vmMod {
     * @param code The JavaScript code to compile and run.
     * @return the result of the very last statement executed in the script.
     */
-  @scala.inline
-  def runInThisContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
-  @scala.inline
-  def runInThisContext(code: String, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
-  @scala.inline
-  def runInThisContext(code: String, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInThisContext(code: String): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any]).asInstanceOf[Any]
+  inline def runInThisContext(code: String, options: String): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
+  inline def runInThisContext(code: String, options: RunningScriptOptions): Any = (^.asInstanceOf[js.Dynamic].applyDynamic("runInThisContext")(code.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Any]
   
   trait BaseOptions extends StObject {
     
@@ -451,32 +426,24 @@ object vmMod {
   }
   object BaseOptions {
     
-    @scala.inline
-    def apply(): BaseOptions = {
+    inline def apply(): BaseOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[BaseOptions]
     }
     
-    @scala.inline
-    implicit class BaseOptionsMutableBuilder[Self <: BaseOptions] (val x: Self) extends AnyVal {
+    extension [Self <: BaseOptions](x: Self) {
       
-      @scala.inline
-      def setColumnOffset(value: Double): Self = StObject.set(x, "columnOffset", value.asInstanceOf[js.Any])
+      inline def setColumnOffset(value: Double): Self = StObject.set(x, "columnOffset", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setColumnOffsetUndefined: Self = StObject.set(x, "columnOffset", js.undefined)
+      inline def setColumnOffsetUndefined: Self = StObject.set(x, "columnOffset", js.undefined)
       
-      @scala.inline
-      def setFilename(value: String): Self = StObject.set(x, "filename", value.asInstanceOf[js.Any])
+      inline def setFilename(value: String): Self = StObject.set(x, "filename", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFilenameUndefined: Self = StObject.set(x, "filename", js.undefined)
+      inline def setFilenameUndefined: Self = StObject.set(x, "filename", js.undefined)
       
-      @scala.inline
-      def setLineOffset(value: Double): Self = StObject.set(x, "lineOffset", value.asInstanceOf[js.Any])
+      inline def setLineOffset(value: Double): Self = StObject.set(x, "lineOffset", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLineOffsetUndefined: Self = StObject.set(x, "lineOffset", js.undefined)
+      inline def setLineOffsetUndefined: Self = StObject.set(x, "lineOffset", js.undefined)
     }
   }
   
@@ -507,45 +474,34 @@ object vmMod {
   }
   object CompileFunctionOptions {
     
-    @scala.inline
-    def apply(): CompileFunctionOptions = {
+    inline def apply(): CompileFunctionOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[CompileFunctionOptions]
     }
     
-    @scala.inline
-    implicit class CompileFunctionOptionsMutableBuilder[Self <: CompileFunctionOptions] (val x: Self) extends AnyVal {
+    extension [Self <: CompileFunctionOptions](x: Self) {
       
-      @scala.inline
-      def setCachedData(value: Buffer): Self = StObject.set(x, "cachedData", value.asInstanceOf[js.Any])
+      inline def setCachedData(value: Buffer): Self = StObject.set(x, "cachedData", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCachedDataUndefined: Self = StObject.set(x, "cachedData", js.undefined)
+      inline def setCachedDataUndefined: Self = StObject.set(x, "cachedData", js.undefined)
       
-      @scala.inline
-      def setContextExtensions(value: js.Array[js.Object]): Self = StObject.set(x, "contextExtensions", value.asInstanceOf[js.Any])
+      inline def setContextExtensions(value: js.Array[js.Object]): Self = StObject.set(x, "contextExtensions", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setContextExtensionsUndefined: Self = StObject.set(x, "contextExtensions", js.undefined)
+      inline def setContextExtensionsUndefined: Self = StObject.set(x, "contextExtensions", js.undefined)
       
-      @scala.inline
-      def setContextExtensionsVarargs(value: js.Object*): Self = StObject.set(x, "contextExtensions", js.Array(value :_*))
+      inline def setContextExtensionsVarargs(value: js.Object*): Self = StObject.set(x, "contextExtensions", js.Array(value*))
       
-      @scala.inline
-      def setParsingContext(value: Context): Self = StObject.set(x, "parsingContext", value.asInstanceOf[js.Any])
+      inline def setParsingContext(value: Context): Self = StObject.set(x, "parsingContext", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setParsingContextUndefined: Self = StObject.set(x, "parsingContext", js.undefined)
+      inline def setParsingContextUndefined: Self = StObject.set(x, "parsingContext", js.undefined)
       
-      @scala.inline
-      def setProduceCachedData(value: Boolean): Self = StObject.set(x, "produceCachedData", value.asInstanceOf[js.Any])
+      inline def setProduceCachedData(value: Boolean): Self = StObject.set(x, "produceCachedData", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setProduceCachedDataUndefined: Self = StObject.set(x, "produceCachedData", js.undefined)
+      inline def setProduceCachedDataUndefined: Self = StObject.set(x, "produceCachedData", js.undefined)
     }
   }
   
-  type Context = Dict[Any]
+  type Context = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<any> */ Any
   
   trait CreateContextOptions extends StObject {
     
@@ -573,38 +529,28 @@ object vmMod {
   }
   object CreateContextOptions {
     
-    @scala.inline
-    def apply(): CreateContextOptions = {
+    inline def apply(): CreateContextOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[CreateContextOptions]
     }
     
-    @scala.inline
-    implicit class CreateContextOptionsMutableBuilder[Self <: CreateContextOptions] (val x: Self) extends AnyVal {
+    extension [Self <: CreateContextOptions](x: Self) {
       
-      @scala.inline
-      def setCodeGeneration(value: Strings): Self = StObject.set(x, "codeGeneration", value.asInstanceOf[js.Any])
+      inline def setCodeGeneration(value: Strings): Self = StObject.set(x, "codeGeneration", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCodeGenerationUndefined: Self = StObject.set(x, "codeGeneration", js.undefined)
+      inline def setCodeGenerationUndefined: Self = StObject.set(x, "codeGeneration", js.undefined)
       
-      @scala.inline
-      def setMicrotaskMode(value: afterEvaluate): Self = StObject.set(x, "microtaskMode", value.asInstanceOf[js.Any])
+      inline def setMicrotaskMode(value: afterEvaluate): Self = StObject.set(x, "microtaskMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMicrotaskModeUndefined: Self = StObject.set(x, "microtaskMode", js.undefined)
+      inline def setMicrotaskModeUndefined: Self = StObject.set(x, "microtaskMode", js.undefined)
       
-      @scala.inline
-      def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      inline def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
+      inline def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
       
-      @scala.inline
-      def setOrigin(value: String): Self = StObject.set(x, "origin", value.asInstanceOf[js.Any])
+      inline def setOrigin(value: String): Self = StObject.set(x, "origin", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
+      inline def setOriginUndefined: Self = StObject.set(x, "origin", js.undefined)
     }
   }
   
@@ -615,11 +561,9 @@ object vmMod {
   trait MeasureMemoryMode extends StObject
   object MeasureMemoryMode {
     
-    @scala.inline
-    def detailed: tmttyped.node.nodeStrings.detailed = "detailed".asInstanceOf[tmttyped.node.nodeStrings.detailed]
+    inline def detailed: tmttyped.node.nodeStrings.detailed = "detailed".asInstanceOf[tmttyped.node.nodeStrings.detailed]
     
-    @scala.inline
-    def summary: tmttyped.node.nodeStrings.summary = "summary".asInstanceOf[tmttyped.node.nodeStrings.summary]
+    inline def summary: tmttyped.node.nodeStrings.summary = "summary".asInstanceOf[tmttyped.node.nodeStrings.summary]
   }
   
   trait MeasureMemoryOptions extends StObject {
@@ -633,26 +577,20 @@ object vmMod {
   }
   object MeasureMemoryOptions {
     
-    @scala.inline
-    def apply(): MeasureMemoryOptions = {
+    inline def apply(): MeasureMemoryOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[MeasureMemoryOptions]
     }
     
-    @scala.inline
-    implicit class MeasureMemoryOptionsMutableBuilder[Self <: MeasureMemoryOptions] (val x: Self) extends AnyVal {
+    extension [Self <: MeasureMemoryOptions](x: Self) {
       
-      @scala.inline
-      def setContext(value: Context): Self = StObject.set(x, "context", value.asInstanceOf[js.Any])
+      inline def setContext(value: Context): Self = StObject.set(x, "context", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setContextUndefined: Self = StObject.set(x, "context", js.undefined)
+      inline def setContextUndefined: Self = StObject.set(x, "context", js.undefined)
       
-      @scala.inline
-      def setMode(value: MeasureMemoryMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
+      inline def setMode(value: MeasureMemoryMode): Self = StObject.set(x, "mode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setModeUndefined: Self = StObject.set(x, "mode", js.undefined)
+      inline def setModeUndefined: Self = StObject.set(x, "mode", js.undefined)
     }
   }
   
@@ -662,17 +600,14 @@ object vmMod {
   }
   object MemoryMeasurement {
     
-    @scala.inline
-    def apply(total: JsMemoryEstimate): MemoryMeasurement = {
+    inline def apply(total: JsMemoryEstimate): MemoryMeasurement = {
       val __obj = js.Dynamic.literal(total = total.asInstanceOf[js.Any])
       __obj.asInstanceOf[MemoryMeasurement]
     }
     
-    @scala.inline
-    implicit class MemoryMeasurementMutableBuilder[Self <: MemoryMeasurement] (val x: Self) extends AnyVal {
+    extension [Self <: MemoryMeasurement](x: Self) {
       
-      @scala.inline
-      def setTotal(value: JsMemoryEstimate): Self = StObject.set(x, "total", value.asInstanceOf[js.Any])
+      inline def setTotal(value: JsMemoryEstimate): Self = StObject.set(x, "total", value.asInstanceOf[js.Any])
     }
   }
   
@@ -707,38 +642,28 @@ object vmMod {
   }
   object RunningScriptOptions {
     
-    @scala.inline
-    def apply(): RunningScriptOptions = {
+    inline def apply(): RunningScriptOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[RunningScriptOptions]
     }
     
-    @scala.inline
-    implicit class RunningScriptOptionsMutableBuilder[Self <: RunningScriptOptions] (val x: Self) extends AnyVal {
+    extension [Self <: RunningScriptOptions](x: Self) {
       
-      @scala.inline
-      def setBreakOnSigint(value: Boolean): Self = StObject.set(x, "breakOnSigint", value.asInstanceOf[js.Any])
+      inline def setBreakOnSigint(value: Boolean): Self = StObject.set(x, "breakOnSigint", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setBreakOnSigintUndefined: Self = StObject.set(x, "breakOnSigint", js.undefined)
+      inline def setBreakOnSigintUndefined: Self = StObject.set(x, "breakOnSigint", js.undefined)
       
-      @scala.inline
-      def setDisplayErrors(value: Boolean): Self = StObject.set(x, "displayErrors", value.asInstanceOf[js.Any])
+      inline def setDisplayErrors(value: Boolean): Self = StObject.set(x, "displayErrors", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDisplayErrorsUndefined: Self = StObject.set(x, "displayErrors", js.undefined)
+      inline def setDisplayErrorsUndefined: Self = StObject.set(x, "displayErrors", js.undefined)
       
-      @scala.inline
-      def setMicrotaskMode(value: afterEvaluate): Self = StObject.set(x, "microtaskMode", value.asInstanceOf[js.Any])
+      inline def setMicrotaskMode(value: afterEvaluate): Self = StObject.set(x, "microtaskMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMicrotaskModeUndefined: Self = StObject.set(x, "microtaskMode", js.undefined)
+      inline def setMicrotaskModeUndefined: Self = StObject.set(x, "microtaskMode", js.undefined)
       
-      @scala.inline
-      def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+      inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+      inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
     }
   }
   
@@ -757,38 +682,28 @@ object vmMod {
   }
   object ScriptOptions {
     
-    @scala.inline
-    def apply(): ScriptOptions = {
+    inline def apply(): ScriptOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ScriptOptions]
     }
     
-    @scala.inline
-    implicit class ScriptOptionsMutableBuilder[Self <: ScriptOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ScriptOptions](x: Self) {
       
-      @scala.inline
-      def setCachedData(value: Buffer): Self = StObject.set(x, "cachedData", value.asInstanceOf[js.Any])
+      inline def setCachedData(value: Buffer): Self = StObject.set(x, "cachedData", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCachedDataUndefined: Self = StObject.set(x, "cachedData", js.undefined)
+      inline def setCachedDataUndefined: Self = StObject.set(x, "cachedData", js.undefined)
       
-      @scala.inline
-      def setDisplayErrors(value: Boolean): Self = StObject.set(x, "displayErrors", value.asInstanceOf[js.Any])
+      inline def setDisplayErrors(value: Boolean): Self = StObject.set(x, "displayErrors", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDisplayErrorsUndefined: Self = StObject.set(x, "displayErrors", js.undefined)
+      inline def setDisplayErrorsUndefined: Self = StObject.set(x, "displayErrors", js.undefined)
       
-      @scala.inline
-      def setProduceCachedData(value: Boolean): Self = StObject.set(x, "produceCachedData", value.asInstanceOf[js.Any])
+      inline def setProduceCachedData(value: Boolean): Self = StObject.set(x, "produceCachedData", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setProduceCachedDataUndefined: Self = StObject.set(x, "produceCachedData", js.undefined)
+      inline def setProduceCachedDataUndefined: Self = StObject.set(x, "produceCachedData", js.undefined)
       
-      @scala.inline
-      def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+      inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+      inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
     }
   }
 }

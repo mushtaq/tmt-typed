@@ -18,7 +18,6 @@ import tmttyped.node.nodeStrings.unpipe
 import tmttyped.node.nodeStrings.wantTrailers
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -131,7 +130,7 @@ trait Http2Stream extends StObject {
   def emit_wantTrailers(event: wantTrailers): Boolean = js.native
   
   /**
-    * Set the `true` if the `END_STREAM` flag was set in the request or response
+    * Set to `true` if the `END_STREAM` flag was set in the request or response
     * HEADERS frame received, indicating that no additional data should be received
     * and the readable side of the `Http2Stream` will be closed.
     * @since v10.11.0

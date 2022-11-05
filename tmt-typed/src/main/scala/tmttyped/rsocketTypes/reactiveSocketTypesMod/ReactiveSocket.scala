@@ -4,7 +4,6 @@ import tmttyped.rsocketFlowable.mod.Flowable
 import tmttyped.rsocketFlowable.mod.Single
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ReactiveSocket[D, M]
@@ -32,8 +31,7 @@ trait ReactiveSocket[D, M]
 }
 object ReactiveSocket {
   
-  @scala.inline
-  def apply[D, M](
+  inline def apply[D, M](
     availability: () => Double,
     close: () => Unit,
     connectionStatus: () => Flowable[ConnectionStatus],
@@ -47,16 +45,12 @@ object ReactiveSocket {
     __obj.asInstanceOf[ReactiveSocket[D, M]]
   }
   
-  @scala.inline
-  implicit class ReactiveSocketMutableBuilder[Self <: ReactiveSocket[_, _], D, M] (val x: Self with (ReactiveSocket[D, M])) extends AnyVal {
+  extension [Self <: ReactiveSocket[?, ?], D, M](x: Self & (ReactiveSocket[D, M])) {
     
-    @scala.inline
-    def setAvailability(value: () => Double): Self = StObject.set(x, "availability", js.Any.fromFunction0(value))
+    inline def setAvailability(value: () => Double): Self = StObject.set(x, "availability", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setClose(value: () => Unit): Self = StObject.set(x, "close", js.Any.fromFunction0(value))
+    inline def setClose(value: () => Unit): Self = StObject.set(x, "close", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setConnectionStatus(value: () => Flowable[ConnectionStatus]): Self = StObject.set(x, "connectionStatus", js.Any.fromFunction0(value))
+    inline def setConnectionStatus(value: () => Flowable[ConnectionStatus]): Self = StObject.set(x, "connectionStatus", js.Any.fromFunction0(value))
   }
 }

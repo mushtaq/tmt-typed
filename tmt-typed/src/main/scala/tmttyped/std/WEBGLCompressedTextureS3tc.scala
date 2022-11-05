@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The WEBGL_compressed_texture_s3tc extension is part of the WebGL API and exposes four S3TC compressed texture formats. */
@@ -22,8 +21,7 @@ trait WEBGLCompressedTextureS3tc extends StObject {
 }
 object WEBGLCompressedTextureS3tc {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     COMPRESSED_RGBA_S3TC_DXT1_EXT: GLenum,
     COMPRESSED_RGBA_S3TC_DXT3_EXT: GLenum,
     COMPRESSED_RGBA_S3TC_DXT5_EXT: GLenum,
@@ -33,19 +31,14 @@ object WEBGLCompressedTextureS3tc {
     __obj.asInstanceOf[WEBGLCompressedTextureS3tc]
   }
   
-  @scala.inline
-  implicit class WEBGLCompressedTextureS3tcMutableBuilder[Self <: WEBGLCompressedTextureS3tc] (val x: Self) extends AnyVal {
+  extension [Self <: WEBGLCompressedTextureS3tc](x: Self) {
     
-    @scala.inline
-    def setCOMPRESSED_RGBA_S3TC_DXT1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT1_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RGBA_S3TC_DXT1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT1_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_RGBA_S3TC_DXT3_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT3_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RGBA_S3TC_DXT3_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT3_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_RGBA_S3TC_DXT5_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT5_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RGBA_S3TC_DXT5_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGBA_S3TC_DXT5_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_RGB_S3TC_DXT1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGB_S3TC_DXT1_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RGB_S3TC_DXT1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RGB_S3TC_DXT1_EXT", value.asInstanceOf[js.Any])
   }
 }

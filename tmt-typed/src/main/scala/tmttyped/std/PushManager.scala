@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -16,8 +15,8 @@ trait PushManager extends StObject {
   def getSubscription(): js.Promise[org.scalajs.dom.PushSubscription | Null] = js.native
   
   /* standard DOM */
-  def permissionState(): js.Promise[org.scalajs.dom.PushPermissionState] = js.native
-  def permissionState(options: PushSubscriptionOptionsInit): js.Promise[org.scalajs.dom.PushPermissionState] = js.native
+  def permissionState(): js.Promise[PermissionState] = js.native
+  def permissionState(options: PushSubscriptionOptionsInit): js.Promise[PermissionState] = js.native
   
   /* standard DOM */
   def subscribe(): js.Promise[org.scalajs.dom.PushSubscription] = js.native

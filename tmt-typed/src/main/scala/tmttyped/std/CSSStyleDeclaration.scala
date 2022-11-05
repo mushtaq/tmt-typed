@@ -3,7 +3,6 @@ package tmttyped.std
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** An object that is a CSS declaration block, and exposes style information and various style-related methods and properties. */
@@ -482,7 +481,6 @@ trait CSSStyleDeclaration
   /* standard DOM */
   var fontVariant: java.lang.String = js.native
   
-  /** @deprecated */
   /* standard DOM */
   var fontVariantAlternates: java.lang.String = js.native
   
@@ -708,6 +706,30 @@ trait CSSStyleDeclaration
   var mask: java.lang.String = js.native
   
   /* standard DOM */
+  var maskClip: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskComposite: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskImage: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskMode: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskOrigin: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskPosition: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskRepeat: java.lang.String = js.native
+  
+  /* standard DOM */
+  var maskSize: java.lang.String = js.native
+  
+  /* standard DOM */
   var maskType: java.lang.String = js.native
   
   /* standard DOM */
@@ -745,9 +767,6 @@ trait CSSStyleDeclaration
   
   /* standard DOM */
   var offset: java.lang.String = js.native
-  
-  /* standard DOM */
-  var offsetAnchor: java.lang.String = js.native
   
   /* standard DOM */
   var offsetDistance: java.lang.String = js.native
@@ -882,6 +901,9 @@ trait CSSStyleDeclaration
   var position: java.lang.String = js.native
   
   /* standard DOM */
+  var printColorAdjust: java.lang.String = js.native
+  
+  /* standard DOM */
   var quotes: java.lang.String = js.native
   
   /* standard DOM */
@@ -982,6 +1004,9 @@ trait CSSStyleDeclaration
   
   /* standard DOM */
   var scrollSnapType: java.lang.String = js.native
+  
+  /* standard DOM */
+  var scrollbarGutter: java.lang.String = js.native
   
   /* standard DOM */
   def setProperty(property: java.lang.String): Unit = js.native
@@ -1375,6 +1400,10 @@ trait CSSStyleDeclaration
   
   /* standard DOM */
   var webkitTextFillColor: java.lang.String = js.native
+  
+  /** @deprecated This is a legacy alias of `textSizeAdjust`. */
+  /* standard DOM */
+  var webkitTextSizeAdjust: java.lang.String = js.native
   
   /* standard DOM */
   var webkitTextStroke: java.lang.String = js.native

@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -17,9 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RelativeTimeFormatNumeric extends StObject
 object RelativeTimeFormatNumeric {
   
-  @scala.inline
-  def always: tmttyped.std.stdStrings.always = "always".asInstanceOf[tmttyped.std.stdStrings.always]
+  inline def always: tmttyped.std.stdStrings.always = "always".asInstanceOf[tmttyped.std.stdStrings.always]
   
-  @scala.inline
-  def auto: tmttyped.std.stdStrings.auto = "auto".asInstanceOf[tmttyped.std.stdStrings.auto]
+  inline def auto: tmttyped.std.stdStrings.auto = "auto".asInstanceOf[tmttyped.std.stdStrings.auto]
 }

@@ -2,11 +2,11 @@ package tmttyped.node.netMod
 
 import tmttyped.node.nodeStrings.close
 import tmttyped.node.nodeStrings.connection
+import tmttyped.node.nodeStrings.drop
 import tmttyped.node.nodeStrings.error
 import tmttyped.node.nodeStrings.listening
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("net", "Server")
 @js.native
-class Server () extends StObject {
+open class Server () extends StObject {
   def this(connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
   def this(options: ServerOpts) = this()
   def this(options: Unit, connectionListener: js.Function1[/* socket */ Socket, Unit]) = this()
@@ -27,12 +27,15 @@ class Server () extends StObject {
     *   2. connection
     *   3. error
     *   4. listening
+    *   5. drop
     */
   def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_drop(event: drop, listener: js.Function1[/* data */ js.UndefOr[DropArgument], Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("addListener")
@@ -87,6 +90,10 @@ class Server () extends StObject {
   def emit_close(event: close): Boolean = js.native
   @JSName("emit")
   def emit_connection(event: connection, socket: Socket): Boolean = js.native
+  @JSName("emit")
+  def emit_drop(event: drop): Boolean = js.native
+  @JSName("emit")
+  def emit_drop(event: drop, data: DropArgument): Boolean = js.native
   @JSName("emit")
   def emit_error(event: error, err: js.Error): Boolean = js.native
   @JSName("emit")
@@ -203,6 +210,8 @@ class Server () extends StObject {
   @JSName("on")
   def on_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
   @JSName("on")
+  def on_drop(event: drop, listener: js.Function1[/* data */ js.UndefOr[DropArgument], Unit]): this.type = js.native
+  @JSName("on")
   def on_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
@@ -212,6 +221,8 @@ class Server () extends StObject {
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
+  @JSName("once")
+  def once_drop(event: drop, listener: js.Function1[/* data */ js.UndefOr[DropArgument], Unit]): this.type = js.native
   @JSName("once")
   def once_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("once")
@@ -223,6 +234,8 @@ class Server () extends StObject {
   @JSName("prependListener")
   def prependListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
   @JSName("prependListener")
+  def prependListener_drop(event: drop, listener: js.Function1[/* data */ js.UndefOr[DropArgument], Unit]): this.type = js.native
+  @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
@@ -233,12 +246,14 @@ class Server () extends StObject {
   @JSName("prependOnceListener")
   def prependOnceListener_connection(event: connection, listener: js.Function1[/* socket */ Socket, Unit]): this.type = js.native
   @JSName("prependOnceListener")
+  def prependOnceListener_drop(event: drop, listener: js.Function1[/* data */ js.UndefOr[DropArgument], Unit]): this.type = js.native
+  @JSName("prependOnceListener")
   def prependOnceListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_listening(event: listening, listener: js.Function0[Unit]): this.type = js.native
   
   /**
-    * Opposite of `unref()`, calling `ref()` on a previously `unref`ed server will_not_ let the program exit if it's the only server left (the default behavior).
+    * Opposite of `unref()`, calling `ref()` on a previously `unref`ed server will _not_ let the program exit if it's the only server left (the default behavior).
     * If the server is `ref`ed calling `ref()` again will have no effect.
     * @since v0.9.1
     */

@@ -8,7 +8,6 @@ import tmttyped.std.RequestInfo
 import tmttyped.std.RequestInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object fetchMod {
@@ -21,8 +20,7 @@ object fetchMod {
   @js.native
   val EventStreamContentType: /* "text/event-stream" */ String = js.native
   
-  @scala.inline
-  def fetchEventSource(
+  inline def fetchEventSource(
     input: RequestInfo,
     hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest: FetchEventSourceInit
   ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("fetchEventSource")(input.asInstanceOf[js.Any], hasInputSignalInputHeadersInputOnOpenOnmessageOncloseOnerrorOpenWhenHiddenInputFetchRest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
@@ -48,56 +46,40 @@ object fetchMod {
   }
   object FetchEventSourceInit {
     
-    @scala.inline
-    def apply(): FetchEventSourceInit = {
+    inline def apply(): FetchEventSourceInit = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[FetchEventSourceInit]
     }
     
-    @scala.inline
-    implicit class FetchEventSourceInitMutableBuilder[Self <: FetchEventSourceInit] (val x: Self) extends AnyVal {
+    extension [Self <: FetchEventSourceInit](x: Self) {
       
-      @scala.inline
-      def setFetch(value: FnCall): Self = StObject.set(x, "fetch", value.asInstanceOf[js.Any])
+      inline def setFetch(value: FnCall): Self = StObject.set(x, "fetch", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFetchUndefined: Self = StObject.set(x, "fetch", js.undefined)
+      inline def setFetchUndefined: Self = StObject.set(x, "fetch", js.undefined)
       
-      @scala.inline
-      def setHeaders(value: Record[String, String]): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+      inline def setHeaders(value: Record[String, String]): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
+      inline def setHeadersUndefined: Self = StObject.set(x, "headers", js.undefined)
       
-      @scala.inline
-      def setOnclose(value: () => Unit): Self = StObject.set(x, "onclose", js.Any.fromFunction0(value))
+      inline def setOnclose(value: () => Unit): Self = StObject.set(x, "onclose", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setOncloseUndefined: Self = StObject.set(x, "onclose", js.undefined)
+      inline def setOncloseUndefined: Self = StObject.set(x, "onclose", js.undefined)
       
-      @scala.inline
-      def setOnerror(value: /* err */ Any => js.UndefOr[Double | Null | Unit]): Self = StObject.set(x, "onerror", js.Any.fromFunction1(value))
+      inline def setOnerror(value: /* err */ Any => js.UndefOr[Double | Null | Unit]): Self = StObject.set(x, "onerror", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnerrorUndefined: Self = StObject.set(x, "onerror", js.undefined)
+      inline def setOnerrorUndefined: Self = StObject.set(x, "onerror", js.undefined)
       
-      @scala.inline
-      def setOnmessage(value: /* ev */ EventSourceMessage => Unit): Self = StObject.set(x, "onmessage", js.Any.fromFunction1(value))
+      inline def setOnmessage(value: /* ev */ EventSourceMessage => Unit): Self = StObject.set(x, "onmessage", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnmessageUndefined: Self = StObject.set(x, "onmessage", js.undefined)
+      inline def setOnmessageUndefined: Self = StObject.set(x, "onmessage", js.undefined)
       
-      @scala.inline
-      def setOnopen(value: /* response */ Response => js.Promise[Unit]): Self = StObject.set(x, "onopen", js.Any.fromFunction1(value))
+      inline def setOnopen(value: /* response */ Response => js.Promise[Unit]): Self = StObject.set(x, "onopen", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnopenUndefined: Self = StObject.set(x, "onopen", js.undefined)
+      inline def setOnopenUndefined: Self = StObject.set(x, "onopen", js.undefined)
       
-      @scala.inline
-      def setOpenWhenHidden(value: Boolean): Self = StObject.set(x, "openWhenHidden", value.asInstanceOf[js.Any])
+      inline def setOpenWhenHidden(value: Boolean): Self = StObject.set(x, "openWhenHidden", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setOpenWhenHiddenUndefined: Self = StObject.set(x, "openWhenHidden", js.undefined)
+      inline def setOpenWhenHiddenUndefined: Self = StObject.set(x, "openWhenHidden", js.undefined)
     }
   }
 }

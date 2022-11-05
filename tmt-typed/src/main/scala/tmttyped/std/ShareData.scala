@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ShareData extends StObject {
@@ -21,40 +20,29 @@ trait ShareData extends StObject {
 }
 object ShareData {
   
-  @scala.inline
-  def apply(): ShareData = {
+  inline def apply(): ShareData = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ShareData]
   }
   
-  @scala.inline
-  implicit class ShareDataMutableBuilder[Self <: ShareData] (val x: Self) extends AnyVal {
+  extension [Self <: ShareData](x: Self) {
     
-    @scala.inline
-    def setFiles(value: js.Array[org.scalajs.dom.File]): Self = StObject.set(x, "files", value.asInstanceOf[js.Any])
+    inline def setFiles(value: js.Array[org.scalajs.dom.File]): Self = StObject.set(x, "files", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFilesUndefined: Self = StObject.set(x, "files", js.undefined)
+    inline def setFilesUndefined: Self = StObject.set(x, "files", js.undefined)
     
-    @scala.inline
-    def setFilesVarargs(value: org.scalajs.dom.File*): Self = StObject.set(x, "files", js.Array(value :_*))
+    inline def setFilesVarargs(value: org.scalajs.dom.File*): Self = StObject.set(x, "files", js.Array(value*))
     
-    @scala.inline
-    def setText(value: java.lang.String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
+    inline def setText(value: java.lang.String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTextUndefined: Self = StObject.set(x, "text", js.undefined)
+    inline def setTextUndefined: Self = StObject.set(x, "text", js.undefined)
     
-    @scala.inline
-    def setTitle(value: java.lang.String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
+    inline def setTitle(value: java.lang.String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
+    inline def setTitleUndefined: Self = StObject.set(x, "title", js.undefined)
     
-    @scala.inline
-    def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
+    inline def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUrlUndefined: Self = StObject.set(x, "url", js.undefined)
+    inline def setUrlUndefined: Self = StObject.set(x, "url", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object traceEventsMod {
@@ -25,8 +24,7 @@ object traceEventsMod {
     * @since v10.0.0
     * @return .
     */
-  @scala.inline
-  def createTracing(options: CreateTracingOptions): Tracing = ^.asInstanceOf[js.Dynamic].applyDynamic("createTracing")(options.asInstanceOf[js.Any]).asInstanceOf[Tracing]
+  inline def createTracing(options: CreateTracingOptions): Tracing = ^.asInstanceOf[js.Dynamic].applyDynamic("createTracing")(options.asInstanceOf[js.Any]).asInstanceOf[Tracing]
   
   /**
     * Returns a comma-separated list of all currently-enabled trace event
@@ -49,8 +47,7 @@ object traceEventsMod {
     * ```
     * @since v10.0.0
     */
-  @scala.inline
-  def getEnabledCategories(): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[String]]
+  inline def getEnabledCategories(): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[String]]
   
   trait CreateTracingOptions extends StObject {
     
@@ -63,20 +60,16 @@ object traceEventsMod {
   }
   object CreateTracingOptions {
     
-    @scala.inline
-    def apply(categories: js.Array[String]): CreateTracingOptions = {
+    inline def apply(categories: js.Array[String]): CreateTracingOptions = {
       val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any])
       __obj.asInstanceOf[CreateTracingOptions]
     }
     
-    @scala.inline
-    implicit class CreateTracingOptionsMutableBuilder[Self <: CreateTracingOptions] (val x: Self) extends AnyVal {
+    extension [Self <: CreateTracingOptions](x: Self) {
       
-      @scala.inline
-      def setCategories(value: js.Array[String]): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
+      inline def setCategories(value: js.Array[String]): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCategoriesVarargs(value: String*): Self = StObject.set(x, "categories", js.Array(value :_*))
+      inline def setCategoriesVarargs(value: String*): Self = StObject.set(x, "categories", js.Array(value*))
     }
   }
   
@@ -120,26 +113,20 @@ object traceEventsMod {
   }
   object Tracing {
     
-    @scala.inline
-    def apply(categories: String, disable: () => Unit, enable: () => Unit, enabled: Boolean): Tracing = {
+    inline def apply(categories: String, disable: () => Unit, enable: () => Unit, enabled: Boolean): Tracing = {
       val __obj = js.Dynamic.literal(categories = categories.asInstanceOf[js.Any], disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), enabled = enabled.asInstanceOf[js.Any])
       __obj.asInstanceOf[Tracing]
     }
     
-    @scala.inline
-    implicit class TracingMutableBuilder[Self <: Tracing] (val x: Self) extends AnyVal {
+    extension [Self <: Tracing](x: Self) {
       
-      @scala.inline
-      def setCategories(value: String): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
+      inline def setCategories(value: String): Self = StObject.set(x, "categories", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDisable(value: () => Unit): Self = StObject.set(x, "disable", js.Any.fromFunction0(value))
+      inline def setDisable(value: () => Unit): Self = StObject.set(x, "disable", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setEnable(value: () => Unit): Self = StObject.set(x, "enable", js.Any.fromFunction0(value))
+      inline def setEnable(value: () => Unit): Self = StObject.set(x, "enable", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setEnabled(value: Boolean): Self = StObject.set(x, "enabled", value.asInstanceOf[js.Any])
+      inline def setEnabled(value: Boolean): Self = StObject.set(x, "enabled", value.asInstanceOf[js.Any])
     }
   }
 }

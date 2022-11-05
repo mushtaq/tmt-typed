@@ -22,7 +22,6 @@ import tmttyped.std.stdStrings.WEBGL_color_buffer_float
 import tmttyped.std.stdStrings.WEBGL_compressed_texture_astc
 import tmttyped.std.stdStrings.WEBGL_compressed_texture_etc
 import tmttyped.std.stdStrings.WEBGL_compressed_texture_etc1
-import tmttyped.std.stdStrings.WEBGL_compressed_texture_pvrtc
 import tmttyped.std.stdStrings.WEBGL_compressed_texture_s3tc
 import tmttyped.std.stdStrings.WEBGL_compressed_texture_s3tc_srgb
 import tmttyped.std.stdStrings.WEBGL_debug_renderer_info
@@ -32,7 +31,6 @@ import tmttyped.std.stdStrings.WEBGL_draw_buffers
 import tmttyped.std.stdStrings.WEBGL_lose_context
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -1217,9 +1215,6 @@ trait WebGLRenderingContextBase extends StObject {
   def getExtension_WEBGLcompressedtextureetc1(extensionName: WEBGL_compressed_texture_etc1): WEBGLCompressedTextureEtc1 | Null = js.native
   /* standard DOM */
   @JSName("getExtension")
-  def getExtension_WEBGLcompressedtexturepvrtc(extensionName: WEBGL_compressed_texture_pvrtc): WEBGLCompressedTexturePvrtc | Null = js.native
-  /* standard DOM */
-  @JSName("getExtension")
   def getExtension_WEBGLcompressedtextures3tc(extensionName: WEBGL_compressed_texture_s3tc): WEBGLCompressedTextureS3tc | Null = js.native
   /* standard DOM */
   @JSName("getExtension")
@@ -1410,33 +1405,29 @@ trait WebGLRenderingContextBase extends StObject {
   def vertexAttrib1f(index: GLuint, x: GLfloat): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttrib1fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   /* standard DOM */
-  def vertexAttrib1fv(index: GLuint, values: Float32List): Unit = js.native
+  def vertexAttrib1fv(index: GLuint, values: Float32List | js.Iterable[GLfloat]): Unit = js.native
   
   /* standard DOM */
   def vertexAttrib2f(index: GLuint, x: GLfloat, y: GLfloat): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttrib2fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   /* standard DOM */
-  def vertexAttrib2fv(index: GLuint, values: Float32List): Unit = js.native
+  def vertexAttrib2fv(index: GLuint, values: Float32List | js.Iterable[GLfloat]): Unit = js.native
   
   /* standard DOM */
   def vertexAttrib3f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttrib3fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   /* standard DOM */
-  def vertexAttrib3fv(index: GLuint, values: Float32List): Unit = js.native
+  def vertexAttrib3fv(index: GLuint, values: Float32List | js.Iterable[GLfloat]): Unit = js.native
   
   /* standard DOM */
   def vertexAttrib4f(index: GLuint, x: GLfloat, y: GLfloat, z: GLfloat, w: GLfloat): Unit = js.native
   
   /* standard DOM.Iterable */
-  def vertexAttrib4fv(index: GLuint, values: js.Iterable[GLfloat]): Unit = js.native
   /* standard DOM */
-  def vertexAttrib4fv(index: GLuint, values: Float32List): Unit = js.native
+  def vertexAttrib4fv(index: GLuint, values: Float32List | js.Iterable[GLfloat]): Unit = js.native
   
   /* standard DOM */
   def vertexAttribPointer(

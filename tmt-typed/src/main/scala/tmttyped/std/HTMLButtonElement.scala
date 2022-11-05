@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating <button> elements. */
@@ -55,7 +54,7 @@ trait HTMLButtonElement
   var formTarget: java.lang.String = js.native
   
   /* standard DOM */
-  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node] = js.native
   
   /** Sets or retrieves the name of the object. */
   /* standard DOM */

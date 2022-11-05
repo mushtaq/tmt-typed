@@ -3,7 +3,6 @@ package tmttyped.std
 import tmttyped.std.stdStrings.resourcetimingbufferfull
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API. */
@@ -41,6 +40,9 @@ trait Performance
   
   /* standard DOM */
   def clearResourceTimings(): Unit = js.native
+  
+  /* standard DOM */
+  val eventCounts: EventCounts = js.native
   
   /* standard DOM */
   def getEntries(): PerformanceEntryList = js.native

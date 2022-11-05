@@ -3,14 +3,13 @@ package tmttyped.std.global
 import tmttyped.std.DateConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Date")
 @js.native
 /* standard es5 */
-class Date ()
+open class Date ()
   extends StObject
      with tmttyped.std.Date {
   def this(value: java.lang.String) = this()
@@ -95,6 +94,5 @@ class Date ()
 }
 object Date {
   
-  @scala.inline
-  def apply: DateConstructor = js.Dynamic.global.selectDynamic("Date").asInstanceOf[DateConstructor]
+  inline def apply: DateConstructor = js.Dynamic.global.selectDynamic("Date").asInstanceOf[DateConstructor]
 }

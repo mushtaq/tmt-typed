@@ -4,6 +4,7 @@ import tmttyped.node.fsMod._PathLike
 import tmttyped.node.httpMod.ClientRequestArgs
 import tmttyped.node.nodeBooleans.`false`
 import tmttyped.node.nodeBooleans.`true`
+import tmttyped.node.nodeBufferMod.Blob
 import tmttyped.node.urlMod.URLFormatOptions
 import tmttyped.node.urlMod.URL_
 import tmttyped.node.urlMod.Url
@@ -13,7 +14,6 @@ import tmttyped.node.urlMod.UrlWithStringQuery
 import tmttyped.std.Record
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeUrlMod {
@@ -36,7 +36,7 @@ object nodeUrlMod {
     */
   @JSImport("node:url", "URL")
   @js.native
-  class URL protected ()
+  open class URL protected ()
     extends URL_
        with _PathLike {
     def this(input: String) = this()
@@ -76,18 +76,17 @@ object nodeUrlMod {
       * @experimental
       */
     /* static member */
-    @scala.inline
-    def createObjectURL(blob: tmttyped.node.nodeBufferMod.Blob): String = ^.asInstanceOf[js.Dynamic].applyDynamic("createObjectURL")(blob.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def createObjectURL(blob: Blob): String = ^.asInstanceOf[js.Dynamic].applyDynamic("createObjectURL")(blob.asInstanceOf[js.Any]).asInstanceOf[String]
     
     /**
-      * Removes the stored `Blob` identified by the given ID.
+      * Removes the stored `Blob` identified by the given ID. Attempting to revoke a
+      * ID that isn’t registered will silently fail.
       * @since v16.7.0
       * @experimental
       * @param id A `'blob:nodedata:...` URL string returned by a prior call to `URL.createObjectURL()`.
       */
     /* static member */
-    @scala.inline
-    def revokeObjectURL(objectUrl: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("revokeObjectURL")(objectUrl.asInstanceOf[js.Any]).asInstanceOf[Unit]
+    inline def revokeObjectURL(objectUrl: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("revokeObjectURL")(objectUrl.asInstanceOf[js.Any]).asInstanceOf[Unit]
   }
   
   /**
@@ -136,7 +135,7 @@ object nodeUrlMod {
     */
   @JSImport("node:url", "URLSearchParams")
   @js.native
-  class URLSearchParams ()
+  open class URLSearchParams ()
     extends tmttyped.node.urlMod.URLSearchParams {
     def this(init: String) = this()
     def this(init: js.Array[js.Tuple2[String, String]]) = this()
@@ -165,8 +164,7 @@ object nodeUrlMod {
     * ```
     * @since v7.4.0, v6.13.0
     */
-  @scala.inline
-  def domainToASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def domainToASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * Returns the Unicode serialization of the `domain`. If `domain` is an invalid
@@ -188,8 +186,7 @@ object nodeUrlMod {
     * ```
     * @since v7.4.0, v6.13.0
     */
-  @scala.inline
-  def domainToUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def domainToUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("domainToUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * This function ensures the correct decodings of percent-encoded characters as
@@ -216,13 +213,10 @@ object nodeUrlMod {
     * @param url The file URL string or URL object to convert to a path.
     * @return The fully-resolved platform-specific Node.js file path.
     */
-  @scala.inline
-  def fileURLToPath(url: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def fileURLToPath(url: URL_): String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def fileURLToPath(url: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def fileURLToPath(url: URL_): String = ^.asInstanceOf[js.Dynamic].applyDynamic("fileURLToPath")(url.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @scala.inline
-  def format(urlObject: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def format(urlObject: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
   /**
     * The `url.format()` method returns a formatted URL string derived from`urlObject`.
     *
@@ -286,10 +280,8 @@ object nodeUrlMod {
     * @deprecated Legacy: Use the WHATWG URL API instead.
     * @param urlObject A URL object (as returned by `url.parse()` or constructed otherwise). If a string, it is converted to an object by passing it to `url.parse()`.
     */
-  @scala.inline
-  def format(urlObject: URL_): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def format(urlObject: URL_, options: URLFormatOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def format(urlObject: URL_): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def format(urlObject: URL_, options: URLFormatOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   /**
     * The `url.format()` method returns a formatted URL string derived from`urlObject`.
     *
@@ -353,8 +345,7 @@ object nodeUrlMod {
     * @deprecated Legacy: Use the WHATWG URL API instead.
     * @param urlObject A URL object (as returned by `url.parse()` or constructed otherwise). If a string, it is converted to an object by passing it to `url.parse()`.
     */
-  @scala.inline
-  def format(urlObject: UrlObject): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def format(urlObject: UrlObject): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(urlObject.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `url.parse()` method takes a URL string, parses it, and returns a URL
@@ -369,32 +360,28 @@ object nodeUrlMod {
     * lenient, non-standard algorithm for parsing URL strings, security
     * issues can be introduced. Specifically, issues with [host name spoofing](https://hackerone.com/reports/678487) and
     * incorrect handling of usernames and passwords have been identified.
+    *
+    * Deprecation of this API has been shelved for now primarily due to the the
+    * inability of the [WHATWG API to parse relative URLs](https://github.com/nodejs/node/issues/12682#issuecomment-1154492373).
+    * [Discussions are ongoing](https://github.com/whatwg/url/issues/531) for the  best way to resolve this.
+    *
     * @since v0.1.25
-    * @deprecated Legacy: Use the WHATWG URL API instead.
     * @param urlString The URL string to parse.
     * @param [parseQueryString=false] If `true`, the `query` property will always be set to an object returned by the {@link querystring} module's `parse()` method. If `false`, the `query` property
     * on the returned URL object will be an unparsed, undecoded string.
     * @param [slashesDenoteHost=false] If `true`, the first token after the literal string `//` and preceding the next `/` will be interpreted as the `host`. For instance, given `//foo/bar`, the
     * result would be `{host: 'foo', pathname: '/bar'}` rather than `{pathname: '//foo/bar'}`.
     */
-  @scala.inline
-  def parse(urlString: String): UrlWithStringQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any]).asInstanceOf[UrlWithStringQuery]
-  @scala.inline
-  def parse(urlString: String, parseQueryString: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[Url]
-  @scala.inline
-  def parse(urlString: String, parseQueryString: Boolean, slashesDenoteHost: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[Url]
-  @scala.inline
-  def parse(urlString: String, parseQueryString: Unit, slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
+  inline def parse(urlString: String): UrlWithStringQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any]).asInstanceOf[UrlWithStringQuery]
+  inline def parse(urlString: String, parseQueryString: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[Url]
+  inline def parse(urlString: String, parseQueryString: Boolean, slashesDenoteHost: Boolean): Url = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[Url]
+  inline def parse(urlString: String, parseQueryString: Unit, slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
   
-  @scala.inline
-  def parse_false(urlString: String, parseQueryString: `false`): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
-  @scala.inline
-  def parse_false(urlString: String, parseQueryString: `false`, slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
+  inline def parse_false(urlString: String, parseQueryString: `false`): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
+  inline def parse_false(urlString: String, parseQueryString: `false`, slashesDenoteHost: Boolean): UrlWithStringQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithStringQuery]
   
-  @scala.inline
-  def parse_true(urlString: String, parseQueryString: `true`): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
-  @scala.inline
-  def parse_true(urlString: String, parseQueryString: `true`, slashesDenoteHost: Boolean): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
+  inline def parse_true(urlString: String, parseQueryString: `true`): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
+  inline def parse_true(urlString: String, parseQueryString: `true`, slashesDenoteHost: Boolean): UrlWithParsedQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(urlString.asInstanceOf[js.Any], parseQueryString.asInstanceOf[js.Any], slashesDenoteHost.asInstanceOf[js.Any])).asInstanceOf[UrlWithParsedQuery]
   
   /**
     * This function ensures that `path` is resolved absolutely, and that the URL
@@ -413,12 +400,11 @@ object nodeUrlMod {
     * @param path The path to convert to a File URL.
     * @return The file URL object.
     */
-  @scala.inline
-  def pathToFileURL(path: String): URL_ = ^.asInstanceOf[js.Dynamic].applyDynamic("pathToFileURL")(path.asInstanceOf[js.Any]).asInstanceOf[URL_]
+  inline def pathToFileURL(path: String): URL_ = ^.asInstanceOf[js.Dynamic].applyDynamic("pathToFileURL")(path.asInstanceOf[js.Any]).asInstanceOf[URL_]
   
   /**
     * The `url.resolve()` method resolves a target URL relative to a base URL in a
-    * manner similar to that of a Web browser resolving an anchor tag HREF.
+    * manner similar to that of a web browser resolving an anchor tag.
     *
     * ```js
     * const url = require('url');
@@ -427,7 +413,7 @@ object nodeUrlMod {
     * url.resolve('http://example.com/one', '/two'); // 'http://example.com/two'
     * ```
     *
-    * You can achieve the same result using the WHATWG URL API:
+    * To achieve the same result using the WHATWG URL API:
     *
     * ```js
     * function resolve(from, to) {
@@ -446,11 +432,10 @@ object nodeUrlMod {
     * ```
     * @since v0.1.25
     * @deprecated Legacy: Use the WHATWG URL API instead.
-    * @param from The Base URL being resolved against.
-    * @param to The HREF URL being resolved.
+    * @param from The base URL to use if `to` is a relative URL.
+    * @param to The target URL to resolve.
     */
-  @scala.inline
-  def resolve(from: String, to: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(from.asInstanceOf[js.Any], to.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def resolve(from: String, to: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(from.asInstanceOf[js.Any], to.asInstanceOf[js.Any])).asInstanceOf[String]
   
   /**
     * This utility function converts a URL object into an ordinary options object as
@@ -461,7 +446,7 @@ object nodeUrlMod {
     * const myURL = new URL('https://a:b@測試?abc#foo');
     *
     * console.log(urlToHttpOptions(myURL));
-    *
+    * / *
     * {
     *   protocol: 'https:',
     *   hostname: 'xn--g6w251d',
@@ -478,6 +463,5 @@ object nodeUrlMod {
     * @param url The `WHATWG URL` object to convert to an options object.
     * @return Options object
     */
-  @scala.inline
-  def urlToHttpOptions(url: URL_): ClientRequestArgs = ^.asInstanceOf[js.Dynamic].applyDynamic("urlToHttpOptions")(url.asInstanceOf[js.Any]).asInstanceOf[ClientRequestArgs]
+  inline def urlToHttpOptions(url: URL_): ClientRequestArgs = ^.asInstanceOf[js.Dynamic].applyDynamic("urlToHttpOptions")(url.asInstanceOf[js.Any]).asInstanceOf[ClientRequestArgs]
 }

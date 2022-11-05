@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GamepadEventInit
@@ -14,16 +13,13 @@ trait GamepadEventInit
 }
 object GamepadEventInit {
   
-  @scala.inline
-  def apply(gamepad: org.scalajs.dom.Gamepad): GamepadEventInit = {
+  inline def apply(gamepad: org.scalajs.dom.Gamepad): GamepadEventInit = {
     val __obj = js.Dynamic.literal(gamepad = gamepad.asInstanceOf[js.Any])
     __obj.asInstanceOf[GamepadEventInit]
   }
   
-  @scala.inline
-  implicit class GamepadEventInitMutableBuilder[Self <: GamepadEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: GamepadEventInit](x: Self) {
     
-    @scala.inline
-    def setGamepad(value: org.scalajs.dom.Gamepad): Self = StObject.set(x, "gamepad", value.asInstanceOf[js.Any])
+    inline def setGamepad(value: org.scalajs.dom.Gamepad): Self = StObject.set(x, "gamepad", value.asInstanceOf[js.Any])
   }
 }

@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Range")
 @js.native
 /* standard DOM */
-class Range ()
+open class Range ()
   extends StObject
      with tmttyped.std.Range {
   
@@ -65,6 +64,5 @@ object Range {
   val START_TO_START: Double = js.native
   
   /* standard DOM */
-  @scala.inline
-  def toString_(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toString")().asInstanceOf[java.lang.String]
+  inline def toString_(): java.lang.String = ^.asInstanceOf[js.Dynamic].applyDynamic("toString")().asInstanceOf[java.lang.String]
 }

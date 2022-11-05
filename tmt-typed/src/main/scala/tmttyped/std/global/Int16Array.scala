@@ -5,14 +5,13 @@ import tmttyped.std.ArrayLike
 import tmttyped.std.Int16ArrayConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Int16Array")
 @js.native
 /* standard es2017.typedarrays */
-class Int16Array ()
+open class Int16Array ()
   extends StObject
      with tmttyped.std.Int16Array {
   /* standard es5 */
@@ -29,6 +28,5 @@ class Int16Array ()
 }
 object Int16Array {
   
-  @scala.inline
-  def apply: Int16ArrayConstructor = js.Dynamic.global.selectDynamic("Int16Array").asInstanceOf[Int16ArrayConstructor]
+  inline def apply: Int16ArrayConstructor = js.Dynamic.global.selectDynamic("Int16Array").asInstanceOf[Int16ArrayConstructor]
 }

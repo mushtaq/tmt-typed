@@ -37,7 +37,6 @@ import tmttyped.std.stdStrings.desc
 import tmttyped.std.stdStrings.details
 import tmttyped.std.stdStrings.dfn
 import tmttyped.std.stdStrings.dialog
-import tmttyped.std.stdStrings.dir
 import tmttyped.std.stdStrings.div
 import tmttyped.std.stdStrings.dl
 import tmttyped.std.stdStrings.dt
@@ -73,12 +72,9 @@ import tmttyped.std.stdStrings.fieldset
 import tmttyped.std.stdStrings.figcaption
 import tmttyped.std.stdStrings.figure
 import tmttyped.std.stdStrings.filter
-import tmttyped.std.stdStrings.font
 import tmttyped.std.stdStrings.footer
 import tmttyped.std.stdStrings.foreignObject
 import tmttyped.std.stdStrings.form
-import tmttyped.std.stdStrings.frame
-import tmttyped.std.stdStrings.frameset
 import tmttyped.std.stdStrings.fullscreenchange
 import tmttyped.std.stdStrings.fullscreenerror
 import tmttyped.std.stdStrings.g
@@ -112,7 +108,6 @@ import tmttyped.std.stdStrings.main
 import tmttyped.std.stdStrings.map
 import tmttyped.std.stdStrings.mark
 import tmttyped.std.stdStrings.marker
-import tmttyped.std.stdStrings.marquee
 import tmttyped.std.stdStrings.mask
 import tmttyped.std.stdStrings.menu
 import tmttyped.std.stdStrings.meta
@@ -126,7 +121,6 @@ import tmttyped.std.stdStrings.optgroup
 import tmttyped.std.stdStrings.option
 import tmttyped.std.stdStrings.output
 import tmttyped.std.stdStrings.p
-import tmttyped.std.stdStrings.param
 import tmttyped.std.stdStrings.path
 import tmttyped.std.stdStrings.pattern
 import tmttyped.std.stdStrings.picture
@@ -182,14 +176,13 @@ import tmttyped.std.stdStrings.view
 import tmttyped.std.stdStrings.wbr
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Element is the most general base class from which all objects in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element. */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - tmttyped.std.EventTarget because Already inherited
 - tmttyped.std.Node because Already inherited
-- tmttyped.std.ParentNode because var conflicts: nodeValue, textContent. Inlined childElementCount, children, firstElementChild, lastElementChild, append, prepend, querySelector_a, querySelector_abbr, querySelector_address, querySelector_area, querySelector_article, querySelector_aside, querySelector_audio, querySelector_b, querySelector_base, querySelector_bdi, querySelector_bdo, querySelector_blockquote, querySelector_body, querySelector_br, querySelector_button, querySelector_canvas, querySelector_caption, querySelector_cite, querySelector_code, querySelector_col, querySelector_colgroup, querySelector_data, querySelector_datalist, querySelector_dd, querySelector_del, querySelector_details, querySelector_dfn, querySelector_dialog, querySelector_dir, querySelector_div, querySelector_dl, querySelector_dt, querySelector_em, querySelector_embed, querySelector_fieldset, querySelector_figcaption, querySelector_figure, querySelector_font, querySelector_footer, querySelector_form, querySelector_frame, querySelector_frameset, querySelector_h1, querySelector_h2, querySelector_h3, querySelector_h4, querySelector_h5, querySelector_h6, querySelector_head, querySelector_header, querySelector_hgroup, querySelector_hr, querySelector_html, querySelector_i, querySelector_iframe, querySelector_img, querySelector_input, querySelector_ins, querySelector_kbd, querySelector_label, querySelector_legend, querySelector_li, querySelector_link, querySelector_main, querySelector_map, querySelector_mark, querySelector_marquee, querySelector_menu, querySelector_meta, querySelector_meter, querySelector_nav, querySelector_noscript, querySelector_object, querySelector_ol, querySelector_optgroup, querySelector_option, querySelector_output, querySelector_p, querySelector_param, querySelector_picture, querySelector_pre, querySelector_progress, querySelector_q, querySelector_rp, querySelector_rt, querySelector_ruby, querySelector_s, querySelector_samp, querySelector_script, querySelector_section, querySelector_select, querySelector_slot, querySelector_small, querySelector_source, querySelector_span, querySelector_strong, querySelector_style, querySelector_sub, querySelector_summary, querySelector_sup, querySelector_table, querySelector_tbody, querySelector_td, querySelector_template, querySelector_textarea, querySelector_tfoot, querySelector_th, querySelector_thead, querySelector_time, querySelector_title, querySelector_tr, querySelector_track, querySelector_u, querySelector_ul, querySelector_var, querySelector_video, querySelector_wbr, querySelector_a, querySelector_animate, querySelector_animateMotion, querySelector_animateTransform, querySelector_circle, querySelector_clipPath, querySelector_defs, querySelector_desc, querySelector_ellipse, querySelector_feBlend, querySelector_feColorMatrix, querySelector_feComponentTransfer, querySelector_feComposite, querySelector_feConvolveMatrix, querySelector_feDiffuseLighting, querySelector_feDisplacementMap, querySelector_feDistantLight, querySelector_feDropShadow, querySelector_feFlood, querySelector_feFuncA, querySelector_feFuncB, querySelector_feFuncG, querySelector_feFuncR, querySelector_feGaussianBlur, querySelector_feImage, querySelector_feMerge, querySelector_feMergeNode, querySelector_feMorphology, querySelector_feOffset, querySelector_fePointLight, querySelector_feSpecularLighting, querySelector_feSpotLight, querySelector_feTile, querySelector_feTurbulence, querySelector_filter, querySelector_foreignObject, querySelector_g, querySelector_image, querySelector_line, querySelector_linearGradient, querySelector_marker, querySelector_mask, querySelector_metadata, querySelector_mpath, querySelector_path, querySelector_pattern, querySelector_polygon, querySelector_polyline, querySelector_radialGradient, querySelector_rect, querySelector_script, querySelector_set, querySelector_stop, querySelector_style, querySelector_svg, querySelector_switch, querySelector_symbol, querySelector_text, querySelector_textPath, querySelector_title, querySelector_tspan, querySelector_use, querySelector_view, querySelector, querySelectorAll_a, querySelectorAll_abbr, querySelectorAll_address, querySelectorAll_area, querySelectorAll_article, querySelectorAll_aside, querySelectorAll_audio, querySelectorAll_b, querySelectorAll_base, querySelectorAll_bdi, querySelectorAll_bdo, querySelectorAll_blockquote, querySelectorAll_body, querySelectorAll_br, querySelectorAll_button, querySelectorAll_canvas, querySelectorAll_caption, querySelectorAll_cite, querySelectorAll_code, querySelectorAll_col, querySelectorAll_colgroup, querySelectorAll_data, querySelectorAll_datalist, querySelectorAll_dd, querySelectorAll_del, querySelectorAll_details, querySelectorAll_dfn, querySelectorAll_dialog, querySelectorAll_dir, querySelectorAll_div, querySelectorAll_dl, querySelectorAll_dt, querySelectorAll_em, querySelectorAll_embed, querySelectorAll_fieldset, querySelectorAll_figcaption, querySelectorAll_figure, querySelectorAll_font, querySelectorAll_footer, querySelectorAll_form, querySelectorAll_frame, querySelectorAll_frameset, querySelectorAll_h1, querySelectorAll_h2, querySelectorAll_h3, querySelectorAll_h4, querySelectorAll_h5, querySelectorAll_h6, querySelectorAll_head, querySelectorAll_header, querySelectorAll_hgroup, querySelectorAll_hr, querySelectorAll_html, querySelectorAll_i, querySelectorAll_iframe, querySelectorAll_img, querySelectorAll_input, querySelectorAll_ins, querySelectorAll_kbd, querySelectorAll_label, querySelectorAll_legend, querySelectorAll_li, querySelectorAll_link, querySelectorAll_main, querySelectorAll_map, querySelectorAll_mark, querySelectorAll_marquee, querySelectorAll_menu, querySelectorAll_meta, querySelectorAll_meter, querySelectorAll_nav, querySelectorAll_noscript, querySelectorAll_object, querySelectorAll_ol, querySelectorAll_optgroup, querySelectorAll_option, querySelectorAll_output, querySelectorAll_p, querySelectorAll_param, querySelectorAll_picture, querySelectorAll_pre, querySelectorAll_progress, querySelectorAll_q, querySelectorAll_rp, querySelectorAll_rt, querySelectorAll_ruby, querySelectorAll_s, querySelectorAll_samp, querySelectorAll_script, querySelectorAll_section, querySelectorAll_select, querySelectorAll_slot, querySelectorAll_small, querySelectorAll_source, querySelectorAll_span, querySelectorAll_strong, querySelectorAll_style, querySelectorAll_sub, querySelectorAll_summary, querySelectorAll_sup, querySelectorAll_table, querySelectorAll_tbody, querySelectorAll_td, querySelectorAll_template, querySelectorAll_textarea, querySelectorAll_tfoot, querySelectorAll_th, querySelectorAll_thead, querySelectorAll_time, querySelectorAll_title, querySelectorAll_tr, querySelectorAll_track, querySelectorAll_u, querySelectorAll_ul, querySelectorAll_var, querySelectorAll_video, querySelectorAll_wbr, querySelectorAll_a, querySelectorAll_animate, querySelectorAll_animateMotion, querySelectorAll_animateTransform, querySelectorAll_circle, querySelectorAll_clipPath, querySelectorAll_defs, querySelectorAll_desc, querySelectorAll_ellipse, querySelectorAll_feBlend, querySelectorAll_feColorMatrix, querySelectorAll_feComponentTransfer, querySelectorAll_feComposite, querySelectorAll_feConvolveMatrix, querySelectorAll_feDiffuseLighting, querySelectorAll_feDisplacementMap, querySelectorAll_feDistantLight, querySelectorAll_feDropShadow, querySelectorAll_feFlood, querySelectorAll_feFuncA, querySelectorAll_feFuncB, querySelectorAll_feFuncG, querySelectorAll_feFuncR, querySelectorAll_feGaussianBlur, querySelectorAll_feImage, querySelectorAll_feMerge, querySelectorAll_feMergeNode, querySelectorAll_feMorphology, querySelectorAll_feOffset, querySelectorAll_fePointLight, querySelectorAll_feSpecularLighting, querySelectorAll_feSpotLight, querySelectorAll_feTile, querySelectorAll_feTurbulence, querySelectorAll_filter, querySelectorAll_foreignObject, querySelectorAll_g, querySelectorAll_image, querySelectorAll_line, querySelectorAll_linearGradient, querySelectorAll_marker, querySelectorAll_mask, querySelectorAll_metadata, querySelectorAll_mpath, querySelectorAll_path, querySelectorAll_pattern, querySelectorAll_polygon, querySelectorAll_polyline, querySelectorAll_radialGradient, querySelectorAll_rect, querySelectorAll_script, querySelectorAll_set, querySelectorAll_stop, querySelectorAll_style, querySelectorAll_svg, querySelectorAll_switch, querySelectorAll_symbol, querySelectorAll_text, querySelectorAll_textPath, querySelectorAll_title, querySelectorAll_tspan, querySelectorAll_use, querySelectorAll_view, querySelectorAll, replaceChildren */ @js.native
+- tmttyped.std.ParentNode because var conflicts: nodeValue, textContent. Inlined childElementCount, children, firstElementChild, lastElementChild, append, prepend, querySelector_a, querySelector_abbr, querySelector_address, querySelector_area, querySelector_article, querySelector_aside, querySelector_audio, querySelector_b, querySelector_base, querySelector_bdi, querySelector_bdo, querySelector_blockquote, querySelector_body, querySelector_br, querySelector_button, querySelector_canvas, querySelector_caption, querySelector_cite, querySelector_code, querySelector_col, querySelector_colgroup, querySelector_data, querySelector_datalist, querySelector_dd, querySelector_del, querySelector_details, querySelector_dfn, querySelector_dialog, querySelector_div, querySelector_dl, querySelector_dt, querySelector_em, querySelector_embed, querySelector_fieldset, querySelector_figcaption, querySelector_figure, querySelector_footer, querySelector_form, querySelector_h1, querySelector_h2, querySelector_h3, querySelector_h4, querySelector_h5, querySelector_h6, querySelector_head, querySelector_header, querySelector_hgroup, querySelector_hr, querySelector_html, querySelector_i, querySelector_iframe, querySelector_img, querySelector_input, querySelector_ins, querySelector_kbd, querySelector_label, querySelector_legend, querySelector_li, querySelector_link, querySelector_main, querySelector_map, querySelector_mark, querySelector_menu, querySelector_meta, querySelector_meter, querySelector_nav, querySelector_noscript, querySelector_object, querySelector_ol, querySelector_optgroup, querySelector_option, querySelector_output, querySelector_p, querySelector_picture, querySelector_pre, querySelector_progress, querySelector_q, querySelector_rp, querySelector_rt, querySelector_ruby, querySelector_s, querySelector_samp, querySelector_script, querySelector_section, querySelector_select, querySelector_slot, querySelector_small, querySelector_source, querySelector_span, querySelector_strong, querySelector_style, querySelector_sub, querySelector_summary, querySelector_sup, querySelector_table, querySelector_tbody, querySelector_td, querySelector_template, querySelector_textarea, querySelector_tfoot, querySelector_th, querySelector_thead, querySelector_time, querySelector_title, querySelector_tr, querySelector_track, querySelector_u, querySelector_ul, querySelector_var, querySelector_video, querySelector_wbr, querySelector_a, querySelector_animate, querySelector_animateMotion, querySelector_animateTransform, querySelector_circle, querySelector_clipPath, querySelector_defs, querySelector_desc, querySelector_ellipse, querySelector_feBlend, querySelector_feColorMatrix, querySelector_feComponentTransfer, querySelector_feComposite, querySelector_feConvolveMatrix, querySelector_feDiffuseLighting, querySelector_feDisplacementMap, querySelector_feDistantLight, querySelector_feDropShadow, querySelector_feFlood, querySelector_feFuncA, querySelector_feFuncB, querySelector_feFuncG, querySelector_feFuncR, querySelector_feGaussianBlur, querySelector_feImage, querySelector_feMerge, querySelector_feMergeNode, querySelector_feMorphology, querySelector_feOffset, querySelector_fePointLight, querySelector_feSpecularLighting, querySelector_feSpotLight, querySelector_feTile, querySelector_feTurbulence, querySelector_filter, querySelector_foreignObject, querySelector_g, querySelector_image, querySelector_line, querySelector_linearGradient, querySelector_marker, querySelector_mask, querySelector_metadata, querySelector_mpath, querySelector_path, querySelector_pattern, querySelector_polygon, querySelector_polyline, querySelector_radialGradient, querySelector_rect, querySelector_script, querySelector_set, querySelector_stop, querySelector_style, querySelector_svg, querySelector_switch, querySelector_symbol, querySelector_text, querySelector_textPath, querySelector_title, querySelector_tspan, querySelector_use, querySelector_view, querySelector, querySelectorAll_a, querySelectorAll_abbr, querySelectorAll_address, querySelectorAll_area, querySelectorAll_article, querySelectorAll_aside, querySelectorAll_audio, querySelectorAll_b, querySelectorAll_base, querySelectorAll_bdi, querySelectorAll_bdo, querySelectorAll_blockquote, querySelectorAll_body, querySelectorAll_br, querySelectorAll_button, querySelectorAll_canvas, querySelectorAll_caption, querySelectorAll_cite, querySelectorAll_code, querySelectorAll_col, querySelectorAll_colgroup, querySelectorAll_data, querySelectorAll_datalist, querySelectorAll_dd, querySelectorAll_del, querySelectorAll_details, querySelectorAll_dfn, querySelectorAll_dialog, querySelectorAll_div, querySelectorAll_dl, querySelectorAll_dt, querySelectorAll_em, querySelectorAll_embed, querySelectorAll_fieldset, querySelectorAll_figcaption, querySelectorAll_figure, querySelectorAll_footer, querySelectorAll_form, querySelectorAll_h1, querySelectorAll_h2, querySelectorAll_h3, querySelectorAll_h4, querySelectorAll_h5, querySelectorAll_h6, querySelectorAll_head, querySelectorAll_header, querySelectorAll_hgroup, querySelectorAll_hr, querySelectorAll_html, querySelectorAll_i, querySelectorAll_iframe, querySelectorAll_img, querySelectorAll_input, querySelectorAll_ins, querySelectorAll_kbd, querySelectorAll_label, querySelectorAll_legend, querySelectorAll_li, querySelectorAll_link, querySelectorAll_main, querySelectorAll_map, querySelectorAll_mark, querySelectorAll_menu, querySelectorAll_meta, querySelectorAll_meter, querySelectorAll_nav, querySelectorAll_noscript, querySelectorAll_object, querySelectorAll_ol, querySelectorAll_optgroup, querySelectorAll_option, querySelectorAll_output, querySelectorAll_p, querySelectorAll_picture, querySelectorAll_pre, querySelectorAll_progress, querySelectorAll_q, querySelectorAll_rp, querySelectorAll_rt, querySelectorAll_ruby, querySelectorAll_s, querySelectorAll_samp, querySelectorAll_script, querySelectorAll_section, querySelectorAll_select, querySelectorAll_slot, querySelectorAll_small, querySelectorAll_source, querySelectorAll_span, querySelectorAll_strong, querySelectorAll_style, querySelectorAll_sub, querySelectorAll_summary, querySelectorAll_sup, querySelectorAll_table, querySelectorAll_tbody, querySelectorAll_td, querySelectorAll_template, querySelectorAll_textarea, querySelectorAll_tfoot, querySelectorAll_th, querySelectorAll_thead, querySelectorAll_time, querySelectorAll_title, querySelectorAll_tr, querySelectorAll_track, querySelectorAll_u, querySelectorAll_ul, querySelectorAll_var, querySelectorAll_video, querySelectorAll_wbr, querySelectorAll_a, querySelectorAll_animate, querySelectorAll_animateMotion, querySelectorAll_animateTransform, querySelectorAll_circle, querySelectorAll_clipPath, querySelectorAll_defs, querySelectorAll_desc, querySelectorAll_ellipse, querySelectorAll_feBlend, querySelectorAll_feColorMatrix, querySelectorAll_feComponentTransfer, querySelectorAll_feComposite, querySelectorAll_feConvolveMatrix, querySelectorAll_feDiffuseLighting, querySelectorAll_feDisplacementMap, querySelectorAll_feDistantLight, querySelectorAll_feDropShadow, querySelectorAll_feFlood, querySelectorAll_feFuncA, querySelectorAll_feFuncB, querySelectorAll_feFuncG, querySelectorAll_feFuncR, querySelectorAll_feGaussianBlur, querySelectorAll_feImage, querySelectorAll_feMerge, querySelectorAll_feMergeNode, querySelectorAll_feMorphology, querySelectorAll_feOffset, querySelectorAll_fePointLight, querySelectorAll_feSpecularLighting, querySelectorAll_feSpotLight, querySelectorAll_feTile, querySelectorAll_feTurbulence, querySelectorAll_filter, querySelectorAll_foreignObject, querySelectorAll_g, querySelectorAll_image, querySelectorAll_line, querySelectorAll_linearGradient, querySelectorAll_marker, querySelectorAll_mask, querySelectorAll_metadata, querySelectorAll_mpath, querySelectorAll_path, querySelectorAll_pattern, querySelectorAll_polygon, querySelectorAll_polyline, querySelectorAll_radialGradient, querySelectorAll_rect, querySelectorAll_script, querySelectorAll_set, querySelectorAll_stop, querySelectorAll_style, querySelectorAll_svg, querySelectorAll_switch, querySelectorAll_symbol, querySelectorAll_text, querySelectorAll_textPath, querySelectorAll_title, querySelectorAll_tspan, querySelectorAll_use, querySelectorAll_view, querySelectorAll, replaceChildren */ @js.native
 trait Element
   extends StObject
      with ARIAMixin
@@ -352,8 +345,6 @@ trait Element
   @JSName("closest")
   def closest_dialog(selector: dialog): HTMLDialogElement | Null = js.native
   @JSName("closest")
-  def closest_dir(selector: dir): HTMLDirectoryElement | Null = js.native
-  @JSName("closest")
   def closest_div(selector: div): org.scalajs.dom.HTMLDivElement | Null = js.native
   @JSName("closest")
   def closest_dl(selector: dl): org.scalajs.dom.HTMLDListElement | Null = js.native
@@ -424,17 +415,11 @@ trait Element
   @JSName("closest")
   def closest_filter(selector: filter): org.scalajs.dom.SVGFilterElement | Null = js.native
   @JSName("closest")
-  def closest_font(selector: font): HTMLFontElement | Null = js.native
-  @JSName("closest")
   def closest_footer(selector: footer): org.scalajs.dom.HTMLElement | Null = js.native
   @JSName("closest")
   def closest_foreignObject(selector: foreignObject): SVGForeignObjectElement | Null = js.native
   @JSName("closest")
   def closest_form(selector: form): org.scalajs.dom.HTMLFormElement | Null = js.native
-  @JSName("closest")
-  def closest_frame(selector: frame): HTMLFrameElement | Null = js.native
-  @JSName("closest")
-  def closest_frameset(selector: frameset): HTMLFrameSetElement | Null = js.native
   @JSName("closest")
   def closest_g(selector: g): org.scalajs.dom.SVGGElement | Null = js.native
   @JSName("closest")
@@ -494,8 +479,6 @@ trait Element
   @JSName("closest")
   def closest_marker(selector: marker): org.scalajs.dom.SVGMarkerElement | Null = js.native
   @JSName("closest")
-  def closest_marquee(selector: marquee): HTMLMarqueeElement | Null = js.native
-  @JSName("closest")
   def closest_mask(selector: mask): org.scalajs.dom.SVGMaskElement | Null = js.native
   @JSName("closest")
   def closest_menu(selector: menu): org.scalajs.dom.HTMLMenuElement | Null = js.native
@@ -523,8 +506,6 @@ trait Element
   def closest_output(selector: output): HTMLOutputElement | Null = js.native
   @JSName("closest")
   def closest_p(selector: p): org.scalajs.dom.HTMLParagraphElement | Null = js.native
-  @JSName("closest")
-  def closest_param(selector: param): org.scalajs.dom.HTMLParamElement | Null = js.native
   @JSName("closest")
   def closest_path(selector: path): org.scalajs.dom.SVGPathElement | Null = js.native
   @JSName("closest")
@@ -753,8 +734,6 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_dialog(qualifiedName: dialog): HTMLCollectionOf[HTMLDialogElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_dir(qualifiedName: dir): HTMLCollectionOf[HTMLDirectoryElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_div(qualifiedName: div): HTMLCollectionOf[org.scalajs.dom.HTMLDivElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_dl(qualifiedName: dl): HTMLCollectionOf[org.scalajs.dom.HTMLDListElement] = js.native
@@ -825,17 +804,11 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_filter(qualifiedName: filter): HTMLCollectionOf[org.scalajs.dom.SVGFilterElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_font(qualifiedName: font): HTMLCollectionOf[HTMLFontElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_footer(qualifiedName: footer): HTMLCollectionOf[org.scalajs.dom.HTMLElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_foreignObject(qualifiedName: foreignObject): HTMLCollectionOf[SVGForeignObjectElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_form(qualifiedName: form): HTMLCollectionOf[org.scalajs.dom.HTMLFormElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_frame(qualifiedName: frame): HTMLCollectionOf[HTMLFrameElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_frameset(qualifiedName: frameset): HTMLCollectionOf[HTMLFrameSetElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_g(qualifiedName: g): HTMLCollectionOf[org.scalajs.dom.SVGGElement] = js.native
   @JSName("getElementsByTagName")
@@ -895,8 +868,6 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_marker(qualifiedName: marker): HTMLCollectionOf[org.scalajs.dom.SVGMarkerElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_marquee(qualifiedName: marquee): HTMLCollectionOf[HTMLMarqueeElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_mask(qualifiedName: mask): HTMLCollectionOf[org.scalajs.dom.SVGMaskElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_menu(qualifiedName: menu): HTMLCollectionOf[org.scalajs.dom.HTMLMenuElement] = js.native
@@ -924,8 +895,6 @@ trait Element
   def getElementsByTagName_output(qualifiedName: output): HTMLCollectionOf[HTMLOutputElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_p(qualifiedName: p): HTMLCollectionOf[org.scalajs.dom.HTMLParagraphElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_param(qualifiedName: param): HTMLCollectionOf[org.scalajs.dom.HTMLParamElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_path(qualifiedName: path): HTMLCollectionOf[org.scalajs.dom.SVGPathElement] = js.native
   @JSName("getElementsByTagName")
@@ -1112,361 +1081,349 @@ trait Element
   def querySelector[E /* <: org.scalajs.dom.Element */](selectors: java.lang.String): E | Null = js.native
   
   /* standard DOM */
-  def querySelectorAll[E /* <: org.scalajs.dom.Element */](selectors: java.lang.String): org.scalajs.dom.NodeList[E with org.scalajs.dom.Node] = js.native
+  def querySelectorAll[E /* <: org.scalajs.dom.Element */](selectors: java.lang.String): org.scalajs.dom.NodeList[E & org.scalajs.dom.Node] = js.native
   /** Returns all element descendants of node that match selectors. */
   /* standard DOM */
   @JSName("querySelectorAll")
-  def querySelectorAll_a(selectors: a): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAnchorElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_a(selectors: a): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAnchorElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_abbr(selectors: abbr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_abbr(selectors: abbr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_address(selectors: address): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_address(selectors: address): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_animate(selectors: animate): org.scalajs.dom.NodeList[SVGAnimateElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_animate(selectors: animate): org.scalajs.dom.NodeList[SVGAnimateElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_animateMotion(selectors: animateMotion): org.scalajs.dom.NodeList[SVGAnimateMotionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_animateMotion(selectors: animateMotion): org.scalajs.dom.NodeList[SVGAnimateMotionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_animateTransform(selectors: animateTransform): org.scalajs.dom.NodeList[SVGAnimateTransformElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_animateTransform(selectors: animateTransform): org.scalajs.dom.NodeList[SVGAnimateTransformElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_area(selectors: area): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAreaElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_area(selectors: area): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAreaElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_article(selectors: article): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_article(selectors: article): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_aside(selectors: aside): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_aside(selectors: aside): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_audio(selectors: audio): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAudioElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_audio(selectors: audio): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLAudioElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_b(selectors: b): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_b(selectors: b): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_base(selectors: base): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBaseElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_base(selectors: base): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBaseElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_bdi(selectors: bdi): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_bdi(selectors: bdi): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_bdo(selectors: bdo): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_bdo(selectors: bdo): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_blockquote(selectors: blockquote): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLQuoteElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_blockquote(selectors: blockquote): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLQuoteElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_body(selectors: body): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBodyElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_body(selectors: body): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBodyElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_br(selectors: br): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBRElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_br(selectors: br): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLBRElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_button(selectors: button): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLButtonElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_button(selectors: button): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLButtonElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_canvas(selectors: canvas): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLCanvasElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_canvas(selectors: canvas): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLCanvasElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_caption(selectors: caption): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCaptionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_caption(selectors: caption): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCaptionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_circle(selectors: circle): org.scalajs.dom.NodeList[org.scalajs.dom.SVGCircleElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_circle(selectors: circle): org.scalajs.dom.NodeList[org.scalajs.dom.SVGCircleElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_cite(selectors: cite): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_cite(selectors: cite): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_clipPath(selectors: clipPath): org.scalajs.dom.NodeList[org.scalajs.dom.SVGClipPathElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_clipPath(selectors: clipPath): org.scalajs.dom.NodeList[org.scalajs.dom.SVGClipPathElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_code(selectors: code): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_code(selectors: code): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_col(selectors: col): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableColElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_col(selectors: col): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableColElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_colgroup(selectors: colgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableColElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_colgroup(selectors: colgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableColElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_data(selectors: data): org.scalajs.dom.NodeList[HTMLDataElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_data(selectors: data): org.scalajs.dom.NodeList[HTMLDataElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_datalist(selectors: datalist): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDataListElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_datalist(selectors: datalist): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDataListElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dd(selectors: dd): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_dd(selectors: dd): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_defs(selectors: defs): org.scalajs.dom.NodeList[org.scalajs.dom.SVGDefsElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_defs(selectors: defs): org.scalajs.dom.NodeList[org.scalajs.dom.SVGDefsElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_del(selectors: del): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLModElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_del(selectors: del): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLModElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_desc(selectors: desc): org.scalajs.dom.NodeList[org.scalajs.dom.SVGDescElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_desc(selectors: desc): org.scalajs.dom.NodeList[org.scalajs.dom.SVGDescElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_details(selectors: details): org.scalajs.dom.NodeList[HTMLDetailsElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_details(selectors: details): org.scalajs.dom.NodeList[HTMLDetailsElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dfn(selectors: dfn): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_dfn(selectors: dfn): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dialog(selectors: dialog): org.scalajs.dom.NodeList[HTMLDialogElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_dialog(selectors: dialog): org.scalajs.dom.NodeList[HTMLDialogElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dir(selectors: dir): org.scalajs.dom.NodeList[HTMLDirectoryElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_div(selectors: div): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDivElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_div(selectors: div): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDivElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_dl(selectors: dl): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDListElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dl(selectors: dl): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLDListElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_dt(selectors: dt): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dt(selectors: dt): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_ellipse(selectors: ellipse): org.scalajs.dom.NodeList[org.scalajs.dom.SVGEllipseElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_ellipse(selectors: ellipse): org.scalajs.dom.NodeList[org.scalajs.dom.SVGEllipseElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_em(selectors: em): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_em(selectors: em): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_embed(selectors: embed): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLEmbedElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_embed(selectors: embed): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLEmbedElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feBlend(selectors: feBlend): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEBlendElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feBlend(selectors: feBlend): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEBlendElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feColorMatrix(selectors: feColorMatrix): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEColorMatrixElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feColorMatrix(selectors: feColorMatrix): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEColorMatrixElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feComponentTransfer(selectors: feComponentTransfer): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEComponentTransferElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feComponentTransfer(selectors: feComponentTransfer): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEComponentTransferElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feComposite(selectors: feComposite): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFECompositeElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feComposite(selectors: feComposite): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFECompositeElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feConvolveMatrix(selectors: feConvolveMatrix): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEConvolveMatrixElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feConvolveMatrix(selectors: feConvolveMatrix): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEConvolveMatrixElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feDiffuseLighting(selectors: feDiffuseLighting): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDiffuseLightingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feDiffuseLighting(selectors: feDiffuseLighting): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDiffuseLightingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feDisplacementMap(selectors: feDisplacementMap): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDisplacementMapElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feDisplacementMap(selectors: feDisplacementMap): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDisplacementMapElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feDistantLight(selectors: feDistantLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDistantLightElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feDistantLight(selectors: feDistantLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEDistantLightElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feDropShadow(selectors: feDropShadow): org.scalajs.dom.NodeList[SVGFEDropShadowElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feDropShadow(selectors: feDropShadow): org.scalajs.dom.NodeList[SVGFEDropShadowElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feFlood(selectors: feFlood): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFloodElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feFlood(selectors: feFlood): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFloodElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feFuncA(selectors: feFuncA): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncAElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feFuncA(selectors: feFuncA): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncAElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feFuncB(selectors: feFuncB): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncBElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feFuncB(selectors: feFuncB): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncBElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feFuncG(selectors: feFuncG): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncGElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feFuncG(selectors: feFuncG): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncGElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feFuncR(selectors: feFuncR): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncRElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feFuncR(selectors: feFuncR): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEFuncRElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feGaussianBlur(selectors: feGaussianBlur): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEGaussianBlurElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feGaussianBlur(selectors: feGaussianBlur): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEGaussianBlurElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feImage(selectors: feImage): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEImageElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feImage(selectors: feImage): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEImageElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feMerge(selectors: feMerge): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMergeElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feMerge(selectors: feMerge): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMergeElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feMergeNode(selectors: feMergeNode): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMergeNodeElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feMergeNode(selectors: feMergeNode): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMergeNodeElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feMorphology(selectors: feMorphology): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMorphologyElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feMorphology(selectors: feMorphology): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEMorphologyElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feOffset(selectors: feOffset): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEOffsetElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feOffset(selectors: feOffset): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEOffsetElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_fePointLight(selectors: fePointLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEPointLightElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_fePointLight(selectors: fePointLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFEPointLightElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feSpecularLighting(selectors: feSpecularLighting): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFESpecularLightingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feSpecularLighting(selectors: feSpecularLighting): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFESpecularLightingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feSpotLight(selectors: feSpotLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFESpotLightElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feSpotLight(selectors: feSpotLight): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFESpotLightElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feTile(selectors: feTile): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFETileElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feTile(selectors: feTile): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFETileElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_feTurbulence(selectors: feTurbulence): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFETurbulenceElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_feTurbulence(selectors: feTurbulence): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFETurbulenceElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_fieldset(selectors: fieldset): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLFieldSetElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_fieldset(selectors: fieldset): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLFieldSetElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_figcaption(selectors: figcaption): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_figcaption(selectors: figcaption): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_figure(selectors: figure): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_figure(selectors: figure): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_filter(selectors: filter): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFilterElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_filter(selectors: filter): org.scalajs.dom.NodeList[org.scalajs.dom.SVGFilterElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_footer(selectors: footer): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_font(selectors: font): org.scalajs.dom.NodeList[HTMLFontElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_foreignObject(selectors: foreignObject): org.scalajs.dom.NodeList[SVGForeignObjectElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_footer(selectors: footer): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_form(selectors: form): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLFormElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_foreignObject(selectors: foreignObject): org.scalajs.dom.NodeList[SVGForeignObjectElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_g(selectors: g): org.scalajs.dom.NodeList[org.scalajs.dom.SVGGElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_form(selectors: form): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLFormElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h1(selectors: h1): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_frame(selectors: frame): org.scalajs.dom.NodeList[HTMLFrameElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h2(selectors: h2): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_frameset(selectors: frameset): org.scalajs.dom.NodeList[HTMLFrameSetElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h3(selectors: h3): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_g(selectors: g): org.scalajs.dom.NodeList[org.scalajs.dom.SVGGElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h4(selectors: h4): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h1(selectors: h1): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h5(selectors: h5): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h2(selectors: h2): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_h6(selectors: h6): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h3(selectors: h3): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_head(selectors: head): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h4(selectors: h4): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_header(selectors: header): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h5(selectors: h5): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_hgroup(selectors: hgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_h6(selectors: h6): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadingElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_hr(selectors: hr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHRElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_head(selectors: head): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHeadElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_html(selectors: html): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHtmlElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_header(selectors: header): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_i(selectors: i): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_hgroup(selectors: hgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_iframe(selectors: iframe): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLIFrameElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_hr(selectors: hr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHRElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_image(selectors: image): org.scalajs.dom.NodeList[org.scalajs.dom.SVGImageElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_html(selectors: html): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLHtmlElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_img(selectors: img): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLImageElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_i(selectors: i): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_input(selectors: input): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLInputElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_iframe(selectors: iframe): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLIFrameElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_ins(selectors: ins): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLModElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_image(selectors: image): org.scalajs.dom.NodeList[org.scalajs.dom.SVGImageElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_kbd(selectors: kbd): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_img(selectors: img): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLImageElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_label(selectors: label): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_input(selectors: input): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLInputElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_legend(selectors: legend): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLegendElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_ins(selectors: ins): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLModElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_li(selectors: li): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLIElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_kbd(selectors: kbd): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_line(selectors: line): org.scalajs.dom.NodeList[org.scalajs.dom.SVGLineElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_label(selectors: label): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_linearGradient(selectors: linearGradient): org.scalajs.dom.NodeList[org.scalajs.dom.SVGLinearGradientElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_legend(selectors: legend): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLegendElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_link(selectors: link): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLinkElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_li(selectors: li): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLIElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_main(selectors: main): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_line(selectors: line): org.scalajs.dom.NodeList[org.scalajs.dom.SVGLineElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_map(selectors: map): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMapElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_linearGradient(selectors: linearGradient): org.scalajs.dom.NodeList[org.scalajs.dom.SVGLinearGradientElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_mark(selectors: mark): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_link(selectors: link): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLinkElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_marker(selectors: marker): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMarkerElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_main(selectors: main): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_mask(selectors: mask): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMaskElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_map(selectors: map): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMapElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_menu(selectors: menu): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMenuElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_mark(selectors: mark): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_meta(selectors: meta): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMetaElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_marker(selectors: marker): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMarkerElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_metadata(selectors: metadata): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMetadataElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_marquee(selectors: marquee): org.scalajs.dom.NodeList[HTMLMarqueeElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_meter(selectors: meter): org.scalajs.dom.NodeList[HTMLMeterElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_mask(selectors: mask): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMaskElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_mpath(selectors: mpath): org.scalajs.dom.NodeList[SVGMPathElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_menu(selectors: menu): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMenuElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_nav(selectors: nav): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_meta(selectors: meta): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLMetaElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_noscript(selectors: noscript): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_metadata(selectors: metadata): org.scalajs.dom.NodeList[org.scalajs.dom.SVGMetadataElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_object(selectors: `object`): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLObjectElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_meter(selectors: meter): org.scalajs.dom.NodeList[HTMLMeterElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_ol(selectors: ol): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOListElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_mpath(selectors: mpath): org.scalajs.dom.NodeList[SVGMPathElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_optgroup(selectors: optgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOptGroupElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_nav(selectors: nav): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_option(selectors: option): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOptionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_noscript(selectors: noscript): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_output(selectors: output): org.scalajs.dom.NodeList[HTMLOutputElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_object(selectors: `object`): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLObjectElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_p(selectors: p): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLParagraphElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_ol(selectors: ol): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOListElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_path(selectors: path): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPathElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_optgroup(selectors: optgroup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOptGroupElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_pattern(selectors: pattern): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPatternElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_option(selectors: option): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLOptionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_picture(selectors: picture): org.scalajs.dom.NodeList[HTMLPictureElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_output(selectors: output): org.scalajs.dom.NodeList[HTMLOutputElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_polygon(selectors: polygon): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPolygonElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_p(selectors: p): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLParagraphElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_polyline(selectors: polyline): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPolylineElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_param(selectors: param): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLParamElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_pre(selectors: pre): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLPreElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_path(selectors: path): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPathElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_progress(selectors: progress): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLProgressElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_pattern(selectors: pattern): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPatternElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_q(selectors: q): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLQuoteElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_picture(selectors: picture): org.scalajs.dom.NodeList[HTMLPictureElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_radialGradient(selectors: radialGradient): org.scalajs.dom.NodeList[org.scalajs.dom.SVGRadialGradientElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_polygon(selectors: polygon): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPolygonElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_rect(selectors: rect): org.scalajs.dom.NodeList[org.scalajs.dom.SVGRectElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_polyline(selectors: polyline): org.scalajs.dom.NodeList[org.scalajs.dom.SVGPolylineElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_rp(selectors: rp): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_pre(selectors: pre): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLPreElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_rt(selectors: rt): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_progress(selectors: progress): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLProgressElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_ruby(selectors: ruby): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_q(selectors: q): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLQuoteElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_s(selectors: s): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_radialGradient(selectors: radialGradient): org.scalajs.dom.NodeList[org.scalajs.dom.SVGRadialGradientElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_samp(selectors: samp): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_rect(selectors: rect): org.scalajs.dom.NodeList[org.scalajs.dom.SVGRectElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_script(selectors: script): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLScriptElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_rp(selectors: rp): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_section(selectors: section): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_rt(selectors: rt): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_select(selectors: select): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSelectElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_ruby(selectors: ruby): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_set(selectors: set): org.scalajs.dom.NodeList[SVGSetElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_s(selectors: s): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_slot(selectors: slot): org.scalajs.dom.NodeList[HTMLSlotElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_samp(selectors: samp): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_small(selectors: small): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_script(selectors: script): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLScriptElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_source(selectors: source): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSourceElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_section(selectors: section): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_span(selectors: span): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSpanElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_select(selectors: select): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSelectElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_stop(selectors: stop): org.scalajs.dom.NodeList[org.scalajs.dom.SVGStopElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_set(selectors: set): org.scalajs.dom.NodeList[SVGSetElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_strong(selectors: strong): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_slot(selectors: slot): org.scalajs.dom.NodeList[HTMLSlotElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_style(selectors: style): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLStyleElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_small(selectors: small): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_sub(selectors: sub): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_source(selectors: source): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSourceElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_summary(selectors: summary): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_span(selectors: span): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLSpanElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_sup(selectors: sup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_stop(selectors: stop): org.scalajs.dom.NodeList[org.scalajs.dom.SVGStopElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_svg(selectors: svg): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSVGElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_strong(selectors: strong): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_switch(selectors: switch): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSwitchElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_style(selectors: style): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLStyleElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_symbol(selectors: symbol): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSymbolElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_sub(selectors: sub): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_table(selectors: table): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_summary(selectors: summary): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_tbody(selectors: tbody): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_sup(selectors: sup): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_td(selectors: td): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCellElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_svg(selectors: svg): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSVGElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_template(selectors: template): org.scalajs.dom.NodeList[HTMLTemplateElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_switch(selectors: switch): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSwitchElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_text(selectors: text): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTextElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_symbol(selectors: symbol): org.scalajs.dom.NodeList[org.scalajs.dom.SVGSymbolElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_textPath(selectors: textPath): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTextPathElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_table(selectors: table): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_textarea(selectors: textarea): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTextAreaElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_tbody(selectors: tbody): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_tfoot(selectors: tfoot): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_td(selectors: td): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCellElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_th(selectors: th): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCellElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_template(selectors: template): org.scalajs.dom.NodeList[HTMLTemplateElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_thead(selectors: thead): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_text(selectors: text): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTextElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_time(selectors: time): org.scalajs.dom.NodeList[HTMLTimeElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_textPath(selectors: textPath): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTextPathElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_title(selectors: title): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTitleElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_textarea(selectors: textarea): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTextAreaElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_tr(selectors: tr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableRowElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_tfoot(selectors: tfoot): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_track(selectors: track): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTrackElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_th(selectors: th): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableCellElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_tspan(selectors: tspan): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTSpanElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_thead(selectors: thead): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableSectionElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_u(selectors: u): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_time(selectors: time): org.scalajs.dom.NodeList[HTMLTimeElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_ul(selectors: ul): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLUListElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_title(selectors: title): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTitleElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_use(selectors: use): org.scalajs.dom.NodeList[org.scalajs.dom.SVGUseElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_tr(selectors: tr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTableRowElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_var(selectors: `var`): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_track(selectors: track): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLTrackElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_video(selectors: video): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLVideoElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_tspan(selectors: tspan): org.scalajs.dom.NodeList[org.scalajs.dom.SVGTSpanElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_view(selectors: view): org.scalajs.dom.NodeList[org.scalajs.dom.SVGViewElement & org.scalajs.dom.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_u(selectors: u): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_ul(selectors: ul): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLUListElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_use(selectors: use): org.scalajs.dom.NodeList[org.scalajs.dom.SVGUseElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_var(selectors: `var`): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_video(selectors: video): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLVideoElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_view(selectors: view): org.scalajs.dom.NodeList[org.scalajs.dom.SVGViewElement with org.scalajs.dom.Node] = js.native
-  @JSName("querySelectorAll")
-  def querySelectorAll_wbr(selectors: wbr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def querySelectorAll_wbr(selectors: wbr): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   
   /** Returns the first element that is a descendant of node that matches selectors. */
   /* standard DOM */
@@ -1541,8 +1498,6 @@ trait Element
   @JSName("querySelector")
   def querySelector_dialog(selectors: dialog): HTMLDialogElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_dir(selectors: dir): HTMLDirectoryElement | Null = js.native
-  @JSName("querySelector")
   def querySelector_div(selectors: div): org.scalajs.dom.HTMLDivElement | Null = js.native
   @JSName("querySelector")
   def querySelector_dl(selectors: dl): org.scalajs.dom.HTMLDListElement | Null = js.native
@@ -1613,17 +1568,11 @@ trait Element
   @JSName("querySelector")
   def querySelector_filter(selectors: filter): org.scalajs.dom.SVGFilterElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_font(selectors: font): HTMLFontElement | Null = js.native
-  @JSName("querySelector")
   def querySelector_footer(selectors: footer): org.scalajs.dom.HTMLElement | Null = js.native
   @JSName("querySelector")
   def querySelector_foreignObject(selectors: foreignObject): SVGForeignObjectElement | Null = js.native
   @JSName("querySelector")
   def querySelector_form(selectors: form): org.scalajs.dom.HTMLFormElement | Null = js.native
-  @JSName("querySelector")
-  def querySelector_frame(selectors: frame): HTMLFrameElement | Null = js.native
-  @JSName("querySelector")
-  def querySelector_frameset(selectors: frameset): HTMLFrameSetElement | Null = js.native
   @JSName("querySelector")
   def querySelector_g(selectors: g): org.scalajs.dom.SVGGElement | Null = js.native
   @JSName("querySelector")
@@ -1683,8 +1632,6 @@ trait Element
   @JSName("querySelector")
   def querySelector_marker(selectors: marker): org.scalajs.dom.SVGMarkerElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_marquee(selectors: marquee): HTMLMarqueeElement | Null = js.native
-  @JSName("querySelector")
   def querySelector_mask(selectors: mask): org.scalajs.dom.SVGMaskElement | Null = js.native
   @JSName("querySelector")
   def querySelector_menu(selectors: menu): org.scalajs.dom.HTMLMenuElement | Null = js.native
@@ -1712,8 +1659,6 @@ trait Element
   def querySelector_output(selectors: output): HTMLOutputElement | Null = js.native
   @JSName("querySelector")
   def querySelector_p(selectors: p): org.scalajs.dom.HTMLParagraphElement | Null = js.native
-  @JSName("querySelector")
-  def querySelector_param(selectors: param): org.scalajs.dom.HTMLParamElement | Null = js.native
   @JSName("querySelector")
   def querySelector_path(selectors: path): org.scalajs.dom.SVGPathElement | Null = js.native
   @JSName("querySelector")

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AudioProcessingEventInit
@@ -20,8 +19,7 @@ trait AudioProcessingEventInit
 }
 object AudioProcessingEventInit {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     inputBuffer: org.scalajs.dom.AudioBuffer,
     outputBuffer: org.scalajs.dom.AudioBuffer,
     playbackTime: Double
@@ -30,16 +28,12 @@ object AudioProcessingEventInit {
     __obj.asInstanceOf[AudioProcessingEventInit]
   }
   
-  @scala.inline
-  implicit class AudioProcessingEventInitMutableBuilder[Self <: AudioProcessingEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: AudioProcessingEventInit](x: Self) {
     
-    @scala.inline
-    def setInputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "inputBuffer", value.asInstanceOf[js.Any])
+    inline def setInputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "inputBuffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOutputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "outputBuffer", value.asInstanceOf[js.Any])
+    inline def setOutputBuffer(value: org.scalajs.dom.AudioBuffer): Self = StObject.set(x, "outputBuffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPlaybackTime(value: Double): Self = StObject.set(x, "playbackTime", value.asInstanceOf[js.Any])
+    inline def setPlaybackTime(value: Double): Self = StObject.set(x, "playbackTime", value.asInstanceOf[js.Any])
   }
 }

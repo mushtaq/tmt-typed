@@ -3,7 +3,6 @@ package tmttyped.std
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Keyframe
@@ -22,34 +21,25 @@ trait Keyframe
 }
 object Keyframe {
   
-  @scala.inline
-  def apply(): Keyframe = {
+  inline def apply(): Keyframe = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Keyframe]
   }
   
-  @scala.inline
-  implicit class KeyframeMutableBuilder[Self <: Keyframe] (val x: Self) extends AnyVal {
+  extension [Self <: Keyframe](x: Self) {
     
-    @scala.inline
-    def setComposite(value: CompositeOperationOrAuto): Self = StObject.set(x, "composite", value.asInstanceOf[js.Any])
+    inline def setComposite(value: CompositeOperationOrAuto): Self = StObject.set(x, "composite", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCompositeUndefined: Self = StObject.set(x, "composite", js.undefined)
+    inline def setCompositeUndefined: Self = StObject.set(x, "composite", js.undefined)
     
-    @scala.inline
-    def setEasing(value: java.lang.String): Self = StObject.set(x, "easing", value.asInstanceOf[js.Any])
+    inline def setEasing(value: java.lang.String): Self = StObject.set(x, "easing", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEasingUndefined: Self = StObject.set(x, "easing", js.undefined)
+    inline def setEasingUndefined: Self = StObject.set(x, "easing", js.undefined)
     
-    @scala.inline
-    def setOffset(value: Double): Self = StObject.set(x, "offset", value.asInstanceOf[js.Any])
+    inline def setOffset(value: Double): Self = StObject.set(x, "offset", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOffsetNull: Self = StObject.set(x, "offset", null)
+    inline def setOffsetNull: Self = StObject.set(x, "offset", null)
     
-    @scala.inline
-    def setOffsetUndefined: Self = StObject.set(x, "offset", js.undefined)
+    inline def setOffsetUndefined: Self = StObject.set(x, "offset", js.undefined)
   }
 }

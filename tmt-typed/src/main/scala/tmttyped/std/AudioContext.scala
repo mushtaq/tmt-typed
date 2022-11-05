@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** An audio-processing graph built from audio modules linked together, each represented by an AudioNode. */
@@ -28,6 +27,9 @@ trait AudioContext
   
   /* standard DOM */
   def getOutputTimestamp(): AudioTimestamp = js.native
+  
+  /* standard DOM */
+  val outputLatency: Double = js.native
   
   /* standard DOM */
   def resume(): js.Promise[Unit] = js.native

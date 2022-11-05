@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -25,8 +24,7 @@ trait CryptoKey extends StObject {
 }
 object CryptoKey {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     algorithm: org.scalajs.dom.KeyAlgorithm,
     extractable: scala.Boolean,
     `type`: org.scalajs.dom.KeyType,
@@ -37,22 +35,16 @@ object CryptoKey {
     __obj.asInstanceOf[CryptoKey]
   }
   
-  @scala.inline
-  implicit class CryptoKeyMutableBuilder[Self <: CryptoKey] (val x: Self) extends AnyVal {
+  extension [Self <: CryptoKey](x: Self) {
     
-    @scala.inline
-    def setAlgorithm(value: org.scalajs.dom.KeyAlgorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])
+    inline def setAlgorithm(value: org.scalajs.dom.KeyAlgorithm): Self = StObject.set(x, "algorithm", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setExtractable(value: scala.Boolean): Self = StObject.set(x, "extractable", value.asInstanceOf[js.Any])
+    inline def setExtractable(value: scala.Boolean): Self = StObject.set(x, "extractable", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setType(value: org.scalajs.dom.KeyType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    inline def setType(value: org.scalajs.dom.KeyType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUsages(value: js.Array[org.scalajs.dom.KeyUsage]): Self = StObject.set(x, "usages", value.asInstanceOf[js.Any])
+    inline def setUsages(value: js.Array[org.scalajs.dom.KeyUsage]): Self = StObject.set(x, "usages", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUsagesVarargs(value: org.scalajs.dom.KeyUsage*): Self = StObject.set(x, "usages", js.Array(value :_*))
+    inline def setUsagesVarargs(value: org.scalajs.dom.KeyUsage*): Self = StObject.set(x, "usages", js.Array(value*))
   }
 }

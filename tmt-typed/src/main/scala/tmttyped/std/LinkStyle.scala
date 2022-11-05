@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait LinkStyle extends StObject {
@@ -12,19 +11,15 @@ trait LinkStyle extends StObject {
 }
 object LinkStyle {
   
-  @scala.inline
-  def apply(): LinkStyle = {
+  inline def apply(): LinkStyle = {
     val __obj = js.Dynamic.literal(sheet = null)
     __obj.asInstanceOf[LinkStyle]
   }
   
-  @scala.inline
-  implicit class LinkStyleMutableBuilder[Self <: LinkStyle] (val x: Self) extends AnyVal {
+  extension [Self <: LinkStyle](x: Self) {
     
-    @scala.inline
-    def setSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "sheet", value.asInstanceOf[js.Any])
+    inline def setSheet(value: org.scalajs.dom.CSSStyleSheet): Self = StObject.set(x, "sheet", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSheetNull: Self = StObject.set(x, "sheet", null)
+    inline def setSheetNull: Self = StObject.set(x, "sheet", null)
   }
 }

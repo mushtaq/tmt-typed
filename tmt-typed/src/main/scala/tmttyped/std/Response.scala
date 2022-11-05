@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Fetch API interface represents the response to a request. */
@@ -33,8 +32,7 @@ trait Response
 }
 object Response {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     arrayBuffer: () => js.Promise[js.typedarray.ArrayBuffer],
     blob: () => js.Promise[org.scalajs.dom.Blob],
     bodyUsed: scala.Boolean,
@@ -54,28 +52,20 @@ object Response {
     __obj.asInstanceOf[Response]
   }
   
-  @scala.inline
-  implicit class ResponseMutableBuilder[Self <: Response] (val x: Self) extends AnyVal {
+  extension [Self <: Response](x: Self) {
     
-    @scala.inline
-    def setHeaders(value: org.scalajs.dom.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
+    inline def setHeaders(value: org.scalajs.dom.Headers): Self = StObject.set(x, "headers", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setOk(value: scala.Boolean): Self = StObject.set(x, "ok", value.asInstanceOf[js.Any])
+    inline def setOk(value: scala.Boolean): Self = StObject.set(x, "ok", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRedirected(value: scala.Boolean): Self = StObject.set(x, "redirected", value.asInstanceOf[js.Any])
+    inline def setRedirected(value: scala.Boolean): Self = StObject.set(x, "redirected", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStatus(value: Double): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
+    inline def setStatus(value: Double): Self = StObject.set(x, "status", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
+    inline def setStatusText(value: java.lang.String): Self = StObject.set(x, "statusText", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setType(value: org.scalajs.dom.ResponseType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    inline def setType(value: org.scalajs.dom.ResponseType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
+    inline def setUrl(value: java.lang.String): Self = StObject.set(x, "url", value.asInstanceOf[js.Any])
   }
 }

@@ -3,14 +3,13 @@ package tmttyped.std.global
 import tmttyped.std.DOMRectInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("DOMRectReadOnly")
 @js.native
 /* standard DOM */
-class DOMRectReadOnly ()
+open class DOMRectReadOnly ()
   extends StObject
      with tmttyped.std.DOMRectReadOnly {
   def this(x: Double) = this()
@@ -72,8 +71,6 @@ object DOMRectReadOnly {
   val ^ : js.Any = js.native
   
   /* standard DOM */
-  @scala.inline
-  def fromRect(): tmttyped.std.DOMRectReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMRectReadOnly]
-  @scala.inline
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMRectReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMRectReadOnly]
+  inline def fromRect(): tmttyped.std.DOMRectReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMRectReadOnly]
+  inline def fromRect(other: DOMRectInit): tmttyped.std.DOMRectReadOnly = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMRectReadOnly]
 }

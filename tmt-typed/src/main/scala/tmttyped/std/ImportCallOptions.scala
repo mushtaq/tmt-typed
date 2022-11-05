@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -18,19 +17,15 @@ trait ImportCallOptions extends StObject {
 }
 object ImportCallOptions {
   
-  @scala.inline
-  def apply(): ImportCallOptions = {
+  inline def apply(): ImportCallOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ImportCallOptions]
   }
   
-  @scala.inline
-  implicit class ImportCallOptionsMutableBuilder[Self <: ImportCallOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ImportCallOptions](x: Self) {
     
-    @scala.inline
-    def setAssert(value: ImportAssertions): Self = StObject.set(x, "assert", value.asInstanceOf[js.Any])
+    inline def setAssert(value: ImportAssertions): Self = StObject.set(x, "assert", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAssertUndefined: Self = StObject.set(x, "assert", js.undefined)
+    inline def setAssertUndefined: Self = StObject.set(x, "assert", js.undefined)
   }
 }

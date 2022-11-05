@@ -1,11 +1,9 @@
 package tmttyped.node
 
 import org.scalablytyped.runtime.NumberDictionary
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object zlibMod {
@@ -169,39 +167,31 @@ object zlibMod {
   @js.native
   val Z_VERSION_ERROR: Double = js.native
   
-  @scala.inline
-  def brotliCompress(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompress")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def brotliCompress(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompress")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def brotliCompress(buf: InputType, options: BrotliOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompress")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def brotliCompress(buf: InputType, options: BrotliOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompress")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Compress a chunk of data with `BrotliCompress`.
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def brotliCompressSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompressSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def brotliCompressSync(buf: InputType, options: BrotliOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompressSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def brotliCompressSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompressSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def brotliCompressSync(buf: InputType, options: BrotliOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliCompressSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @scala.inline
-  def brotliDecompress(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompress")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def brotliDecompress(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompress")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def brotliDecompress(buf: InputType, options: BrotliOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompress")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def brotliDecompress(buf: InputType, options: BrotliOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompress")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Decompress a chunk of data with `BrotliDecompress`.
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def brotliDecompressSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompressSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def brotliDecompressSync(buf: InputType, options: BrotliOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompressSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def brotliDecompressSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompressSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def brotliDecompressSync(buf: InputType, options: BrotliOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("brotliDecompressSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   object constants {
     
@@ -647,28 +637,22 @@ object zlibMod {
     * Creates and returns a new `BrotliCompress` object.
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def createBrotliCompress(): BrotliCompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliCompress")().asInstanceOf[BrotliCompress_]
-  @scala.inline
-  def createBrotliCompress(options: BrotliOptions): BrotliCompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliCompress")(options.asInstanceOf[js.Any]).asInstanceOf[BrotliCompress_]
+  inline def createBrotliCompress(): BrotliCompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliCompress")().asInstanceOf[BrotliCompress_]
+  inline def createBrotliCompress(options: BrotliOptions): BrotliCompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliCompress")(options.asInstanceOf[js.Any]).asInstanceOf[BrotliCompress_]
   
   /**
     * Creates and returns a new `BrotliDecompress` object.
     * @since v11.7.0, v10.16.0
     */
-  @scala.inline
-  def createBrotliDecompress(): BrotliDecompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliDecompress")().asInstanceOf[BrotliDecompress_]
-  @scala.inline
-  def createBrotliDecompress(options: BrotliOptions): BrotliDecompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliDecompress")(options.asInstanceOf[js.Any]).asInstanceOf[BrotliDecompress_]
+  inline def createBrotliDecompress(): BrotliDecompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliDecompress")().asInstanceOf[BrotliDecompress_]
+  inline def createBrotliDecompress(options: BrotliOptions): BrotliDecompress_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createBrotliDecompress")(options.asInstanceOf[js.Any]).asInstanceOf[BrotliDecompress_]
   
   /**
     * Creates and returns a new `Deflate` object.
     * @since v0.5.8
     */
-  @scala.inline
-  def createDeflate(): Deflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflate")().asInstanceOf[Deflate_]
-  @scala.inline
-  def createDeflate(options: ZlibOptions): Deflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflate")(options.asInstanceOf[js.Any]).asInstanceOf[Deflate_]
+  inline def createDeflate(): Deflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflate")().asInstanceOf[Deflate_]
+  inline def createDeflate(options: ZlibOptions): Deflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflate")(options.asInstanceOf[js.Any]).asInstanceOf[Deflate_]
   
   /**
     * Creates and returns a new `DeflateRaw` object.
@@ -680,175 +664,135 @@ object zlibMod {
     * that effectively uses an 8-bit window only.
     * @since v0.5.8
     */
-  @scala.inline
-  def createDeflateRaw(): DeflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflateRaw")().asInstanceOf[DeflateRaw_]
-  @scala.inline
-  def createDeflateRaw(options: ZlibOptions): DeflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflateRaw")(options.asInstanceOf[js.Any]).asInstanceOf[DeflateRaw_]
+  inline def createDeflateRaw(): DeflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflateRaw")().asInstanceOf[DeflateRaw_]
+  inline def createDeflateRaw(options: ZlibOptions): DeflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createDeflateRaw")(options.asInstanceOf[js.Any]).asInstanceOf[DeflateRaw_]
   
   /**
     * Creates and returns a new `Gunzip` object.
     * @since v0.5.8
     */
-  @scala.inline
-  def createGunzip(): Gunzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGunzip")().asInstanceOf[Gunzip_]
-  @scala.inline
-  def createGunzip(options: ZlibOptions): Gunzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGunzip")(options.asInstanceOf[js.Any]).asInstanceOf[Gunzip_]
+  inline def createGunzip(): Gunzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGunzip")().asInstanceOf[Gunzip_]
+  inline def createGunzip(options: ZlibOptions): Gunzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGunzip")(options.asInstanceOf[js.Any]).asInstanceOf[Gunzip_]
   
   /**
     * Creates and returns a new `Gzip` object.
     * See `example`.
     * @since v0.5.8
     */
-  @scala.inline
-  def createGzip(): Gzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGzip")().asInstanceOf[Gzip_]
-  @scala.inline
-  def createGzip(options: ZlibOptions): Gzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGzip")(options.asInstanceOf[js.Any]).asInstanceOf[Gzip_]
+  inline def createGzip(): Gzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGzip")().asInstanceOf[Gzip_]
+  inline def createGzip(options: ZlibOptions): Gzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createGzip")(options.asInstanceOf[js.Any]).asInstanceOf[Gzip_]
   
   /**
     * Creates and returns a new `Inflate` object.
     * @since v0.5.8
     */
-  @scala.inline
-  def createInflate(): Inflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflate")().asInstanceOf[Inflate_]
-  @scala.inline
-  def createInflate(options: ZlibOptions): Inflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflate")(options.asInstanceOf[js.Any]).asInstanceOf[Inflate_]
+  inline def createInflate(): Inflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflate")().asInstanceOf[Inflate_]
+  inline def createInflate(options: ZlibOptions): Inflate_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflate")(options.asInstanceOf[js.Any]).asInstanceOf[Inflate_]
   
   /**
     * Creates and returns a new `InflateRaw` object.
     * @since v0.5.8
     */
-  @scala.inline
-  def createInflateRaw(): InflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflateRaw")().asInstanceOf[InflateRaw_]
-  @scala.inline
-  def createInflateRaw(options: ZlibOptions): InflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflateRaw")(options.asInstanceOf[js.Any]).asInstanceOf[InflateRaw_]
+  inline def createInflateRaw(): InflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflateRaw")().asInstanceOf[InflateRaw_]
+  inline def createInflateRaw(options: ZlibOptions): InflateRaw_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createInflateRaw")(options.asInstanceOf[js.Any]).asInstanceOf[InflateRaw_]
   
   /**
     * Creates and returns a new `Unzip` object.
     * @since v0.5.8
     */
-  @scala.inline
-  def createUnzip(): Unzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createUnzip")().asInstanceOf[Unzip_]
-  @scala.inline
-  def createUnzip(options: ZlibOptions): Unzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createUnzip")(options.asInstanceOf[js.Any]).asInstanceOf[Unzip_]
+  inline def createUnzip(): Unzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createUnzip")().asInstanceOf[Unzip_]
+  inline def createUnzip(options: ZlibOptions): Unzip_ = ^.asInstanceOf[js.Dynamic].applyDynamic("createUnzip")(options.asInstanceOf[js.Any]).asInstanceOf[Unzip_]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def deflate(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflate")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def deflate(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflate")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def deflate(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflate")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def deflate(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflate")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def deflateRaw(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRaw")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def deflateRaw(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRaw")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def deflateRaw(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRaw")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def deflateRaw(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRaw")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Compress a chunk of data with `DeflateRaw`.
     * @since v0.11.12
     */
-  @scala.inline
-  def deflateRawSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("deflateRawSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def deflateRawSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRawSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def deflateRawSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("deflateRawSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def deflateRawSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateRawSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * Compress a chunk of data with `Deflate`.
     * @since v0.11.12
     */
-  @scala.inline
-  def deflateSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("deflateSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def deflateSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def deflateSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("deflateSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def deflateSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("deflateSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def gunzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def gunzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def gunzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def gunzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Decompress a chunk of data with `Gunzip`.
     * @since v0.11.12
     */
-  @scala.inline
-  def gunzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("gunzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def gunzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def gunzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("gunzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def gunzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("gunzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def gzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def gzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def gzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def gzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("gzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Compress a chunk of data with `Gzip`.
     * @since v0.11.12
     */
-  @scala.inline
-  def gzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("gzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def gzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("gzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def gzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("gzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def gzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("gzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def inflate(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflate")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def inflate(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflate")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def inflate(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflate")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def inflate(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflate")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def inflateRaw(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRaw")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def inflateRaw(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRaw")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def inflateRaw(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRaw")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def inflateRaw(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRaw")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Decompress a chunk of data with `InflateRaw`.
     * @since v0.11.12
     */
-  @scala.inline
-  def inflateRawSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("inflateRawSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def inflateRawSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRawSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def inflateRawSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("inflateRawSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def inflateRawSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateRawSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * Decompress a chunk of data with `Inflate`.
     * @since v0.11.12
     */
-  @scala.inline
-  def inflateSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("inflateSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def inflateSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def inflateSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("inflateSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def inflateSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("inflateSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   /**
     * @since v0.6.0
     */
-  @scala.inline
-  def unzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def unzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def unzip(buf: InputType, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unzip")(buf.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def unzip(buf: InputType, options: ZlibOptions, callback: CompressCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unzip")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   /**
     * Decompress a chunk of data with `Unzip`.
     * @since v0.11.12
     */
-  @scala.inline
-  def unzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("unzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def unzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("unzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def unzipSync(buf: InputType): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("unzipSync")(buf.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def unzipSync(buf: InputType, options: ZlibOptions): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("unzipSync")(buf.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   @js.native
   trait BrotliCompress_
@@ -888,49 +832,37 @@ object zlibMod {
   }
   object BrotliOptions {
     
-    @scala.inline
-    def apply(): BrotliOptions = {
+    inline def apply(): BrotliOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[BrotliOptions]
     }
     
-    @scala.inline
-    implicit class BrotliOptionsMutableBuilder[Self <: BrotliOptions] (val x: Self) extends AnyVal {
+    extension [Self <: BrotliOptions](x: Self) {
       
-      @scala.inline
-      def setChunkSize(value: Double): Self = StObject.set(x, "chunkSize", value.asInstanceOf[js.Any])
+      inline def setChunkSize(value: Double): Self = StObject.set(x, "chunkSize", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setChunkSizeUndefined: Self = StObject.set(x, "chunkSize", js.undefined)
+      inline def setChunkSizeUndefined: Self = StObject.set(x, "chunkSize", js.undefined)
       
-      @scala.inline
-      def setFinishFlush(value: Double): Self = StObject.set(x, "finishFlush", value.asInstanceOf[js.Any])
+      inline def setFinishFlush(value: Double): Self = StObject.set(x, "finishFlush", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFinishFlushUndefined: Self = StObject.set(x, "finishFlush", js.undefined)
+      inline def setFinishFlushUndefined: Self = StObject.set(x, "finishFlush", js.undefined)
       
-      @scala.inline
-      def setFlush(value: Double): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
+      inline def setFlush(value: Double): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
+      inline def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
       
-      @scala.inline
-      def setMaxOutputLength(value: Double): Self = StObject.set(x, "maxOutputLength", value.asInstanceOf[js.Any])
+      inline def setMaxOutputLength(value: Double): Self = StObject.set(x, "maxOutputLength", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxOutputLengthUndefined: Self = StObject.set(x, "maxOutputLength", js.undefined)
+      inline def setMaxOutputLengthUndefined: Self = StObject.set(x, "maxOutputLength", js.undefined)
       
-      @scala.inline
-      def setParams(
+      inline def setParams(
         value: /**
         * Each key is a `constants.BROTLI_*` constant.
         */
       NumberDictionary[Boolean | Double]
       ): Self = StObject.set(x, "params", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setParamsUndefined: Self = StObject.set(x, "params", js.undefined)
+      inline def setParamsUndefined: Self = StObject.set(x, "params", js.undefined)
     }
   }
   
@@ -972,7 +904,7 @@ object zlibMod {
        with Zlib
        with ZlibReset
   
-  type InputType = String | js.typedarray.ArrayBuffer | ArrayBufferView
+  type InputType = String | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
   
   @js.native
   trait Unzip_
@@ -1007,7 +939,7 @@ object zlibMod {
     var chunkSize: js.UndefOr[Double] = js.undefined
     
     // compression only
-    var dictionary: js.UndefOr[ArrayBufferView | js.typedarray.ArrayBuffer] = js.undefined
+    var dictionary: js.UndefOr[js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer] = js.undefined
     
     /**
       * @default constants.Z_FINISH
@@ -1036,74 +968,52 @@ object zlibMod {
   }
   object ZlibOptions {
     
-    @scala.inline
-    def apply(): ZlibOptions = {
+    inline def apply(): ZlibOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ZlibOptions]
     }
     
-    @scala.inline
-    implicit class ZlibOptionsMutableBuilder[Self <: ZlibOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ZlibOptions](x: Self) {
       
-      @scala.inline
-      def setChunkSize(value: Double): Self = StObject.set(x, "chunkSize", value.asInstanceOf[js.Any])
+      inline def setChunkSize(value: Double): Self = StObject.set(x, "chunkSize", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setChunkSizeUndefined: Self = StObject.set(x, "chunkSize", js.undefined)
+      inline def setChunkSizeUndefined: Self = StObject.set(x, "chunkSize", js.undefined)
       
-      @scala.inline
-      def setDictionary(value: ArrayBufferView | js.typedarray.ArrayBuffer): Self = StObject.set(x, "dictionary", value.asInstanceOf[js.Any])
+      inline def setDictionary(value: js.typedarray.ArrayBufferView | js.typedarray.ArrayBuffer): Self = StObject.set(x, "dictionary", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDictionaryUndefined: Self = StObject.set(x, "dictionary", js.undefined)
+      inline def setDictionaryUndefined: Self = StObject.set(x, "dictionary", js.undefined)
       
-      @scala.inline
-      def setFinishFlush(value: Double): Self = StObject.set(x, "finishFlush", value.asInstanceOf[js.Any])
+      inline def setFinishFlush(value: Double): Self = StObject.set(x, "finishFlush", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFinishFlushUndefined: Self = StObject.set(x, "finishFlush", js.undefined)
+      inline def setFinishFlushUndefined: Self = StObject.set(x, "finishFlush", js.undefined)
       
-      @scala.inline
-      def setFlush(value: Double): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
+      inline def setFlush(value: Double): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
+      inline def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
       
-      @scala.inline
-      def setInfo(value: Boolean): Self = StObject.set(x, "info", value.asInstanceOf[js.Any])
+      inline def setInfo(value: Boolean): Self = StObject.set(x, "info", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setInfoUndefined: Self = StObject.set(x, "info", js.undefined)
+      inline def setInfoUndefined: Self = StObject.set(x, "info", js.undefined)
       
-      @scala.inline
-      def setLevel(value: Double): Self = StObject.set(x, "level", value.asInstanceOf[js.Any])
+      inline def setLevel(value: Double): Self = StObject.set(x, "level", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLevelUndefined: Self = StObject.set(x, "level", js.undefined)
+      inline def setLevelUndefined: Self = StObject.set(x, "level", js.undefined)
       
-      @scala.inline
-      def setMaxOutputLength(value: Double): Self = StObject.set(x, "maxOutputLength", value.asInstanceOf[js.Any])
+      inline def setMaxOutputLength(value: Double): Self = StObject.set(x, "maxOutputLength", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxOutputLengthUndefined: Self = StObject.set(x, "maxOutputLength", js.undefined)
+      inline def setMaxOutputLengthUndefined: Self = StObject.set(x, "maxOutputLength", js.undefined)
       
-      @scala.inline
-      def setMemLevel(value: Double): Self = StObject.set(x, "memLevel", value.asInstanceOf[js.Any])
+      inline def setMemLevel(value: Double): Self = StObject.set(x, "memLevel", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMemLevelUndefined: Self = StObject.set(x, "memLevel", js.undefined)
+      inline def setMemLevelUndefined: Self = StObject.set(x, "memLevel", js.undefined)
       
-      @scala.inline
-      def setStrategy(value: Double): Self = StObject.set(x, "strategy", value.asInstanceOf[js.Any])
+      inline def setStrategy(value: Double): Self = StObject.set(x, "strategy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStrategyUndefined: Self = StObject.set(x, "strategy", js.undefined)
+      inline def setStrategyUndefined: Self = StObject.set(x, "strategy", js.undefined)
       
-      @scala.inline
-      def setWindowBits(value: Double): Self = StObject.set(x, "windowBits", value.asInstanceOf[js.Any])
+      inline def setWindowBits(value: Double): Self = StObject.set(x, "windowBits", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWindowBitsUndefined: Self = StObject.set(x, "windowBits", js.undefined)
+      inline def setWindowBitsUndefined: Self = StObject.set(x, "windowBits", js.undefined)
     }
   }
   
@@ -1113,17 +1023,14 @@ object zlibMod {
   }
   object ZlibParams {
     
-    @scala.inline
-    def apply(params: (Double, Double, js.Function0[Unit]) => Unit): ZlibParams = {
+    inline def apply(params: (Double, Double, js.Function0[Unit]) => Unit): ZlibParams = {
       val __obj = js.Dynamic.literal(params = js.Any.fromFunction3(params))
       __obj.asInstanceOf[ZlibParams]
     }
     
-    @scala.inline
-    implicit class ZlibParamsMutableBuilder[Self <: ZlibParams] (val x: Self) extends AnyVal {
+    extension [Self <: ZlibParams](x: Self) {
       
-      @scala.inline
-      def setParams(value: (Double, Double, js.Function0[Unit]) => Unit): Self = StObject.set(x, "params", js.Any.fromFunction3(value))
+      inline def setParams(value: (Double, Double, js.Function0[Unit]) => Unit): Self = StObject.set(x, "params", js.Any.fromFunction3(value))
     }
   }
   
@@ -1133,17 +1040,14 @@ object zlibMod {
   }
   object ZlibReset {
     
-    @scala.inline
-    def apply(reset: () => Unit): ZlibReset = {
+    inline def apply(reset: () => Unit): ZlibReset = {
       val __obj = js.Dynamic.literal(reset = js.Any.fromFunction0(reset))
       __obj.asInstanceOf[ZlibReset]
     }
     
-    @scala.inline
-    implicit class ZlibResetMutableBuilder[Self <: ZlibReset] (val x: Self) extends AnyVal {
+    extension [Self <: ZlibReset](x: Self) {
       
-      @scala.inline
-      def setReset(value: () => Unit): Self = StObject.set(x, "reset", js.Any.fromFunction0(value))
+      inline def setReset(value: () => Unit): Self = StObject.set(x, "reset", js.Any.fromFunction0(value))
     }
   }
 }

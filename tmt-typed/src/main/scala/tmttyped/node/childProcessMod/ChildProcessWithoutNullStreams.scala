@@ -4,7 +4,6 @@ import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.nodeStreamMod.Writable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // return this object when stdio option is undefined or not specified

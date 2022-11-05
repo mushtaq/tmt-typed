@@ -8,7 +8,6 @@ import tmttyped.node.nodeStrings.stream
 import tmttyped.node.nodeStrings.timeout
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native

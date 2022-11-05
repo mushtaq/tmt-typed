@@ -1,8 +1,8 @@
 package tmttyped.node.http2Mod
 
+import org.scalajs.dom.AbortSignal
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ClientSessionRequestOptions extends StObject {
@@ -13,49 +13,43 @@ trait ClientSessionRequestOptions extends StObject {
   
   var parent: js.UndefOr[Double] = js.undefined
   
+  var signal: js.UndefOr[AbortSignal] = js.undefined
+  
   var waitForTrailers: js.UndefOr[Boolean] = js.undefined
   
   var weight: js.UndefOr[Double] = js.undefined
 }
 object ClientSessionRequestOptions {
   
-  @scala.inline
-  def apply(): ClientSessionRequestOptions = {
+  inline def apply(): ClientSessionRequestOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ClientSessionRequestOptions]
   }
   
-  @scala.inline
-  implicit class ClientSessionRequestOptionsMutableBuilder[Self <: ClientSessionRequestOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ClientSessionRequestOptions](x: Self) {
     
-    @scala.inline
-    def setEndStream(value: Boolean): Self = StObject.set(x, "endStream", value.asInstanceOf[js.Any])
+    inline def setEndStream(value: Boolean): Self = StObject.set(x, "endStream", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEndStreamUndefined: Self = StObject.set(x, "endStream", js.undefined)
+    inline def setEndStreamUndefined: Self = StObject.set(x, "endStream", js.undefined)
     
-    @scala.inline
-    def setExclusive(value: Boolean): Self = StObject.set(x, "exclusive", value.asInstanceOf[js.Any])
+    inline def setExclusive(value: Boolean): Self = StObject.set(x, "exclusive", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setExclusiveUndefined: Self = StObject.set(x, "exclusive", js.undefined)
+    inline def setExclusiveUndefined: Self = StObject.set(x, "exclusive", js.undefined)
     
-    @scala.inline
-    def setParent(value: Double): Self = StObject.set(x, "parent", value.asInstanceOf[js.Any])
+    inline def setParent(value: Double): Self = StObject.set(x, "parent", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setParentUndefined: Self = StObject.set(x, "parent", js.undefined)
+    inline def setParentUndefined: Self = StObject.set(x, "parent", js.undefined)
     
-    @scala.inline
-    def setWaitForTrailers(value: Boolean): Self = StObject.set(x, "waitForTrailers", value.asInstanceOf[js.Any])
+    inline def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWaitForTrailersUndefined: Self = StObject.set(x, "waitForTrailers", js.undefined)
+    inline def setSignalUndefined: Self = StObject.set(x, "signal", js.undefined)
     
-    @scala.inline
-    def setWeight(value: Double): Self = StObject.set(x, "weight", value.asInstanceOf[js.Any])
+    inline def setWaitForTrailers(value: Boolean): Self = StObject.set(x, "waitForTrailers", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWeightUndefined: Self = StObject.set(x, "weight", js.undefined)
+    inline def setWaitForTrailersUndefined: Self = StObject.set(x, "waitForTrailers", js.undefined)
+    
+    inline def setWeight(value: Double): Self = StObject.set(x, "weight", value.asInstanceOf[js.Any])
+    
+    inline def setWeightUndefined: Self = StObject.set(x, "weight", js.undefined)
   }
 }

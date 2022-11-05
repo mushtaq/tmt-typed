@@ -1,9 +1,7 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Dict
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object querystringMod {
@@ -45,22 +43,14 @@ object querystringMod {
     * @param [eq='='] . The substring used to delimit keys and values in the query string.
     */
   /* was `typeof parse` */
-  @scala.inline
-  def decode(str: String): ParsedUrlQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any]).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: String, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: String, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: String, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: Unit, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: Unit, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def decode(str: String, sep: Unit, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String): ParsedUrlQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any]).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: String, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: String, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: String, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: Unit, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: Unit, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def decode(str: String, sep: Unit, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("decode")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
   
   /**
     * The `querystring.stringify()` method produces a URL query string from a
@@ -99,38 +89,22 @@ object querystringMod {
     * @param [eq='='] . The substring used to delimit keys and values in the query string.
     */
   /* was `typeof stringify` */
-  @scala.inline
-  def encode(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")().asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: Unit, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")().asInstanceOf[String]
+  inline def encode(obj: Unit, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: Unit, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def encode(obj: ParsedUrlQueryInput, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("encode")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
   /**
     * The `querystring.escape()` method performs URL percent-encoding on the given`str` in a manner that is optimized for the specific requirements of URL
@@ -142,8 +116,7 @@ object querystringMod {
     * necessary by assigning `querystring.escape` to an alternative function.
     * @since v0.1.25
     */
-  @scala.inline
-  def escape(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("escape")(str.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def escape(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("escape")(str.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `querystring.parse()` method parses a URL query string (`str`) into a
@@ -177,22 +150,14 @@ object querystringMod {
     * @param [sep='&'] The substring used to delimit key and value pairs in the query string.
     * @param [eq='='] . The substring used to delimit keys and values in the query string.
     */
-  @scala.inline
-  def parse(str: String): ParsedUrlQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any]).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: String, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: String, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: String, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: Unit, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: Unit, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
-  @scala.inline
-  def parse(str: String, sep: Unit, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String): ParsedUrlQuery = ^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any]).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: String, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: String, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: String, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: Unit, eq: String): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: Unit, eq: String, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
+  inline def parse(str: String, sep: Unit, eq: Unit, options: ParseOptions): ParsedUrlQuery = (^.asInstanceOf[js.Dynamic].applyDynamic("parse")(str.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ParsedUrlQuery]
   
   /**
     * The `querystring.stringify()` method produces a URL query string from a
@@ -230,38 +195,22 @@ object querystringMod {
     * @param [sep='&'] The substring used to delimit key and value pairs in the query string.
     * @param [eq='='] . The substring used to delimit keys and values in the query string.
     */
-  @scala.inline
-  def stringify(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stringify")().asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: Unit, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stringify")().asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: Unit, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: String, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: String, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: String, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: String): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: String, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def stringify(obj: ParsedUrlQueryInput, sep: Unit, eq: Unit, options: StringifyOptions): String = (^.asInstanceOf[js.Dynamic].applyDynamic("stringify")(obj.asInstanceOf[js.Any], sep.asInstanceOf[js.Any], eq.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
   /**
     * The `querystring.unescape()` method performs decoding of URL percent-encoded
@@ -277,8 +226,7 @@ object querystringMod {
     * a safer equivalent that does not throw on malformed URLs will be used.
     * @since v0.1.25
     */
-  @scala.inline
-  def unescape(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("unescape")(str.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def unescape(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("unescape")(str.asInstanceOf[js.Any]).asInstanceOf[String]
   
   trait ParseOptions extends StObject {
     
@@ -288,32 +236,26 @@ object querystringMod {
   }
   object ParseOptions {
     
-    @scala.inline
-    def apply(): ParseOptions = {
+    inline def apply(): ParseOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ParseOptions]
     }
     
-    @scala.inline
-    implicit class ParseOptionsMutableBuilder[Self <: ParseOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ParseOptions](x: Self) {
       
-      @scala.inline
-      def setDecodeURIComponent(value: /* str */ String => String): Self = StObject.set(x, "decodeURIComponent", js.Any.fromFunction1(value))
+      inline def setDecodeURIComponent(value: /* str */ String => String): Self = StObject.set(x, "decodeURIComponent", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setDecodeURIComponentUndefined: Self = StObject.set(x, "decodeURIComponent", js.undefined)
+      inline def setDecodeURIComponentUndefined: Self = StObject.set(x, "decodeURIComponent", js.undefined)
       
-      @scala.inline
-      def setMaxKeys(value: Double): Self = StObject.set(x, "maxKeys", value.asInstanceOf[js.Any])
+      inline def setMaxKeys(value: Double): Self = StObject.set(x, "maxKeys", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxKeysUndefined: Self = StObject.set(x, "maxKeys", js.undefined)
+      inline def setMaxKeysUndefined: Self = StObject.set(x, "maxKeys", js.undefined)
     }
   }
   
-  type ParsedUrlQuery = Dict[String | js.Array[String]]
+  type ParsedUrlQuery = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string | Array<string>> */ Any
   
-  type ParsedUrlQueryInput = Dict[String | Double | Boolean | (js.Array[Boolean | Double | String]) | Null]
+  type ParsedUrlQueryInput = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<string | number | boolean | ReadonlyArray<string> | ReadonlyArray<number> | ReadonlyArray<boolean> | null> */ Any
   
   trait StringifyOptions extends StObject {
     
@@ -321,20 +263,16 @@ object querystringMod {
   }
   object StringifyOptions {
     
-    @scala.inline
-    def apply(): StringifyOptions = {
+    inline def apply(): StringifyOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[StringifyOptions]
     }
     
-    @scala.inline
-    implicit class StringifyOptionsMutableBuilder[Self <: StringifyOptions] (val x: Self) extends AnyVal {
+    extension [Self <: StringifyOptions](x: Self) {
       
-      @scala.inline
-      def setEncodeURIComponent(value: /* str */ String => String): Self = StObject.set(x, "encodeURIComponent", js.Any.fromFunction1(value))
+      inline def setEncodeURIComponent(value: /* str */ String => String): Self = StObject.set(x, "encodeURIComponent", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setEncodeURIComponentUndefined: Self = StObject.set(x, "encodeURIComponent", js.undefined)
+      inline def setEncodeURIComponentUndefined: Self = StObject.set(x, "encodeURIComponent", js.undefined)
     }
   }
 }

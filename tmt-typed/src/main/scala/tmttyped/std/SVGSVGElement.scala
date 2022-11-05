@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides access to the properties of <svg> elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices. */
@@ -80,18 +79,18 @@ trait SVGSVGElement
   
   /* standard DOM */
   def getEnclosureList(rect: DOMRectReadOnly): org.scalajs.dom.NodeList[
-    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) & org.scalajs.dom.Node
   ] = js.native
   def getEnclosureList(rect: DOMRectReadOnly, referenceElement: org.scalajs.dom.SVGElement): org.scalajs.dom.NodeList[
-    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) & org.scalajs.dom.Node
   ] = js.native
   
   /* standard DOM */
   def getIntersectionList(rect: DOMRectReadOnly): org.scalajs.dom.NodeList[
-    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) & org.scalajs.dom.Node
   ] = js.native
   def getIntersectionList(rect: DOMRectReadOnly, referenceElement: org.scalajs.dom.SVGElement): org.scalajs.dom.NodeList[
-    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) with org.scalajs.dom.Node
+    (org.scalajs.dom.SVGCircleElement | org.scalajs.dom.SVGEllipseElement | org.scalajs.dom.SVGImageElement | org.scalajs.dom.SVGLineElement | org.scalajs.dom.SVGPathElement | org.scalajs.dom.SVGPolygonElement | org.scalajs.dom.SVGPolylineElement | org.scalajs.dom.SVGRectElement | org.scalajs.dom.SVGTextElement | org.scalajs.dom.SVGUseElement) & org.scalajs.dom.Node
   ] = js.native
   
   /* standard DOM */

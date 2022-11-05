@@ -12,7 +12,6 @@ import tmttyped.node.nodeStrings.secureConnect
 import tmttyped.node.nodeStrings.session
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -27,7 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("tls", "TLSSocket")
 @js.native
-class TLSSocket protected () extends StObject {
+open class TLSSocket protected () extends StObject {
   /**
     * Construct a new tls.TLSSocket object from an existing TCP socket.
     */
@@ -59,8 +58,8 @@ class TLSSocket protected () extends StObject {
   var authorizationError: js.Error = js.native
   
   /**
-    * Returns `true` if the peer certificate was signed by one of the CAs specified
-    * when creating the `tls.TLSSocket` instance, otherwise `false`.
+    * This property is `true` if the peer certificate was signed by one of the CAs
+    * specified when creating the `tls.TLSSocket` instance, otherwise `false`.
     * @since v0.11.4
     */
   var authorized: Boolean = js.native
@@ -87,9 +86,9 @@ class TLSSocket protected () extends StObject {
     * When enabled, TLS packet trace information is written to `stderr`. This can be
     * used to debug TLS connection problems.
     *
-    * Note: The format of the output is identical to the output of `openssl s_client -trace` or `openssl s_server -trace`. While it is produced by OpenSSL's`SSL_trace()` function, the format is
-    * undocumented, can change without notice,
-    * and should not be relied on.
+    * The format of the output is identical to the output of`openssl s_client -trace` or `openssl s_server -trace`. While it is produced by
+    * OpenSSL's `SSL_trace()` function, the format is undocumented, can change
+    * without notice, and should not be relied on.
     * @since v12.2.0
     */
   def enableTrace(): Unit = js.native
@@ -98,7 +97,7 @@ class TLSSocket protected () extends StObject {
     * Always returns `true`. This may be used to distinguish TLS sockets from regular`net.Socket` instances.
     * @since v0.11.4
     */
-  var encrypted: Boolean = js.native
+  var encrypted: `true` = js.native
   
   /**
     * Keying material is used for validations to prevent different kind of attacks in
@@ -111,7 +110,7 @@ class TLSSocket protected () extends StObject {
     *   128,
     *   'client finished');
     *
-    *
+    * / *
     *  Example return value of keyingMaterial:
     *  <Buffer 76 26 af 99 c5 56 8e 42 09 91 ef 9f 93 cb ad 6c 7b 65 f8 53 f1 d8 d9
     *     12 5a 33 b8 b5 25 df 7b 37 9f e0 e2 4f b8 67 83 a3 2f cd 5d 41 42 4c 91

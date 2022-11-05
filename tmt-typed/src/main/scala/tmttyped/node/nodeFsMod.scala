@@ -1,7 +1,5 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ArrayBufferView
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.anon.Encoding
 import tmttyped.node.anon.EncodingFlag
 import tmttyped.node.anon.Flag
@@ -29,6 +27,7 @@ import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.fsMod.BigIntStats
 import tmttyped.node.fsMod.BufferEncodingOption
 import tmttyped.node.fsMod.CopyOptions
+import tmttyped.node.fsMod.CopySyncOptions
 import tmttyped.node.fsMod.EncodingOption
 import tmttyped.node.fsMod.FSWatcher
 import tmttyped.node.fsMod.MakeDirectoryOptions
@@ -39,6 +38,7 @@ import tmttyped.node.fsMod.OpenDirOptions
 import tmttyped.node.fsMod.OpenMode
 import tmttyped.node.fsMod.PathLike
 import tmttyped.node.fsMod.PathOrFileDescriptor
+import tmttyped.node.fsMod.ReadAsyncOptions
 import tmttyped.node.fsMod.ReadPosition
 import tmttyped.node.fsMod.ReadStreamOptions
 import tmttyped.node.fsMod.ReadSyncOptions
@@ -58,14 +58,12 @@ import tmttyped.node.fsPromisesMod.FileHandle
 import tmttyped.node.fsPromisesMod.FlagAndOpenMode
 import tmttyped.node.nodeStreamMod.Stream
 import tmttyped.node.nodeStrings.buffer_
+import tmttyped.node.nodeUrlMod.URL
 import tmttyped.node.streamMod.ReadableOptions
 import tmttyped.node.streamMod.WritableOptions
 import tmttyped.std.AsyncIterable
-import tmttyped.std.BigInt64Array
-import tmttyped.std.BigUint64Array
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeFsMod {
@@ -76,85 +74,65 @@ object nodeFsMod {
   
   @JSImport("node:fs", "Dir")
   @js.native
-  class Dir ()
+  open class Dir ()
     extends tmttyped.node.fsMod.Dir
   
   @JSImport("node:fs", "Dirent")
   @js.native
-  class Dirent ()
+  open class Dirent ()
     extends tmttyped.node.fsMod.Dirent
   
   @JSImport("node:fs", "ReadStream")
   @js.native
-  class ReadStream () extends StObject {
+  open class ReadStream () extends StObject {
     def this(opts: ReadableOptions) = this()
   }
   
   @JSImport("node:fs", "Stats")
   @js.native
-  class Stats ()
+  open class Stats ()
     extends tmttyped.node.fsMod.Stats
   
   @JSImport("node:fs", "WriteStream")
   @js.native
-  class WriteStream () extends StObject {
+  open class WriteStream () extends StObject {
     def this(opts: WritableOptions) = this()
   }
   
-  @scala.inline
-  def access(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def access(path: PathLike, mode: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def access(path: PathLike, mode: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def access(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def access(path: PathLike, mode: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def access(path: PathLike, mode: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def accessSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def accessSync(path: PathLike, mode: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def accessSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def accessSync(path: PathLike, mode: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("accessSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def appendFile(file: PathOrFileDescriptor, data: String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFile(file: PathOrFileDescriptor, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFile(path: PathOrFileDescriptor, data: String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFile(
+  inline def appendFile(file: PathOrFileDescriptor, data: String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFile(file: PathOrFileDescriptor, data: js.typedarray.Uint8Array, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFile(path: PathOrFileDescriptor, data: String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFile(
     path: PathOrFileDescriptor,
     data: js.typedarray.Uint8Array,
     options: WriteFileOptions,
     callback: NoParamCallback
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def appendFileSync(path: PathOrFileDescriptor, data: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFileSync(path: PathOrFileDescriptor, data: String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFileSync(path: PathOrFileDescriptor, data: js.typedarray.Uint8Array): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def appendFileSync(path: PathOrFileDescriptor, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFileSync(path: PathOrFileDescriptor, data: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFileSync(path: PathOrFileDescriptor, data: String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFileSync(path: PathOrFileDescriptor, data: js.typedarray.Uint8Array): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def appendFileSync(path: PathOrFileDescriptor, data: js.typedarray.Uint8Array, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFileSync")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def chmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def chmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def chmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def chmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def chown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def chown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def chownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def chownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("chownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def close(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("close")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def close(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("close")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def close(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("close")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def close(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("close")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def closeSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("closeSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def closeSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("closeSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   object constants {
     
@@ -403,188 +381,234 @@ object nodeFsMod {
     val X_OK: Double = js.native
   }
   
-  @scala.inline
-  def copyFile(src: PathLike, dest: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def copyFile(src: PathLike, dest: PathLike, mode: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def copyFile(src: PathLike, dest: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def copyFile(src: PathLike, dest: PathLike, mode: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def copyFileSync(src: PathLike, dest: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def copyFileSync(src: PathLike, dest: PathLike, mode: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def copyFileSync(src: PathLike, dest: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def copyFileSync(src: PathLike, dest: PathLike, mode: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFileSync")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def cp(source: String, destination: String, callback: js.Function1[/* err */ ErrnoException | Null, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def cp(
+  inline def cp(
+    source: String,
+    destination: String,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
     source: String,
     destination: String,
     opts: CopyOptions,
-    callback: js.Function1[/* err */ ErrnoException | Null, Unit]
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: String,
+    destination: URL,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: String,
+    destination: URL,
+    opts: CopyOptions,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: URL,
+    destination: String,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: URL,
+    destination: String,
+    opts: CopyOptions,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: URL,
+    destination: URL,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cp(
+    source: URL,
+    destination: URL,
+    opts: CopyOptions,
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def cpSync(source: String, destination: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def cpSync(source: String, destination: String, opts: CopyOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: String, destination: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: String, destination: String, opts: CopySyncOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: String, destination: URL): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: String, destination: URL, opts: CopySyncOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: URL, destination: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: URL, destination: String, opts: CopySyncOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: URL, destination: URL): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def cpSync(source: URL, destination: URL, opts: CopySyncOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("cpSync")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def createReadStream(path: PathLike): tmttyped.node.fsMod.ReadStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.ReadStream]
-  @scala.inline
-  def createReadStream(path: PathLike, options: BufferEncoding): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
-  @scala.inline
-  def createReadStream(path: PathLike, options: ReadStreamOptions): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  inline def createReadStream(path: PathLike): tmttyped.node.fsMod.ReadStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  inline def createReadStream(path: PathLike, options: BufferEncoding): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
+  inline def createReadStream(path: PathLike, options: ReadStreamOptions): tmttyped.node.fsMod.ReadStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createReadStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.ReadStream]
   
-  @scala.inline
-  def createWriteStream(path: PathLike): tmttyped.node.fsMod.WriteStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.WriteStream]
-  @scala.inline
-  def createWriteStream(path: PathLike, options: BufferEncoding): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
-  @scala.inline
-  def createWriteStream(path: PathLike, options: StreamOptions): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  inline def createWriteStream(path: PathLike): tmttyped.node.fsMod.WriteStream = ^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  inline def createWriteStream(path: PathLike, options: BufferEncoding): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
+  inline def createWriteStream(path: PathLike, options: StreamOptions): tmttyped.node.fsMod.WriteStream = (^.asInstanceOf[js.Dynamic].applyDynamic("createWriteStream")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.WriteStream]
   
-  @scala.inline
-  def exists(path: PathLike, callback: js.Function1[/* exists */ Boolean, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("exists")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def exists(path: PathLike, callback: js.Function1[/* exists */ Boolean, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("exists")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def existsSync(path: PathLike): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("existsSync")(path.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def existsSync(path: PathLike): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("existsSync")(path.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @scala.inline
-  def fchmod(fd: Double, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmod")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fchmod(fd: Double, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmod")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fchmodSync(fd: Double, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmodSync")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fchmodSync(fd: Double, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchmodSync")(fd.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fchown(fd: Double, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchown")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fchown(fd: Double, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchown")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fchownSync(fd: Double, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchownSync")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fchownSync(fd: Double, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fchownSync")(fd.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fdatasync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fdatasync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fdatasync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fdatasync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fdatasyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fdatasyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def fdatasyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fdatasyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @scala.inline
-  def fstat(
+  inline def fstat(
     fd: Double,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def fstat(
+  inline def fstat(
     fd: Double,
     options: Unit,
-    callback: js.Function2[ErrnoException | Null, BigIntStats | tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      BigIntStats | tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def fstat(
+  inline def fstat(
     fd: Double,
     options: StatOptionsbigintfalseund,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def fstat(
+  inline def fstat(
     fd: Double,
     options: StatOptionsbiginttrue,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ BigIntStats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ BigIntStats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def fstat(
+  inline def fstat(
     fd: Double,
     options: StatOptions,
     callback: js.Function2[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* stats */ tmttyped.node.fsMod.Stats | BigIntStats, 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fstat")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fstatSync(fd: Double): tmttyped.node.fsMod.Stats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
-  @scala.inline
-  def fstatSync(fd: Double, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
-  @scala.inline
-  def fstatSync(fd: Double, options: StatOptionsbiginttrue): BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[BigIntStats]
-  @scala.inline
-  def fstatSync(fd: Double, options: StatOptions): tmttyped.node.fsMod.Stats | BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | BigIntStats]
+  inline def fstatSync(fd: Double): tmttyped.node.fsMod.Stats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats]
+  inline def fstatSync(fd: Double, options: StatOptionsbigintfalseund): tmttyped.node.fsMod.Stats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats]
+  inline def fstatSync(fd: Double, options: StatOptionsbiginttrue): BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[BigIntStats]
+  inline def fstatSync(fd: Double, options: StatOptions): tmttyped.node.fsMod.Stats | BigIntStats = (^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Stats | BigIntStats]
   
-  @scala.inline
-  def fstatSync_Union(fd: Double): tmttyped.node.fsMod.Stats | BigIntStats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | BigIntStats]
+  inline def fstatSync_Union(fd: Double): tmttyped.node.fsMod.Stats | BigIntStats = ^.asInstanceOf[js.Dynamic].applyDynamic("fstatSync")(fd.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Stats | BigIntStats]
   
-  @scala.inline
-  def fsync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def fsync(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("fsync")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def fsyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fsyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def fsyncSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("fsyncSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @scala.inline
-  def ftruncate(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def ftruncate(fd: Double, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def ftruncate(fd: Double, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def ftruncate(fd: Double, len: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def ftruncate(fd: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def ftruncate(fd: Double, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def ftruncate(fd: Double, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def ftruncate(fd: Double, len: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncate")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def ftruncateSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def ftruncateSync(fd: Double, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def ftruncateSync(fd: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def ftruncateSync(fd: Double, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("ftruncateSync")(fd.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def futimes(fd: Double, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def futimes(fd: Double, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimes")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def futimesSync(fd: Double, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def futimesSync(fd: Double, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("futimesSync")(fd.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lchmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lchmod(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lchmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lchmodSync(path: PathLike, mode: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmodSync")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lchown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lchown(path: PathLike, uid: Double, gid: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lchownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lchownSync(path: PathLike, uid: Double, gid: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lchownSync")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def link(existingPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def link(existingPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def linkSync(existingPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("linkSync")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def linkSync(existingPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("linkSync")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lstat(
+  inline def lstat(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def lstat(
+  inline def lstat(
     path: PathLike,
     options: Unit,
-    callback: js.Function2[ErrnoException | Null, BigIntStats | tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      BigIntStats | tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def lstat(
+  inline def lstat(
     path: PathLike,
     options: StatOptionsbigintfalseund,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def lstat(
+  inline def lstat(
     path: PathLike,
     options: StatOptionsbiginttrue,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ BigIntStats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ BigIntStats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def lstat(
+  inline def lstat(
     path: PathLike,
     options: StatOptions,
     callback: js.Function2[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* stats */ tmttyped.node.fsMod.Stats | BigIntStats, 
       Unit
     ]
@@ -594,151 +618,223 @@ object nodeFsMod {
   @js.native
   val lstatSync: StatSyncFn = js.native
   
-  @scala.inline
-  def lutimes(path: PathLike, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lutimes(path: PathLike, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def lutimesSync(path: PathLike, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def lutimesSync(path: PathLike, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def mkdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(
+  inline def mkdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdir(
     path: PathLike,
     options: Null,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* path */ js.UndefOr[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(path: PathLike, options: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(
+  inline def mkdir(path: PathLike, options: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdir(
     path: PathLike,
     options: Unit,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* path */ js.UndefOr[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(path: PathLike, options: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(
+  inline def mkdir(path: PathLike, options: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdir(
     path: PathLike,
     options: MakeDirectoryOptionsrecur,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* path */ js.UndefOr[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(
+  inline def mkdir(
     path: PathLike,
     options: MakeDirectoryOptions,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* path */ js.UndefOr[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(
+  inline def mkdir(
     path: PathLike,
     options: Mode,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* path */ js.UndefOr[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* path */ js.UndefOr[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdir(path: PathLike, options: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdir(path: PathLike, options: Mode, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def mkdirSync(path: PathLike): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[String]]
-  @scala.inline
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecur): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
-  @scala.inline
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecurMode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
-  @scala.inline
-  def mkdirSync(path: PathLike, options: Mode): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
+  inline def mkdirSync(path: PathLike): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[String]]
+  inline def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecur): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
+  inline def mkdirSync(path: PathLike, options: MakeDirectoryOptionsrecurMode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
+  inline def mkdirSync(path: PathLike, options: Mode): js.UndefOr[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.UndefOr[String]]
   
-  @scala.inline
-  def mkdirSync_Unit(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def mkdirSync_Unit(path: PathLike, options: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdirSync_Unit(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def mkdirSync_Unit(path: PathLike, options: Mode): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def mkdtemp(prefix: String, callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdtemp(
+  inline def mkdtemp(
+    prefix: String,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* folder */ String, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def mkdtemp(
     prefix: String,
     options: `2`,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* folder */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdtemp(
+  inline def mkdtemp(
     prefix: String,
     options: EncodingOption,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Buffer | (/* folder */ String), 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def mkdtemp(
+  inline def mkdtemp(
     prefix: String,
     options: buffer_,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* folder */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def mkdtempSync(prefix: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def mkdtempSync(prefix: String, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def mkdtempSync(prefix: String, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def mkdtempSync(prefix: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def mkdtempSync(prefix: String, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def mkdtempSync(prefix: String, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
-  @scala.inline
-  def mkdtempSync_Union(prefix: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-  @scala.inline
-  def mkdtempSync_Union(prefix: String, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def mkdtempSync_Union(prefix: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+  inline def mkdtempSync_Union(prefix: String, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtempSync")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
   
-  @scala.inline
-  def open(
+  inline def open(
+    path: PathLike,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def open(
+    path: PathLike,
+    flags: Unit,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def open(
+    path: PathLike,
+    flags: Unit,
+    mode: Null,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def open(
+    path: PathLike,
+    flags: Unit,
+    mode: Unit,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def open(
+    path: PathLike,
+    flags: Unit,
+    mode: Mode,
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def open(
     path: PathLike,
     flags: OpenMode,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def open(
+  inline def open(
     path: PathLike,
     flags: OpenMode,
     mode: Null,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def open(
+  inline def open(
     path: PathLike,
     flags: OpenMode,
     mode: Unit,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def open(
+  inline def open(
     path: PathLike,
     flags: OpenMode,
     mode: Mode,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* fd */ Double, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def openSync(path: PathLike, flags: OpenMode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def openSync(path: PathLike, flags: OpenMode, mode: Mode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def openSync(path: PathLike, flags: OpenMode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def openSync(path: PathLike, flags: OpenMode, mode: Mode): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("openSync")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @scala.inline
-  def opendir(
+  inline def opendir(
     path: PathLike,
-    cb: js.Function2[/* err */ ErrnoException | Null, /* dir */ tmttyped.node.fsMod.Dir, Unit]
+    cb: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* dir */ tmttyped.node.fsMod.Dir, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def opendir(
+  inline def opendir(
     path: PathLike,
     options: OpenDirOptions,
-    cb: js.Function2[/* err */ ErrnoException | Null, /* dir */ tmttyped.node.fsMod.Dir, Unit]
+    cb: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* dir */ tmttyped.node.fsMod.Dir, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def opendirSync(path: PathLike): tmttyped.node.fsMod.Dir = ^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Dir]
-  @scala.inline
-  def opendirSync(path: PathLike, options: OpenDirOptions): tmttyped.node.fsMod.Dir = (^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Dir]
+  inline def opendirSync(path: PathLike): tmttyped.node.fsMod.Dir = ^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.fsMod.Dir]
+  inline def opendirSync(path: PathLike, options: OpenDirOptions): tmttyped.node.fsMod.Dir = (^.asInstanceOf[js.Dynamic].applyDynamic("opendirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.fsMod.Dir]
   
   object promises {
     
@@ -749,9 +845,9 @@ object nodeFsMod {
     /**
       * Tests a user's permissions for the file or directory specified by `path`.
       * The `mode` argument is an optional integer that specifies the accessibility
-      * checks to be performed. Check `File access constants` for possible values
-      * of `mode`. It is possible to create a mask consisting of the bitwise OR of
-      * two or more values (e.g. `fs.constants.W_OK | fs.constants.R_OK`).
+      * checks to be performed. `mode` should be either the value `fs.constants.F_OK`or a mask consisting of the bitwise OR of any of `fs.constants.R_OK`,`fs.constants.W_OK`, and `fs.constants.X_OK`
+      * (e.g.`fs.constants.W_OK | fs.constants.R_OK`). Check `File access constants` for
+      * possible values of `mode`.
       *
       * If the accessibility check is successful, the promise is resolved with no
       * value. If any of the accessibility checks fail, the promise is rejected
@@ -779,10 +875,8 @@ object nodeFsMod {
       * @param [mode=fs.constants.F_OK]
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def access(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def access(path: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def access(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def access(path: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("access")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously append data to a file, creating the file if it does not yet
@@ -798,54 +892,280 @@ object nodeFsMod {
       * @param path filename or {FileHandle}
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def appendFile(path: PathLike, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: PathLike, data: String, options: ObjectEncodingOptions with FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: PathLike, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(
-      path: PathLike,
-      data: js.typedarray.Uint8Array,
-      options: ObjectEncodingOptions with FlagAndOpenMode
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: FileHandle, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: FileHandle, data: String, options: ObjectEncodingOptions with FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: FileHandle, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(
-      path: FileHandle,
-      data: js.typedarray.Uint8Array,
-      options: ObjectEncodingOptions with FlagAndOpenMode
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: String, options: ObjectEncodingOptions & FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: ObjectEncodingOptions & FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: PathLike, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: String, options: ObjectEncodingOptions & FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: js.typedarray.Uint8Array): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: ObjectEncodingOptions & FlagAndOpenMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def appendFile(path: FileHandle, data: js.typedarray.Uint8Array, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("appendFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Changes the permissions of a file.
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def chmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def chmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Changes the ownership of a file.
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def chown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def chown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("chown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    
+    /* was `typeof fsConstants` */
+    object constants {
+      
+      // File Copy Constants
+      /** Constant for fs.copyFile. Flag indicating the destination file should not be overwritten if it already exists. */
+      @JSImport("node:fs", "promises.constants.COPYFILE_EXCL")
+      @js.native
+      val COPYFILE_EXCL: Double = js.native
+      
+      /**
+        * Constant for fs.copyFile. copy operation will attempt to create a copy-on-write reflink.
+        * If the underlying platform does not support copy-on-write, then a fallback copy mechanism is used.
+        */
+      @JSImport("node:fs", "promises.constants.COPYFILE_FICLONE")
+      @js.native
+      val COPYFILE_FICLONE: Double = js.native
+      
+      /**
+        * Constant for fs.copyFile. Copy operation will attempt to create a copy-on-write reflink.
+        * If the underlying platform does not support copy-on-write, then the operation will fail with an error.
+        */
+      @JSImport("node:fs", "promises.constants.COPYFILE_FICLONE_FORCE")
+      @js.native
+      val COPYFILE_FICLONE_FORCE: Double = js.native
+      
+      // File Access Constants
+      /** Constant for fs.access(). File is visible to the calling process. */
+      @JSImport("node:fs", "promises.constants.F_OK")
+      @js.native
+      val F_OK: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that data will be appended to the end of the file. */
+      @JSImport("node:fs", "promises.constants.O_APPEND")
+      @js.native
+      val O_APPEND: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating to create the file if it does not already exist. */
+      @JSImport("node:fs", "promises.constants.O_CREAT")
+      @js.native
+      val O_CREAT: Double = js.native
+      
+      /** Constant for fs.open(). When set, an attempt will be made to minimize caching effects of file I/O. */
+      @JSImport("node:fs", "promises.constants.O_DIRECT")
+      @js.native
+      val O_DIRECT: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that the open should fail if the path is not a directory. */
+      @JSImport("node:fs", "promises.constants.O_DIRECTORY")
+      @js.native
+      val O_DIRECTORY: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that the file is opened for synchronous I/O with write operations waiting for data integrity. */
+      @JSImport("node:fs", "promises.constants.O_DSYNC")
+      @js.native
+      val O_DSYNC: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that opening a file should fail if the O_CREAT flag is set and the file already exists. */
+      @JSImport("node:fs", "promises.constants.O_EXCL")
+      @js.native
+      val O_EXCL: Double = js.native
+      
+      /**
+        * constant for fs.open().
+        * Flag indicating reading accesses to the file system will no longer result in
+        * an update to the atime information associated with the file.
+        * This flag is available on Linux operating systems only.
+        */
+      @JSImport("node:fs", "promises.constants.O_NOATIME")
+      @js.native
+      val O_NOATIME: Double = js.native
+      
+      /**
+        * Constant for fs.open(). Flag indicating that if path identifies a terminal device,
+        * opening the path shall not cause that terminal to become the controlling terminal for the process
+        * (if the process does not already have one).
+        */
+      @JSImport("node:fs", "promises.constants.O_NOCTTY")
+      @js.native
+      val O_NOCTTY: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that the open should fail if the path is a symbolic link. */
+      @JSImport("node:fs", "promises.constants.O_NOFOLLOW")
+      @js.native
+      val O_NOFOLLOW: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating to open the file in nonblocking mode when possible. */
+      @JSImport("node:fs", "promises.constants.O_NONBLOCK")
+      @js.native
+      val O_NONBLOCK: Double = js.native
+      
+      // File Open Constants
+      /** Constant for fs.open(). Flag indicating to open a file for read-only access. */
+      @JSImport("node:fs", "promises.constants.O_RDONLY")
+      @js.native
+      val O_RDONLY: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating to open a file for read-write access. */
+      @JSImport("node:fs", "promises.constants.O_RDWR")
+      @js.native
+      val O_RDWR: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating to open the symbolic link itself rather than the resource it is pointing to. */
+      @JSImport("node:fs", "promises.constants.O_SYMLINK")
+      @js.native
+      val O_SYMLINK: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that the file is opened for synchronous I/O. */
+      @JSImport("node:fs", "promises.constants.O_SYNC")
+      @js.native
+      val O_SYNC: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating that if the file exists and is a regular file, and the file is opened successfully for write access, its length shall be truncated to zero. */
+      @JSImport("node:fs", "promises.constants.O_TRUNC")
+      @js.native
+      val O_TRUNC: Double = js.native
+      
+      /** Constant for fs.open(). Flag indicating to open a file for write-only access. */
+      @JSImport("node:fs", "promises.constants.O_WRONLY")
+      @js.native
+      val O_WRONLY: Double = js.native
+      
+      /** Constant for fs.access(). File can be read by the calling process. */
+      @JSImport("node:fs", "promises.constants.R_OK")
+      @js.native
+      val R_OK: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a block-oriented device file. */
+      @JSImport("node:fs", "promises.constants.S_IFBLK")
+      @js.native
+      val S_IFBLK: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a character-oriented device file. */
+      @JSImport("node:fs", "promises.constants.S_IFCHR")
+      @js.native
+      val S_IFCHR: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a directory. */
+      @JSImport("node:fs", "promises.constants.S_IFDIR")
+      @js.native
+      val S_IFDIR: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a FIFO/pipe. */
+      @JSImport("node:fs", "promises.constants.S_IFIFO")
+      @js.native
+      val S_IFIFO: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a symbolic link. */
+      @JSImport("node:fs", "promises.constants.S_IFLNK")
+      @js.native
+      val S_IFLNK: Double = js.native
+      
+      // File Type Constants
+      /** Constant for fs.Stats mode property for determining a file's type. Bit mask used to extract the file type code. */
+      @JSImport("node:fs", "promises.constants.S_IFMT")
+      @js.native
+      val S_IFMT: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a regular file. */
+      @JSImport("node:fs", "promises.constants.S_IFREG")
+      @js.native
+      val S_IFREG: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining a file's type. File type constant for a socket. */
+      @JSImport("node:fs", "promises.constants.S_IFSOCK")
+      @js.native
+      val S_IFSOCK: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by group. */
+      @JSImport("node:fs", "promises.constants.S_IRGRP")
+      @js.native
+      val S_IRGRP: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by others. */
+      @JSImport("node:fs", "promises.constants.S_IROTH")
+      @js.native
+      val S_IROTH: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable by owner. */
+      @JSImport("node:fs", "promises.constants.S_IRUSR")
+      @js.native
+      val S_IRUSR: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by group. */
+      @JSImport("node:fs", "promises.constants.S_IRWXG")
+      @js.native
+      val S_IRWXG: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by others. */
+      @JSImport("node:fs", "promises.constants.S_IRWXO")
+      @js.native
+      val S_IRWXO: Double = js.native
+      
+      // File Mode Constants
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating readable, writable and executable by owner. */
+      @JSImport("node:fs", "promises.constants.S_IRWXU")
+      @js.native
+      val S_IRWXU: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by group. */
+      @JSImport("node:fs", "promises.constants.S_IWGRP")
+      @js.native
+      val S_IWGRP: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by others. */
+      @JSImport("node:fs", "promises.constants.S_IWOTH")
+      @js.native
+      val S_IWOTH: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating writable by owner. */
+      @JSImport("node:fs", "promises.constants.S_IWUSR")
+      @js.native
+      val S_IWUSR: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by group. */
+      @JSImport("node:fs", "promises.constants.S_IXGRP")
+      @js.native
+      val S_IXGRP: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by others. */
+      @JSImport("node:fs", "promises.constants.S_IXOTH")
+      @js.native
+      val S_IXOTH: Double = js.native
+      
+      /** Constant for fs.Stats mode property for determining access permissions for a file. File mode indicating executable by owner. */
+      @JSImport("node:fs", "promises.constants.S_IXUSR")
+      @js.native
+      val S_IXUSR: Double = js.native
+      
+      /**
+        * When set, a memory file mapping is used to access the file. This flag
+        * is available on Windows operating systems only. On other operating systems,
+        * this flag is ignored.
+        */
+      @JSImport("node:fs", "promises.constants.UV_FS_O_FILEMAP")
+      @js.native
+      val UV_FS_O_FILEMAP: Double = js.native
+      
+      /** Constant for fs.access(). File can be written by the calling process. */
+      @JSImport("node:fs", "promises.constants.W_OK")
+      @js.native
+      val W_OK: Double = js.native
+      
+      /** Constant for fs.access(). File can be executed by the calling process. */
+      @JSImport("node:fs", "promises.constants.X_OK")
+      @js.native
+      val X_OK: Double = js.native
+    }
     
     /**
       * Asynchronously copies `src` to `dest`. By default, `dest` is overwritten if it
@@ -881,10 +1201,8 @@ object nodeFsMod {
       * `fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE`)
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def copyFile(src: PathLike, dest: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def copyFile(src: PathLike, dest: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def copyFile(src: PathLike, dest: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def copyFile(src: PathLike, dest: PathLike, mode: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("copyFile")(src.asInstanceOf[js.Any], dest.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronously copies the entire directory structure from `src` to `dest`,
@@ -898,10 +1216,14 @@ object nodeFsMod {
       * @param dest destination path to copy to.
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def cp(source: String, destination: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def cp(source: String, destination: String, opts: CopyOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: String, destination: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: String, destination: String, opts: CopyOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: String, destination: org.scalajs.dom.URL): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: String, destination: org.scalajs.dom.URL, opts: CopyOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: org.scalajs.dom.URL, destination: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: org.scalajs.dom.URL, destination: String, opts: CopyOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: org.scalajs.dom.URL, destination: org.scalajs.dom.URL): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def cp(source: org.scalajs.dom.URL, destination: org.scalajs.dom.URL, opts: CopyOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("cp")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Changes the permissions on a symbolic link.
@@ -910,24 +1232,21 @@ object nodeFsMod {
       * @deprecated Since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def lchmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def lchmod(path: PathLike, mode: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchmod")(path.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Changes the ownership on a symbolic link.
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def lchown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def lchown(path: PathLike, uid: Double, gid: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lchown")(path.asInstanceOf[js.Any], uid.asInstanceOf[js.Any], gid.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Creates a new link from the `existingPath` to the `newPath`. See the POSIX [`link(2)`](http://man7.org/linux/man-pages/man2/link.2.html) documentation for more detail.
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def link(existingPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def link(existingPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("link")(existingPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Equivalent to `fsPromises.stat()` unless `path` refers to a symbolic link,
@@ -936,14 +1255,10 @@ object nodeFsMod {
       * @since v10.0.0
       * @return Fulfills with the {fs.Stats} object for the given symbolic link `path`.
       */
-    @scala.inline
-    def lstat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
-    @scala.inline
-    def lstat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
-    @scala.inline
-    def lstat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
-    @scala.inline
-    def lstat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
+    inline def lstat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
+    inline def lstat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
+    inline def lstat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
+    inline def lstat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("lstat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
     
     /**
       * Changes the access and modification times of a file in the same way as `fsPromises.utimes()`, with the difference that if the path refers to a
@@ -952,24 +1267,7 @@ object nodeFsMod {
       * @since v14.5.0, v12.19.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def lutimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def lutimes(path: PathLike, atime: TimeLike, mtime: TimeLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("lutimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Asynchronous mkdir(2) - create a directory.
@@ -977,8 +1275,7 @@ object nodeFsMod {
       * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
       * should be created. If a string is passed, it is parsed as an octal integer. If not specified, defaults to `0o777`.
       */
-    @scala.inline
-    def mkdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def mkdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     /**
       * Asynchronously creates a directory.
       *
@@ -989,14 +1286,10 @@ object nodeFsMod {
       * @since v10.0.0
       * @return Upon success, fulfills with `undefined` if `recursive` is `false`, or the first directory path created if `recursive` is `true`.
       */
-    @scala.inline
-    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[js.UndefOr[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[String]]]
-    @scala.inline
-    def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[String]]]
-    @scala.inline
-    def mkdir(path: PathLike, options: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def mkdir(path: PathLike, options: MakeDirectoryOptionsrecur): js.Promise[js.UndefOr[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[String]]]
+    inline def mkdir(path: PathLike, options: MakeDirectoryOptionsrecurMode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[js.UndefOr[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.UndefOr[String]]]
+    inline def mkdir(path: PathLike, options: Mode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Creates a unique temporary directory. A unique directory name is generated by
@@ -1030,19 +1323,15 @@ object nodeFsMod {
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def mkdtemp(prefix: String): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def mkdtemp(prefix: String): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def mkdtemp(prefix: String, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def mkdtemp(prefix: String, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def mkdtemp(prefix: String, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    inline def mkdtemp(prefix: String, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("mkdtemp")(prefix.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     
     /**
       * Opens a `FileHandle`.
@@ -1057,14 +1346,12 @@ object nodeFsMod {
       * @param [mode=0o666] Sets the file mode (permission and sticky bits) if the file is created.
       * @return Fulfills with a {FileHandle} object.
       */
-    @scala.inline
-    def open(path: PathLike, flags: String): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-    @scala.inline
-    def open(path: PathLike, flags: String, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-    @scala.inline
-    def open(path: PathLike, flags: Double): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
-    @scala.inline
-    def open(path: PathLike, flags: Double, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike): js.Promise[FileHandle] = ^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike, flags: String): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike, flags: String, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike, flags: Double): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike, flags: Double, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
+    inline def open(path: PathLike, flags: Unit, mode: Mode): js.Promise[FileHandle] = (^.asInstanceOf[js.Dynamic].applyDynamic("open")(path.asInstanceOf[js.Any], flags.asInstanceOf[js.Any], mode.asInstanceOf[js.Any])).asInstanceOf[js.Promise[FileHandle]]
     
     /**
       * Asynchronously open a directory for iterative scanning. See the POSIX [`opendir(3)`](http://man7.org/linux/man-pages/man3/opendir.3.html) documentation for more detail.
@@ -1094,10 +1381,8 @@ object nodeFsMod {
       * @since v12.12.0
       * @return Fulfills with an {fs.Dir}.
       */
-    @scala.inline
-    def opendir(path: PathLike): js.Promise[Dir] = ^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Dir]]
-    @scala.inline
-    def opendir(path: PathLike, options: OpenDirOptions): js.Promise[Dir] = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Dir]]
+    inline def opendir(path: PathLike): js.Promise[Dir] = ^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Dir]]
+    inline def opendir(path: PathLike, options: OpenDirOptions): js.Promise[Dir] = (^.asInstanceOf[js.Dynamic].applyDynamic("opendir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Dir]]
     
     /**
       * Asynchronously reads the entire contents of a file.
@@ -1148,10 +1433,8 @@ object nodeFsMod {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    @scala.inline
-    def readFile(path: PathLike): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def readFile(path: PathLike, options: ObjectEncodingOptionsAbor): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
+    inline def readFile(path: PathLike): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    inline def readFile(path: PathLike, options: ObjectEncodingOptionsAbor): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1159,22 +1442,14 @@ object nodeFsMod {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    @scala.inline
-    def readFile(path: PathLike, options: encodingBufferEncodingfla): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def readFile(path: PathLike, options: encodingnullundefinedflag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def readFile(path: FileHandle): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def readFile(path: FileHandle, options: ObjectEncodingOptionsAbor): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
-    @scala.inline
-    def readFile(path: FileHandle, options: encodingBufferEncodingfla): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def readFile(path: FileHandle, options: encodingnullundefinedflag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def readFile(path: FileHandle, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readFile(path: PathLike, options: encodingBufferEncodingfla): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readFile(path: PathLike, options: encodingnullundefinedflag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    inline def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readFile(path: FileHandle): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    inline def readFile(path: FileHandle, options: ObjectEncodingOptionsAbor): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
+    inline def readFile(path: FileHandle, options: encodingBufferEncodingfla): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readFile(path: FileHandle, options: encodingnullundefinedflag): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    inline def readFile(path: FileHandle, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     
     /**
       * Reads the contents of a directory.
@@ -1205,29 +1480,23 @@ object nodeFsMod {
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def readdir(path: PathLike): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
+    inline def readdir(path: PathLike): js.Promise[js.Array[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.Array[String]]]
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def readdir(path: PathLike, options: Encoding): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
-    @scala.inline
-    def readdir(path: PathLike, options: ObjectEncodingOptionswith): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
+    inline def readdir(path: PathLike, options: Encoding): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
+    inline def readdir(path: PathLike, options: ObjectEncodingOptionswith): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
       */
-    @scala.inline
-    def readdir(path: PathLike, options: ObjectEncodingOptionswithEncoding): js.Promise[js.Array[Dirent]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Dirent]]]
-    @scala.inline
-    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
+    inline def readdir(path: PathLike, options: ObjectEncodingOptionswithEncoding): js.Promise[js.Array[Dirent]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Dirent]]]
+    inline def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[String]]]
     
-    @scala.inline
-    def readdir_buffer(path: PathLike, options: buffer_): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
+    inline def readdir_buffer(path: PathLike, options: buffer_): js.Promise[js.Array[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Buffer]]]
     
     /**
       * Reads the contents of the symbolic link referred to by `path`. See the POSIX [`readlink(2)`](http://man7.org/linux/man-pages/man2/readlink.2.html) documentation for more detail. The promise is
@@ -1245,21 +1514,16 @@ object nodeFsMod {
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def readlink(path: PathLike): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
-    @scala.inline
-    def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readlink(path: PathLike): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String | Buffer]]
+    inline def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     /**
       * Asynchronous readlink(2) - read value of a symbolic link.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def readlink(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def readlink(path: PathLike, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def readlink(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    inline def readlink(path: PathLike, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     
     /**
       * Determines the actual location of `path` using the same semantics as the`fs.realpath.native()` function.
@@ -1282,37 +1546,30 @@ object nodeFsMod {
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def realpath(path: PathLike): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def realpath(path: PathLike): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     /**
       * Asynchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    @scala.inline
-    def realpath(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def realpath(path: PathLike, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
+    inline def realpath(path: PathLike, options: BufferEncodingOption): js.Promise[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Buffer]]
+    inline def realpath(path: PathLike, options: ObjectEncodingOptions): js.Promise[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("realpath")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[String]]
     
     /**
       * Renames `oldPath` to `newPath`.
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Removes files and directories (modeled on the standard POSIX `rm` utility).
       * @since v14.14.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def rm(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def rm(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Removes the directory identified by `path`.
@@ -1324,23 +1581,17 @@ object nodeFsMod {
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def rmdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def rmdir(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * @since v10.0.0
       * @return Fulfills with the {fs.Stats} object for the given `path`.
       */
-    @scala.inline
-    def stat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
-    @scala.inline
-    def stat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
-    @scala.inline
-    def stat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
-    @scala.inline
-    def stat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
+    inline def stat(path: PathLike): js.Promise[Stats] = ^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Stats]]
+    inline def stat(path: PathLike, opts: StatOptionsbigintfalseund): js.Promise[Stats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats]]
+    inline def stat(path: PathLike, opts: StatOptionsbiginttrue): js.Promise[BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[BigIntStats]]
+    inline def stat(path: PathLike, opts: StatOptions): js.Promise[Stats | BigIntStats] = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Stats | BigIntStats]]
     
     /**
       * Creates a symbolic link.
@@ -1352,10 +1603,8 @@ object nodeFsMod {
       * @param [type='file']
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def symlink(target: PathLike, path: PathLike, `type`: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def symlink(target: PathLike, path: PathLike, `type`: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Truncates (shortens or extends the length) of the content at `path` to `len`bytes.
@@ -1363,10 +1612,8 @@ object nodeFsMod {
       * @param [len=0]
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def truncate(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def truncate(path: PathLike, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def truncate(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def truncate(path: PathLike, len: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * If `path` refers to a symbolic link, then the link is removed without affecting
@@ -1375,8 +1622,7 @@ object nodeFsMod {
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def unlink(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def unlink(path: PathLike): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Change the file system timestamps of the object referenced by `path`.
@@ -1389,24 +1635,7 @@ object nodeFsMod {
       * @since v10.0.0
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def utimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def utimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def utimes(path: PathLike, atime: TimeLike, mtime: TimeLike): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
     /**
       * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
@@ -1416,10 +1645,8 @@ object nodeFsMod {
       * If `persistent` is not supplied, the default of `true` is used.
       * If `recursive` is not supplied, the default of `false` is used.
       */
-    @scala.inline
-    def watch(filename: PathLike): AsyncIterable[FileChangeInfo[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any]).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
-    @scala.inline
-    def watch(filename: PathLike, options: String): AsyncIterable[FileChangeInfo[Buffer | String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer | String]]]
+    inline def watch(filename: PathLike): AsyncIterable[FileChangeInfo[String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any]).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
+    inline def watch(filename: PathLike, options: String): AsyncIterable[FileChangeInfo[Buffer | String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer | String]]]
     /**
       * Returns an async iterator that watches for changes on `filename`, where `filename`is either a file or a directory.
       *
@@ -1450,10 +1677,8 @@ object nodeFsMod {
       * @since v15.9.0, v14.18.0
       * @return of objects with the properties:
       */
-    @scala.inline
-    def watch(filename: PathLike, options: WatchOptionsencodingbuffe): AsyncIterable[FileChangeInfo[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer]]]
-    @scala.inline
-    def watch(filename: PathLike, options: BufferEncoding): AsyncIterable[FileChangeInfo[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
+    inline def watch(filename: PathLike, options: WatchOptionsencodingbuffe): AsyncIterable[FileChangeInfo[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer]]]
+    inline def watch(filename: PathLike, options: BufferEncoding): AsyncIterable[FileChangeInfo[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
     /**
       * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
       * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
@@ -1462,14 +1687,14 @@ object nodeFsMod {
       * If `persistent` is not supplied, the default of `true` is used.
       * If `recursive` is not supplied, the default of `false` is used.
       */
-    @scala.inline
-    def watch(filename: PathLike, options: WatchOptions): AsyncIterable[FileChangeInfo[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
+    inline def watch(filename: PathLike, options: WatchOptions): AsyncIterable[FileChangeInfo[String]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[String]]]
     
-    @scala.inline
-    def watch_buffer(filename: PathLike, options: buffer_): AsyncIterable[FileChangeInfo[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer]]]
+    inline def watch_buffer(filename: PathLike, options: buffer_): AsyncIterable[FileChangeInfo[Buffer]] = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[FileChangeInfo[Buffer]]]
     
     /**
-      * Asynchronously writes data to a file, replacing the file if it already exists.`data` can be a string, a `Buffer`, or, an object with an own (not inherited)`toString` function property.
+      * Asynchronously writes data to a file, replacing the file if it already exists.`data` can be a string, a buffer, an
+      * [AsyncIterable](https://tc39.github.io/ecma262/#sec-asynciterable-interface) or
+      * [Iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) object.
       *
       * The `encoding` option is ignored if `data` is a buffer.
       *
@@ -1484,7 +1709,7 @@ object nodeFsMod {
       *
       * Similarly to `fsPromises.readFile` \- `fsPromises.writeFile` is a convenience
       * method that performs multiple `write` calls internally to write the buffer
-      * passed to it. For performance sensitive code consider using `fs.createWriteStream()`.
+      * passed to it. For performance sensitive code consider using `fs.createWriteStream()` or `filehandle.createWriteStream()`.
       *
       * It is possible to use an `AbortSignal` to cancel an `fsPromises.writeFile()`.
       * Cancelation is "best effort", and some amount of data is likely still
@@ -1516,644 +1741,394 @@ object nodeFsMod {
       * @param file filename or `FileHandle`
       * @return Fulfills with `undefined` upon success.
       */
-    @scala.inline
-    def writeFile(file: PathLike, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: String, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: js.Iterable[ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: js.Iterable[String | ArrayBufferView], options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: js.Iterable[String | ArrayBufferView], options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: ArrayBufferView): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: ArrayBufferView, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: ArrayBufferView, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: Stream): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: Stream, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: Stream, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: AsyncIterable[ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: AsyncIterable[String | ArrayBufferView], options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: PathLike, data: AsyncIterable[String | ArrayBufferView], options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: String, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: js.Iterable[ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: js.Iterable[String | ArrayBufferView], options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: js.Iterable[String | ArrayBufferView], options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: ArrayBufferView): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: ArrayBufferView, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: ArrayBufferView, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: Stream): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: Stream, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: Stream, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: AsyncIterable[ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(
-      file: FileHandle,
-      data: AsyncIterable[String | ArrayBufferView],
+    inline def writeFile(file: PathLike, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: String, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: js.Iterable[js.typedarray.ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: PathLike,
+      data: js.Iterable[String | js.typedarray.ArrayBufferView],
       options: ObjectEncodingOptionsmode
     ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def writeFile(file: FileHandle, data: AsyncIterable[String | ArrayBufferView], options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: js.Iterable[String | js.typedarray.ArrayBufferView], options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: js.typedarray.ArrayBufferView): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: js.typedarray.ArrayBufferView, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: js.typedarray.ArrayBufferView, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: Stream): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: Stream, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: Stream, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: PathLike, data: AsyncIterable[js.typedarray.ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: PathLike,
+      data: AsyncIterable[String | js.typedarray.ArrayBufferView],
+      options: ObjectEncodingOptionsmode
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: PathLike,
+      data: AsyncIterable[String | js.typedarray.ArrayBufferView],
+      options: BufferEncoding
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: String): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: String, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: String, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: js.Iterable[js.typedarray.ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: FileHandle,
+      data: js.Iterable[String | js.typedarray.ArrayBufferView],
+      options: ObjectEncodingOptionsmode
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: FileHandle,
+      data: js.Iterable[String | js.typedarray.ArrayBufferView],
+      options: BufferEncoding
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: js.typedarray.ArrayBufferView): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: js.typedarray.ArrayBufferView, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: js.typedarray.ArrayBufferView, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: Stream): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: Stream, options: ObjectEncodingOptionsmode): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: Stream, options: BufferEncoding): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(file: FileHandle, data: AsyncIterable[js.typedarray.ArrayBufferView | String]): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: FileHandle,
+      data: AsyncIterable[String | js.typedarray.ArrayBufferView],
+      options: ObjectEncodingOptionsmode
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def writeFile(
+      file: FileHandle,
+      data: AsyncIterable[String | js.typedarray.ArrayBufferView],
+      options: BufferEncoding
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
   }
   
-  @scala.inline
-  def read(
+  inline def read(
     fd: Double,
-    buffer: js.typedarray.DataView,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* bytesRead */ Double, 
+      /* buffer */ js.typedarray.ArrayBufferView, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def read[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
     offset: Double,
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.DataView, 
+      /* buffer */ TBuffer, 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
+  inline def read[TBuffer /* <: js.typedarray.ArrayBufferView */](
     fd: Double,
-    buffer: js.typedarray.DataView,
+    buffer: TBuffer,
     offset: Double,
     length: Double,
     position: ReadPosition,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.DataView, 
+      /* buffer */ TBuffer, 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
+  inline def read[TBuffer /* <: js.typedarray.ArrayBufferView */](
     fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
+    options: ReadAsyncOptions[TBuffer],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
+      /* buffer */ TBuffer, 
       Unit
     ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def read(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    position: ReadPosition,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* bytesRead */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("read")(fd.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* data */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: Null,
-    callback: js.Function2[ErrnoException | Null, (/* data */ Buffer) | String, Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      (/* data */ Buffer) | String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: Unit,
-    callback: js.Function2[ErrnoException | Null, (/* data */ Buffer) | String, Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      (/* data */ Buffer) | String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: ObjectEncodingOptionsflag,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* data */ String | Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: encodingBufferEncodingflaEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* data */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: encodingnullundefinedflagEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* data */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readFile(
+  inline def readFile(
     path: PathOrFileDescriptor,
     options: BufferEncoding,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Buffer | (/* data */ String), 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readFile")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def readFileSync(path: PathOrFileDescriptor): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-  @scala.inline
-  def readFileSync(path: PathOrFileDescriptor, options: EncodingFlag): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def readFileSync(path: PathOrFileDescriptor, options: Flag): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def readFileSync(path: PathOrFileDescriptor, options: ObjectEncodingOptionsflagEncoding): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def readFileSync(path: PathOrFileDescriptor, options: BufferEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def readFileSync(path: PathOrFileDescriptor): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+  inline def readFileSync(path: PathOrFileDescriptor, options: EncodingFlag): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def readFileSync(path: PathOrFileDescriptor, options: Flag): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def readFileSync(path: PathOrFileDescriptor, options: ObjectEncodingOptionsflagEncoding): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def readFileSync(path: PathOrFileDescriptor, options: BufferEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
-  @scala.inline
-  def readFileSync_Buffer(path: PathOrFileDescriptor): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def readFileSync_Buffer(path: PathOrFileDescriptor): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
-  @scala.inline
-  def readFileSync_Union(path: PathOrFileDescriptor, options: BufferEncoding): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def readFileSync_Union(path: PathOrFileDescriptor, options: BufferEncoding): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readFileSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
   
-  @scala.inline
-  def readSync(fd: Double, buffer: ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def readSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: ReadPosition): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def readSync(fd: Double, buffer: ArrayBufferView, opts: ReadSyncOptions): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readSync(fd: Double, buffer: js.typedarray.ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readSync(
+    fd: Double,
+    buffer: js.typedarray.ArrayBufferView,
+    offset: Double,
+    length: Double,
+    position: ReadPosition
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readSync(fd: Double, buffer: js.typedarray.ArrayBufferView, opts: ReadSyncOptions): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], opts.asInstanceOf[js.Any])).asInstanceOf[Double]
   
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: Null,
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer | String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: Unit,
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer | String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: Encoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: ObjectEncodingOptionswithEncoding,
     callback: js.Function2[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* files */ js.Array[tmttyped.node.fsMod.Dirent], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: ObjectEncodingOptionswith,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer | String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: WithFileTypes,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: BufferEncoding,
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer | String], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readdir(
+  inline def readdir(
     path: PathLike,
     options: buffer_,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* files */ js.Array[Buffer], 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def readdirSync(path: PathLike): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.Array[String]]
-  @scala.inline
-  def readdirSync(path: PathLike, options: Encoding): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
-  @scala.inline
-  def readdirSync(path: PathLike, options: ObjectEncodingOptionswith): js.Array[Buffer | String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer | String]]
-  @scala.inline
-  def readdirSync(path: PathLike, options: ObjectEncodingOptionswithEncoding): js.Array[tmttyped.node.fsMod.Dirent] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[tmttyped.node.fsMod.Dirent]]
-  @scala.inline
-  def readdirSync(path: PathLike, options: WithFileTypes): js.Array[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[String]]
-  @scala.inline
-  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[String]]
+  inline def readdirSync(path: PathLike): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[js.Array[String]]
+  inline def readdirSync(path: PathLike, options: Encoding): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
+  inline def readdirSync(path: PathLike, options: ObjectEncodingOptionswith): js.Array[Buffer | String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer | String]]
+  inline def readdirSync(path: PathLike, options: ObjectEncodingOptionswithEncoding): js.Array[tmttyped.node.fsMod.Dirent] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[tmttyped.node.fsMod.Dirent]]
+  inline def readdirSync(path: PathLike, options: WithFileTypes): js.Array[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[String]]
+  inline def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[String]]
   
-  @scala.inline
-  def readdirSync_buffer(path: PathLike, options: buffer_): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
+  inline def readdirSync_buffer(path: PathLike, options: buffer_): js.Array[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("readdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Array[Buffer]]
   
-  @scala.inline
-  def readlink(
+  inline def readlink(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* linkString */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readlink(
+  inline def readlink(
     path: PathLike,
     options: BufferEncodingOption,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* linkString */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readlink(
+  inline def readlink(
     path: PathLike,
     options: EncodingOption,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ String), Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Buffer | (/* linkString */ String), 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readlink")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def readlinkSync(path: PathLike): String = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[String]
-  @scala.inline
-  def readlinkSync(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def readlinkSync(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def readlinkSync(path: PathLike): String = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def readlinkSync(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def readlinkSync(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
-  @scala.inline
-  def readlinkSync_Union(path: PathLike): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-  @scala.inline
-  def readlinkSync_Union(path: PathLike, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def readlinkSync_Union(path: PathLike): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+  inline def readlinkSync_Union(path: PathLike, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("readlinkSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
   
-  @scala.inline
-  def readv(
+  inline def readv(
     fd: Double,
-    buffers: js.Array[ArrayBufferView],
+    buffers: js.Array[js.typedarray.ArrayBufferView],
     cb: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesRead */ Double, 
-      /* buffers */ js.Array[ArrayBufferView], 
+      /* buffers */ js.Array[js.typedarray.ArrayBufferView], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readv")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def readv(
+  inline def readv(
     fd: Double,
-    buffers: js.Array[ArrayBufferView],
+    buffers: js.Array[js.typedarray.ArrayBufferView],
     position: Double,
     cb: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesRead */ Double, 
-      /* buffers */ js.Array[ArrayBufferView], 
+      /* buffers */ js.Array[js.typedarray.ArrayBufferView], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("readv")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def readvSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readvSync(fd: Double, buffers: js.Array[js.typedarray.ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def readvSync(fd: Double, buffers: js.Array[js.typedarray.ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("readvSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
   
   object realpath {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       path: PathLike,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
+      callback: js.Function2[
+          /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          /* resolvedPath */ String, 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-    @scala.inline
-    def apply(
+    inline def apply(
       path: PathLike,
       options: BufferEncodingOption,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
+      callback: js.Function2[
+          /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          /* resolvedPath */ Buffer, 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-    @scala.inline
-    def apply(
+    inline def apply(
       path: PathLike,
       options: EncodingOption,
-      callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
+      callback: js.Function2[
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          Buffer | (/* resolvedPath */ String), 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
     
     @JSImport("node:fs", "realpath")
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def native(
+    inline def native(
       path: PathLike,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
+      callback: js.Function2[
+          /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          /* resolvedPath */ String, 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-    @scala.inline
-    def native(
+    inline def native(
       path: PathLike,
       options: BufferEncodingOption,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
+      callback: js.Function2[
+          /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          /* resolvedPath */ Buffer, 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
     /**
       * Asynchronous [`realpath(3)`](http://man7.org/linux/man-pages/man3/realpath.3.html).
@@ -2172,95 +2147,91 @@ object nodeFsMod {
       * this restriction.
       * @since v9.2.0
       */
-    @scala.inline
-    def native(
+    inline def native(
       path: PathLike,
       options: EncodingOption,
-      callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
+      callback: js.Function2[
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+          Buffer | (/* resolvedPath */ String), 
+          Unit
+        ]
     ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   }
   
   object realpathSync {
     
-    @scala.inline
-    def apply(path: PathLike): String = ^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any]).asInstanceOf[String]
-    @scala.inline
-    def apply(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-    @scala.inline
-    def apply(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(path: PathLike): String = ^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def apply(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+    inline def apply(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
     
     @JSImport("node:fs", "realpathSync")
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def native(path: PathLike): String = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[String]
-    @scala.inline
-    def native(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-    @scala.inline
-    def native(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def native(path: PathLike): String = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def native(path: PathLike, options: BufferEncodingOption): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+    inline def native(path: PathLike, options: EncodingOption): String = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
     
-    @scala.inline
-    def native_Union(path: PathLike): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-    @scala.inline
-    def native_Union(path: PathLike, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+    inline def native_Union(path: PathLike): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+    inline def native_Union(path: PathLike, options: EncodingOption): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
   }
   
-  @scala.inline
-  def rename(oldPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rename(oldPath: PathLike, newPath: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rename")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def renameSync(oldPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("renameSync")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def renameSync(oldPath: PathLike, newPath: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("renameSync")(oldPath.asInstanceOf[js.Any], newPath.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def rm(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def rm(path: PathLike, options: RmOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rm(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rm(path: PathLike, options: RmOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rm")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def rmSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def rmSync(path: PathLike, options: RmOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rmSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def rmSync(path: PathLike, options: RmOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def rmdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def rmdir(path: PathLike, options: RmDirOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rmdir(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rmdir(path: PathLike, options: RmDirOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdir")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def rmdirSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def rmdirSync(path: PathLike, options: RmDirOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def rmdirSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def rmdirSync(path: PathLike, options: RmDirOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("rmdirSync")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def stat(
+  inline def stat(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def stat(
+  inline def stat(
     path: PathLike,
     options: Unit,
-    callback: js.Function2[ErrnoException | Null, BigIntStats | tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      BigIntStats | tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def stat(
+  inline def stat(
     path: PathLike,
     options: StatOptionsbigintfalseund,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ tmttyped.node.fsMod.Stats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ tmttyped.node.fsMod.Stats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def stat(
+  inline def stat(
     path: PathLike,
     options: StatOptionsbiginttrue,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ BigIntStats, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* stats */ BigIntStats, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("stat")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def stat(
+  inline def stat(
     path: PathLike,
     options: StatOptions,
     callback: js.Function2[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* stats */ tmttyped.node.fsMod.Stats | BigIntStats, 
       Unit
     ]
@@ -2270,86 +2241,54 @@ object nodeFsMod {
   @js.native
   val statSync: StatSyncFn = js.native
   
-  @scala.inline
-  def symlink(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def symlink(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def symlink(target: PathLike, path: PathLike, `type`: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def symlink(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlink(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlink(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlink(target: PathLike, path: PathLike, `type`: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlink(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlink")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def symlinkSync(target: PathLike, path: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlinkSync(target: PathLike, path: PathLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("symlinkSync")(target.asInstanceOf[js.Any], path.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def truncate(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def truncate(path: PathLike, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def truncate(path: PathLike, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def truncate(path: PathLike, len: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def truncate(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def truncate(path: PathLike, len: Double, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def truncate(path: PathLike, len: Null, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def truncate(path: PathLike, len: Unit, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncate")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def truncateSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def truncateSync(path: PathLike, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def truncateSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def truncateSync(path: PathLike, len: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("truncateSync")(path.asInstanceOf[js.Any], len.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def unlink(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def unlink(path: PathLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unlink")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def unlinkSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def unlinkSync(path: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unlinkSync")(path.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
-  @scala.inline
-  def unwatchFile(filename: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unwatchFile")(filename.asInstanceOf[js.Any]).asInstanceOf[Unit]
-  @scala.inline
-  def unwatchFile(
+  inline def unwatchFile(filename: PathLike): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("unwatchFile")(filename.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def unwatchFile(
     filename: PathLike,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("unwatchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def utimes(path: PathLike, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def utimes(path: PathLike, atime: TimeLike, mtime: TimeLike, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimes")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def utimesSync(path: PathLike, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def utimesSync(path: PathLike, atime: TimeLike, mtime: TimeLike): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("utimesSync")(path.asInstanceOf[js.Any], atime.asInstanceOf[js.Any], mtime.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def watch(filename: PathLike): FSWatcher = ^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any]).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: String): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: String, listener: WatchListener[String | Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: Null, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: Unit, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: WatchOptionsencodingbuffe): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: WatchOptionsencodingbuffe, listener: WatchListener[Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: BufferEncoding): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: BufferEncoding, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: WatchOptions): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch(filename: PathLike, options: WatchOptions, listener: WatchListener[Buffer | String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike): FSWatcher = ^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any]).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: String): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: String, listener: WatchListener[String | Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: Null, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: Unit, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: WatchOptionsencodingbuffe): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: WatchOptionsencodingbuffe, listener: WatchListener[Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: BufferEncoding): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: BufferEncoding, listener: WatchListener[String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: WatchOptions): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch(filename: PathLike, options: WatchOptions, listener: WatchListener[Buffer | String]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
   
-  @scala.inline
-  def watchFile(
+  inline def watchFile(
     filename: PathLike,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
   ): StatWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[StatWatcher]
-  @scala.inline
-  def watchFile(
+  inline def watchFile(
     filename: PathLike,
     options: Unit,
     listener: js.Function2[
@@ -2358,6716 +2297,737 @@ object nodeFsMod {
       Unit
     ]
   ): StatWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[StatWatcher]
-  @scala.inline
-  def watchFile(
+  inline def watchFile(
     filename: PathLike,
     options: WatchFileOptionsbigintfal,
     listener: js.Function2[/* curr */ tmttyped.node.fsMod.Stats, /* prev */ tmttyped.node.fsMod.Stats, Unit]
   ): StatWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[StatWatcher]
-  @scala.inline
-  def watchFile(
+  inline def watchFile(
     filename: PathLike,
     options: WatchFileOptionsbiginttru,
     listener: js.Function2[/* curr */ BigIntStats, /* prev */ BigIntStats, Unit]
   ): StatWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watchFile")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[StatWatcher]
   
-  @scala.inline
-  def watch_buffer(filename: PathLike, options: buffer_): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
-  @scala.inline
-  def watch_buffer(filename: PathLike, options: buffer_, listener: WatchListener[Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch_buffer(filename: PathLike, options: buffer_): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
+  inline def watch_buffer(filename: PathLike, options: buffer_, listener: WatchListener[Buffer]): FSWatcher = (^.asInstanceOf[js.Dynamic].applyDynamic("watch")(filename.asInstanceOf[js.Any], options.asInstanceOf[js.Any], listener.asInstanceOf[js.Any])).asInstanceOf[FSWatcher]
   
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigInt64Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigInt64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Double,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Null,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Double,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Double,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Double,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Null,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Null,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Null,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Unit,
-    position: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Unit,
-    position: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
-    fd: Double,
-    buffer: BigUint64Array,
-    offset: Unit,
-    length: Unit,
-    position: Unit,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ BigUint64Array, 
-      Unit
-    ]
-  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Double,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Double,
     encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Double,
     encoding: Unit,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Double,
     encoding: BufferEncoding,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Null,
     encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Null,
     encoding: Unit,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Null,
     encoding: BufferEncoding,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Unit,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Unit,
     encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Unit,
     encoding: Unit,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def write(
+  inline def write(
     fd: Double,
     string: String,
     position: Unit,
     encoding: BufferEncoding,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* str */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Double,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Double,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Double,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Null,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Null,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Null,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Unit,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Unit,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Double,
+    length: Unit,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Double,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Double,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Double,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Null,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Null,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Null,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Unit,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Unit,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Null,
+    length: Unit,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Double,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Double,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Double,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Null,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Null,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Null,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Unit,
+    position: Double,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Unit,
+    position: Null,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def write[TBuffer /* <: js.typedarray.ArrayBufferView */](
+    fd: Double,
+    buffer: TBuffer,
+    offset: Unit,
+    length: Unit,
+    position: Unit,
+    callback: js.Function3[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* written */ Double, 
+      /* buffer */ TBuffer, 
+      Unit
+    ]
+  ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("write")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def writeFile(file: PathOrFileDescriptor, data: String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFile(
+  inline def writeFile(file: PathOrFileDescriptor, data: String, options: WriteFileOptions, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFile(
     file: PathOrFileDescriptor,
-    data: ArrayBufferView,
+    data: js.typedarray.ArrayBufferView,
     options: WriteFileOptions,
     callback: NoParamCallback
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFile(path: PathOrFileDescriptor, data: String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFile(path: PathOrFileDescriptor, data: ArrayBufferView, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFile(path: PathOrFileDescriptor, data: String, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFile(path: PathOrFileDescriptor, data: js.typedarray.ArrayBufferView, callback: NoParamCallback): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFile")(path.asInstanceOf[js.Any], data.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def writeFileSync(file: PathOrFileDescriptor, data: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFileSync(file: PathOrFileDescriptor, data: String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFileSync(file: PathOrFileDescriptor, data: ArrayBufferView): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writeFileSync(file: PathOrFileDescriptor, data: ArrayBufferView, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFileSync(file: PathOrFileDescriptor, data: String): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFileSync(file: PathOrFileDescriptor, data: String, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFileSync(file: PathOrFileDescriptor, data: js.typedarray.ArrayBufferView): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def writeFileSync(file: PathOrFileDescriptor, data: js.typedarray.ArrayBufferView, options: WriteFileOptions): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writeFileSync")(file.asInstanceOf[js.Any], data.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Double, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Null, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Unit, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Unit, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Unit, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, buffer: ArrayBufferView, offset: Unit, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, string: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, string: String, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, string: String, position: Double, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, string: String, position: Null, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writeSync(fd: Double, string: String, position: Unit, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
-  
-  @scala.inline
-  def writev(
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Double, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(
     fd: Double,
-    buffers: js.Array[ArrayBufferView],
+    buffer: js.typedarray.ArrayBufferView,
+    offset: Double,
+    length: Double,
+    position: Double
+  ): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Double, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Double, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Null, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Null, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Null, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Null, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Unit, length: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Unit, length: Double, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Unit, length: Null, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, buffer: js.typedarray.ArrayBufferView, offset: Unit, length: Unit, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], buffer.asInstanceOf[js.Any], offset.asInstanceOf[js.Any], length.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, string: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, string: String, position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, string: String, position: Double, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, string: String, position: Null, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writeSync(fd: Double, string: String, position: Unit, encoding: BufferEncoding): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writeSync")(fd.asInstanceOf[js.Any], string.asInstanceOf[js.Any], position.asInstanceOf[js.Any], encoding.asInstanceOf[js.Any])).asInstanceOf[Double]
+  
+  inline def writev(
+    fd: Double,
+    buffers: js.Array[js.typedarray.ArrayBufferView],
     cb: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesWritten */ Double, 
-      /* buffers */ js.Array[ArrayBufferView], 
+      /* buffers */ js.Array[js.typedarray.ArrayBufferView], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writev")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def writev(
+  inline def writev(
     fd: Double,
-    buffers: js.Array[ArrayBufferView],
+    buffers: js.Array[js.typedarray.ArrayBufferView],
     position: Double,
     cb: js.Function3[
-      /* err */ ErrnoException | Null, 
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
       /* bytesWritten */ Double, 
-      /* buffers */ js.Array[ArrayBufferView], 
+      /* buffers */ js.Array[js.typedarray.ArrayBufferView], 
       Unit
     ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("writev")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any], cb.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
-  @scala.inline
-  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def writevSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writevSync(fd: Double, buffers: js.Array[js.typedarray.ArrayBufferView]): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def writevSync(fd: Double, buffers: js.Array[js.typedarray.ArrayBufferView], position: Double): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("writevSync")(fd.asInstanceOf[js.Any], buffers.asInstanceOf[js.Any], position.asInstanceOf[js.Any])).asInstanceOf[Double]
 }

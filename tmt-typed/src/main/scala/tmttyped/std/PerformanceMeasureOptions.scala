@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PerformanceMeasureOptions extends StObject {
@@ -21,37 +20,27 @@ trait PerformanceMeasureOptions extends StObject {
 }
 object PerformanceMeasureOptions {
   
-  @scala.inline
-  def apply(): PerformanceMeasureOptions = {
+  inline def apply(): PerformanceMeasureOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PerformanceMeasureOptions]
   }
   
-  @scala.inline
-  implicit class PerformanceMeasureOptionsMutableBuilder[Self <: PerformanceMeasureOptions] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceMeasureOptions](x: Self) {
     
-    @scala.inline
-    def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+    inline def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
+    inline def setDetailUndefined: Self = StObject.set(x, "detail", js.undefined)
     
-    @scala.inline
-    def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
+    inline def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
+    inline def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
     
-    @scala.inline
-    def setEnd(value: java.lang.String | DOMHighResTimeStamp): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
+    inline def setEnd(value: java.lang.String | DOMHighResTimeStamp): Self = StObject.set(x, "end", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEndUndefined: Self = StObject.set(x, "end", js.undefined)
+    inline def setEndUndefined: Self = StObject.set(x, "end", js.undefined)
     
-    @scala.inline
-    def setStart(value: java.lang.String | DOMHighResTimeStamp): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
+    inline def setStart(value: java.lang.String | DOMHighResTimeStamp): Self = StObject.set(x, "start", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
+    inline def setStartUndefined: Self = StObject.set(x, "start", js.undefined)
   }
 }

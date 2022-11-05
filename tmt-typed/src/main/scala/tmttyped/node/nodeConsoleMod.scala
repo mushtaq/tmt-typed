@@ -4,13 +4,12 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Shortcut
-import tmttyped.node.NodeJS.WritableStream
 import tmttyped.node.nodeConsoleMod.global.console.ConsoleConstructor
 import tmttyped.node.nodeStrings.auto
 import tmttyped.node.utilMod.InspectOptions
+import tmttyped.std.WritableStream
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeConsoleMod {
@@ -83,27 +82,27 @@ object nodeConsoleMod {
       /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
       @JSGlobal("console.Console")
       @js.native
-      class Console protected ()
+      open class Console protected ()
         extends StObject
            with Console_ {
         def this(options: ConsoleConstructorOptions) = this()
-        def this(stdout: WritableStream) = this()
-        def this(stdout: WritableStream, stderr: WritableStream) = this()
-        def this(stdout: WritableStream, stderr: Unit, ignoreErrors: Boolean) = this()
-        def this(stdout: WritableStream, stderr: WritableStream, ignoreErrors: Boolean) = this()
+        def this(stdout: WritableStream[Any]) = this()
+        def this(stdout: WritableStream[Any], stderr: WritableStream[Any]) = this()
+        def this(stdout: WritableStream[Any], stderr: Unit, ignoreErrors: Boolean) = this()
+        def this(stdout: WritableStream[Any], stderr: WritableStream[Any], ignoreErrors: Boolean) = this()
       }
       
       @js.native
       trait ConsoleConstructor
         extends StObject
            with Instantiable1[
-                  (/* options */ ConsoleConstructorOptions) | (/* stdout */ WritableStream), 
+                  (/* options */ ConsoleConstructorOptions) | (/* stdout */ WritableStream[Any]), 
                   Console_
                 ]
-           with Instantiable2[/* stdout */ WritableStream, /* stderr */ WritableStream, Console_]
+           with Instantiable2[/* stdout */ WritableStream[Any], /* stderr */ WritableStream[Any], Console_]
            with Instantiable3[
-                  /* stdout */ WritableStream, 
-                  (/* stderr */ Unit) | (/* stderr */ WritableStream), 
+                  /* stdout */ WritableStream[Any], 
+                  (/* stderr */ Unit) | (/* stderr */ WritableStream[Any]), 
                   /* ignoreErrors */ Boolean, 
                   Console_
                 ]
@@ -122,53 +121,40 @@ object nodeConsoleMod {
         
         var inspectOptions: js.UndefOr[InspectOptions] = js.undefined
         
-        var stderr: js.UndefOr[WritableStream] = js.undefined
+        var stderr: js.UndefOr[WritableStream[Any]] = js.undefined
         
-        var stdout: WritableStream
+        var stdout: WritableStream[Any]
       }
       object ConsoleConstructorOptions {
         
-        @scala.inline
-        def apply(stdout: WritableStream): ConsoleConstructorOptions = {
+        inline def apply(stdout: WritableStream[Any]): ConsoleConstructorOptions = {
           val __obj = js.Dynamic.literal(stdout = stdout.asInstanceOf[js.Any])
           __obj.asInstanceOf[ConsoleConstructorOptions]
         }
         
-        @scala.inline
-        implicit class ConsoleConstructorOptionsMutableBuilder[Self <: ConsoleConstructorOptions] (val x: Self) extends AnyVal {
+        extension [Self <: ConsoleConstructorOptions](x: Self) {
           
-          @scala.inline
-          def setColorMode(value: Boolean | auto): Self = StObject.set(x, "colorMode", value.asInstanceOf[js.Any])
+          inline def setColorMode(value: Boolean | auto): Self = StObject.set(x, "colorMode", value.asInstanceOf[js.Any])
           
-          @scala.inline
-          def setColorModeUndefined: Self = StObject.set(x, "colorMode", js.undefined)
+          inline def setColorModeUndefined: Self = StObject.set(x, "colorMode", js.undefined)
           
-          @scala.inline
-          def setGroupIndentation(value: Double): Self = StObject.set(x, "groupIndentation", value.asInstanceOf[js.Any])
+          inline def setGroupIndentation(value: Double): Self = StObject.set(x, "groupIndentation", value.asInstanceOf[js.Any])
           
-          @scala.inline
-          def setGroupIndentationUndefined: Self = StObject.set(x, "groupIndentation", js.undefined)
+          inline def setGroupIndentationUndefined: Self = StObject.set(x, "groupIndentation", js.undefined)
           
-          @scala.inline
-          def setIgnoreErrors(value: Boolean): Self = StObject.set(x, "ignoreErrors", value.asInstanceOf[js.Any])
+          inline def setIgnoreErrors(value: Boolean): Self = StObject.set(x, "ignoreErrors", value.asInstanceOf[js.Any])
           
-          @scala.inline
-          def setIgnoreErrorsUndefined: Self = StObject.set(x, "ignoreErrors", js.undefined)
+          inline def setIgnoreErrorsUndefined: Self = StObject.set(x, "ignoreErrors", js.undefined)
           
-          @scala.inline
-          def setInspectOptions(value: InspectOptions): Self = StObject.set(x, "inspectOptions", value.asInstanceOf[js.Any])
+          inline def setInspectOptions(value: InspectOptions): Self = StObject.set(x, "inspectOptions", value.asInstanceOf[js.Any])
           
-          @scala.inline
-          def setInspectOptionsUndefined: Self = StObject.set(x, "inspectOptions", js.undefined)
+          inline def setInspectOptionsUndefined: Self = StObject.set(x, "inspectOptions", js.undefined)
           
-          @scala.inline
-          def setStderr(value: WritableStream): Self = StObject.set(x, "stderr", value.asInstanceOf[js.Any])
+          inline def setStderr(value: WritableStream[Any]): Self = StObject.set(x, "stderr", value.asInstanceOf[js.Any])
           
-          @scala.inline
-          def setStderrUndefined: Self = StObject.set(x, "stderr", js.undefined)
+          inline def setStderrUndefined: Self = StObject.set(x, "stderr", js.undefined)
           
-          @scala.inline
-          def setStdout(value: WritableStream): Self = StObject.set(x, "stdout", value.asInstanceOf[js.Any])
+          inline def setStdout(value: WritableStream[Any]): Self = StObject.set(x, "stdout", value.asInstanceOf[js.Any])
         }
       }
       

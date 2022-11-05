@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** An object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE). */
@@ -18,8 +17,7 @@ trait CSSKeyframeRule
 }
 object CSSKeyframeRule {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     CHARSET_RULE: Double,
     FONT_FACE_RULE: Double,
     IMPORT_RULE: Double,
@@ -40,13 +38,10 @@ object CSSKeyframeRule {
     __obj.asInstanceOf[CSSKeyframeRule]
   }
   
-  @scala.inline
-  implicit class CSSKeyframeRuleMutableBuilder[Self <: CSSKeyframeRule] (val x: Self) extends AnyVal {
+  extension [Self <: CSSKeyframeRule](x: Self) {
     
-    @scala.inline
-    def setKeyText(value: java.lang.String): Self = StObject.set(x, "keyText", value.asInstanceOf[js.Any])
+    inline def setKeyText(value: java.lang.String): Self = StObject.set(x, "keyText", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    inline def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

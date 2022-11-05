@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ElementCSSInlineStyle extends StObject {
@@ -12,16 +11,13 @@ trait ElementCSSInlineStyle extends StObject {
 }
 object ElementCSSInlineStyle {
   
-  @scala.inline
-  def apply(style: org.scalajs.dom.CSSStyleDeclaration): ElementCSSInlineStyle = {
+  inline def apply(style: org.scalajs.dom.CSSStyleDeclaration): ElementCSSInlineStyle = {
     val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementCSSInlineStyle]
   }
   
-  @scala.inline
-  implicit class ElementCSSInlineStyleMutableBuilder[Self <: ElementCSSInlineStyle] (val x: Self) extends AnyVal {
+  extension [Self <: ElementCSSInlineStyle](x: Self) {
     
-    @scala.inline
-    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    inline def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

@@ -1,7 +1,6 @@
 package tmttyped.node
 
 import org.scalablytyped.runtime.Shortcut
-import tmttyped.node.NodeJS.Dict
 import tmttyped.node.childProcessMod.MessageOptions
 import tmttyped.node.childProcessMod.SendHandle
 import tmttyped.node.childProcessMod.Serializable
@@ -21,7 +20,6 @@ import tmttyped.node.nodeStrings.udp4
 import tmttyped.node.nodeStrings.udp6
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object clusterMod extends Shortcut {
@@ -32,7 +30,7 @@ object clusterMod extends Shortcut {
   
   @JSImport("cluster", "Worker")
   @js.native
-  class Worker () extends StObject {
+  open class Worker () extends StObject {
     def this(options: EventEmitterOptions) = this()
     
     /**
@@ -143,7 +141,8 @@ object clusterMod extends Shortcut {
     def emit_online(event: online): Boolean = js.native
     
     /**
-      * This property is `true` if the worker exited due to `.kill()` or`.disconnect()`. If the worker exited any other way, it is `false`. If the
+      * This property is `true` if the worker exited due to `.disconnect()`.
+      * If the worker exited any other way, it is `false`. If the
       * worker has not exited, it is `undefined`.
       *
       * The boolean `worker.exitedAfterDisconnect` allows distinguishing between
@@ -221,19 +220,13 @@ object clusterMod extends Shortcut {
     def isDead(): Boolean = js.native
     
     /**
-      * This function will kill the worker. In the primary, it does this
-      * by disconnecting the `worker.process`, and once disconnected, killing
-      * with `signal`. In the worker, it does it by disconnecting the channel,
-      * and then exiting with code `0`.
+      * This function will kill the worker. In the primary worker, it does this by
+      * disconnecting the `worker.process`, and once disconnected, killing with`signal`. In the worker, it does it by killing the process with `signal`.
       *
-      * Because `kill()` attempts to gracefully disconnect the worker process, it is
-      * susceptible to waiting indefinitely for the disconnect to complete. For example,
-      * if the worker enters an infinite loop, a graceful disconnect will never occur.
-      * If the graceful disconnect behavior is not needed, use `worker.process.kill()`.
+      * The `kill()` function kills the worker process without waiting for a graceful
+      * disconnect, it has the same behavior as `worker.process.kill()`.
       *
-      * Causes `.exitedAfterDisconnect` to be set.
-      *
-      * This method is aliased as `worker.destroy()` for backward compatibility.
+      * This method is aliased as `worker.destroy()` for backwards compatibility.
       *
       * In a worker, `process.kill()` exists, but it is not this function;
       * it is `kill()`.
@@ -319,9 +312,9 @@ object clusterMod extends Shortcut {
     /**
       * Send a message to a worker or primary, optionally with a handle.
       *
-      * In the primary this sends a message to a specific worker. It is identical to `ChildProcess.send()`.
+      * In the primary, this sends a message to a specific worker. It is identical to `ChildProcess.send()`.
       *
-      * In a worker this sends a message to the primary. It is identical to`process.send()`.
+      * In a worker, this sends a message to the primary. It is identical to`process.send()`.
       *
       * This example will echo back all messages from the primary:
       *
@@ -372,23 +365,18 @@ object clusterMod extends Shortcut {
   }
   object Address {
     
-    @scala.inline
-    def apply(address: String, addressType: Double | udp4 | udp6, port: Double): Address = {
+    inline def apply(address: String, addressType: Double | udp4 | udp6, port: Double): Address = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], addressType = addressType.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
       __obj.asInstanceOf[Address]
     }
     
-    @scala.inline
-    implicit class AddressMutableBuilder[Self <: Address] (val x: Self) extends AnyVal {
+    extension [Self <: Address](x: Self) {
       
-      @scala.inline
-      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      inline def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAddressType(value: Double | udp4 | udp6): Self = StObject.set(x, "addressType", value.asInstanceOf[js.Any])
+      inline def setAddressType(value: Double | udp4 | udp6): Self = StObject.set(x, "addressType", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+      inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
     }
   }
   
@@ -572,7 +560,9 @@ object clusterMod extends Shortcut {
     
     val worker: js.UndefOr[Worker] = js.native
     
-    val workers: js.UndefOr[Dict[Worker]] = js.native
+    val workers: js.UndefOr[
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<Worker> */ Any
+      ] = js.native
   }
   
   trait ClusterSettings extends StObject {
@@ -596,74 +586,52 @@ object clusterMod extends Shortcut {
   }
   object ClusterSettings {
     
-    @scala.inline
-    def apply(): ClusterSettings = {
+    inline def apply(): ClusterSettings = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ClusterSettings]
     }
     
-    @scala.inline
-    implicit class ClusterSettingsMutableBuilder[Self <: ClusterSettings] (val x: Self) extends AnyVal {
+    extension [Self <: ClusterSettings](x: Self) {
       
-      @scala.inline
-      def setArgs(value: js.Array[String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
+      inline def setArgs(value: js.Array[String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
+      inline def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
       
-      @scala.inline
-      def setArgsVarargs(value: String*): Self = StObject.set(x, "args", js.Array(value :_*))
+      inline def setArgsVarargs(value: String*): Self = StObject.set(x, "args", js.Array(value*))
       
-      @scala.inline
-      def setExec(value: String): Self = StObject.set(x, "exec", value.asInstanceOf[js.Any])
+      inline def setExec(value: String): Self = StObject.set(x, "exec", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
+      inline def setExecArgv(value: js.Array[String]): Self = StObject.set(x, "execArgv", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
+      inline def setExecArgvUndefined: Self = StObject.set(x, "execArgv", js.undefined)
       
-      @scala.inline
-      def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value :_*))
+      inline def setExecArgvVarargs(value: String*): Self = StObject.set(x, "execArgv", js.Array(value*))
       
-      @scala.inline
-      def setExecUndefined: Self = StObject.set(x, "exec", js.undefined)
+      inline def setExecUndefined: Self = StObject.set(x, "exec", js.undefined)
       
-      @scala.inline
-      def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
+      inline def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setGidUndefined: Self = StObject.set(x, "gid", js.undefined)
+      inline def setGidUndefined: Self = StObject.set(x, "gid", js.undefined)
       
-      @scala.inline
-      def setInspectPort(value: Double | js.Function0[Double]): Self = StObject.set(x, "inspectPort", value.asInstanceOf[js.Any])
+      inline def setInspectPort(value: Double | js.Function0[Double]): Self = StObject.set(x, "inspectPort", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setInspectPortFunction0(value: () => Double): Self = StObject.set(x, "inspectPort", js.Any.fromFunction0(value))
+      inline def setInspectPortFunction0(value: () => Double): Self = StObject.set(x, "inspectPort", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setInspectPortUndefined: Self = StObject.set(x, "inspectPort", js.undefined)
+      inline def setInspectPortUndefined: Self = StObject.set(x, "inspectPort", js.undefined)
       
-      @scala.inline
-      def setSilent(value: Boolean): Self = StObject.set(x, "silent", value.asInstanceOf[js.Any])
+      inline def setSilent(value: Boolean): Self = StObject.set(x, "silent", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSilentUndefined: Self = StObject.set(x, "silent", js.undefined)
+      inline def setSilentUndefined: Self = StObject.set(x, "silent", js.undefined)
       
-      @scala.inline
-      def setStdio(value: js.Array[Any]): Self = StObject.set(x, "stdio", value.asInstanceOf[js.Any])
+      inline def setStdio(value: js.Array[Any]): Self = StObject.set(x, "stdio", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStdioUndefined: Self = StObject.set(x, "stdio", js.undefined)
+      inline def setStdioUndefined: Self = StObject.set(x, "stdio", js.undefined)
       
-      @scala.inline
-      def setStdioVarargs(value: Any*): Self = StObject.set(x, "stdio", js.Array(value :_*))
+      inline def setStdioVarargs(value: Any*): Self = StObject.set(x, "stdio", js.Array(value*))
       
-      @scala.inline
-      def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
+      inline def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUidUndefined: Self = StObject.set(x, "uid", js.undefined)
+      inline def setUidUndefined: Self = StObject.set(x, "uid", js.undefined)
     }
   }
   

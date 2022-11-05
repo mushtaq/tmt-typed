@@ -4,7 +4,6 @@ import tmttyped.node.eventsMod.Abortable
 import tmttyped.node.processMod.global.NodeJS.Signals
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ExecFileOptions
@@ -22,37 +21,27 @@ trait ExecFileOptions
 }
 object ExecFileOptions {
   
-  @scala.inline
-  def apply(): ExecFileOptions = {
+  inline def apply(): ExecFileOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ExecFileOptions]
   }
   
-  @scala.inline
-  implicit class ExecFileOptionsMutableBuilder[Self <: ExecFileOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ExecFileOptions](x: Self) {
     
-    @scala.inline
-    def setKillSignal(value: Signals | Double): Self = StObject.set(x, "killSignal", value.asInstanceOf[js.Any])
+    inline def setKillSignal(value: Signals | Double): Self = StObject.set(x, "killSignal", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setKillSignalUndefined: Self = StObject.set(x, "killSignal", js.undefined)
+    inline def setKillSignalUndefined: Self = StObject.set(x, "killSignal", js.undefined)
     
-    @scala.inline
-    def setMaxBuffer(value: Double): Self = StObject.set(x, "maxBuffer", value.asInstanceOf[js.Any])
+    inline def setMaxBuffer(value: Double): Self = StObject.set(x, "maxBuffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMaxBufferUndefined: Self = StObject.set(x, "maxBuffer", js.undefined)
+    inline def setMaxBufferUndefined: Self = StObject.set(x, "maxBuffer", js.undefined)
     
-    @scala.inline
-    def setShell(value: Boolean | String): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
+    inline def setShell(value: Boolean | String): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
+    inline def setShellUndefined: Self = StObject.set(x, "shell", js.undefined)
     
-    @scala.inline
-    def setWindowsVerbatimArguments(value: Boolean): Self = StObject.set(x, "windowsVerbatimArguments", value.asInstanceOf[js.Any])
+    inline def setWindowsVerbatimArguments(value: Boolean): Self = StObject.set(x, "windowsVerbatimArguments", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWindowsVerbatimArgumentsUndefined: Self = StObject.set(x, "windowsVerbatimArguments", js.undefined)
+    inline def setWindowsVerbatimArgumentsUndefined: Self = StObject.set(x, "windowsVerbatimArguments", js.undefined)
   }
 }

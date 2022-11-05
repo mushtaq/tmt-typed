@@ -4,7 +4,6 @@ import tmttyped.std.stdStrings.abort
 import tmttyped.std.stdStrings.complete
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -75,6 +74,9 @@ trait IDBTransaction
   /** Returns the transaction's connection. */
   /* standard DOM */
   val db: org.scalajs.dom.IDBDatabase = js.native
+  
+  /* standard DOM */
+  val durability: IDBTransactionDurability = js.native
   
   /** If the transaction was aborted, returns the error (a DOMException) providing the reason. */
   /* standard DOM */

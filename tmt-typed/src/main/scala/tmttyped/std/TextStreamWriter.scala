@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TextStreamWriter
@@ -29,8 +28,7 @@ trait TextStreamWriter
 }
 object TextStreamWriter {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     Close: () => Unit,
     Column: Double,
     Line: Double,
@@ -42,16 +40,12 @@ object TextStreamWriter {
     __obj.asInstanceOf[TextStreamWriter]
   }
   
-  @scala.inline
-  implicit class TextStreamWriterMutableBuilder[Self <: TextStreamWriter] (val x: Self) extends AnyVal {
+  extension [Self <: TextStreamWriter](x: Self) {
     
-    @scala.inline
-    def setWrite(value: java.lang.String => Unit): Self = StObject.set(x, "Write", js.Any.fromFunction1(value))
+    inline def setWrite(value: java.lang.String => Unit): Self = StObject.set(x, "Write", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setWriteBlankLines(value: Double => Unit): Self = StObject.set(x, "WriteBlankLines", js.Any.fromFunction1(value))
+    inline def setWriteBlankLines(value: Double => Unit): Self = StObject.set(x, "WriteBlankLines", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setWriteLine(value: java.lang.String => Unit): Self = StObject.set(x, "WriteLine", js.Any.fromFunction1(value))
+    inline def setWriteLine(value: java.lang.String => Unit): Self = StObject.set(x, "WriteLine", js.Any.fromFunction1(value))
   }
 }

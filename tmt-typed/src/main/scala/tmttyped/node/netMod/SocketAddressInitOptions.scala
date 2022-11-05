@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait SocketAddressInitOptions extends StObject {
@@ -32,37 +31,27 @@ trait SocketAddressInitOptions extends StObject {
 }
 object SocketAddressInitOptions {
   
-  @scala.inline
-  def apply(): SocketAddressInitOptions = {
+  inline def apply(): SocketAddressInitOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SocketAddressInitOptions]
   }
   
-  @scala.inline
-  implicit class SocketAddressInitOptionsMutableBuilder[Self <: SocketAddressInitOptions] (val x: Self) extends AnyVal {
+  extension [Self <: SocketAddressInitOptions](x: Self) {
     
-    @scala.inline
-    def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+    inline def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
+    inline def setAddressUndefined: Self = StObject.set(x, "address", js.undefined)
     
-    @scala.inline
-    def setFamily(value: IPVersion): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+    inline def setFamily(value: IPVersion): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
+    inline def setFamilyUndefined: Self = StObject.set(x, "family", js.undefined)
     
-    @scala.inline
-    def setFlowlabel(value: Double): Self = StObject.set(x, "flowlabel", value.asInstanceOf[js.Any])
+    inline def setFlowlabel(value: Double): Self = StObject.set(x, "flowlabel", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFlowlabelUndefined: Self = StObject.set(x, "flowlabel", js.undefined)
+    inline def setFlowlabelUndefined: Self = StObject.set(x, "flowlabel", js.undefined)
     
-    @scala.inline
-    def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
+    inline def setPort(value: Double): Self = StObject.set(x, "port", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
+    inline def setPortUndefined: Self = StObject.set(x, "port", js.undefined)
   }
 }

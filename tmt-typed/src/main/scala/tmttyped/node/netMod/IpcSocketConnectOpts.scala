@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IpcSocketConnectOpts
@@ -14,16 +13,13 @@ trait IpcSocketConnectOpts
 }
 object IpcSocketConnectOpts {
   
-  @scala.inline
-  def apply(path: String): IpcSocketConnectOpts = {
+  inline def apply(path: String): IpcSocketConnectOpts = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[IpcSocketConnectOpts]
   }
   
-  @scala.inline
-  implicit class IpcSocketConnectOptsMutableBuilder[Self <: IpcSocketConnectOpts] (val x: Self) extends AnyVal {
+  extension [Self <: IpcSocketConnectOpts](x: Self) {
     
-    @scala.inline
-    def setPath(value: String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
+    inline def setPath(value: String): Self = StObject.set(x, "path", value.asInstanceOf[js.Any])
   }
 }

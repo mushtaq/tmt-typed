@@ -3,7 +3,6 @@ package tmttyped.std
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A <select> HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface. */
@@ -66,7 +65,7 @@ trait HTMLSelectElement
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.HTMLOptionElement]] = js.native
   
   /* standard DOM */
-  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node] = js.native
   
   /** Sets or retrieves the number of objects in a collection. */
   /* standard DOM */

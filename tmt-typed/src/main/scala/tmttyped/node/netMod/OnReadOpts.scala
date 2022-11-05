@@ -2,7 +2,6 @@ package tmttyped.node.netMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait OnReadOpts extends StObject {
@@ -18,8 +17,7 @@ trait OnReadOpts extends StObject {
 }
 object OnReadOpts {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     buffer: js.typedarray.Uint8Array | js.Function0[js.typedarray.Uint8Array],
     callback: (Double, js.typedarray.Uint8Array) => Boolean
   ): OnReadOpts = {
@@ -27,16 +25,12 @@ object OnReadOpts {
     __obj.asInstanceOf[OnReadOpts]
   }
   
-  @scala.inline
-  implicit class OnReadOptsMutableBuilder[Self <: OnReadOpts] (val x: Self) extends AnyVal {
+  extension [Self <: OnReadOpts](x: Self) {
     
-    @scala.inline
-    def setBuffer(value: js.typedarray.Uint8Array | js.Function0[js.typedarray.Uint8Array]): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+    inline def setBuffer(value: js.typedarray.Uint8Array | js.Function0[js.typedarray.Uint8Array]): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBufferFunction0(value: () => js.typedarray.Uint8Array): Self = StObject.set(x, "buffer", js.Any.fromFunction0(value))
+    inline def setBufferFunction0(value: () => js.typedarray.Uint8Array): Self = StObject.set(x, "buffer", js.Any.fromFunction0(value))
     
-    @scala.inline
-    def setCallback(value: (Double, js.typedarray.Uint8Array) => Boolean): Self = StObject.set(x, "callback", js.Any.fromFunction2(value))
+    inline def setCallback(value: (Double, js.typedarray.Uint8Array) => Boolean): Self = StObject.set(x, "callback", js.Any.fromFunction2(value))
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.node.anon
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Buffer[TBuffer /* <: js.typedarray.Uint8Array */] extends StObject {
@@ -13,19 +12,15 @@ trait Buffer[TBuffer /* <: js.typedarray.Uint8Array */] extends StObject {
 }
 object Buffer {
   
-  @scala.inline
-  def apply[TBuffer /* <: js.typedarray.Uint8Array */](buffer: TBuffer, bytesWritten: Double): Buffer[TBuffer] = {
+  inline def apply[TBuffer /* <: js.typedarray.Uint8Array */](buffer: TBuffer, bytesWritten: Double): Buffer[TBuffer] = {
     val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], bytesWritten = bytesWritten.asInstanceOf[js.Any])
     __obj.asInstanceOf[Buffer[TBuffer]]
   }
   
-  @scala.inline
-  implicit class BufferMutableBuilder[Self <: Buffer[_], TBuffer /* <: js.typedarray.Uint8Array */] (val x: Self with Buffer[TBuffer]) extends AnyVal {
+  extension [Self <: Buffer[?], TBuffer /* <: js.typedarray.Uint8Array */](x: Self & Buffer[TBuffer]) {
     
-    @scala.inline
-    def setBuffer(value: TBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
+    inline def setBuffer(value: TBuffer): Self = StObject.set(x, "buffer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBytesWritten(value: Double): Self = StObject.set(x, "bytesWritten", value.asInstanceOf[js.Any])
+    inline def setBytesWritten(value: Double): Self = StObject.set(x, "bytesWritten", value.asInstanceOf[js.Any])
   }
 }

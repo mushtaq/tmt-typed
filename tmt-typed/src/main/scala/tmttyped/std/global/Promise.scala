@@ -3,13 +3,12 @@ package tmttyped.std.global
 import tmttyped.std.PromiseConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Promise")
 @js.native
-class Promise[T] protected ()
+open class Promise[T] protected ()
   extends StObject
      with tmttyped.std.Promise[T] {
   /**
@@ -27,6 +26,5 @@ class Promise[T] protected ()
 }
 object Promise {
   
-  @scala.inline
-  def apply: PromiseConstructor = js.Dynamic.global.selectDynamic("Promise").asInstanceOf[PromiseConstructor]
+  inline def apply: PromiseConstructor = js.Dynamic.global.selectDynamic("Promise").asInstanceOf[PromiseConstructor]
 }

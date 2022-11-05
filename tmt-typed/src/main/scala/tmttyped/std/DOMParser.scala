@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides the ability to parse XML or HTML source code from a string into a DOM Document. */
@@ -22,16 +21,13 @@ trait DOMParser extends StObject {
 }
 object DOMParser {
   
-  @scala.inline
-  def apply(parseFromString: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): DOMParser = {
+  inline def apply(parseFromString: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): DOMParser = {
     val __obj = js.Dynamic.literal(parseFromString = js.Any.fromFunction2(parseFromString))
     __obj.asInstanceOf[DOMParser]
   }
   
-  @scala.inline
-  implicit class DOMParserMutableBuilder[Self <: DOMParser] (val x: Self) extends AnyVal {
+  extension [Self <: DOMParser](x: Self) {
     
-    @scala.inline
-    def setParseFromString(value: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): Self = StObject.set(x, "parseFromString", js.Any.fromFunction2(value))
+    inline def setParseFromString(value: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.Document): Self = StObject.set(x, "parseFromString", js.Any.fromFunction2(value))
   }
 }

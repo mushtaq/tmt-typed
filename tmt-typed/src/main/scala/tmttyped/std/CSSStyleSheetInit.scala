@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait CSSStyleSheetInit extends StObject {
@@ -18,31 +17,23 @@ trait CSSStyleSheetInit extends StObject {
 }
 object CSSStyleSheetInit {
   
-  @scala.inline
-  def apply(): CSSStyleSheetInit = {
+  inline def apply(): CSSStyleSheetInit = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CSSStyleSheetInit]
   }
   
-  @scala.inline
-  implicit class CSSStyleSheetInitMutableBuilder[Self <: CSSStyleSheetInit] (val x: Self) extends AnyVal {
+  extension [Self <: CSSStyleSheetInit](x: Self) {
     
-    @scala.inline
-    def setBaseURL(value: java.lang.String): Self = StObject.set(x, "baseURL", value.asInstanceOf[js.Any])
+    inline def setBaseURL(value: java.lang.String): Self = StObject.set(x, "baseURL", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBaseURLUndefined: Self = StObject.set(x, "baseURL", js.undefined)
+    inline def setBaseURLUndefined: Self = StObject.set(x, "baseURL", js.undefined)
     
-    @scala.inline
-    def setDisabled(value: scala.Boolean): Self = StObject.set(x, "disabled", value.asInstanceOf[js.Any])
+    inline def setDisabled(value: scala.Boolean): Self = StObject.set(x, "disabled", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDisabledUndefined: Self = StObject.set(x, "disabled", js.undefined)
+    inline def setDisabledUndefined: Self = StObject.set(x, "disabled", js.undefined)
     
-    @scala.inline
-    def setMedia(value: org.scalajs.dom.MediaList | java.lang.String): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
+    inline def setMedia(value: org.scalajs.dom.MediaList | java.lang.String): Self = StObject.set(x, "media", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMediaUndefined: Self = StObject.set(x, "media", js.undefined)
+    inline def setMediaUndefined: Self = StObject.set(x, "media", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.node.dnsMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ResolverOptions extends StObject {
@@ -16,25 +15,19 @@ trait ResolverOptions extends StObject {
 }
 object ResolverOptions {
   
-  @scala.inline
-  def apply(): ResolverOptions = {
+  inline def apply(): ResolverOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ResolverOptions]
   }
   
-  @scala.inline
-  implicit class ResolverOptionsMutableBuilder[Self <: ResolverOptions] (val x: Self) extends AnyVal {
+  extension [Self <: ResolverOptions](x: Self) {
     
-    @scala.inline
-    def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
+    inline def setTimeout(value: Double): Self = StObject.set(x, "timeout", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
+    inline def setTimeoutUndefined: Self = StObject.set(x, "timeout", js.undefined)
     
-    @scala.inline
-    def setTries(value: Double): Self = StObject.set(x, "tries", value.asInstanceOf[js.Any])
+    inline def setTries(value: Double): Self = StObject.set(x, "tries", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTriesUndefined: Self = StObject.set(x, "tries", js.undefined)
+    inline def setTriesUndefined: Self = StObject.set(x, "tries", js.undefined)
   }
 }

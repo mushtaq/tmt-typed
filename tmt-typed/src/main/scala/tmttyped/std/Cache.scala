@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -12,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cache extends StObject {
   
+  def add(request: org.scalajs.dom.URL): js.Promise[Unit] = js.native
   /* standard DOM */
   def add(request: RequestInfo): js.Promise[Unit] = js.native
   
@@ -20,26 +20,35 @@ trait Cache extends StObject {
   /* standard DOM.Iterable */
   def addAll(requests: js.Iterable[RequestInfo]): js.Promise[Unit] = js.native
   
+  def delete(request: org.scalajs.dom.URL): js.Promise[scala.Boolean] = js.native
+  def delete(request: org.scalajs.dom.URL, options: org.scalajs.dom.CacheQueryOptions): js.Promise[scala.Boolean] = js.native
   /* standard DOM */
   def delete(request: RequestInfo): js.Promise[scala.Boolean] = js.native
   def delete(request: RequestInfo, options: org.scalajs.dom.CacheQueryOptions): js.Promise[scala.Boolean] = js.native
   
   /* standard DOM */
   def keys(): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
+  def keys(request: org.scalajs.dom.URL): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
+  def keys(request: org.scalajs.dom.URL, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
   def keys(request: Unit, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
   def keys(request: RequestInfo): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
   def keys(request: RequestInfo, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Request]] = js.native
   
+  def `match`(request: org.scalajs.dom.URL): js.Promise[js.UndefOr[org.scalajs.dom.Response]] = js.native
+  def `match`(request: org.scalajs.dom.URL, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.UndefOr[org.scalajs.dom.Response]] = js.native
   /* standard DOM */
   def `match`(request: RequestInfo): js.Promise[js.UndefOr[org.scalajs.dom.Response]] = js.native
   def `match`(request: RequestInfo, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.UndefOr[org.scalajs.dom.Response]] = js.native
   
   /* standard DOM */
   def matchAll(): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
+  def matchAll(request: org.scalajs.dom.URL): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
+  def matchAll(request: org.scalajs.dom.URL, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
   def matchAll(request: Unit, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
   def matchAll(request: RequestInfo): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
   def matchAll(request: RequestInfo, options: org.scalajs.dom.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.Response]] = js.native
   
+  def put(request: org.scalajs.dom.URL, response: org.scalajs.dom.Response): js.Promise[Unit] = js.native
   /* standard DOM */
   def put(request: RequestInfo, response: org.scalajs.dom.Response): js.Promise[Unit] = js.native
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A single CSS style sheet. It inherits properties and methods from its parent, StyleSheet. */
@@ -39,6 +38,12 @@ trait CSSStyleSheet
   /* standard DOM */
   def removeRule(): Unit = js.native
   def removeRule(index: Double): Unit = js.native
+  
+  /* standard DOM */
+  def replace(text: java.lang.String): js.Promise[org.scalajs.dom.CSSStyleSheet] = js.native
+  
+  /* standard DOM */
+  def replaceSync(text: java.lang.String): Unit = js.native
   
   /** @deprecated */
   /* standard DOM */

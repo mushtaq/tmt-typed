@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // http://cldr.unicode.org/index/cldr-spec/plural-rules#TOC-Determining-Plural-Categories
@@ -17,21 +16,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LDMLPluralRule extends StObject
 object LDMLPluralRule {
   
-  @scala.inline
-  def few: tmttyped.std.stdStrings.few = "few".asInstanceOf[tmttyped.std.stdStrings.few]
+  inline def few: tmttyped.std.stdStrings.few = "few".asInstanceOf[tmttyped.std.stdStrings.few]
   
-  @scala.inline
-  def many: tmttyped.std.stdStrings.many = "many".asInstanceOf[tmttyped.std.stdStrings.many]
+  inline def many: tmttyped.std.stdStrings.many = "many".asInstanceOf[tmttyped.std.stdStrings.many]
   
-  @scala.inline
-  def one: tmttyped.std.stdStrings.one = "one".asInstanceOf[tmttyped.std.stdStrings.one]
+  inline def one: tmttyped.std.stdStrings.one = "one".asInstanceOf[tmttyped.std.stdStrings.one]
   
-  @scala.inline
-  def other: tmttyped.std.stdStrings.other = "other".asInstanceOf[tmttyped.std.stdStrings.other]
+  inline def other: tmttyped.std.stdStrings.other = "other".asInstanceOf[tmttyped.std.stdStrings.other]
   
-  @scala.inline
-  def two: tmttyped.std.stdStrings.two = "two".asInstanceOf[tmttyped.std.stdStrings.two]
+  inline def two: tmttyped.std.stdStrings.two = "two".asInstanceOf[tmttyped.std.stdStrings.two]
   
-  @scala.inline
-  def zero: tmttyped.std.stdStrings.zero = "zero".asInstanceOf[tmttyped.std.stdStrings.zero]
+  inline def zero: tmttyped.std.stdStrings.zero = "zero".asInstanceOf[tmttyped.std.stdStrings.zero]
 }

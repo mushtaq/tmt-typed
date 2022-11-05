@@ -2,7 +2,6 @@ package tmttyped.node.inspectorMod.HeapProfiler
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait AddInspectedHeapObjectParameterType extends StObject {
@@ -14,16 +13,13 @@ trait AddInspectedHeapObjectParameterType extends StObject {
 }
 object AddInspectedHeapObjectParameterType {
   
-  @scala.inline
-  def apply(heapObjectId: HeapSnapshotObjectId): AddInspectedHeapObjectParameterType = {
+  inline def apply(heapObjectId: HeapSnapshotObjectId): AddInspectedHeapObjectParameterType = {
     val __obj = js.Dynamic.literal(heapObjectId = heapObjectId.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddInspectedHeapObjectParameterType]
   }
   
-  @scala.inline
-  implicit class AddInspectedHeapObjectParameterTypeMutableBuilder[Self <: AddInspectedHeapObjectParameterType] (val x: Self) extends AnyVal {
+  extension [Self <: AddInspectedHeapObjectParameterType](x: Self) {
     
-    @scala.inline
-    def setHeapObjectId(value: HeapSnapshotObjectId): Self = StObject.set(x, "heapObjectId", value.asInstanceOf[js.Any])
+    inline def setHeapObjectId(value: HeapSnapshotObjectId): Self = StObject.set(x, "heapObjectId", value.asInstanceOf[js.Any])
   }
 }

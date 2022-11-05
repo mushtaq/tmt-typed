@@ -1,30 +1,31 @@
 package tmttyped.std.global
 
+import tmttyped.std.ErrorOptions
 import tmttyped.std.TypeErrorConstructor
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("TypeError")
 @js.native
-/* standard es5 */
-class TypeError ()
+/* standard es2022.error */
+open class TypeError ()
   extends StObject
      with tmttyped.std.Error {
   def this(message: java.lang.String) = this()
+  def this(message: java.lang.String, options: ErrorOptions) = this()
+  def this(message: Unit, options: ErrorOptions) = this()
   
   /* standard es5 */
   /* CompleteClass */
-  override var message: java.lang.String = js.native
+  var message: java.lang.String = js.native
   
   /* standard es5 */
   /* CompleteClass */
-  override var name: java.lang.String = js.native
+  var name: java.lang.String = js.native
 }
 object TypeError {
   
-  @scala.inline
-  def apply: TypeErrorConstructor = js.Dynamic.global.selectDynamic("TypeError").asInstanceOf[TypeErrorConstructor]
+  inline def apply: TypeErrorConstructor = js.Dynamic.global.selectDynamic("TypeError").asInstanceOf[TypeErrorConstructor]
 }

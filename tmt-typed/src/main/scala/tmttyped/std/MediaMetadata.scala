@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MediaMetadata extends StObject {
@@ -21,8 +20,7 @@ trait MediaMetadata extends StObject {
 }
 object MediaMetadata {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     album: java.lang.String,
     artist: java.lang.String,
     artwork: js.Array[MediaImage],
@@ -32,22 +30,16 @@ object MediaMetadata {
     __obj.asInstanceOf[MediaMetadata]
   }
   
-  @scala.inline
-  implicit class MediaMetadataMutableBuilder[Self <: MediaMetadata] (val x: Self) extends AnyVal {
+  extension [Self <: MediaMetadata](x: Self) {
     
-    @scala.inline
-    def setAlbum(value: java.lang.String): Self = StObject.set(x, "album", value.asInstanceOf[js.Any])
+    inline def setAlbum(value: java.lang.String): Self = StObject.set(x, "album", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setArtist(value: java.lang.String): Self = StObject.set(x, "artist", value.asInstanceOf[js.Any])
+    inline def setArtist(value: java.lang.String): Self = StObject.set(x, "artist", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setArtwork(value: js.Array[MediaImage]): Self = StObject.set(x, "artwork", value.asInstanceOf[js.Any])
+    inline def setArtwork(value: js.Array[MediaImage]): Self = StObject.set(x, "artwork", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setArtworkVarargs(value: MediaImage*): Self = StObject.set(x, "artwork", js.Array(value :_*))
+    inline def setArtworkVarargs(value: MediaImage*): Self = StObject.set(x, "artwork", js.Array(value*))
     
-    @scala.inline
-    def setTitle(value: java.lang.String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
+    inline def setTitle(value: java.lang.String): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])
   }
 }

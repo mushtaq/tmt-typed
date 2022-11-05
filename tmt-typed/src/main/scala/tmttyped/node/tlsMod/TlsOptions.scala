@@ -1,10 +1,8 @@
 package tmttyped.node.tlsMod
 
-import tmttyped.node.NodeJS.TypedArray
 import tmttyped.node.netMod.ServerOpts
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TlsOptions
@@ -44,7 +42,7 @@ trait TlsOptions
     js.Function2[
       /* socket */ TLSSocket, 
       /* identity */ String, 
-      js.typedarray.DataView | TypedArray | Null
+      js.typedarray.DataView | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) | Null
     ]
   ] = js.undefined
   
@@ -58,33 +56,25 @@ trait TlsOptions
 }
 object TlsOptions {
   
-  @scala.inline
-  def apply(): TlsOptions = {
+  inline def apply(): TlsOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TlsOptions]
   }
   
-  @scala.inline
-  implicit class TlsOptionsMutableBuilder[Self <: TlsOptions] (val x: Self) extends AnyVal {
+  extension [Self <: TlsOptions](x: Self) {
     
-    @scala.inline
-    def setHandshakeTimeout(value: Double): Self = StObject.set(x, "handshakeTimeout", value.asInstanceOf[js.Any])
+    inline def setHandshakeTimeout(value: Double): Self = StObject.set(x, "handshakeTimeout", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHandshakeTimeoutUndefined: Self = StObject.set(x, "handshakeTimeout", js.undefined)
+    inline def setHandshakeTimeoutUndefined: Self = StObject.set(x, "handshakeTimeout", js.undefined)
     
-    @scala.inline
-    def setPskCallback(
-      value: (/* socket */ TLSSocket, /* identity */ String) => js.typedarray.DataView | TypedArray | Null
+    inline def setPskCallback(
+      value: (/* socket */ TLSSocket, /* identity */ String) => js.typedarray.DataView | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.TypedArray */ Any) | Null
     ): Self = StObject.set(x, "pskCallback", js.Any.fromFunction2(value))
     
-    @scala.inline
-    def setPskCallbackUndefined: Self = StObject.set(x, "pskCallback", js.undefined)
+    inline def setPskCallbackUndefined: Self = StObject.set(x, "pskCallback", js.undefined)
     
-    @scala.inline
-    def setPskIdentityHint(value: String): Self = StObject.set(x, "pskIdentityHint", value.asInstanceOf[js.Any])
+    inline def setPskIdentityHint(value: String): Self = StObject.set(x, "pskIdentityHint", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPskIdentityHintUndefined: Self = StObject.set(x, "pskIdentityHint", js.undefined)
+    inline def setPskIdentityHintUndefined: Self = StObject.set(x, "pskIdentityHint", js.undefined)
   }
 }

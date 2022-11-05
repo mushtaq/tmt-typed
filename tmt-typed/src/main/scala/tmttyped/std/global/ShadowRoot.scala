@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("ShadowRoot")
 @js.native
 /* standard DOM */
-class ShadowRoot ()
+open class ShadowRoot ()
   extends StObject
      with tmttyped.std.ShadowRoot {
   
@@ -23,6 +22,10 @@ class ShadowRoot ()
   /* standard DOM */
   /* CompleteClass */
   override val activeElement: org.scalajs.dom.Element | Null = js.native
+  
+  /* standard DOM */
+  /* CompleteClass */
+  var adoptedStyleSheets: js.Array[org.scalajs.dom.CSSStyleSheet] = js.native
   
   /**
     * Returns the element for the specified x coordinate and the specified y coordinate.
@@ -53,7 +56,7 @@ class ShadowRoot ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var innerHTML: java.lang.String = js.native
+  var innerHTML: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */

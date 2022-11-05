@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait IDBOpenDBRequestEventMap
@@ -17,8 +16,7 @@ trait IDBOpenDBRequestEventMap
 }
 object IDBOpenDBRequestEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     blocked: org.scalajs.dom.Event,
     error: org.scalajs.dom.Event,
     success: org.scalajs.dom.Event,
@@ -28,13 +26,10 @@ object IDBOpenDBRequestEventMap {
     __obj.asInstanceOf[IDBOpenDBRequestEventMap]
   }
   
-  @scala.inline
-  implicit class IDBOpenDBRequestEventMapMutableBuilder[Self <: IDBOpenDBRequestEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: IDBOpenDBRequestEventMap](x: Self) {
     
-    @scala.inline
-    def setBlocked(value: org.scalajs.dom.Event): Self = StObject.set(x, "blocked", value.asInstanceOf[js.Any])
+    inline def setBlocked(value: org.scalajs.dom.Event): Self = StObject.set(x, "blocked", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUpgradeneeded(value: org.scalajs.dom.IDBVersionChangeEvent): Self = StObject.set(x, "upgradeneeded", value.asInstanceOf[js.Any])
+    inline def setUpgradeneeded(value: org.scalajs.dom.IDBVersionChangeEvent): Self = StObject.set(x, "upgradeneeded", value.asInstanceOf[js.Any])
   }
 }

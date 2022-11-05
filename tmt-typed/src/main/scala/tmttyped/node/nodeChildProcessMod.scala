@@ -33,7 +33,6 @@ import tmttyped.node.nodeStreamMod.Readable
 import tmttyped.node.nodeStreamMod.Writable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeChildProcessMod {
@@ -52,7 +51,7 @@ object nodeChildProcessMod {
     */
   @JSImport("node:child_process", "ChildProcess")
   @js.native
-  class ChildProcess () extends StObject
+  open class ChildProcess () extends StObject
   
   /**
     * Spawns a shell then executes the `command` within that shell, buffering any
@@ -140,28 +139,24 @@ object nodeChildProcessMod {
     * @param callback called with the output when process terminates.
     */
   // fallback if nothing else matches. Worst case is always `string | Buffer`.
-  @scala.inline
-  def exec(command: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  inline def exec(command: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def exec(
     command: String,
     callback: js.Function3[/* error */ ExecException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(command: String, options: ObjectEncodingOptions with ExecOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  // `options` without an `encoding` means stdout/stderr are definitely `string`.
+  inline def exec(command: String, options: (ObjectEncodingOptions & ExecOptions) | ExecOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def exec(
     command: String,
-    options: ObjectEncodingOptions with ExecOptions,
+    options: (ObjectEncodingOptions & ExecOptions) | ExecOptions,
     callback: js.Function3[
-      /* error */ ExecException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
+      ExecException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  inline def exec(
     command: String,
     options: Null,
     callback: js.Function3[
@@ -171,8 +166,7 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  inline def exec(
     command: String,
     options: Unit,
     callback: js.Function3[
@@ -185,10 +179,8 @@ object nodeChildProcessMod {
   // `options` with well known `encoding` means stdout/stderr are definitely `string`.
   // `options` with an `encoding` whose type is `string` means stdout/stderr could either be `Buffer` or `string`.
   // There is no guarantee the `encoding` is unknown as `string` is a superset of `BufferEncoding`.
-  @scala.inline
-  def exec(command: String, options: encodingBufferEncodingExe): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  inline def exec(command: String, options: encodingBufferEncodingExe): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def exec(
     command: String,
     options: encodingBufferEncodingExe,
     callback: js.Function3[
@@ -199,22 +191,11 @@ object nodeChildProcessMod {
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   // `options` with `"buffer"` or `null` for `encoding` means stdout/stderr are definitely `Buffer`.
-  @scala.inline
-  def exec(command: String, options: encodingbuffernullExecOpt): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
+  inline def exec(command: String, options: encodingbuffernullExecOpt): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def exec(
     command: String,
     options: encodingbuffernullExecOpt,
     callback: js.Function3[/* error */ ExecException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
-  ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  // `options` without an `encoding` means stdout/stderr are definitely `string`.
-  @scala.inline
-  def exec(command: String, options: ExecOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def exec(
-    command: String,
-    options: ExecOptions,
-    callback: js.Function3[/* error */ ExecException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("exec")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   
   /**
@@ -281,32 +262,26 @@ object nodeChildProcessMod {
     * @param callback Called with the output when process terminates.
     */
   // fallback if nothing else matches. Worst case is always `string | Buffer`.
-  @scala.inline
-  def execFile(file: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(file: String, args: js.Array[String]): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(file: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def execFile(file: String, args: js.Array[String]): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def execFile(
     file: String,
     args: js.Array[String],
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(file: String, args: js.Array[String], options: ObjectEncodingOptions with ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(file: String, args: js.Array[String], options: ObjectEncodingOptions & ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def execFile(
     file: String,
     args: js.Array[String],
-    options: ObjectEncodingOptions with ExecFileOptions,
+    options: (ObjectEncodingOptions & ExecFileOptions) | ExecFileOptions,
     callback: js.Function3[
-      /* error */ ExecFileException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
+      ExecFileException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: js.Array[String],
     options: Null,
@@ -317,8 +292,7 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: js.Array[String],
     options: Unit,
@@ -329,15 +303,13 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: js.Array[String],
     options: ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: js.Array[String],
     options: ExecFileOptionsWithOtherEncoding,
@@ -348,22 +320,13 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: js.Array[String],
     options: ExecFileOptionsWithStringEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
-    file: String,
-    args: js.Array[String],
-    options: ExecFileOptions,
-    callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
-  ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     callback: js.Function3[
@@ -373,22 +336,19 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(file: String, args: Null, options: ObjectEncodingOptions with ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(file: String, args: Null, options: ObjectEncodingOptions & ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def execFile(
     file: String,
     args: Null,
-    options: ObjectEncodingOptions with ExecFileOptions,
+    options: (ObjectEncodingOptions & ExecFileOptions) | ExecFileOptions,
     callback: js.Function3[
-      /* error */ ExecFileException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
+      ExecFileException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     options: Null,
@@ -399,8 +359,7 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     options: Unit,
@@ -411,15 +370,13 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     options: ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     options: ExecFileOptionsWithOtherEncoding,
@@ -430,22 +387,13 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Null,
     options: ExecFileOptionsWithStringEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
-    file: String,
-    args: Null,
-    options: ExecFileOptions,
-    callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
-  ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     callback: js.Function3[
@@ -455,22 +403,19 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(file: String, args: Unit, options: ObjectEncodingOptions with ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(file: String, args: Unit, options: ObjectEncodingOptions & ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def execFile(
     file: String,
     args: Unit,
-    options: ObjectEncodingOptions with ExecFileOptions,
+    options: (ObjectEncodingOptions & ExecFileOptions) | ExecFileOptions,
     callback: js.Function3[
-      /* error */ ExecFileException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
+      ExecFileException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     options: Null,
@@ -481,8 +426,7 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     options: Unit,
@@ -493,15 +437,13 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     options: ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     options: ExecFileOptionsWithOtherEncoding,
@@ -512,50 +454,38 @@ object nodeChildProcessMod {
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     args: Unit,
     options: ExecFileOptionsWithStringEncoding,
-    callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
-  ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
-    file: String,
-    args: Unit,
-    options: ExecFileOptions,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   // no `options` definitely means stdout/stderr are `string`.
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(file: String, options: ObjectEncodingOptions with ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def execFile(
+  inline def execFile(file: String, options: ObjectEncodingOptions & ExecFileOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  // `options` without an `encoding` means stdout/stderr are definitely `string`.
+  inline def execFile(
     file: String,
-    options: ObjectEncodingOptions with ExecFileOptions,
+    options: (ObjectEncodingOptions & ExecFileOptions) | ExecFileOptions,
     callback: js.Function3[
-      /* error */ ExecFileException | Null, 
-      /* stdout */ String | Buffer, 
-      /* stderr */ String | Buffer, 
+      ExecFileException | Null, 
+      Buffer | (/* stdout */ String), 
+      Buffer | (/* stderr */ String), 
       Unit
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   // `options` with `"buffer"` or `null` for `encoding` means stdout/stderr are definitely `Buffer`.
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     options: ExecFileOptionsWithBufferEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   // `options` with an `encoding` whose type is `string` means stdout/stderr could either be `Buffer` or `string`.
   // There is no guarantee the `encoding` is unknown as `string` is a superset of `BufferEncoding`.
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     options: ExecFileOptionsWithOtherEncoding,
     callback: js.Function3[
@@ -566,38 +496,21 @@ object nodeChildProcessMod {
     ]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   // `options` with well known `encoding` means stdout/stderr are definitely `string`.
-  @scala.inline
-  def execFile(
+  inline def execFile(
     file: String,
     options: ExecFileOptionsWithStringEncoding,
     callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
   ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  // `options` without an `encoding` means stdout/stderr are definitely `string`.
-  @scala.inline
-  def execFile(
-    file: String,
-    options: ExecFileOptions,
-    callback: js.Function3[/* error */ ExecFileException | Null, /* stdout */ String, /* stderr */ String, Unit]
-  ): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("execFile")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   
-  @scala.inline
-  def execFileSync(file: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execFileSync(file: String, args: js.Array[String]): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-  @scala.inline
-  def execFileSync(file: String, args: Unit, options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execFileSync(file: String, options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execFileSync(file: String, options: ExecFileSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def execFileSync(file: String, options: ExecFileSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def execFileSync(file: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+  inline def execFileSync(file: String, args: js.Array[String]): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def execFileSync(file: String, args: js.Array[String], options: ExecFileSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def execFileSync(file: String, args: Unit, options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def execFileSync(file: String, options: ExecFileSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def execFileSync(file: String, options: ExecFileSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def execFileSync(file: String, options: ExecFileSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
   /**
     * The `child_process.execFileSync()` method is generally identical to {@link execFile} with the exception that the method will not
@@ -619,19 +532,13 @@ object nodeChildProcessMod {
     * @param args List of string arguments.
     * @return The stdout from the command.
     */
-  @scala.inline
-  def execFileSync_Buffer(file: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[Buffer]
-  @scala.inline
-  def execFileSync_Buffer(file: String, args: js.Array[String]): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def execFileSync_Buffer(file: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def execFileSync_Buffer(file: String, args: js.Array[String]): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execFileSync")(file.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
-  @scala.inline
-  def execSync(command: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execSync(command: String, options: ExecSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
-  @scala.inline
-  def execSync(command: String, options: ExecSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
-  @scala.inline
-  def execSync(command: String, options: ExecSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+  inline def execSync(command: String): String | Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[String | Buffer]
+  inline def execSync(command: String, options: ExecSyncOptions): String | Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String | Buffer]
+  inline def execSync(command: String, options: ExecSyncOptionsWithBufferEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def execSync(command: String, options: ExecSyncOptionsWithStringEncoding): String = (^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
   
   /**
     * The `child_process.execSync()` method is generally identical to {@link exec} with the exception that the method will not return
@@ -649,8 +556,7 @@ object nodeChildProcessMod {
     * @param command The command to run.
     * @return The stdout from the command.
     */
-  @scala.inline
-  def execSync_Buffer(command: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[Buffer]
+  inline def execSync_Buffer(command: String): Buffer = ^.asInstanceOf[js.Dynamic].applyDynamic("execSync")(command.asInstanceOf[js.Any]).asInstanceOf[Buffer]
   
   /**
     * The `child_process.fork()` method is a special case of {@link spawn} used specifically to spawn new Node.js processes.
@@ -701,16 +607,11 @@ object nodeChildProcessMod {
     * @param modulePath The module to run in the child.
     * @param args List of string arguments.
     */
-  @scala.inline
-  def fork(modulePath: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def fork(modulePath: String, args: js.Array[String]): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def fork(modulePath: String, args: js.Array[String], options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def fork(modulePath: String, args: Unit, options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def fork(modulePath: String, options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def fork(modulePath: String): tmttyped.node.childProcessMod.ChildProcess = ^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def fork(modulePath: String, args: js.Array[String]): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def fork(modulePath: String, args: js.Array[String], options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def fork(modulePath: String, args: Unit, options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def fork(modulePath: String, options: ForkOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("fork")(modulePath.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
   
   /**
     * The `child_process.spawn()` method spawns a new process using the given`command`, with command-line arguments in `args`. If omitted, `args` defaults
@@ -832,31 +733,22 @@ object nodeChildProcessMod {
     * @param args List of string arguments.
     */
   // overloads of spawn with 'args'
-  @scala.inline
-  def spawn(command: String): ChildProcessWithoutNullStreams = ^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any]).asInstanceOf[ChildProcessWithoutNullStreams]
-  @scala.inline
-  def spawn(command: String, args: js.Array[String]): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
-  @scala.inline
-  def spawn(command: String, args: js.Array[String], options: SpawnOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def spawn(
+  inline def spawn(command: String): ChildProcessWithoutNullStreams = ^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any]).asInstanceOf[ChildProcessWithoutNullStreams]
+  inline def spawn(command: String, args: js.Array[String]): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
+  inline def spawn(command: String, args: js.Array[String], options: SpawnOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def spawn(
     command: String,
     args: js.Array[String],
     options: SpawnOptionsWithStdioTuple[StdioNull | StdioPipe, StdioNull | StdioPipe, StdioNull | StdioPipe]
   ): ChildProcessByStdio[Writable, Readable, Readable] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessByStdio[Writable, Readable, Readable]]
-  @scala.inline
-  def spawn(command: String, args: js.Array[String], options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
-  @scala.inline
-  def spawn(command: String, args: Unit, options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
-  @scala.inline
-  def spawn(command: String, options: SpawnOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
-  @scala.inline
-  def spawn(
+  inline def spawn(command: String, args: js.Array[String], options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
+  inline def spawn(command: String, args: Unit, options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
+  inline def spawn(command: String, options: SpawnOptions): tmttyped.node.childProcessMod.ChildProcess = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[tmttyped.node.childProcessMod.ChildProcess]
+  inline def spawn(
     command: String,
     options: SpawnOptionsWithStdioTuple[StdioNull | StdioPipe, StdioNull | StdioPipe, StdioNull | StdioPipe]
   ): ChildProcessByStdio[Writable, Readable, Readable] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessByStdio[Writable, Readable, Readable]]
-  @scala.inline
-  def spawn(command: String, options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
+  inline def spawn(command: String, options: SpawnOptionsWithoutStdio): ChildProcessWithoutNullStreams = (^.asInstanceOf[js.Dynamic].applyDynamic("spawn")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[ChildProcessWithoutNullStreams]
   
   /**
     * The `child_process.spawnSync()` method is generally identical to {@link spawn} with the exception that the function will not return
@@ -873,22 +765,13 @@ object nodeChildProcessMod {
     * @param command The command to run.
     * @param args List of string arguments.
     */
-  @scala.inline
-  def spawnSync(command: String): SpawnSyncReturns[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any]).asInstanceOf[SpawnSyncReturns[Buffer]]
-  @scala.inline
-  def spawnSync(command: String, args: js.Array[String]): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
-  @scala.inline
-  def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
-  @scala.inline
-  def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
-  @scala.inline
-  def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String]]
-  @scala.inline
-  def spawnSync(command: String, args: Unit, options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
-  @scala.inline
-  def spawnSync(command: String, options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
-  @scala.inline
-  def spawnSync(command: String, options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
-  @scala.inline
-  def spawnSync(command: String, options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String]]
+  inline def spawnSync(command: String): SpawnSyncReturns[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any]).asInstanceOf[SpawnSyncReturns[Buffer]]
+  inline def spawnSync(command: String, args: js.Array[String]): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
+  inline def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
+  inline def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
+  inline def spawnSync(command: String, args: js.Array[String], options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String]]
+  inline def spawnSync(command: String, args: Unit, options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], args.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
+  inline def spawnSync(command: String, options: SpawnSyncOptions): SpawnSyncReturns[String | Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String | Buffer]]
+  inline def spawnSync(command: String, options: SpawnSyncOptionsWithBufferEncoding): SpawnSyncReturns[Buffer] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[Buffer]]
+  inline def spawnSync(command: String, options: SpawnSyncOptionsWithStringEncoding): SpawnSyncReturns[String] = (^.asInstanceOf[js.Dynamic].applyDynamic("spawnSync")(command.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[SpawnSyncReturns[String]]
 }

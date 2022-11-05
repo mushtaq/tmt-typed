@@ -1,6 +1,5 @@
 package tmttyped.node.http2Mod
 
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.nodeNetMod.Socket
 import tmttyped.node.nodeStrings.close
@@ -12,7 +11,6 @@ import tmttyped.node.nodeStrings.timeout
 import tmttyped.node.nodeTlsMod.TLSSocket
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -142,11 +140,11 @@ trait Http2Session extends StObject {
   def goaway(): Unit = js.native
   def goaway(code: Double): Unit = js.native
   def goaway(code: Double, lastStreamID: Double): Unit = js.native
-  def goaway(code: Double, lastStreamID: Double, opaqueData: ArrayBufferView): Unit = js.native
-  def goaway(code: Double, lastStreamID: Unit, opaqueData: ArrayBufferView): Unit = js.native
+  def goaway(code: Double, lastStreamID: Double, opaqueData: js.typedarray.ArrayBufferView): Unit = js.native
+  def goaway(code: Double, lastStreamID: Unit, opaqueData: js.typedarray.ArrayBufferView): Unit = js.native
   def goaway(code: Unit, lastStreamID: Double): Unit = js.native
-  def goaway(code: Unit, lastStreamID: Double, opaqueData: ArrayBufferView): Unit = js.native
-  def goaway(code: Unit, lastStreamID: Unit, opaqueData: ArrayBufferView): Unit = js.native
+  def goaway(code: Unit, lastStreamID: Double, opaqueData: js.typedarray.ArrayBufferView): Unit = js.native
+  def goaway(code: Unit, lastStreamID: Unit, opaqueData: js.typedarray.ArrayBufferView): Unit = js.native
   
   /**
     * A prototype-less object describing the current local settings of this`Http2Session`. The local settings are local to _this_`Http2Session` instance.
@@ -265,7 +263,7 @@ trait Http2Session extends StObject {
     callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
   ): Boolean = js.native
   def ping(
-    payload: ArrayBufferView,
+    payload: js.typedarray.ArrayBufferView,
     callback: js.Function3[/* err */ js.Error | Null, /* duration */ Double, /* payload */ Buffer, Unit]
   ): Boolean = js.native
   
@@ -385,6 +383,10 @@ trait Http2Session extends StObject {
     * @param callback Callback that is called once the session is connected or right away if the session is already connected.
     */
   def settings(settings: Settings): Unit = js.native
+  def settings(
+    settings: Settings,
+    callback: js.Function3[/* err */ js.Error | Null, /* settings */ Settings, /* duration */ Double, Unit]
+  ): Unit = js.native
   
   /**
     * Returns a `Proxy` object that acts as a `net.Socket` (or `tls.TLSSocket`) but

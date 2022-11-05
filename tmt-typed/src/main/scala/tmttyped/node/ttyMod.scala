@@ -4,7 +4,6 @@ import tmttyped.node.netMod.SocketConstructorOpts
 import tmttyped.node.nodeStrings.resize
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object ttyMod {
@@ -20,7 +19,7 @@ object ttyMod {
     */
   @JSImport("tty", "ReadStream")
   @js.native
-  class ReadStream protected () extends StObject {
+  open class ReadStream protected () extends StObject {
     def this(fd: Double) = this()
     def this(fd: Double, options: SocketConstructorOpts) = this()
     
@@ -42,7 +41,9 @@ object ttyMod {
       *
       * When in raw mode, input is always available character-by-character, not
       * including modifiers. Additionally, all special processing of characters by the
-      * terminal is disabled, including echoing input characters.Ctrl+C will no longer cause a `SIGINT` when in this mode.
+      * terminal is disabled, including echoing input
+      * characters. Ctrl+C will no longer cause a `SIGINT` when
+      * in this mode.
       * @since v0.7.7
       * @param mode If `true`, configures the `tty.ReadStream` to operate as a raw device. If `false`, configures the `tty.ReadStream` to operate in its default mode. The `readStream.isRaw`
       * property will be set to the resulting mode.
@@ -58,7 +59,7 @@ object ttyMod {
     */
   @JSImport("tty", "WriteStream")
   @js.native
-  class WriteStream protected () extends StObject {
+  open class WriteStream protected () extends StObject {
     def this(fd: Double) = this()
     
     def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
@@ -219,8 +220,7 @@ object ttyMod {
     * @since v0.5.8
     * @param fd A numeric file descriptor
     */
-  @scala.inline
-  def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isatty(fd: Double): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isatty")(fd.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
   /**
     * -1 - to the left from cursor
@@ -235,13 +235,10 @@ object ttyMod {
   trait Direction extends StObject
   object Direction {
     
-    @scala.inline
-    def `-1`: tmttyped.node.nodeNumbers.`-1` = -1.asInstanceOf[tmttyped.node.nodeNumbers.`-1`]
+    inline def `-1`: tmttyped.node.nodeNumbers.`-1` = -1.asInstanceOf[tmttyped.node.nodeNumbers.`-1`]
     
-    @scala.inline
-    def `0`: tmttyped.node.nodeNumbers.`0` = 0.asInstanceOf[tmttyped.node.nodeNumbers.`0`]
+    inline def `0`: tmttyped.node.nodeNumbers.`0` = 0.asInstanceOf[tmttyped.node.nodeNumbers.`0`]
     
-    @scala.inline
-    def `1`: tmttyped.node.nodeNumbers.`1` = 1.asInstanceOf[tmttyped.node.nodeNumbers.`1`]
+    inline def `1`: tmttyped.node.nodeNumbers.`1` = 1.asInstanceOf[tmttyped.node.nodeNumbers.`1`]
   }
 }

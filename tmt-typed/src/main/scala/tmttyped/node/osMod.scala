@@ -1,6 +1,5 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.Dict
 import tmttyped.node.anon.Idle
 import tmttyped.node.anon.`2`
 import tmttyped.node.anon.`4`
@@ -12,7 +11,6 @@ import tmttyped.node.nodeStrings.LE
 import tmttyped.node.processMod.global.NodeJS.Platform
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object osMod {
@@ -27,13 +25,12 @@ object osMod {
   
   /**
     * Returns the operating system CPU architecture for which the Node.js binary was
-    * compiled. Possible values are `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,`'mipsel'`, `'ppc'`, `'ppc64'`, `'s390'`, `'s390x'`, `'x32'`, and `'x64'`.
+    * compiled. Possible values are `'arm'`, `'arm64'`, `'ia32'`, `'mips'`,`'mipsel'`, `'ppc'`, `'ppc64'`, `'s390'`, `'s390x'`, and `'x64'`.
     *
     * The return value is equivalent to `process.arch`.
     * @since v0.5.0
     */
-  @scala.inline
-  def arch(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("arch")().asInstanceOf[String]
+  inline def arch(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("arch")().asInstanceOf[String]
   
   object constants {
     
@@ -682,8 +679,7 @@ object osMod {
     * are always 0.
     * @since v0.3.3
     */
-  @scala.inline
-  def cpus(): js.Array[CpuInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("cpus")().asInstanceOf[js.Array[CpuInfo]]
+  inline def cpus(): js.Array[CpuInfo] = ^.asInstanceOf[js.Dynamic].applyDynamic("cpus")().asInstanceOf[js.Array[CpuInfo]]
   
   @JSImport("os", "devNull")
   @js.native
@@ -696,15 +692,13 @@ object osMod {
     * Possible values are `'BE'` for big endian and `'LE'` for little endian.
     * @since v0.9.4
     */
-  @scala.inline
-  def endianness(): BE | LE = ^.asInstanceOf[js.Dynamic].applyDynamic("endianness")().asInstanceOf[BE | LE]
+  inline def endianness(): BE | LE = ^.asInstanceOf[js.Dynamic].applyDynamic("endianness")().asInstanceOf[BE | LE]
   
   /**
     * Returns the amount of free system memory in bytes as an integer.
     * @since v0.3.3
     */
-  @scala.inline
-  def freemem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("freemem")().asInstanceOf[Double]
+  inline def freemem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("freemem")().asInstanceOf[Double]
   
   /**
     * Returns the scheduling priority for the process specified by `pid`. If `pid` is
@@ -712,10 +706,8 @@ object osMod {
     * @since v10.10.0
     * @param [pid=0] The process ID to retrieve scheduling priority for.
     */
-  @scala.inline
-  def getPriority(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")().asInstanceOf[Double]
-  @scala.inline
-  def getPriority(pid: Double): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")(pid.asInstanceOf[js.Any]).asInstanceOf[Double]
+  inline def getPriority(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")().asInstanceOf[Double]
+  inline def getPriority(pid: Double): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("getPriority")(pid.asInstanceOf[js.Any]).asInstanceOf[Double]
   
   /**
     * Returns the string path of the current user's home directory.
@@ -727,15 +719,13 @@ object osMod {
     * Otherwise it uses the path to the profile directory of the current user.
     * @since v2.3.0
     */
-  @scala.inline
-  def homedir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("homedir")().asInstanceOf[String]
+  inline def homedir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("homedir")().asInstanceOf[String]
   
   /**
     * Returns the host name of the operating system as a string.
     * @since v0.3.3
     */
-  @scala.inline
-  def hostname(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("hostname")().asInstanceOf[String]
+  inline def hostname(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("hostname")().asInstanceOf[String]
   
   /**
     * Returns an array containing the 1, 5, and 15 minute load averages.
@@ -747,8 +737,17 @@ object osMod {
     * always `[0, 0, 0]`.
     * @since v0.3.3
     */
-  @scala.inline
-  def loadavg(): js.Array[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("loadavg")().asInstanceOf[js.Array[Double]]
+  inline def loadavg(): js.Array[Double] = ^.asInstanceOf[js.Dynamic].applyDynamic("loadavg")().asInstanceOf[js.Array[Double]]
+  
+  /**
+    * Returns the machine type as a string, such as arm, aarch64, mips, mips64, ppc64, ppc64le, s390, s390x, i386, i686, x86_64.
+    *
+    * On POSIX systems, the machine type is determined by calling [`uname(3)`](https://linux.die.net/man/3/uname).
+    * On Windows, `RtlGetVersion()` is used, and if it is not available, `GetVersionExW()` will be used.
+    * See [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
+    * @since v18.9.0
+    */
+  inline def machine(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("machine")().asInstanceOf[String]
   
   /**
     * Returns an object containing network interfaces that have been assigned a
@@ -803,12 +802,12 @@ object osMod {
     * ```
     * @since v0.6.0
     */
-  @scala.inline
-  def networkInterfaces(): Dict[js.Array[NetworkInterfaceInfo]] = ^.asInstanceOf[js.Dynamic].applyDynamic("networkInterfaces")().asInstanceOf[Dict[js.Array[NetworkInterfaceInfo]]]
+  inline def networkInterfaces(): Any = ^.asInstanceOf[js.Dynamic].applyDynamic("networkInterfaces")().asInstanceOf[Any]
   
   /**
-    * Returns a string identifying the operating system platform. The value is set
-    * at compile time. Possible values are `'aix'`, `'darwin'`, `'freebsd'`,`'linux'`, `'openbsd'`, `'sunos'`, and `'win32'`.
+    * Returns a string identifying the operating system platform for which
+    * the Node.js binary was compiled. The value is set at compile time.
+    * Possible values are `'aix'`, `'darwin'`, `'freebsd'`,`'linux'`,`'openbsd'`, `'sunos'`, and `'win32'`.
     *
     * The return value is equivalent to `process.platform`.
     *
@@ -816,8 +815,7 @@ object osMod {
     * operating system. [Android support is experimental](https://github.com/nodejs/node/blob/HEAD/BUILDING.md#androidandroid-based-devices-eg-firefox-os).
     * @since v0.5.0
     */
-  @scala.inline
-  def platform(): Platform = ^.asInstanceOf[js.Dynamic].applyDynamic("platform")().asInstanceOf[Platform]
+  inline def platform(): Platform = ^.asInstanceOf[js.Dynamic].applyDynamic("platform")().asInstanceOf[Platform]
   
   /**
     * Returns the operating system as a string.
@@ -826,11 +824,9 @@ object osMod {
     * [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
     * @since v0.3.3
     */
-  @scala.inline
-  def release(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("release")().asInstanceOf[String]
+  inline def release(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("release")().asInstanceOf[String]
   
-  @scala.inline
-  def setPriority(pid: Double, priority: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(pid.asInstanceOf[js.Any], priority.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  inline def setPriority(pid: Double, priority: Double): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(pid.asInstanceOf[js.Any], priority.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * Attempts to set the scheduling priority for the process specified by `pid`. If`pid` is not provided or is `0`, the process ID of the current process is used.
     *
@@ -845,23 +841,20 @@ object osMod {
     * @param [pid=0] The process ID to set scheduling priority for.
     * @param priority The scheduling priority to assign to the process.
     */
-  @scala.inline
-  def setPriority(priority: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(priority.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def setPriority(priority: Double): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setPriority")(priority.asInstanceOf[js.Any]).asInstanceOf[Unit]
   
   /**
     * Returns the operating system's default directory for temporary files as a
     * string.
     * @since v0.9.9
     */
-  @scala.inline
-  def tmpdir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("tmpdir")().asInstanceOf[String]
+  inline def tmpdir(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("tmpdir")().asInstanceOf[String]
   
   /**
     * Returns the total amount of system memory in bytes as an integer.
     * @since v0.3.3
     */
-  @scala.inline
-  def totalmem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("totalmem")().asInstanceOf[Double]
+  inline def totalmem(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("totalmem")().asInstanceOf[Double]
   
   /**
     * Returns the operating system name as returned by [`uname(3)`](https://linux.die.net/man/3/uname). For example, it
@@ -871,18 +864,15 @@ object osMod {
     * about the output of running [`uname(3)`](https://linux.die.net/man/3/uname) on various operating systems.
     * @since v0.3.3
     */
-  @scala.inline
-  def `type`(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("type")().asInstanceOf[String]
+  inline def `type`(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("type")().asInstanceOf[String]
   
   /**
     * Returns the system uptime in number of seconds.
     * @since v0.3.3
     */
-  @scala.inline
-  def uptime(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("uptime")().asInstanceOf[Double]
+  inline def uptime(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("uptime")().asInstanceOf[Double]
   
-  @scala.inline
-  def userInfo(): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")().asInstanceOf[UserInfo_[String]]
+  inline def userInfo(): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")().asInstanceOf[UserInfo_[String]]
   /**
     * Returns information about the currently effective user. On POSIX platforms,
     * this is typically a subset of the password file. The returned object includes
@@ -896,10 +886,8 @@ object osMod {
     * Throws a `SystemError` if a user has no `username` or `homedir`.
     * @since v6.0.0
     */
-  @scala.inline
-  def userInfo(options: `2`): UserInfo_[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[Buffer]]
-  @scala.inline
-  def userInfo(options: `4`): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[String]]
+  inline def userInfo(options: `2`): UserInfo_[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[Buffer]]
+  inline def userInfo(options: `4`): UserInfo_[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("userInfo")(options.asInstanceOf[js.Any]).asInstanceOf[UserInfo_[String]]
   
   /**
     * Returns a string identifying the kernel version.
@@ -908,8 +896,7 @@ object osMod {
     * available, `GetVersionExW()` will be used. See [https://en.wikipedia.org/wiki/Uname#Examples](https://en.wikipedia.org/wiki/Uname#Examples) for more information.
     * @since v13.11.0, v12.17.0
     */
-  @scala.inline
-  def version(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("version")().asInstanceOf[String]
+  inline def version(): String = ^.asInstanceOf[js.Dynamic].applyDynamic("version")().asInstanceOf[String]
   
   trait CpuInfo extends StObject {
     
@@ -921,23 +908,18 @@ object osMod {
   }
   object CpuInfo {
     
-    @scala.inline
-    def apply(model: String, speed: Double, times: Idle): CpuInfo = {
+    inline def apply(model: String, speed: Double, times: Idle): CpuInfo = {
       val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any], speed = speed.asInstanceOf[js.Any], times = times.asInstanceOf[js.Any])
       __obj.asInstanceOf[CpuInfo]
     }
     
-    @scala.inline
-    implicit class CpuInfoMutableBuilder[Self <: CpuInfo] (val x: Self) extends AnyVal {
+    extension [Self <: CpuInfo](x: Self) {
       
-      @scala.inline
-      def setModel(value: String): Self = StObject.set(x, "model", value.asInstanceOf[js.Any])
+      inline def setModel(value: String): Self = StObject.set(x, "model", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSpeed(value: Double): Self = StObject.set(x, "speed", value.asInstanceOf[js.Any])
+      inline def setSpeed(value: Double): Self = StObject.set(x, "speed", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTimes(value: Idle): Self = StObject.set(x, "times", value.asInstanceOf[js.Any])
+      inline def setTimes(value: Idle): Self = StObject.set(x, "times", value.asInstanceOf[js.Any])
     }
   }
   
@@ -955,32 +937,24 @@ object osMod {
   }
   object NetworkInterfaceBase {
     
-    @scala.inline
-    def apply(address: String, internal: Boolean, mac: String, netmask: String): NetworkInterfaceBase = {
+    inline def apply(address: String, internal: Boolean, mac: String, netmask: String): NetworkInterfaceBase = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], cidr = null)
       __obj.asInstanceOf[NetworkInterfaceBase]
     }
     
-    @scala.inline
-    implicit class NetworkInterfaceBaseMutableBuilder[Self <: NetworkInterfaceBase] (val x: Self) extends AnyVal {
+    extension [Self <: NetworkInterfaceBase](x: Self) {
       
-      @scala.inline
-      def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
+      inline def setAddress(value: String): Self = StObject.set(x, "address", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCidr(value: String): Self = StObject.set(x, "cidr", value.asInstanceOf[js.Any])
+      inline def setCidr(value: String): Self = StObject.set(x, "cidr", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCidrNull: Self = StObject.set(x, "cidr", null)
+      inline def setCidrNull: Self = StObject.set(x, "cidr", null)
       
-      @scala.inline
-      def setInternal(value: Boolean): Self = StObject.set(x, "internal", value.asInstanceOf[js.Any])
+      inline def setInternal(value: Boolean): Self = StObject.set(x, "internal", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMac(value: String): Self = StObject.set(x, "mac", value.asInstanceOf[js.Any])
+      inline def setMac(value: String): Self = StObject.set(x, "mac", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setNetmask(value: String): Self = StObject.set(x, "netmask", value.asInstanceOf[js.Any])
+      inline def setNetmask(value: String): Self = StObject.set(x, "netmask", value.asInstanceOf[js.Any])
     }
   }
   
@@ -991,14 +965,12 @@ object osMod {
   trait NetworkInterfaceInfo extends StObject
   object NetworkInterfaceInfo {
     
-    @scala.inline
-    def NetworkInterfaceInfoIPv4(address: String, internal: Boolean, mac: String, netmask: String): tmttyped.node.osMod.NetworkInterfaceInfoIPv4 = {
-      val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv4", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], cidr = null)
+    inline def NetworkInterfaceInfoIPv4(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Unit): tmttyped.node.osMod.NetworkInterfaceInfoIPv4 = {
+      val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv4", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], scopeid = scopeid.asInstanceOf[js.Any], cidr = null)
       __obj.asInstanceOf[tmttyped.node.osMod.NetworkInterfaceInfoIPv4]
     }
     
-    @scala.inline
-    def NetworkInterfaceInfoIPv6(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Double): tmttyped.node.osMod.NetworkInterfaceInfoIPv6 = {
+    inline def NetworkInterfaceInfoIPv6(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Double): tmttyped.node.osMod.NetworkInterfaceInfoIPv6 = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv6", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], scopeid = scopeid.asInstanceOf[js.Any], cidr = null)
       __obj.asInstanceOf[tmttyped.node.osMod.NetworkInterfaceInfoIPv6]
     }
@@ -1010,20 +982,21 @@ object osMod {
        with NetworkInterfaceInfo {
     
     var family: IPv4
+    
+    var scopeid: Unit
   }
   object NetworkInterfaceInfoIPv4 {
     
-    @scala.inline
-    def apply(address: String, internal: Boolean, mac: String, netmask: String): NetworkInterfaceInfoIPv4 = {
-      val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv4", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], cidr = null)
+    inline def apply(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Unit): NetworkInterfaceInfoIPv4 = {
+      val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv4", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], scopeid = scopeid.asInstanceOf[js.Any], cidr = null)
       __obj.asInstanceOf[NetworkInterfaceInfoIPv4]
     }
     
-    @scala.inline
-    implicit class NetworkInterfaceInfoIPv4MutableBuilder[Self <: NetworkInterfaceInfoIPv4] (val x: Self) extends AnyVal {
+    extension [Self <: NetworkInterfaceInfoIPv4](x: Self) {
       
-      @scala.inline
-      def setFamily(value: IPv4): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      inline def setFamily(value: IPv4): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      
+      inline def setScopeid(value: Unit): Self = StObject.set(x, "scopeid", value.asInstanceOf[js.Any])
     }
   }
   
@@ -1038,20 +1011,16 @@ object osMod {
   }
   object NetworkInterfaceInfoIPv6 {
     
-    @scala.inline
-    def apply(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Double): NetworkInterfaceInfoIPv6 = {
+    inline def apply(address: String, internal: Boolean, mac: String, netmask: String, scopeid: Double): NetworkInterfaceInfoIPv6 = {
       val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = "IPv6", internal = internal.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], scopeid = scopeid.asInstanceOf[js.Any], cidr = null)
       __obj.asInstanceOf[NetworkInterfaceInfoIPv6]
     }
     
-    @scala.inline
-    implicit class NetworkInterfaceInfoIPv6MutableBuilder[Self <: NetworkInterfaceInfoIPv6] (val x: Self) extends AnyVal {
+    extension [Self <: NetworkInterfaceInfoIPv6](x: Self) {
       
-      @scala.inline
-      def setFamily(value: IPv6): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
+      inline def setFamily(value: IPv6): Self = StObject.set(x, "family", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setScopeid(value: Double): Self = StObject.set(x, "scopeid", value.asInstanceOf[js.Any])
+      inline def setScopeid(value: Double): Self = StObject.set(x, "scopeid", value.asInstanceOf[js.Any])
     }
   }
   
@@ -1134,8 +1103,7 @@ object osMod {
   }
   object SignalConstants {
     
-    @scala.inline
-    def apply(
+    inline def apply(
       SIGABRT: Double,
       SIGALRM: Double,
       SIGBREAK: Double,
@@ -1178,119 +1146,81 @@ object osMod {
       __obj.asInstanceOf[SignalConstants]
     }
     
-    @scala.inline
-    implicit class SignalConstantsMutableBuilder[Self <: SignalConstants] (val x: Self) extends AnyVal {
+    extension [Self <: SignalConstants](x: Self) {
       
-      @scala.inline
-      def setSIGABRT(value: Double): Self = StObject.set(x, "SIGABRT", value.asInstanceOf[js.Any])
+      inline def setSIGABRT(value: Double): Self = StObject.set(x, "SIGABRT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGALRM(value: Double): Self = StObject.set(x, "SIGALRM", value.asInstanceOf[js.Any])
+      inline def setSIGALRM(value: Double): Self = StObject.set(x, "SIGALRM", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGBREAK(value: Double): Self = StObject.set(x, "SIGBREAK", value.asInstanceOf[js.Any])
+      inline def setSIGBREAK(value: Double): Self = StObject.set(x, "SIGBREAK", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGBUS(value: Double): Self = StObject.set(x, "SIGBUS", value.asInstanceOf[js.Any])
+      inline def setSIGBUS(value: Double): Self = StObject.set(x, "SIGBUS", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGCHLD(value: Double): Self = StObject.set(x, "SIGCHLD", value.asInstanceOf[js.Any])
+      inline def setSIGCHLD(value: Double): Self = StObject.set(x, "SIGCHLD", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGCONT(value: Double): Self = StObject.set(x, "SIGCONT", value.asInstanceOf[js.Any])
+      inline def setSIGCONT(value: Double): Self = StObject.set(x, "SIGCONT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGFPE(value: Double): Self = StObject.set(x, "SIGFPE", value.asInstanceOf[js.Any])
+      inline def setSIGFPE(value: Double): Self = StObject.set(x, "SIGFPE", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGHUP(value: Double): Self = StObject.set(x, "SIGHUP", value.asInstanceOf[js.Any])
+      inline def setSIGHUP(value: Double): Self = StObject.set(x, "SIGHUP", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGILL(value: Double): Self = StObject.set(x, "SIGILL", value.asInstanceOf[js.Any])
+      inline def setSIGILL(value: Double): Self = StObject.set(x, "SIGILL", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGINFO(value: Double): Self = StObject.set(x, "SIGINFO", value.asInstanceOf[js.Any])
+      inline def setSIGINFO(value: Double): Self = StObject.set(x, "SIGINFO", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGINT(value: Double): Self = StObject.set(x, "SIGINT", value.asInstanceOf[js.Any])
+      inline def setSIGINT(value: Double): Self = StObject.set(x, "SIGINT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGIO(value: Double): Self = StObject.set(x, "SIGIO", value.asInstanceOf[js.Any])
+      inline def setSIGIO(value: Double): Self = StObject.set(x, "SIGIO", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGIOT(value: Double): Self = StObject.set(x, "SIGIOT", value.asInstanceOf[js.Any])
+      inline def setSIGIOT(value: Double): Self = StObject.set(x, "SIGIOT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGKILL(value: Double): Self = StObject.set(x, "SIGKILL", value.asInstanceOf[js.Any])
+      inline def setSIGKILL(value: Double): Self = StObject.set(x, "SIGKILL", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGLOST(value: Double): Self = StObject.set(x, "SIGLOST", value.asInstanceOf[js.Any])
+      inline def setSIGLOST(value: Double): Self = StObject.set(x, "SIGLOST", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGPIPE(value: Double): Self = StObject.set(x, "SIGPIPE", value.asInstanceOf[js.Any])
+      inline def setSIGPIPE(value: Double): Self = StObject.set(x, "SIGPIPE", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGPOLL(value: Double): Self = StObject.set(x, "SIGPOLL", value.asInstanceOf[js.Any])
+      inline def setSIGPOLL(value: Double): Self = StObject.set(x, "SIGPOLL", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGPROF(value: Double): Self = StObject.set(x, "SIGPROF", value.asInstanceOf[js.Any])
+      inline def setSIGPROF(value: Double): Self = StObject.set(x, "SIGPROF", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGPWR(value: Double): Self = StObject.set(x, "SIGPWR", value.asInstanceOf[js.Any])
+      inline def setSIGPWR(value: Double): Self = StObject.set(x, "SIGPWR", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGQUIT(value: Double): Self = StObject.set(x, "SIGQUIT", value.asInstanceOf[js.Any])
+      inline def setSIGQUIT(value: Double): Self = StObject.set(x, "SIGQUIT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGSEGV(value: Double): Self = StObject.set(x, "SIGSEGV", value.asInstanceOf[js.Any])
+      inline def setSIGSEGV(value: Double): Self = StObject.set(x, "SIGSEGV", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGSTKFLT(value: Double): Self = StObject.set(x, "SIGSTKFLT", value.asInstanceOf[js.Any])
+      inline def setSIGSTKFLT(value: Double): Self = StObject.set(x, "SIGSTKFLT", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGSTOP(value: Double): Self = StObject.set(x, "SIGSTOP", value.asInstanceOf[js.Any])
+      inline def setSIGSTOP(value: Double): Self = StObject.set(x, "SIGSTOP", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGSYS(value: Double): Self = StObject.set(x, "SIGSYS", value.asInstanceOf[js.Any])
+      inline def setSIGSYS(value: Double): Self = StObject.set(x, "SIGSYS", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGTERM(value: Double): Self = StObject.set(x, "SIGTERM", value.asInstanceOf[js.Any])
+      inline def setSIGTERM(value: Double): Self = StObject.set(x, "SIGTERM", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGTRAP(value: Double): Self = StObject.set(x, "SIGTRAP", value.asInstanceOf[js.Any])
+      inline def setSIGTRAP(value: Double): Self = StObject.set(x, "SIGTRAP", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGTSTP(value: Double): Self = StObject.set(x, "SIGTSTP", value.asInstanceOf[js.Any])
+      inline def setSIGTSTP(value: Double): Self = StObject.set(x, "SIGTSTP", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGTTIN(value: Double): Self = StObject.set(x, "SIGTTIN", value.asInstanceOf[js.Any])
+      inline def setSIGTTIN(value: Double): Self = StObject.set(x, "SIGTTIN", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGTTOU(value: Double): Self = StObject.set(x, "SIGTTOU", value.asInstanceOf[js.Any])
+      inline def setSIGTTOU(value: Double): Self = StObject.set(x, "SIGTTOU", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGUNUSED(value: Double): Self = StObject.set(x, "SIGUNUSED", value.asInstanceOf[js.Any])
+      inline def setSIGUNUSED(value: Double): Self = StObject.set(x, "SIGUNUSED", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGURG(value: Double): Self = StObject.set(x, "SIGURG", value.asInstanceOf[js.Any])
+      inline def setSIGURG(value: Double): Self = StObject.set(x, "SIGURG", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGUSR1(value: Double): Self = StObject.set(x, "SIGUSR1", value.asInstanceOf[js.Any])
+      inline def setSIGUSR1(value: Double): Self = StObject.set(x, "SIGUSR1", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGUSR2(value: Double): Self = StObject.set(x, "SIGUSR2", value.asInstanceOf[js.Any])
+      inline def setSIGUSR2(value: Double): Self = StObject.set(x, "SIGUSR2", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGVTALRM(value: Double): Self = StObject.set(x, "SIGVTALRM", value.asInstanceOf[js.Any])
+      inline def setSIGVTALRM(value: Double): Self = StObject.set(x, "SIGVTALRM", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGWINCH(value: Double): Self = StObject.set(x, "SIGWINCH", value.asInstanceOf[js.Any])
+      inline def setSIGWINCH(value: Double): Self = StObject.set(x, "SIGWINCH", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGXCPU(value: Double): Self = StObject.set(x, "SIGXCPU", value.asInstanceOf[js.Any])
+      inline def setSIGXCPU(value: Double): Self = StObject.set(x, "SIGXCPU", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSIGXFSZ(value: Double): Self = StObject.set(x, "SIGXFSZ", value.asInstanceOf[js.Any])
+      inline def setSIGXFSZ(value: Double): Self = StObject.set(x, "SIGXFSZ", value.asInstanceOf[js.Any])
     }
   }
   
@@ -1308,29 +1238,22 @@ object osMod {
   }
   object UserInfo_ {
     
-    @scala.inline
-    def apply[T](gid: Double, homedir: T, shell: T, uid: Double, username: T): UserInfo_[T] = {
+    inline def apply[T](gid: Double, homedir: T, shell: T, uid: Double, username: T): UserInfo_[T] = {
       val __obj = js.Dynamic.literal(gid = gid.asInstanceOf[js.Any], homedir = homedir.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
       __obj.asInstanceOf[UserInfo_[T]]
     }
     
-    @scala.inline
-    implicit class UserInfo_MutableBuilder[Self <: UserInfo_[_], T] (val x: Self with UserInfo_[T]) extends AnyVal {
+    extension [Self <: UserInfo_[?], T](x: Self & UserInfo_[T]) {
       
-      @scala.inline
-      def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
+      inline def setGid(value: Double): Self = StObject.set(x, "gid", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHomedir(value: T): Self = StObject.set(x, "homedir", value.asInstanceOf[js.Any])
+      inline def setHomedir(value: T): Self = StObject.set(x, "homedir", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setShell(value: T): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
+      inline def setShell(value: T): Self = StObject.set(x, "shell", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
+      inline def setUid(value: Double): Self = StObject.set(x, "uid", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUsername(value: T): Self = StObject.set(x, "username", value.asInstanceOf[js.Any])
+      inline def setUsername(value: T): Self = StObject.set(x, "username", value.asInstanceOf[js.Any])
     }
   }
 }

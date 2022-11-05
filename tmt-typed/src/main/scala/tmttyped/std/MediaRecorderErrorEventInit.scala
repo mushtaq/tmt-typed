@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MediaRecorderErrorEventInit
@@ -14,16 +13,13 @@ trait MediaRecorderErrorEventInit
 }
 object MediaRecorderErrorEventInit {
   
-  @scala.inline
-  def apply(error: org.scalajs.dom.DOMException): MediaRecorderErrorEventInit = {
+  inline def apply(error: org.scalajs.dom.DOMException): MediaRecorderErrorEventInit = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaRecorderErrorEventInit]
   }
   
-  @scala.inline
-  implicit class MediaRecorderErrorEventInitMutableBuilder[Self <: MediaRecorderErrorEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: MediaRecorderErrorEventInit](x: Self) {
     
-    @scala.inline
-    def setError(value: org.scalajs.dom.DOMException): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+    inline def setError(value: org.scalajs.dom.DOMException): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
   }
 }

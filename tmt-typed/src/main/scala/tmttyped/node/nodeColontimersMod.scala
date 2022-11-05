@@ -4,7 +4,6 @@ import tmttyped.node.timersMod.TimerOptions
 import tmttyped.std.AsyncIterable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeColontimersMod {
@@ -26,14 +25,10 @@ object nodeColontimersMod {
     * @since v15.0.0
     * @param value A value with which the promise is fulfilled.
     */
-  @scala.inline
-  def setImmediate[T](): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")().asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setImmediate[T](value: T): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any]).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setImmediate[T](value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setImmediate[T](value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setImmediate[T](): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")().asInstanceOf[js.Promise[T]]
+  inline def setImmediate[T](value: T): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any]).asInstanceOf[js.Promise[T]]
+  inline def setImmediate[T](value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setImmediate[T](value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setImmediate")(value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
   
   /**
     * Returns an async iterator that generates values in an interval of `delay` ms.
@@ -54,22 +49,14 @@ object nodeColontimersMod {
     * ```
     * @since v15.9.0
     */
-  @scala.inline
-  def setInterval[T](): AsyncIterable[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")().asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Double): AsyncIterable[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any]).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Double, value: T): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Double, value: T, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Double, value: Unit, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Unit, value: T): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Unit, value: T, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
-  @scala.inline
-  def setInterval[T](delay: Unit, value: Unit, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](): AsyncIterable[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")().asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Double): AsyncIterable[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any]).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Double, value: T): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Double, value: T, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Double, value: Unit, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Unit, value: T): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Unit, value: T, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
+  inline def setInterval[T](delay: Unit, value: Unit, options: TimerOptions): AsyncIterable[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setInterval")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterable[T]]
   
   /**
     * ```js
@@ -85,20 +72,12 @@ object nodeColontimersMod {
     * @param [delay=1] The number of milliseconds to wait before fulfilling the promise.
     * @param value A value with which the promise is fulfilled.
     */
-  @scala.inline
-  def setTimeout[T](): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")().asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Double): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any]).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Double, value: T): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Double, value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Double, value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Unit, value: T): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Unit, value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
-  @scala.inline
-  def setTimeout[T](delay: Unit, value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")().asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Double): js.Promise[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any]).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Double, value: T): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Double, value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Double, value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Unit, value: T): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Unit, value: T, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
+  inline def setTimeout[T](delay: Unit, value: Unit, options: TimerOptions): js.Promise[T] = (^.asInstanceOf[js.Dynamic].applyDynamic("setTimeout")(delay.asInstanceOf[js.Any], value.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[T]]
 }

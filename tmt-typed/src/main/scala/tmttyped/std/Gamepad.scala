@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -37,8 +36,7 @@ trait Gamepad extends StObject {
 }
 object Gamepad {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     axes: js.Array[Double],
     buttons: js.Array[org.scalajs.dom.GamepadButton],
     connected: scala.Boolean,
@@ -52,40 +50,28 @@ object Gamepad {
     __obj.asInstanceOf[Gamepad]
   }
   
-  @scala.inline
-  implicit class GamepadMutableBuilder[Self <: Gamepad] (val x: Self) extends AnyVal {
+  extension [Self <: Gamepad](x: Self) {
     
-    @scala.inline
-    def setAxes(value: js.Array[Double]): Self = StObject.set(x, "axes", value.asInstanceOf[js.Any])
+    inline def setAxes(value: js.Array[Double]): Self = StObject.set(x, "axes", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setAxesVarargs(value: Double*): Self = StObject.set(x, "axes", js.Array(value :_*))
+    inline def setAxesVarargs(value: Double*): Self = StObject.set(x, "axes", js.Array(value*))
     
-    @scala.inline
-    def setButtons(value: js.Array[org.scalajs.dom.GamepadButton]): Self = StObject.set(x, "buttons", value.asInstanceOf[js.Any])
+    inline def setButtons(value: js.Array[org.scalajs.dom.GamepadButton]): Self = StObject.set(x, "buttons", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setButtonsVarargs(value: org.scalajs.dom.GamepadButton*): Self = StObject.set(x, "buttons", js.Array(value :_*))
+    inline def setButtonsVarargs(value: org.scalajs.dom.GamepadButton*): Self = StObject.set(x, "buttons", js.Array(value*))
     
-    @scala.inline
-    def setConnected(value: scala.Boolean): Self = StObject.set(x, "connected", value.asInstanceOf[js.Any])
+    inline def setConnected(value: scala.Boolean): Self = StObject.set(x, "connected", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHapticActuators(value: js.Array[GamepadHapticActuator]): Self = StObject.set(x, "hapticActuators", value.asInstanceOf[js.Any])
+    inline def setHapticActuators(value: js.Array[GamepadHapticActuator]): Self = StObject.set(x, "hapticActuators", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHapticActuatorsVarargs(value: GamepadHapticActuator*): Self = StObject.set(x, "hapticActuators", js.Array(value :_*))
+    inline def setHapticActuatorsVarargs(value: GamepadHapticActuator*): Self = StObject.set(x, "hapticActuators", js.Array(value*))
     
-    @scala.inline
-    def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
+    inline def setId(value: java.lang.String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setIndex(value: Double): Self = StObject.set(x, "index", value.asInstanceOf[js.Any])
+    inline def setIndex(value: Double): Self = StObject.set(x, "index", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMapping(value: org.scalajs.dom.GamepadMappingType): Self = StObject.set(x, "mapping", value.asInstanceOf[js.Any])
+    inline def setMapping(value: org.scalajs.dom.GamepadMappingType): Self = StObject.set(x, "mapping", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTimestamp(value: DOMHighResTimeStamp): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
+    inline def setTimestamp(value: DOMHighResTimeStamp): Self = StObject.set(x, "timestamp", value.asInstanceOf[js.Any])
   }
 }

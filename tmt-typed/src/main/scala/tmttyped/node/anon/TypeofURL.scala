@@ -1,9 +1,7 @@
 package tmttyped.node.anon
 
-import tmttyped.node.nodeBufferMod.Blob
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TypeofURL extends StObject {
@@ -35,10 +33,11 @@ trait TypeofURL extends StObject {
     * @experimental
     */
   /* static member */
-  def createObjectURL(blob: Blob): String
+  def createObjectURL(blob: tmttyped.node.nodeBufferMod.Blob): String
   
   /**
-    * Removes the stored `Blob` identified by the given ID.
+    * Removes the stored `Blob` identified by the given ID. Attempting to revoke a
+    * ID that isn’t registered will silently fail.
     * @since v16.7.0
     * @experimental
     * @param id A `'blob:nodedata:...` URL string returned by a prior call to `URL.createObjectURL()`.
@@ -48,19 +47,15 @@ trait TypeofURL extends StObject {
 }
 object TypeofURL {
   
-  @scala.inline
-  def apply(createObjectURL: Blob => String, revokeObjectURL: String => Unit): TypeofURL = {
+  inline def apply(createObjectURL: tmttyped.node.nodeBufferMod.Blob => String, revokeObjectURL: String => Unit): TypeofURL = {
     val __obj = js.Dynamic.literal(createObjectURL = js.Any.fromFunction1(createObjectURL), revokeObjectURL = js.Any.fromFunction1(revokeObjectURL))
     __obj.asInstanceOf[TypeofURL]
   }
   
-  @scala.inline
-  implicit class TypeofURLMutableBuilder[Self <: TypeofURL] (val x: Self) extends AnyVal {
+  extension [Self <: TypeofURL](x: Self) {
     
-    @scala.inline
-    def setCreateObjectURL(value: Blob => String): Self = StObject.set(x, "createObjectURL", js.Any.fromFunction1(value))
+    inline def setCreateObjectURL(value: tmttyped.node.nodeBufferMod.Blob => String): Self = StObject.set(x, "createObjectURL", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setRevokeObjectURL(value: String => Unit): Self = StObject.set(x, "revokeObjectURL", js.Any.fromFunction1(value))
+    inline def setRevokeObjectURL(value: String => Unit): Self = StObject.set(x, "revokeObjectURL", js.Any.fromFunction1(value))
   }
 }

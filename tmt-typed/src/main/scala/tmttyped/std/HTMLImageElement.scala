@@ -1,11 +1,12 @@
 package tmttyped.std
 
+import tmttyped.std.stdStrings.`lazy`
 import tmttyped.std.stdStrings.async
 import tmttyped.std.stdStrings.auto
+import tmttyped.std.stdStrings.eager
 import tmttyped.std.stdStrings.sync
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides special properties and methods for manipulating <img> elements. */
@@ -75,8 +76,9 @@ trait HTMLImageElement
   /* standard DOM */
   var isMap: scala.Boolean = js.native
   
+  /** Sets or retrieves the policy for loading image elements that are outside the viewport. */
   /* standard DOM */
-  var loading: java.lang.String = js.native
+  var loading: eager | `lazy` = js.native
   
   /**
     * Sets or retrieves a Uniform Resource Identifier (URI) to a long description of the object.

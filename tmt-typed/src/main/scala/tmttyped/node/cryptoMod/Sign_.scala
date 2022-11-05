@@ -3,7 +3,6 @@ package tmttyped.node.cryptoMod
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -71,7 +70,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Sign")
 @js.native
-/* private */ class Sign_ () extends StObject {
+/* private */ open class Sign_ () extends StObject {
   
   /**
     * Calculates the signature on all the data passed through using either `sign.update()` or `sign.write()`.

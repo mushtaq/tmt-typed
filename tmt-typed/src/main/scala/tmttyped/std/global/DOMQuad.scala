@@ -5,14 +5,13 @@ import tmttyped.std.DOMQuadInit
 import tmttyped.std.DOMRectInit
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("DOMQuad")
 @js.native
 /* standard DOM */
-class DOMQuad ()
+open class DOMQuad ()
   extends StObject
      with tmttyped.std.DOMQuad {
   def this(p1: DOMPointInit) = this()
@@ -62,14 +61,10 @@ object DOMQuad {
   val ^ : js.Any = js.native
   
   /* standard DOM */
-  @scala.inline
-  def fromQuad(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")().asInstanceOf[tmttyped.std.DOMQuad]
-  @scala.inline
-  def fromQuad(other: DOMQuadInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
+  inline def fromQuad(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")().asInstanceOf[tmttyped.std.DOMQuad]
+  inline def fromQuad(other: DOMQuadInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromQuad")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
   
   /* standard DOM */
-  @scala.inline
-  def fromRect(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMQuad]
-  @scala.inline
-  def fromRect(other: DOMRectInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
+  inline def fromRect(): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")().asInstanceOf[tmttyped.std.DOMQuad]
+  inline def fromRect(other: DOMRectInit): tmttyped.std.DOMQuad = ^.asInstanceOf[js.Dynamic].applyDynamic("fromRect")(other.asInstanceOf[js.Any]).asInstanceOf[tmttyped.std.DOMQuad]
 }

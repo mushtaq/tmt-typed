@@ -21,7 +21,6 @@ import tmttyped.node.streamWebMod.WritableStreamDefaultController
 import tmttyped.node.streamWebMod.WritableStreamDefaultWriter
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object webMod {
@@ -29,7 +28,7 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "ByteLengthQueuingStrategy")
   @js.native
-  class ByteLengthQueuingStrategyCls protected ()
+  open class ByteLengthQueuingStrategyCls protected ()
     extends StObject
        with ByteLengthQueuingStrategy {
     def this(init: QueuingStrategyInit) = this()
@@ -38,7 +37,7 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "CountQueuingStrategy")
   @js.native
-  class CountQueuingStrategyCls protected ()
+  open class CountQueuingStrategyCls protected ()
     extends StObject
        with CountQueuingStrategy {
     def this(init: QueuingStrategyInit) = this()
@@ -47,7 +46,7 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "ReadableByteStreamController")
   @js.native
-  class ReadableByteStreamControllerCls ()
+  open class ReadableByteStreamControllerCls ()
     extends StObject
        with ReadableByteStreamController
   
@@ -62,7 +61,7 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "ReadableStream")
   @js.native
-  class ReadableStreamCls[R] ()
+  open class ReadableStreamCls[R] ()
     extends StObject
        with ReadableStream[R] {
     def this(underlyingSource: UnderlyingSource[R]) = this()
@@ -73,14 +72,14 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "ReadableStreamDefaultController")
   @js.native
-  class ReadableStreamDefaultControllerCls ()
+  open class ReadableStreamDefaultControllerCls ()
     extends StObject
        with ReadableStreamDefaultController[Any]
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "ReadableStreamDefaultReader")
   @js.native
-  class ReadableStreamDefaultReaderCls[R] protected ()
+  open class ReadableStreamDefaultReaderCls[R] protected ()
     extends StObject
        with ReadableStreamDefaultReader[R] {
     def this(stream: ReadableStream[R]) = this()
@@ -89,7 +88,7 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "TextDecoderStream")
   @js.native
-  class TextDecoderStreamCls ()
+  open class TextDecoderStreamCls ()
     extends StObject
        with TextDecoderStream {
     def this(label: String) = this()
@@ -100,14 +99,14 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "TextEncoderStream")
   @js.native
-  class TextEncoderStreamCls ()
+  open class TextEncoderStreamCls ()
     extends StObject
        with TextEncoderStream
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "TransformStream")
   @js.native
-  class TransformStreamCls[I, O] ()
+  open class TransformStreamCls[I, O] ()
     extends StObject
        with TransformStream[I, O] {
     def this(transformer: Transformer[I, O]) = this()
@@ -132,14 +131,14 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "TransformStreamDefaultController")
   @js.native
-  class TransformStreamDefaultControllerCls ()
+  open class TransformStreamDefaultControllerCls ()
     extends StObject
        with TransformStreamDefaultController[Any]
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "WritableStream")
   @js.native
-  class WritableStreamCls[W] ()
+  open class WritableStreamCls[W] ()
     extends StObject
        with WritableStream[W] {
     def this(underlyingSink: UnderlyingSink[W]) = this()
@@ -150,14 +149,14 @@ object webMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "WritableStreamDefaultController")
   @js.native
-  class WritableStreamDefaultControllerCls ()
+  open class WritableStreamDefaultControllerCls ()
     extends StObject
        with WritableStreamDefaultController
   
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:stream/web", "WritableStreamDefaultWriter")
   @js.native
-  class WritableStreamDefaultWriterCls[W] protected ()
+  open class WritableStreamDefaultWriterCls[W] protected ()
     extends StObject
        with WritableStreamDefaultWriter[W] {
     def this(stream: WritableStream[W]) = this()

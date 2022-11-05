@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -12,9 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MediaEncodingType extends StObject
 object MediaEncodingType {
   
-  @scala.inline
-  def record: tmttyped.std.stdStrings.record = "record".asInstanceOf[tmttyped.std.stdStrings.record]
+  inline def record: tmttyped.std.stdStrings.record = "record".asInstanceOf[tmttyped.std.stdStrings.record]
   
-  @scala.inline
-  def webrtc: tmttyped.std.stdStrings.webrtc = "webrtc".asInstanceOf[tmttyped.std.stdStrings.webrtc]
+  inline def webrtc: tmttyped.std.stdStrings.webrtc = "webrtc".asInstanceOf[tmttyped.std.stdStrings.webrtc]
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait DOMRect
@@ -10,8 +9,7 @@ trait DOMRect
      with DOMRectReadOnly
 object DOMRect {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     bottom: Double,
     height: Double,
     left: Double,

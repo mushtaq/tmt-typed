@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WEBGLDebugShaders extends StObject {
@@ -12,16 +11,13 @@ trait WEBGLDebugShaders extends StObject {
 }
 object WEBGLDebugShaders {
   
-  @scala.inline
-  def apply(getTranslatedShaderSource: org.scalajs.dom.WebGLShader => java.lang.String): WEBGLDebugShaders = {
+  inline def apply(getTranslatedShaderSource: org.scalajs.dom.WebGLShader => java.lang.String): WEBGLDebugShaders = {
     val __obj = js.Dynamic.literal(getTranslatedShaderSource = js.Any.fromFunction1(getTranslatedShaderSource))
     __obj.asInstanceOf[WEBGLDebugShaders]
   }
   
-  @scala.inline
-  implicit class WEBGLDebugShadersMutableBuilder[Self <: WEBGLDebugShaders] (val x: Self) extends AnyVal {
+  extension [Self <: WEBGLDebugShaders](x: Self) {
     
-    @scala.inline
-    def setGetTranslatedShaderSource(value: org.scalajs.dom.WebGLShader => java.lang.String): Self = StObject.set(x, "getTranslatedShaderSource", js.Any.fromFunction1(value))
+    inline def setGetTranslatedShaderSource(value: org.scalajs.dom.WebGLShader => java.lang.String): Self = StObject.set(x, "getTranslatedShaderSource", js.Any.fromFunction1(value))
   }
 }

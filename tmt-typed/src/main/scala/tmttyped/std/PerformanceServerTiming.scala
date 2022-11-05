@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PerformanceServerTiming extends StObject {
@@ -21,8 +20,7 @@ trait PerformanceServerTiming extends StObject {
 }
 object PerformanceServerTiming {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     description: java.lang.String,
     duration: DOMHighResTimeStamp,
     name: java.lang.String,
@@ -32,19 +30,14 @@ object PerformanceServerTiming {
     __obj.asInstanceOf[PerformanceServerTiming]
   }
   
-  @scala.inline
-  implicit class PerformanceServerTimingMutableBuilder[Self <: PerformanceServerTiming] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceServerTiming](x: Self) {
     
-    @scala.inline
-    def setDescription(value: java.lang.String): Self = StObject.set(x, "description", value.asInstanceOf[js.Any])
+    inline def setDescription(value: java.lang.String): Self = StObject.set(x, "description", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
+    inline def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+    inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
+    inline def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
   }
 }

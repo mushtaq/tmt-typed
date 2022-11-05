@@ -3,7 +3,6 @@ package tmttyped.node.cryptoMod
 import tmttyped.node.nodeBooleans.`true`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GeneratePrimeOptionsBigInt
@@ -15,16 +14,13 @@ trait GeneratePrimeOptionsBigInt
 }
 object GeneratePrimeOptionsBigInt {
   
-  @scala.inline
-  def apply(): GeneratePrimeOptionsBigInt = {
+  inline def apply(): GeneratePrimeOptionsBigInt = {
     val __obj = js.Dynamic.literal(bigint = true)
     __obj.asInstanceOf[GeneratePrimeOptionsBigInt]
   }
   
-  @scala.inline
-  implicit class GeneratePrimeOptionsBigIntMutableBuilder[Self <: GeneratePrimeOptionsBigInt] (val x: Self) extends AnyVal {
+  extension [Self <: GeneratePrimeOptionsBigInt](x: Self) {
     
-    @scala.inline
-    def setBigint(value: `true`): Self = StObject.set(x, "bigint", value.asInstanceOf[js.Any])
+    inline def setBigint(value: `true`): Self = StObject.set(x, "bigint", value.asInstanceOf[js.Any])
   }
 }

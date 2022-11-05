@@ -3,7 +3,6 @@ package tmttyped.node.anon
 import tmttyped.node.perfHooksMod.EntryType
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait BufferedType extends StObject {
@@ -14,23 +13,18 @@ trait BufferedType extends StObject {
 }
 object BufferedType {
   
-  @scala.inline
-  def apply(`type`: EntryType): BufferedType = {
+  inline def apply(`type`: EntryType): BufferedType = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BufferedType]
   }
   
-  @scala.inline
-  implicit class BufferedTypeMutableBuilder[Self <: BufferedType] (val x: Self) extends AnyVal {
+  extension [Self <: BufferedType](x: Self) {
     
-    @scala.inline
-    def setBuffered(value: Boolean): Self = StObject.set(x, "buffered", value.asInstanceOf[js.Any])
+    inline def setBuffered(value: Boolean): Self = StObject.set(x, "buffered", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBufferedUndefined: Self = StObject.set(x, "buffered", js.undefined)
+    inline def setBufferedUndefined: Self = StObject.set(x, "buffered", js.undefined)
     
-    @scala.inline
-    def setType(value: EntryType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    inline def setType(value: EntryType): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
   }
 }

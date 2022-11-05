@@ -7,14 +7,13 @@ import tmttyped.std.FrameRequestCallback
 import tmttyped.std.Window
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Window")
 @js.native
 /* standard DOM */
-class Window_ ()
+open class Window_ ()
   extends StObject
      with Window {
   

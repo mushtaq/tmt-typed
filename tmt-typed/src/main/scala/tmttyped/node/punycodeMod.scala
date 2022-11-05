@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object punycodeMod {
@@ -21,8 +20,7 @@ object punycodeMod {
     * ```
     * @since v0.5.1
     */
-  @scala.inline
-  def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def decode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("decode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.encode()` method converts a string of Unicode codepoints to a [Punycode](https://tools.ietf.org/html/rfc3492) string of ASCII-only characters.
@@ -33,8 +31,7 @@ object punycodeMod {
     * ```
     * @since v0.5.1
     */
-  @scala.inline
-  def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def encode(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("encode")(string.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toASCII()` method converts a Unicode string representing an
@@ -50,8 +47,7 @@ object punycodeMod {
     * ```
     * @since v0.6.1
     */
-  @scala.inline
-  def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def toASCII(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toASCII")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   /**
     * The `punycode.toUnicode()` method converts a string representing a domain name
@@ -66,8 +62,7 @@ object punycodeMod {
     * ```
     * @since v0.6.1
     */
-  @scala.inline
-  def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def toUnicode(domain: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUnicode")(domain.asInstanceOf[js.Any]).asInstanceOf[String]
   
   trait ucs2 extends StObject {
     
@@ -102,14 +97,11 @@ object punycodeMod {
     @js.native
     val ^ : ucs2 = js.native
     
-    @scala.inline
-    implicit class ucs2MutableBuilder[Self <: ucs2] (val x: Self) extends AnyVal {
+    extension [Self <: ucs2](x: Self) {
       
-      @scala.inline
-      def setDecode(value: String => js.Array[Double]): Self = StObject.set(x, "decode", js.Any.fromFunction1(value))
+      inline def setDecode(value: String => js.Array[Double]): Self = StObject.set(x, "decode", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setEncode(value: js.Array[Double] => String): Self = StObject.set(x, "encode", js.Any.fromFunction1(value))
+      inline def setEncode(value: js.Array[Double] => String): Self = StObject.set(x, "encode", js.Any.fromFunction1(value))
     }
   }
   

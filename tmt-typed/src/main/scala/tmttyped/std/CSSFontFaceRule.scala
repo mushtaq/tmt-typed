@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait CSSFontFaceRule
@@ -14,8 +13,7 @@ trait CSSFontFaceRule
 }
 object CSSFontFaceRule {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     CHARSET_RULE: Double,
     FONT_FACE_RULE: Double,
     IMPORT_RULE: Double,
@@ -35,10 +33,8 @@ object CSSFontFaceRule {
     __obj.asInstanceOf[CSSFontFaceRule]
   }
   
-  @scala.inline
-  implicit class CSSFontFaceRuleMutableBuilder[Self <: CSSFontFaceRule] (val x: Self) extends AnyVal {
+  extension [Self <: CSSFontFaceRule](x: Self) {
     
-    @scala.inline
-    def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
+    inline def setStyle(value: org.scalajs.dom.CSSStyleDeclaration): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
   }
 }

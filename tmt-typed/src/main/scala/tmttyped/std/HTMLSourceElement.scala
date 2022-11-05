@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating <source> elements. */
@@ -22,6 +21,9 @@ trait HTMLSourceElement
     listener: EventListenerOrEventListenerObject,
     options: AddEventListenerOptions
   ): Unit = js.native
+  
+  /* standard DOM */
+  var height: Double = js.native
   
   /** Gets or sets the intended media type of the media source. */
   /* standard DOM */
@@ -52,4 +54,7 @@ trait HTMLSourceElement
   /** Gets or sets the MIME type of a media resource. */
   /* standard DOM */
   var `type`: java.lang.String = js.native
+  
+  /* standard DOM */
+  var width: Double = js.native
 }

@@ -1,11 +1,9 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -117,7 +115,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Decipher")
 @js.native
-/* private */ class Decipher () extends StObject {
+/* private */ open class Decipher () extends StObject {
   
   /**
     * Once the `decipher.final()` method has been called, the `Decipher` object can
@@ -162,6 +160,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
     * @param inputEncoding The `encoding` of the `data` string.
     * @param outputEncoding The `encoding` of the return value.
     */
-  def update(data: ArrayBufferView): Buffer = js.native
-  def update(data: ArrayBufferView, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
+  def update(data: js.typedarray.ArrayBufferView): Buffer = js.native
+  def update(data: js.typedarray.ArrayBufferView, inputEncoding: Unit, outputEncoding: Encoding): String = js.native
 }

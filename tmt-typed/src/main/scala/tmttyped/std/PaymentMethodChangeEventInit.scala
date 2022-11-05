@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait PaymentMethodChangeEventInit
@@ -17,25 +16,19 @@ trait PaymentMethodChangeEventInit
 }
 object PaymentMethodChangeEventInit {
   
-  @scala.inline
-  def apply(): PaymentMethodChangeEventInit = {
+  inline def apply(): PaymentMethodChangeEventInit = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PaymentMethodChangeEventInit]
   }
   
-  @scala.inline
-  implicit class PaymentMethodChangeEventInitMutableBuilder[Self <: PaymentMethodChangeEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: PaymentMethodChangeEventInit](x: Self) {
     
-    @scala.inline
-    def setMethodDetails(value: Any): Self = StObject.set(x, "methodDetails", value.asInstanceOf[js.Any])
+    inline def setMethodDetails(value: Any): Self = StObject.set(x, "methodDetails", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMethodDetailsUndefined: Self = StObject.set(x, "methodDetails", js.undefined)
+    inline def setMethodDetailsUndefined: Self = StObject.set(x, "methodDetails", js.undefined)
     
-    @scala.inline
-    def setMethodName(value: java.lang.String): Self = StObject.set(x, "methodName", value.asInstanceOf[js.Any])
+    inline def setMethodName(value: java.lang.String): Self = StObject.set(x, "methodName", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setMethodNameUndefined: Self = StObject.set(x, "methodName", js.undefined)
+    inline def setMethodNameUndefined: Self = StObject.set(x, "methodName", js.undefined)
   }
 }

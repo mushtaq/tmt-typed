@@ -1,11 +1,9 @@
 package tmttyped.node.cryptoMod
 
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.bufferMod.global.BufferEncoding
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -40,7 +38,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "DiffieHellman")
 @js.native
-/* private */ class DiffieHellman_ () extends StObject {
+/* private */ open class DiffieHellman_ () extends StObject {
   
   def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding): Buffer = js.native
   def computeSecret(otherPublicKey: String, inputEncoding: BinaryToTextEncoding, outputEncoding: BinaryToTextEncoding): String = js.native
@@ -57,8 +55,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
     * @param inputEncoding The `encoding` of an `otherPublicKey` string.
     * @param outputEncoding The `encoding` of the return value.
     */
-  def computeSecret(otherPublicKey: ArrayBufferView): Buffer = js.native
-  def computeSecret(otherPublicKey: ArrayBufferView, outputEncoding: BinaryToTextEncoding): String = js.native
+  def computeSecret(otherPublicKey: js.typedarray.ArrayBufferView): Buffer = js.native
+  def computeSecret(
+    otherPublicKey: js.typedarray.ArrayBufferView,
+    inputEncoding: Null,
+    outputEncoding: BinaryToTextEncoding
+  ): String = js.native
   
   /**
     * Generates private and public Diffie-Hellman key values, and returns
@@ -119,7 +121,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
     * @since v0.5.0
     * @param encoding The `encoding` of the `privateKey` string.
     */
-  def setPrivateKey(privateKey: ArrayBufferView): Unit = js.native
+  def setPrivateKey(privateKey: js.typedarray.ArrayBufferView): Unit = js.native
   
   def setPublicKey(publicKey: String, encoding: BufferEncoding): Unit = js.native
   /**
@@ -129,7 +131,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
     * @since v0.5.0
     * @param encoding The `encoding` of the `publicKey` string.
     */
-  def setPublicKey(publicKey: ArrayBufferView): Unit = js.native
+  def setPublicKey(publicKey: js.typedarray.ArrayBufferView): Unit = js.native
   
   /**
     * A bit field containing any warnings and/or errors resulting from a check

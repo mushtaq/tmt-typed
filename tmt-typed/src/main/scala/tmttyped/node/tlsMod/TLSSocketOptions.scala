@@ -3,7 +3,6 @@ package tmttyped.node.tlsMod
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait TLSSocketOptions
@@ -36,37 +35,27 @@ trait TLSSocketOptions
 }
 object TLSSocketOptions {
   
-  @scala.inline
-  def apply(): TLSSocketOptions = {
+  inline def apply(): TLSSocketOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TLSSocketOptions]
   }
   
-  @scala.inline
-  implicit class TLSSocketOptionsMutableBuilder[Self <: TLSSocketOptions] (val x: Self) extends AnyVal {
+  extension [Self <: TLSSocketOptions](x: Self) {
     
-    @scala.inline
-    def setIsServer(value: Boolean): Self = StObject.set(x, "isServer", value.asInstanceOf[js.Any])
+    inline def setIsServer(value: Boolean): Self = StObject.set(x, "isServer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setIsServerUndefined: Self = StObject.set(x, "isServer", js.undefined)
+    inline def setIsServerUndefined: Self = StObject.set(x, "isServer", js.undefined)
     
-    @scala.inline
-    def setRequestOCSP(value: Boolean): Self = StObject.set(x, "requestOCSP", value.asInstanceOf[js.Any])
+    inline def setRequestOCSP(value: Boolean): Self = StObject.set(x, "requestOCSP", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRequestOCSPUndefined: Self = StObject.set(x, "requestOCSP", js.undefined)
+    inline def setRequestOCSPUndefined: Self = StObject.set(x, "requestOCSP", js.undefined)
     
-    @scala.inline
-    def setServer(value: tmttyped.node.nodeNetMod.Server): Self = StObject.set(x, "server", value.asInstanceOf[js.Any])
+    inline def setServer(value: tmttyped.node.nodeNetMod.Server): Self = StObject.set(x, "server", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setServerUndefined: Self = StObject.set(x, "server", js.undefined)
+    inline def setServerUndefined: Self = StObject.set(x, "server", js.undefined)
     
-    @scala.inline
-    def setSession(value: Buffer): Self = StObject.set(x, "session", value.asInstanceOf[js.Any])
+    inline def setSession(value: Buffer): Self = StObject.set(x, "session", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSessionUndefined: Self = StObject.set(x, "session", js.undefined)
+    inline def setSessionUndefined: Self = StObject.set(x, "session", js.undefined)
   }
 }

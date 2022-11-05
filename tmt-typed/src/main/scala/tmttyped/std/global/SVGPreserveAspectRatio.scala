@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("SVGPreserveAspectRatio")
 @js.native
 /* standard DOM */
-class SVGPreserveAspectRatio ()
+open class SVGPreserveAspectRatio ()
   extends StObject
      with tmttyped.std.SVGPreserveAspectRatio {
   
@@ -71,11 +70,11 @@ class SVGPreserveAspectRatio ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var align: Double = js.native
+  var align: Double = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var meetOrSlice: Double = js.native
+  var meetOrSlice: Double = js.native
 }
 object SVGPreserveAspectRatio {
   

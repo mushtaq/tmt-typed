@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -13,12 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AnimationReplaceState extends StObject
 object AnimationReplaceState {
   
-  @scala.inline
-  def active: tmttyped.std.stdStrings.active = "active".asInstanceOf[tmttyped.std.stdStrings.active]
+  inline def active: tmttyped.std.stdStrings.active = "active".asInstanceOf[tmttyped.std.stdStrings.active]
   
-  @scala.inline
-  def persisted: tmttyped.std.stdStrings.persisted = "persisted".asInstanceOf[tmttyped.std.stdStrings.persisted]
+  inline def persisted: tmttyped.std.stdStrings.persisted = "persisted".asInstanceOf[tmttyped.std.stdStrings.persisted]
   
-  @scala.inline
-  def removed: tmttyped.std.stdStrings.removed = "removed".asInstanceOf[tmttyped.std.stdStrings.removed]
+  inline def removed: tmttyped.std.stdStrings.removed = "removed".asInstanceOf[tmttyped.std.stdStrings.removed]
 }

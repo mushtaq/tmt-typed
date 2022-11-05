@@ -1,467 +1,410 @@
-package tmttyped.node
+package tmttyped.node.dnsMod
 
+import tmttyped.node.dnsMod.^
+import tmttyped.node.nodeStrings.A
+import tmttyped.node.nodeStrings.AAAA
+import tmttyped.node.nodeStrings.ANY
+import tmttyped.node.nodeStrings.CNAME
+import tmttyped.node.nodeStrings.MX
+import tmttyped.node.nodeStrings.NAPTR
+import tmttyped.node.nodeStrings.NS
+import tmttyped.node.nodeStrings.PTR
+import tmttyped.node.nodeStrings.SOA
+import tmttyped.node.nodeStrings.SRV
+import tmttyped.node.nodeStrings.TXT
+import tmttyped.node.nodeStrings.ipv4first
+import tmttyped.node.nodeStrings.verbatim
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-package object dnsMod {
-  
-  @scala.inline
-  def ADDRCONFIG: scala.Double = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ADDRCONFIG").asInstanceOf[scala.Double]
-  
-  @scala.inline
-  def ADDRGETNETWORKPARAMS: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ADDRGETNETWORKPARAMS").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def ALL: scala.Double = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("ALL").asInstanceOf[scala.Double]
-  
-  @scala.inline
-  def BADFAMILY: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADFAMILY").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADFLAGS: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADFLAGS").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADHINTS: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADHINTS").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADNAME: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADNAME").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADQUERY: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADQUERY").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADRESP: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADRESP").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def BADSTR: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("BADSTR").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def CANCELLED: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("CANCELLED").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def CONNREFUSED: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("CONNREFUSED").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def DESTRUCTION: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("DESTRUCTION").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def EOF: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("EOF").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def FILE: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("FILE").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def FORMERR: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("FORMERR").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def LOADIPHLPAPI: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("LOADIPHLPAPI").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NODATA: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NODATA").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NOMEM: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NOMEM").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NONAME: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NONAME").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NOTFOUND: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NOTFOUND").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NOTIMP: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NOTIMP").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def NOTINITIALIZED: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("NOTINITIALIZED").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def REFUSED: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("REFUSED").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def SERVFAIL: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("SERVFAIL").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def TIMEOUT: java.lang.String = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("TIMEOUT").asInstanceOf[java.lang.String]
-  
-  @scala.inline
-  def V4MAPPED: scala.Double = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].selectDynamic("V4MAPPED").asInstanceOf[scala.Double]
-  
-  @scala.inline
-  def getServers(): js.Array[java.lang.String] = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[java.lang.String]]
-  
-  @scala.inline
-  def lookup(
-    hostname: java.lang.String,
-    callback: js.Function3[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* address */ java.lang.String, 
-      /* family */ scala.Double, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def lookup(
-    hostname: java.lang.String,
-    family: scala.Double,
-    callback: js.Function3[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* address */ java.lang.String, 
-      /* family */ scala.Double, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def lookup(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.LookupAllOptions,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.LookupAddress], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def lookup(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.LookupOneOptions,
-    callback: js.Function3[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* address */ java.lang.String, 
-      /* family */ scala.Double, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def lookup(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.LookupOptions,
-    callback: js.Function3[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* address */ java.lang.String | js.Array[tmttyped.node.dnsMod.LookupAddress], 
-      /* family */ scala.Double, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def lookupService(
-    address: java.lang.String,
-    port: scala.Double,
-    callback: js.Function3[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* hostname */ java.lang.String, 
-      /* service */ java.lang.String, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ (js.Array[
-        tmttyped.node.dnsMod.AnyRecord | js.Array[java.lang.String] | tmttyped.node.dnsMod.MxRecord | tmttyped.node.dnsMod.NaptrRecord | tmttyped.node.dnsMod.SrvRecord | java.lang.String
-      ]) | tmttyped.node.dnsMod.SoaRecord, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.AAAA,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.ANY,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.AnyRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.A,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.CNAME,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.MX,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.MxRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.NAPTR,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.NaptrRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.NS,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.PTR,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.SOA,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ tmttyped.node.dnsMod.SoaRecord, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.SRV,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.SrvRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve(
-    hostname: java.lang.String,
-    rrtype: tmttyped.node.nodeStrings.TXT,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[js.Array[java.lang.String]], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolve4(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve4(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.ResolveOptions,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.RecordWithTtl | java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve4(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.ResolveWithTtlOptions,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.RecordWithTtl], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolve6(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve6(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.ResolveOptions,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.RecordWithTtl | java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  @scala.inline
-  def resolve6(
-    hostname: java.lang.String,
-    options: tmttyped.node.dnsMod.ResolveWithTtlOptions,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.RecordWithTtl], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveAny(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.AnyRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveCaa(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* records */ js.Array[tmttyped.node.dnsMod.CaaRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveCname(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveMx(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.MxRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveNaptr(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.NaptrRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveNs(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolvePtr(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveSoa(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* address */ tmttyped.node.dnsMod.SoaRecord, 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveSrv(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[tmttyped.node.dnsMod.SrvRecord], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def resolveTxt(
-    hostname: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* addresses */ js.Array[js.Array[java.lang.String]], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def reverse(
-    ip: java.lang.String,
-    callback: js.Function2[
-      /* err */ tmttyped.node.NodeJS.ErrnoException | scala.Null, 
-      /* hostnames */ js.Array[java.lang.String], 
-      scala.Unit
-    ]
-  ): scala.Unit = (tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def setDefaultResultOrder(order: tmttyped.node.nodeStrings.ipv4first | tmttyped.node.nodeStrings.verbatim): scala.Unit = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("setDefaultResultOrder")(order.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
-  
-  @scala.inline
-  def setServers(servers: js.Array[java.lang.String]): scala.Unit = tmttyped.node.dnsMod.^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[scala.Unit]
-}
+
+inline def ADDRCONFIG: Double = ^.asInstanceOf[js.Dynamic].selectDynamic("ADDRCONFIG").asInstanceOf[Double]
+
+inline def ADDRGETNETWORKPARAMS: String = ^.asInstanceOf[js.Dynamic].selectDynamic("ADDRGETNETWORKPARAMS").asInstanceOf[String]
+
+inline def ALL: Double = ^.asInstanceOf[js.Dynamic].selectDynamic("ALL").asInstanceOf[Double]
+
+inline def BADFAMILY: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADFAMILY").asInstanceOf[String]
+
+inline def BADFLAGS: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADFLAGS").asInstanceOf[String]
+
+inline def BADHINTS: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADHINTS").asInstanceOf[String]
+
+inline def BADNAME: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADNAME").asInstanceOf[String]
+
+inline def BADQUERY: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADQUERY").asInstanceOf[String]
+
+inline def BADRESP: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADRESP").asInstanceOf[String]
+
+inline def BADSTR: String = ^.asInstanceOf[js.Dynamic].selectDynamic("BADSTR").asInstanceOf[String]
+
+inline def CANCELLED: String = ^.asInstanceOf[js.Dynamic].selectDynamic("CANCELLED").asInstanceOf[String]
+
+inline def CONNREFUSED: String = ^.asInstanceOf[js.Dynamic].selectDynamic("CONNREFUSED").asInstanceOf[String]
+
+inline def DESTRUCTION: String = ^.asInstanceOf[js.Dynamic].selectDynamic("DESTRUCTION").asInstanceOf[String]
+
+inline def EOF: String = ^.asInstanceOf[js.Dynamic].selectDynamic("EOF").asInstanceOf[String]
+
+inline def FILE: String = ^.asInstanceOf[js.Dynamic].selectDynamic("FILE").asInstanceOf[String]
+
+inline def FORMERR: String = ^.asInstanceOf[js.Dynamic].selectDynamic("FORMERR").asInstanceOf[String]
+
+inline def LOADIPHLPAPI: String = ^.asInstanceOf[js.Dynamic].selectDynamic("LOADIPHLPAPI").asInstanceOf[String]
+
+inline def NODATA: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NODATA").asInstanceOf[String]
+
+inline def NOMEM: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NOMEM").asInstanceOf[String]
+
+inline def NONAME: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NONAME").asInstanceOf[String]
+
+inline def NOTFOUND: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NOTFOUND").asInstanceOf[String]
+
+inline def NOTIMP: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NOTIMP").asInstanceOf[String]
+
+inline def NOTINITIALIZED: String = ^.asInstanceOf[js.Dynamic].selectDynamic("NOTINITIALIZED").asInstanceOf[String]
+
+inline def REFUSED: String = ^.asInstanceOf[js.Dynamic].selectDynamic("REFUSED").asInstanceOf[String]
+
+inline def SERVFAIL: String = ^.asInstanceOf[js.Dynamic].selectDynamic("SERVFAIL").asInstanceOf[String]
+
+inline def TIMEOUT: String = ^.asInstanceOf[js.Dynamic].selectDynamic("TIMEOUT").asInstanceOf[String]
+
+inline def V4MAPPED: Double = ^.asInstanceOf[js.Dynamic].selectDynamic("V4MAPPED").asInstanceOf[Double]
+
+inline def getServers(): js.Array[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getServers")().asInstanceOf[js.Array[String]]
+
+inline def lookup(
+  hostname: String,
+  callback: js.Function3[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* address */ String, 
+  /* family */ Double, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def lookup(
+  hostname: String,
+  family: Double,
+  callback: js.Function3[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* address */ String, 
+  /* family */ Double, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], family.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def lookup(
+  hostname: String,
+  options: LookupAllOptions,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[LookupAddress], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def lookup(
+  hostname: String,
+  options: LookupOneOptions,
+  callback: js.Function3[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* address */ String, 
+  /* family */ Double, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def lookup(
+  hostname: String,
+  options: LookupOptions,
+  callback: js.Function3[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* address */ String | js.Array[LookupAddress], 
+  /* family */ Double, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookup")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def lookupService(
+  address: String,
+  port: Double,
+  callback: js.Function3[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* hostname */ String, 
+  /* service */ String, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("lookupService")(address.asInstanceOf[js.Any], port.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolve(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: AAAA,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: ANY,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[AnyRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: A,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: CNAME,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: MX,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[MxRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: NAPTR,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[NaptrRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: NS,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: PTR,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: SOA,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ SoaRecord, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: SRV,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[SrvRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve(
+  hostname: String,
+  rrtype: TXT,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[js.Array[String]], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve")(hostname.asInstanceOf[js.Any], rrtype.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolve4(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve4(
+  hostname: String,
+  options: ResolveOptions,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[RecordWithTtl | String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve4(
+  hostname: String,
+  options: ResolveWithTtlOptions,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[RecordWithTtl], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve4")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolve6(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve6(
+  hostname: String,
+  options: ResolveOptions,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[RecordWithTtl | String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+inline def resolve6(
+  hostname: String,
+  options: ResolveWithTtlOptions,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[RecordWithTtl], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolve6")(hostname.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveAny(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[AnyRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveAny")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveCaa(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* records */ js.Array[CaaRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveCaa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveCname(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveCname")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveMx(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[MxRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveMx")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveNaptr(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[NaptrRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveNaptr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveNs(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveNs")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolvePtr(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolvePtr")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveSoa(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* address */ SoaRecord, 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveSoa")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveSrv(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[SrvRecord], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveSrv")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def resolveTxt(
+  hostname: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* addresses */ js.Array[js.Array[String]], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("resolveTxt")(hostname.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def reverse(
+  ip: String,
+  callback: js.Function2[
+  /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+  /* hostnames */ js.Array[String], 
+  Unit
+]
+): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("reverse")(ip.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
+
+inline def setDefaultResultOrder(order: ipv4first | verbatim): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setDefaultResultOrder")(order.asInstanceOf[js.Any]).asInstanceOf[Unit]
+
+inline def setServers(servers: js.Array[String]): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setServers")(servers.asInstanceOf[js.Any]).asInstanceOf[Unit]

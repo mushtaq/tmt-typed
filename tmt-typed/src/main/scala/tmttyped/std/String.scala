@@ -13,7 +13,6 @@ import tmttyped.std.stdStrings.NFKC
 import tmttyped.std.stdStrings.NFKD
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -29,6 +28,13 @@ trait String
     */
   /* standard es2015.core */
   def anchor(name: java.lang.String): java.lang.String = js.native
+  
+  /**
+    * Returns a new String consisting of the single UTF-16 code unit located at the specified index.
+    * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+    */
+  /* standard es2022.string */
+  def at(index: Double): js.UndefOr[java.lang.String] = js.native
   
   /**
     * Returns a `<big>` HTML element

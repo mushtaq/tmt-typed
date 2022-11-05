@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Pbkdf2Params
@@ -20,22 +19,17 @@ trait Pbkdf2Params
 }
 object Pbkdf2Params {
   
-  @scala.inline
-  def apply(hash: HashAlgorithmIdentifier, iterations: Double, name: java.lang.String, salt: BufferSource): Pbkdf2Params = {
+  inline def apply(hash: HashAlgorithmIdentifier, iterations: Double, name: java.lang.String, salt: BufferSource): Pbkdf2Params = {
     val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], iterations = iterations.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], salt = salt.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pbkdf2Params]
   }
   
-  @scala.inline
-  implicit class Pbkdf2ParamsMutableBuilder[Self <: Pbkdf2Params] (val x: Self) extends AnyVal {
+  extension [Self <: Pbkdf2Params](x: Self) {
     
-    @scala.inline
-    def setHash(value: HashAlgorithmIdentifier): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
+    inline def setHash(value: HashAlgorithmIdentifier): Self = StObject.set(x, "hash", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setIterations(value: Double): Self = StObject.set(x, "iterations", value.asInstanceOf[js.Any])
+    inline def setIterations(value: Double): Self = StObject.set(x, "iterations", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSalt(value: BufferSource): Self = StObject.set(x, "salt", value.asInstanceOf[js.Any])
+    inline def setSalt(value: BufferSource): Self = StObject.set(x, "salt", value.asInstanceOf[js.Any])
   }
 }

@@ -4,7 +4,6 @@ import tmttyped.node.nodeStrings.always
 import tmttyped.node.nodeStrings.never
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait X509CheckOptions extends StObject {
@@ -36,8 +35,7 @@ trait X509CheckOptions extends StObject {
 }
 object X509CheckOptions {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     multiLabelWildcards: Boolean,
     partialWildcards: Boolean,
     singleLabelSubdomains: Boolean,
@@ -48,22 +46,16 @@ object X509CheckOptions {
     __obj.asInstanceOf[X509CheckOptions]
   }
   
-  @scala.inline
-  implicit class X509CheckOptionsMutableBuilder[Self <: X509CheckOptions] (val x: Self) extends AnyVal {
+  extension [Self <: X509CheckOptions](x: Self) {
     
-    @scala.inline
-    def setMultiLabelWildcards(value: Boolean): Self = StObject.set(x, "multiLabelWildcards", value.asInstanceOf[js.Any])
+    inline def setMultiLabelWildcards(value: Boolean): Self = StObject.set(x, "multiLabelWildcards", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPartialWildcards(value: Boolean): Self = StObject.set(x, "partialWildcards", value.asInstanceOf[js.Any])
+    inline def setPartialWildcards(value: Boolean): Self = StObject.set(x, "partialWildcards", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSingleLabelSubdomains(value: Boolean): Self = StObject.set(x, "singleLabelSubdomains", value.asInstanceOf[js.Any])
+    inline def setSingleLabelSubdomains(value: Boolean): Self = StObject.set(x, "singleLabelSubdomains", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSubject(value: always | never): Self = StObject.set(x, "subject", value.asInstanceOf[js.Any])
+    inline def setSubject(value: always | never): Self = StObject.set(x, "subject", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setWildcards(value: Boolean): Self = StObject.set(x, "wildcards", value.asInstanceOf[js.Any])
+    inline def setWildcards(value: Boolean): Self = StObject.set(x, "wildcards", value.asInstanceOf[js.Any])
   }
 }

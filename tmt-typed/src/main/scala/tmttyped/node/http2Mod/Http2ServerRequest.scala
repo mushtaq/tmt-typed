@@ -11,12 +11,11 @@ import tmttyped.node.nodeTlsMod.TLSSocket
 import tmttyped.node.streamMod.ReadableOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("http2", "Http2ServerRequest")
 @js.native
-class Http2ServerRequest protected () extends StObject {
+open class Http2ServerRequest protected () extends StObject {
   def this(
     stream: ServerHttp2Stream,
     headers: IncomingHttpHeaders,

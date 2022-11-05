@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -12,9 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RTCIceComponent extends StObject
 object RTCIceComponent {
   
-  @scala.inline
-  def rtcp: tmttyped.std.stdStrings.rtcp = "rtcp".asInstanceOf[tmttyped.std.stdStrings.rtcp]
+  inline def rtcp: tmttyped.std.stdStrings.rtcp = "rtcp".asInstanceOf[tmttyped.std.stdStrings.rtcp]
   
-  @scala.inline
-  def rtp: tmttyped.std.stdStrings.rtp = "rtp".asInstanceOf[tmttyped.std.stdStrings.rtp]
+  inline def rtp: tmttyped.std.stdStrings.rtp = "rtp".asInstanceOf[tmttyped.std.stdStrings.rtp]
 }

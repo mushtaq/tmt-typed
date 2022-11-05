@@ -2,7 +2,6 @@ package tmttyped.node.cryptoMod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait BasePrivateKeyEncodingOptions[T /* <: KeyFormat */] extends StObject {
@@ -15,28 +14,21 @@ trait BasePrivateKeyEncodingOptions[T /* <: KeyFormat */] extends StObject {
 }
 object BasePrivateKeyEncodingOptions {
   
-  @scala.inline
-  def apply[T /* <: KeyFormat */](format: T): BasePrivateKeyEncodingOptions[T] = {
+  inline def apply[T /* <: KeyFormat */](format: T): BasePrivateKeyEncodingOptions[T] = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasePrivateKeyEncodingOptions[T]]
   }
   
-  @scala.inline
-  implicit class BasePrivateKeyEncodingOptionsMutableBuilder[Self <: BasePrivateKeyEncodingOptions[_], T /* <: KeyFormat */] (val x: Self with BasePrivateKeyEncodingOptions[T]) extends AnyVal {
+  extension [Self <: BasePrivateKeyEncodingOptions[?], T /* <: KeyFormat */](x: Self & BasePrivateKeyEncodingOptions[T]) {
     
-    @scala.inline
-    def setCipher(value: String): Self = StObject.set(x, "cipher", value.asInstanceOf[js.Any])
+    inline def setCipher(value: String): Self = StObject.set(x, "cipher", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCipherUndefined: Self = StObject.set(x, "cipher", js.undefined)
+    inline def setCipherUndefined: Self = StObject.set(x, "cipher", js.undefined)
     
-    @scala.inline
-    def setFormat(value: T): Self = StObject.set(x, "format", value.asInstanceOf[js.Any])
+    inline def setFormat(value: T): Self = StObject.set(x, "format", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPassphrase(value: String): Self = StObject.set(x, "passphrase", value.asInstanceOf[js.Any])
+    inline def setPassphrase(value: String): Self = StObject.set(x, "passphrase", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setPassphraseUndefined: Self = StObject.set(x, "passphrase", js.undefined)
+    inline def setPassphraseUndefined: Self = StObject.set(x, "passphrase", js.undefined)
   }
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait EXTTextureCompressionRgtc extends StObject {
@@ -21,8 +20,7 @@ trait EXTTextureCompressionRgtc extends StObject {
 }
 object EXTTextureCompressionRgtc {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     COMPRESSED_RED_GREEN_RGTC2_EXT: GLenum,
     COMPRESSED_RED_RGTC1_EXT: GLenum,
     COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT: GLenum,
@@ -32,19 +30,14 @@ object EXTTextureCompressionRgtc {
     __obj.asInstanceOf[EXTTextureCompressionRgtc]
   }
   
-  @scala.inline
-  implicit class EXTTextureCompressionRgtcMutableBuilder[Self <: EXTTextureCompressionRgtc] (val x: Self) extends AnyVal {
+  extension [Self <: EXTTextureCompressionRgtc](x: Self) {
     
-    @scala.inline
-    def setCOMPRESSED_RED_GREEN_RGTC2_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RED_GREEN_RGTC2_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RED_GREEN_RGTC2_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RED_GREEN_RGTC2_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_RED_RGTC1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RED_RGTC1_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_RED_RGTC1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_RED_RGTC1_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCOMPRESSED_SIGNED_RED_RGTC1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_SIGNED_RED_RGTC1_EXT", value.asInstanceOf[js.Any])
+    inline def setCOMPRESSED_SIGNED_RED_RGTC1_EXT(value: GLenum): Self = StObject.set(x, "COMPRESSED_SIGNED_RED_RGTC1_EXT", value.asInstanceOf[js.Any])
   }
 }

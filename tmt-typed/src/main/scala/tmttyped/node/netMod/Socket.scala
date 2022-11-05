@@ -9,10 +9,8 @@ import tmttyped.node.nodeStrings.end
 import tmttyped.node.nodeStrings.error
 import tmttyped.node.nodeStrings.lookup
 import tmttyped.node.nodeStrings.ready
-import tmttyped.node.nodeStrings.timeout
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -31,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("net", "Socket")
 @js.native
-class Socket () extends StObject {
+open class Socket () extends StObject {
   def this(options: SocketConstructorOpts) = this()
   
   /**
@@ -43,7 +41,8 @@ class Socket () extends StObject {
     *   5. end
     *   6. error
     *   7. lookup
-    *   8. timeout
+    *   8. ready
+    *   9. timeout
     */
   def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("addListener")
@@ -72,7 +71,7 @@ class Socket () extends StObject {
   @JSName("addListener")
   def addListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  def addListener_timeout(event: tmttyped.node.nodeStrings.timeout, listener: js.Function0[Unit]): this.type = js.native
   
   /**
     * Returns the bound `address`, the address `family` name and `port` of the
@@ -175,7 +174,7 @@ class Socket () extends StObject {
   @JSName("emit")
   def emit_ready(event: ready): Boolean = js.native
   @JSName("emit")
-  def emit_timeout(event: timeout): Boolean = js.native
+  def emit_timeout(event: tmttyped.node.nodeStrings.timeout): Boolean = js.native
   
   /**
     * Half-closes the socket. i.e., it sends a FIN packet. It is possible the
@@ -207,6 +206,12 @@ class Socket () extends StObject {
     * @since v0.9.6
     */
   val localAddress: js.UndefOr[String] = js.native
+  
+  /**
+    * The string representation of the local IP family. `'IPv4'` or `'IPv6'`.
+    * @since v18.8.0
+    */
+  val localFamily: js.UndefOr[String] = js.native
   
   /**
     * The numeric representation of the local port. For example, `80` or `21`.
@@ -241,7 +246,7 @@ class Socket () extends StObject {
   @JSName("on")
   def on_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
-  def on_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  def on_timeout(event: tmttyped.node.nodeStrings.timeout, listener: js.Function0[Unit]): this.type = js.native
   
   def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("once")
@@ -270,7 +275,7 @@ class Socket () extends StObject {
   @JSName("once")
   def once_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
-  def once_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  def once_timeout(event: tmttyped.node.nodeStrings.timeout, listener: js.Function0[Unit]): this.type = js.native
   
   /**
     * Pauses the reading of data. That is, `'data'` events will not be emitted.
@@ -306,7 +311,7 @@ class Socket () extends StObject {
   @JSName("prependListener")
   def prependListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
-  def prependListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  def prependListener_timeout(event: tmttyped.node.nodeStrings.timeout, listener: js.Function0[Unit]): this.type = js.native
   
   def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -335,10 +340,17 @@ class Socket () extends StObject {
   @JSName("prependOnceListener")
   def prependOnceListener_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
+  def prependOnceListener_timeout(event: tmttyped.node.nodeStrings.timeout, listener: js.Function0[Unit]): this.type = js.native
   
   /**
-    * Opposite of `unref()`, calling `ref()` on a previously `unref`ed socket will_not_ let the program exit if it's the only socket left (the default behavior).
+    * This property represents the state of the connection as a string.
+    * @see {https://nodejs.org/api/net.html#socketreadystate}
+    * @since v0.5.0
+    */
+  val readyState: SocketReadyState = js.native
+  
+  /**
+    * Opposite of `unref()`, calling `ref()` on a previously `unref`ed socket will _not_ let the program exit if it's the only socket left (the default behavior).
     * If the socket is `ref`ed calling `ref` again will have no effect.
     * @since v0.9.1
     * @return The socket itself.
@@ -363,6 +375,18 @@ class Socket () extends StObject {
     * @since v0.5.10
     */
   val remotePort: js.UndefOr[Double] = js.native
+  
+  /**
+    * Close the TCP connection by sending an RST packet and destroy the stream.
+    * If this TCP socket is in connecting status, it will send an RST packet
+    * and destroy this TCP socket once it is connected. Otherwise, it will call
+    * `socket.destroy` with an `ERR_SOCKET_CLOSED` Error. If this is not a TCP socket
+    * (for example, a pipe), calling this method will immediately throw
+    * an `ERR_INVALID_HANDLE_TYPE` Error.
+    * @since v18.3.0
+    * @return The socket itself.
+    */
+  def resetAndDestroy(): this.type = js.native
   
   /**
     * Resumes reading after a call to `socket.pause()`.
@@ -443,6 +467,12 @@ class Socket () extends StObject {
     */
   def setTimeout(timeout: Double): this.type = js.native
   def setTimeout(timeout: Double, callback: js.Function0[Unit]): this.type = js.native
+  
+  /**
+    * The socket timeout in milliseconds as set by socket.setTimeout(). It is undefined if a timeout has not been set.
+    * @since v10.7.0
+    */
+  val timeout: js.UndefOr[Double] = js.native
   
   /**
     * Calling `unref()` on a socket will allow the program to exit if this is the only

@@ -4,7 +4,6 @@ import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.streamMod.TransformOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -73,7 +72,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("crypto", "Hash")
 @js.native
-/* private */ class Hash () extends StObject {
+/* private */ open class Hash () extends StObject {
   
   /**
     * Creates a new `Hash` object that contains a deep copy of the internal state

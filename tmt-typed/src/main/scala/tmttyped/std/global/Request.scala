@@ -10,17 +10,18 @@ import org.scalajs.dom.RequestRedirect
 import tmttyped.std.RequestInfo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("Request")
 @js.native
-class Request protected ()
+open class Request protected ()
   extends StObject
      with tmttyped.std.Request {
+  def this(input: org.scalajs.dom.URL) = this()
   /* standard DOM */
   def this(input: RequestInfo) = this()
+  def this(input: org.scalajs.dom.URL, init: RequestInit) = this()
   def this(input: RequestInfo, init: RequestInit) = this()
   
   /* standard DOM */

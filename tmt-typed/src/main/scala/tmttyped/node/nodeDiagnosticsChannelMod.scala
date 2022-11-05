@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeDiagnosticsChannelMod {
@@ -22,7 +21,7 @@ object nodeDiagnosticsChannelMod {
     */
   @JSImport("node:diagnostics_channel", "Channel")
   @js.native
-  class Channel_ protected ()
+  open class Channel_ protected ()
     extends tmttyped.node.diagnosticsChannelMod.Channel_ {
     /* private */ def this(name: String) = this()
   }
@@ -41,8 +40,7 @@ object nodeDiagnosticsChannelMod {
     * @param name The channel name
     * @return The named channel object
     */
-  @scala.inline
-  def channel(name: String): tmttyped.node.diagnosticsChannelMod.Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.diagnosticsChannelMod.Channel_]
+  inline def channel(name: String): tmttyped.node.diagnosticsChannelMod.Channel_ = ^.asInstanceOf[js.Dynamic].applyDynamic("channel")(name.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.diagnosticsChannelMod.Channel_]
   
   /**
     * Check if there are active subscribers to the named channel. This is helpful if
@@ -62,6 +60,5 @@ object nodeDiagnosticsChannelMod {
     * @param name The channel name
     * @return If there are active subscribers
     */
-  @scala.inline
-  def hasSubscribers(name: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def hasSubscribers(name: String): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("hasSubscribers")(name.asInstanceOf[js.Any]).asInstanceOf[Boolean]
 }

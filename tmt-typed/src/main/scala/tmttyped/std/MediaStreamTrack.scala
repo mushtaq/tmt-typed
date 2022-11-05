@@ -5,7 +5,6 @@ import tmttyped.std.stdStrings.mute
 import tmttyped.std.stdStrings.unmute
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** A single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well. */

@@ -11,7 +11,6 @@ import tmttyped.node.processMod.global.NodeJS.Signals
 import tmttyped.node.streamMod.Pipe
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -24,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("child_process", "ChildProcess")
 @js.native
-class ChildProcess () extends StObject {
+open class ChildProcess () extends StObject {
   
   /**
     * events.EventEmitter

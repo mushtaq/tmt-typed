@@ -3,14 +3,13 @@ package tmttyped.rsocketCore
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object wellKnownAuthTypeMod {
   
   @JSImport("rsocket-core/WellKnownAuthType", JSImport.Default)
   @js.native
-  class default protected ()
+  open class default protected ()
     extends StObject
        with WellKnownAuthType {
     def this(str: String, identifier: Double) = this()
@@ -47,8 +46,7 @@ object wellKnownAuthTypeMod {
       *     of the specification's range, or {@link #UNKNOWN_RESERVED_AUTH_TYPE} if the id is one that
       *     is merely reserved but unknown to this implementation.
       */
-    @scala.inline
-    def fromIdentifier(id: Double): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
+    inline def fromIdentifier(id: Double): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromIdentifier")(id.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
     
     /**
       * Find the {@link WellKnownAuthType} for the given {@link String} representation. If the
@@ -59,8 +57,7 @@ object wellKnownAuthTypeMod {
       * @return the matching {@link WellKnownAuthType}, or {@link #UNPARSEABLE_AUTH_TYPE} if none
       *     matches
       */
-    @scala.inline
-    def fromString(authTypeString: String): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(authTypeString.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
+    inline def fromString(authTypeString: String): WellKnownAuthType = ^.asInstanceOf[js.Dynamic].applyDynamic("fromString")(authTypeString.asInstanceOf[js.Any]).asInstanceOf[WellKnownAuthType]
   }
   
   @JSImport("rsocket-core/WellKnownAuthType", "BEARER")
@@ -100,20 +97,16 @@ object wellKnownAuthTypeMod {
   }
   object WellKnownAuthType {
     
-    @scala.inline
-    def apply(identifier: Double, string: String): WellKnownAuthType = {
+    inline def apply(identifier: Double, string: String): WellKnownAuthType = {
       val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
       __obj.asInstanceOf[WellKnownAuthType]
     }
     
-    @scala.inline
-    implicit class WellKnownAuthTypeMutableBuilder[Self <: WellKnownAuthType] (val x: Self) extends AnyVal {
+    extension [Self <: WellKnownAuthType](x: Self) {
       
-      @scala.inline
-      def setIdentifier(value: Double): Self = StObject.set(x, "identifier", value.asInstanceOf[js.Any])
+      inline def setIdentifier(value: Double): Self = StObject.set(x, "identifier", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setString(value: String): Self = StObject.set(x, "string", value.asInstanceOf[js.Any])
+      inline def setString(value: String): Self = StObject.set(x, "string", value.asInstanceOf[js.Any])
     }
   }
 }

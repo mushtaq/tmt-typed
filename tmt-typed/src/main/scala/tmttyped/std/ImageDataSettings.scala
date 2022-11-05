@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait ImageDataSettings extends StObject {
@@ -12,19 +11,15 @@ trait ImageDataSettings extends StObject {
 }
 object ImageDataSettings {
   
-  @scala.inline
-  def apply(): ImageDataSettings = {
+  inline def apply(): ImageDataSettings = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ImageDataSettings]
   }
   
-  @scala.inline
-  implicit class ImageDataSettingsMutableBuilder[Self <: ImageDataSettings] (val x: Self) extends AnyVal {
+  extension [Self <: ImageDataSettings](x: Self) {
     
-    @scala.inline
-    def setColorSpace(value: PredefinedColorSpace): Self = StObject.set(x, "colorSpace", value.asInstanceOf[js.Any])
+    inline def setColorSpace(value: PredefinedColorSpace): Self = StObject.set(x, "colorSpace", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setColorSpaceUndefined: Self = StObject.set(x, "colorSpace", js.undefined)
+    inline def setColorSpaceUndefined: Self = StObject.set(x, "colorSpace", js.undefined)
   }
 }

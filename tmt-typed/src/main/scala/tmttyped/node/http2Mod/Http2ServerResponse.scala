@@ -12,14 +12,14 @@ import tmttyped.node.nodeStrings.finish
 import tmttyped.node.nodeStrings.pipe
 import tmttyped.node.nodeStrings.unpipe
 import tmttyped.node.nodeTlsMod.TLSSocket
+import tmttyped.std.Record
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("http2", "Http2ServerResponse")
 @js.native
-class Http2ServerResponse protected () extends StObject {
+open class Http2ServerResponse protected () extends StObject {
   def this(stream: ServerHttp2Stream) = this()
   
   def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
@@ -379,7 +379,7 @@ class Http2ServerResponse protected () extends StObject {
     * be called multiple times to provide successive parts of the body.
     *
     * In the `http` module, the response body is omitted when the
-    * request is a HEAD request. Similarly, the `204` and `304` responses_must not_ include a message body.
+    * request is a HEAD request. Similarly, the `204` and `304` responses _must not_ include a message body.
     *
     * `chunk` can be a string or a buffer. If `chunk` is a string,
     * the second parameter specifies how to encode it into a byte stream.
@@ -418,6 +418,35 @@ class Http2ServerResponse protected () extends StObject {
     * @since v8.4.0
     */
   def writeContinue(): Unit = js.native
+  
+  /**
+    * Sends a status `103 Early Hints` to the client with a Link header,
+    * indicating that the user agent can preload/preconnect the linked resources.
+    * The `hints` is an object containing the values of headers to be sent with
+    * early hints message.
+    *
+    * Example:
+    *
+    * ```js
+    * const earlyHintsLink = '</styles.css>; rel=preload; as=style';
+    * response.writeEarlyHints({
+    *   'link': earlyHintsLink,
+    * });
+    *
+    * const earlyHintsLinks = [
+    *   '</styles.css>; rel=preload; as=style',
+    *   '</scripts.js>; rel=preload; as=script',
+    * ];
+    * response.writeEarlyHints({
+    *   'link': earlyHintsLinks,
+    *   'x-trace-id': 'id for diagnostics'
+    * });
+    * ```
+    *
+    * @since v18.11.0
+    * @param hints An object containing the values of headers
+    */
+  def writeEarlyHints(hints: Record[String, String | js.Array[String]]): Unit = js.native
   
   /**
     * Sends a response header to the request. The status code is a 3-digit HTTP

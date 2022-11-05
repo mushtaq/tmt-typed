@@ -2,7 +2,6 @@ package tmttyped.node.anon
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Stream extends StObject {
@@ -11,19 +10,15 @@ trait Stream extends StObject {
 }
 object Stream {
   
-  @scala.inline
-  def apply(): Stream = {
+  inline def apply(): Stream = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Stream]
   }
   
-  @scala.inline
-  implicit class StreamMutableBuilder[Self <: Stream] (val x: Self) extends AnyVal {
+  extension [Self <: Stream](x: Self) {
     
-    @scala.inline
-    def setStream(value: Boolean): Self = StObject.set(x, "stream", value.asInstanceOf[js.Any])
+    inline def setStream(value: Boolean): Self = StObject.set(x, "stream", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStreamUndefined: Self = StObject.set(x, "stream", js.undefined)
+    inline def setStreamUndefined: Self = StObject.set(x, "stream", js.undefined)
   }
 }

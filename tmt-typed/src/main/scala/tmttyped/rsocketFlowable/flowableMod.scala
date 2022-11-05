@@ -3,14 +3,13 @@ package tmttyped.rsocketFlowable
 import tmttyped.std.Partial
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object flowableMod {
   
   @JSImport("rsocket-flowable/Flowable", JSImport.Default)
   @js.native
-  class default[T] protected ()
+  open class default[T] protected ()
     extends StObject
        with Flowable[T] {
     def this(source: Source[T]) = this()
@@ -23,14 +22,11 @@ object flowableMod {
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def error(error: js.Error): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("error")(error.asInstanceOf[js.Any]).asInstanceOf[Flowable[scala.Nothing]]
+    inline def error(error: js.Error): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("error")(error.asInstanceOf[js.Any]).asInstanceOf[Flowable[scala.Nothing]]
     
-    @scala.inline
-    def just[U](values: U*): Flowable[U] = (^.asInstanceOf[js.Dynamic].applyDynamic("just")(values.asInstanceOf[Seq[js.Any]] :_*)).asInstanceOf[Flowable[U]]
+    inline def just[U](values: U*): Flowable[U] = ^.asInstanceOf[js.Dynamic].applyDynamic("just")(values.asInstanceOf[Seq[js.Any]]*).asInstanceOf[Flowable[U]]
     
-    @scala.inline
-    def never(): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("never")().asInstanceOf[Flowable[scala.Nothing]]
+    inline def never(): Flowable[scala.Nothing] = ^.asInstanceOf[js.Dynamic].applyDynamic("never")().asInstanceOf[Flowable[scala.Nothing]]
   }
   
   /* import warning: RemoveDifficultInheritance.summarizeChanges 

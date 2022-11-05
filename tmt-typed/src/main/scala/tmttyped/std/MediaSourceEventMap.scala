@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MediaSourceEventMap extends StObject {
@@ -18,8 +17,7 @@ trait MediaSourceEventMap extends StObject {
 }
 object MediaSourceEventMap {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     sourceclose: org.scalajs.dom.Event,
     sourceended: org.scalajs.dom.Event,
     sourceopen: org.scalajs.dom.Event
@@ -28,16 +26,12 @@ object MediaSourceEventMap {
     __obj.asInstanceOf[MediaSourceEventMap]
   }
   
-  @scala.inline
-  implicit class MediaSourceEventMapMutableBuilder[Self <: MediaSourceEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: MediaSourceEventMap](x: Self) {
     
-    @scala.inline
-    def setSourceclose(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceclose", value.asInstanceOf[js.Any])
+    inline def setSourceclose(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceclose", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSourceended(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceended", value.asInstanceOf[js.Any])
+    inline def setSourceended(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceended", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSourceopen(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceopen", value.asInstanceOf[js.Any])
+    inline def setSourceopen(value: org.scalajs.dom.Event): Self = StObject.set(x, "sourceopen", value.asInstanceOf[js.Any])
   }
 }

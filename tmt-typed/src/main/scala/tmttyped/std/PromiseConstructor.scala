@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -39,7 +38,7 @@ Instantiable1[
   def all[T /* <: js.Array[Any] */](values: T): js.Promise[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {-readonly [ P in keyof T ]: std.Awaited<T[P]>}
-    */ tmttyped.std.stdStrings.PromiseConstructor with TopLevel[T]
+    */ tmttyped.std.stdStrings.PromiseConstructor & TopLevel[T]
   ] = js.native
   /**
     * Creates a Promise that is resolved with an array of results when all of the provided Promises
@@ -60,7 +59,7 @@ Instantiable1[
   def allSettled[T /* <: js.Array[Any] */](values: T): js.Promise[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {-readonly [ P in keyof T ]: std.PromiseSettledResult<std.Awaited<T[P]>>}
-    */ tmttyped.std.stdStrings.PromiseConstructor with TopLevel[T]
+    */ tmttyped.std.stdStrings.PromiseConstructor & TopLevel[T]
   ] = js.native
   /**
     * Creates a Promise that is resolved with an array of results when all

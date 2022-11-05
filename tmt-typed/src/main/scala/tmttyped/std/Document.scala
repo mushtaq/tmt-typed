@@ -1,5 +1,7 @@
 package tmttyped.std
 
+import tmttyped.std.stdStrings.DOMContentLoaded
+import tmttyped.std.stdStrings.Events
 import tmttyped.std.stdStrings.MouseEvents
 import tmttyped.std.stdStrings.MutationEvents
 import tmttyped.std.stdStrings.UIEvents
@@ -7,24 +9,31 @@ import tmttyped.std.stdStrings.`object`
 import tmttyped.std.stdStrings.`var`
 import tmttyped.std.stdStrings.a
 import tmttyped.std.stdStrings.abbr
+import tmttyped.std.stdStrings.acronym
 import tmttyped.std.stdStrings.address
 import tmttyped.std.stdStrings.animate
 import tmttyped.std.stdStrings.animateMotion
 import tmttyped.std.stdStrings.animateTransform
+import tmttyped.std.stdStrings.applet
 import tmttyped.std.stdStrings.area
 import tmttyped.std.stdStrings.article
 import tmttyped.std.stdStrings.aside
 import tmttyped.std.stdStrings.audio
 import tmttyped.std.stdStrings.b
 import tmttyped.std.stdStrings.base
+import tmttyped.std.stdStrings.basefont
 import tmttyped.std.stdStrings.bdi
 import tmttyped.std.stdStrings.bdo
+import tmttyped.std.stdStrings.bgsound
+import tmttyped.std.stdStrings.big
+import tmttyped.std.stdStrings.blink
 import tmttyped.std.stdStrings.blockquote
 import tmttyped.std.stdStrings.body
 import tmttyped.std.stdStrings.br
 import tmttyped.std.stdStrings.button
 import tmttyped.std.stdStrings.canvas
 import tmttyped.std.stdStrings.caption
+import tmttyped.std.stdStrings.center
 import tmttyped.std.stdStrings.circle
 import tmttyped.std.stdStrings.cite
 import tmttyped.std.stdStrings.clipPath
@@ -103,7 +112,9 @@ import tmttyped.std.stdStrings.image
 import tmttyped.std.stdStrings.img
 import tmttyped.std.stdStrings.input
 import tmttyped.std.stdStrings.ins
+import tmttyped.std.stdStrings.isindex
 import tmttyped.std.stdStrings.kbd
+import tmttyped.std.stdStrings.keygen
 import tmttyped.std.stdStrings.label
 import tmttyped.std.stdStrings.legend
 import tmttyped.std.stdStrings.li
@@ -118,11 +129,17 @@ import tmttyped.std.stdStrings.marker
 import tmttyped.std.stdStrings.marquee
 import tmttyped.std.stdStrings.mask
 import tmttyped.std.stdStrings.menu
+import tmttyped.std.stdStrings.menuitem
 import tmttyped.std.stdStrings.meta
 import tmttyped.std.stdStrings.metadata
 import tmttyped.std.stdStrings.meter
 import tmttyped.std.stdStrings.mpath
+import tmttyped.std.stdStrings.multicol
 import tmttyped.std.stdStrings.nav
+import tmttyped.std.stdStrings.nextid
+import tmttyped.std.stdStrings.nobr
+import tmttyped.std.stdStrings.noembed
+import tmttyped.std.stdStrings.noframes
 import tmttyped.std.stdStrings.noscript
 import tmttyped.std.stdStrings.ol
 import tmttyped.std.stdStrings.optgroup
@@ -133,6 +150,7 @@ import tmttyped.std.stdStrings.param
 import tmttyped.std.stdStrings.path
 import tmttyped.std.stdStrings.pattern
 import tmttyped.std.stdStrings.picture
+import tmttyped.std.stdStrings.plaintext
 import tmttyped.std.stdStrings.pointerlockchange
 import tmttyped.std.stdStrings.pointerlockerror
 import tmttyped.std.stdStrings.polygon
@@ -141,10 +159,12 @@ import tmttyped.std.stdStrings.pre
 import tmttyped.std.stdStrings.progress
 import tmttyped.std.stdStrings.q
 import tmttyped.std.stdStrings.radialGradient
+import tmttyped.std.stdStrings.rb
 import tmttyped.std.stdStrings.readystatechange
 import tmttyped.std.stdStrings.rect
 import tmttyped.std.stdStrings.rp
 import tmttyped.std.stdStrings.rt
+import tmttyped.std.stdStrings.rtc
 import tmttyped.std.stdStrings.ruby
 import tmttyped.std.stdStrings.s
 import tmttyped.std.stdStrings.samp
@@ -155,8 +175,10 @@ import tmttyped.std.stdStrings.set
 import tmttyped.std.stdStrings.slot
 import tmttyped.std.stdStrings.small
 import tmttyped.std.stdStrings.source
+import tmttyped.std.stdStrings.spacer
 import tmttyped.std.stdStrings.span
 import tmttyped.std.stdStrings.stop
+import tmttyped.std.stdStrings.strike
 import tmttyped.std.stdStrings.strong
 import tmttyped.std.stdStrings.style
 import tmttyped.std.stdStrings.sub
@@ -180,6 +202,7 @@ import tmttyped.std.stdStrings.title
 import tmttyped.std.stdStrings.tr
 import tmttyped.std.stdStrings.track
 import tmttyped.std.stdStrings.tspan
+import tmttyped.std.stdStrings.tt
 import tmttyped.std.stdStrings.u
 import tmttyped.std.stdStrings.ul
 import tmttyped.std.stdStrings.use
@@ -190,7 +213,6 @@ import tmttyped.std.stdStrings.wbr
 import tmttyped.std.stdStrings.xmp
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. */
@@ -221,6 +243,23 @@ trait Document
     options: AddEventListenerOptions
   ): Unit = js.native
   /* standard DOM */
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: AddEventListenerOptions
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
@@ -561,10 +600,20 @@ trait Document
   def createElement_abbr(tagName: abbr): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_abbr(tagName: abbr, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  /** @deprecated */
+  /* standard DOM */
+  @JSName("createElement")
+  def createElement_acronym(tagName: acronym): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_acronym(tagName: acronym, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_address(tagName: address): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_address(tagName: address, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_applet(tagName: applet): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_applet(tagName: applet, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
   @JSName("createElement")
   def createElement_area(tagName: area): org.scalajs.dom.HTMLAreaElement = js.native
   @JSName("createElement")
@@ -590,6 +639,10 @@ trait Document
   @JSName("createElement")
   def createElement_base(tagName: base, options: ElementCreationOptions): org.scalajs.dom.HTMLBaseElement = js.native
   @JSName("createElement")
+  def createElement_basefont(tagName: basefont): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_basefont(tagName: basefont, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
   def createElement_bdi(tagName: bdi): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_bdi(tagName: bdi, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
@@ -597,6 +650,18 @@ trait Document
   def createElement_bdo(tagName: bdo): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_bdo(tagName: bdo, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_bgsound(tagName: bgsound): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_bgsound(tagName: bgsound, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_big(tagName: big): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_big(tagName: big, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_blink(tagName: blink): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_blink(tagName: blink, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
   @JSName("createElement")
   def createElement_blockquote(tagName: blockquote): org.scalajs.dom.HTMLQuoteElement = js.native
   @JSName("createElement")
@@ -621,6 +686,10 @@ trait Document
   def createElement_caption(tagName: caption): org.scalajs.dom.HTMLTableCaptionElement = js.native
   @JSName("createElement")
   def createElement_caption(tagName: caption, options: ElementCreationOptions): org.scalajs.dom.HTMLTableCaptionElement = js.native
+  @JSName("createElement")
+  def createElement_center(tagName: center): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_center(tagName: center, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_cite(tagName: cite): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
@@ -786,9 +855,17 @@ trait Document
   @JSName("createElement")
   def createElement_ins(tagName: ins, options: ElementCreationOptions): org.scalajs.dom.HTMLModElement = js.native
   @JSName("createElement")
+  def createElement_isindex(tagName: isindex): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_isindex(tagName: isindex, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
   def createElement_kbd(tagName: kbd): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_kbd(tagName: kbd, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_keygen(tagName: keygen): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_keygen(tagName: keygen, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
   @JSName("createElement")
   def createElement_label(tagName: label): org.scalajs.dom.HTMLLabelElement = js.native
   @JSName("createElement")
@@ -805,8 +882,6 @@ trait Document
   def createElement_link(tagName: link): org.scalajs.dom.HTMLLinkElement = js.native
   @JSName("createElement")
   def createElement_link(tagName: link, options: ElementCreationOptions): org.scalajs.dom.HTMLLinkElement = js.native
-  /** @deprecated */
-  /* standard DOM */
   @JSName("createElement")
   def createElement_listing(tagName: listing): org.scalajs.dom.HTMLPreElement = js.native
   @JSName("createElement")
@@ -832,6 +907,10 @@ trait Document
   @JSName("createElement")
   def createElement_menu(tagName: menu, options: ElementCreationOptions): org.scalajs.dom.HTMLMenuElement = js.native
   @JSName("createElement")
+  def createElement_menuitem(tagName: menuitem): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_menuitem(tagName: menuitem, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
   def createElement_meta(tagName: meta): org.scalajs.dom.HTMLMetaElement = js.native
   @JSName("createElement")
   def createElement_meta(tagName: meta, options: ElementCreationOptions): org.scalajs.dom.HTMLMetaElement = js.native
@@ -840,9 +919,29 @@ trait Document
   @JSName("createElement")
   def createElement_meter(tagName: meter, options: ElementCreationOptions): HTMLMeterElement = js.native
   @JSName("createElement")
+  def createElement_multicol(tagName: multicol): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_multicol(tagName: multicol, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
   def createElement_nav(tagName: nav): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_nav(tagName: nav, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_nextid(tagName: nextid): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_nextid(tagName: nextid, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_nobr(tagName: nobr): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_nobr(tagName: nobr, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_noembed(tagName: noembed): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_noembed(tagName: noembed, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_noframes(tagName: noframes): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_noframes(tagName: noframes, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_noscript(tagName: noscript): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
@@ -880,6 +979,10 @@ trait Document
   @JSName("createElement")
   def createElement_picture(tagName: picture, options: ElementCreationOptions): HTMLPictureElement = js.native
   @JSName("createElement")
+  def createElement_plaintext(tagName: plaintext): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_plaintext(tagName: plaintext, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
   def createElement_pre(tagName: pre): org.scalajs.dom.HTMLPreElement = js.native
   @JSName("createElement")
   def createElement_pre(tagName: pre, options: ElementCreationOptions): org.scalajs.dom.HTMLPreElement = js.native
@@ -892,6 +995,10 @@ trait Document
   @JSName("createElement")
   def createElement_q(tagName: q, options: ElementCreationOptions): org.scalajs.dom.HTMLQuoteElement = js.native
   @JSName("createElement")
+  def createElement_rb(tagName: rb): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_rb(tagName: rb, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
   def createElement_rp(tagName: rp): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_rp(tagName: rp, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
@@ -899,6 +1006,10 @@ trait Document
   def createElement_rt(tagName: rt): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_rt(tagName: rt, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_rtc(tagName: rtc): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_rtc(tagName: rtc, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_ruby(tagName: ruby): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
@@ -936,9 +1047,17 @@ trait Document
   @JSName("createElement")
   def createElement_source(tagName: source, options: ElementCreationOptions): org.scalajs.dom.HTMLSourceElement = js.native
   @JSName("createElement")
+  def createElement_spacer(tagName: spacer): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
+  def createElement_spacer(tagName: spacer, options: ElementCreationOptions): org.scalajs.dom.HTMLUnknownElement = js.native
+  @JSName("createElement")
   def createElement_span(tagName: span): org.scalajs.dom.HTMLSpanElement = js.native
   @JSName("createElement")
   def createElement_span(tagName: span, options: ElementCreationOptions): org.scalajs.dom.HTMLSpanElement = js.native
+  @JSName("createElement")
+  def createElement_strike(tagName: strike): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_strike(tagName: strike, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_strong(tagName: strong): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
@@ -1008,6 +1127,10 @@ trait Document
   @JSName("createElement")
   def createElement_track(tagName: track, options: ElementCreationOptions): org.scalajs.dom.HTMLTrackElement = js.native
   @JSName("createElement")
+  def createElement_tt(tagName: tt): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
+  def createElement_tt(tagName: tt, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
+  @JSName("createElement")
   def createElement_u(tagName: u): org.scalajs.dom.HTMLElement = js.native
   @JSName("createElement")
   def createElement_u(tagName: u, options: ElementCreationOptions): org.scalajs.dom.HTMLElement = js.native
@@ -1073,6 +1196,12 @@ trait Document
   /* standard DOM */
   @JSName("createEvent")
   def createEvent_ErrorEvent(eventInterface: tmttyped.std.stdStrings.ErrorEvent): org.scalajs.dom.ErrorEvent = js.native
+  /* standard DOM */
+  @JSName("createEvent")
+  def createEvent_Event(eventInterface: tmttyped.std.stdStrings.Event): org.scalajs.dom.Event = js.native
+  /* standard DOM */
+  @JSName("createEvent")
+  def createEvent_Events(eventInterface: Events): org.scalajs.dom.Event = js.native
   /* standard DOM */
   @JSName("createEvent")
   def createEvent_FocusEvent(eventInterface: tmttyped.std.stdStrings.FocusEvent): org.scalajs.dom.FocusEvent = js.native
@@ -1157,6 +1286,9 @@ trait Document
   /* standard DOM */
   @JSName("createEvent")
   def createEvent_RTCDataChannelEvent(eventInterface: tmttyped.std.stdStrings.RTCDataChannelEvent): org.scalajs.dom.RTCDataChannelEvent = js.native
+  /* standard DOM */
+  @JSName("createEvent")
+  def createEvent_RTCErrorEvent(eventInterface: tmttyped.std.stdStrings.RTCErrorEvent): RTCErrorEvent = js.native
   /* standard DOM */
   @JSName("createEvent")
   def createEvent_RTCPeerConnectionIceErrorEvent(eventInterface: tmttyped.std.stdStrings.RTCPeerConnectionIceErrorEvent): RTCPeerConnectionIceErrorEvent = js.native
@@ -1252,7 +1384,7 @@ trait Document
   
   /** Returns the Window object of the active document. */
   /* standard DOM */
-  val defaultView: (org.scalajs.dom.Window with (/* globalThis */ Any)) | Null = js.native
+  val defaultView: (org.scalajs.dom.Window & (/* globalThis */ Any)) | Null = js.native
   
   /** Sets or gets a value that indicates whether the document can be edited. */
   /* standard DOM */
@@ -1333,7 +1465,7 @@ trait Document
     * @param elementName Gets a collection of objects based on the value of the NAME or ID attribute.
     */
   /* standard DOM */
-  def getElementsByName(elementName: java.lang.String): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement with org.scalajs.dom.Node] = js.native
+  def getElementsByName(elementName: java.lang.String): org.scalajs.dom.NodeList[org.scalajs.dom.HTMLElement & org.scalajs.dom.Node] = js.native
   
   /* standard DOM */
   def getElementsByTagName(qualifiedName: java.lang.String): HTMLCollectionOf[org.scalajs.dom.Element] = js.native
@@ -1433,8 +1565,6 @@ trait Document
   @JSName("getElementsByTagName")
   def getElementsByTagName_dialog(qualifiedName: dialog): HTMLCollectionOf[HTMLDialogElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_dir(qualifiedName: dir): HTMLCollectionOf[HTMLDirectoryElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_div(qualifiedName: div): HTMLCollectionOf[org.scalajs.dom.HTMLDivElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_dl(qualifiedName: dl): HTMLCollectionOf[org.scalajs.dom.HTMLDListElement] = js.native
@@ -1505,17 +1635,11 @@ trait Document
   @JSName("getElementsByTagName")
   def getElementsByTagName_filter(qualifiedName: filter): HTMLCollectionOf[org.scalajs.dom.SVGFilterElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_font(qualifiedName: font): HTMLCollectionOf[HTMLFontElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_footer(qualifiedName: footer): HTMLCollectionOf[org.scalajs.dom.HTMLElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_foreignObject(qualifiedName: foreignObject): HTMLCollectionOf[SVGForeignObjectElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_form(qualifiedName: form): HTMLCollectionOf[org.scalajs.dom.HTMLFormElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_frame(qualifiedName: frame): HTMLCollectionOf[HTMLFrameElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_frameset(qualifiedName: frameset): HTMLCollectionOf[HTMLFrameSetElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_g(qualifiedName: g): HTMLCollectionOf[org.scalajs.dom.SVGGElement] = js.native
   @JSName("getElementsByTagName")
@@ -1575,8 +1699,6 @@ trait Document
   @JSName("getElementsByTagName")
   def getElementsByTagName_marker(qualifiedName: marker): HTMLCollectionOf[org.scalajs.dom.SVGMarkerElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_marquee(qualifiedName: marquee): HTMLCollectionOf[HTMLMarqueeElement] = js.native
-  @JSName("getElementsByTagName")
   def getElementsByTagName_mask(qualifiedName: mask): HTMLCollectionOf[org.scalajs.dom.SVGMaskElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_menu(qualifiedName: menu): HTMLCollectionOf[org.scalajs.dom.HTMLMenuElement] = js.native
@@ -1604,8 +1726,6 @@ trait Document
   def getElementsByTagName_output(qualifiedName: output): HTMLCollectionOf[HTMLOutputElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_p(qualifiedName: p): HTMLCollectionOf[org.scalajs.dom.HTMLParagraphElement] = js.native
-  @JSName("getElementsByTagName")
-  def getElementsByTagName_param(qualifiedName: param): HTMLCollectionOf[org.scalajs.dom.HTMLParamElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_path(qualifiedName: path): HTMLCollectionOf[org.scalajs.dom.SVGPathElement] = js.native
   @JSName("getElementsByTagName")
@@ -1890,6 +2010,23 @@ trait Document
   override def removeEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
   /* standard DOM */
   @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: org.scalajs.dom.EventListenerOptions
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_DOMContentLoaded(
+    `type`: DOMContentLoaded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.Event, Any]
@@ -2014,7 +2151,7 @@ trait Document
   var title: java.lang.String = js.native
   
   /* standard DOM */
-  val visibilityState: org.scalajs.dom.VisibilityState = js.native
+  val visibilityState: DocumentVisibilityState = js.native
   
   /**
     * Sets or gets the color of the links that the user has visited.

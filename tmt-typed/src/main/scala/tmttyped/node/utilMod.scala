@@ -1,16 +1,26 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ArrayBufferView
-import tmttyped.node.NodeJS.Dict
-import tmttyped.node.NodeJS.ErrnoException
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.StringDictionary
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.AbortController
+import org.scalajs.dom.AbortSignal
 import tmttyped.node.anon.Fatal
+import tmttyped.node.anon.IndexKind
+import tmttyped.node.anon.Kind
+import tmttyped.node.anon.Name
+import tmttyped.node.anon.Positionals
 import tmttyped.node.anon.Stream
+import tmttyped.node.anon.Tokens
+import tmttyped.node.anon.Values
+import tmttyped.node.nodeStrings.boolean
 import tmttyped.node.nodeStrings.get
 import tmttyped.node.nodeStrings.set
+import tmttyped.node.nodeStrings.string
 import tmttyped.std.Map
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object utilMod {
@@ -21,7 +31,7 @@ object utilMod {
   
   @JSImport("util", "TextDecoder")
   @js.native
-  class TextDecoder () extends StObject {
+  open class TextDecoder () extends StObject {
     def this(encoding: String) = this()
     def this(encoding: String, options: Fatal) = this()
     def this(encoding: Unit, options: Fatal) = this()
@@ -36,11 +46,11 @@ object utilMod {
       */
     def decode(): String = js.native
     def decode(input: js.typedarray.ArrayBuffer): String = js.native
+    def decode(input: js.typedarray.ArrayBufferView): String = js.native
+    def decode(input: js.typedarray.ArrayBufferView, options: Stream): String = js.native
     def decode(input: js.typedarray.ArrayBuffer, options: Stream): String = js.native
     def decode(input: Null, options: Stream): String = js.native
     def decode(input: Unit, options: Stream): String = js.native
-    def decode(input: ArrayBufferView): String = js.native
-    def decode(input: ArrayBufferView, options: Stream): String = js.native
     
     /**
       * The encoding supported by the `TextDecoder` instance.
@@ -62,7 +72,7 @@ object utilMod {
   
   @JSImport("util", "TextEncoder")
   @js.native
-  class TextEncoder () extends StObject {
+  open class TextEncoder () extends StObject {
     
     /**
       * UTF-8 encodes the `input` string and returns a `Uint8Array` containing the
@@ -93,231 +103,329 @@ object utilMod {
     val encoding: String = js.native
   }
   
-  @scala.inline
-  def callbackify(fn: js.Function0[js.Promise[Unit]]): js.Function1[/* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[/* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit]]
-  @scala.inline
-  def callbackify[T1](fn: js.Function1[/* arg1 */ T1, js.Promise[Unit]]): js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ ErrnoException, Unit], Unit]]
-  @scala.inline
-  def callbackify[T1, T2](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]]): js.Function3[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+  inline def callbackify(fn: js.Function0[js.Promise[Unit]]): js.Function1[
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
     Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
     Unit
   ]]
-  @scala.inline
-  def callbackify[T1, T2, T3](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]]): js.Function4[
+  inline def callbackify[T1](fn: js.Function1[/* arg1 */ T1, js.Promise[Unit]]): js.Function2[
     /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ]]
-  @scala.inline
-  def callbackify[T1, T2, T3, T4](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]]): js.Function5[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ]]
-  @scala.inline
-  def callbackify[T1, T2, T3, T4, T5](
-    fn: js.Function5[
-      /* arg1 */ T1, 
-      /* arg2 */ T2, 
-      /* arg3 */ T3, 
-      /* arg4 */ T4, 
-      /* arg5 */ T5, 
-      js.Promise[Unit]
-    ]
-  ): js.Function6[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ]]
-  @scala.inline
-  def callbackify[T1, T2, T3, T4, T5, T6](
-    fn: js.Function6[
-      /* arg1 */ T1, 
-      /* arg2 */ T2, 
-      /* arg3 */ T3, 
-      /* arg4 */ T4, 
-      /* arg5 */ T5, 
-      /* arg6 */ T6, 
-      js.Promise[Unit]
-    ]
-  ): js.Function7[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* arg6 */ T6, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* arg6 */ T6, 
-    /* callback */ js.Function1[/* err */ ErrnoException, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1T2T3T4T5T6TResult[T1, T2, T3, T4, T5, T6, TResult](
-    fn: js.Function6[
-      /* arg1 */ T1, 
-      /* arg2 */ T2, 
-      /* arg3 */ T3, 
-      /* arg4 */ T4, 
-      /* arg5 */ T5, 
-      /* arg6 */ T6, 
-      js.Promise[TResult]
-    ]
-  ): js.Function7[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* arg6 */ T6, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* arg6 */ T6, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1T2T3T4T5TResult[T1, T2, T3, T4, T5, TResult](
-    fn: js.Function5[
-      /* arg1 */ T1, 
-      /* arg2 */ T2, 
-      /* arg3 */ T3, 
-      /* arg4 */ T4, 
-      /* arg5 */ T5, 
-      js.Promise[TResult]
-    ]
-  ): js.Function6[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* arg5 */ T5, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1T2T3T4TResult[T1, T2, T3, T4, TResult](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[TResult]]): js.Function5[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* arg4 */ T4, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1T2T3TResult[T1, T2, T3, TResult](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[TResult]]): js.Function4[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* arg3 */ T3, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1T2TResult[T1, T2, TResult](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[TResult]]): js.Function3[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
-    /* arg1 */ T1, 
-    /* arg2 */ T2, 
-    /* callback */ js.Function2[/* err */ ErrnoException | Null, /* result */ TResult, Unit], 
-    Unit
-  ]]
-  
-  @scala.inline
-  def callbackify_T1TResult[T1, TResult](fn: js.Function1[/* arg1 */ T1, js.Promise[TResult]]): js.Function2[
-    /* arg1 */ T1, 
-    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
     Unit
   ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[
     /* arg1 */ T1, 
-    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ]]
+  inline def callbackify[T1, T2](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]]): js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ]]
+  inline def callbackify[T1, T2, T3](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]]): js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ]]
+  inline def callbackify[T1, T2, T3, T4](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]]): js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ]]
+  inline def callbackify[T1, T2, T3, T4, T5](
+    fn: js.Function5[
+      /* arg1 */ T1, 
+      /* arg2 */ T2, 
+      /* arg3 */ T3, 
+      /* arg4 */ T4, 
+      /* arg5 */ T5, 
+      js.Promise[Unit]
+    ]
+  ): js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ]]
+  inline def callbackify[T1, T2, T3, T4, T5, T6](
+    fn: js.Function6[
+      /* arg1 */ T1, 
+      /* arg2 */ T2, 
+      /* arg3 */ T3, 
+      /* arg4 */ T4, 
+      /* arg5 */ T5, 
+      /* arg6 */ T6, 
+      js.Promise[Unit]
+    ]
+  ): js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function1[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      Unit
+    ], 
     Unit
   ]]
   
-  @scala.inline
-  def callbackify_TResult[TResult](fn: js.Function0[js.Promise[TResult]]): js.Function1[
-    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+  inline def callbackify_T1T2T3T4T5T6TResult[T1, T2, T3, T4, T5, T6, TResult](
+    fn: js.Function6[
+      /* arg1 */ T1, 
+      /* arg2 */ T2, 
+      /* arg3 */ T3, 
+      /* arg4 */ T4, 
+      /* arg5 */ T5, 
+      /* arg6 */ T6, 
+      js.Promise[TResult]
+    ]
+  ): js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function7[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* arg6 */ T6, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_T1T2T3T4T5TResult[T1, T2, T3, T4, T5, TResult](
+    fn: js.Function5[
+      /* arg1 */ T1, 
+      /* arg2 */ T2, 
+      /* arg3 */ T3, 
+      /* arg4 */ T4, 
+      /* arg5 */ T5, 
+      js.Promise[TResult]
+    ]
+  ): js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function6[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* arg5 */ T5, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_T1T2T3T4TResult[T1, T2, T3, T4, TResult](fn: js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[TResult]]): js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function5[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* arg4 */ T4, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_T1T2T3TResult[T1, T2, T3, TResult](fn: js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[TResult]]): js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* arg3 */ T3, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_T1T2TResult[T1, T2, TResult](fn: js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[TResult]]): js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[
+    /* arg1 */ T1, 
+    /* arg2 */ T2, 
+    /* callback */ js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_T1TResult[T1, TResult](fn: js.Function1[/* arg1 */ T1, js.Promise[TResult]]): js.Function2[
+    /* arg1 */ T1, 
+    /* callback */ js.Function2[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[
+    /* arg1 */ T1, 
+    /* callback */ js.Function2[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      /* result */ TResult, 
+      Unit
+    ], 
+    Unit
+  ]]
+  
+  inline def callbackify_TResult[TResult](fn: js.Function0[js.Promise[TResult]]): js.Function1[
+    /* callback */ js.Function2[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      /* result */ TResult, 
+      Unit
+    ], 
     Unit
   ] = ^.asInstanceOf[js.Dynamic].applyDynamic("callbackify")(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[
-    /* callback */ js.Function2[/* err */ ErrnoException, /* result */ TResult, Unit], 
+    /* callback */ js.Function2[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ /* err */ Any, 
+      /* result */ TResult, 
+      Unit
+    ], 
     Unit
   ]]
   
@@ -329,59 +437,64 @@ object utilMod {
     DebugLogger
   ] = js.native
   
-  @scala.inline
-  def debuglog(section: String): DebugLogger = ^.asInstanceOf[js.Dynamic].applyDynamic("debuglog")(section.asInstanceOf[js.Any]).asInstanceOf[DebugLogger]
-  @scala.inline
-  def debuglog(section: String, callback: js.Function1[/* fn */ DebugLoggerFunction, Unit]): DebugLogger = (^.asInstanceOf[js.Dynamic].applyDynamic("debuglog")(section.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[DebugLogger]
+  inline def debuglog(section: String): DebugLogger = ^.asInstanceOf[js.Dynamic].applyDynamic("debuglog")(section.asInstanceOf[js.Any]).asInstanceOf[DebugLogger]
+  inline def debuglog(section: String, callback: js.Function1[/* fn */ DebugLoggerFunction, Unit]): DebugLogger = (^.asInstanceOf[js.Dynamic].applyDynamic("debuglog")(section.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[DebugLogger]
   
-  @scala.inline
-  def deprecate[T /* <: js.Function */](fn: T, msg: String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], msg.asInstanceOf[js.Any])).asInstanceOf[T]
-  @scala.inline
-  def deprecate[T /* <: js.Function */](fn: T, msg: String, code: String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], msg.asInstanceOf[js.Any], code.asInstanceOf[js.Any])).asInstanceOf[T]
+  inline def deprecate[T /* <: js.Function */](fn: T, msg: String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], msg.asInstanceOf[js.Any])).asInstanceOf[T]
+  inline def deprecate[T /* <: js.Function */](fn: T, msg: String, code: String): T = (^.asInstanceOf[js.Dynamic].applyDynamic("deprecate")(fn.asInstanceOf[js.Any], msg.asInstanceOf[js.Any], code.asInstanceOf[js.Any])).asInstanceOf[T]
   
-  @scala.inline
-  def format(format: Any, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(List(format.asInstanceOf[js.Any]).`++`(param.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[String]
-  @scala.inline
-  def format(format: Unit, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("format")(List(format.asInstanceOf[js.Any]).`++`(param.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[String]
+  inline def format(format: Any, param: Any*): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(List(format.asInstanceOf[js.Any]).`++`(param.asInstanceOf[Seq[js.Any]])*).asInstanceOf[String]
+  inline def format(format: Unit, param: Any*): String = ^.asInstanceOf[js.Dynamic].applyDynamic("format")(List(format.asInstanceOf[js.Any]).`++`(param.asInstanceOf[Seq[js.Any]])*).asInstanceOf[String]
   
-  @scala.inline
-  def formatWithOptions(inspectOptions: InspectOptions, format: Any, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")((List(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).`++`(param.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[String]
-  @scala.inline
-  def formatWithOptions(inspectOptions: InspectOptions, format: Unit, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")((List(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).`++`(param.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[String]
+  inline def formatWithOptions(inspectOptions: InspectOptions, format: Any, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")((List(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).`++`(param.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[String]
+  inline def formatWithOptions(inspectOptions: InspectOptions, format: Unit, param: Any*): String = (^.asInstanceOf[js.Dynamic].applyDynamic("formatWithOptions")((List(inspectOptions.asInstanceOf[js.Any], format.asInstanceOf[js.Any])).`++`(param.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[String]
   
-  @scala.inline
-  def getSystemErrorMap(): Map[Double, js.Tuple2[String, String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("getSystemErrorMap")().asInstanceOf[Map[Double, js.Tuple2[String, String]]]
+  inline def getSystemErrorMap(): Map[Double, js.Tuple2[String, String]] = ^.asInstanceOf[js.Dynamic].applyDynamic("getSystemErrorMap")().asInstanceOf[Map[Double, js.Tuple2[String, String]]]
   
-  @scala.inline
-  def getSystemErrorName(err: Double): String = ^.asInstanceOf[js.Dynamic].applyDynamic("getSystemErrorName")(err.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def getSystemErrorName(err: Double): String = ^.asInstanceOf[js.Dynamic].applyDynamic("getSystemErrorName")(err.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @scala.inline
-  def inherits(constructor: Any, superConstructor: Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inherits")(constructor.asInstanceOf[js.Any], superConstructor.asInstanceOf[js.Any])).asInstanceOf[Unit]
+  object global {
+    
+    /**
+      * `TextDecoder` class is a global reference for `require('util').TextDecoder`
+      * https://nodejs.org/api/globals.html#textdecoder
+      * @since v11.0.0
+      */
+    @JSGlobal("TextDecoder")
+    @js.native
+    def TextDecoder: Instantiable2[
+        /* encoding */ js.UndefOr[String], 
+        /* options */ js.UndefOr[Fatal], 
+        tmttyped.node.utilMod.TextDecoder
+      ] = js.native
+    inline def TextDecoder_=(x: Instantiable2[/* encoding */ js.UndefOr[String], /* options */ js.UndefOr[Fatal], TextDecoder]): Unit = js.Dynamic.global.updateDynamic("TextDecoder")(x.asInstanceOf[js.Any])
+    
+    /**
+      * `TextEncoder` class is a global reference for `require('util').TextEncoder`
+      * https://nodejs.org/api/globals.html#textencoder
+      * @since v11.0.0
+      */
+    @JSGlobal("TextEncoder")
+    @js.native
+    def TextEncoder: Instantiable0[tmttyped.node.utilMod.TextEncoder] = js.native
+    inline def TextEncoder_=(x: Instantiable0[TextEncoder]): Unit = js.Dynamic.global.updateDynamic("TextEncoder")(x.asInstanceOf[js.Any])
+  }
+  
+  inline def inherits(constructor: Any, superConstructor: Any): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("inherits")(constructor.asInstanceOf[js.Any], superConstructor.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   object inspect {
     
-    @scala.inline
-    def apply(`object`: Any): String = ^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any]).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, options: InspectOptions): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Boolean, depth: Double): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Boolean, depth: Double, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Boolean, depth: Null, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Boolean, depth: Unit, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Unit, depth: Double): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Unit, depth: Double, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Unit, depth: Null, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
-    @scala.inline
-    def apply(`object`: Any, showHidden: Unit, depth: Unit, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any): String = ^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def apply(`object`: Any, options: InspectOptions): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Boolean, depth: Double): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Boolean, depth: Double, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Boolean, depth: Null, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Boolean, depth: Unit, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Unit, depth: Double): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Unit, depth: Double, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Unit, depth: Null, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
+    inline def apply(`object`: Any, showHidden: Unit, depth: Unit, color: Boolean): String = (^.asInstanceOf[js.Dynamic].apply(`object`.asInstanceOf[js.Any], showHidden.asInstanceOf[js.Any], depth.asInstanceOf[js.Any], color.asInstanceOf[js.Any])).asInstanceOf[String]
     
     @JSImport("util", "inspect")
     @js.native
@@ -389,9 +502,10 @@ object utilMod {
     
     @JSImport("util", "inspect.colors")
     @js.native
-    def colors: Dict[js.Tuple2[Double, Double]] = js.native
-    @scala.inline
-    def colors_=(x: Dict[js.Tuple2[Double, Double]]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("colors")(x.asInstanceOf[js.Any])
+    def colors: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<[number, number]> */ Any = js.native
+    inline def colors_=(
+      x: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.Dict<[number, number]> */ Any
+    ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("colors")(x.asInstanceOf[js.Any])
     
     /**
       * That can be used to declare custom inspect functions.
@@ -403,8 +517,7 @@ object utilMod {
     @JSImport("util", "inspect.defaultOptions")
     @js.native
     def defaultOptions: InspectOptions = js.native
-    @scala.inline
-    def defaultOptions_=(x: InspectOptions): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultOptions")(x.asInstanceOf[js.Any])
+    inline def defaultOptions_=(x: InspectOptions): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultOptions")(x.asInstanceOf[js.Any])
     
     /**
       * Allows changing inspect settings from the repl.
@@ -412,8 +525,7 @@ object utilMod {
     @JSImport("util", "inspect.replDefaults")
     @js.native
     def replDefaults: InspectOptions = js.native
-    @scala.inline
-    def replDefaults_=(x: InspectOptions): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("replDefaults")(x.asInstanceOf[js.Any])
+    inline def replDefaults_=(x: InspectOptions): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("replDefaults")(x.asInstanceOf[js.Any])
     
     /* Inlined {[ K in node.util.Style ]: string} */
     object styles {
@@ -425,26 +537,22 @@ object utilMod {
       @JSImport("util", "inspect.styles.bigint")
       @js.native
       def bigint: String = js.native
-      @scala.inline
-      def bigint_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("bigint")(x.asInstanceOf[js.Any])
+      inline def bigint_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("bigint")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.boolean")
       @js.native
       def boolean: String = js.native
-      @scala.inline
-      def boolean_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("boolean")(x.asInstanceOf[js.Any])
+      inline def boolean_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("boolean")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.date")
       @js.native
       def date: String = js.native
-      @scala.inline
-      def date_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("date")(x.asInstanceOf[js.Any])
+      inline def date_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("date")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.module")
       @js.native
       def module: String = js.native
-      @scala.inline
-      def module_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("module")(x.asInstanceOf[js.Any])
+      inline def module_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("module")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.null")
       @js.native
@@ -453,106 +561,80 @@ object utilMod {
       @JSImport("util", "inspect.styles.number")
       @js.native
       def number: String = js.native
-      @scala.inline
-      def number_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("number")(x.asInstanceOf[js.Any])
+      inline def number_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("number")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.regexp")
       @js.native
       def regexp: String = js.native
-      @scala.inline
-      def regexp_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("regexp")(x.asInstanceOf[js.Any])
+      inline def regexp_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("regexp")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.special")
       @js.native
       def special: String = js.native
-      @scala.inline
-      def special_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("special")(x.asInstanceOf[js.Any])
+      inline def special_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("special")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.string")
       @js.native
       def string: String = js.native
-      @scala.inline
-      def string_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("string")(x.asInstanceOf[js.Any])
+      inline def string_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("string")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.symbol")
       @js.native
       def symbol: String = js.native
-      @scala.inline
-      def symbol_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("symbol")(x.asInstanceOf[js.Any])
+      inline def symbol_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("symbol")(x.asInstanceOf[js.Any])
       
       @JSImport("util", "inspect.styles.undefined")
       @js.native
       def undefined: String = js.native
-      @scala.inline
-      def undefined_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("undefined")(x.asInstanceOf[js.Any])
+      inline def undefined_=(x: String): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("undefined")(x.asInstanceOf[js.Any])
     }
   }
   
-  @scala.inline
-  def isArray(`object`: Any): /* is std.Array<unknown> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArray")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Array<unknown> */ Boolean]
+  inline def isArray(`object`: Any): /* is std.Array<unknown> */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isArray")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Array<unknown> */ Boolean]
   
-  @scala.inline
-  def isBoolean(`object`: Any): /* is boolean */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBoolean")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is boolean */ Boolean]
+  inline def isBoolean(`object`: Any): /* is boolean */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBoolean")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is boolean */ Boolean]
   
-  @scala.inline
-  def isBuffer(`object`: Any): /* is node.buffer.<global>.Buffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.buffer.<global>.Buffer */ Boolean]
+  inline def isBuffer(`object`: Any): /* is node.buffer.<global>.Buffer */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isBuffer")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is node.buffer.<global>.Buffer */ Boolean]
   
-  @scala.inline
-  def isDate(`object`: Any): /* is std.Date */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDate")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Date */ Boolean]
+  inline def isDate(`object`: Any): /* is std.Date */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDate")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Date */ Boolean]
   
-  @scala.inline
-  def isDeepStrictEqual(val1: Any, val2: Any): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("isDeepStrictEqual")(val1.asInstanceOf[js.Any], val2.asInstanceOf[js.Any])).asInstanceOf[Boolean]
+  inline def isDeepStrictEqual(val1: Any, val2: Any): Boolean = (^.asInstanceOf[js.Dynamic].applyDynamic("isDeepStrictEqual")(val1.asInstanceOf[js.Any], val2.asInstanceOf[js.Any])).asInstanceOf[Boolean]
   
-  @scala.inline
-  def isError(`object`: Any): /* is std.Error */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isError")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Error */ Boolean]
+  inline def isError(`object`: Any): /* is std.Error */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isError")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.Error */ Boolean]
   
-  @scala.inline
-  def isFunction(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isFunction")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isFunction(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isFunction")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @scala.inline
-  def isNull(`object`: Any): /* is null */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNull")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is null */ Boolean]
+  inline def isNull(`object`: Any): /* is null */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNull")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is null */ Boolean]
   
-  @scala.inline
-  def isNullOrUndefined(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNullOrUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isNullOrUndefined(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNullOrUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @scala.inline
-  def isNumber(`object`: Any): /* is number */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNumber")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is number */ Boolean]
+  inline def isNumber(`object`: Any): /* is number */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isNumber")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is number */ Boolean]
   
-  @scala.inline
-  def isObject(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isObject(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isObject")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @scala.inline
-  def isPrimitive(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isPrimitive")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isPrimitive(`object`: Any): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isPrimitive")(`object`.asInstanceOf[js.Any]).asInstanceOf[Boolean]
   
-  @scala.inline
-  def isRegExp(`object`: Any): /* is std.RegExp */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRegExp")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.RegExp */ Boolean]
+  inline def isRegExp(`object`: Any): /* is std.RegExp */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isRegExp")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is std.RegExp */ Boolean]
   
-  @scala.inline
-  def isString(`object`: Any): /* is string */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isString")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is string */ Boolean]
+  inline def isString(`object`: Any): /* is string */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isString")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is string */ Boolean]
   
-  @scala.inline
-  def isSymbol(`object`: Any): /* is symbol */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSymbol")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is symbol */ Boolean]
+  inline def isSymbol(`object`: Any): /* is symbol */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isSymbol")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is symbol */ Boolean]
   
-  @scala.inline
-  def isUndefined(`object`: Any): /* is undefined */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is undefined */ Boolean]
+  inline def isUndefined(`object`: Any): /* is undefined */ Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isUndefined")(`object`.asInstanceOf[js.Any]).asInstanceOf[/* is undefined */ Boolean]
   
-  @scala.inline
-  def log(string: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("log")(string.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  inline def log(string: String): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("log")(string.asInstanceOf[js.Any]).asInstanceOf[Unit]
+  
+  inline def parseArgs[T /* <: ParseArgsConfig */](config: T): ParsedResults[T] = ^.asInstanceOf[js.Dynamic].applyDynamic("parseArgs")(config.asInstanceOf[js.Any]).asInstanceOf[ParsedResults[T]]
   
   object promisify {
     
-    @scala.inline
-    def apply(fn: js.Function): js.Function = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function]
-    @scala.inline
-    def apply(fn: js.Function1[/* callback */ js.Function1[/* err */ js.UndefOr[Any], Unit], Unit]): js.Function0[js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function0[js.Promise[Unit]]]
-    @scala.inline
-    def apply[T1](
+    inline def apply(fn: js.Function): js.Function = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function]
+    inline def apply(fn: js.Function1[/* callback */ js.Function1[/* err */ js.UndefOr[Any], Unit], Unit]): js.Function0[js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function0[js.Promise[Unit]]]
+    inline def apply[T1](
       fn: js.Function2[/* arg1 */ T1, /* callback */ js.Function1[/* err */ js.UndefOr[Any], Unit], Unit]
     ): js.Function1[/* arg1 */ T1, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function1[/* arg1 */ T1, js.Promise[Unit]]]
-    @scala.inline
-    def apply[TCustom /* <: js.Function */](fn: CustomPromisify[TCustom]): TCustom = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[TCustom]
-    @scala.inline
-    def apply[T1, T2](
+    inline def apply[TCustom /* <: js.Function */](fn: CustomPromisify[TCustom]): TCustom = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[TCustom]
+    inline def apply[T1, T2](
       fn: js.Function3[
           /* arg1 */ T1, 
           /* arg2 */ T2, 
@@ -560,8 +642,7 @@ object utilMod {
           Unit
         ]
     ): js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function2[/* arg1 */ T1, /* arg2 */ T2, js.Promise[Unit]]]
-    @scala.inline
-    def apply[T1, T2, T3](
+    inline def apply[T1, T2, T3](
       fn: js.Function4[
           /* arg1 */ T1, 
           /* arg2 */ T2, 
@@ -570,8 +651,7 @@ object utilMod {
           Unit
         ]
     ): js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function3[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, js.Promise[Unit]]]
-    @scala.inline
-    def apply[T1, T2, T3, T4](
+    inline def apply[T1, T2, T3, T4](
       fn: js.Function5[
           /* arg1 */ T1, 
           /* arg2 */ T2, 
@@ -581,8 +661,7 @@ object utilMod {
           Unit
         ]
     ): js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]] = ^.asInstanceOf[js.Dynamic].apply(fn.asInstanceOf[js.Any]).asInstanceOf[js.Function4[/* arg1 */ T1, /* arg2 */ T2, /* arg3 */ T3, /* arg4 */ T4, js.Promise[Unit]]]
-    @scala.inline
-    def apply[T1, T2, T3, T4, T5](
+    inline def apply[T1, T2, T3, T4, T5](
       fn: js.Function6[
           /* arg1 */ T1, 
           /* arg2 */ T2, 
@@ -620,11 +699,13 @@ object utilMod {
     val custom: js.Symbol = js.native
   }
   
-  @scala.inline
-  def stripVTControlCharacters(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stripVTControlCharacters")(str.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def stripVTControlCharacters(str: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("stripVTControlCharacters")(str.asInstanceOf[js.Any]).asInstanceOf[String]
   
-  @scala.inline
-  def toUSVString(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUSVString")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  inline def toUSVString(string: String): String = ^.asInstanceOf[js.Dynamic].applyDynamic("toUSVString")(string.asInstanceOf[js.Any]).asInstanceOf[String]
+  
+  inline def transferableAbortController(): AbortController = ^.asInstanceOf[js.Dynamic].applyDynamic("transferableAbortController")().asInstanceOf[AbortController]
+  
+  inline def transferableAbortSignal(signal: AbortSignal): AbortSignal = ^.asInstanceOf[js.Dynamic].applyDynamic("transferableAbortSignal")(signal.asInstanceOf[js.Any]).asInstanceOf[AbortSignal]
   
   type CustomInspectFunction = js.Function2[/* depth */ Double, /* options */ InspectOptionsStylized, String]
   
@@ -675,22 +756,38 @@ object utilMod {
   }
   object EncodeIntoResult {
     
-    @scala.inline
-    def apply(read: Double, written: Double): EncodeIntoResult = {
+    inline def apply(read: Double, written: Double): EncodeIntoResult = {
       val __obj = js.Dynamic.literal(read = read.asInstanceOf[js.Any], written = written.asInstanceOf[js.Any])
       __obj.asInstanceOf[EncodeIntoResult]
     }
     
-    @scala.inline
-    implicit class EncodeIntoResultMutableBuilder[Self <: EncodeIntoResult] (val x: Self) extends AnyVal {
+    extension [Self <: EncodeIntoResult](x: Self) {
       
-      @scala.inline
-      def setRead(value: Double): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
+      inline def setRead(value: Double): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritten(value: Double): Self = StObject.set(x, "written", value.asInstanceOf[js.Any])
+      inline def setWritten(value: Double): Self = StObject.set(x, "written", value.asInstanceOf[js.Any])
     }
   }
+  
+  type ExtractOptionValue[T /* <: ParseArgsConfig */, O /* <: ParseArgsOptionConfig */] = IfDefaultsTrue[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['strict'] */ js.Any, 
+    String | Boolean, 
+    String | Boolean
+  ]
+  
+  // we put the `extends false` condition first here because `undefined` compares like `any` when `strictNullChecks: false`
+  type IfDefaultsFalse[T, IfTrue, IfFalse] = IfFalse | IfTrue
+  
+  /*
+    IfDefaultsTrue and IfDefaultsFalse are helpers to handle default values for missing boolean properties.
+    TypeScript does not have exact types for objects: https://github.com/microsoft/TypeScript/issues/12936
+    This means it is impossible to distinguish between "field X is definitely not present" and "field X may or may not be present".
+    But we expect users to generally provide their config inline or `as const`, which means TS will always know whether a given field is present.
+    So this helper treats "not definitely present" (i.e., not `extends boolean`) as being "definitely not present", i.e. it should have its default value.
+    This is technically incorrect but is a much nicer UX for the common case.
+    The IfDefaultsTrue version is for things which default to true; the IfDefaultsFalse version is for things which default to false.
+    */
+  type IfDefaultsTrue[T, IfTrue, IfFalse] = IfTrue | IfFalse
   
   trait InspectOptions extends StObject {
     
@@ -745,92 +842,64 @@ object utilMod {
   }
   object InspectOptions {
     
-    @scala.inline
-    def apply(): InspectOptions = {
+    inline def apply(): InspectOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[InspectOptions]
     }
     
-    @scala.inline
-    implicit class InspectOptionsMutableBuilder[Self <: InspectOptions] (val x: Self) extends AnyVal {
+    extension [Self <: InspectOptions](x: Self) {
       
-      @scala.inline
-      def setBreakLength(value: Double): Self = StObject.set(x, "breakLength", value.asInstanceOf[js.Any])
+      inline def setBreakLength(value: Double): Self = StObject.set(x, "breakLength", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setBreakLengthUndefined: Self = StObject.set(x, "breakLength", js.undefined)
+      inline def setBreakLengthUndefined: Self = StObject.set(x, "breakLength", js.undefined)
       
-      @scala.inline
-      def setColors(value: Boolean): Self = StObject.set(x, "colors", value.asInstanceOf[js.Any])
+      inline def setColors(value: Boolean): Self = StObject.set(x, "colors", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setColorsUndefined: Self = StObject.set(x, "colors", js.undefined)
+      inline def setColorsUndefined: Self = StObject.set(x, "colors", js.undefined)
       
-      @scala.inline
-      def setCompact(value: Boolean | Double): Self = StObject.set(x, "compact", value.asInstanceOf[js.Any])
+      inline def setCompact(value: Boolean | Double): Self = StObject.set(x, "compact", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCompactUndefined: Self = StObject.set(x, "compact", js.undefined)
+      inline def setCompactUndefined: Self = StObject.set(x, "compact", js.undefined)
       
-      @scala.inline
-      def setCustomInspect(value: Boolean): Self = StObject.set(x, "customInspect", value.asInstanceOf[js.Any])
+      inline def setCustomInspect(value: Boolean): Self = StObject.set(x, "customInspect", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCustomInspectUndefined: Self = StObject.set(x, "customInspect", js.undefined)
+      inline def setCustomInspectUndefined: Self = StObject.set(x, "customInspect", js.undefined)
       
-      @scala.inline
-      def setDepth(value: Double): Self = StObject.set(x, "depth", value.asInstanceOf[js.Any])
+      inline def setDepth(value: Double): Self = StObject.set(x, "depth", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDepthNull: Self = StObject.set(x, "depth", null)
+      inline def setDepthNull: Self = StObject.set(x, "depth", null)
       
-      @scala.inline
-      def setDepthUndefined: Self = StObject.set(x, "depth", js.undefined)
+      inline def setDepthUndefined: Self = StObject.set(x, "depth", js.undefined)
       
-      @scala.inline
-      def setGetters(value: get | set | Boolean): Self = StObject.set(x, "getters", value.asInstanceOf[js.Any])
+      inline def setGetters(value: get | set | Boolean): Self = StObject.set(x, "getters", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setGettersUndefined: Self = StObject.set(x, "getters", js.undefined)
+      inline def setGettersUndefined: Self = StObject.set(x, "getters", js.undefined)
       
-      @scala.inline
-      def setMaxArrayLength(value: Double): Self = StObject.set(x, "maxArrayLength", value.asInstanceOf[js.Any])
+      inline def setMaxArrayLength(value: Double): Self = StObject.set(x, "maxArrayLength", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxArrayLengthNull: Self = StObject.set(x, "maxArrayLength", null)
+      inline def setMaxArrayLengthNull: Self = StObject.set(x, "maxArrayLength", null)
       
-      @scala.inline
-      def setMaxArrayLengthUndefined: Self = StObject.set(x, "maxArrayLength", js.undefined)
+      inline def setMaxArrayLengthUndefined: Self = StObject.set(x, "maxArrayLength", js.undefined)
       
-      @scala.inline
-      def setMaxStringLength(value: Double): Self = StObject.set(x, "maxStringLength", value.asInstanceOf[js.Any])
+      inline def setMaxStringLength(value: Double): Self = StObject.set(x, "maxStringLength", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMaxStringLengthNull: Self = StObject.set(x, "maxStringLength", null)
+      inline def setMaxStringLengthNull: Self = StObject.set(x, "maxStringLength", null)
       
-      @scala.inline
-      def setMaxStringLengthUndefined: Self = StObject.set(x, "maxStringLength", js.undefined)
+      inline def setMaxStringLengthUndefined: Self = StObject.set(x, "maxStringLength", js.undefined)
       
-      @scala.inline
-      def setShowHidden(value: Boolean): Self = StObject.set(x, "showHidden", value.asInstanceOf[js.Any])
+      inline def setShowHidden(value: Boolean): Self = StObject.set(x, "showHidden", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setShowHiddenUndefined: Self = StObject.set(x, "showHidden", js.undefined)
+      inline def setShowHiddenUndefined: Self = StObject.set(x, "showHidden", js.undefined)
       
-      @scala.inline
-      def setShowProxy(value: Boolean): Self = StObject.set(x, "showProxy", value.asInstanceOf[js.Any])
+      inline def setShowProxy(value: Boolean): Self = StObject.set(x, "showProxy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setShowProxyUndefined: Self = StObject.set(x, "showProxy", js.undefined)
+      inline def setShowProxyUndefined: Self = StObject.set(x, "showProxy", js.undefined)
       
-      @scala.inline
-      def setSorted(value: Boolean | (js.Function2[/* a */ String, /* b */ String, Double])): Self = StObject.set(x, "sorted", value.asInstanceOf[js.Any])
+      inline def setSorted(value: Boolean | (js.Function2[/* a */ String, /* b */ String, Double])): Self = StObject.set(x, "sorted", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setSortedFunction2(value: (/* a */ String, /* b */ String) => Double): Self = StObject.set(x, "sorted", js.Any.fromFunction2(value))
+      inline def setSortedFunction2(value: (/* a */ String, /* b */ String) => Double): Self = StObject.set(x, "sorted", js.Any.fromFunction2(value))
       
-      @scala.inline
-      def setSortedUndefined: Self = StObject.set(x, "sorted", js.undefined)
+      inline def setSortedUndefined: Self = StObject.set(x, "sorted", js.undefined)
     }
   }
   
@@ -842,19 +911,188 @@ object utilMod {
   }
   object InspectOptionsStylized {
     
-    @scala.inline
-    def apply(stylize: (String, Style) => String): InspectOptionsStylized = {
+    inline def apply(stylize: (String, Style) => String): InspectOptionsStylized = {
       val __obj = js.Dynamic.literal(stylize = js.Any.fromFunction2(stylize))
       __obj.asInstanceOf[InspectOptionsStylized]
     }
     
-    @scala.inline
-    implicit class InspectOptionsStylizedMutableBuilder[Self <: InspectOptionsStylized] (val x: Self) extends AnyVal {
+    extension [Self <: InspectOptionsStylized](x: Self) {
       
-      @scala.inline
-      def setStylize(value: (String, Style) => String): Self = StObject.set(x, "stylize", js.Any.fromFunction2(value))
+      inline def setStylize(value: (String, Style) => String): Self = StObject.set(x, "stylize", js.Any.fromFunction2(value))
     }
   }
+  
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.node.anon.RawName
+    - tmttyped.node.anon.Value
+  */
+  trait OptionToken
+    extends StObject
+       with Token
+  object OptionToken {
+    
+    inline def RawName(index: Double, inlineValue: Boolean, name: String, rawName: String, value: String): tmttyped.node.anon.RawName = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.RawName]
+    }
+    
+    inline def Value(index: Double, inlineValue: Unit, name: String, rawName: String, value: Unit): tmttyped.node.anon.Value = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.Value]
+    }
+  }
+  
+  trait ParseArgsConfig extends StObject {
+    
+    var allowPositionals: js.UndefOr[Boolean] = js.undefined
+    
+    var args: js.UndefOr[js.Array[String]] = js.undefined
+    
+    var options: js.UndefOr[ParseArgsOptionsConfig] = js.undefined
+    
+    var strict: js.UndefOr[Boolean] = js.undefined
+    
+    var tokens: js.UndefOr[Boolean] = js.undefined
+  }
+  object ParseArgsConfig {
+    
+    inline def apply(): ParseArgsConfig = {
+      val __obj = js.Dynamic.literal()
+      __obj.asInstanceOf[ParseArgsConfig]
+    }
+    
+    extension [Self <: ParseArgsConfig](x: Self) {
+      
+      inline def setAllowPositionals(value: Boolean): Self = StObject.set(x, "allowPositionals", value.asInstanceOf[js.Any])
+      
+      inline def setAllowPositionalsUndefined: Self = StObject.set(x, "allowPositionals", js.undefined)
+      
+      inline def setArgs(value: js.Array[String]): Self = StObject.set(x, "args", value.asInstanceOf[js.Any])
+      
+      inline def setArgsUndefined: Self = StObject.set(x, "args", js.undefined)
+      
+      inline def setArgsVarargs(value: String*): Self = StObject.set(x, "args", js.Array(value*))
+      
+      inline def setOptions(value: ParseArgsOptionsConfig): Self = StObject.set(x, "options", value.asInstanceOf[js.Any])
+      
+      inline def setOptionsUndefined: Self = StObject.set(x, "options", js.undefined)
+      
+      inline def setStrict(value: Boolean): Self = StObject.set(x, "strict", value.asInstanceOf[js.Any])
+      
+      inline def setStrictUndefined: Self = StObject.set(x, "strict", js.undefined)
+      
+      inline def setTokens(value: Boolean): Self = StObject.set(x, "tokens", value.asInstanceOf[js.Any])
+      
+      inline def setTokensUndefined: Self = StObject.set(x, "tokens", js.undefined)
+    }
+  }
+  
+  trait ParseArgsOptionConfig extends StObject {
+    
+    /**
+      * @since v18.11.0
+      */
+    var default: js.UndefOr[String | Boolean | (js.Array[Boolean | String])] = js.undefined
+    
+    var multiple: js.UndefOr[Boolean] = js.undefined
+    
+    var short: js.UndefOr[String] = js.undefined
+    
+    var `type`: string | boolean
+  }
+  object ParseArgsOptionConfig {
+    
+    inline def apply(`type`: string | boolean): ParseArgsOptionConfig = {
+      val __obj = js.Dynamic.literal()
+      __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+      __obj.asInstanceOf[ParseArgsOptionConfig]
+    }
+    
+    extension [Self <: ParseArgsOptionConfig](x: Self) {
+      
+      inline def setDefault(value: String | Boolean | (js.Array[Boolean | String])): Self = StObject.set(x, "default", value.asInstanceOf[js.Any])
+      
+      inline def setDefaultUndefined: Self = StObject.set(x, "default", js.undefined)
+      
+      inline def setDefaultVarargs(value: (Boolean | String)*): Self = StObject.set(x, "default", js.Array(value*))
+      
+      inline def setMultiple(value: Boolean): Self = StObject.set(x, "multiple", value.asInstanceOf[js.Any])
+      
+      inline def setMultipleUndefined: Self = StObject.set(x, "multiple", js.undefined)
+      
+      inline def setShort(value: String): Self = StObject.set(x, "short", value.asInstanceOf[js.Any])
+      
+      inline def setShortUndefined: Self = StObject.set(x, "short", js.undefined)
+      
+      inline def setType(value: string | boolean): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+    }
+  }
+  
+  type ParseArgsOptionsConfig = StringDictionary[ParseArgsOptionConfig]
+  
+  type ParsedOptionToken[T /* <: ParseArgsConfig */] = IfDefaultsTrue[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['strict'] */ js.Any, 
+    TokenForOptions[
+      T, 
+      /* import warning: importer.ImportType#apply Failed type conversion: keyof T['options'] */ js.Any
+    ], 
+    OptionToken
+  ]
+  
+  type ParsedPositionalToken[T /* <: ParseArgsConfig */] = IfDefaultsTrue[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['strict'] */ js.Any, 
+    IfDefaultsFalse[
+      /* import warning: importer.ImportType#apply Failed type conversion: T['allowPositionals'] */ js.Any, 
+      Kind, 
+      scala.Nothing
+    ], 
+    IfDefaultsTrue[
+      /* import warning: importer.ImportType#apply Failed type conversion: T['allowPositionals'] */ js.Any, 
+      Kind, 
+      scala.Nothing
+    ]
+  ]
+  
+  type ParsedPositionals[T /* <: ParseArgsConfig */] = IfDefaultsTrue[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['strict'] */ js.Any, 
+    IfDefaultsFalse[
+      /* import warning: importer.ImportType#apply Failed type conversion: T['allowPositionals'] */ js.Any, 
+      js.Array[String], 
+      js.Array[Any]
+    ], 
+    IfDefaultsTrue[
+      /* import warning: importer.ImportType#apply Failed type conversion: T['allowPositionals'] */ js.Any, 
+      js.Array[String], 
+      js.Array[Any]
+    ]
+  ]
+  
+  // If ParseArgsConfig extends T, then the user passed config constructed elsewhere.
+  // So we can't rely on the `"not definitely present" implies "definitely not present"` assumption mentioned above.
+  type ParsedResults[T /* <: ParseArgsConfig */] = PreciseParsedResults[T] | Tokens
+  
+  type ParsedTokens[T /* <: ParseArgsConfig */] = js.Array[ParsedOptionToken[T] | ParsedPositionalToken[T] | IndexKind]
+  
+  type ParsedValues[T /* <: ParseArgsConfig */] = (IfDefaultsTrue[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['strict'] */ js.Any, 
+    Any, 
+    StringDictionary[js.UndefOr[String | Boolean]]
+  ]) & (js.Object | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {-readonly [ LongOption in keyof T['options'] ]: node.util.IfDefaultsFalse<T['options'][LongOption]['multiple'], undefined | std.Array<node.util.ExtractOptionValue<T, T['options'][LongOption]>>, undefined | node.util.ExtractOptionValue<T, T['options'][LongOption]>>}
+    */ tmttyped.node.nodeStrings.ParsedValues & TopLevel[Any]))
+  
+  type PreciseParsedResults[T /* <: ParseArgsConfig */] = IfDefaultsFalse[
+    /* import warning: importer.ImportType#apply Failed type conversion: T['tokens'] */ js.Any, 
+    Positionals[T], 
+    Values[T]
+  ]
+  
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.node.utilMod.OptionToken & tmttyped.node.anon.Name[K]
+    - tmttyped.node.anon.InlineValue[K]
+    - tmttyped.node.anon.Index[K]
+  */
+  type PreciseTokenForOptions[K /* <: String */, O /* <: ParseArgsOptionConfig */] = (_PreciseTokenForOptions[K, O]) | (OptionToken & Name[K])
   
   /* Rewritten from type alias, can be one of: 
     - tmttyped.node.nodeStrings.special
@@ -872,37 +1110,74 @@ object utilMod {
   trait Style extends StObject
   object Style {
     
-    @scala.inline
-    def bigint: tmttyped.node.nodeStrings.bigint = "bigint".asInstanceOf[tmttyped.node.nodeStrings.bigint]
+    inline def bigint: tmttyped.node.nodeStrings.bigint = "bigint".asInstanceOf[tmttyped.node.nodeStrings.bigint]
     
-    @scala.inline
-    def boolean: tmttyped.node.nodeStrings.boolean = "boolean".asInstanceOf[tmttyped.node.nodeStrings.boolean]
+    inline def boolean: tmttyped.node.nodeStrings.boolean = "boolean".asInstanceOf[tmttyped.node.nodeStrings.boolean]
     
-    @scala.inline
-    def date: tmttyped.node.nodeStrings.date = "date".asInstanceOf[tmttyped.node.nodeStrings.date]
+    inline def date: tmttyped.node.nodeStrings.date = "date".asInstanceOf[tmttyped.node.nodeStrings.date]
     
-    @scala.inline
-    def module: tmttyped.node.nodeStrings.module = "module".asInstanceOf[tmttyped.node.nodeStrings.module]
+    inline def module: tmttyped.node.nodeStrings.module = "module".asInstanceOf[tmttyped.node.nodeStrings.module]
     
-    @scala.inline
-    def `null`: tmttyped.node.nodeStrings.`null` = "null".asInstanceOf[tmttyped.node.nodeStrings.`null`]
+    inline def `null`: tmttyped.node.nodeStrings.`null` = "null".asInstanceOf[tmttyped.node.nodeStrings.`null`]
     
-    @scala.inline
-    def number: tmttyped.node.nodeStrings.number = "number".asInstanceOf[tmttyped.node.nodeStrings.number]
+    inline def number: tmttyped.node.nodeStrings.number = "number".asInstanceOf[tmttyped.node.nodeStrings.number]
     
-    @scala.inline
-    def regexp: tmttyped.node.nodeStrings.regexp = "regexp".asInstanceOf[tmttyped.node.nodeStrings.regexp]
+    inline def regexp: tmttyped.node.nodeStrings.regexp = "regexp".asInstanceOf[tmttyped.node.nodeStrings.regexp]
     
-    @scala.inline
-    def special: tmttyped.node.nodeStrings.special = "special".asInstanceOf[tmttyped.node.nodeStrings.special]
+    inline def special: tmttyped.node.nodeStrings.special = "special".asInstanceOf[tmttyped.node.nodeStrings.special]
     
-    @scala.inline
-    def string: tmttyped.node.nodeStrings.string = "string".asInstanceOf[tmttyped.node.nodeStrings.string]
+    inline def string: tmttyped.node.nodeStrings.string = "string".asInstanceOf[tmttyped.node.nodeStrings.string]
     
-    @scala.inline
-    def symbol: tmttyped.node.nodeStrings.symbol = "symbol".asInstanceOf[tmttyped.node.nodeStrings.symbol]
+    inline def symbol: tmttyped.node.nodeStrings.symbol = "symbol".asInstanceOf[tmttyped.node.nodeStrings.symbol]
     
-    @scala.inline
-    def undefined: tmttyped.node.nodeStrings.undefined = "undefined".asInstanceOf[tmttyped.node.nodeStrings.undefined]
+    inline def undefined: tmttyped.node.nodeStrings.undefined = "undefined".asInstanceOf[tmttyped.node.nodeStrings.undefined]
+  }
+  
+  /* Rewritten from type alias, can be one of: 
+    - tmttyped.node.utilMod.OptionToken
+    - tmttyped.node.anon.Kind
+    - tmttyped.node.anon.IndexKind
+  */
+  trait Token extends StObject
+  object Token {
+    
+    inline def IndexKind(index: Double): tmttyped.node.anon.IndexKind = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], kind = "option-terminator")
+      __obj.asInstanceOf[tmttyped.node.anon.IndexKind]
+    }
+    
+    inline def Kind(index: Double, value: String): tmttyped.node.anon.Kind = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], kind = "positional", value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.Kind]
+    }
+    
+    inline def RawName(index: Double, inlineValue: Boolean, name: String, rawName: String, value: String): tmttyped.node.anon.RawName = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.RawName]
+    }
+    
+    inline def Value(index: Double, inlineValue: Unit, name: String, rawName: String, value: Unit): tmttyped.node.anon.Value = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.Value]
+    }
+  }
+  
+  type TokenForOptions[T /* <: ParseArgsConfig */, K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['options'] */ js.Any */] = OptionToken | (PreciseTokenForOptions[
+    K & String, 
+    /* import warning: importer.ImportType#apply Failed type conversion: T['options'][K] */ js.Any
+  ])
+  
+  trait _PreciseTokenForOptions[K /* <: String */, O /* <: ParseArgsOptionConfig */] extends StObject
+  object _PreciseTokenForOptions {
+    
+    inline def Index[K /* <: String */](index: Double, inlineValue: Boolean, name: K, rawName: String, value: String): tmttyped.node.anon.Index[K] = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.Index[K]]
+    }
+    
+    inline def InlineValue[K /* <: String */](index: Double, inlineValue: Unit, name: K, rawName: String, value: Unit): tmttyped.node.anon.InlineValue[K] = {
+      val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], inlineValue = inlineValue.asInstanceOf[js.Any], kind = "option", name = name.asInstanceOf[js.Any], rawName = rawName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      __obj.asInstanceOf[tmttyped.node.anon.InlineValue[K]]
+    }
   }
 }

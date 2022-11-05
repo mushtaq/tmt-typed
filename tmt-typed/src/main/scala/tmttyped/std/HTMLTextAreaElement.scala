@@ -5,7 +5,6 @@ import tmttyped.std.stdStrings.forward
 import tmttyped.std.stdStrings.none
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Provides special properties and methods for manipulating the layout and presentation of <textarea> elements. */
@@ -52,7 +51,7 @@ trait HTMLTextAreaElement
   val form: org.scalajs.dom.HTMLFormElement | Null = js.native
   
   /* standard DOM */
-  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement with org.scalajs.dom.Node] = js.native
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.HTMLLabelElement & org.scalajs.dom.Node] = js.native
   
   /** Sets or retrieves the maximum number of characters that the user can enter in a text control. */
   /* standard DOM */

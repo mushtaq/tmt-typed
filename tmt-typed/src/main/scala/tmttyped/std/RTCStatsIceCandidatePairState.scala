@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
@@ -16,21 +15,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RTCStatsIceCandidatePairState extends StObject
 object RTCStatsIceCandidatePairState {
   
-  @scala.inline
-  def failed: tmttyped.std.stdStrings.failed = "failed".asInstanceOf[tmttyped.std.stdStrings.failed]
+  inline def failed: tmttyped.std.stdStrings.failed = "failed".asInstanceOf[tmttyped.std.stdStrings.failed]
   
-  @scala.inline
-  def frozen: tmttyped.std.stdStrings.frozen = "frozen".asInstanceOf[tmttyped.std.stdStrings.frozen]
+  inline def frozen: tmttyped.std.stdStrings.frozen = "frozen".asInstanceOf[tmttyped.std.stdStrings.frozen]
   
-  @scala.inline
-  def `in-progress`: tmttyped.std.stdStrings.`in-progress` = "in-progress".asInstanceOf[tmttyped.std.stdStrings.`in-progress`]
+  inline def `in-progress`: tmttyped.std.stdStrings.`in-progress` = "in-progress".asInstanceOf[tmttyped.std.stdStrings.`in-progress`]
   
-  @scala.inline
-  def inprogress: tmttyped.std.stdStrings.inprogress = "inprogress".asInstanceOf[tmttyped.std.stdStrings.inprogress]
+  inline def inprogress: tmttyped.std.stdStrings.inprogress = "inprogress".asInstanceOf[tmttyped.std.stdStrings.inprogress]
   
-  @scala.inline
-  def succeeded: tmttyped.std.stdStrings.succeeded = "succeeded".asInstanceOf[tmttyped.std.stdStrings.succeeded]
+  inline def succeeded: tmttyped.std.stdStrings.succeeded = "succeeded".asInstanceOf[tmttyped.std.stdStrings.succeeded]
   
-  @scala.inline
-  def waiting: tmttyped.std.stdStrings.waiting = "waiting".asInstanceOf[tmttyped.std.stdStrings.waiting]
+  inline def waiting: tmttyped.std.stdStrings.waiting = "waiting".asInstanceOf[tmttyped.std.stdStrings.waiting]
 }

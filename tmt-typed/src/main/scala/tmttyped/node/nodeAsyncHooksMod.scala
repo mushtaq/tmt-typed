@@ -5,7 +5,6 @@ import tmttyped.node.asyncHooksMod.AsyncResourceOptions
 import tmttyped.node.asyncHooksMod.HookCallbacks
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeAsyncHooksMod {
@@ -59,12 +58,12 @@ object nodeAsyncHooksMod {
     *
     * Each instance of `AsyncLocalStorage` maintains an independent storage context.
     * Multiple instances can safely exist simultaneously without risk of interfering
-    * with each other data.
+    * with each other's data.
     * @since v13.10.0, v12.17.0
     */
   @JSImport("node:async_hooks", "AsyncLocalStorage")
   @js.native
-  class AsyncLocalStorage[T] ()
+  open class AsyncLocalStorage[T] ()
     extends tmttyped.node.asyncHooksMod.AsyncLocalStorage[T]
   
   /**
@@ -106,7 +105,7 @@ object nodeAsyncHooksMod {
     */
   @JSImport("node:async_hooks", "AsyncResource")
   @js.native
-  class AsyncResource protected ()
+  open class AsyncResource protected ()
     extends tmttyped.node.asyncHooksMod.AsyncResource {
     /**
       * AsyncResource() is meant to be extended. Instantiating a
@@ -115,7 +114,7 @@ object nodeAsyncHooksMod {
       * @param type The type of async event.
       * @param triggerAsyncId The ID of the execution context that created
       *   this async event (default: `executionAsyncId()`), or an
-      *   AsyncResourceOptions object (since 9.3)
+      *   AsyncResourceOptions object (since v9.3.0)
       */
     def this(`type`: String) = this()
     def this(`type`: String, triggerAsyncId: Double) = this()
@@ -137,14 +136,10 @@ object nodeAsyncHooksMod {
       * @param type An optional name to associate with the underlying `AsyncResource`.
       */
     /* static member */
-    @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func): Func with tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
-    @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
-    @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
-    @scala.inline
-    def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func with tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func with tmttyped.node.anon.AsyncResource]
+    inline def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func): Func & tmttyped.node.anon.AsyncResource = ^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any]).asInstanceOf[Func & tmttyped.node.anon.AsyncResource]
+    inline def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String): Func & tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any])).asInstanceOf[Func & tmttyped.node.anon.AsyncResource]
+    inline def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: String, thisArg: ThisArg): Func & tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func & tmttyped.node.anon.AsyncResource]
+    inline def bind[Func /* <: js.ThisFunction1[/* this */ ThisArg, /* repeated */ Any, Any] */, ThisArg](fn: Func, `type`: Unit, thisArg: ThisArg): Func & tmttyped.node.anon.AsyncResource = (^.asInstanceOf[js.Dynamic].applyDynamic("bind")(fn.asInstanceOf[js.Any], `type`.asInstanceOf[js.Any], thisArg.asInstanceOf[js.Any])).asInstanceOf[Func & tmttyped.node.anon.AsyncResource]
   }
   
   /**
@@ -189,8 +184,7 @@ object nodeAsyncHooksMod {
     * @param callbacks The `Hook Callbacks` to register
     * @return Instance used for disabling and enabling hooks
     */
-  @scala.inline
-  def createHook(callbacks: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(callbacks.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
+  inline def createHook(callbacks: HookCallbacks): AsyncHook = ^.asInstanceOf[js.Dynamic].applyDynamic("createHook")(callbacks.asInstanceOf[js.Any]).asInstanceOf[AsyncHook]
   
   /**
     * ```js
@@ -223,8 +217,7 @@ object nodeAsyncHooksMod {
     * @since v8.1.0
     * @return The `asyncId` of the current execution context. Useful to track when something calls.
     */
-  @scala.inline
-  def executionAsyncId(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("executionAsyncId")().asInstanceOf[Double]
+  inline def executionAsyncId(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("executionAsyncId")().asInstanceOf[Double]
   
   /**
     * Resource objects returned by `executionAsyncResource()` are most often internal
@@ -276,8 +269,7 @@ object nodeAsyncHooksMod {
     * @since v13.9.0, v12.17.0
     * @return The resource representing the current execution. Useful to store data within the resource.
     */
-  @scala.inline
-  def executionAsyncResource(): js.Object = ^.asInstanceOf[js.Dynamic].applyDynamic("executionAsyncResource")().asInstanceOf[js.Object]
+  inline def executionAsyncResource(): js.Object = ^.asInstanceOf[js.Dynamic].applyDynamic("executionAsyncResource")().asInstanceOf[js.Object]
   
   /**
     * ```js
@@ -299,6 +291,5 @@ object nodeAsyncHooksMod {
     * the section on `promise execution tracking`.
     * @return The ID of the resource responsible for calling the callback that is currently being executed.
     */
-  @scala.inline
-  def triggerAsyncId(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("triggerAsyncId")().asInstanceOf[Double]
+  inline def triggerAsyncId(): Double = ^.asInstanceOf[js.Dynamic].applyDynamic("triggerAsyncId")().asInstanceOf[Double]
 }

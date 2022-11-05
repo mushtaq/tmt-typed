@@ -203,7 +203,6 @@ import tmttyped.node.nodeStrings.SchemaDotgetDomains
 import tmttyped.node.nodeStrings.inspectorNotification
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -216,7 +215,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Create a new instance of the inspector.Session class.
   * The inspector session needs to be connected through session.connect() before the messages can be dispatched to the inspector backend.
   */
-class Session () extends StObject {
+open class Session () extends StObject {
   
   // Events
   def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
@@ -420,13 +419,6 @@ class Session () extends StObject {
     * @since v8.0.0
     */
   def connect(): Unit = js.native
-  
-  /**
-    * Connects a session to the main thread inspector back-end. An exception will
-    * be thrown if this API was not called on a Worker thread.
-    * @since v12.11.0
-    */
-  def connectToMainThread(): Unit = js.native
   
   /**
     * Immediately close the session. All pending message callbacks will be called

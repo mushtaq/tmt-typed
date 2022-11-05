@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait Algorithm extends StObject {
@@ -12,16 +11,13 @@ trait Algorithm extends StObject {
 }
 object Algorithm {
   
-  @scala.inline
-  def apply(name: java.lang.String): Algorithm = {
+  inline def apply(name: java.lang.String): Algorithm = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Algorithm]
   }
   
-  @scala.inline
-  implicit class AlgorithmMutableBuilder[Self <: Algorithm] (val x: Self) extends AnyVal {
+  extension [Self <: Algorithm](x: Self) {
     
-    @scala.inline
-    def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+    inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
   }
 }

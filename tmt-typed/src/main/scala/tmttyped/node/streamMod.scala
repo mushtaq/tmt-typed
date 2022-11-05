@@ -1,14 +1,14 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ErrnoException
-import tmttyped.node.NodeJS.ReadWriteStream
-import tmttyped.node.NodeJS.ReadableStream
-import tmttyped.node.NodeJS.WritableStream
+import org.scalajs.dom.AbortSignal
 import tmttyped.node.anon.Chunk
 import tmttyped.node.anon.End
+import tmttyped.node.anon.PickReadableOptionsencodi
+import tmttyped.node.anon.PickWritableOptionsdecode
 import tmttyped.node.bufferMod.global.Buffer
 import tmttyped.node.bufferMod.global.BufferEncoding
 import tmttyped.node.eventsMod.Abortable
+import tmttyped.node.nodeBufferMod.Blob
 import tmttyped.node.nodeStrings.close
 import tmttyped.node.nodeStrings.data
 import tmttyped.node.nodeStrings.drain
@@ -23,16 +23,17 @@ import tmttyped.node.nodeStrings.unpipe
 import tmttyped.std.AsyncGeneratorFunction
 import tmttyped.std.AsyncIterable
 import tmttyped.std.AsyncIterator
+import tmttyped.std.ReadableStream
+import tmttyped.std.WritableStream
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object streamMod {
   
   @JSImport("stream", JSImport.Namespace)
   @js.native
-  class ^ () extends StObject
+  open class ^ () extends StObject
   @JSImport("stream", JSImport.Namespace)
   @js.native
   val ^ : js.Any = js.native
@@ -49,7 +50,7 @@ object streamMod {
     */
   @JSImport("stream", "Duplex")
   @js.native
-  class Duplex () extends StObject {
+  open class Duplex () extends StObject {
     def this(opts: DuplexOptions) = this()
     
     def _destroy(error: js.Error, callback: js.Function1[/* error */ js.Error | Null, Unit]): Unit = js.native
@@ -82,6 +83,8 @@ object streamMod {
       */
     var allowHalfOpen: Boolean = js.native
     
+    val closed: Boolean = js.native
+    
     def cork(): Unit = js.native
     
     def end(): this.type = js.native
@@ -91,6 +94,8 @@ object streamMod {
     def end(chunk: Any, encoding: Unit, cb: js.Function0[Unit]): this.type = js.native
     def end(chunk: Any, encoding: BufferEncoding): this.type = js.native
     def end(chunk: Any, encoding: BufferEncoding, cb: js.Function0[Unit]): this.type = js.native
+    
+    val errored: js.Error | Null = js.native
     
     def setDefaultEncoding(encoding: BufferEncoding): this.type = js.native
     
@@ -107,6 +112,8 @@ object streamMod {
     val writableHighWaterMark: Double = js.native
     
     val writableLength: Double = js.native
+    
+    val writableNeedDrain: Boolean = js.native
     
     val writableObjectMode: Boolean = js.native
     
@@ -126,18 +133,12 @@ object streamMod {
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def from(src: String): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: js.Iterable[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: js.Object): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: js.Promise[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: js.typedarray.ArrayBuffer): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: Blob): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: String): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: js.Iterable[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: js.Object): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: js.Promise[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: js.typedarray.ArrayBuffer): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: Blob): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
     /**
       * A utility method for creating duplex streams.
       *
@@ -160,12 +161,9 @@ object streamMod {
       * @since v16.8.0
       */
     /* static member */
-    @scala.inline
-    def from(src: Stream): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: AsyncGeneratorFunction): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
-    @scala.inline
-    def from(src: AsyncIterable[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: Stream): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: AsyncGeneratorFunction): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
+    inline def from(src: AsyncIterable[Any]): Duplex = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(src.asInstanceOf[js.Any]).asInstanceOf[Duplex]
   }
   
   /**
@@ -174,7 +172,7 @@ object streamMod {
     */
   @JSImport("stream", "PassThrough")
   @js.native
-  class PassThrough () extends StObject {
+  open class PassThrough () extends StObject {
     def this(opts: TransformOptions) = this()
   }
   
@@ -183,9 +181,9 @@ object streamMod {
     */
   @JSImport("stream", "Readable")
   @js.native
-  class Readable ()
+  open class Readable ()
     extends StObject
-       with ReadableStream {
+       with ReadableStream[Any] {
     def this(opts: ReadableOptions) = this()
     
     var _construct: js.UndefOr[
@@ -197,6 +195,8 @@ object streamMod {
     
     def _read(size: Double): Unit = js.native
     
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     /**
       * Event emitter
       * The defined events on documents including:
@@ -224,6 +224,12 @@ object streamMod {
     def addListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
     /**
+      * Is true after 'close' has been emitted.
+      * @since v18.0.0
+      */
+    val closed: Boolean = js.native
+    
+    /**
       * Destroy the stream. Optionally emit an `'error'` event, and emit a `'close'`event (unless `emitClose` is set to `false`). After this call, the readable
       * stream will release any internal resources and subsequent calls to `push()`will be ignored.
       *
@@ -243,6 +249,8 @@ object streamMod {
       */
     var destroyed: Boolean = js.native
     
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
@@ -258,6 +266,32 @@ object streamMod {
     @JSName("emit")
     def emit_resume(event: resume): Boolean = js.native
     
+    /**
+      * Returns error if the stream has been destroyed with an error.
+      * @since v18.0.0
+      */
+    val errored: js.Error | Null = js.native
+    
+    /**
+      * The `readable.isPaused()` method returns the current operating state of the`Readable`. This is used primarily by the mechanism that underlies the`readable.pipe()` method. In most
+      * typical cases, there will be no reason to
+      * use this method directly.
+      *
+      * ```js
+      * const readable = new stream.Readable();
+      *
+      * readable.isPaused(); // === false
+      * readable.pause();
+      * readable.isPaused(); // === true
+      * readable.resume();
+      * readable.isPaused(); // === false
+      * ```
+      * @since v0.11.14
+      */
+    def isPaused(): Boolean = js.native
+    
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -273,6 +307,8 @@ object streamMod {
     @JSName("on")
     def on_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -288,6 +324,31 @@ object streamMod {
     @JSName("once")
     def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
+    /**
+      * The `readable.pause()` method will cause a stream in flowing mode to stop
+      * emitting `'data'` events, switching out of flowing mode. Any data that
+      * becomes available will remain in the internal buffer.
+      *
+      * ```js
+      * const readable = getReadableStreamSomehow();
+      * readable.on('data', (chunk) => {
+      *   console.log(`Received ${chunk.length} bytes of data.`);
+      *   readable.pause();
+      *   console.log('There will be no additional data for 1 second.');
+      *   setTimeout(() => {
+      *     console.log('Now data will start flowing again.');
+      *     readable.resume();
+      *   }, 1000);
+      * });
+      * ```
+      *
+      * The `readable.pause()` method has no effect if there is a `'readable'`event listener.
+      * @since v0.9.4
+      */
+    def pause(): this.type = js.native
+    
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -303,6 +364,8 @@ object streamMod {
     @JSName("prependListener")
     def prependListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
     
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -320,6 +383,92 @@ object streamMod {
     
     def push(chunk: Any): Boolean = js.native
     def push(chunk: Any, encoding: BufferEncoding): Boolean = js.native
+    
+    /**
+      * The `readable.read()` method reads data out of the internal buffer and
+      * returns it. If no data is available to be read, `null` is returned. By default,
+      * the data is returned as a `Buffer` object unless an encoding has been
+      * specified using the `readable.setEncoding()` method or the stream is operating
+      * in object mode.
+      *
+      * The optional `size` argument specifies a specific number of bytes to read. If`size` bytes are not available to be read, `null` will be returned _unless_the stream has ended, in which
+      * case all of the data remaining in the internal
+      * buffer will be returned.
+      *
+      * If the `size` argument is not specified, all of the data contained in the
+      * internal buffer will be returned.
+      *
+      * The `size` argument must be less than or equal to 1 GiB.
+      *
+      * The `readable.read()` method should only be called on `Readable` streams
+      * operating in paused mode. In flowing mode, `readable.read()` is called
+      * automatically until the internal buffer is fully drained.
+      *
+      * ```js
+      * const readable = getReadableStreamSomehow();
+      *
+      * // 'readable' may be triggered multiple times as data is buffered in
+      * readable.on('readable', () => {
+      *   let chunk;
+      *   console.log('Stream is readable (new data received in buffer)');
+      *   // Use a loop to make sure we read all currently available data
+      *   while (null !== (chunk = readable.read())) {
+      *     console.log(`Read ${chunk.length} bytes of data...`);
+      *   }
+      * });
+      *
+      * // 'end' will be triggered once when there is no more data available
+      * readable.on('end', () => {
+      *   console.log('Reached end of stream.');
+      * });
+      * ```
+      *
+      * Each call to `readable.read()` returns a chunk of data, or `null`. The chunks
+      * are not concatenated. A `while` loop is necessary to consume all data
+      * currently in the buffer. When reading a large file `.read()` may return `null`,
+      * having consumed all buffered content so far, but there is still more data to
+      * come not yet buffered. In this case a new `'readable'` event will be emitted
+      * when there is more data in the buffer. Finally the `'end'` event will be
+      * emitted when there is no more data to come.
+      *
+      * Therefore to read a file's whole contents from a `readable`, it is necessary
+      * to collect chunks across multiple `'readable'` events:
+      *
+      * ```js
+      * const chunks = [];
+      *
+      * readable.on('readable', () => {
+      *   let chunk;
+      *   while (null !== (chunk = readable.read())) {
+      *     chunks.push(chunk);
+      *   }
+      * });
+      *
+      * readable.on('end', () => {
+      *   const content = chunks.join('');
+      * });
+      * ```
+      *
+      * A `Readable` stream in object mode will always return a single item from
+      * a call to `readable.read(size)`, regardless of the value of the`size` argument.
+      *
+      * If the `readable.read()` method returns a chunk of data, a `'data'` event will
+      * also be emitted.
+      *
+      * Calling {@link read} after the `'end'` event has
+      * been emitted will return `null`. No runtime error will be raised.
+      * @since v0.9.4
+      * @param size Optional argument to specify how much data to read.
+      */
+    def read(): Any = js.native
+    def read(size: Double): Any = js.native
+    
+    /**
+      * Is `true` if it is safe to call `readable.read()`, which means
+      * the stream has not been destroyed or emitted `'error'` or `'end'`.
+      * @since v11.4.0
+      */
+    var readable: Boolean = js.native
     
     /**
       * Returns whether the stream was destroyed or errored before emitting `'end'`.
@@ -374,6 +523,8 @@ object streamMod {
       */
     val readableObjectMode: Boolean = js.native
     
+    def removeListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("removeListener")
@@ -388,6 +539,81 @@ object streamMod {
     def removeListener_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
+    
+    /**
+      * The `readable.resume()` method causes an explicitly paused `Readable` stream to
+      * resume emitting `'data'` events, switching the stream into flowing mode.
+      *
+      * The `readable.resume()` method can be used to fully consume the data from a
+      * stream without actually processing any of that data:
+      *
+      * ```js
+      * getReadableStreamSomehow()
+      *   .resume()
+      *   .on('end', () => {
+      *     console.log('Reached the end, but did not read anything.');
+      *   });
+      * ```
+      *
+      * The `readable.resume()` method has no effect if there is a `'readable'`event listener.
+      * @since v0.9.4
+      */
+    def resume(): this.type = js.native
+    
+    /**
+      * The `readable.setEncoding()` method sets the character encoding for
+      * data read from the `Readable` stream.
+      *
+      * By default, no encoding is assigned and stream data will be returned as`Buffer` objects. Setting an encoding causes the stream data
+      * to be returned as strings of the specified encoding rather than as `Buffer`objects. For instance, calling `readable.setEncoding('utf8')` will cause the
+      * output data to be interpreted as UTF-8 data, and passed as strings. Calling`readable.setEncoding('hex')` will cause the data to be encoded in hexadecimal
+      * string format.
+      *
+      * The `Readable` stream will properly handle multi-byte characters delivered
+      * through the stream that would otherwise become improperly decoded if simply
+      * pulled from the stream as `Buffer` objects.
+      *
+      * ```js
+      * const readable = getReadableStreamSomehow();
+      * readable.setEncoding('utf8');
+      * readable.on('data', (chunk) => {
+      *   assert.equal(typeof chunk, 'string');
+      *   console.log('Got %d characters of string data:', chunk.length);
+      * });
+      * ```
+      * @since v0.9.4
+      * @param encoding The encoding to use.
+      */
+    def setEncoding(encoding: BufferEncoding): this.type = js.native
+    
+    /**
+      * The `readable.unpipe()` method detaches a `Writable` stream previously attached
+      * using the {@link pipe} method.
+      *
+      * If the `destination` is not specified, then _all_ pipes are detached.
+      *
+      * If the `destination` is specified, but no pipe is set up for it, then
+      * the method does nothing.
+      *
+      * ```js
+      * const fs = require('fs');
+      * const readable = getReadableStreamSomehow();
+      * const writable = fs.createWriteStream('file.txt');
+      * // All the data from readable goes into 'file.txt',
+      * // but only for the first second.
+      * readable.pipe(writable);
+      * setTimeout(() => {
+      *   console.log('Stop writing to file.txt.');
+      *   readable.unpipe(writable);
+      *   console.log('Manually close the file stream.');
+      *   writable.end();
+      * }, 1000);
+      * ```
+      * @since v0.9.4
+      * @param destination Optional specific stream to unpipe
+      */
+    def unpipe(): this.type = js.native
+    def unpipe(destination: WritableStream[Any]): this.type = js.native
     
     /**
       * Passing `chunk` as `null` signals the end of the stream (EOF) and behaves the
@@ -420,7 +646,7 @@ object streamMod {
       *     let chunk;
       *     while (null !== (chunk = stream.read())) {
       *       const str = decoder.write(chunk);
-      *       if (str.match(/\n\n/)) {
+      *       if (str.includes('\n\n')) {
       *         // Found the header boundary.
       *         const split = str.split(/\n\n/);
       *         header += split.shift();
@@ -433,10 +659,10 @@ object streamMod {
       *           stream.unshift(buf);
       *         // Now the body of the message can be read from the stream.
       *         callback(null, header, stream);
-      *       } else {
-      *         // Still reading the header.
-      *         header += str;
+      *         return;
       *       }
+      *       // Still reading the header.
+      *       header += str;
       *     }
       *   }
       * }
@@ -456,6 +682,33 @@ object streamMod {
       */
     def unshift(chunk: Any): Unit = js.native
     def unshift(chunk: Any, encoding: BufferEncoding): Unit = js.native
+    
+    /**
+      * Prior to Node.js 0.10, streams did not implement the entire `stream` module API
+      * as it is currently defined. (See `Compatibility` for more information.)
+      *
+      * When using an older Node.js library that emits `'data'` events and has a {@link pause} method that is advisory only, the`readable.wrap()` method can be used to create a `Readable`
+      * stream that uses
+      * the old stream as its data source.
+      *
+      * It will rarely be necessary to use `readable.wrap()` but the method has been
+      * provided as a convenience for interacting with older Node.js applications and
+      * libraries.
+      *
+      * ```js
+      * const { OldReader } = require('./old-api-module.js');
+      * const { Readable } = require('stream');
+      * const oreader = new OldReader();
+      * const myReader = new Readable().wrap(oreader);
+      *
+      * myReader.on('readable', () => {
+      *   myReader.read(); // etc.
+      * });
+      * ```
+      * @since v0.9.4
+      * @param stream An "old style" readable stream
+      */
+    def wrap(stream: org.scalajs.dom.ReadableStream[Any]): this.type = js.native
   }
   object Readable {
     
@@ -467,29 +720,40 @@ object streamMod {
       * A utility method for creating Readable Streams out of iterators.
       */
     /* static member */
-    @scala.inline
-    def from(iterable: js.Iterable[Any]): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[Readable]
-    @scala.inline
-    def from(iterable: js.Iterable[Any], options: ReadableOptions): Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Readable]
-    @scala.inline
-    def from(iterable: AsyncIterable[Any]): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[Readable]
-    @scala.inline
-    def from(iterable: AsyncIterable[Any], options: ReadableOptions): Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Readable]
+    inline def from(iterable: js.Iterable[Any]): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[Readable]
+    inline def from(iterable: js.Iterable[Any], options: ReadableOptions): Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Readable]
+    inline def from(iterable: AsyncIterable[Any]): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any]).asInstanceOf[Readable]
+    inline def from(iterable: AsyncIterable[Any], options: ReadableOptions): Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("from")(iterable.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Readable]
     
-    @scala.inline
-    def isDisturbed(stream: ReadableStream): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    /**
+      * A utility method for creating a `Readable` from a web `ReadableStream`.
+      * @since v17.0.0
+      * @experimental
+      */
+    /* static member */
+    inline def fromWeb(readableStream: tmttyped.node.streamWebMod.ReadableStream[Any]): Readable = ^.asInstanceOf[js.Dynamic].applyDynamic("fromWeb")(readableStream.asInstanceOf[js.Any]).asInstanceOf[Readable]
+    inline def fromWeb(readableStream: tmttyped.node.streamWebMod.ReadableStream[Any], options: PickReadableOptionsencodi): Readable = (^.asInstanceOf[js.Dynamic].applyDynamic("fromWeb")(readableStream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Readable]
+    
+    inline def isDisturbed(stream: org.scalajs.dom.ReadableStream[Any]): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
     /**
       * Returns whether the stream has been read from or cancelled.
       * @since v16.8.0
       */
     /* static member */
-    @scala.inline
-    def isDisturbed(stream: Readable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    inline def isDisturbed(stream: Readable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isDisturbed")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+    
+    /**
+      * A utility method for creating a web `ReadableStream` from a `Readable`.
+      * @since v17.0.0
+      * @experimental
+      */
+    /* static member */
+    inline def toWeb(streamReadable: Readable): tmttyped.node.streamWebMod.ReadableStream[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("toWeb")(streamReadable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamWebMod.ReadableStream[Any]]
   }
   
   @JSImport("stream", "Stream")
   @js.native
-  class Stream () extends StObject {
+  open class Stream () extends StObject {
     def this(opts: ReadableOptions) = this()
   }
   
@@ -506,7 +770,7 @@ object streamMod {
     */
   @JSImport("stream", "Transform")
   @js.native
-  class Transform () extends StObject {
+  open class Transform () extends StObject {
     def this(opts: TransformOptions) = this()
     
     def _flush(callback: TransformCallback): Unit = js.native
@@ -519,9 +783,9 @@ object streamMod {
     */
   @JSImport("stream", "Writable")
   @js.native
-  class Writable ()
+  open class Writable ()
     extends StObject
-       with WritableStream {
+       with WritableStream[Any] {
     def this(opts: WritableOptions) = this()
     
     var _construct: js.UndefOr[
@@ -547,6 +811,8 @@ object streamMod {
         ]
       ] = js.native
     
+    def addListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     /**
       * Event emitter
       * The defined events on documents including:
@@ -569,6 +835,12 @@ object streamMod {
     def addListener_pipe(event: pipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     @JSName("addListener")
     def addListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
+    
+    /**
+      * Is true after 'close' has been emitted.
+      * @since v18.0.0
+      */
+    val closed: Boolean = js.native
     
     /**
       * The `writable.cork()` method forces all written data to be buffered in memory.
@@ -611,6 +883,8 @@ object streamMod {
       */
     var destroyed: Boolean = js.native
     
+    def emit(event: String, args: Any*): Boolean = js.native
+    def emit(event: js.Symbol, args: Any*): Boolean = js.native
     @JSName("emit")
     def emit_close(event: close): Boolean = js.native
     @JSName("emit")
@@ -624,11 +898,43 @@ object streamMod {
     @JSName("emit")
     def emit_unpipe(event: unpipe, src: Readable): Boolean = js.native
     
+    /**
+      * Calling the `writable.end()` method signals that no more data will be written
+      * to the `Writable`. The optional `chunk` and `encoding` arguments allow one
+      * final additional chunk of data to be written immediately before closing the
+      * stream.
+      *
+      * Calling the {@link write} method after calling {@link end} will raise an error.
+      *
+      * ```js
+      * // Write 'hello, ' and then end with 'world!'.
+      * const fs = require('fs');
+      * const file = fs.createWriteStream('example.txt');
+      * file.write('hello, ');
+      * file.end('world!');
+      * // Writing more now is not allowed!
+      * ```
+      * @since v0.9.4
+      * @param chunk Optional data to write. For streams not operating in object mode, `chunk` must be a string, `Buffer` or `Uint8Array`. For object mode streams, `chunk` may be any
+      * JavaScript value other than `null`.
+      * @param encoding The encoding if `chunk` is a string
+      * @param callback Callback for when the stream is finished.
+      */
+    def end(): this.type = js.native
+    def end(cb: js.Function0[Unit]): this.type = js.native
     def end(chunk: Any): this.type = js.native
     def end(chunk: Any, cb: js.Function0[Unit]): this.type = js.native
     def end(chunk: Any, encoding: BufferEncoding): this.type = js.native
     def end(chunk: Any, encoding: BufferEncoding, cb: js.Function0[Unit]): this.type = js.native
     
+    /**
+      * Returns error if the stream has been destroyed with an error.
+      * @since v18.0.0
+      */
+    val errored: js.Error | Null = js.native
+    
+    def on(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def on(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("on")
     def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("on")
@@ -642,6 +948,8 @@ object streamMod {
     @JSName("on")
     def on_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     
+    def once(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def once(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("once")
     def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("once")
@@ -655,6 +963,8 @@ object streamMod {
     @JSName("once")
     def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     
+    def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
     def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependListener")
@@ -668,6 +978,8 @@ object streamMod {
     @JSName("prependListener")
     def prependListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     
+    def prependOnceListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def prependOnceListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependOnceListener")
     def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("prependOnceListener")
@@ -681,6 +993,8 @@ object streamMod {
     @JSName("prependOnceListener")
     def prependOnceListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
     
+    def removeListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
+    def removeListener(event: js.Symbol, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("removeListener")
     def removeListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
     @JSName("removeListener")
@@ -705,8 +1019,8 @@ object streamMod {
       * The `writable.uncork()` method flushes all data buffered since {@link cork} was called.
       *
       * When using `writable.cork()` and `writable.uncork()` to manage the buffering
-      * of writes to a stream, it is recommended that calls to `writable.uncork()` be
-      * deferred using `process.nextTick()`. Doing so allows batching of all`writable.write()` calls that occur within a given Node.js event loop phase.
+      * of writes to a stream, defer calls to `writable.uncork()` using`process.nextTick()`. Doing so allows batching of all`writable.write()` calls that occur within a given Node.js event
+      * loop phase.
       *
       * ```js
       * stream.cork();
@@ -735,6 +1049,13 @@ object streamMod {
       * @since v0.11.2
       */
     def uncork(): Unit = js.native
+    
+    /**
+      * Is `true` if it is safe to call `writable.write()`, which means
+      * the stream has not been destroyed, errored or ended.
+      * @since v11.4.0
+      */
+    val writable: Boolean = js.native
     
     /**
       * Number of times `writable.uncork()` needs to be
@@ -771,6 +1092,12 @@ object streamMod {
     val writableLength: Double = js.native
     
     /**
+      * Is `true` if the stream's buffer has been full and stream will emit 'drain'.
+      * @since v15.2.0, v14.17.0
+      */
+    val writableNeedDrain: Boolean = js.native
+    
+    /**
       * Getter for the property `objectMode` of a given `Writable` stream.
       * @since v12.3.0
       */
@@ -790,7 +1117,7 @@ object streamMod {
       * While a stream is not draining, calls to `write()` will buffer `chunk`, and
       * return false. Once all currently buffered chunks are drained (accepted for
       * delivery by the operating system), the `'drain'` event will be emitted.
-      * It is recommended that once `write()` returns false, no more chunks be written
+      * Once `write()` returns false, do not write more chunks
       * until the `'drain'` event is emitted. While calling `write()` on a stream that
       * is not draining is allowed, Node.js will buffer all written chunks until
       * maximum memory usage occurs, at which point it will abort unconditionally.
@@ -841,6 +1168,29 @@ object streamMod {
       callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
     ): Boolean = js.native
   }
+  object Writable {
+    
+    @JSImport("stream", "Writable")
+    @js.native
+    val ^ : js.Any = js.native
+    
+    /**
+      * A utility method for creating a `Writable` from a web `WritableStream`.
+      * @since v17.0.0
+      * @experimental
+      */
+    /* static member */
+    inline def fromWeb(writableStream: tmttyped.node.streamWebMod.WritableStream[Any]): Writable = ^.asInstanceOf[js.Dynamic].applyDynamic("fromWeb")(writableStream.asInstanceOf[js.Any]).asInstanceOf[Writable]
+    inline def fromWeb(writableStream: tmttyped.node.streamWebMod.WritableStream[Any], options: PickWritableOptionsdecode): Writable = (^.asInstanceOf[js.Dynamic].applyDynamic("fromWeb")(writableStream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[Writable]
+    
+    /**
+      * A utility method for creating a web `WritableStream` from a `Writable`.
+      * @since v17.0.0
+      * @experimental
+      */
+    /* static member */
+    inline def toWeb(streamWritable: Writable): tmttyped.node.streamWebMod.WritableStream[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("toWeb")(streamWritable.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.streamWebMod.WritableStream[Any]]
+  }
   
   /**
     * Attaches an AbortSignal to a readable or writeable stream. This lets code
@@ -887,8 +1237,7 @@ object streamMod {
     * @param signal A signal representing possible cancellation
     * @param stream a stream to attach a signal to
     */
-  @scala.inline
-  def addAbortSignal[T /* <: Stream */](signal: AbortSignal, stream: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("addAbortSignal")(signal.asInstanceOf[js.Any], stream.asInstanceOf[js.Any])).asInstanceOf[T]
+  inline def addAbortSignal[T /* <: Stream */](signal: AbortSignal, stream: T): T = (^.asInstanceOf[js.Dynamic].applyDynamic("addAbortSignal")(signal.asInstanceOf[js.Any], stream.asInstanceOf[js.Any])).asInstanceOf[T]
   
   object consumers {
     
@@ -896,52 +1245,36 @@ object streamMod {
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def arrayBuffer(stream: ReadableStream): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
-    @scala.inline
-    def arrayBuffer(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
-    @scala.inline
-    def arrayBuffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    inline def arrayBuffer(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    inline def arrayBuffer(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
+    inline def arrayBuffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[js.typedarray.ArrayBuffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("arrayBuffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[js.typedarray.ArrayBuffer]]
     
-    @scala.inline
-    def blob(stream: ReadableStream): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
-    @scala.inline
-    def blob(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
-    @scala.inline
-    def blob(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    inline def blob(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    inline def blob(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
+    inline def blob(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("blob")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Blob]]
     
-    @scala.inline
-    def buffer(stream: ReadableStream): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def buffer(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
-    @scala.inline
-    def buffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    inline def buffer(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    inline def buffer(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
+    inline def buffer(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Buffer] = ^.asInstanceOf[js.Dynamic].applyDynamic("buffer")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Buffer]]
     
-    @scala.inline
-    def json(stream: ReadableStream): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
-    @scala.inline
-    def json(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
-    @scala.inline
-    def json(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    inline def json(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    inline def json(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
+    inline def json(stream: AsyncIterator[Any, Any, Unit]): js.Promise[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("json")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Any]]
     
-    @scala.inline
-    def text(stream: ReadableStream): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def text(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
-    @scala.inline
-    def text(stream: AsyncIterator[Any, Any, Unit]): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def text(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def text(stream: tmttyped.node.nodeStreamMod.Readable): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
+    inline def text(stream: AsyncIterator[Any, Any, Unit]): js.Promise[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("text")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[String]]
   }
   
-  @scala.inline
-  def finished(stream: ReadWriteStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
-  @scala.inline
-  def finished(
-    stream: ReadWriteStream,
-    options: FinishedOptions,
-    callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
-  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
-  @scala.inline
-  def finished(stream: ReadableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  inline def finished(
+    stream: org.scalajs.dom.ReadableStream[Any],
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
   /**
     * A function to get notified when a stream is no longer readable, writable
     * or has experienced an error or a premature close event.
@@ -998,40 +1331,101 @@ object streamMod {
     * @param callback A callback function that takes an optional error argument.
     * @return A cleanup function which removes all registered listeners.
     */
-  @scala.inline
-  def finished(
-    stream: ReadableStream,
+  inline def finished(
+    stream: org.scalajs.dom.ReadableStream[Any],
     options: FinishedOptions,
-    callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
   ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
-  @scala.inline
-  def finished(stream: WritableStream, callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
-  @scala.inline
-  def finished(
-    stream: WritableStream,
+  inline def finished(
+    stream: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any,
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  inline def finished(
+    stream: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any,
     options: FinishedOptions,
-    callback: js.Function1[/* err */ js.UndefOr[ErrnoException | Null], Unit]
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  inline def finished(
+    stream: WritableStream[Any],
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
+  ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
+  inline def finished(
+    stream: WritableStream[Any],
+    options: FinishedOptions,
+    callback: js.Function1[
+      /* err */ js.UndefOr[
+        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null
+      ], 
+      Unit
+    ]
   ): js.Function0[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[js.Function0[Unit]]
   
-  @scala.inline
-  def pipeline(
-    stream1: ReadableStream,
-    stream2: ReadWriteStream,
-    streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[WritableStream]
-  @scala.inline
-  def pipeline(
-    stream1: ReadableStream,
-    stream2: WritableStream,
-    streams: (ReadWriteStream | WritableStream | (js.Function1[/* err */ ErrnoException | Null, Unit]))*
-  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[WritableStream]
-  @scala.inline
-  def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): WritableStream = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[WritableStream]
-  @scala.inline
-  def pipeline(
-    streams: js.Array[ReadableStream | WritableStream | ReadWriteStream],
-    callback: js.Function1[/* err */ ErrnoException | Null, Unit]
-  ): WritableStream = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream]
+  inline def isErrored(stream: org.scalajs.dom.ReadableStream[Any]): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isErrored")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  /**
+    * Returns whether the stream has encountered an error.
+    * @since v17.3.0
+    */
+  inline def isErrored(stream: Readable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isErrored")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isErrored(stream: Writable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isErrored")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  inline def isErrored(stream: WritableStream[Any]): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isErrored")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  
+  inline def isReadable(stream: org.scalajs.dom.ReadableStream[Any]): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isReadable")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  /**
+    * Returns whether the stream is readable.
+    * @since v17.4.0
+    */
+  inline def isReadable(stream: Readable): Boolean = ^.asInstanceOf[js.Dynamic].applyDynamic("isReadable")(stream.asInstanceOf[js.Any]).asInstanceOf[Boolean]
+  
+  inline def pipeline(
+    stream1: org.scalajs.dom.ReadableStream[Any],
+    stream2: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any,
+    streams: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any) | WritableStream[Any] | (js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]))*
+  ): WritableStream[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[WritableStream[Any]]
+  inline def pipeline(
+    stream1: org.scalajs.dom.ReadableStream[Any],
+    stream2: WritableStream[Any],
+    streams: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any) | WritableStream[Any] | (js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]))*
+  ): WritableStream[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[WritableStream[Any]]
+  inline def pipeline(
+    streams: js.Array[
+      org.scalajs.dom.ReadableStream[Any] | WritableStream[Any] | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any)
+    ]
+  ): WritableStream[Any] = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[WritableStream[Any]]
+  inline def pipeline(
+    streams: js.Array[
+      org.scalajs.dom.ReadableStream[Any] | WritableStream[Any] | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any)
+    ],
+    callback: js.Function1[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Unit
+    ]
+  ): WritableStream[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any]]
   /**
     * A module method to pipe between streams and generators forwarding errors and
     * properly cleaning up and provide a callback when the pipeline is complete.
@@ -1110,7 +1504,7 @@ object streamMod {
     * async function run() {
     *   await pipeline(
     *     fs.createReadStream('lowercase.txt'),
-    *     async function* (source, signal) {
+    *     async function* (source, { signal }) {
     *       source.setEncoding('utf8');  // Work with strings rather than `Buffer`s.
     *       for await (const chunk of source) {
     *         yield await processChunk(chunk, { signal });
@@ -1134,7 +1528,7 @@ object streamMod {
     *
     * async function run() {
     *   await pipeline(
-    *     async function * (signal) {
+    *     async function* ({ signal }) {
     *       await someLongRunningfn({ signal });
     *       yield 'asd';
     *     },
@@ -1153,37 +1547,51 @@ object streamMod {
     *
     * `stream.pipeline()` leaves dangling event listeners on the streams
     * after the `callback` has been invoked. In the case of reuse of streams after
-    * failure, this can cause event listener leaks and swallowed errors.
+    * failure, this can cause event listener leaks and swallowed errors. If the last
+    * stream is readable, dangling event listeners will be removed so that the last
+    * stream can be consumed later.
+    *
+    * `stream.pipeline()` closes all the streams when an error is raised.
+    * The `IncomingRequest` usage with `pipeline` could lead to an unexpected behavior
+    * once it would destroy the socket without sending the expected response.
+    * See the example below:
+    *
+    * ```js
+    * const fs = require('fs');
+    * const http = require('http');
+    * const { pipeline } = require('stream');
+    *
+    * const server = http.createServer((req, res) => {
+    *   const fileStream = fs.createReadStream('./fileNotExist.txt');
+    *   pipeline(fileStream, res, (err) => {
+    *     if (err) {
+    *       console.log(err); // No such file
+    *       // this message can't be sent once `pipeline` already destroyed the socket
+    *       return res.end('error!!!');
+    *     }
+    *   });
+    * });
+    * ```
     * @since v10.0.0
     * @param callback Called when the pipeline is fully done.
     */
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, callback: PipelineCallback[B]): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
+  inline def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, callback: PipelineCallback[B]): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, callback: PipelineCallback[B]): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, callback: PipelineCallback[B]): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
     source: A,
     transform1: T1,
     transform2: T2,
     transform3: T3,
     destination: B,
     callback: PipelineCallback[B]
-  ): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
-  @scala.inline
-  def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
+  ): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
+  inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
     source: A,
     transform1: T1,
     transform2: T2,
@@ -1191,7 +1599,7 @@ object streamMod {
     transform4: T4,
     destination: B,
     callback: PipelineCallback[B]
-  ): WritableStream | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream | B]
+  ): WritableStream[Any] | B = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[WritableStream[Any] | B]
   
   object promises {
     
@@ -1199,51 +1607,47 @@ object streamMod {
     @js.native
     val ^ : js.Any = js.native
     
-    @scala.inline
-    def finished(stream: ReadWriteStream): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def finished(stream: ReadWriteStream, options: FinishedOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def finished(stream: ReadableStream): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def finished(stream: ReadableStream, options: FinishedOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def finished(stream: WritableStream): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def finished(stream: WritableStream, options: FinishedOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def finished(stream: org.scalajs.dom.ReadableStream[Any]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def finished(stream: org.scalajs.dom.ReadableStream[Any], options: FinishedOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def finished(
+      stream: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any
+    ): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def finished(
+      stream: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any,
+      options: FinishedOptions
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def finished(stream: WritableStream[Any]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def finished(stream: WritableStream[Any], options: FinishedOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("finished")(stream.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
     
-    @scala.inline
-    def pipeline(
-      stream1: ReadableStream,
-      stream2: ReadWriteStream,
-      streams: (ReadWriteStream | WritableStream | PipelineOptions)*
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def pipeline(
-      stream1: ReadableStream,
-      stream2: WritableStream,
-      streams: (ReadWriteStream | WritableStream | PipelineOptions)*
-    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream]): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def pipeline(streams: js.Array[ReadableStream | WritableStream | ReadWriteStream], options: PipelineOptions): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
+    inline def pipeline(
+      stream1: org.scalajs.dom.ReadableStream[Any],
+      stream2: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any,
+      streams: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any) | WritableStream[Any] | PipelineOptions)*
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[js.Promise[Unit]]
+    inline def pipeline(
+      stream1: org.scalajs.dom.ReadableStream[Any],
+      stream2: WritableStream[Any],
+      streams: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any) | WritableStream[Any] | PipelineOptions)*
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")((List(stream1.asInstanceOf[js.Any], stream2.asInstanceOf[js.Any])).`++`(streams.asInstanceOf[Seq[js.Any]])*)).asInstanceOf[js.Promise[Unit]]
+    inline def pipeline(
+      streams: js.Array[
+          org.scalajs.dom.ReadableStream[Any] | WritableStream[Any] | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any)
+        ]
+    ): js.Promise[Unit] = ^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any]).asInstanceOf[js.Promise[Unit]]
+    inline def pipeline(
+      streams: js.Array[
+          org.scalajs.dom.ReadableStream[Any] | WritableStream[Any] | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any)
+        ],
+      options: PipelineOptions
+    ): js.Promise[Unit] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(streams.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[Unit]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, B /* <: PipelineDestination[A, Any] */](source: A, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, B /* <: PipelineDestination[T1, Any] */](source: A, transform1: T1, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, B /* <: PipelineDestination[T2, Any] */](source: A, transform1: T1, transform2: T2, destination: B, options: PipelineOptions): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, B /* <: PipelineDestination[T3, Any] */](
       source: A,
       transform1: T1,
       transform2: T2,
@@ -1251,10 +1655,8 @@ object streamMod {
       destination: B,
       options: PipelineOptions
     ): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], destination.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
-    @scala.inline
-    def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](source: A, transform1: T1, transform2: T2, transform3: T3, transform4: T4, destination: B): PipelinePromise[B] = (^.asInstanceOf[js.Dynamic].applyDynamic("pipeline")(source.asInstanceOf[js.Any], transform1.asInstanceOf[js.Any], transform2.asInstanceOf[js.Any], transform3.asInstanceOf[js.Any], transform4.asInstanceOf[js.Any], destination.asInstanceOf[js.Any])).asInstanceOf[PipelinePromise[B]]
+    inline def pipeline[A /* <: PipelineSource[Any] */, T1 /* <: PipelineTransform[A, Any] */, T2 /* <: PipelineTransform[T1, Any] */, T3 /* <: PipelineTransform[T2, Any] */, T4 /* <: PipelineTransform[T3, Any] */, B /* <: PipelineDestination[T4, Any] */](
       source: A,
       transform1: T1,
       transform2: T2,
@@ -1339,23 +1741,18 @@ object streamMod {
   }
   object DuplexOptions {
     
-    @scala.inline
-    def apply(): DuplexOptions = {
+    inline def apply(): DuplexOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[DuplexOptions]
     }
     
-    @scala.inline
-    implicit class DuplexOptionsMutableBuilder[Self <: DuplexOptions] (val x: Self) extends AnyVal {
+    extension [Self <: DuplexOptions](x: Self) {
       
-      @scala.inline
-      def setAllowHalfOpen(value: Boolean): Self = StObject.set(x, "allowHalfOpen", value.asInstanceOf[js.Any])
+      inline def setAllowHalfOpen(value: Boolean): Self = StObject.set(x, "allowHalfOpen", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAllowHalfOpenUndefined: Self = StObject.set(x, "allowHalfOpen", js.undefined)
+      inline def setAllowHalfOpenUndefined: Self = StObject.set(x, "allowHalfOpen", js.undefined)
       
-      @scala.inline
-      def setConstruct(
+      inline def setConstruct(
         value: js.ThisFunction1[
               /* this */ Duplex, 
               /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
@@ -1363,23 +1760,17 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "construct", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
+      inline def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
       
-      @scala.inline
-      def setDecodeStrings(value: Boolean): Self = StObject.set(x, "decodeStrings", value.asInstanceOf[js.Any])
+      inline def setDecodeStrings(value: Boolean): Self = StObject.set(x, "decodeStrings", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDecodeStringsUndefined: Self = StObject.set(x, "decodeStrings", js.undefined)
+      inline def setDecodeStringsUndefined: Self = StObject.set(x, "decodeStrings", js.undefined)
       
-      @scala.inline
-      def setDefaultEncoding(value: BufferEncoding): Self = StObject.set(x, "defaultEncoding", value.asInstanceOf[js.Any])
+      inline def setDefaultEncoding(value: BufferEncoding): Self = StObject.set(x, "defaultEncoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDefaultEncodingUndefined: Self = StObject.set(x, "defaultEncoding", js.undefined)
+      inline def setDefaultEncodingUndefined: Self = StObject.set(x, "defaultEncoding", js.undefined)
       
-      @scala.inline
-      def setDestroy(
+      inline def setDestroy(
         value: js.ThisFunction2[
               /* this */ Duplex, 
               /* error */ js.Error | Null, 
@@ -1388,11 +1779,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "destroy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
+      inline def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
       
-      @scala.inline
-      def setFinal(
+      inline def setFinal(
         value: js.ThisFunction1[
               (/* this */ Duplex) | (/* this */ Writable), 
               /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
@@ -1400,47 +1789,33 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "final", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
+      inline def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
       
-      @scala.inline
-      def setRead(value: js.ThisFunction1[/* this */ Duplex, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
+      inline def setRead(value: js.ThisFunction1[/* this */ Duplex, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
+      inline def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
       
-      @scala.inline
-      def setReadableHighWaterMark(value: Double): Self = StObject.set(x, "readableHighWaterMark", value.asInstanceOf[js.Any])
+      inline def setReadableHighWaterMark(value: Double): Self = StObject.set(x, "readableHighWaterMark", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadableHighWaterMarkUndefined: Self = StObject.set(x, "readableHighWaterMark", js.undefined)
+      inline def setReadableHighWaterMarkUndefined: Self = StObject.set(x, "readableHighWaterMark", js.undefined)
       
-      @scala.inline
-      def setReadableObjectMode(value: Boolean): Self = StObject.set(x, "readableObjectMode", value.asInstanceOf[js.Any])
+      inline def setReadableObjectMode(value: Boolean): Self = StObject.set(x, "readableObjectMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadableObjectModeUndefined: Self = StObject.set(x, "readableObjectMode", js.undefined)
+      inline def setReadableObjectModeUndefined: Self = StObject.set(x, "readableObjectMode", js.undefined)
       
-      @scala.inline
-      def setWritableCorked(value: Double): Self = StObject.set(x, "writableCorked", value.asInstanceOf[js.Any])
+      inline def setWritableCorked(value: Double): Self = StObject.set(x, "writableCorked", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritableCorkedUndefined: Self = StObject.set(x, "writableCorked", js.undefined)
+      inline def setWritableCorkedUndefined: Self = StObject.set(x, "writableCorked", js.undefined)
       
-      @scala.inline
-      def setWritableHighWaterMark(value: Double): Self = StObject.set(x, "writableHighWaterMark", value.asInstanceOf[js.Any])
+      inline def setWritableHighWaterMark(value: Double): Self = StObject.set(x, "writableHighWaterMark", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritableHighWaterMarkUndefined: Self = StObject.set(x, "writableHighWaterMark", js.undefined)
+      inline def setWritableHighWaterMarkUndefined: Self = StObject.set(x, "writableHighWaterMark", js.undefined)
       
-      @scala.inline
-      def setWritableObjectMode(value: Boolean): Self = StObject.set(x, "writableObjectMode", value.asInstanceOf[js.Any])
+      inline def setWritableObjectMode(value: Boolean): Self = StObject.set(x, "writableObjectMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritableObjectModeUndefined: Self = StObject.set(x, "writableObjectMode", js.undefined)
+      inline def setWritableObjectModeUndefined: Self = StObject.set(x, "writableObjectMode", js.undefined)
       
-      @scala.inline
-      def setWrite(
+      inline def setWrite(
         value: js.ThisFunction3[
               (/* this */ Duplex) | (/* this */ Writable), 
               /* chunk */ Any, 
@@ -1450,11 +1825,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "write", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
+      inline def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
       
-      @scala.inline
-      def setWritev(
+      inline def setWritev(
         value: js.ThisFunction2[
               (/* this */ Duplex) | (/* this */ Writable), 
               /* chunks */ js.Array[Chunk], 
@@ -1463,8 +1836,7 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "writev", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
+      inline def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
     }
   }
   
@@ -1480,32 +1852,24 @@ object streamMod {
   }
   object FinishedOptions {
     
-    @scala.inline
-    def apply(): FinishedOptions = {
+    inline def apply(): FinishedOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[FinishedOptions]
     }
     
-    @scala.inline
-    implicit class FinishedOptionsMutableBuilder[Self <: FinishedOptions] (val x: Self) extends AnyVal {
+    extension [Self <: FinishedOptions](x: Self) {
       
-      @scala.inline
-      def setError(value: Boolean): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
+      inline def setError(value: Boolean): Self = StObject.set(x, "error", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setErrorUndefined: Self = StObject.set(x, "error", js.undefined)
+      inline def setErrorUndefined: Self = StObject.set(x, "error", js.undefined)
       
-      @scala.inline
-      def setReadable(value: Boolean): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
+      inline def setReadable(value: Boolean): Self = StObject.set(x, "readable", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadableUndefined: Self = StObject.set(x, "readable", js.undefined)
+      inline def setReadableUndefined: Self = StObject.set(x, "readable", js.undefined)
       
-      @scala.inline
-      def setWritable(value: Boolean): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])
+      inline def setWritable(value: Boolean): Self = StObject.set(x, "writable", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritableUndefined: Self = StObject.set(x, "writable", js.undefined)
+      inline def setWritableUndefined: Self = StObject.set(x, "writable", js.undefined)
     }
   }
   
@@ -1521,32 +1885,33 @@ object streamMod {
   }
   object Pipe {
     
-    @scala.inline
-    def apply(close: () => Unit, hasRef: () => Boolean, ref: () => Unit, unref: () => Unit): Pipe = {
+    inline def apply(close: () => Unit, hasRef: () => Boolean, ref: () => Unit, unref: () => Unit): Pipe = {
       val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), hasRef = js.Any.fromFunction0(hasRef), ref = js.Any.fromFunction0(ref), unref = js.Any.fromFunction0(unref))
       __obj.asInstanceOf[Pipe]
     }
     
-    @scala.inline
-    implicit class PipeMutableBuilder[Self <: Pipe] (val x: Self) extends AnyVal {
+    extension [Self <: Pipe](x: Self) {
       
-      @scala.inline
-      def setClose(value: () => Unit): Self = StObject.set(x, "close", js.Any.fromFunction0(value))
+      inline def setClose(value: () => Unit): Self = StObject.set(x, "close", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setHasRef(value: () => Boolean): Self = StObject.set(x, "hasRef", js.Any.fromFunction0(value))
+      inline def setHasRef(value: () => Boolean): Self = StObject.set(x, "hasRef", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setRef(value: () => Unit): Self = StObject.set(x, "ref", js.Any.fromFunction0(value))
+      inline def setRef(value: () => Unit): Self = StObject.set(x, "ref", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setUnref(value: () => Unit): Self = StObject.set(x, "unref", js.Any.fromFunction0(value))
+      inline def setUnref(value: () => Unit): Self = StObject.set(x, "unref", js.Any.fromFunction0(value))
     }
   }
   
-  type PipelineCallback[S /* <: PipelineDestination[Any, Any] */] = (js.Function1[/* err */ ErrnoException | Null, Unit]) | (js.Function2[/* err */ ErrnoException | Null, /* value */ Any, Unit])
+  type PipelineCallback[S /* <: PipelineDestination[Any, Any] */] = (js.Function1[
+    /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+    Unit
+  ]) | (js.Function2[
+    /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+    /* value */ Any, 
+    Unit
+  ])
   
-  type PipelineDestination[S /* <: PipelineTransformSource[Any] */, P] = WritableStream | PipelineDestinationIterableFunction[Any] | (PipelineDestinationPromiseFunction[Any, P])
+  type PipelineDestination[S /* <: PipelineTransformSource[Any] */, P] = WritableStream[Any] | PipelineDestinationIterableFunction[Any] | (PipelineDestinationPromiseFunction[Any, P])
   
   type PipelineDestinationIterableFunction[T] = js.Function1[/* source */ AsyncIterable[T], AsyncIterable[Any]]
   
@@ -1558,27 +1923,24 @@ object streamMod {
   }
   object PipelineOptions {
     
-    @scala.inline
-    def apply(signal: AbortSignal): PipelineOptions = {
+    inline def apply(signal: AbortSignal): PipelineOptions = {
       val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
       __obj.asInstanceOf[PipelineOptions]
     }
     
-    @scala.inline
-    implicit class PipelineOptionsMutableBuilder[Self <: PipelineOptions] (val x: Self) extends AnyVal {
+    extension [Self <: PipelineOptions](x: Self) {
       
-      @scala.inline
-      def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
+      inline def setSignal(value: AbortSignal): Self = StObject.set(x, "signal", value.asInstanceOf[js.Any])
     }
   }
   
   type PipelinePromise[S /* <: PipelineDestination[Any, Any] */] = js.Promise[Any | Unit]
   
-  type PipelineSource[T] = js.Iterable[T] | AsyncIterable[T] | ReadableStream | PipelineSourceFunction[T]
+  type PipelineSource[T] = js.Iterable[T] | AsyncIterable[T] | org.scalajs.dom.ReadableStream[Any] | PipelineSourceFunction[T]
   
   type PipelineSourceFunction[T] = js.Function0[js.Iterable[T] | AsyncIterable[T]]
   
-  type PipelineTransform[S /* <: PipelineTransformSource[Any] */, U] = ReadWriteStream | (js.Function1[/* source */ S | AsyncIterable[Any], AsyncIterable[U]])
+  type PipelineTransform[S /* <: PipelineTransformSource[Any] */, U] = (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadWriteStream */ Any) | (js.Function1[/* source */ S | AsyncIterable[Any], AsyncIterable[U]])
   
   type PipelineTransformSource[T] = PipelineSource[T] | (PipelineTransform[Any, T])
   
@@ -1592,26 +1954,20 @@ object streamMod {
   }
   object ReadableOptions {
     
-    @scala.inline
-    def apply(): ReadableOptions = {
+    inline def apply(): ReadableOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ReadableOptions]
     }
     
-    @scala.inline
-    implicit class ReadableOptionsMutableBuilder[Self <: ReadableOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ReadableOptions](x: Self) {
       
-      @scala.inline
-      def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+      inline def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
+      inline def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
       
-      @scala.inline
-      def setRead(value: js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
+      inline def setRead(value: js.ThisFunction1[/* this */ Readable, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
+      inline def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
     }
   }
   
@@ -1646,23 +2002,18 @@ object streamMod {
   }
   object StreamOptions {
     
-    @scala.inline
-    def apply[T /* <: Stream */](): StreamOptions[T] = {
+    inline def apply[T /* <: Stream */](): StreamOptions[T] = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[StreamOptions[T]]
     }
     
-    @scala.inline
-    implicit class StreamOptionsMutableBuilder[Self <: StreamOptions[_], T /* <: Stream */] (val x: Self with StreamOptions[T]) extends AnyVal {
+    extension [Self <: StreamOptions[?], T /* <: Stream */](x: Self & StreamOptions[T]) {
       
-      @scala.inline
-      def setAutoDestroy(value: Boolean): Self = StObject.set(x, "autoDestroy", value.asInstanceOf[js.Any])
+      inline def setAutoDestroy(value: Boolean): Self = StObject.set(x, "autoDestroy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setAutoDestroyUndefined: Self = StObject.set(x, "autoDestroy", js.undefined)
+      inline def setAutoDestroyUndefined: Self = StObject.set(x, "autoDestroy", js.undefined)
       
-      @scala.inline
-      def setConstruct(
+      inline def setConstruct(
         value: js.ThisFunction1[
               /* this */ T, 
               /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
@@ -1670,11 +2021,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "construct", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
+      inline def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
       
-      @scala.inline
-      def setDestroy(
+      inline def setDestroy(
         value: js.ThisFunction2[
               /* this */ T, 
               /* error */ js.Error | Null, 
@@ -1683,26 +2032,19 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "destroy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
+      inline def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
       
-      @scala.inline
-      def setEmitClose(value: Boolean): Self = StObject.set(x, "emitClose", value.asInstanceOf[js.Any])
+      inline def setEmitClose(value: Boolean): Self = StObject.set(x, "emitClose", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEmitCloseUndefined: Self = StObject.set(x, "emitClose", js.undefined)
+      inline def setEmitCloseUndefined: Self = StObject.set(x, "emitClose", js.undefined)
       
-      @scala.inline
-      def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
+      inline def setHighWaterMark(value: Double): Self = StObject.set(x, "highWaterMark", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHighWaterMarkUndefined: Self = StObject.set(x, "highWaterMark", js.undefined)
+      inline def setHighWaterMarkUndefined: Self = StObject.set(x, "highWaterMark", js.undefined)
       
-      @scala.inline
-      def setObjectMode(value: Boolean): Self = StObject.set(x, "objectMode", value.asInstanceOf[js.Any])
+      inline def setObjectMode(value: Boolean): Self = StObject.set(x, "objectMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setObjectModeUndefined: Self = StObject.set(x, "objectMode", js.undefined)
+      inline def setObjectModeUndefined: Self = StObject.set(x, "objectMode", js.undefined)
     }
   }
   
@@ -1778,17 +2120,14 @@ object streamMod {
   }
   object TransformOptions {
     
-    @scala.inline
-    def apply(): TransformOptions = {
+    inline def apply(): TransformOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[TransformOptions]
     }
     
-    @scala.inline
-    implicit class TransformOptionsMutableBuilder[Self <: TransformOptions] (val x: Self) extends AnyVal {
+    extension [Self <: TransformOptions](x: Self) {
       
-      @scala.inline
-      def setConstruct(
+      inline def setConstruct(
         value: js.ThisFunction1[
               /* this */ Transform, 
               /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
@@ -1796,11 +2135,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "construct", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
+      inline def setConstructUndefined: Self = StObject.set(x, "construct", js.undefined)
       
-      @scala.inline
-      def setDestroy(
+      inline def setDestroy(
         value: js.ThisFunction2[
               /* this */ Transform, 
               /* error */ js.Error | Null, 
@@ -1809,11 +2146,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "destroy", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
+      inline def setDestroyUndefined: Self = StObject.set(x, "destroy", js.undefined)
       
-      @scala.inline
-      def setFinal(
+      inline def setFinal(
         value: js.ThisFunction1[
               /* this */ Transform, 
               /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
@@ -1821,23 +2156,17 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "final", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
+      inline def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
       
-      @scala.inline
-      def setFlush(value: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit]): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
+      inline def setFlush(value: js.ThisFunction1[/* this */ Transform, /* callback */ TransformCallback, Unit]): Self = StObject.set(x, "flush", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
+      inline def setFlushUndefined: Self = StObject.set(x, "flush", js.undefined)
       
-      @scala.inline
-      def setRead(value: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
+      inline def setRead(value: js.ThisFunction1[/* this */ Transform, /* size */ Double, Unit]): Self = StObject.set(x, "read", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
+      inline def setReadUndefined: Self = StObject.set(x, "read", js.undefined)
       
-      @scala.inline
-      def setTransform(
+      inline def setTransform(
         value: js.ThisFunction3[
               /* this */ Transform, 
               /* chunk */ Any, 
@@ -1847,11 +2176,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "transform", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTransformUndefined: Self = StObject.set(x, "transform", js.undefined)
+      inline def setTransformUndefined: Self = StObject.set(x, "transform", js.undefined)
       
-      @scala.inline
-      def setWrite(
+      inline def setWrite(
         value: js.ThisFunction3[
               /* this */ Transform, 
               /* chunk */ Any, 
@@ -1861,11 +2188,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "write", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
+      inline def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
       
-      @scala.inline
-      def setWritev(
+      inline def setWritev(
         value: js.ThisFunction2[
               /* this */ Transform, 
               /* chunks */ js.Array[Chunk], 
@@ -1874,8 +2199,7 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "writev", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
+      inline def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
     }
   }
   
@@ -1916,29 +2240,22 @@ object streamMod {
   }
   object WritableOptions {
     
-    @scala.inline
-    def apply(): WritableOptions = {
+    inline def apply(): WritableOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[WritableOptions]
     }
     
-    @scala.inline
-    implicit class WritableOptionsMutableBuilder[Self <: WritableOptions] (val x: Self) extends AnyVal {
+    extension [Self <: WritableOptions](x: Self) {
       
-      @scala.inline
-      def setDecodeStrings(value: Boolean): Self = StObject.set(x, "decodeStrings", value.asInstanceOf[js.Any])
+      inline def setDecodeStrings(value: Boolean): Self = StObject.set(x, "decodeStrings", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDecodeStringsUndefined: Self = StObject.set(x, "decodeStrings", js.undefined)
+      inline def setDecodeStringsUndefined: Self = StObject.set(x, "decodeStrings", js.undefined)
       
-      @scala.inline
-      def setDefaultEncoding(value: BufferEncoding): Self = StObject.set(x, "defaultEncoding", value.asInstanceOf[js.Any])
+      inline def setDefaultEncoding(value: BufferEncoding): Self = StObject.set(x, "defaultEncoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setDefaultEncodingUndefined: Self = StObject.set(x, "defaultEncoding", js.undefined)
+      inline def setDefaultEncodingUndefined: Self = StObject.set(x, "defaultEncoding", js.undefined)
       
-      @scala.inline
-      def setFinal(
+      inline def setFinal(
         value: js.ThisFunction1[
               /* this */ Writable, 
               /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
@@ -1946,11 +2263,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "final", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
+      inline def setFinalUndefined: Self = StObject.set(x, "final", js.undefined)
       
-      @scala.inline
-      def setWrite(
+      inline def setWrite(
         value: js.ThisFunction3[
               /* this */ Writable, 
               /* chunk */ Any, 
@@ -1960,11 +2275,9 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "write", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
+      inline def setWriteUndefined: Self = StObject.set(x, "write", js.undefined)
       
-      @scala.inline
-      def setWritev(
+      inline def setWritev(
         value: js.ThisFunction2[
               /* this */ Writable, 
               /* chunks */ js.Array[Chunk], 
@@ -1973,15 +2286,14 @@ object streamMod {
             ]
       ): Self = StObject.set(x, "writev", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
+      inline def setWritevUndefined: Self = StObject.set(x, "writev", js.undefined)
     }
   }
   
   @js.native
   trait internal extends StObject {
     
-    def pipe[T /* <: WritableStream */](destination: T): T = js.native
-    def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
+    def pipe[T /* <: WritableStream[Any] */](destination: T): T = js.native
+    def pipe[T /* <: WritableStream[Any] */](destination: T, options: End): T = js.native
   }
 }

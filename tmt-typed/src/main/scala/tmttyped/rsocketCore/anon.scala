@@ -6,7 +6,6 @@ import tmttyped.rsocketTypes.reactiveSocketTypesMod.Payload
 import tmttyped.rsocketTypes.reactiveStreamTypesMod.ISubscription
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object anon {
@@ -25,37 +24,32 @@ object anon {
   }
   object DataMimeType {
     
-    @scala.inline
-    def apply[D, M](dataMimeType: String, keepAlive: Double, lifetime: Double, metadataMimeType: String): DataMimeType[D, M] = {
+    inline def apply[D, M](dataMimeType: String, keepAlive: Double, lifetime: Double, metadataMimeType: String): DataMimeType[D, M] = {
       val __obj = js.Dynamic.literal(dataMimeType = dataMimeType.asInstanceOf[js.Any], keepAlive = keepAlive.asInstanceOf[js.Any], lifetime = lifetime.asInstanceOf[js.Any], metadataMimeType = metadataMimeType.asInstanceOf[js.Any])
       __obj.asInstanceOf[DataMimeType[D, M]]
     }
     
-    @scala.inline
-    implicit class DataMimeTypeMutableBuilder[Self <: DataMimeType[_, _], D, M] (val x: Self with (DataMimeType[D, M])) extends AnyVal {
+    extension [Self <: DataMimeType[?, ?], D, M](x: Self & (DataMimeType[D, M])) {
       
-      @scala.inline
-      def setDataMimeType(value: String): Self = StObject.set(x, "dataMimeType", value.asInstanceOf[js.Any])
+      inline def setDataMimeType(value: String): Self = StObject.set(x, "dataMimeType", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setKeepAlive(value: Double): Self = StObject.set(x, "keepAlive", value.asInstanceOf[js.Any])
+      inline def setKeepAlive(value: Double): Self = StObject.set(x, "keepAlive", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setLifetime(value: Double): Self = StObject.set(x, "lifetime", value.asInstanceOf[js.Any])
+      inline def setLifetime(value: Double): Self = StObject.set(x, "lifetime", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setMetadataMimeType(value: String): Self = StObject.set(x, "metadataMimeType", value.asInstanceOf[js.Any])
+      inline def setMetadataMimeType(value: String): Self = StObject.set(x, "metadataMimeType", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPayload(value: Payload[D, M]): Self = StObject.set(x, "payload", value.asInstanceOf[js.Any])
+      inline def setPayload(value: Payload[D, M]): Self = StObject.set(x, "payload", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPayloadUndefined: Self = StObject.set(x, "payload", js.undefined)
+      inline def setPayloadUndefined: Self = StObject.set(x, "payload", js.undefined)
     }
   }
   
   /* Inlined std.Error & {  source :rsocket-core.rsocket-core/RSocketFrame.ErrorSource} */
   trait ErrorsourceErrorSource extends StObject {
+    
+    /* standard es2022.error */
+    var cause: js.UndefOr[Any] = js.undefined
     
     /* standard es5 */
     var message: String
@@ -70,29 +64,26 @@ object anon {
   }
   object ErrorsourceErrorSource {
     
-    @scala.inline
-    def apply(message: String, name: String, source: ErrorSource): ErrorsourceErrorSource = {
+    inline def apply(message: String, name: String, source: ErrorSource): ErrorsourceErrorSource = {
       val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
       __obj.asInstanceOf[ErrorsourceErrorSource]
     }
     
-    @scala.inline
-    implicit class ErrorsourceErrorSourceMutableBuilder[Self <: ErrorsourceErrorSource] (val x: Self) extends AnyVal {
+    extension [Self <: ErrorsourceErrorSource](x: Self) {
       
-      @scala.inline
-      def setMessage(value: String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
+      inline def setCause(value: Any): Self = StObject.set(x, "cause", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+      inline def setCauseUndefined: Self = StObject.set(x, "cause", js.undefined)
       
-      @scala.inline
-      def setSource(value: ErrorSource): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
+      inline def setMessage(value: String): Self = StObject.set(x, "message", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStack(value: String): Self = StObject.set(x, "stack", value.asInstanceOf[js.Any])
+      inline def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setStackUndefined: Self = StObject.set(x, "stack", js.undefined)
+      inline def setSource(value: ErrorSource): Self = StObject.set(x, "source", value.asInstanceOf[js.Any])
+      
+      inline def setStack(value: String): Self = StObject.set(x, "stack", value.asInstanceOf[js.Any])
+      
+      inline def setStackUndefined: Self = StObject.set(x, "stack", js.undefined)
     }
   }
   
@@ -109,38 +100,28 @@ object anon {
   }
   object PartialISubscriberFrame {
     
-    @scala.inline
-    def apply(): PartialISubscriberFrame = {
+    inline def apply(): PartialISubscriberFrame = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[PartialISubscriberFrame]
     }
     
-    @scala.inline
-    implicit class PartialISubscriberFrameMutableBuilder[Self <: PartialISubscriberFrame] (val x: Self) extends AnyVal {
+    extension [Self <: PartialISubscriberFrame](x: Self) {
       
-      @scala.inline
-      def setOnComplete(value: () => Unit): Self = StObject.set(x, "onComplete", js.Any.fromFunction0(value))
+      inline def setOnComplete(value: () => Unit): Self = StObject.set(x, "onComplete", js.Any.fromFunction0(value))
       
-      @scala.inline
-      def setOnCompleteUndefined: Self = StObject.set(x, "onComplete", js.undefined)
+      inline def setOnCompleteUndefined: Self = StObject.set(x, "onComplete", js.undefined)
       
-      @scala.inline
-      def setOnError(value: /* error */ js.Error => Unit): Self = StObject.set(x, "onError", js.Any.fromFunction1(value))
+      inline def setOnError(value: /* error */ js.Error => Unit): Self = StObject.set(x, "onError", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnErrorUndefined: Self = StObject.set(x, "onError", js.undefined)
+      inline def setOnErrorUndefined: Self = StObject.set(x, "onError", js.undefined)
       
-      @scala.inline
-      def setOnNext(value: /* value */ Frame => Unit): Self = StObject.set(x, "onNext", js.Any.fromFunction1(value))
+      inline def setOnNext(value: /* value */ Frame => Unit): Self = StObject.set(x, "onNext", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnNextUndefined: Self = StObject.set(x, "onNext", js.undefined)
+      inline def setOnNextUndefined: Self = StObject.set(x, "onNext", js.undefined)
       
-      @scala.inline
-      def setOnSubscribe(value: /* subscription */ ISubscription => Unit): Self = StObject.set(x, "onSubscribe", js.Any.fromFunction1(value))
+      inline def setOnSubscribe(value: /* subscription */ ISubscription => Unit): Self = StObject.set(x, "onSubscribe", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setOnSubscribeUndefined: Self = StObject.set(x, "onSubscribe", js.undefined)
+      inline def setOnSubscribeUndefined: Self = StObject.set(x, "onSubscribe", js.undefined)
     }
   }
 }

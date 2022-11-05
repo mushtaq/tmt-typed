@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait InputEventInit
@@ -26,52 +25,37 @@ trait InputEventInit
 }
 object InputEventInit {
   
-  @scala.inline
-  def apply(): InputEventInit = {
+  inline def apply(): InputEventInit = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[InputEventInit]
   }
   
-  @scala.inline
-  implicit class InputEventInitMutableBuilder[Self <: InputEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: InputEventInit](x: Self) {
     
-    @scala.inline
-    def setData(value: java.lang.String): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
+    inline def setData(value: java.lang.String): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDataNull: Self = StObject.set(x, "data", null)
+    inline def setDataNull: Self = StObject.set(x, "data", null)
     
-    @scala.inline
-    def setDataTransfer(value: org.scalajs.dom.DataTransfer): Self = StObject.set(x, "dataTransfer", value.asInstanceOf[js.Any])
+    inline def setDataTransfer(value: org.scalajs.dom.DataTransfer): Self = StObject.set(x, "dataTransfer", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setDataTransferNull: Self = StObject.set(x, "dataTransfer", null)
+    inline def setDataTransferNull: Self = StObject.set(x, "dataTransfer", null)
     
-    @scala.inline
-    def setDataTransferUndefined: Self = StObject.set(x, "dataTransfer", js.undefined)
+    inline def setDataTransferUndefined: Self = StObject.set(x, "dataTransfer", js.undefined)
     
-    @scala.inline
-    def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
+    inline def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
     
-    @scala.inline
-    def setInputType(value: java.lang.String): Self = StObject.set(x, "inputType", value.asInstanceOf[js.Any])
+    inline def setInputType(value: java.lang.String): Self = StObject.set(x, "inputType", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setInputTypeUndefined: Self = StObject.set(x, "inputType", js.undefined)
+    inline def setInputTypeUndefined: Self = StObject.set(x, "inputType", js.undefined)
     
-    @scala.inline
-    def setIsComposing(value: scala.Boolean): Self = StObject.set(x, "isComposing", value.asInstanceOf[js.Any])
+    inline def setIsComposing(value: scala.Boolean): Self = StObject.set(x, "isComposing", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setIsComposingUndefined: Self = StObject.set(x, "isComposing", js.undefined)
+    inline def setIsComposingUndefined: Self = StObject.set(x, "isComposing", js.undefined)
     
-    @scala.inline
-    def setTargetRanges(value: js.Array[StaticRange]): Self = StObject.set(x, "targetRanges", value.asInstanceOf[js.Any])
+    inline def setTargetRanges(value: js.Array[StaticRange]): Self = StObject.set(x, "targetRanges", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setTargetRangesUndefined: Self = StObject.set(x, "targetRanges", js.undefined)
+    inline def setTargetRangesUndefined: Self = StObject.set(x, "targetRanges", js.undefined)
     
-    @scala.inline
-    def setTargetRangesVarargs(value: StaticRange*): Self = StObject.set(x, "targetRanges", js.Array(value :_*))
+    inline def setTargetRangesVarargs(value: StaticRange*): Self = StObject.set(x, "targetRanges", js.Array(value*))
   }
 }

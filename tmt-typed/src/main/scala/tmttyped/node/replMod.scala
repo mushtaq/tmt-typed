@@ -1,8 +1,6 @@
 package tmttyped.node
 
-import tmttyped.node.NodeJS.ReadOnlyDict
-import tmttyped.node.NodeJS.ReadableStream
-import tmttyped.node.NodeJS.WritableStream
+import org.scalajs.dom.ReadableStream
 import tmttyped.node.anon.Options
 import tmttyped.node.nodeStrings.SIGCONT
 import tmttyped.node.nodeStrings.SIGINT
@@ -18,9 +16,9 @@ import tmttyped.node.readlineMod.Completer
 import tmttyped.node.readlineMod.CompleterResult
 import tmttyped.node.vmMod.Context
 import tmttyped.std.Error
+import tmttyped.std.WritableStream
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object replMod {
@@ -55,7 +53,7 @@ object replMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  /* private */ class REPLServer () extends StObject {
+  /* private */ open class REPLServer () extends StObject {
     
     /**
       * events.EventEmitter
@@ -100,7 +98,7 @@ object replMod {
     /**
       * The commands registered via `replServer.defineCommand()`.
       */
-    val commands: ReadOnlyDict[REPLCommand] = js.native
+    val commands: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ReadOnlyDict<REPLCommand> */ Any = js.native
     
     /**
       * Specified in the REPL options, this is the function to use for custom Tab auto-completion.
@@ -148,7 +146,7 @@ object replMod {
       * Goodbye!
       * ```
       * @since v0.3.0
-      * @param keyword The command keyword (*without* a leading `.` character).
+      * @param keyword The command keyword (_without_ a leading `.` character).
       * @param cmd The function to invoke when the command is processed.
       */
     def defineCommand(keyword: String, cmd: REPLCommandAction): Unit = js.native
@@ -218,12 +216,12 @@ object replMod {
     /**
       * The `Readable` stream from which REPL input will be read.
       */
-    val input: ReadableStream = js.native
+    val input: ReadableStream[Any] = js.native
     
     /**
       * @deprecated since v14.3.0 - Use `input` instead.
       */
-    val inputStream: ReadableStream = js.native
+    val inputStream: ReadableStream[Any] = js.native
     
     /**
       * The last evaluation result from the REPL (assigned to the `_` variable inside of the REPL).
@@ -283,12 +281,12 @@ object replMod {
     /**
       * The `Writable` stream to which REPL output will be written.
       */
-    val output: WritableStream = js.native
+    val output: WritableStream[Any] = js.native
     
     /**
       * @deprecated since v14.3.0 - Use `output` instead.
       */
-    val outputStream: WritableStream = js.native
+    val outputStream: WritableStream[Any] = js.native
     
     def prependListener(event: String, listener: js.Function1[/* repeated */ Any, Unit]): this.type = js.native
     @JSName("prependListener")
@@ -410,7 +408,7 @@ object replMod {
     */
   @JSImport("repl", "Recoverable")
   @js.native
-  class Recoverable protected ()
+  open class Recoverable protected ()
     extends StObject
        with Error {
     def this(err: js.Error) = this()
@@ -419,11 +417,11 @@ object replMod {
     
     /* standard es5 */
     /* CompleteClass */
-    override var message: String = js.native
+    var message: String = js.native
     
     /* standard es5 */
     /* CompleteClass */
-    override var name: String = js.native
+    var name: String = js.native
   }
   
   /**
@@ -439,12 +437,9 @@ object replMod {
     * ```
     * @since v0.1.91
     */
-  @scala.inline
-  def start(): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[REPLServer]
-  @scala.inline
-  def start(options: String): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
-  @scala.inline
-  def start(options: ReplOptions): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
+  inline def start(): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[REPLServer]
+  inline def start(options: String): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
+  inline def start(options: ReplOptions): REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[REPLServer]
   
   /**
     * This is the default "writer" value, if none is passed in the REPL options,
@@ -452,7 +447,7 @@ object replMod {
     */
   @JSImport("repl", "writer")
   @js.native
-  val writer: REPLWriter with Options = js.native
+  val writer: REPLWriter & Options = js.native
   
   trait REPLCommand extends StObject {
     
@@ -473,23 +468,18 @@ object replMod {
   }
   object REPLCommand {
     
-    @scala.inline
-    def apply(action: REPLCommandAction): REPLCommand = {
+    inline def apply(action: REPLCommandAction): REPLCommand = {
       val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any])
       __obj.asInstanceOf[REPLCommand]
     }
     
-    @scala.inline
-    implicit class REPLCommandMutableBuilder[Self <: REPLCommand] (val x: Self) extends AnyVal {
+    extension [Self <: REPLCommand](x: Self) {
       
-      @scala.inline
-      def setAction(value: REPLCommandAction): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
+      inline def setAction(value: REPLCommandAction): Self = StObject.set(x, "action", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHelp(value: String): Self = StObject.set(x, "help", value.asInstanceOf[js.Any])
+      inline def setHelp(value: String): Self = StObject.set(x, "help", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setHelpUndefined: Self = StObject.set(x, "help", js.undefined)
+      inline def setHelpUndefined: Self = StObject.set(x, "help", js.undefined)
     }
   }
   
@@ -544,13 +534,13 @@ object replMod {
       * The `Readable` stream from which REPL input will be read.
       * @default process.stdin
       */
-    var input: js.UndefOr[ReadableStream] = js.undefined
+    var input: js.UndefOr[ReadableStream[Any]] = js.undefined
     
     /**
       * The `Writable` stream to which REPL output will be written.
       * @default process.stdout
       */
-    var output: js.UndefOr[WritableStream] = js.undefined
+    var output: js.UndefOr[WritableStream[Any]] = js.undefined
     
     /**
       * Defines if the repl prints output previews or not.
@@ -608,29 +598,22 @@ object replMod {
   }
   object ReplOptions {
     
-    @scala.inline
-    def apply(): ReplOptions = {
+    inline def apply(): ReplOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[ReplOptions]
     }
     
-    @scala.inline
-    implicit class ReplOptionsMutableBuilder[Self <: ReplOptions] (val x: Self) extends AnyVal {
+    extension [Self <: ReplOptions](x: Self) {
       
-      @scala.inline
-      def setBreakEvalOnSigint(value: Boolean): Self = StObject.set(x, "breakEvalOnSigint", value.asInstanceOf[js.Any])
+      inline def setBreakEvalOnSigint(value: Boolean): Self = StObject.set(x, "breakEvalOnSigint", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setBreakEvalOnSigintUndefined: Self = StObject.set(x, "breakEvalOnSigint", js.undefined)
+      inline def setBreakEvalOnSigintUndefined: Self = StObject.set(x, "breakEvalOnSigint", js.undefined)
       
-      @scala.inline
-      def setCompleter(value: Completer | AsyncCompleter): Self = StObject.set(x, "completer", value.asInstanceOf[js.Any])
+      inline def setCompleter(value: Completer | AsyncCompleter): Self = StObject.set(x, "completer", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setCompleterFunction1(value: /* line */ String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
+      inline def setCompleterFunction1(value: /* line */ String => CompleterResult): Self = StObject.set(x, "completer", js.Any.fromFunction1(value))
       
-      @scala.inline
-      def setCompleterFunction2(
+      inline def setCompleterFunction2(
         value: (/* line */ String, /* callback */ js.Function2[
               /* err */ js.UndefOr[Null | js.Error], 
               /* result */ js.UndefOr[CompleterResult], 
@@ -638,74 +621,51 @@ object replMod {
             ]) => Unit
       ): Self = StObject.set(x, "completer", js.Any.fromFunction2(value))
       
-      @scala.inline
-      def setCompleterUndefined: Self = StObject.set(x, "completer", js.undefined)
+      inline def setCompleterUndefined: Self = StObject.set(x, "completer", js.undefined)
       
-      @scala.inline
-      def setEval(value: REPLEval): Self = StObject.set(x, "eval", value.asInstanceOf[js.Any])
+      inline def setEval(value: REPLEval): Self = StObject.set(x, "eval", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEvalUndefined: Self = StObject.set(x, "eval", js.undefined)
+      inline def setEvalUndefined: Self = StObject.set(x, "eval", js.undefined)
       
-      @scala.inline
-      def setIgnoreUndefined(value: Boolean): Self = StObject.set(x, "ignoreUndefined", value.asInstanceOf[js.Any])
+      inline def setIgnoreUndefined(value: Boolean): Self = StObject.set(x, "ignoreUndefined", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setIgnoreUndefinedUndefined: Self = StObject.set(x, "ignoreUndefined", js.undefined)
+      inline def setIgnoreUndefinedUndefined: Self = StObject.set(x, "ignoreUndefined", js.undefined)
       
-      @scala.inline
-      def setInput(value: ReadableStream): Self = StObject.set(x, "input", value.asInstanceOf[js.Any])
+      inline def setInput(value: ReadableStream[Any]): Self = StObject.set(x, "input", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setInputUndefined: Self = StObject.set(x, "input", js.undefined)
+      inline def setInputUndefined: Self = StObject.set(x, "input", js.undefined)
       
-      @scala.inline
-      def setOutput(value: WritableStream): Self = StObject.set(x, "output", value.asInstanceOf[js.Any])
+      inline def setOutput(value: WritableStream[Any]): Self = StObject.set(x, "output", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setOutputUndefined: Self = StObject.set(x, "output", js.undefined)
+      inline def setOutputUndefined: Self = StObject.set(x, "output", js.undefined)
       
-      @scala.inline
-      def setPreview(value: Boolean): Self = StObject.set(x, "preview", value.asInstanceOf[js.Any])
+      inline def setPreview(value: Boolean): Self = StObject.set(x, "preview", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPreviewUndefined: Self = StObject.set(x, "preview", js.undefined)
+      inline def setPreviewUndefined: Self = StObject.set(x, "preview", js.undefined)
       
-      @scala.inline
-      def setPrompt(value: String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
+      inline def setPrompt(value: String): Self = StObject.set(x, "prompt", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setPromptUndefined: Self = StObject.set(x, "prompt", js.undefined)
+      inline def setPromptUndefined: Self = StObject.set(x, "prompt", js.undefined)
       
-      @scala.inline
-      def setReplMode(value: js.Symbol): Self = StObject.set(x, "replMode", value.asInstanceOf[js.Any])
+      inline def setReplMode(value: js.Symbol): Self = StObject.set(x, "replMode", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setReplModeUndefined: Self = StObject.set(x, "replMode", js.undefined)
+      inline def setReplModeUndefined: Self = StObject.set(x, "replMode", js.undefined)
       
-      @scala.inline
-      def setTerminal(value: Boolean): Self = StObject.set(x, "terminal", value.asInstanceOf[js.Any])
+      inline def setTerminal(value: Boolean): Self = StObject.set(x, "terminal", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTerminalUndefined: Self = StObject.set(x, "terminal", js.undefined)
+      inline def setTerminalUndefined: Self = StObject.set(x, "terminal", js.undefined)
       
-      @scala.inline
-      def setUseColors(value: Boolean): Self = StObject.set(x, "useColors", value.asInstanceOf[js.Any])
+      inline def setUseColors(value: Boolean): Self = StObject.set(x, "useColors", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUseColorsUndefined: Self = StObject.set(x, "useColors", js.undefined)
+      inline def setUseColorsUndefined: Self = StObject.set(x, "useColors", js.undefined)
       
-      @scala.inline
-      def setUseGlobal(value: Boolean): Self = StObject.set(x, "useGlobal", value.asInstanceOf[js.Any])
+      inline def setUseGlobal(value: Boolean): Self = StObject.set(x, "useGlobal", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setUseGlobalUndefined: Self = StObject.set(x, "useGlobal", js.undefined)
+      inline def setUseGlobalUndefined: Self = StObject.set(x, "useGlobal", js.undefined)
       
-      @scala.inline
-      def setWriter(value: REPLWriter): Self = StObject.set(x, "writer", value.asInstanceOf[js.Any])
+      inline def setWriter(value: REPLWriter): Self = StObject.set(x, "writer", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setWriterUndefined: Self = StObject.set(x, "writer", js.undefined)
+      inline def setWriterUndefined: Self = StObject.set(x, "writer", js.undefined)
     }
   }
 }

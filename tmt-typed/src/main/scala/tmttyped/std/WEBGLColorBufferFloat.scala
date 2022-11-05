@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait WEBGLColorBufferFloat extends StObject {
@@ -18,8 +17,7 @@ trait WEBGLColorBufferFloat extends StObject {
 }
 object WEBGLColorBufferFloat {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT: GLenum,
     RGBA32F_EXT: GLenum,
     UNSIGNED_NORMALIZED_EXT: GLenum
@@ -28,16 +26,12 @@ object WEBGLColorBufferFloat {
     __obj.asInstanceOf[WEBGLColorBufferFloat]
   }
   
-  @scala.inline
-  implicit class WEBGLColorBufferFloatMutableBuilder[Self <: WEBGLColorBufferFloat] (val x: Self) extends AnyVal {
+  extension [Self <: WEBGLColorBufferFloat](x: Self) {
     
-    @scala.inline
-    def setFRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT(value: GLenum): Self = StObject.set(x, "FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT", value.asInstanceOf[js.Any])
+    inline def setFRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT(value: GLenum): Self = StObject.set(x, "FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRGBA32F_EXT(value: GLenum): Self = StObject.set(x, "RGBA32F_EXT", value.asInstanceOf[js.Any])
+    inline def setRGBA32F_EXT(value: GLenum): Self = StObject.set(x, "RGBA32F_EXT", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setUNSIGNED_NORMALIZED_EXT(value: GLenum): Self = StObject.set(x, "UNSIGNED_NORMALIZED_EXT", value.asInstanceOf[js.Any])
+    inline def setUNSIGNED_NORMALIZED_EXT(value: GLenum): Self = StObject.set(x, "UNSIGNED_NORMALIZED_EXT", value.asInstanceOf[js.Any])
   }
 }

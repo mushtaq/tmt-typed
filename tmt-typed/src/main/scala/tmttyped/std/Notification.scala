@@ -6,7 +6,6 @@ import tmttyped.std.stdStrings.error
 import tmttyped.std.stdStrings.show
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** This Notifications API interface is used to configure and display desktop notifications to the user. */

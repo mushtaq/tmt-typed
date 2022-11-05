@@ -2,7 +2,6 @@ package tmttyped.node
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import tmttyped.node.NodeJS.ArrayBufferView
 import tmttyped.node.anon.Data
 import tmttyped.node.anon.ToPrimitive
 import tmttyped.node.anon.ValueOf
@@ -17,11 +16,11 @@ import tmttyped.node.fsMod._WriteFileOptions
 import tmttyped.node.nodeNumbers.`-1`
 import tmttyped.node.nodeNumbers.`0`
 import tmttyped.node.nodeNumbers.`1`
+import tmttyped.node.streamWebMod.ReadableStream
 import tmttyped.std.SharedArrayBuffer
 import tmttyped.std.Uint8Array
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object bufferMod {
@@ -32,7 +31,7 @@ object bufferMod {
   
   @JSImport("buffer", "Blob")
   @js.native
-  class Blob protected () extends StObject {
+  open class Blob protected () extends StObject {
     /**
       * Creates a new `Blob` object containing a concatenation of the given sources.
       *
@@ -41,8 +40,8 @@ object bufferMod {
       *
       * String sources are also copied into the `Blob`.
       */
-    def this(sources: js.Array[BinaryLike | tmttyped.node.bufferMod.Blob]) = this()
-    def this(sources: js.Array[BinaryLike | tmttyped.node.bufferMod.Blob], options: BlobOptions) = this()
+    def this(sources: js.Array[BinaryLike | Blob]) = this()
+    def this(sources: js.Array[BinaryLike | Blob], options: BlobOptions) = this()
     
     /**
       * Returns a promise that fulfills with an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing a copy of
@@ -65,20 +64,20 @@ object bufferMod {
       * @param end The ending index.
       * @param type The content-type for the new `Blob`
       */
-    def slice(): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Double): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Double, end: Double): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Double, end: Double, `type`: String): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Double, end: Unit, `type`: String): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Unit, end: Double): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Unit, end: Double, `type`: String): tmttyped.node.bufferMod.Blob = js.native
-    def slice(start: Unit, end: Unit, `type`: String): tmttyped.node.bufferMod.Blob = js.native
+    def slice(): Blob = js.native
+    def slice(start: Double): Blob = js.native
+    def slice(start: Double, end: Double): Blob = js.native
+    def slice(start: Double, end: Double, `type`: String): Blob = js.native
+    def slice(start: Double, end: Unit, `type`: String): Blob = js.native
+    def slice(start: Unit, end: Double): Blob = js.native
+    def slice(start: Unit, end: Double, `type`: String): Blob = js.native
+    def slice(start: Unit, end: Unit, `type`: String): Blob = js.native
     
     /**
-      * Returns a new `ReadableStream` that allows the content of the `Blob` to be read.
+      * Returns a new (WHATWG) `ReadableStream` that allows the content of the `Blob` to be read.
       * @since v16.7.0
       */
-    def stream(): Any = js.native
+    def stream(): ReadableStream[Any] = js.native
     
     /**
       * Returns a promise that fulfills with the contents of the `Blob` decoded as a
@@ -101,7 +100,7 @@ object bufferMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("buffer", "Buffer")
   @js.native
-  class BufferCls protected ()
+  open class BufferCls protected ()
     extends StObject
        with Buffer {
     /**
@@ -153,8 +152,7 @@ object bufferMod {
     def this(str: String, encoding: BufferEncoding) = this()
   }
   
-  @scala.inline
-  def Buffer_=(x: BufferConstructor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Buffer")(x.asInstanceOf[js.Any])
+  inline def Buffer_=(x: BufferConstructor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Buffer")(x.asInstanceOf[js.Any])
   
   @JSImport("buffer", "INSPECT_MAX_BYTES")
   @js.native
@@ -163,7 +161,7 @@ object bufferMod {
   /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
   @JSImport("buffer", "SlowBuffer")
   @js.native
-  class SlowBuffer protected ()
+  open class SlowBuffer protected ()
     extends StObject
        with Buffer {
     /** @deprecated since v6.0.0, use `Buffer.allocUnsafeSlow()` */
@@ -179,17 +177,35 @@ object bufferMod {
     @JSImport("buffer", "constants.MAX_LENGTH")
     @js.native
     def MAX_LENGTH: Double = js.native
-    @scala.inline
-    def MAX_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_LENGTH")(x.asInstanceOf[js.Any])
+    inline def MAX_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_LENGTH")(x.asInstanceOf[js.Any])
     
     @JSImport("buffer", "constants.MAX_STRING_LENGTH")
     @js.native
     def MAX_STRING_LENGTH: Double = js.native
-    @scala.inline
-    def MAX_STRING_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_STRING_LENGTH")(x.asInstanceOf[js.Any])
+    inline def MAX_STRING_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_STRING_LENGTH")(x.asInstanceOf[js.Any])
   }
   
   object global {
+    
+    /**
+      * `Blob` class is a global reference for `require('node:buffer').Blob`
+      * https://nodejs.org/api/buffer.html#class-blob
+      * @since v18.0.0
+      */
+    @JSGlobal("Blob")
+    @js.native
+    def Blob: Instantiable2[
+        /* sources */ js.Array[BinaryLike | tmttyped.node.bufferMod.Blob], 
+        /* options */ js.UndefOr[BlobOptions], 
+        tmttyped.node.bufferMod.Blob
+      ] = js.native
+    inline def Blob_=(
+      x: Instantiable2[
+          /* sources */ js.Array[BinaryLike | Blob], 
+          /* options */ js.UndefOr[BlobOptions], 
+          Blob
+        ]
+    ): Unit = js.Dynamic.global.updateDynamic("Blob")(x.asInstanceOf[js.Any])
     
     @js.native
     trait Buffer
@@ -252,70 +268,70 @@ object bufferMod {
         * @param [sourceStart=0] The offset within `buf` at which to begin comparison.
         * @param [sourceEnd=buf.length] The offset within `buf` at which to end comparison (not inclusive).
         */
-      def compare(target: js.typedarray.Uint8Array): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Double): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double, sourceStart: Double): Double = js.native
+      def compare(target: js.typedarray.Uint8Array): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Double): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Double, sourceStart: Double): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Double,
         targetEnd: Double,
         sourceStart: Double,
         sourceEnd: Double
-      ): Double = js.native
+      ): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Double,
         targetEnd: Double,
         sourceStart: Unit,
         sourceEnd: Double
-      ): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Unit, sourceStart: Double): Double = js.native
+      ): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Double, targetEnd: Unit, sourceStart: Double): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Double,
         targetEnd: Unit,
         sourceStart: Double,
         sourceEnd: Double
-      ): Double = js.native
+      ): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Double,
         targetEnd: Unit,
         sourceStart: Unit,
         sourceEnd: Double
-      ): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Double): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Double, sourceStart: Double): Double = js.native
+      ): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Double): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Double, sourceStart: Double): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Unit,
         targetEnd: Double,
         sourceStart: Double,
         sourceEnd: Double
-      ): Double = js.native
+      ): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Unit,
         targetEnd: Double,
         sourceStart: Unit,
         sourceEnd: Double
-      ): Double = js.native
-      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Unit, sourceStart: Double): Double = js.native
+      ): `-1` | `0` | `1` = js.native
+      def compare(target: js.typedarray.Uint8Array, targetStart: Unit, targetEnd: Unit, sourceStart: Double): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Unit,
         targetEnd: Unit,
         sourceStart: Double,
         sourceEnd: Double
-      ): Double = js.native
+      ): `-1` | `0` | `1` = js.native
       def compare(
         target: js.typedarray.Uint8Array,
         targetStart: Unit,
         targetEnd: Unit,
         sourceStart: Unit,
         sourceEnd: Double
-      ): Double = js.native
+      ): `-1` | `0` | `1` = js.native
       
       /**
         * Copies data from a region of `buf` to a region in `target`, even if the `target`memory region overlaps with `buf`.
@@ -518,7 +534,7 @@ object bufferMod {
         *
         * * a string, `value` is interpreted according to the character encoding in`encoding`.
         * * a `Buffer` or [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), `value` will be used in its entirety.
-        * To compare a partial `Buffer`, use `buf.slice()`.
+        * To compare a partial `Buffer`, use `buf.subarray`.
         * * a number, `value` will be interpreted as an unsigned 8-bit integer
         * value between `0` and `255`.
         *
@@ -1907,7 +1923,7 @@ object bufferMod {
     /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
     @JSGlobal("Buffer")
     @js.native
-    class BufferCls protected ()
+    open class BufferCls protected ()
       extends StObject
          with Buffer {
       /**
@@ -1959,8 +1975,7 @@ object bufferMod {
       def this(str: String, encoding: BufferEncoding) = this()
     }
     
-    @scala.inline
-    def Buffer_=(x: BufferConstructor): Unit = js.Dynamic.global.updateDynamic("Buffer")(x.asInstanceOf[js.Any])
+    inline def Buffer_=(x: BufferConstructor): Unit = js.Dynamic.global.updateDynamic("Buffer")(x.asInstanceOf[js.Any])
     
     /**
       * Decodes a string of Base64-encoded data into bytes, and encodes those bytes
@@ -1977,8 +1992,7 @@ object bufferMod {
       * @deprecated Use `Buffer.from(data, 'base64')` instead.
       * @param data The Base64-encoded input string.
       */
-    @scala.inline
-    def atob(data: String): String = js.Dynamic.global.applyDynamic("atob")(data.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def atob(data: String): String = js.Dynamic.global.applyDynamic("atob")(data.asInstanceOf[js.Any]).asInstanceOf[String]
     
     /**
       * Decodes a string into bytes using Latin-1 (ISO-8859), and encodes those bytes
@@ -1995,8 +2009,7 @@ object bufferMod {
       * @deprecated Use `buf.toString('base64')` instead.
       * @param data An ASCII (Latin1) string.
       */
-    @scala.inline
-    def btoa(data: String): String = js.Dynamic.global.applyDynamic("btoa")(data.asInstanceOf[js.Any]).asInstanceOf[String]
+    inline def btoa(data: String): String = js.Dynamic.global.applyDynamic("btoa")(data.asInstanceOf[js.Any]).asInstanceOf[String]
     
     /**
       * Raw data is stored in instances of the Buffer class.
@@ -2105,7 +2118,7 @@ object bufferMod {
         * Allocates a new `Buffer` of `size` bytes. If `size` is larger than {@link constants.MAX_LENGTH} or smaller than 0, `ERR_INVALID_ARG_VALUE` is thrown.
         *
         * The underlying memory for `Buffer` instances created in this way is _not_
-        * _initialized_. The contents of the newly created `Buffer` are unknown and_may contain sensitive data_. Use `Buffer.alloc()` instead to initialize`Buffer` instances with zeroes.
+        * _initialized_. The contents of the newly created `Buffer` are unknown and _may contain sensitive data_. Use `Buffer.alloc()` instead to initialize`Buffer` instances with zeroes.
         *
         * ```js
         * import { Buffer } from 'buffer';
@@ -2144,7 +2157,7 @@ object bufferMod {
         * if `size` is 0.
         *
         * The underlying memory for `Buffer` instances created in this way is _not_
-        * _initialized_. The contents of the newly created `Buffer` are unknown and_may contain sensitive data_. Use `buf.fill(0)` to initialize
+        * _initialized_. The contents of the newly created `Buffer` are unknown and _may contain sensitive data_. Use `buf.fill(0)` to initialize
         * such `Buffer` instances with zeroes.
         *
         * When using `Buffer.allocUnsafe()` to allocate new `Buffer` instances,
@@ -2217,9 +2230,9 @@ object bufferMod {
       def byteLength(string: String): Double = js.native
       def byteLength(string: String, encoding: BufferEncoding): Double = js.native
       def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
+      def byteLength(string: js.typedarray.ArrayBufferView): Double = js.native
+      def byteLength(string: js.typedarray.ArrayBufferView, encoding: BufferEncoding): Double = js.native
       def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
-      def byteLength(string: ArrayBufferView): Double = js.native
-      def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
       def byteLength(string: SharedArrayBuffer): Double = js.native
       def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
       
@@ -2300,16 +2313,7 @@ object bufferMod {
         * `Buffer.from(array)` and `Buffer.from(string)` may also use the internal`Buffer` pool like `Buffer.allocUnsafe()` does.
         * @since v5.10.0
         */
-      /**
-        * Creates a new Buffer containing the given JavaScript string {str}.
-        * If provided, the {encoding} parameter identifies the character encoding.
-        * If not provided, {encoding} defaults to 'utf8'.
-        */
-      def from(
-        arrayBuffer: WithImplicitCoercion[
-              js.Array[Double] | js.typedarray.ArrayBuffer | SharedArrayBuffer | String | js.typedarray.Uint8Array
-            ]
-      ): Buffer = js.native
+      def from(arrayBuffer: WithImplicitCoercion[js.typedarray.ArrayBuffer | SharedArrayBuffer]): Buffer = js.native
       def from(
         arrayBuffer: WithImplicitCoercion[js.typedarray.ArrayBuffer | SharedArrayBuffer],
         byteOffset: Double
@@ -2330,6 +2334,12 @@ object bufferMod {
         * @param data data to create a new Buffer
         */
       def from(data: js.typedarray.Uint8Array): Buffer = js.native
+      /**
+        * Creates a new Buffer containing the given JavaScript string {str}.
+        * If provided, the {encoding} parameter identifies the character encoding.
+        * If not provided, {encoding} defaults to 'utf8'.
+        */
+      def from(data: WithImplicitCoercion[js.Array[Double] | String | js.typedarray.Uint8Array]): Buffer = js.native
       def from(str: ToPrimitive): Buffer = js.native
       def from(str: ToPrimitive, encoding: BufferEncoding): Buffer = js.native
       def from(str: WithImplicitCoercion[String], encoding: BufferEncoding): Buffer = js.native
@@ -2408,38 +2418,27 @@ object bufferMod {
          with _WriteFileOptions
     object BufferEncoding {
       
-      @scala.inline
-      def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
+      inline def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
       
-      @scala.inline
-      def base64: tmttyped.node.nodeStrings.base64 = "base64".asInstanceOf[tmttyped.node.nodeStrings.base64]
+      inline def base64: tmttyped.node.nodeStrings.base64 = "base64".asInstanceOf[tmttyped.node.nodeStrings.base64]
       
-      @scala.inline
-      def base64url: tmttyped.node.nodeStrings.base64url = "base64url".asInstanceOf[tmttyped.node.nodeStrings.base64url]
+      inline def base64url: tmttyped.node.nodeStrings.base64url = "base64url".asInstanceOf[tmttyped.node.nodeStrings.base64url]
       
-      @scala.inline
-      def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
+      inline def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
       
-      @scala.inline
-      def hex: tmttyped.node.nodeStrings.hex = "hex".asInstanceOf[tmttyped.node.nodeStrings.hex]
+      inline def hex: tmttyped.node.nodeStrings.hex = "hex".asInstanceOf[tmttyped.node.nodeStrings.hex]
       
-      @scala.inline
-      def latin1: tmttyped.node.nodeStrings.latin1 = "latin1".asInstanceOf[tmttyped.node.nodeStrings.latin1]
+      inline def latin1: tmttyped.node.nodeStrings.latin1 = "latin1".asInstanceOf[tmttyped.node.nodeStrings.latin1]
       
-      @scala.inline
-      def `ucs-2`: tmttyped.node.nodeStrings.`ucs-2` = "ucs-2".asInstanceOf[tmttyped.node.nodeStrings.`ucs-2`]
+      inline def `ucs-2`: tmttyped.node.nodeStrings.`ucs-2` = "ucs-2".asInstanceOf[tmttyped.node.nodeStrings.`ucs-2`]
       
-      @scala.inline
-      def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
+      inline def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
       
-      @scala.inline
-      def `utf-8`: tmttyped.node.nodeStrings.`utf-8` = "utf-8".asInstanceOf[tmttyped.node.nodeStrings.`utf-8`]
+      inline def `utf-8`: tmttyped.node.nodeStrings.`utf-8` = "utf-8".asInstanceOf[tmttyped.node.nodeStrings.`utf-8`]
       
-      @scala.inline
-      def utf16le: tmttyped.node.nodeStrings.utf16le = "utf16le".asInstanceOf[tmttyped.node.nodeStrings.utf16le]
+      inline def utf16le: tmttyped.node.nodeStrings.utf16le = "utf16le".asInstanceOf[tmttyped.node.nodeStrings.utf16le]
       
-      @scala.inline
-      def utf8: tmttyped.node.nodeStrings.utf8 = "utf8".asInstanceOf[tmttyped.node.nodeStrings.utf8]
+      inline def utf8: tmttyped.node.nodeStrings.utf8 = "utf8".asInstanceOf[tmttyped.node.nodeStrings.utf8]
     }
     
     type WithImplicitCoercion[T] = T | ValueOf[T]
@@ -2453,11 +2452,9 @@ object bufferMod {
   @js.native
   val kStringMaxLength: Double = js.native
   
-  @scala.inline
-  def resolveObjectURL(id: String): js.UndefOr[tmttyped.node.bufferMod.Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveObjectURL")(id.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[tmttyped.node.bufferMod.Blob]]
+  inline def resolveObjectURL(id: String): js.UndefOr[Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveObjectURL")(id.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[Blob]]
   
-  @scala.inline
-  def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("transcode")(source.asInstanceOf[js.Any], fromEnc.asInstanceOf[js.Any], toEnc.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("transcode")(source.asInstanceOf[js.Any], fromEnc.asInstanceOf[js.Any], toEnc.asInstanceOf[js.Any])).asInstanceOf[Buffer]
   
   trait BlobOptions extends StObject {
     
@@ -2475,26 +2472,20 @@ object bufferMod {
   }
   object BlobOptions {
     
-    @scala.inline
-    def apply(): BlobOptions = {
+    inline def apply(): BlobOptions = {
       val __obj = js.Dynamic.literal()
       __obj.asInstanceOf[BlobOptions]
     }
     
-    @scala.inline
-    implicit class BlobOptionsMutableBuilder[Self <: BlobOptions] (val x: Self) extends AnyVal {
+    extension [Self <: BlobOptions](x: Self) {
       
-      @scala.inline
-      def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
+      inline def setEncoding(value: BufferEncoding): Self = StObject.set(x, "encoding", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
+      inline def setEncodingUndefined: Self = StObject.set(x, "encoding", js.undefined)
       
-      @scala.inline
-      def setType(value: String): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
+      inline def setType(value: String): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
       
-      @scala.inline
-      def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
+      inline def setTypeUndefined: Self = StObject.set(x, "type", js.undefined)
     }
   }
   
@@ -2509,22 +2500,20 @@ object bufferMod {
   trait TranscodeEncoding extends StObject
   object TranscodeEncoding {
     
-    @scala.inline
-    def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
+    inline def ascii: tmttyped.node.nodeStrings.ascii = "ascii".asInstanceOf[tmttyped.node.nodeStrings.ascii]
     
-    @scala.inline
-    def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
+    inline def binary: tmttyped.node.nodeStrings.binary = "binary".asInstanceOf[tmttyped.node.nodeStrings.binary]
     
-    @scala.inline
-    def latin1: tmttyped.node.nodeStrings.latin1 = "latin1".asInstanceOf[tmttyped.node.nodeStrings.latin1]
+    inline def latin1: tmttyped.node.nodeStrings.latin1 = "latin1".asInstanceOf[tmttyped.node.nodeStrings.latin1]
     
-    @scala.inline
-    def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
+    inline def ucs2: tmttyped.node.nodeStrings.ucs2 = "ucs2".asInstanceOf[tmttyped.node.nodeStrings.ucs2]
     
-    @scala.inline
-    def utf16le: tmttyped.node.nodeStrings.utf16le = "utf16le".asInstanceOf[tmttyped.node.nodeStrings.utf16le]
+    inline def utf16le: tmttyped.node.nodeStrings.utf16le = "utf16le".asInstanceOf[tmttyped.node.nodeStrings.utf16le]
     
-    @scala.inline
-    def utf8: tmttyped.node.nodeStrings.utf8 = "utf8".asInstanceOf[tmttyped.node.nodeStrings.utf8]
+    inline def utf8: tmttyped.node.nodeStrings.utf8 = "utf8".asInstanceOf[tmttyped.node.nodeStrings.utf8]
   }
+  
+  // This conditional type will be the existing global Blob in a browser, or
+  // the copy below in a Node environment.
+  type _Blob = Blob
 }

@@ -1,46 +1,59 @@
 package tmttyped.node.fsMod
 
-import tmttyped.node.NodeJS.ErrnoException
 import tmttyped.node.bufferMod.global.Buffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object realpath {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* resolvedPath */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def apply(
+  inline def apply(
     path: PathLike,
     options: BufferEncodingOption,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* resolvedPath */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def apply(
+  inline def apply(
     path: PathLike,
     options: EncodingOption,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Buffer | (/* resolvedPath */ String), 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].apply(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   
   @JSImport("fs", "realpath")
   @js.native
   val ^ : js.Any = js.native
   
-  @scala.inline
-  def native(
+  inline def native(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* resolvedPath */ String, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
-  @scala.inline
-  def native(
+  inline def native(
     path: PathLike,
     options: BufferEncodingOption,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
+    callback: js.Function2[
+      /* err */ (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      /* resolvedPath */ Buffer, 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
   /**
     * Asynchronous [`realpath(3)`](http://man7.org/linux/man-pages/man3/realpath.3.html).
@@ -59,10 +72,13 @@ object realpath {
     * this restriction.
     * @since v9.2.0
     */
-  @scala.inline
-  def native(
+  inline def native(
     path: PathLike,
     options: EncodingOption,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
+    callback: js.Function2[
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify NodeJS.ErrnoException */ Any) | Null, 
+      Buffer | (/* resolvedPath */ String), 
+      Unit
+    ]
   ): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("native")(path.asInstanceOf[js.Any], options.asInstanceOf[js.Any], callback.asInstanceOf[js.Any])).asInstanceOf[Unit]
 }

@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image). */
@@ -25,8 +24,7 @@ trait PerformanceEntry extends StObject {
 }
 object PerformanceEntry {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     duration: DOMHighResTimeStamp,
     entryType: java.lang.String,
     name: java.lang.String,
@@ -37,22 +35,16 @@ object PerformanceEntry {
     __obj.asInstanceOf[PerformanceEntry]
   }
   
-  @scala.inline
-  implicit class PerformanceEntryMutableBuilder[Self <: PerformanceEntry] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceEntry](x: Self) {
     
-    @scala.inline
-    def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
+    inline def setDuration(value: DOMHighResTimeStamp): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setEntryType(value: java.lang.String): Self = StObject.set(x, "entryType", value.asInstanceOf[js.Any])
+    inline def setEntryType(value: java.lang.String): Self = StObject.set(x, "entryType", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
+    inline def setName(value: java.lang.String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setStartTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
+    inline def setStartTime(value: DOMHighResTimeStamp): Self = StObject.set(x, "startTime", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
+    inline def setToJSON(value: () => Any): Self = StObject.set(x, "toJSON", js.Any.fromFunction0(value))
   }
 }

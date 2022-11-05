@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait FontFaceSetLoadEventInit
@@ -14,22 +13,17 @@ trait FontFaceSetLoadEventInit
 }
 object FontFaceSetLoadEventInit {
   
-  @scala.inline
-  def apply(): FontFaceSetLoadEventInit = {
+  inline def apply(): FontFaceSetLoadEventInit = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[FontFaceSetLoadEventInit]
   }
   
-  @scala.inline
-  implicit class FontFaceSetLoadEventInitMutableBuilder[Self <: FontFaceSetLoadEventInit] (val x: Self) extends AnyVal {
+  extension [Self <: FontFaceSetLoadEventInit](x: Self) {
     
-    @scala.inline
-    def setFontfaces(value: js.Array[FontFace]): Self = StObject.set(x, "fontfaces", value.asInstanceOf[js.Any])
+    inline def setFontfaces(value: js.Array[FontFace]): Self = StObject.set(x, "fontfaces", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setFontfacesUndefined: Self = StObject.set(x, "fontfaces", js.undefined)
+    inline def setFontfacesUndefined: Self = StObject.set(x, "fontfaces", js.undefined)
     
-    @scala.inline
-    def setFontfacesVarargs(value: FontFace*): Self = StObject.set(x, "fontfaces", js.Array(value :_*))
+    inline def setFontfacesVarargs(value: FontFace*): Self = StObject.set(x, "fontfaces", js.Array(value*))
   }
 }

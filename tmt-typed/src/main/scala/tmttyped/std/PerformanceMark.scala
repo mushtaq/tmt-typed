@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** PerformanceMark is an abstract interface for PerformanceEntry objects with an entryType of "mark". Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline. */
@@ -15,8 +14,7 @@ trait PerformanceMark
 }
 object PerformanceMark {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     detail: Any,
     duration: DOMHighResTimeStamp,
     entryType: java.lang.String,
@@ -28,10 +26,8 @@ object PerformanceMark {
     __obj.asInstanceOf[PerformanceMark]
   }
   
-  @scala.inline
-  implicit class PerformanceMarkMutableBuilder[Self <: PerformanceMark] (val x: Self) extends AnyVal {
+  extension [Self <: PerformanceMark](x: Self) {
     
-    @scala.inline
-    def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
+    inline def setDetail(value: Any): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])
   }
 }

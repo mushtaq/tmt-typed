@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait LocaleOptions extends StObject {
@@ -49,73 +48,51 @@ trait LocaleOptions extends StObject {
 }
 object LocaleOptions {
   
-  @scala.inline
-  def apply(): LocaleOptions = {
+  inline def apply(): LocaleOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LocaleOptions]
   }
   
-  @scala.inline
-  implicit class LocaleOptionsMutableBuilder[Self <: LocaleOptions] (val x: Self) extends AnyVal {
+  extension [Self <: LocaleOptions](x: Self) {
     
-    @scala.inline
-    def setBaseName(value: String): Self = StObject.set(x, "baseName", value.asInstanceOf[js.Any])
+    inline def setBaseName(value: String): Self = StObject.set(x, "baseName", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setBaseNameUndefined: Self = StObject.set(x, "baseName", js.undefined)
+    inline def setBaseNameUndefined: Self = StObject.set(x, "baseName", js.undefined)
     
-    @scala.inline
-    def setCalendar(value: String): Self = StObject.set(x, "calendar", value.asInstanceOf[js.Any])
+    inline def setCalendar(value: String): Self = StObject.set(x, "calendar", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCalendarUndefined: Self = StObject.set(x, "calendar", js.undefined)
+    inline def setCalendarUndefined: Self = StObject.set(x, "calendar", js.undefined)
     
-    @scala.inline
-    def setCaseFirst(value: LocaleCollationCaseFirst): Self = StObject.set(x, "caseFirst", value.asInstanceOf[js.Any])
+    inline def setCaseFirst(value: LocaleCollationCaseFirst): Self = StObject.set(x, "caseFirst", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCaseFirstUndefined: Self = StObject.set(x, "caseFirst", js.undefined)
+    inline def setCaseFirstUndefined: Self = StObject.set(x, "caseFirst", js.undefined)
     
-    @scala.inline
-    def setCollation(value: String): Self = StObject.set(x, "collation", value.asInstanceOf[js.Any])
+    inline def setCollation(value: String): Self = StObject.set(x, "collation", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCollationUndefined: Self = StObject.set(x, "collation", js.undefined)
+    inline def setCollationUndefined: Self = StObject.set(x, "collation", js.undefined)
     
-    @scala.inline
-    def setHourCycle(value: LocaleHourCycleKey): Self = StObject.set(x, "hourCycle", value.asInstanceOf[js.Any])
+    inline def setHourCycle(value: LocaleHourCycleKey): Self = StObject.set(x, "hourCycle", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHourCycleUndefined: Self = StObject.set(x, "hourCycle", js.undefined)
+    inline def setHourCycleUndefined: Self = StObject.set(x, "hourCycle", js.undefined)
     
-    @scala.inline
-    def setLanguage(value: String): Self = StObject.set(x, "language", value.asInstanceOf[js.Any])
+    inline def setLanguage(value: String): Self = StObject.set(x, "language", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setLanguageUndefined: Self = StObject.set(x, "language", js.undefined)
+    inline def setLanguageUndefined: Self = StObject.set(x, "language", js.undefined)
     
-    @scala.inline
-    def setNumberingSystem(value: String): Self = StObject.set(x, "numberingSystem", value.asInstanceOf[js.Any])
+    inline def setNumberingSystem(value: String): Self = StObject.set(x, "numberingSystem", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setNumberingSystemUndefined: Self = StObject.set(x, "numberingSystem", js.undefined)
+    inline def setNumberingSystemUndefined: Self = StObject.set(x, "numberingSystem", js.undefined)
     
-    @scala.inline
-    def setNumeric(value: Boolean): Self = StObject.set(x, "numeric", value.asInstanceOf[js.Any])
+    inline def setNumeric(value: Boolean): Self = StObject.set(x, "numeric", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setNumericUndefined: Self = StObject.set(x, "numeric", js.undefined)
+    inline def setNumericUndefined: Self = StObject.set(x, "numeric", js.undefined)
     
-    @scala.inline
-    def setRegion(value: String): Self = StObject.set(x, "region", value.asInstanceOf[js.Any])
+    inline def setRegion(value: String): Self = StObject.set(x, "region", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setRegionUndefined: Self = StObject.set(x, "region", js.undefined)
+    inline def setRegionUndefined: Self = StObject.set(x, "region", js.undefined)
     
-    @scala.inline
-    def setScript(value: String): Self = StObject.set(x, "script", value.asInstanceOf[js.Any])
+    inline def setScript(value: String): Self = StObject.set(x, "script", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setScriptUndefined: Self = StObject.set(x, "script", js.undefined)
+    inline def setScriptUndefined: Self = StObject.set(x, "script", js.undefined)
   }
 }

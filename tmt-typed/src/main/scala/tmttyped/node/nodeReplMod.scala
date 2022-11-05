@@ -5,7 +5,6 @@ import tmttyped.node.replMod.REPLWriter
 import tmttyped.node.replMod.ReplOptions
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeReplMod {
@@ -40,7 +39,7 @@ object nodeReplMod {
     *
     * @see https://nodejs.org/dist/latest-v10.x/docs/api/repl.html#repl_class_replserver
     */
-  /* private */ class REPLServer () extends StObject
+  /* private */ open class REPLServer () extends StObject
   
   /**
     * A flag passed in the REPL options. Evaluates expressions in sloppy mode.
@@ -64,7 +63,7 @@ object nodeReplMod {
     */
   @JSImport("node:repl", "Recoverable")
   @js.native
-  class Recoverable protected ()
+  open class Recoverable protected ()
     extends tmttyped.node.replMod.Recoverable {
     def this(err: js.Error) = this()
   }
@@ -82,12 +81,9 @@ object nodeReplMod {
     * ```
     * @since v0.1.91
     */
-  @scala.inline
-  def start(): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[tmttyped.node.replMod.REPLServer]
-  @scala.inline
-  def start(options: String): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
-  @scala.inline
-  def start(options: ReplOptions): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
+  inline def start(): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")().asInstanceOf[tmttyped.node.replMod.REPLServer]
+  inline def start(options: String): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
+  inline def start(options: ReplOptions): tmttyped.node.replMod.REPLServer = ^.asInstanceOf[js.Dynamic].applyDynamic("start")(options.asInstanceOf[js.Any]).asInstanceOf[tmttyped.node.replMod.REPLServer]
   
   /**
     * This is the default "writer" value, if none is passed in the REPL options,
@@ -95,5 +91,5 @@ object nodeReplMod {
     */
   @JSImport("node:repl", "writer")
   @js.native
-  val writer: REPLWriter with Options = js.native
+  val writer: REPLWriter & Options = js.native
 }

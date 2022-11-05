@@ -2,14 +2,13 @@ package tmttyped.std.global
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
 @JSGlobal("CSSCounterStyleRule")
 @js.native
 /* standard DOM */
-class CSSCounterStyleRule ()
+open class CSSCounterStyleRule ()
   extends StObject
      with tmttyped.std.CSSCounterStyleRule {
   
@@ -55,27 +54,27 @@ class CSSCounterStyleRule ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var additiveSymbols: java.lang.String = js.native
+  var additiveSymbols: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var cssText: java.lang.String = js.native
+  var cssText: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var fallback: java.lang.String = js.native
+  var fallback: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var name: java.lang.String = js.native
+  var name: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var negative: java.lang.String = js.native
+  var negative: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var pad: java.lang.String = js.native
+  var pad: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
@@ -87,27 +86,27 @@ class CSSCounterStyleRule ()
   
   /* standard DOM */
   /* CompleteClass */
-  override var prefix: java.lang.String = js.native
+  var prefix: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var range: java.lang.String = js.native
+  var range: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var speakAs: java.lang.String = js.native
+  var speakAs: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var suffix: java.lang.String = js.native
+  var suffix: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var symbols: java.lang.String = js.native
+  var symbols: java.lang.String = js.native
   
   /* standard DOM */
   /* CompleteClass */
-  override var system: java.lang.String = js.native
+  var system: java.lang.String = js.native
   
   /** @deprecated */
   /* standard DOM */

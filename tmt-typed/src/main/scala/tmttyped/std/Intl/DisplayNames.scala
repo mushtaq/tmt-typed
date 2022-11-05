@@ -2,7 +2,6 @@ package tmttyped.std.Intl
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait DisplayNames extends StObject {
@@ -23,7 +22,7 @@ trait DisplayNames extends StObject {
     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of).
     */
   /* standard es2020.intl */
-  def of(code: String): String
+  def of(code: String): js.UndefOr[String]
   
   /**
     * Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current
@@ -32,23 +31,19 @@ trait DisplayNames extends StObject {
     * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions).
     */
   /* standard es2020.intl */
-  def resolvedOptions(): DisplayNamesOptions
+  def resolvedOptions(): ResolvedDisplayNamesOptions
 }
 object DisplayNames {
   
-  @scala.inline
-  def apply(of: String => String, resolvedOptions: () => DisplayNamesOptions): DisplayNames = {
+  inline def apply(of: String => js.UndefOr[String], resolvedOptions: () => ResolvedDisplayNamesOptions): DisplayNames = {
     val __obj = js.Dynamic.literal(of = js.Any.fromFunction1(of), resolvedOptions = js.Any.fromFunction0(resolvedOptions))
     __obj.asInstanceOf[DisplayNames]
   }
   
-  @scala.inline
-  implicit class DisplayNamesMutableBuilder[Self <: DisplayNames] (val x: Self) extends AnyVal {
+  extension [Self <: DisplayNames](x: Self) {
     
-    @scala.inline
-    def setOf(value: String => String): Self = StObject.set(x, "of", js.Any.fromFunction1(value))
+    inline def setOf(value: String => js.UndefOr[String]): Self = StObject.set(x, "of", js.Any.fromFunction1(value))
     
-    @scala.inline
-    def setResolvedOptions(value: () => DisplayNamesOptions): Self = StObject.set(x, "resolvedOptions", js.Any.fromFunction0(value))
+    inline def setResolvedOptions(value: () => ResolvedDisplayNamesOptions): Self = StObject.set(x, "resolvedOptions", js.Any.fromFunction0(value))
   }
 }

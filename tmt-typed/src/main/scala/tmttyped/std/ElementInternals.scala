@@ -2,69 +2,76 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait ElementInternals
   extends StObject
      with ARIAMixin {
   
+  /** Returns true if internals's target element has no validity problems; false otherwise. Fires an invalid event at the element in the latter case. */
+  /* standard DOM */
+  def checkValidity(): scala.Boolean = js.native
+  
+  /** Returns the form owner of internals's target element. */
+  /* standard DOM */
+  val form: org.scalajs.dom.HTMLFormElement | Null = js.native
+  
+  /** Returns a NodeList of all the label elements that internals's target element is associated with. */
+  /* standard DOM */
+  val labels: org.scalajs.dom.NodeList[org.scalajs.dom.Node] = js.native
+  
+  /** Returns true if internals's target element has no validity problems; otherwise, returns false, fires an invalid event at the element, and (if the event isn't canceled) reports the problem to the user. */
+  /* standard DOM */
+  def reportValidity(): scala.Boolean = js.native
+  
+  /**
+    * Sets both the state and submission value of internals's target element to value.
+    *
+    * If value is null, the element won't participate in form submission.
+    */
+  /* standard DOM */
+  def setFormValue(): Unit = js.native
+  def setFormValue(value: java.lang.String): Unit = js.native
+  def setFormValue(value: java.lang.String, state: java.lang.String): Unit = js.native
+  def setFormValue(value: java.lang.String, state: org.scalajs.dom.File): Unit = js.native
+  def setFormValue(value: java.lang.String, state: org.scalajs.dom.FormData): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.File): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.File, state: java.lang.String): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.File, state: org.scalajs.dom.File): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.File, state: org.scalajs.dom.FormData): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.FormData): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.FormData, state: java.lang.String): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.FormData, state: org.scalajs.dom.File): Unit = js.native
+  def setFormValue(value: org.scalajs.dom.FormData, state: org.scalajs.dom.FormData): Unit = js.native
+  def setFormValue(value: Null, state: java.lang.String): Unit = js.native
+  def setFormValue(value: Null, state: org.scalajs.dom.File): Unit = js.native
+  def setFormValue(value: Null, state: org.scalajs.dom.FormData): Unit = js.native
+  
+  /** Marks internals's target element as suffering from the constraints indicated by the flags argument, and sets the element's validation message to message. If anchor is specified, the user agent might use it to indicate problems with the constraints of internals's target element when the form owner is validated interactively or reportValidity() is called. */
+  /* standard DOM */
+  def setValidity(): Unit = js.native
+  def setValidity(flags: Unit, message: java.lang.String): Unit = js.native
+  def setValidity(flags: Unit, message: java.lang.String, anchor: org.scalajs.dom.HTMLElement): Unit = js.native
+  def setValidity(flags: Unit, message: Unit, anchor: org.scalajs.dom.HTMLElement): Unit = js.native
+  def setValidity(flags: ValidityStateFlags): Unit = js.native
+  def setValidity(flags: ValidityStateFlags, message: java.lang.String): Unit = js.native
+  def setValidity(flags: ValidityStateFlags, message: java.lang.String, anchor: org.scalajs.dom.HTMLElement): Unit = js.native
+  def setValidity(flags: ValidityStateFlags, message: Unit, anchor: org.scalajs.dom.HTMLElement): Unit = js.native
+  
   /** Returns the ShadowRoot for internals's target element, if the target element is a shadow host, or null otherwise. */
   /* standard DOM */
-  val shadowRoot: ShadowRoot | Null
-}
-object ElementInternals {
+  val shadowRoot: ShadowRoot | Null = js.native
   
-  @scala.inline
-  def apply(
-    ariaAtomic: java.lang.String,
-    ariaAutoComplete: java.lang.String,
-    ariaBusy: java.lang.String,
-    ariaChecked: java.lang.String,
-    ariaColCount: java.lang.String,
-    ariaColIndex: java.lang.String,
-    ariaColSpan: java.lang.String,
-    ariaCurrent: java.lang.String,
-    ariaDisabled: java.lang.String,
-    ariaExpanded: java.lang.String,
-    ariaHasPopup: java.lang.String,
-    ariaHidden: java.lang.String,
-    ariaKeyShortcuts: java.lang.String,
-    ariaLabel: java.lang.String,
-    ariaLevel: java.lang.String,
-    ariaLive: java.lang.String,
-    ariaModal: java.lang.String,
-    ariaMultiLine: java.lang.String,
-    ariaMultiSelectable: java.lang.String,
-    ariaOrientation: java.lang.String,
-    ariaPlaceholder: java.lang.String,
-    ariaPosInSet: java.lang.String,
-    ariaPressed: java.lang.String,
-    ariaReadOnly: java.lang.String,
-    ariaRequired: java.lang.String,
-    ariaRoleDescription: java.lang.String,
-    ariaRowCount: java.lang.String,
-    ariaRowIndex: java.lang.String,
-    ariaRowSpan: java.lang.String,
-    ariaSelected: java.lang.String,
-    ariaSetSize: java.lang.String,
-    ariaSort: java.lang.String,
-    ariaValueMax: java.lang.String,
-    ariaValueMin: java.lang.String,
-    ariaValueNow: java.lang.String,
-    ariaValueText: java.lang.String
-  ): ElementInternals = {
-    val __obj = js.Dynamic.literal(ariaAtomic = ariaAtomic.asInstanceOf[js.Any], ariaAutoComplete = ariaAutoComplete.asInstanceOf[js.Any], ariaBusy = ariaBusy.asInstanceOf[js.Any], ariaChecked = ariaChecked.asInstanceOf[js.Any], ariaColCount = ariaColCount.asInstanceOf[js.Any], ariaColIndex = ariaColIndex.asInstanceOf[js.Any], ariaColSpan = ariaColSpan.asInstanceOf[js.Any], ariaCurrent = ariaCurrent.asInstanceOf[js.Any], ariaDisabled = ariaDisabled.asInstanceOf[js.Any], ariaExpanded = ariaExpanded.asInstanceOf[js.Any], ariaHasPopup = ariaHasPopup.asInstanceOf[js.Any], ariaHidden = ariaHidden.asInstanceOf[js.Any], ariaKeyShortcuts = ariaKeyShortcuts.asInstanceOf[js.Any], ariaLabel = ariaLabel.asInstanceOf[js.Any], ariaLevel = ariaLevel.asInstanceOf[js.Any], ariaLive = ariaLive.asInstanceOf[js.Any], ariaModal = ariaModal.asInstanceOf[js.Any], ariaMultiLine = ariaMultiLine.asInstanceOf[js.Any], ariaMultiSelectable = ariaMultiSelectable.asInstanceOf[js.Any], ariaOrientation = ariaOrientation.asInstanceOf[js.Any], ariaPlaceholder = ariaPlaceholder.asInstanceOf[js.Any], ariaPosInSet = ariaPosInSet.asInstanceOf[js.Any], ariaPressed = ariaPressed.asInstanceOf[js.Any], ariaReadOnly = ariaReadOnly.asInstanceOf[js.Any], ariaRequired = ariaRequired.asInstanceOf[js.Any], ariaRoleDescription = ariaRoleDescription.asInstanceOf[js.Any], ariaRowCount = ariaRowCount.asInstanceOf[js.Any], ariaRowIndex = ariaRowIndex.asInstanceOf[js.Any], ariaRowSpan = ariaRowSpan.asInstanceOf[js.Any], ariaSelected = ariaSelected.asInstanceOf[js.Any], ariaSetSize = ariaSetSize.asInstanceOf[js.Any], ariaSort = ariaSort.asInstanceOf[js.Any], ariaValueMax = ariaValueMax.asInstanceOf[js.Any], ariaValueMin = ariaValueMin.asInstanceOf[js.Any], ariaValueNow = ariaValueNow.asInstanceOf[js.Any], ariaValueText = ariaValueText.asInstanceOf[js.Any], shadowRoot = null)
-    __obj.asInstanceOf[ElementInternals]
-  }
+  /** Returns the error message that would be shown to the user if internals's target element was to be checked for validity. */
+  /* standard DOM */
+  val validationMessage: java.lang.String = js.native
   
-  @scala.inline
-  implicit class ElementInternalsMutableBuilder[Self <: ElementInternals] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def setShadowRoot(value: ShadowRoot): Self = StObject.set(x, "shadowRoot", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setShadowRootNull: Self = StObject.set(x, "shadowRoot", null)
-  }
+  /** Returns the ValidityState object for internals's target element. */
+  /* standard DOM */
+  val validity: org.scalajs.dom.ValidityState = js.native
+  
+  /** Returns true if internals's target element will be validated when the form is submitted; false otherwise. */
+  /* standard DOM */
+  val willValidate: scala.Boolean = js.native
 }

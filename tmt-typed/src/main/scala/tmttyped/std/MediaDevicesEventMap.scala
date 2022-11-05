@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait MediaDevicesEventMap extends StObject {
@@ -12,16 +11,13 @@ trait MediaDevicesEventMap extends StObject {
 }
 object MediaDevicesEventMap {
   
-  @scala.inline
-  def apply(devicechange: org.scalajs.dom.Event): MediaDevicesEventMap = {
+  inline def apply(devicechange: org.scalajs.dom.Event): MediaDevicesEventMap = {
     val __obj = js.Dynamic.literal(devicechange = devicechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaDevicesEventMap]
   }
   
-  @scala.inline
-  implicit class MediaDevicesEventMapMutableBuilder[Self <: MediaDevicesEventMap] (val x: Self) extends AnyVal {
+  extension [Self <: MediaDevicesEventMap](x: Self) {
     
-    @scala.inline
-    def setDevicechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "devicechange", value.asInstanceOf[js.Any])
+    inline def setDevicechange(value: org.scalajs.dom.Event): Self = StObject.set(x, "devicechange", value.asInstanceOf[js.Any])
   }
 }

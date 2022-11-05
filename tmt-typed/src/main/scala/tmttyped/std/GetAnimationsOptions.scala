@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait GetAnimationsOptions extends StObject {
@@ -12,19 +11,15 @@ trait GetAnimationsOptions extends StObject {
 }
 object GetAnimationsOptions {
   
-  @scala.inline
-  def apply(): GetAnimationsOptions = {
+  inline def apply(): GetAnimationsOptions = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[GetAnimationsOptions]
   }
   
-  @scala.inline
-  implicit class GetAnimationsOptionsMutableBuilder[Self <: GetAnimationsOptions] (val x: Self) extends AnyVal {
+  extension [Self <: GetAnimationsOptions](x: Self) {
     
-    @scala.inline
-    def setSubtree(value: scala.Boolean): Self = StObject.set(x, "subtree", value.asInstanceOf[js.Any])
+    inline def setSubtree(value: scala.Boolean): Self = StObject.set(x, "subtree", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setSubtreeUndefined: Self = StObject.set(x, "subtree", js.undefined)
+    inline def setSubtreeUndefined: Self = StObject.set(x, "subtree", js.undefined)
   }
 }

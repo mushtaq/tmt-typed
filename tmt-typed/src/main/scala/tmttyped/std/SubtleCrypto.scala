@@ -3,7 +3,6 @@ package tmttyped.std
 import tmttyped.std.stdStrings.jwk
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -13,12 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SubtleCrypto extends StObject {
   
-  def decrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def decrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def decrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def decrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   /* standard DOM */
-  def decrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def decrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   def deriveBits(algorithm: org.scalajs.dom.EcdhKeyDeriveParams, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def deriveBits(algorithm: org.scalajs.dom.Pbkdf2Params, baseKey: org.scalajs.dom.CryptoKey, length: Double): js.Promise[js.typedarray.ArrayBuffer] = js.native
@@ -312,12 +311,12 @@ trait SubtleCrypto extends StObject {
   /* standard DOM */
   def digest(algorithm: AlgorithmIdentifier, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
-  def encrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def encrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def encrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
-  def encrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesCbcParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesCtrParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def encrypt(algorithm: org.scalajs.dom.AesGcmParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def encrypt(algorithm: org.scalajs.dom.RsaOaepParams, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   /* standard DOM */
-  def encrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[Any] = js.native
+  def encrypt(algorithm: AlgorithmIdentifier, key: org.scalajs.dom.CryptoKey, data: BufferSource): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   /* standard DOM */
   @JSName("exportKey")

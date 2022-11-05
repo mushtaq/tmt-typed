@@ -8,7 +8,6 @@ import tmttyped.node.eventsMod.global.NodeJS.EventEmitter
 import tmttyped.std.AsyncIterableIterator
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeEventsMod {
@@ -28,7 +27,7 @@ object nodeEventsMod {
     */
   @JSImport("node:events", JSImport.Namespace)
   @js.native
-  class ^ () extends StObject {
+  open class ^ () extends StObject {
     def this(options: EventEmitterOptions) = this()
   }
   @JSImport("node:events", JSImport.Namespace)
@@ -48,15 +47,13 @@ object nodeEventsMod {
   @JSImport("node:events", "captureRejections")
   @js.native
   def captureRejections: Boolean = js.native
-  @scala.inline
-  def captureRejections_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("captureRejections")(x.asInstanceOf[js.Any])
+  inline def captureRejections_=(x: Boolean): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("captureRejections")(x.asInstanceOf[js.Any])
   
   /* static member */
   @JSImport("node:events", "defaultMaxListeners")
   @js.native
   def defaultMaxListeners: Double = js.native
-  @scala.inline
-  def defaultMaxListeners_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultMaxListeners")(x.asInstanceOf[js.Any])
+  inline def defaultMaxListeners_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("defaultMaxListeners")(x.asInstanceOf[js.Any])
   
   /**
     * This symbol shall be used to install a listener for only monitoring `'error'`
@@ -100,14 +97,10 @@ object nodeEventsMod {
     * @since v15.2.0, v14.17.0
     */
   /* static member */
-  @scala.inline
-  def getEventListeners(emitter: DOMEventTarget, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
-  @scala.inline
-  def getEventListeners(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
-  @scala.inline
-  def getEventListeners(emitter: EventEmitter, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
-  @scala.inline
-  def getEventListeners(emitter: EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  inline def getEventListeners(emitter: DOMEventTarget, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  inline def getEventListeners(emitter: DOMEventTarget, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  inline def getEventListeners(emitter: EventEmitter, name: String): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
+  inline def getEventListeners(emitter: EventEmitter, name: js.Symbol): js.Array[js.Function] = (^.asInstanceOf[js.Dynamic].applyDynamic("getEventListeners")(emitter.asInstanceOf[js.Any], name.asInstanceOf[js.Any])).asInstanceOf[js.Array[js.Function]]
   
   /**
     * A class method that returns the number of listeners for the given `eventName`registered on the given `emitter`.
@@ -126,10 +119,8 @@ object nodeEventsMod {
     * @param eventName The event name
     */
   /* static member */
-  @scala.inline
-  def listenerCount(emitter: EventEmitter, eventName: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
-  @scala.inline
-  def listenerCount(emitter: EventEmitter, eventName: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def listenerCount(emitter: EventEmitter, eventName: String): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
+  inline def listenerCount(emitter: EventEmitter, eventName: js.Symbol): Double = (^.asInstanceOf[js.Dynamic].applyDynamic("listenerCount")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[Double]
   
   /**
     * ```js
@@ -190,16 +181,12 @@ object nodeEventsMod {
     * @return that iterates `eventName` events emitted by the `emitter`
     */
   /* static member */
-  @scala.inline
-  def on(emitter: EventEmitter, eventName: String): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
-  @scala.inline
-  def on(emitter: EventEmitter, eventName: String, options: StaticEventEmitterOptions): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
+  inline def on(emitter: EventEmitter, eventName: String): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
+  inline def on(emitter: EventEmitter, eventName: String, options: StaticEventEmitterOptions): AsyncIterableIterator[Any] = (^.asInstanceOf[js.Dynamic].applyDynamic("on")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[AsyncIterableIterator[Any]]
   
   /* static member */
-  @scala.inline
-  def once(emitter: DOMEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
-  @scala.inline
-  def once(emitter: DOMEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: DOMEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: DOMEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   /**
     * Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
     * event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -283,37 +270,29 @@ object nodeEventsMod {
     * @since v11.13.0, v10.16.0
     */
   /* static member */
-  @scala.inline
-  def once(emitter: NodeEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
-  @scala.inline
-  def once(emitter: NodeEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
-  @scala.inline
-  def once(emitter: NodeEventTarget, eventName: js.Symbol): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
-  @scala.inline
-  def once(emitter: NodeEventTarget, eventName: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: NodeEventTarget, eventName: String): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: NodeEventTarget, eventName: String, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: NodeEventTarget, eventName: js.Symbol): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
+  inline def once(emitter: NodeEventTarget, eventName: js.Symbol, options: StaticEventEmitterOptions): js.Promise[js.Array[Any]] = (^.asInstanceOf[js.Dynamic].applyDynamic("once")(emitter.asInstanceOf[js.Any], eventName.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[js.Promise[js.Array[Any]]]
   
   /**
-    * By default `EventEmitter`s will print a warning if more than `10` listeners are
-    * added for a particular event. This is a useful default that helps finding
-    * memory leaks. The `EventEmitter.setMaxListeners()` method allows the default limit to be
-    * modified (if eventTargets is empty) or modify the limit specified in every `EventTarget` | `EventEmitter` passed as arguments.
-    * The value can be set to`Infinity` (or `0`) to indicate an unlimited number of listeners.
-    *
     * ```js
-    * EventEmitter.setMaxListeners(20);
-    * // Equivalent to
-    * EventEmitter.defaultMaxListeners = 20;
+    * const {
+    *   setMaxListeners,
+    *   EventEmitter
+    * } = require('events');
     *
-    * const eventTarget = new EventTarget();
-    * // Only way to increase limit for `EventTarget` instances
-    * // as these doesn't expose its own `setMaxListeners` method
-    * EventEmitter.setMaxListeners(20, eventTarget);
+    * const target = new EventTarget();
+    * const emitter = new EventEmitter();
+    *
+    * setMaxListeners(5, target, emitter);
     * ```
-    * @since v15.3.0, v14.17.0
+    * @since v15.4.0
+    * @param n A non-negative number. The maximum number of listeners per `EventTarget` event.
+    * @param eventsTargets Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
+    * objects.
     */
   /* static member */
-  @scala.inline
-  def setMaxListeners(n: Double, eventTargets: (DOMEventTarget | EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
-  @scala.inline
-  def setMaxListeners(n: Unit, eventTargets: (DOMEventTarget | EventEmitter)*): Unit = (^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]]) :_*)).asInstanceOf[Unit]
+  inline def setMaxListeners(n: Double, eventTargets: (DOMEventTarget | EventEmitter)*): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]])*).asInstanceOf[Unit]
+  inline def setMaxListeners(n: Unit, eventTargets: (DOMEventTarget | EventEmitter)*): Unit = ^.asInstanceOf[js.Dynamic].applyDynamic("setMaxListeners")(List(n.asInstanceOf[js.Any]).`++`(eventTargets.asInstanceOf[Seq[js.Any]])*).asInstanceOf[Unit]
 }

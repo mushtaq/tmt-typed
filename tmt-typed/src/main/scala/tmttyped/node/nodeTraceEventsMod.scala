@@ -4,7 +4,6 @@ import tmttyped.node.traceEventsMod.CreateTracingOptions
 import tmttyped.node.traceEventsMod.Tracing
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeTraceEventsMod {
@@ -27,8 +26,7 @@ object nodeTraceEventsMod {
     * @since v10.0.0
     * @return .
     */
-  @scala.inline
-  def createTracing(options: CreateTracingOptions): Tracing = ^.asInstanceOf[js.Dynamic].applyDynamic("createTracing")(options.asInstanceOf[js.Any]).asInstanceOf[Tracing]
+  inline def createTracing(options: CreateTracingOptions): Tracing = ^.asInstanceOf[js.Dynamic].applyDynamic("createTracing")(options.asInstanceOf[js.Any]).asInstanceOf[Tracing]
   
   /**
     * Returns a comma-separated list of all currently-enabled trace event
@@ -51,6 +49,5 @@ object nodeTraceEventsMod {
     * ```
     * @since v10.0.0
     */
-  @scala.inline
-  def getEnabledCategories(): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[String]]
+  inline def getEnabledCategories(): js.UndefOr[String] = ^.asInstanceOf[js.Dynamic].applyDynamic("getEnabledCategories")().asInstanceOf[js.UndefOr[String]]
 }

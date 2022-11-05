@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -21,6 +20,7 @@ trait DataView extends StObject {
     * Gets the BigInt64 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es2020.bigint */
   def getBigInt64(byteOffset: Double): js.BigInt = js.native
@@ -30,6 +30,7 @@ trait DataView extends StObject {
     * Gets the BigUint64 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es2020.bigint */
   def getBigUint64(byteOffset: Double): js.BigInt = js.native
@@ -39,6 +40,7 @@ trait DataView extends StObject {
     * Gets the Float32 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getFloat32(byteOffset: Double): Double = js.native
@@ -48,6 +50,7 @@ trait DataView extends StObject {
     * Gets the Float64 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getFloat64(byteOffset: Double): Double = js.native
@@ -57,6 +60,7 @@ trait DataView extends StObject {
     * Gets the Int16 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getInt16(byteOffset: Double): Double = js.native
@@ -66,6 +70,7 @@ trait DataView extends StObject {
     * Gets the Int32 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getInt32(byteOffset: Double): Double = js.native
@@ -83,6 +88,7 @@ trait DataView extends StObject {
     * Gets the Uint16 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getUint16(byteOffset: Double): Double = js.native
@@ -92,6 +98,7 @@ trait DataView extends StObject {
     * Gets the Uint32 value at the specified byte offset from the start of the view. There is
     * no alignment constraint; multi-byte values may be fetched from any offset.
     * @param byteOffset The place in the buffer at which the value should be retrieved.
+    * @param littleEndian If false or undefined, a big-endian value should be read.
     */
   /* standard es5 */
   def getUint32(byteOffset: Double): Double = js.native
@@ -109,8 +116,7 @@ trait DataView extends StObject {
     * Stores a BigInt64 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es2020.bigint */
   def setBigInt64(byteOffset: Double, value: js.BigInt): Unit = js.native
@@ -120,8 +126,7 @@ trait DataView extends StObject {
     * Stores a BigUint64 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es2020.bigint */
   def setBigUint64(byteOffset: Double, value: js.BigInt): Unit = js.native
@@ -131,8 +136,7 @@ trait DataView extends StObject {
     * Stores an Float32 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setFloat32(byteOffset: Double, value: Double): Unit = js.native
@@ -142,8 +146,7 @@ trait DataView extends StObject {
     * Stores an Float64 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setFloat64(byteOffset: Double, value: Double): Unit = js.native
@@ -153,8 +156,7 @@ trait DataView extends StObject {
     * Stores an Int16 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setInt16(byteOffset: Double, value: Double): Unit = js.native
@@ -164,8 +166,7 @@ trait DataView extends StObject {
     * Stores an Int32 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setInt32(byteOffset: Double, value: Double): Unit = js.native
@@ -183,8 +184,7 @@ trait DataView extends StObject {
     * Stores an Uint16 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setUint16(byteOffset: Double, value: Double): Unit = js.native
@@ -194,8 +194,7 @@ trait DataView extends StObject {
     * Stores an Uint32 value at the specified byte offset from the start of the view.
     * @param byteOffset The place in the buffer at which the value should be set.
     * @param value The value to set.
-    * @param littleEndian If false or undefined, a big-endian value should be written,
-    * otherwise a little-endian value should be written.
+    * @param littleEndian If false or undefined, a big-endian value should be written.
     */
   /* standard es5 */
   def setUint32(byteOffset: Double, value: Double): Unit = js.native

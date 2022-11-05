@@ -9,7 +9,6 @@ import tmttyped.node.nodeStrings.secureConnection
 import tmttyped.node.nodeStrings.tlsClientError
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
@@ -18,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("tls", "Server")
 @js.native
-class Server () extends StObject {
+open class Server () extends StObject {
   def this(options: TlsOptions) = this()
   def this(secureConnectionListener: js.Function1[/* socket */ TLSSocket, Unit]) = this()
   def this(options: TlsOptions, secureConnectionListener: js.Function1[/* socket */ TLSSocket, Unit]) = this()
@@ -63,7 +62,7 @@ class Server () extends StObject {
     listener: js.Function3[
       /* sessionId */ Buffer, 
       /* sessionData */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+      /* callback */ js.Function0[Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -72,7 +71,7 @@ class Server () extends StObject {
     event: resumeSession,
     listener: js.Function2[
       /* sessionId */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+      /* callback */ js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -93,17 +92,12 @@ class Server () extends StObject {
   @JSName("emit")
   def emit_keylog(event: keylog, line: Buffer, tlsSocket: TLSSocket): Boolean = js.native
   @JSName("emit")
-  def emit_newSession(
-    event: newSession,
-    sessionId: Buffer,
-    sessionData: Buffer,
-    callback: js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit]
-  ): Boolean = js.native
+  def emit_newSession(event: newSession, sessionId: Buffer, sessionData: Buffer, callback: js.Function0[Unit]): Boolean = js.native
   @JSName("emit")
   def emit_resumeSession(
     event: resumeSession,
     sessionId: Buffer,
-    callback: js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit]
   ): Boolean = js.native
   @JSName("emit")
   def emit_secureConnection(event: secureConnection, tlsSocket: TLSSocket): Boolean = js.native
@@ -138,7 +132,7 @@ class Server () extends StObject {
     listener: js.Function3[
       /* sessionId */ Buffer, 
       /* sessionData */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+      /* callback */ js.Function0[Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -147,7 +141,7 @@ class Server () extends StObject {
     event: resumeSession,
     listener: js.Function2[
       /* sessionId */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+      /* callback */ js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -175,7 +169,7 @@ class Server () extends StObject {
     listener: js.Function3[
       /* sessionId */ Buffer, 
       /* sessionData */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+      /* callback */ js.Function0[Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -184,7 +178,7 @@ class Server () extends StObject {
     event: resumeSession,
     listener: js.Function2[
       /* sessionId */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+      /* callback */ js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -212,7 +206,7 @@ class Server () extends StObject {
     listener: js.Function3[
       /* sessionId */ Buffer, 
       /* sessionData */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+      /* callback */ js.Function0[Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -221,7 +215,7 @@ class Server () extends StObject {
     event: resumeSession,
     listener: js.Function2[
       /* sessionId */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+      /* callback */ js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -249,7 +243,7 @@ class Server () extends StObject {
     listener: js.Function3[
       /* sessionId */ Buffer, 
       /* sessionData */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* resp */ Buffer, Unit], 
+      /* callback */ js.Function0[Unit], 
       Unit
     ]
   ): this.type = js.native
@@ -258,7 +252,7 @@ class Server () extends StObject {
     event: resumeSession,
     listener: js.Function2[
       /* sessionId */ Buffer, 
-      /* callback */ js.Function2[/* err */ js.Error, /* sessionData */ Buffer, Unit], 
+      /* callback */ js.Function2[/* err */ js.Error | Null, /* sessionData */ Buffer | Null, Unit], 
       Unit
     ]
   ): this.type = js.native

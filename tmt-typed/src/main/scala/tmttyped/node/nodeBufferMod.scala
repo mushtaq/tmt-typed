@@ -10,7 +10,6 @@ import tmttyped.node.workerThreadsMod._TransferListItem
 import tmttyped.std.SharedArrayBuffer
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object nodeBufferMod {
@@ -21,7 +20,7 @@ object nodeBufferMod {
   
   @JSImport("node:buffer", "Blob")
   @js.native
-  class Blob protected ()
+  open class Blob protected ()
     extends tmttyped.node.bufferMod.Blob
        with _TransferListItem {
     /**
@@ -43,7 +42,7 @@ object nodeBufferMod {
   /* This class was inferred from a value with a constructor, it was renamed because a distinct type already exists with the same name. */
   @JSImport("node:buffer", "Buffer")
   @js.native
-  class BufferCls protected ()
+  open class BufferCls protected ()
     extends StObject
        with Buffer {
     /**
@@ -95,8 +94,7 @@ object nodeBufferMod {
     def this(str: String, encoding: BufferEncoding) = this()
   }
   
-  @scala.inline
-  def Buffer_=(x: BufferConstructor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Buffer")(x.asInstanceOf[js.Any])
+  inline def Buffer_=(x: BufferConstructor): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("Buffer")(x.asInstanceOf[js.Any])
   
   @JSImport("node:buffer", "INSPECT_MAX_BYTES")
   @js.native
@@ -105,7 +103,7 @@ object nodeBufferMod {
   /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
   @JSImport("node:buffer", "SlowBuffer")
   @js.native
-  class SlowBuffer protected ()
+  open class SlowBuffer protected ()
     extends StObject
        with Buffer {
     /** @deprecated since v6.0.0, use `Buffer.allocUnsafeSlow()` */
@@ -121,14 +119,12 @@ object nodeBufferMod {
     @JSImport("node:buffer", "constants.MAX_LENGTH")
     @js.native
     def MAX_LENGTH: Double = js.native
-    @scala.inline
-    def MAX_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_LENGTH")(x.asInstanceOf[js.Any])
+    inline def MAX_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_LENGTH")(x.asInstanceOf[js.Any])
     
     @JSImport("node:buffer", "constants.MAX_STRING_LENGTH")
     @js.native
     def MAX_STRING_LENGTH: Double = js.native
-    @scala.inline
-    def MAX_STRING_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_STRING_LENGTH")(x.asInstanceOf[js.Any])
+    inline def MAX_STRING_LENGTH_=(x: Double): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("MAX_STRING_LENGTH")(x.asInstanceOf[js.Any])
   }
   
   @JSImport("node:buffer", "kMaxLength")
@@ -139,9 +135,7 @@ object nodeBufferMod {
   @js.native
   val kStringMaxLength: Double = js.native
   
-  @scala.inline
-  def resolveObjectURL(id: String): js.UndefOr[tmttyped.node.bufferMod.Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveObjectURL")(id.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[tmttyped.node.bufferMod.Blob]]
+  inline def resolveObjectURL(id: String): js.UndefOr[tmttyped.node.bufferMod.Blob] = ^.asInstanceOf[js.Dynamic].applyDynamic("resolveObjectURL")(id.asInstanceOf[js.Any]).asInstanceOf[js.UndefOr[tmttyped.node.bufferMod.Blob]]
   
-  @scala.inline
-  def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("transcode")(source.asInstanceOf[js.Any], fromEnc.asInstanceOf[js.Any], toEnc.asInstanceOf[js.Any])).asInstanceOf[Buffer]
+  inline def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = (^.asInstanceOf[js.Dynamic].applyDynamic("transcode")(source.asInstanceOf[js.Any], fromEnc.asInstanceOf[js.Any], toEnc.asInstanceOf[js.Any])).asInstanceOf[Buffer]
 }

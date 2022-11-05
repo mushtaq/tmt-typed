@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait RTCRtpCapabilities extends StObject {
@@ -15,8 +14,7 @@ trait RTCRtpCapabilities extends StObject {
 }
 object RTCRtpCapabilities {
   
-  @scala.inline
-  def apply(
+  inline def apply(
     codecs: js.Array[RTCRtpCodecCapability],
     headerExtensions: js.Array[RTCRtpHeaderExtensionCapability]
   ): RTCRtpCapabilities = {
@@ -24,19 +22,14 @@ object RTCRtpCapabilities {
     __obj.asInstanceOf[RTCRtpCapabilities]
   }
   
-  @scala.inline
-  implicit class RTCRtpCapabilitiesMutableBuilder[Self <: RTCRtpCapabilities] (val x: Self) extends AnyVal {
+  extension [Self <: RTCRtpCapabilities](x: Self) {
     
-    @scala.inline
-    def setCodecs(value: js.Array[RTCRtpCodecCapability]): Self = StObject.set(x, "codecs", value.asInstanceOf[js.Any])
+    inline def setCodecs(value: js.Array[RTCRtpCodecCapability]): Self = StObject.set(x, "codecs", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setCodecsVarargs(value: RTCRtpCodecCapability*): Self = StObject.set(x, "codecs", js.Array(value :_*))
+    inline def setCodecsVarargs(value: RTCRtpCodecCapability*): Self = StObject.set(x, "codecs", js.Array(value*))
     
-    @scala.inline
-    def setHeaderExtensions(value: js.Array[RTCRtpHeaderExtensionCapability]): Self = StObject.set(x, "headerExtensions", value.asInstanceOf[js.Any])
+    inline def setHeaderExtensions(value: js.Array[RTCRtpHeaderExtensionCapability]): Self = StObject.set(x, "headerExtensions", value.asInstanceOf[js.Any])
     
-    @scala.inline
-    def setHeaderExtensionsVarargs(value: RTCRtpHeaderExtensionCapability*): Self = StObject.set(x, "headerExtensions", js.Array(value :_*))
+    inline def setHeaderExtensionsVarargs(value: RTCRtpHeaderExtensionCapability*): Self = StObject.set(x, "headerExtensions", js.Array(value*))
   }
 }

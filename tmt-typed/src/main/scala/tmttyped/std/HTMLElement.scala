@@ -2,7 +2,6 @@ package tmttyped.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it. */
@@ -51,6 +50,9 @@ trait HTMLElement
   
   /* standard DOM */
   var hidden: scala.Boolean = js.native
+  
+  /* standard DOM */
+  var inert: scala.Boolean = js.native
   
   /* standard DOM */
   var innerText: java.lang.String = js.native
